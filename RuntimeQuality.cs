@@ -20,14 +20,11 @@ using UnityEngine.Rendering;
 using UnityEngine.Scripting;
 using UnityEngine.Serialization;
 
-// Image 56: RuntimeQuality.dll - Assembly: RuntimeQuality, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61125-61217
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 55: RuntimeQuality.dll - Assembly: RuntimeQuality, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 88231-88387
 
 namespace Beyond.Gameplay.BeyondPerformance
 {
-	public enum LogicQualityLevel : byte // TypeDefIndex: 61133
+	public enum LogicQualityLevel : byte // TypeDefIndex: 88241
 	{
 		Economy = 0,
 		Balanced = 1,
@@ -35,41 +32,41 @@ namespace Beyond.Gameplay.BeyondPerformance
 		Max = 3
 	}
 
-	public enum ThermalState : byte // TypeDefIndex: 61134
+	public enum ThermalState : byte // TypeDefIndex: 88242
 	{
 		GameNormal = 0,
 		GameFair = 1,
 		GameSerious = 2
 	}
 
-	public static class LogicQualityConst // TypeDefIndex: 61135
+	public static class LogicQualityConst // TypeDefIndex: 88243
 	{
 		// Fields
 		public static float s_reduceQualityLevelFPSThresholdRatio; // 0x00
 		public static float s_recoverQualityLevelFPSThresholdRatio; // 0x04
 	
 		// Constructors
-		static LogicQualityConst(); // 0x0000000184D5DAF0-0x0000000184D5DB40
+		static LogicQualityConst(); // 0x00000001871FC250-0x00000001871FC2A0
 	}
 }
 
 namespace Beyond.PoolCore
 {
-	public static class ListPoolInitializer_RuntimeQuality // TypeDefIndex: 61127
+	public static class ListPoolInitializer_RuntimeQuality // TypeDefIndex: 88233
 	{
 		// Fields
 		private static bool s_initialized; // 0x00
 	
 		// Methods
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-		private static void InitializeAtRuntime(); // 0x0000000184CE21B0-0x0000000184CE21E0
-		private static void Initialize(); // 0x0000000184CE21E0-0x0000000184CE2260
+		private static void InitializeAtRuntime(); // 0x000000018710D1D0-0x000000018710D200
+		private static void Initialize(); // 0x000000018710D200-0x000000018710D290
 	}
 }
 
 namespace Beyond.Scripts.Quality
 {
-	public class DeviceInfo // TypeDefIndex: 61137
+	public class DeviceInfo // TypeDefIndex: 88245
 	{
 		// Fields
 		public RuntimePlatform m_platform; // 0x10
@@ -80,44 +77,46 @@ namespace Beyond.Scripts.Quality
 		public readonly string m_graphicsDeviceName; // 0x28
 		public readonly string m_graphicsDeviceVersion; // 0x30
 		public readonly string m_cpuDeviceName; // 0x38
-		public readonly int m_systemMemorySize; // 0x40
-		public readonly int m_GPUMemorySize; // 0x44
-		public readonly int m_processorCount; // 0x48
-		public readonly GraphicsDeviceType m_graphicsDeviceType; // 0x4C
-		public DeviceMatchRules m_matchRules; // 0x50
-		public DeviceMatchResult m_matchResult; // 0x58
-		public bool bEditorSimulator; // 0x78
-		public readonly string m_SystemInfo; // 0x80
-		private const string ADRENO_KEY = "Adreno"; // Metadata: 0x0234F1E2
-		private const string ADRENO_PATTERN = "Adreno\\D*(?<Model>\\d+)\\W*(?<Extra>l?)"; // Metadata: 0x0234F1E9
-		private const string ADRENO_STANDARD_FORMAT = "Adreno {0}{1}"; // Metadata: 0x0234F20F
-		private const string MALI_KEY = "Mali"; // Metadata: 0x0234F21D
-		private const string MALI_PATTERN = "Mali[-|\\s](?<Prefix>[A-Za-z]?)(?<Model>\\d+)\\W*(?<Rare>(3EE|Immortalis|Ultra)?)\\W*(?<CoreType>(MC|MP)?)\\W*(?<CoreCount>\\d*)"; // Metadata: 0x0234F222
-		private const string MALI_STANDARD_FORMAT = "Mali-{0}{1}{2}{3}{4}"; // Metadata: 0x0234F29E
-		private const string POWER_VR_KEY = "PowerVR"; // Metadata: 0x0234F2B3
-		private const string POWER_VR_PATTERN = "PowerVR[-|\\s](?<Prefix>[A-Za-z]*)(?<Model>\\d+)"; // Metadata: 0x0234F2BB
-		private const string POWER_VR_STANDARD_FORMAT = "PowerVR {0}{1}"; // Metadata: 0x0234F2EA
-		private const string NVIDIA_KEY = "(NVIDIA|GTX|RTX|Quadro|GeForce)"; // Metadata: 0x0234F2F9
-		private const string NVIDIA_PATTERN = "(?<Prefix>RTX|GTX)\\s+(?![A-Z])(?<Model>\\d+)\\W*(?<Extra>\\w+)?"; // Metadata: 0x0234F319
-		private const string NVIDIA_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x0234F356
-		private const string TITAN_PATTERN = "(?<Prefix>RTX|GTX)?\\D*(?<Model>TITAN)\\W*(?<Extra>\\w+)?"; // Metadata: 0x0234F35E
-		private const string NVIDIA_FALLBACK = "\\bNVIDIA\\b[\\s:-]*(?<rest>.+)$"; // Metadata: 0x0234F395
-		private const string AMD_KEY = "(AMD|ATI|Radeon)"; // Metadata: 0x0234F3B3
-		private const string AMD_PATTERN = "Radeon\\s?(\\(TM\\))?\\s?(?<Prefix>R9|RX|HD)?\\W*(?<Model>\\d+)?\\W*(?<Extra>\\w+)?"; // Metadata: 0x0234F3C4
-		private const string AMD_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x0234F411
-		private const string AMD_FALLBACK = "\\bAMD\\b[\\s:-]*(?<rest>.+)$"; // Metadata: 0x0234F419
-		private const string INTEL_KEY = "Intel"; // Metadata: 0x0234F434
-		private const string INTEL_PATTERN = "Intel\\S+[-|\\s](?<Model>Arc)\\S+[-|\\s](?<Extra>[A-Za-z]\\d+)?"; // Metadata: 0x0234F43A
-		private const string INTEL_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x0234F475
-		private const string INTEL_PATTERN_2 = "Intel\\S+[-|\\s](?<Model>HD)[-|\\s](?<Extra>Graphics)"; // Metadata: 0x0234F47D
-		private const string INTEL_FALLBACK = "Intel\\s*(?:\\(R\\)\\s*)?(?<rest>.+)$"; // Metadata: 0x0234F4B0
+		public readonly string m_physicalDeviceTypeName; // 0x40
+		public readonly int m_systemMemorySize; // 0x48
+		public readonly int m_GPUMemorySize; // 0x4C
+		public readonly int m_processorCount; // 0x50
+		public readonly GraphicsDeviceType m_graphicsDeviceType; // 0x54
+		public DeviceMatchRules m_matchRules; // 0x58
+		public DeviceMatchResult m_matchResult; // 0x60
+		public bool bEditorSimulator; // 0x80
+		public readonly string m_SystemInfo; // 0x88
+		public GraphicsPhysicalDeviceType m_physicalDeviceType; // 0x90
+		private const string ADRENO_KEY = "Adreno"; // Metadata: 0x02648027
+		private const string ADRENO_PATTERN = "Adreno\\D*(?<Model>\\d+)\\W*(?<Extra>l?)"; // Metadata: 0x0264802E
+		private const string ADRENO_STANDARD_FORMAT = "Adreno {0}{1}"; // Metadata: 0x02648054
+		private const string MALI_KEY = "Mali"; // Metadata: 0x02648062
+		private const string MALI_PATTERN = "Mali[-|\\s](?<Prefix>[A-Za-z]?)(?<Model>\\d+)\\W*(?<Rare>(3EE|Immortalis|Ultra)?)\\W*(?<CoreType>(MC|MP)?)\\W*(?<CoreCount>\\d*)"; // Metadata: 0x02648067
+		private const string MALI_STANDARD_FORMAT = "Mali-{0}{1}{2}{3}{4}"; // Metadata: 0x026480E3
+		private const string POWER_VR_KEY = "PowerVR"; // Metadata: 0x026480F8
+		private const string POWER_VR_PATTERN = "PowerVR[-|\\s](?<Prefix>[A-Za-z]*)(?<Model>\\d+)"; // Metadata: 0x02648100
+		private const string POWER_VR_STANDARD_FORMAT = "PowerVR {0}{1}"; // Metadata: 0x0264812F
+		private const string NVIDIA_KEY = "(NVIDIA|GTX|RTX|Quadro|GeForce)"; // Metadata: 0x0264813E
+		private const string NVIDIA_PATTERN = "(?<Prefix>RTX|GTX)\\s+(?![A-Z])(?<Model>\\d+)\\W*(?<Extra>\\w+)?"; // Metadata: 0x0264815E
+		private const string NVIDIA_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x0264819B
+		private const string TITAN_PATTERN = "(?<Prefix>RTX|GTX)?\\D*(?<Model>TITAN)\\W*(?<Extra>\\w+)?"; // Metadata: 0x026481A3
+		private const string NVIDIA_FALLBACK = "\\bNVIDIA\\b[\\s:-]*(?<rest>.+)$"; // Metadata: 0x026481DA
+		private const string AMD_KEY = "(AMD|ATI|Radeon)"; // Metadata: 0x026481F8
+		private const string AMD_PATTERN = "Radeon\\s?(\\(TM\\))?\\s?(?<Prefix>R9|RX|HD)?\\W*(?<Model>\\d+)?\\W*(?<Extra>\\w+)?"; // Metadata: 0x02648209
+		private const string AMD_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x02648256
+		private const string AMD_FALLBACK = "\\bAMD\\b[\\s:-]*(?<rest>.+)$"; // Metadata: 0x0264825E
+		private const string INTEL_KEY = "Intel"; // Metadata: 0x02648279
+		private const string INTEL_PATTERN = "Intel\\S+[-|\\s](?<Model>Arc)\\S+[-|\\s](?<Extra>[A-Za-z]\\d+)?"; // Metadata: 0x0264827F
+		private const string INTEL_STANDARD_FORMAT = "{0} {1}"; // Metadata: 0x026482BA
+		private const string INTEL_PATTERN_2 = "Intel\\S+[-|\\s](?<Model>HD)[-|\\s](?<Extra>Graphics)"; // Metadata: 0x026482C2
+		private const string INTEL_FALLBACK = "Intel\\s*(?:\\(R\\)\\s*)?(?<rest>.+)$"; // Metadata: 0x026482F5
 	
 		// Properties
-		public int DevicesScore { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
-		public static string cpuName { get; } // 0x000000018350CDE0-0x000000018350CE10 
+		public int DevicesScore { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
+		public static string cpuName { get; } // 0x0000000185DE42D0-0x0000000185DE4300 
 	
 		// Nested types
-		public enum MatchType // TypeDefIndex: 61136
+		public enum MatchType // TypeDefIndex: 88244
 		{
 			WhiteList = 0,
 			SystemVersion = 1,
@@ -129,75 +128,76 @@ namespace Beyond.Scripts.Quality
 		}
 	
 		// Constructors
-		public DeviceInfo(string remoteJson = null); // 0x000000018350CC90-0x000000018350CDE0
-		public DeviceInfo(RuntimePlatform platform, string deviceName, string deviceModel, string graphicsDeviceName, string graphicsDeviceVersion, string systemMemorySize, string processorName, string processorCount, string processorFrequency); // 0x000000018AC3DCF4-0x000000018AC3DD8C
+		public DeviceInfo(string remoteJson = null); // 0x0000000185DE34A0-0x0000000185DE42D0
+		public DeviceInfo(RuntimePlatform platform, string deviceName, string deviceModel, string graphicsDeviceName, string graphicsDeviceVersion, string systemMemorySize, string processorName, string processorCount, string processorFrequency); // 0x000000018CE33740-0x000000018CE339C8
 	
 		// Methods
-		public void SupplementFromRemote(string json); // 0x000000018350AE10-0x000000018350AE90
-		public sealed override string ToString(); // 0x000000018454FCA0-0x0000000184550040
-		public bool IsNoMatchDevice(); // 0x000000018AC3D450-0x000000018AC3D4AC
-		public bool IsZeroDevices(); // 0x0000000184854560-0x0000000184854590
-		public bool IsHUAWEIDevice(); // 0x000000018AC3D394-0x000000018AC3D450
-		public bool IsQualcommDevice(); // 0x000000018AC3D4AC-0x000000018AC3D530
-		public DeviceMatchRules LoadingSettingRules(); // 0x000000018350C760-0x000000018350C7F0
-		public int GetDeviceScore(string remoteJson = null); // 0x000000018350AEC0-0x000000018350C760
-		public int EditorSimulateGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3C560-0x000000018AC3C64C
-		public int IOSGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3D054-0x000000018AC3D394
-		public int AndroidGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3C2F8-0x000000018AC3C4B4
-		public int StandaloneGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018350C7F0-0x000000018350CC90
-		public int StandaloneOSXGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3DA0C-0x000000018AC3DA60
-		public int CloudGameGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3C4B4-0x000000018AC3C50C
-		public int StandalonePS5GetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3DA60-0x000000018AC3DB10
-		public int DefaultGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018AC3C50C-0x000000018AC3C560
-		public bool RuleSuffixMatch(List<RankingRule> list, string name, ref RankingRule matchedRule); // 0x00000001841297C0-0x0000000184129CE0
-		public static bool RuleFullNameMatch(List<RankingRule> list, string name, ref RankingRule matchedRule); // 0x000000018AC3D82C-0x000000018AC3DA0C
-		public bool MatchDeviceModeRule(List<RankingRule> list, string deviceModel, ref RankingRule rule); // 0x000000018AC3D530-0x000000018AC3D5D8
-		public bool MatchGPURule(DeviceMatchRules rules, string gpu, ref RankingRule rule, out string standardName); // 0x000000018AC3D5D8-0x000000018AC3D82C
-		private bool StandaloneMatchGPURule(DeviceMatchRules rules, string gpu, ref RankingRule rule, out string standardName); // 0x00000001841291C0-0x0000000184129340
-		private string GetNvidiaStandardGPUName(string gpu); // 0x000000018AC3CCD0-0x000000018AC3CF18
-		private string GetAmdStandardGPUName(string gpu); // 0x0000000184129440-0x0000000184129610
-		private string GetIntelStandardGPUName(string gpu); // 0x000000018AC3C788-0x000000018AC3C9E8
-		private string GetAdrenoStandardGPUName(string gpu); // 0x000000018AC3C64C-0x000000018AC3C788
-		private string GetMaliStandardGPUName(string gpu); // 0x000000018AC3C9E8-0x000000018AC3CCD0
-		private string GetPowerVRStandardGPUName(string gpu); // 0x000000018AC3CF18-0x000000018AC3D054
-		private static void _ReportMatchRuleFailed(DeviceInfo deviceModel); // 0x000000018AC3DB10-0x000000018AC3DCF4
-		public string __iFixBaseProxy_ToString(); // 0x000000018669AD6C-0x000000018669AD74
+		public void SupplementFromRemote(string json); // 0x0000000185DE3410-0x0000000185DE34A0
+		public sealed override string ToString(); // 0x0000000186146740-0x0000000186148680
+		public bool IsNoMatchDevice(); // 0x000000018CE32E0C-0x000000018CE32E54
+		public bool IsZeroDevices(); // 0x0000000186C9D1F0-0x0000000186C9D220
+		public bool IsHUAWEIDevice(); // 0x000000018CE32D48-0x000000018CE32E0C
+		public bool IsQualcommDevice(); // 0x000000018CE32E54-0x000000018CE32EE4
+		public DeviceMatchRules LoadingSettingRules(); // 0x0000000185DE5C30-0x0000000185DE5CC0
+		public int GetDeviceScore(string remoteJson = null); // 0x0000000185DE48D0-0x0000000185DE5C30
+		public int EditorSimulateGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE31E30-0x000000018CE31F88
+		public int IOSGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE32A20-0x000000018CE32D48
+		public int AndroidGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE3196C-0x000000018CE31D0C
+		public int StandaloneGetMatchedRule(DeviceInfo deviceInfo); // 0x0000000185DE5CC0-0x0000000185DE7820
+		public int StandaloneOSXGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE333DC-0x000000018CE33414
+		public int CloudGameGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE31D0C-0x000000018CE31DF8
+		public int SteamDeckGetMatchedRule(DeviceInfo deviceInfo, ESteamHardwareType type); // 0x0000000184E251C0-0x0000000184E25370
+		public int StandalonePS5GetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE33414-0x000000018CE33570
+		public int DefaultGetMatchedRule(DeviceInfo deviceInfo); // 0x000000018CE31DF8-0x000000018CE31E30
+		public bool RuleSuffixMatch(List<RankingRule> list, string name, ref RankingRule matchedRule); // 0x0000000185DE7BA0-0x0000000185DE80D0
+		public static bool RuleFullNameMatch(List<RankingRule> list, string name, ref RankingRule matchedRule); // 0x000000018CE331F0-0x000000018CE333DC
+		public bool MatchDeviceModeRule(List<RankingRule> list, string deviceModel, ref RankingRule rule); // 0x000000018CE32EE4-0x000000018CE32F90
+		public bool MatchGPURule(DeviceMatchRules rules, string gpu, ref RankingRule rule, out string standardName); // 0x000000018CE32F90-0x000000018CE331F0
+		private bool StandaloneMatchGPURule(DeviceMatchRules rules, string gpu, ref RankingRule rule, out string standardName); // 0x0000000185DE7850-0x0000000185DE7990
+		private string GetNvidiaStandardGPUName(string gpu); // 0x0000000185DE7990-0x0000000185DE7B10
+		private string GetAmdStandardGPUName(string gpu); // 0x000000018CE320D4-0x000000018CE3237C
+		private string GetIntelStandardGPUName(string gpu); // 0x000000018CE3237C-0x000000018CE325EC
+		private string GetAdrenoStandardGPUName(string gpu); // 0x000000018CE31F88-0x000000018CE320D4
+		private string GetMaliStandardGPUName(string gpu); // 0x000000018CE325EC-0x000000018CE328D4
+		private string GetPowerVRStandardGPUName(string gpu); // 0x000000018CE328D4-0x000000018CE32A20
+		private static void _ReportMatchRuleFailed(DeviceInfo deviceModel); // 0x000000018CE33570-0x000000018CE33740
+		public string __iFixBaseProxy_ToString(); // 0x0000000188ABB3B8-0x0000000188ABB3C0
 	}
 
 	[Serializable]
-	public struct RankingRule : IEquatable<RankingRule> // TypeDefIndex: 61138
+	public struct RankingRule : IEquatable<RankingRule> // TypeDefIndex: 88246
 	{
 		// Fields
 		public string regexPattern; // 0x00
 		public int targetScore; // 0x08
 	
 		// Methods
-		public bool Equals(RankingRule other); // 0x000000018AC45920-0x000000018AC45990
-		public override string ToString(); // 0x00000001845501D0-0x0000000184550260
-		public string __iFixBaseProxy_ToString(); // 0x000000018AC45990-0x000000018AC459E0
+		public bool Equals(RankingRule other); // 0x000000018CE37950-0x000000018CE379B8
+		public override string ToString(); // 0x0000000186148810-0x00000001861488A0
+		public string __iFixBaseProxy_ToString(); // 0x000000018CE379B8-0x000000018CE37A08
 	}
 
 	[Serializable]
-	public struct MemoryRule : IEquatable<MemoryRule> // TypeDefIndex: 61139
+	public struct MemoryRule : IEquatable<MemoryRule> // TypeDefIndex: 88247
 	{
 		// Fields
 		public Vector2 range; // 0x00
 		public int targetScore; // 0x08
 	
 		// Methods
-		public override string ToString(); // 0x000000018AC425D0-0x000000018AC4269C
-		public bool Equals(MemoryRule other); // 0x000000018AC42560-0x000000018AC425D0
-		public string __iFixBaseProxy_ToString(); // 0x000000018AC4269C-0x000000018AC426F4
+		public override string ToString(); // 0x000000018CE358F4-0x000000018CE359C0
+		public bool Equals(MemoryRule other); // 0x000000018CE35880-0x000000018CE358F4
+		public string __iFixBaseProxy_ToString(); // 0x000000018CE359C0-0x000000018CE35A18
 	}
 
-	public static class ListUtils // TypeDefIndex: 61140
+	public static class ListUtils // TypeDefIndex: 88248
 	{
 		// Methods
 		public static void AddOrReplace<TItem>(List<TItem> source, List<TItem> remote)
 			where TItem : IEquatable<TItem>;
 	}
 
-	public class DeviceMatchRules // TypeDefIndex: 61141
+	public class DeviceMatchRules // TypeDefIndex: 88249
 	{
 		// Fields
 		public int DefaultIOSRankingRule; // 0x10
@@ -221,13 +221,13 @@ namespace Beyond.Scripts.Quality
 		public List<RankingRule> macSocRulesList; // 0x90
 	
 		// Constructors
-		public DeviceMatchRules(); // 0x0000000184D7B090-0x0000000184D7B0B0
+		public DeviceMatchRules(); // 0x00000001872210E0-0x0000000187221100
 	
 		// Methods
-		public void Combine(DeviceMatchRules other); // 0x000000018AC3DE30-0x000000018AC3E00C
+		public void Combine(DeviceMatchRules other); // 0x000000018CE33A58-0x000000018CE33C40
 	}
 
-	public struct DeviceMatchResult // TypeDefIndex: 61142
+	public struct DeviceMatchResult // TypeDefIndex: 88250
 	{
 		// Fields
 		private RankingRule m_rule; // 0x00
@@ -235,16 +235,16 @@ namespace Beyond.Scripts.Quality
 		private string gpuStandardName; // 0x18
 	
 		// Constructors
-		public DeviceMatchResult(RankingRule r, Beyond.Scripts.Quality.DeviceInfo.MatchType type, string gpuStandardName); // 0x000000018350AE90-0x000000018350AEC0
+		public DeviceMatchResult(RankingRule r, Beyond.Scripts.Quality.DeviceInfo.MatchType type, string gpuStandardName); // 0x0000000185DE7820-0x0000000185DE7850
 	
 		// Methods
-		public override string ToString(); // 0x0000000184550040-0x00000001845501D0
-		public bool IsNoMatch(); // 0x000000018AC3DD8C-0x000000018AC3DDD8
-		public string __iFixBaseProxy_ToString(); // 0x000000018AC3DDD8-0x000000018AC3DE30
+		public override string ToString(); // 0x0000000186148680-0x0000000186148810
+		public bool IsNoMatch(); // 0x000000018CE339C8-0x000000018CE33A00
+		public string __iFixBaseProxy_ToString(); // 0x000000018CE33A00-0x000000018CE33A58
 	}
 
 	[Serializable]
-	public struct DeviceQualityMapItem // TypeDefIndex: 61143
+	public struct DeviceQualityMapItem // TypeDefIndex: 88251
 	{
 		// Fields
 		public string name; // 0x00
@@ -257,43 +257,43 @@ namespace Beyond.Scripts.Quality
 		public int veryHighLevel; // 0x20
 	
 		// Methods
-		public override string ToString(); // 0x000000018AC3E00C-0x000000018AC3E240
-		private UnityEngine.Color getColor(int level); // 0x000000018AC3E2A4-0x000000018AC3E33C
-		private UnityEngine.Color getVeryLowColor(); // 0x000000018AC3E50C-0x000000018AC3E580
-		private UnityEngine.Color getLowColor(); // 0x000000018AC3E3B0-0x000000018AC3E424
-		private UnityEngine.Color getMiddleColor(); // 0x000000018AC3E424-0x000000018AC3E498
-		private UnityEngine.Color getHighColor(); // 0x000000018AC3E33C-0x000000018AC3E3B0
-		private UnityEngine.Color getVeryHighColor(); // 0x000000018AC3E498-0x000000018AC3E50C
-		public string __iFixBaseProxy_ToString(); // 0x000000018AC3E240-0x000000018AC3E2A4
+		public override string ToString(); // 0x000000018CE33C40-0x000000018CE33E74
+		private UnityEngine.Color getColor(int level); // 0x000000018CE33ED8-0x000000018CE33F58
+		private UnityEngine.Color getVeryLowColor(); // 0x000000018CE340F8-0x000000018CE34160
+		private UnityEngine.Color getLowColor(); // 0x000000018CE33FC0-0x000000018CE34028
+		private UnityEngine.Color getMiddleColor(); // 0x000000018CE34028-0x000000018CE34090
+		private UnityEngine.Color getHighColor(); // 0x000000018CE33F58-0x000000018CE33FC0
+		private UnityEngine.Color getVeryHighColor(); // 0x000000018CE34090-0x000000018CE340F8
+		public string __iFixBaseProxy_ToString(); // 0x000000018CE33E74-0x000000018CE33ED8
 	}
 
 	[Serializable]
-	public class DeviceQualityMap // TypeDefIndex: 61144
+	public class DeviceQualityMap // TypeDefIndex: 88252
 	{
 		// Fields
 		public RuntimePlatform m_platform; // 0x10
 		public List<DeviceQualityMapItem> items; // 0x18
 	
 		// Constructors
-		public DeviceQualityMap(); // 0x0000000184CDB860-0x0000000184CDB8E0
+		public DeviceQualityMap(); // 0x00000001870EEC40-0x00000001870EECC0
 	}
 
-	public static class QualityConst // TypeDefIndex: 61145
+	public static class QualityConst // TypeDefIndex: 88253
 	{
 		// Fields
-		public const string SIMULATE_DEVICE_LIST = "Assets/Beyond/InitialAssets/Settings/Quality/DeviceList_zip.bytes"; // Metadata: 0x0234F4D9
-		public const string SETTING_RULES = "Assets/Beyond/InitialAssets/Settings/Quality/SettingRules.json"; // Metadata: 0x0234F51C
-		public const string QUALITY_MAP = "Assets/Beyond/InitialAssets/Settings/Quality/{0}_QualityMap.json"; // Metadata: 0x0234F55B
-		public const string QUALITY_TIER_COMPONENTS = "Assets/Beyond/InitialAssets/Settings/Quality/{0}_QualityTierComponent.json"; // Metadata: 0x0234F59D
+		public const string SIMULATE_DEVICE_LIST = "Assets/Beyond/InitialAssets/Settings/Quality/DeviceList_zip.bytes"; // Metadata: 0x0264831E
+		public const string SETTING_RULES = "Assets/Beyond/InitialAssets/Settings/Quality/SettingRules.json"; // Metadata: 0x02648361
+		public const string QUALITY_MAP = "Assets/Beyond/InitialAssets/Settings/Quality/{0}_QualityMap.json"; // Metadata: 0x026483A0
+		public const string QUALITY_TIER_COMPONENTS = "Assets/Beyond/InitialAssets/Settings/Quality/{0}_QualityTierComponent.json"; // Metadata: 0x026483E2
 	}
 
-	public class QualityManager : Singleton<QualityManager>, IDisposable // TypeDefIndex: 61147
+	public class QualityManager : Singleton<QualityManager>, IDisposable // TypeDefIndex: 88255
 	{
 		// Fields
 		private Beyond.Scripts.Quality.DeviceInfo m_deviceInfo; // 0x10
 		private DeviceQualityMap m_qualityMap; // 0x18
 		private DeviceQualityMapItem m_matchedConfig; // 0x20
-		private Dictionary<GameSetting.GameSettingVideoQuality, int> m_qualityScoreMap; // 0x48
+		private Dictionary<Beyond.GameSetting.GameSettingVideoQuality, int> m_qualityScoreMap; // 0x48
 		private List<QualityTierLevel> m_qualityTiers; // 0x50
 		private HashSet<System.Type> m_qualityTierTypes; // 0x58
 		private Dictionary<System.Type, QualityTierComponentMatch> m_currentQualityTierComponent; // 0x60
@@ -308,16 +308,16 @@ namespace Beyond.Scripts.Quality
 		private static HashSet<QualityTierComponentMatch> s_matchQuality; // 0x08
 	
 		// Properties
-		public DeviceQualityMapItem Config { get; } // 0x000000018AC45394-0x000000018AC45414 
-		public int currentTier { get; } // 0x0000000184B4B340-0x0000000184B4B370 
-		public int defaultTier { get; } // 0x0000000184B4B310-0x0000000184B4B340 
-		public Beyond.Scripts.Quality.DeviceInfo device { get; } // 0x0000000183690520-0x0000000183690550 
-		public bool isInitializing { get; } // 0x00000001836904F0-0x0000000183690520 
+		public DeviceQualityMapItem Config { get; } // 0x000000018CE3740C-0x000000018CE3747C 
+		public int currentTier { get; } // 0x000000018CE3747C-0x000000018CE374C0 
+		public int defaultTier { get; } // 0x00000001872258C0-0x00000001872258F0 
+		public Beyond.Scripts.Quality.DeviceInfo device { get; } // 0x0000000186E65D70-0x0000000186E65DA0 
+		public bool isInitializing { get; } // 0x0000000186B65690-0x0000000186B656C0 
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 61146
+		private sealed class __c // TypeDefIndex: 88254
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -331,90 +331,90 @@ namespace Beyond.Scripts.Quality
 			public static Comparison<QualityTierComponentMatch> __9__70_0; // 0x40
 	
 			// Constructors
-			static __c(); // 0x0000000184D4AD70-0x0000000184D4ADD0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E6EC0-0x00000001871E6F20
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _LoadQualityTier_b__29_0(QualityTierLevel s); // 0x0000000183E647B0-0x0000000183E647D0
-			internal int _setQualityTier_b__30_0(QualityTierComponentMatch x); // 0x00000001848467E0-0x0000000184846800
-			internal int _ApplyQualityScore_b__31_0(DeviceQualityMapItem s); // 0x0000000184D94D70-0x0000000184D94D80
-			internal int _ApplyShaderTier_b__32_0(DeviceQualityMapItem s); // 0x0000000184D94D70-0x0000000184D94D80
-			internal int _GetQualityComponentDefaultTier_b__66_0(int a, int b); // 0x000000018AC4664C-0x000000018AC46668
-			internal int _GetQualityComponentTier_b__67_0(int a, int b); // 0x000000018AC4664C-0x000000018AC46668
-			internal int _SetQualityComponentTier_b__68_0(int a, int b); // 0x000000018AC4664C-0x000000018AC46668
-			internal int __GetCurrentComponentTierIndex_b__70_0(QualityTierComponentMatch a, QualityTierComponentMatch b); // 0x000000018AC46668-0x000000018AC46680
+			internal int _LoadQualityTier_b__29_0(QualityTierLevel s); // 0x00000001860B50D0-0x00000001860B50F0
+			internal int _setQualityTier_b__30_0(QualityTierComponentMatch x); // 0x0000000186CD1FA0-0x0000000186CD1FC0
+			internal int _ApplyQualityScore_b__31_0(DeviceQualityMapItem s); // 0x0000000187257B60-0x0000000187257B70
+			internal int _ApplyShaderTier_b__32_0(DeviceQualityMapItem s); // 0x0000000187257B60-0x0000000187257B70
+			internal int _GetQualityComponentDefaultTier_b__66_0(int a, int b); // 0x0000000186ADDFD0-0x0000000186ADDFF0
+			internal int _GetQualityComponentTier_b__67_0(int a, int b); // 0x0000000186C242F0-0x0000000186C24310
+			internal int _SetQualityComponentTier_b__68_0(int a, int b); // 0x000000018CE3811C-0x000000018CE38138
+			internal int __GetCurrentComponentTierIndex_b__70_0(QualityTierComponentMatch a, QualityTierComponentMatch b); // 0x000000018CE38138-0x000000018CE38150
 		}
 	
 		// Constructors
 		[UnityEngine.Scripting.Preserve]
-		private QualityManager(); // 0x0000000184A233A0-0x0000000184A23540
-		static QualityManager(); // 0x0000000184CA3B10-0x0000000184CA3C00
+		private QualityManager(); // 0x0000000186E4FC40-0x0000000186E50BA0
+		static QualityManager(); // 0x0000000187082900-0x00000001870829F0
 	
 		// Methods
-		public void Init(string remoteJson = null); // 0x00000001841E3220-0x00000001841E3500
-		public void InitOnlyDevice(string remoteJson = null); // 0x0000000184B40C00-0x0000000184B40E50
-		public void InitShaderLod(); // 0x00000001841E3500-0x00000001841E37C0
-		public void FinishInit(); // 0x0000000184151520-0x0000000184151560
-		public void Dispose(); // 0x00000001841E47F0-0x00000001841E4830
-		public void LoadQualityTier(string overridePlatform = null); // 0x0000000183899090-0x0000000183899A80
-		private void setQualityTier(int qualityTier); // 0x000000018368D6B0-0x000000018368E500
-		public void ApplyQualityScore(); // 0x000000018366FDA0-0x00000001836705F0
-		public void ApplyShaderTier(); // 0x00000001836705F0-0x0000000183670CC0
-		private System.Type _GetQualityComponentByName(string typeName); // 0x00000001836921B0-0x0000000183692360
-		public void SetQualityTierByVideoQuality(GameSetting.GameSettingVideoQuality VideoQuality); // 0x0000000184B89CD0-0x0000000184B89D60
-		public GameSetting.GameSettingVideoQuality GetDefaultVideoQuality(); // 0x0000000184991510-0x00000001849916A0
-		public bool NoMatchDeviceOrZeroScore(); // 0x0000000184854520-0x0000000184854560
+		public void Init(string remoteJson = null); // 0x0000000185DE1360-0x0000000185DE2490
+		public void InitOnlyDevice(string remoteJson = null); // 0x0000000185DE2730-0x0000000185DE28B0
+		public void InitShaderLod(); // 0x0000000185DE2490-0x0000000185DE2730
+		public void FinishInit(); // 0x00000001863CF750-0x00000001863CF790
+		public void Dispose(); // 0x0000000186B8E910-0x0000000186B8FC70
+		public void LoadQualityTier(string overridePlatform = null); // 0x0000000184FCDC60-0x0000000184FCE7E0
+		private void setQualityTier(int qualityTier); // 0x00000001867F1950-0x00000001867F2630
+		public void ApplyQualityScore(); // 0x00000001861EA920-0x00000001861EAF00
+		public void ApplyShaderTier(); // 0x00000001861EAF00-0x00000001861EB590
+		private System.Type _GetQualityComponentByName(string typeName); // 0x00000001854F8D30-0x00000001854F8EE0
+		public void SetQualityTierByVideoQuality(Beyond.GameSetting.GameSettingVideoQuality VideoQuality); // 0x00000001867F18B0-0x00000001867F1950
+		public Beyond.GameSetting.GameSettingVideoQuality GetDefaultVideoQuality(); // 0x0000000185DE2920-0x0000000185DE2AC0
+		public bool NoMatchDeviceOrZeroScore(); // 0x0000000186C9D1B0-0x0000000186C9D1F0
 		[UnityEngine.Scripting.Preserve]
-		public bool IsQualcommDevice(); // 0x000000018AC44430-0x000000018AC44484
+		public bool IsQualcommDevice(); // 0x000000018CE36590-0x000000018CE365E4
 		[UnityEngine.Scripting.Preserve]
-		public bool IsHUAWEIDevice(); // 0x000000018AC44368-0x000000018AC443BC
+		public bool IsHUAWEIDevice(); // 0x000000018CE364BC-0x000000018CE36510
 		[UnityEngine.Scripting.Preserve]
-		public static bool IsIpadDevice(); // 0x000000018AC443BC-0x000000018AC44430
-		public bool IsVideoQualityEnable(GameSetting.GameSettingVideoQuality VideoQuality); // 0x000000018AC44594-0x000000018AC445F0
-		public void InitResetQualityTierComponentFunction(Func<System.Type, bool> func); // 0x0000000184150EE0-0x0000000184150FD0
-		public bool ResetQualityTierComponentValue(System.Type type); // 0x0000000184485530-0x0000000184485580
-		private QualityTierComponentMatch _SetQualityTierComponentLevel(System.Type type, int level); // 0x0000000183899A80-0x0000000183899EC0
-		public void ForceSetQualityTierComponentLevel(string type, int level); // 0x0000000184A3C4A0-0x0000000184A3C610
-		public void RevertSetQualityTierComponentLevel(string type); // 0x000000018AC447E8-0x000000018AC44974
-		public bool NeedRestart(); // 0x000000018AC445F0-0x000000018AC447E8
-		public void ApplyCallBack(); // 0x0000000184151560-0x0000000184151620
-		private QualityTierComponentMatch _GetOverrideQualityTierComponentLevel(System.Type type); // 0x0000000183690550-0x0000000183690610
-		public QualityTierType GetQualityTierComponentTierType(string type); // 0x0000000184151260-0x00000001841513A0
-		public int GetQualityTierComponentTierVersion(string type); // 0x00000001841519F0-0x0000000184151AB0
-		private bool _IsToggleQualityTierComponent(string type); // 0x000000018368E580-0x000000018368E660
-		private void _ToggleQualityTierComponentLevel(string type, int index); // 0x000000018AC45234-0x000000018AC45394
-		public bool IsEnumQualityTierComponent(string type); // 0x000000018368D5D0-0x000000018368D6B0
-		public int GetEnumQualityTierComponentCount(string type); // 0x000000018AC42F4C-0x000000018AC43020
-		public void SetEnumQualityTierComponentCount(string type, int index); // 0x0000000184A2FD80-0x0000000184A2FEE0
-		public bool IsSliderQualityTierComponent(string type); // 0x000000018368D4F0-0x000000018368D5D0
-		public void SetSliderQualityTierComponentCount(string type, float value); // 0x000000018AC44974-0x000000018AC44AC4
-		public Vector3 GetSliderQualityTierComponent(string type); // 0x000000018AC440A4-0x000000018AC441D8
-		public bool InvokeQualityTierComponent(string type, string functionName, params object[] parameters); // 0x000000018AC441D8-0x000000018AC44368
+		public static bool IsIpadDevice(); // 0x000000018CE36510-0x000000018CE36590
+		public bool IsVideoQualityEnable(Beyond.GameSetting.GameSettingVideoQuality VideoQuality); // 0x000000018CE365E4-0x000000018CE36640
+		public void InitResetQualityTierComponentFunction(Func<System.Type, bool> func); // 0x00000001870A8430-0x00000001870A8520
+		public bool ResetQualityTierComponentValue(System.Type type); // 0x0000000185473C00-0x0000000185473C50
+		private QualityTierComponentMatch _SetQualityTierComponentLevel(System.Type type, int level); // 0x0000000184FCD830-0x0000000184FCDC60
+		public void _ForceSetQualityTierComponentLevel(string type, int level); // 0x0000000184E3C4C0-0x0000000184E3E5C0
+		public void RevertSetQualityTierComponentLevel(string type); // 0x000000018CE36848-0x000000018CE369D4
+		public bool NeedRestart(); // 0x000000018CE36640-0x000000018CE36848
+		public void ApplyCallBack(); // 0x00000001863D0B70-0x00000001863D0C30
+		private QualityTierComponentMatch _GetOverrideQualityTierComponentLevel(System.Type type); // 0x00000001854F7580-0x00000001854F7640
+		public QualityTierType GetQualityTierComponentTierType(string type); // 0x0000000184FD0670-0x0000000184FD0860
+		public int GetQualityTierComponentTierVersion(string type); // 0x00000001869E2A20-0x00000001869E2AE0
+		private bool _IsToggleQualityTierComponent(string type); // 0x0000000184FD0300-0x0000000184FD0400
+		private void _ToggleQualityTierComponentLevel(string type, int index); // 0x000000018CE372B4-0x000000018CE3740C
+		public bool IsEnumQualityTierComponent(string type); // 0x0000000184FD0400-0x0000000184FD0500
+		public int GetEnumQualityTierComponentCount(string type); // 0x0000000184FCADA0-0x0000000184FCAE80
+		public void SetEnumQualityTierComponentCount(string type, int index); // 0x00000001863D1EC0-0x00000001863D2080
+		public bool IsSliderQualityTierComponent(string type); // 0x0000000184FD0500-0x0000000184FD0600
+		public void SetSliderQualityTierComponentCount(string type, float value); // 0x000000018CE369D4-0x000000018CE36B20
+		public Vector3 GetSliderQualityTierComponent(string type); // 0x0000000185473790-0x00000001854738B0
+		public bool InvokeQualityTierComponent(string type, string functionName, params object[] parameters); // 0x0000000184FD0AD0-0x0000000184FD0C30
 		public void RegisterQualityTierComponentChange<T>(System.Type tierType, Action<QualityTierComponent> cb);
-		internal void InvokeChangeCallBack(System.Type type, QualityTierComponent qualityTierComponent); // 0x000000018368E660-0x000000018368EB70
-		public ValueTuple<float, float> GetQualityTierComponentTierCount(string type); // 0x000000018AC43D34-0x000000018AC440A4
-		public float GetQualityComponentDefaultTier(string type); // 0x000000018AC43020-0x000000018AC43638
-		public float GetQualityComponentTier(string type); // 0x000000018AC43638-0x000000018AC43D34
-		public void SetQualityComponentTier(string type, float index); // 0x000000018368C030-0x000000018368CC80
-		public bool IsQualitySubSettingTierValid(string type, int tier); // 0x000000018AC44484-0x000000018AC44594
-		private void _GetCurrentComponentTierIndex(QualityTierComponent qualityTierComponent, out int index, out int defaultTierIndex); // 0x000000018AC44D24-0x000000018AC45234
-		public override string ToString(); // 0x000000018AC44AC4-0x000000018AC44D24
-		public string DebugQualityTierComponentInfo(); // 0x000000018AC42920-0x000000018AC42D4C
-		private static void _ReportQuality(); // 0x000000018368EC90-0x00000001836904F0
-		private void _DynamicInitQualitySetting(); // 0x00000001841E3CE0-0x00000001841E3F20
-		private void _DynamicReleaseQualitySetting(); // 0x00000001841E3B70-0x00000001841E3CE0
-		internal void DynamicQualityChange([IsReadOnly] in EventData<LogicQualityLevel, LogicQualityLevel> data); // 0x0000000183690650-0x0000000183690D70
-		internal void DynamicThermalChange([IsReadOnly] in EventData<ThermalState, ThermalState> data); // 0x000000018AC42D4C-0x000000018AC42F4C
-		public string __iFixBaseProxy_ToString(); // 0x000000018669AD6C-0x000000018669AD74
+		internal void InvokeChangeCallBack(System.Type type, QualityTierComponent qualityTierComponent); // 0x000000018685C8D0-0x000000018685CB80
+		public ValueTuple<float, float> GetQualityTierComponentTierCount(string type); // 0x0000000184FCAF70-0x0000000184FCB5F0
+		public float GetQualityComponentDefaultTier(string type); // 0x0000000184FCCBA0-0x0000000184FCD830
+		public float GetQualityComponentTier(string type); // 0x0000000184FCBE30-0x0000000184FCCBA0
+		public void SetQualityComponentTier(string type, float index); // 0x00000001863D0C30-0x00000001863D1880
+		public bool IsQualitySubSettingTierValid(string type, int tier); // 0x0000000184FD08E0-0x0000000184FD09C0
+		private void _GetCurrentComponentTierIndex(QualityTierComponent qualityTierComponent, out int index, out int defaultTierIndex); // 0x000000018CE36D88-0x000000018CE372B4
+		public override string ToString(); // 0x000000018CE36B20-0x000000018CE36D88
+		public string DebugQualityTierComponentInfo(); // 0x000000018CE35E98-0x000000018CE362C0
+		private static void _ReportQuality(); // 0x0000000184FCEF00-0x0000000184FD0300
+		private void _DynamicInitQualitySetting(); // 0x0000000186B8FF50-0x0000000186B90190
+		private void _DynamicReleaseQualitySetting(); // 0x0000000186B8FDE0-0x0000000186B8FF50
+		internal void DynamicQualityChange([IsReadOnly] in EventData<LogicQualityLevel, LogicQualityLevel> data); // 0x00000001854F8940-0x00000001854F8D30
+		internal void DynamicThermalChange([IsReadOnly] in EventData<ThermalState, ThermalState> data); // 0x000000018CE362C0-0x000000018CE364BC
+		public string __iFixBaseProxy_ToString(); // 0x0000000188ABB3B8-0x0000000188ABB3C0
 	}
 
-	public static class QualityUtility // TypeDefIndex: 61148
+	public static class QualityUtility // TypeDefIndex: 88256
 	{
 		// Fields
 		private static JsonSerializerSettings s_settings; // 0x00
 	
 		// Properties
-		public static JsonSerializerSettings JsonSerializerSettings { get; } // 0x00000001835831A0-0x00000001835832B0 
+		public static JsonSerializerSettings JsonSerializerSettings { get; } // 0x0000000185CFA6E0-0x0000000185CFA7F0 
 	
 		// Methods
 		public static T LoadFromCompressedJson<T>();
@@ -422,17 +422,17 @@ namespace Beyond.Scripts.Quality
 			where T : class;
 		public static T LoadingQualityJsonFromString<T>(string value)
 			where T : class;
-		private static byte[] Decompress(byte[] data); // 0x000000018AC45660-0x000000018AC45920
+		private static byte[] Decompress(byte[] data); // 0x000000018CE37678-0x000000018CE37950
 	}
 }
 
 namespace Beyond.Scripts.Quality.Components
 {
 	[Serializable]
-	public class AntiAliasingQuality : EnumQualityComponent<AntiAliasingQuality.AntiAliasing> // TypeDefIndex: 61150
+	public class AntiAliasingQuality : EnumQualityComponent<AntiAliasingQuality.AntiAliasing> // TypeDefIndex: 88258
 	{
 		// Nested types
-		public enum AntiAliasing // TypeDefIndex: 61149
+		public enum AntiAliasing // TypeDefIndex: 88257
 		{
 			None = 0,
 			CSAA = 1,
@@ -441,14 +441,14 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public AntiAliasingQuality(); // 0x000000018AC3BFCC-0x000000018AC3BFF4
+		public AntiAliasingQuality(); // 0x000000018CE31820-0x000000018CE31848
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC3BF88-0x000000018AC3BFCC
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE317EC-0x000000018CE31820
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
-	public interface IEnumQualityComponent // TypeDefIndex: 61151
+	public interface IEnumQualityComponent // TypeDefIndex: 88259
 	{
 		// Methods
 		int GetEnumIndex(Enum enumValue);
@@ -460,7 +460,7 @@ namespace Beyond.Scripts.Quality.Components
 	}
 
 	[Serializable]
-	public class EnumQualityComponent<T> : QualityTierComponent, IEnumQualityComponent, IQualityComponentExtension<T> // TypeDefIndex: 61152
+	public class EnumQualityComponent<T> : QualityTierComponent, IEnumQualityComponent, IQualityComponentExtension<T> // TypeDefIndex: 88260
 		where T : Enum
 	{
 		// Fields
@@ -486,9 +486,10 @@ namespace Beyond.Scripts.Quality.Components
 		public T GetValue();
 		public T GetDefaultValue();
 		public void SetEnumWithOutApply(T value);
+		protected void OverrideDefaultValue(T value);
 	}
 
-	public enum QualityTierType // TypeDefIndex: 61153
+	public enum QualityTierType // TypeDefIndex: 88261
 	{
 		Quality = 0,
 		ToggleQuality = 1,
@@ -496,7 +497,7 @@ namespace Beyond.Scripts.Quality.Components
 		SliderQuality = 3
 	}
 
-	public interface IQualityComponentExtension<T> // TypeDefIndex: 61154
+	public interface IQualityComponentExtension<T> // TypeDefIndex: 88262
 	{
 		// Methods
 		T GetValue();
@@ -504,33 +505,36 @@ namespace Beyond.Scripts.Quality.Components
 	}
 
 	[Serializable]
-	public abstract class QualityTierComponent // TypeDefIndex: 61155
+	public abstract class QualityTierComponent // TypeDefIndex: 88263
 	{
 		// Fields
 		public static Action<string, int> s_removeRegisterKeyAction; // 0x00
 		internal bool isNeedStartDirty; // 0x10
 	
 		// Constructors
-		protected QualityTierComponent(); // 0x00000001841E1670-0x00000001841E1680
+		protected QualityTierComponent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected virtual void Apply(); // 0x0000000184B33480-0x0000000184B334B0
-		protected virtual void InitApply(); // 0x00000001846DEB70-0x00000001846DEBB0
-		protected virtual void LowMemory(); // 0x000000018AC454F0-0x000000018AC45530
-		protected virtual void DynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x0000000183690610-0x0000000183690650
-		protected virtual void DynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018AC4548C-0x000000018AC454F0
-		public virtual int Version(); // 0x000000018480ED30-0x000000018480ED60
-		public virtual bool TierLimit(); // 0x000000018AC45618-0x000000018AC45660
-		internal virtual int ApplyOrder(); // 0x000000018473B2C0-0x000000018473B2F0
-		internal void RemoveQualitySettingSaveValue(string settingId); // 0x000000018AC45530-0x000000018AC45618
-		internal void SafeApply(); // 0x000000018368EB70-0x000000018368EC90
-		internal void RemoveRegisterKey(); // 0x0000000184A1EC10-0x0000000184A1ECC0
-		internal void SafeLowMemory(bool init = false /* Metadata: 0x0234F5F1 */); // 0x000000018368E500-0x000000018368E580
-		internal void CallDynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x0000000183692360-0x00000001836923C0
-		internal virtual void CallDynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018AC45414-0x000000018AC4548C
+		protected virtual void Apply(); // 0x0000000186FB5380-0x0000000186FB53B0
+		protected virtual void InitApply(); // 0x0000000186BFB840-0x0000000186BFB880
+		[OnDeserialized]
+		private void OnDeserialized(StreamingContext context); // 0x0000000184E3E5C0-0x0000000184E3E620
+		protected virtual void PreInit(); // 0x0000000184E3E620-0x0000000184E3E660
+		protected virtual void LowMemory(); // 0x000000018CE37560-0x000000018CE37594
+		protected virtual void DynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x000000018674A040-0x000000018674A070
+		protected virtual void DynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018CE3751C-0x000000018CE37560
+		public virtual int Version(); // 0x0000000186CFBF30-0x0000000186CFBF60
+		public virtual bool TierLimit(); // 0x0000000186BC3110-0x0000000186BC3140
+		internal virtual int ApplyOrder(); // 0x0000000186C80430-0x0000000186C80460
+		internal void RemoveQualitySettingSaveValue(string settingId); // 0x000000018CE37594-0x000000018CE37678
+		internal void SafeApply(); // 0x0000000184FCE880-0x0000000184FCE9A0
+		internal void RemoveRegisterKey(); // 0x0000000185471E90-0x0000000185471F50
+		internal void SafeLowMemory(bool init = false /* Metadata: 0x02648436 */); // 0x00000001867F2630-0x00000001867F26C0
+		internal void CallDynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x00000001854F8EE0-0x00000001854F8F20
+		internal virtual void CallDynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018CE374C0-0x000000018CE3751C
 	}
 
-	public struct QualityTierComponentMatch // TypeDefIndex: 61157
+	public struct QualityTierComponentMatch // TypeDefIndex: 88265
 	{
 		// Fields
 		public QualityTierComponent component; // 0x00
@@ -538,7 +542,7 @@ namespace Beyond.Scripts.Quality.Components
 		public int matchQualityTier; // 0x0C
 	
 		// Nested types
-		public enum MatchSource // TypeDefIndex: 61156
+		public enum MatchSource // TypeDefIndex: 88264
 		{
 			UpClosest = 0,
 			DownClosest = 1,
@@ -548,7 +552,7 @@ namespace Beyond.Scripts.Quality.Components
 	}
 
 	[Serializable]
-	public class QualityTierLevel // TypeDefIndex: 61158
+	public class QualityTierLevel // TypeDefIndex: 88266
 	{
 		// Fields
 		public int qualityTier; // 0x10
@@ -556,11 +560,11 @@ namespace Beyond.Scripts.Quality.Components
 		public List<QualityTierComponent> qualityTierComponents; // 0x18
 	
 		// Constructors
-		public QualityTierLevel(); // 0x00000001848E2CA0-0x00000001848E2D20
+		public QualityTierLevel(); // 0x0000000186D425C0-0x0000000186D42640
 	}
 
 	[Serializable]
-	public class SliderQualityComponent : QualityTierComponent // TypeDefIndex: 61159
+	public class SliderQualityComponent : QualityTierComponent // TypeDefIndex: 88267
 	{
 		// Fields
 		[JsonProperty]
@@ -576,17 +580,17 @@ namespace Beyond.Scripts.Quality.Components
 		private float? m_currentSliderValue; // 0x24
 	
 		// Constructors
-		public SliderQualityComponent(); // 0x00000001841E1670-0x00000001841E1680
+		public SliderQualityComponent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public float GetValue(); // 0x0000000184485340-0x00000001844853B0
-		public float GetDefaultValue(); // 0x0000000184D7CA10-0x0000000184D7CA40
-		public Vector2 GetRange(); // 0x000000018AC462B0-0x000000018AC46308
-		public void SetValue(float value); // 0x000000018AC46308-0x000000018AC463B4
+		public float GetValue(); // 0x00000001854738F0-0x0000000185473970
+		public float GetDefaultValue(); // 0x000000018CE37E98-0x000000018CE37EDC
+		public Vector2 GetRange(); // 0x00000001854738B0-0x00000001854738F0
+		public void SetValue(float value); // 0x000000018CE37EDC-0x000000018CE37F94
 	}
 
 	[Serializable]
-	public class ToggleQualityComponent : QualityTierComponent, IQualityComponentExtension<bool> // TypeDefIndex: 61160
+	public class ToggleQualityComponent : QualityTierComponent, IQualityComponentExtension<bool> // TypeDefIndex: 88268
 	{
 		// Fields
 		[FormerlySerializedAs("defaultVal")]
@@ -597,19 +601,20 @@ namespace Beyond.Scripts.Quality.Components
 		private bool? m_currentValue; // 0x19
 	
 		// Constructors
-		public ToggleQualityComponent(); // 0x00000001841E1670-0x00000001841E1680
+		public ToggleQualityComponent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x000000018368D100-0x000000018368D150
-		protected virtual void Toggle(bool value); // 0x000000018AC465F8-0x000000018AC4664C
-		public void ChangeToggle(int index); // 0x000000018AC4646C-0x000000018AC465F8
-		public bool GetValue(); // 0x000000018368D150-0x000000018368D1B0
-		public bool GetDefaultValue(); // 0x000000018368D1B0-0x000000018368D1E0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000186BEC110-0x0000000186BEC160
+		protected virtual void Toggle(bool value); // 0x000000018CE380E4-0x000000018CE3811C
+		public void ChangeToggle(int index); // 0x00000001870E8F10-0x00000001870E8FA0
+		public bool GetValue(); // 0x0000000186BEC160-0x0000000186BEC1E0
+		public bool GetDefaultValue(); // 0x000000018CE38018-0x000000018CE3805C
+		protected void SetToggleWithoutApply(bool value); // 0x000000018CE3805C-0x000000018CE380E4
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class CharacterRenderFeatureQuality : QualityTierComponent // TypeDefIndex: 61161
+	public class CharacterRenderFeatureQuality : QualityTierComponent // TypeDefIndex: 88269
 	{
 		// Fields
 		public int characterSelfShadowOffLodQuality; // 0x18
@@ -617,36 +622,36 @@ namespace Beyond.Scripts.Quality.Components
 		public int characterOutlineTierLevel; // 0x20
 	
 		// Constructors
-		public CharacterRenderFeatureQuality(); // 0x0000000184D83190-0x0000000184D831B0
+		public CharacterRenderFeatureQuality(); // 0x000000018722B530-0x000000018722B550
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184D13B70-0x0000000184D13C10
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001871759E0-0x0000000187175A90
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class ChromaticAberrationQuality : ToggleQualityComponent // TypeDefIndex: 61162
+	public class ChromaticAberrationQuality : ToggleQualityComponent // TypeDefIndex: 88270
 	{
 		// Fields
-		private const int ENABLE_TIER = 2000; // Metadata: 0x0234F5F6
-		private const int DISABLE_TIER = 1000; // Metadata: 0x0234F5F8
+		private const int ENABLE_TIER = 2000; // Metadata: 0x0264843B
+		private const int DISABLE_TIER = 1000; // Metadata: 0x0264843D
 	
 		// Constructors
-		public ChromaticAberrationQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public ChromaticAberrationQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Toggle(bool value); // 0x0000000183C8F990-0x0000000183C8FA20
-		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018AC3BFF4-0x000000018AC3BFFC
+		protected override void Toggle(bool value); // 0x00000001850CB9F0-0x00000001850CBA90
+		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018CE31848-0x000000018CE31850
 	}
 
 	[Serializable]
-	public class DLSSFrameGenQuality : EnumQualityComponent<DLSSFrameGenQuality.DLSSFrameGenQualityEnum> // TypeDefIndex: 61164
+	public class DLSSFrameGenQuality : EnumQualityComponent<DLSSFrameGenQuality.DLSSFrameGenQualityEnum> // TypeDefIndex: 88272
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Nested types
-		public enum DLSSFrameGenQualityEnum // TypeDefIndex: 61163
+		public enum DLSSFrameGenQualityEnum // TypeDefIndex: 88271
 		{
 			Auto = 0,
 			X1 = 1,
@@ -655,74 +660,74 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public DLSSFrameGenQuality(); // 0x0000000184D7EB70-0x0000000184D7EBA0
+		public DLSSFrameGenQuality(); // 0x0000000187222C90-0x0000000187222CC0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184B08A20-0x0000000184B08B40
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E514D0-0x0000000183E51570
-		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x00000001844846F0-0x0000000184484790
-		public bool ShouldShowAuto(); // 0x000000018AC3BFFC-0x000000018AC3C048
-		public bool ShouldShowX1(); // 0x000000018AC3C048-0x000000018AC3C094
-		public bool ShouldShowX2(); // 0x000000018AC3C094-0x000000018AC3C0F0
-		public bool ShouldShowX3(); // 0x000000018AC3C0F0-0x000000018AC3C14C
-		public bool ShouldShow(); // 0x000000018AC3C14C-0x000000018AC3C1F4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000185474A80-0x0000000185474D20
+		protected override void PreInit(); // 0x0000000184E244F0-0x0000000184E24B40
+		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000185474250-0x0000000185474320
+		public bool ShouldShowAuto(); // 0x000000018CE31850-0x000000018CE31890
+		public bool ShouldShowX1(); // 0x000000018CE31890-0x000000018CE318D0
+		public bool ShouldShowX2(); // 0x00000001854722C0-0x0000000185472300
+		public bool ShouldShowX3(); // 0x0000000185472300-0x0000000185472340
+		public bool ShouldShow(); // 0x0000000185472000-0x00000001854720B0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
 	[Obsolete]
-	public class DLSSUpscalerModel : EnumQualityComponent<DLSSModel> // TypeDefIndex: 61165
+	public class DLSSUpscalerModel : EnumQualityComponent<DLSSModel> // TypeDefIndex: 88273
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Constructors
-		public DLSSUpscalerModel(); // 0x0000000184D7EB40-0x0000000184D7EB70
+		public DLSSUpscalerModel(); // 0x000000018CE31944-0x000000018CE3196C
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184484330-0x00000001844846F0
-		public bool ShouldShow(); // 0x000000018AC3C1F4-0x000000018AC3C240
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE318D0-0x000000018CE31904
+		public bool ShouldShow(); // 0x000000018CE31904-0x000000018CE31944
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class DLSSUpscalerQuality : EnumQualityComponent<DLSSQuality> // TypeDefIndex: 61166
+	public class DLSSUpscalerQuality : EnumQualityComponent<DLSSQuality> // TypeDefIndex: 88274
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Constructors
-		public DLSSUpscalerQuality(); // 0x0000000184D7EB10-0x0000000184D7EB40
+		public DLSSUpscalerQuality(); // 0x0000000187222C60-0x0000000187222C90
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184483DB0-0x0000000184483F70
-		public bool ShouldShow(); // 0x000000018AC3C240-0x000000018AC3C2F8
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E51570-0x0000000183E51610
-		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000184484790-0x0000000184484860
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000185474520-0x0000000185474720
+		public bool ShouldShow(); // 0x00000001854720B0-0x0000000185472160
+		protected override void PreInit(); // 0x0000000184E24B70-0x0000000184E251C0
+		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000185474320-0x0000000185474450
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
-	public class EnvironmentRenderingFeatureQuality : QualityTierComponent // TypeDefIndex: 61167
+	public class EnvironmentRenderingFeatureQuality : QualityTierComponent // TypeDefIndex: 88275
 	{
 		// Fields
 		public int environmentRenderingFeatureQualityTier; // 0x18
 	
 		// Constructors
-		public EnvironmentRenderingFeatureQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public EnvironmentRenderingFeatureQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C90950-0x0000000183C909F0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBF40-0x00000001850CBFF0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class FrameGenQuality : EnumQualityComponent<FrameGenQuality.FrameGenMode> // TypeDefIndex: 61169
+	public class FrameGenQuality : EnumQualityComponent<FrameGenQuality.FrameGenMode> // TypeDefIndex: 88277
 	{
 		// Nested types
-		public enum FrameGenMode // TypeDefIndex: 61168
+		public enum FrameGenMode // TypeDefIndex: 88276
 		{
 			None = 0,
 			DLSS = 1,
@@ -730,36 +735,36 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public FrameGenQuality(); // 0x0000000184D7DC10-0x0000000184D7DC40
+		public FrameGenQuality(); // 0x0000000187222B10-0x0000000187222B40
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184484D60-0x0000000184484FB0
-		public bool ShouldShow(); // 0x000000018AC3E8B8-0x000000018AC3E920
-		public bool ShouldShowDLSS(); // 0x000000018AC3E818-0x000000018AC3E868
-		public bool ShouldShowFSR3(); // 0x000000018AC3E868-0x000000018AC3E8B8
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000185474E70-0x00000001854751A0
+		public bool ShouldShow(); // 0x0000000185473750-0x0000000185473790
+		public bool ShouldShowDLSS(); // 0x0000000185473F40-0x0000000185473F70
+		public bool ShouldShowFSR3(); // 0x0000000185473720-0x0000000185473750
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class FrameGenQualityMobile : ToggleQualityComponent // TypeDefIndex: 61170
+	public class FrameGenQualityMobile : ToggleQualityComponent // TypeDefIndex: 88278
 	{
 		// Constructors
-		public FrameGenQualityMobile(); // 0x00000001841E1670-0x00000001841E1680
+		public FrameGenQualityMobile(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC3E638-0x000000018AC3E744
-		public bool ShouldShow(); // 0x000000018AC3E744-0x000000018AC3E810
-		public void __iFixBaseProxy_Apply(); // 0x000000018AC3E810-0x000000018AC3E818
+		protected override void Apply(); // 0x000000018CE34160-0x000000018CE34268
+		public bool ShouldShow(); // 0x000000018CE34268-0x000000018CE34334
+		public void __iFixBaseProxy_Apply(); // 0x000000018CE34334-0x000000018CE3433C
 	}
 
 	[Serializable]
-	public class FrameRateQuality : EnumQualityComponent<FrameRateQuality.FrameRateQualityEnum> // TypeDefIndex: 61172
+	public class FrameRateQuality : EnumQualityComponent<FrameRateQuality.FrameRateQualityEnum> // TypeDefIndex: 88280
 	{
 		// Properties
-		private int frameRate { get; } // 0x00000001848223B0-0x0000000184822410 
+		private int frameRate { get; } // 0x000000018686C140-0x000000018686C1B0 
 	
 		// Nested types
-		public enum FrameRateQualityEnum : byte // TypeDefIndex: 61171
+		public enum FrameRateQualityEnum : byte // TypeDefIndex: 88279
 		{
 			FPS120 = 0,
 			FPS60 = 1,
@@ -767,25 +772,25 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public FrameRateQuality(); // 0x0000000184D7DBB0-0x0000000184D7DBE0
+		public FrameRateQuality(); // 0x0000000187222AE0-0x0000000187222B10
 	
 		// Methods
-		public static int GetFrameRateFromEnum(FrameRateQualityEnum enumValue); // 0x0000000184822410-0x0000000184822450
-		public override int Version(); // 0x0000000184D7DBE0-0x0000000184D7DC10
-		public bool ShouldShow(); // 0x000000018AC3EE64-0x000000018AC3EF0C
-		protected override void Apply(); // 0x0000000184822330-0x00000001848223B0
-		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x000000018AC3ECF4-0x000000018AC3EE64
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x00000001839BA9A0-0x00000001839BAB20
-		private bool _FPS30Enabled(); // 0x000000018AC3EF0C-0x000000018AC3EF58
-		private bool _FPS60Enabled(); // 0x000000018AC3EF58-0x000000018AC3EFA4
-		private bool _FPSBNoLimitEnabled(); // 0x000000018AC3EFA4-0x000000018AC3EFF0
-		private bool _IsGDLSSGDisable(); // 0x000000018AC3EFF0-0x000000018AC3F098
-		public int __iFixBaseProxy_Version(); // 0x00000001874559DC-0x00000001874559E4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		public static int GetFrameRateFromEnum(FrameRateQualityEnum enumValue); // 0x000000018686C1B0-0x000000018686C1F0
+		public override int Version(); // 0x00000001871FDE00-0x00000001871FDE30
+		public bool ShouldShow(); // 0x000000018CE3467C-0x000000018CE3472C
+		protected override void Apply(); // 0x000000018686C0C0-0x000000018686C140
+		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x000000018CE34510-0x000000018CE3467C
+		protected override void PreInit(); // 0x0000000184E26830-0x0000000184E27150
+		private bool _FPS30Enabled(); // 0x00000001854736F0-0x0000000185473720
+		private bool _FPS60Enabled(); // 0x0000000185473630-0x0000000185473660
+		private bool _FPSBNoLimitEnabled(); // 0x000000018CE3472C-0x000000018CE3476C
+		private bool _IsGDLSSGDisable(); // 0x000000018CE3476C-0x000000018CE3481C
+		public int __iFixBaseProxy_Version(); // 0x0000000189738B9C-0x0000000189738BA4
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
-	public class HgFrameRateControl // TypeDefIndex: 61174
+	public class HgFrameRateControl // TypeDefIndex: 88282
 	{
 		// Fields
 		public static int s_cinematicFrameRate; // 0x00
@@ -793,7 +798,7 @@ namespace Beyond.Scripts.Quality.Components
 		public static Action<int, int> s_OnFrameRateChanged; // 0x10
 	
 		// Nested types
-		public enum ReasonEnum // TypeDefIndex: 61173
+		public enum ReasonEnum // TypeDefIndex: 88281
 		{
 			Default = 0,
 			Init = 1,
@@ -804,33 +809,33 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public HgFrameRateControl(); // 0x00000001841E1670-0x00000001841E1680
-		static HgFrameRateControl(); // 0x00000001848224C0-0x0000000184822570
+		public HgFrameRateControl(); // 0x0000000186805BA0-0x0000000186805BB0
+		static HgFrameRateControl(); // 0x000000018686BFE0-0x000000018686C090
 	
 		// Methods
-		public static int GetDefaultFrameRate(); // 0x0000000184822570-0x00000001848225A0
+		public static int GetDefaultFrameRate(); // 0x000000018686C090-0x000000018686C0C0
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
-		public static void Init(); // 0x0000000184822450-0x00000001848224C0
-		public static void SetFrameRateOverrider(int frameRate, ReasonEnum reason); // 0x000000018AC3F864-0x000000018AC3F954
-		public static int GetFrameRate(); // 0x000000018AC3F41C-0x000000018AC3F460
-		public static bool IsHighFrameRate(); // 0x000000018AC3F594-0x000000018AC3F5B8
-		public static int RecommendedDefaultFrameRate(); // 0x000000018AC3F5B8-0x000000018AC3F6EC
-		public static int GetUserSettingFrameRate(); // 0x000000018AC3F460-0x000000018AC3F594
-		public static void __ForceSetFrameRate(int frameRate, ReasonEnum reason); // 0x00000001848225A0-0x0000000184822670
-		public static void ResetFrameRate(); // 0x000000018AC3F6EC-0x000000018AC3F864
+		public static void Init(); // 0x000000018686BF60-0x000000018686BFE0
+		public static void SetFrameRateOverrider(int frameRate, ReasonEnum reason); // 0x000000018CE34FC4-0x000000018CE350B8
+		public static int GetFrameRate(); // 0x000000018CE34B7C-0x000000018CE34BC0
+		public static bool IsHighFrameRate(); // 0x000000018CE34CF4-0x000000018CE34D18
+		public static int RecommendedDefaultFrameRate(); // 0x000000018CE34D18-0x000000018CE34E4C
+		public static int GetUserSettingFrameRate(); // 0x000000018CE34BC0-0x000000018CE34CF4
+		public static void __ForceSetFrameRate(int frameRate, ReasonEnum reason); // 0x000000018686C1F0-0x000000018686C320
+		public static void ResetFrameRate(); // 0x000000018CE34E4C-0x000000018CE34FC4
 	}
 
 	[Serializable]
-	public class FrameRateQualityMobile : EnumQualityComponent<FrameRateQualityMobile.FrameRateQualityMobileEnum> // TypeDefIndex: 61176
+	public class FrameRateQualityMobile : EnumQualityComponent<FrameRateQualityMobile.FrameRateQualityMobileEnum> // TypeDefIndex: 88284
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Properties
-		private int frameRate { get; } // 0x000000018AC3EC78-0x000000018AC3ECF4 
+		private int frameRate { get; } // 0x000000018CE34490-0x000000018CE34510 
 	
 		// Nested types
-		public enum FrameRateQualityMobileEnum : byte // TypeDefIndex: 61175
+		public enum FrameRateQualityMobileEnum : byte // TypeDefIndex: 88283
 		{
 			FPS60 = 0,
 			FPS45 = 1,
@@ -838,69 +843,69 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public FrameRateQualityMobile(); // 0x000000018AC3EC50-0x000000018AC3EC78
+		public FrameRateQualityMobile(); // 0x000000018CE34468-0x000000018CE34490
 	
 		// Methods
-		public static int GetFrameRateFromEnum(FrameRateQualityMobileEnum enumValue); // 0x000000018AC3E9A8-0x000000018AC3EA1C
-		public override int Version(); // 0x000000018AC3EC00-0x000000018AC3EC50
-		protected override void Apply(); // 0x000000018AC3E920-0x000000018AC3E9A8
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x000000018AC3EA1C-0x000000018AC3EC00
-		public int __iFixBaseProxy_Version(); // 0x00000001874559DC-0x00000001874559E4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		public static int GetFrameRateFromEnum(FrameRateQualityMobileEnum enumValue); // 0x000000018CE343CC-0x000000018CE34424
+		public override int Version(); // 0x000000018CE34424-0x000000018CE34468
+		protected override void Apply(); // 0x000000018CE3433C-0x000000018CE343CC
+		protected override void PreInit(); // 0x0000000184E25F10-0x0000000184E26830
+		public int __iFixBaseProxy_Version(); // 0x0000000189738B9C-0x0000000189738BA4
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
-	public class FSR3UpscalerQuality : EnumQualityComponent<FSR3Quality> // TypeDefIndex: 61177
+	public class FSR3UpscalerQuality : EnumQualityComponent<FSR3Quality> // TypeDefIndex: 88285
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Constructors
-		public FSR3UpscalerQuality(); // 0x0000000184D7DD90-0x0000000184D7DDC0
+		public FSR3UpscalerQuality(); // 0x0000000187222B40-0x0000000187222B70
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184483F70-0x0000000184484130
-		public bool ShouldShow(); // 0x000000018AC3E580-0x000000018AC3E638
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E51610-0x0000000183E516B0
-		internal void FSR3Change(QualityTierComponent qualityTierComponent); // 0x0000000184484860-0x0000000184484930
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000186D4EBD0-0x0000000186D4ED90
+		public bool ShouldShow(); // 0x0000000185472410-0x00000001854724C0
+		protected override void PreInit(); // 0x0000000184E25370-0x0000000184E25F10
+		internal void FSR3Change(QualityTierComponent qualityTierComponent); // 0x0000000185474450-0x0000000185474520
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
-	public class GrassSparsityQuality : QualityTierComponent // TypeDefIndex: 61178
+	public class GrassSparsityQuality : QualityTierComponent // TypeDefIndex: 88286
 	{
 		// Fields
 		public int grassSparsityQualityTier; // 0x18
 	
 		// Constructors
-		public GrassSparsityQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public GrassSparsityQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C8FA20-0x0000000183C8FA90
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBA90-0x00000001850CBB10
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGAmbientOcclusionQuality : QualityTierComponent // TypeDefIndex: 61179
+	public class HGAmbientOcclusionQuality : QualityTierComponent // TypeDefIndex: 88287
 	{
 		// Fields
 		public int aoQualityTier; // 0x18
 	
 		// Constructors
-		public HGAmbientOcclusionQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGAmbientOcclusionQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C909F0-0x0000000183C90A90
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBFF0-0x00000001850CC0A0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGAnisoLevelQuality : EnumQualityComponent<HGAnisoLevelQuality.HGAnisoLevel> // TypeDefIndex: 61181
+	public class HGAnisoLevelQuality : EnumQualityComponent<HGAnisoLevelQuality.HGAnisoLevel> // TypeDefIndex: 88289
 	{
 		// Nested types
-		public enum HGAnisoLevel // TypeDefIndex: 61180
+		public enum HGAnisoLevel // TypeDefIndex: 88288
 		{
 			X1 = 1,
 			X2 = 2,
@@ -909,118 +914,118 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public HGAnisoLevelQuality(); // 0x0000000184D7D9A0-0x0000000184D7D9D0
+		public HGAnisoLevelQuality(); // 0x0000000187222A50-0x0000000187222A80
 	
 		// Methods
-		protected override void InitApply(); // 0x0000000184B87D30-0x0000000184B87D90
-		protected override void Apply(); // 0x000000018AC3F098-0x000000018AC3F19C
-		public void __iFixBaseProxy_InitApply(); // 0x000000018AC3F19C-0x000000018AC3F1A4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void InitApply(); // 0x000000018716C450-0x000000018716C4C0
+		protected override void Apply(); // 0x000000018CE3481C-0x000000018CE3491C
+		public void __iFixBaseProxy_InitApply(); // 0x000000018CE3491C-0x000000018CE34924
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGContactShadowQuality : ToggleQualityComponent // TypeDefIndex: 61182
+	public class HGContactShadowQuality : ToggleQualityComponent // TypeDefIndex: 88290
 	{
 		// Fields
-		private const int ENABLE_TIER = 2000; // Metadata: 0x0234F611
-		private const int DISABLE_TIER = 1000; // Metadata: 0x0234F613
+		private const int ENABLE_TIER = 2000; // Metadata: 0x02648456
+		private const int DISABLE_TIER = 1000; // Metadata: 0x02648458
 	
 		// Constructors
-		public HGContactShadowQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGContactShadowQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Toggle(bool value); // 0x0000000183C8FA90-0x0000000183C8FB20
-		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018AC3BFF4-0x000000018AC3BFFC
+		protected override void Toggle(bool value); // 0x00000001850CBB10-0x00000001850CBBB0
+		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018CE31848-0x000000018CE31850
 	}
 
 	[Serializable]
-	public class HGIrradianceVolumeQuality : QualityTierComponent // TypeDefIndex: 61183
+	public class HGIrradianceVolumeQuality : QualityTierComponent // TypeDefIndex: 88291
 	{
 		// Constructors
-		public HGIrradianceVolumeQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGIrradianceVolumeQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void LowMemory(); // 0x000000018AC3F1A4-0x000000018AC3F1E8
-		public void __iFixBaseProxy_LowMemory(); // 0x0000000186D66024-0x0000000186D6602C
+		protected override void LowMemory(); // 0x000000018CE34924-0x000000018CE34958
+		public void __iFixBaseProxy_LowMemory(); // 0x0000000188F2AEA8-0x0000000188F2AEB0
 	}
 
 	[Serializable]
-	public class HGLODStreamingComponent : QualityTierComponent // TypeDefIndex: 61184
+	public class HGLODStreamingComponent : QualityTierComponent // TypeDefIndex: 88292
 	{
 		// Fields
 		public bool enableLODStreaming; // 0x18
 	
 		// Constructors
-		public HGLODStreamingComponent(); // 0x00000001841E1670-0x00000001841E1680
+		public HGLODStreamingComponent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184D33920-0x0000000184D33960
-		protected override void LowMemory(); // 0x000000018AC3F1E8-0x000000018AC3F2E4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
-		public void __iFixBaseProxy_LowMemory(); // 0x0000000186D66024-0x0000000186D6602C
+		protected override void Apply(); // 0x00000001871DE500-0x00000001871DE530
+		protected override void LowMemory(); // 0x000000018CE34958-0x000000018CE34A5C
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_LowMemory(); // 0x0000000188F2AEA8-0x0000000188F2AEB0
 	}
 
 	[Serializable]
-	public class HGReflectionProbeBinningQuality : QualityTierComponent // TypeDefIndex: 61185
+	public class HGReflectionProbeBinningQuality : QualityTierComponent // TypeDefIndex: 88293
 	{
 		// Constructors
-		public HGReflectionProbeBinningQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGReflectionProbeBinningQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void LowMemory(); // 0x000000018AC3F2E4-0x000000018AC3F36C
-		public void __iFixBaseProxy_LowMemory(); // 0x0000000186D66024-0x0000000186D6602C
+		protected override void LowMemory(); // 0x000000018CE34A5C-0x000000018CE34AE4
+		public void __iFixBaseProxy_LowMemory(); // 0x0000000188F2AEA8-0x0000000188F2AEB0
 	}
 
 	[Serializable]
-	public class HGRPTierQuality : QualityTierComponent // TypeDefIndex: 61186
+	public class HGRPTierQuality : QualityTierComponent // TypeDefIndex: 88294
 	{
 		// Fields
 		public int HGRP_QualityTier; // 0x18
 	
 		// Constructors
-		public HGRPTierQuality(); // 0x0000000184D77930-0x0000000184D77940
+		public HGRPTierQuality(); // 0x000000018721F370-0x000000018721F3F0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C90860-0x0000000183C908B0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBE60-0x00000001850CBEB0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGScreenSpaceReflectionQuality : QualityTierComponent // TypeDefIndex: 61187
+	public class HGScreenSpaceReflectionQuality : QualityTierComponent // TypeDefIndex: 88295
 	{
 		// Fields
 		public int ssrQualityTier; // 0x18
 	
 		// Constructors
-		public HGScreenSpaceReflectionQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGScreenSpaceReflectionQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C8FB20-0x0000000183C8FB90
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBBB0-0x00000001850CBC30
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGShadowQuality : QualityTierComponent // TypeDefIndex: 61188
+	public class HGShadowQuality : QualityTierComponent // TypeDefIndex: 88296
 	{
 		// Fields
 		public int shadowQualityTier; // 0x18
 	
 		// Constructors
-		public HGShadowQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGShadowQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C8FB90-0x0000000183C8FC00
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBC30-0x00000001850CBCB0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGTextureQuality : EnumQualityComponent<HGTextureQuality.TextureQualityEnum> // TypeDefIndex: 61190
+	public class HGTextureQuality : EnumQualityComponent<HGTextureQuality.TextureQualityEnum> // TypeDefIndex: 88298
 	{
 		// Properties
-		private int textureQualityTier { get; } // 0x0000000183C8FCB0-0x0000000183C8FD10 
+		private int textureQualityTier { get; } // 0x00000001850CBD70-0x00000001850CBDE0 
 	
 		// Nested types
-		public enum TextureQualityEnum : byte // TypeDefIndex: 61189
+		public enum TextureQualityEnum : byte // TypeDefIndex: 88297
 		{
 			High = 0,
 			Medium = 1,
@@ -1028,76 +1033,105 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public HGTextureQuality(); // 0x0000000184D7D8E0-0x0000000184D7D910
+		public HGTextureQuality(); // 0x00000001872229F0-0x0000000187222A20
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C8FC00-0x0000000183C8FCB0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBCB0-0x00000001850CBD70
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGVolumetricCloudQuality : QualityTierComponent // TypeDefIndex: 61191
+	public class HGVolumetricCloudQuality : QualityTierComponent // TypeDefIndex: 88299
 	{
 		// Fields
 		public int volumetricCloudQualityTier; // 0x18
 	
 		// Constructors
-		public HGVolumetricCloudQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGVolumetricCloudQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		private int GetShaderLod(); // 0x0000000183C90780-0x0000000183C907B0
-		protected override void Apply(); // 0x0000000183C906F0-0x0000000183C90780
-		public bool ShouldShowNoExLow(); // 0x000000018AC3F3C4-0x000000018AC3F41C
-		public bool ShouldShowExLow(); // 0x000000018AC3F36C-0x000000018AC3F3C4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		private int GetShaderLod(); // 0x00000001850CC370-0x00000001850CC3A0
+		protected override void Apply(); // 0x00000001850CC2E0-0x00000001850CC370
+		public bool ShouldShowNoExLow(); // 0x000000018CE34B30-0x000000018CE34B7C
+		public bool ShouldShowExLow(); // 0x000000018CE34AE4-0x000000018CE34B30
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class HGVolumetricFogQuality : QualityTierComponent // TypeDefIndex: 61192
+	public class HGVolumetricFogQuality : QualityTierComponent // TypeDefIndex: 88300
 	{
 		// Fields
 		public int volumetricFogQualityTier; // 0x18
 	
 		// Constructors
-		public HGVolumetricFogQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public HGVolumetricFogQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C907F0-0x0000000183C90860
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CBDE0-0x00000001850CBE60
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class LODGroupQuality : QualityTierComponent // TypeDefIndex: 61193
+	public class LODGroupQuality : QualityTierComponent // TypeDefIndex: 88301
 	{
 		// Fields
 		public float lodBias; // 0x18
 		public int lodOffset; // 0x1C
 	
 		// Constructors
-		public LODGroupQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public LODGroupQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC42504-0x000000018AC42560
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE35828-0x000000018CE35880
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class PhysicsClothQuality : QualityTierComponent // TypeDefIndex: 61194
+	public class MemoryReleaseIntervalQuality : QualityTierComponent // TypeDefIndex: 88302
+	{
+		// Fields
+		private const float DEFAULT_SHRINK_MEMORY_INTERVAL_SECONDS = 600f; // Metadata: 0x0264845D
+		private const float DEFAULT_PSO_RELEASE_INTERVAL_SECONDS = 1200f; // Metadata: 0x02648461
+		private const float DEFAULT_LOW_MEMORY_PROCESS_INTERVAL_SECONDS = 180f; // Metadata: 0x02648465
+		private static float s_currentShrinkMemoryIntervalSeconds; // 0x00
+		private static float s_currentPsoReleaseIntervalSeconds; // 0x04
+		private static float s_lastShrinkMemoryTimestamp; // 0x08
+		private static float s_lastPsoReleaseTimestamp; // 0x0C
+		public float shrinkMemoryIntervalSeconds; // 0x18
+		public float psoReleaseIntervalSeconds; // 0x1C
+		public float lowMemoryProcessIntervalSeconds; // 0x20
+	
+		// Constructors
+		public MemoryReleaseIntervalQuality(); // 0x0000000184E39D20-0x0000000184E39D40
+		static MemoryReleaseIntervalQuality(); // 0x0000000184E399F0-0x0000000184E39D20
+	
+		// Methods
+		public static bool TryStartShrinkMemory(); // 0x0000000184E39250-0x0000000184E395A0
+		public static bool TryStartPsoRelease(); // 0x0000000184E38EF0-0x0000000184E39250
+		protected override void Apply(); // 0x0000000184E38870-0x0000000184E38EF0
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+		private static void _Reset(); // 0x0000000184E395A0-0x0000000184E39930
+		private static bool _TryStartInterval(ref float lastTimestamp, float intervalSeconds); // 0x0000000184E39930-0x0000000184E399F0
+		public void __iFixBaseProxy_Apply(); // 0x0000000182985080-0x00000001829850B0
+	}
+
+	[Serializable]
+	public class PhysicsClothQuality : QualityTierComponent // TypeDefIndex: 88303
 	{
 		// Fields
 		public bool UsePhysicCloth; // 0x18
 		public bool UseCrossFrameJob; // 0x19
 	
 		// Constructors
-		public PhysicsClothQuality(); // 0x0000000184DA9A50-0x0000000184DA9A60
+		public PhysicsClothQuality(); // 0x0000000187257B10-0x0000000187257B20
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC426F4-0x000000018AC427A4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE35A18-0x000000018CE35AC8
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class PrefabInstantiateQuality : QualityTierComponent // TypeDefIndex: 61195
+	public class PrefabInstantiateQuality : QualityTierComponent // TypeDefIndex: 88304
 	{
 		// Fields
 		public float normalMaxUpdateTimeInMsThreshold; // 0x18
@@ -1110,15 +1144,15 @@ namespace Beyond.Scripts.Quality.Components
 		public int normalMaxDestroyCount; // 0x34
 	
 		// Constructors
-		public PrefabInstantiateQuality(); // 0x0000000184DA9A60-0x0000000184DA9AA0
+		public PrefabInstantiateQuality(); // 0x0000000187257B20-0x0000000187257B60
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC427A4-0x000000018AC42920
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE35AC8-0x000000018CE35C44
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class PreloadLoadSettingQuality : QualityTierComponent // TypeDefIndex: 61196
+	public class PreloadLoadSettingQuality : QualityTierComponent // TypeDefIndex: 88305
 	{
 		// Fields
 		public float normalMaxUpdateTimeInMsThreshold; // 0x18
@@ -1131,58 +1165,96 @@ namespace Beyond.Scripts.Quality.Components
 		public float preloadManagerUnloadKeepTime; // 0x34
 	
 		// Constructors
-		public PreloadLoadSettingQuality(); // 0x0000000184D51130-0x0000000184D51170
+		public PreloadLoadSettingQuality(); // 0x00000001871EBF20-0x00000001871EBF60
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184B0D360-0x0000000184B0D4C0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000186F8E0D0-0x0000000186F8E240
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class RayTracingQuality : ToggleQualityComponent // TypeDefIndex: 61197
+	public class QNSSFrameGenQuality : ToggleQualityComponent // TypeDefIndex: 88306
 	{
-		// Properties
-		public static bool supportsRayTracing { get; } // 0x0000000184A1EB60-0x0000000184A1EB90 
+		// Fields
+		private const int QNSS_DEFAULT_LEVEL = 3; // Metadata: 0x02648469
 	
 		// Constructors
-		public RayTracingQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public QNSSFrameGenQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void InitApply(); // 0x0000000184A1EB00-0x0000000184A1EB60
-		protected override void Apply(); // 0x000000018AC459E0-0x000000018AC45AD4
-		public bool ShouldShow(); // 0x000000018AC45AD4-0x000000018AC45B24
-		internal override int ApplyOrder(); // 0x0000000184D7CBF0-0x0000000184D7CC20
-		public void __iFixBaseProxy_InitApply(); // 0x000000018AC3F19C-0x000000018AC3F1A4
-		public void __iFixBaseProxy_Apply(); // 0x000000018AC3E810-0x000000018AC3E818
-		public int __iFixBaseProxy_ApplyOrder(); // 0x000000018AC45B24-0x000000018AC45B2C
+		private static bool _GetToggleFromUDSClient(); // 0x000000018CE35CE0-0x000000018CE35D28
+		protected override void PreInit(); // 0x0000000184E39D40-0x0000000184E3B100
+		protected override void Toggle(bool value); // 0x000000018CE35C80-0x000000018CE35CE0
+		public bool ShouldShow(); // 0x000000018CE35C44-0x000000018CE35C80
+		private void _OnServerFILevelChanged(int newFILevel); // 0x000000018CE35D28-0x000000018CE35D70
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
+		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018CE31848-0x000000018CE31850
 	}
 
 	[Serializable]
-	public class ReflexQuality : EnumQualityComponent<StreamlineReflexMode> // TypeDefIndex: 61198
+	public class QNSSUpscalerQuality : ToggleQualityComponent // TypeDefIndex: 88307
+	{
+		// Fields
+		private const int QNSS_DEFAULT_LEVEL = 2; // Metadata: 0x0264846A
+	
+		// Constructors
+		public QNSSUpscalerQuality(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+		// Methods
+		private static bool _GetToggleFromUDSClient(); // 0x000000018CE35E08-0x000000018CE35E50
+		protected override void PreInit(); // 0x0000000184E3B100-0x0000000184E3C4C0
+		protected override void Toggle(bool value); // 0x000000018CE35DAC-0x000000018CE35E08
+		public bool ShouldShow(); // 0x000000018CE35D70-0x000000018CE35DAC
+		private void _OnServerSRLevelChanged(int newSRLevel); // 0x000000018CE35E50-0x000000018CE35E98
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
+		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018CE31848-0x000000018CE31850
+	}
+
+	[Serializable]
+	public class RayTracingQuality : ToggleQualityComponent // TypeDefIndex: 88308
+	{
+		// Properties
+		public static bool supportsRayTracing { get; } // 0x00000001854725A0-0x00000001854725E0 
+	
+		// Constructors
+		public RayTracingQuality(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+		// Methods
+		protected override void InitApply(); // 0x00000001854724C0-0x0000000185472520
+		protected override void Apply(); // 0x000000018CE37A08-0x000000018CE37AF8
+		public bool ShouldShow(); // 0x00000001854736C0-0x00000001854736F0
+		internal override int ApplyOrder(); // 0x0000000187225890-0x00000001872258C0
+		public void __iFixBaseProxy_InitApply(); // 0x000000018CE3491C-0x000000018CE34924
+		public void __iFixBaseProxy_Apply(); // 0x000000018CE34334-0x000000018CE3433C
+		public int __iFixBaseProxy_ApplyOrder(); // 0x000000018CE37AF8-0x000000018CE37B00
+	}
+
+	[Serializable]
+	public class ReflexQuality : EnumQualityComponent<StreamlineReflexMode> // TypeDefIndex: 88309
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Constructors
-		public ReflexQuality(); // 0x0000000184D7CBC0-0x0000000184D7CBF0
+		public ReflexQuality(); // 0x0000000187222690-0x00000001872226C0
 	
 		// Methods
-		protected override void Apply(); // 0x00000001844853B0-0x0000000184485530
-		public bool ShouldShow(); // 0x000000018AC45C8C-0x000000018AC45D4C
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E516B0-0x0000000183E51750
-		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x000000018AC45B2C-0x000000018AC45C8C
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000185473F70-0x00000001854740F0
+		public bool ShouldShow(); // 0x00000001854725E0-0x00000001854726A0
+		protected override void PreInit(); // 0x0000000184E3E660-0x0000000184E3ECB0
+		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000185473970-0x0000000185473A70
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
-	public class RenderingScaleQualityMobile : EnumQualityComponent<RenderingScaleQualityMobile.RenderingScaleMode> // TypeDefIndex: 61200
+	public class RenderingScaleQualityMobile : EnumQualityComponent<RenderingScaleQualityMobile.RenderingScaleMode> // TypeDefIndex: 88311
 	{
 		// Properties
-		public float renderingScaleFactor { get; } // 0x000000018AC45E80-0x000000018AC45F4C 
+		public float renderingScaleFactor { get; } // 0x000000018CE37C38-0x000000018CE37CF8 
 	
 		// Nested types
-		public enum RenderingScaleMode // TypeDefIndex: 61199
+		public enum RenderingScaleMode // TypeDefIndex: 88310
 		{
 			ExHigh = 0,
 			High = 1,
@@ -1192,24 +1264,24 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public RenderingScaleQualityMobile(); // 0x000000018AC45E58-0x000000018AC45E80
+		public RenderingScaleQualityMobile(); // 0x000000018CE37C10-0x000000018CE37C38
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC45D4C-0x000000018AC45E58
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE37B00-0x000000018CE37C10
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class RenderingScaleQualityPC : EnumQualityComponent<RenderingScaleQualityPC.RenderingScaleMode> // TypeDefIndex: 61202
+	public class RenderingScaleQualityPC : EnumQualityComponent<RenderingScaleQualityPC.RenderingScaleMode> // TypeDefIndex: 88313
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x30
 	
 		// Properties
-		public float renderingScale { get; } // 0x0000000184484BB0-0x0000000184484C10 
+		public float renderingScale { get; } // 0x00000001854749B0-0x0000000185474A20 
 	
 		// Nested types
-		public enum RenderingScaleMode // TypeDefIndex: 61201
+		public enum RenderingScaleMode // TypeDefIndex: 88312
 		{
 			Percent100 = 0,
 			Percent90 = 1,
@@ -1219,19 +1291,19 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public RenderingScaleQualityPC(); // 0x0000000184D7CB30-0x0000000184D7CB60
+		public RenderingScaleQualityPC(); // 0x0000000187222660-0x0000000187222690
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184484A60-0x0000000184484BB0
-		public bool ShouldShow(); // 0x000000018AC45F4C-0x000000018AC46034
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E51750-0x0000000183E517F0
-		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000184484930-0x0000000184484A60
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x0000000185474840-0x00000001854749B0
+		public bool ShouldShow(); // 0x0000000185472160-0x0000000185472210
+		protected override void PreInit(); // 0x0000000184E3ECB0-0x0000000184E3F300
+		internal void DlSSChange(QualityTierComponent qualityTierComponent); // 0x0000000185474D20-0x0000000185474E70
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 
 	[Serializable]
-	public class ResLoadSettingQuality : QualityTierComponent // TypeDefIndex: 61203
+	public class ResLoadSettingQuality : QualityTierComponent // TypeDefIndex: 88314
 	{
 		// Fields
 		public bool debugCloseBundleUnload; // 0x18
@@ -1252,37 +1324,37 @@ namespace Beyond.Scripts.Quality.Components
 		public float unloadMaxFloatingBudget; // 0x48
 	
 		// Constructors
-		public ResLoadSettingQuality(); // 0x0000000184D10F30-0x0000000184D10F90
+		public ResLoadSettingQuality(); // 0x000000018716CBD0-0x000000018716CC30
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184A7D020-0x0000000184A7D1B0
-		protected override void LowMemory(); // 0x000000018AC46034-0x000000018AC460FC
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
-		public void __iFixBaseProxy_LowMemory(); // 0x0000000186D66024-0x0000000186D6602C
+		protected override void Apply(); // 0x0000000186F833D0-0x0000000186F83580
+		protected override void LowMemory(); // 0x000000018CE37CF8-0x000000018CE37DC8
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_LowMemory(); // 0x0000000188F2AEA8-0x0000000188F2AEB0
 	}
 
 	[Serializable]
-	public class SceneDetailQuality : QualityTierComponent // TypeDefIndex: 61204
+	public class SceneDetailQuality : QualityTierComponent // TypeDefIndex: 88315
 	{
 		// Fields
 		public int sceneDetailQualityTier; // 0x18
 	
 		// Constructors
-		public SceneDetailQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public SceneDetailQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000183C90A90-0x0000000183C90B30
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001850CC0A0-0x00000001850CC150
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class ShaderLodQuality : QualityTierComponent // TypeDefIndex: 61206
+	public class ShaderLodQuality : QualityTierComponent // TypeDefIndex: 88317
 	{
 		// Fields
 		public ShaderLodEnum ShaderLod; // 0x18
 	
 		// Nested types
-		public enum ShaderLodEnum // TypeDefIndex: 61205
+		public enum ShaderLodEnum // TypeDefIndex: 88316
 		{
 			Mobile100 = 100,
 			Mobile200 = 200,
@@ -1293,40 +1365,40 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public ShaderLodQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public ShaderLodQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void InitApply(); // 0x0000000184CD9040-0x0000000184CD9080
-		protected override void Apply(); // 0x000000018AC460FC-0x000000018AC461CC
-		public void __iFixBaseProxy_InitApply(); // 0x000000018AC3F19C-0x000000018AC3F1A4
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void InitApply(); // 0x0000000187105560-0x0000000187105590
+		protected override void Apply(); // 0x000000018CE37DC8-0x000000018CE37E98
+		public void __iFixBaseProxy_InitApply(); // 0x000000018CE3491C-0x000000018CE34924
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class SharpnessQuality : SliderQualityComponent // TypeDefIndex: 61207
+	public class SharpnessQuality : SliderQualityComponent // TypeDefIndex: 88318
 	{
 		// Constructors
-		public SharpnessQuality(); // 0x00000001841E1670-0x00000001841E1680
+		public SharpnessQuality(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184484C10-0x0000000184484D60
-		public bool ShouldShow(); // 0x000000018AC461CC-0x000000018AC462B0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x00000001854740F0-0x0000000185474250
+		public bool ShouldShow(); // 0x0000000185472210-0x00000001854722C0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class SliderTestComponent : SliderQualityComponent // TypeDefIndex: 61208
+	public class SliderTestComponent : SliderQualityComponent // TypeDefIndex: 88319
 	{
 		// Constructors
-		public SliderTestComponent(); // 0x00000001841E1670-0x00000001841E1680
+		public SliderTestComponent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC463B4-0x000000018AC463F8
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		protected override void Apply(); // 0x000000018CE37F94-0x000000018CE37FC8
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class TickExclusiveQuality : QualityTierComponent // TypeDefIndex: 61209
+	public class TickExclusiveQuality : QualityTierComponent // TypeDefIndex: 88320
 	{
 		// Fields
 		public TickExclusiveMode quality; // 0x18
@@ -1334,23 +1406,23 @@ namespace Beyond.Scripts.Quality.Components
 		private ThermalState m_currentThermalState; // 0x1D
 	
 		// Constructors
-		public TickExclusiveQuality(); // 0x0000000184D84AB0-0x0000000184D84AC0
+		public TickExclusiveQuality(); // 0x000000018722E950-0x000000018722E960
 	
 		// Methods
-		protected override void Apply(); // 0x00000001843ECE90-0x00000001843ECEF0
-		protected override void DynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x00000001843ECEF0-0x00000001843ECF40
-		protected override void DynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018AC463F8-0x000000018AC4646C
-		private void _OnQualityOrThermalChanged(); // 0x00000001843ECF40-0x00000001843ECFE0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
-		public void __iFixBaseProxy_DynamicQualityChange(LogicQualityLevel P0, LogicQualityLevel P1); // 0x00000001870A9134-0x00000001870A913C
-		public void __iFixBaseProxy_DynamicThermalChange(ThermalState P0, ThermalState P1); // 0x00000001870A913C-0x00000001870A9144
+		protected override void Apply(); // 0x00000001867C4390-0x00000001867C4400
+		protected override void DynamicQualityChange(LogicQualityLevel current, LogicQualityLevel last); // 0x00000001867C4400-0x00000001867C4430
+		protected override void DynamicThermalChange(ThermalState current, ThermalState last); // 0x000000018CE37FC8-0x000000018CE38018
+		private void _OnQualityOrThermalChanged(); // 0x00000001867C4430-0x00000001867C44E0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_DynamicQualityChange(LogicQualityLevel P0, LogicQualityLevel P1); // 0x000000018926BDC4-0x000000018926BDCC
+		public void __iFixBaseProxy_DynamicThermalChange(ThermalState P0, ThermalState P1); // 0x000000018926BDCC-0x000000018926BDD4
 	}
 
 	[Serializable]
-	public class UpscalerQuality : EnumQualityComponent<UpscalerQuality.UpscalerMode> // TypeDefIndex: 61211
+	public class UpscalerQuality : EnumQualityComponent<UpscalerQuality.UpscalerMode> // TypeDefIndex: 88322
 	{
 		// Nested types
-		public enum UpscalerMode // TypeDefIndex: 61210
+		public enum UpscalerMode // TypeDefIndex: 88321
 		{
 			DLSS = 0,
 			TAAU = 1,
@@ -1358,74 +1430,64 @@ namespace Beyond.Scripts.Quality.Components
 		}
 	
 		// Constructors
-		public UpscalerQuality(); // 0x0000000184D7C620-0x0000000184D7C650
+		public UpscalerQuality(); // 0x0000000187222420-0x0000000187222450
 	
 		// Methods
-		protected override void Apply(); // 0x0000000184484FB0-0x00000001844852A0
-		public bool ShouldShow(); // 0x000000018AC46720-0x000000018AC46770
-		public bool ShouldShowDLSS(); // 0x000000018AC46680-0x000000018AC466D0
-		public bool ShouldShowFSR3(); // 0x000000018AC466D0-0x000000018AC46720
-		public override int Version(); // 0x0000000184D7C650-0x0000000184D7C680
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
-		public int __iFixBaseProxy_Version(); // 0x00000001874559DC-0x00000001874559E4
+		protected override void Apply(); // 0x00000001854751A0-0x0000000185475630
+		protected override void PreInit(); // 0x0000000184E3F300-0x0000000184E3F910
+		public bool ShouldShow(); // 0x000000018CE38150-0x000000018CE3818C
+		public bool ShouldShowDLSS(); // 0x0000000185473690-0x00000001854736C0
+		public bool ShouldShowFSR3(); // 0x0000000185473660-0x0000000185473690
+		public override int Version(); // 0x00000001871FD290-0x00000001871FD2C0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
+		public int __iFixBaseProxy_Version(); // 0x0000000189738B9C-0x0000000189738BA4
 	}
 
 	[Serializable]
 	[Obsolete]
-	public class VSyncQuality : QualityTierComponent // TypeDefIndex: 61212
+	public class VSyncQuality : QualityTierComponent // TypeDefIndex: 88323
 	{
 		// Fields
 		public bool bVSync; // 0x18
 	
 		// Constructors
-		public VSyncQuality(); // 0x0000000184D8EB60-0x0000000184D8EB70
+		public VSyncQuality(); // 0x0000000187233970-0x0000000187233980
 	
 		// Methods
-		protected override void Apply(); // 0x000000018AC46864-0x000000018AC468BC
-		protected void Remove(); // 0x000000018AC468BC-0x000000018AC4690C
+		protected override void Apply(); // 0x000000018CE3818C-0x000000018CE381D0
+		protected void Remove(); // 0x000000018CE381D0-0x000000018CE3820C
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
-		public static void Init(); // 0x0000000184CDE570-0x0000000184CDE5A0
-		public void __iFixBaseProxy_Apply(); // 0x0000000186D6601C-0x0000000186D66024
+		public static void Init(); // 0x00000001871054C0-0x00000001871054F0
+		public void __iFixBaseProxy_Apply(); // 0x0000000188F2AEA0-0x0000000188F2AEA8
 	}
 
 	[Serializable]
-	public class VSyncQualityV2 : ToggleQualityComponent // TypeDefIndex: 61213
+	public class VSyncQualityV2 : ToggleQualityComponent // TypeDefIndex: 88324
 	{
 		// Fields
 		private Action<QualityTierComponent> callback; // 0x20
 	
 		// Constructors
-		public VSyncQualityV2(); // 0x00000001841E1670-0x00000001841E1680
+		public VSyncQualityV2(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override void Toggle(bool value); // 0x0000000184B4A190-0x0000000184B4A270
+		protected override void Toggle(bool value); // 0x0000000186E78000-0x0000000186E780F0
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
-		public static void Init(); // 0x0000000184CDE5A0-0x0000000184CDE5D0
-		public override int Version(); // 0x0000000184D7C5C0-0x0000000184D7C5F0
-		[OnDeserialized]
-		protected void OnDeserialized(StreamingContext context); // 0x0000000183E517F0-0x0000000183E51890
-		internal void FrameGenChange(QualityTierComponent qualityTierComponent); // 0x0000000182E85650-0x0000000182E86550
-		public bool ShouldShow(); // 0x000000018AC46770-0x000000018AC46864
-		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018AC3BFF4-0x000000018AC3BFFC
-		public int __iFixBaseProxy_Version(); // 0x00000001874559DC-0x00000001874559E4
+		public static void Init(); // 0x00000001871054F0-0x0000000187105520
+		public override int Version(); // 0x0000000187225020-0x0000000187225050
+		protected override void PreInit(); // 0x0000000184E3F910-0x0000000184E3FF60
+		internal void FrameGenChange(QualityTierComponent qualityTierComponent); // 0x0000000185473A70-0x0000000185473B40
+		public bool ShouldShow(); // 0x0000000185471DD0-0x0000000185471E90
+		public void __iFixBaseProxy_Toggle(bool P0); // 0x000000018CE31848-0x000000018CE31850
+		public int __iFixBaseProxy_Version(); // 0x0000000189738B9C-0x0000000189738BA4
+		public void __iFixBaseProxy_PreInit(); // 0x0000000184E24B40-0x0000000184E24B70
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 61128
-	{
-		// Fields
-		public int capacity; // 0x10
-		public int tSize; // 0x14
-		public bool ring; // 0x18
-	
-		// Constructors
-		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
-	}
-
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 61129
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 88234
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -1435,44 +1497,71 @@ namespace Beyond.SourceGenerator
 	}
 
 	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 61130
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 88235
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public AnimatorBlackboardAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 61131
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class SwapRuntimeStateAttribute : Attribute // TypeDefIndex: 88236
 	{
 		// Constructors
-		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public SwapRuntimeStateAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class ResetOnSwapAttribute : Attribute // TypeDefIndex: 88237
+	{
+		// Constructors
+		public ResetOnSwapAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 61132
+	internal class DataNAttribute : Attribute // TypeDefIndex: 88238
+	{
+		// Fields
+		public int capacity; // 0x10
+		public int tSize; // 0x14
+		public bool ring; // 0x18
+		public bool native; // 0x19
+	
+		// Constructors
+		public DataNAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 88239
+	{
+		// Constructors
+		public CameraControlConfigAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 88240
 	{
 		// Fields
 		public LayoutKind layoutKind; // 0x10
 		public bool isTag; // 0x14
 	
 		// Constructors
-		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public ECSComponentAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
 	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 61126
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 88232
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public HGConstantBufferLayoutAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 61214
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 88325
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -1481,342 +1570,482 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x00000001832B2C30-0x00000001832B2C60
-		static ILFixDynamicMethodWrapper(); // 0x0000000184D37020-0x0000000184D37090
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x000000018536C3F0-0x000000018536C420
+		static ILFixDynamicMethodWrapper(); // 0x000000018CE3572C-0x000000018CE35790
 	
 		// Methods
-		public void __Gen_Wrap_0(); // 0x00000001863625A4-0x0000000186362640
-		public void __Gen_Wrap_1(object P0, object P1); // 0x0000000186377B18-0x0000000186377BF4
-		public string __Gen_Wrap_2(ref RankingRule P0); // 0x000000018AC40D48-0x000000018AC40EA4
-		public string __Gen_Wrap_3(ref DeviceMatchResult P0); // 0x000000018AC414F0-0x000000018AC41658
-		public string __Gen_Wrap_4(object P0); // 0x000000018AC41A54-0x000000018AC41B44
-		public bool __Gen_Wrap_5(ref DeviceMatchResult P0); // 0x000000018AC42144-0x000000018AC4228C
-		public bool __Gen_Wrap_6(object P0); // 0x00000001863632E4-0x00000001863633B4
-		public string __Gen_Wrap_7(); // 0x000000018AC42348-0x000000018AC42414
-		public DeviceMatchRules __Gen_Wrap_8(object P0); // 0x000000018AC42414-0x000000018AC42504
-		public int __Gen_Wrap_9(object P0, object P1); // 0x0000000186360610-0x00000001863606FC
-		public string __Gen_Wrap_10(object P0, object P1); // 0x000000018AC3F954-0x000000018AC3FA60
-		public bool __Gen_Wrap_11(object P0, object P1, object P2, ref RankingRule P3); // 0x000000018AC3FA60-0x000000018AC3FBF8
-		public bool __Gen_Wrap_12(object P0, object P1, object P2, ref RankingRule P3, out string P4); // 0x000000018AC3FBF8-0x000000018AC3FDD8
-		public void __Gen_Wrap_13(object P0); // 0x00000001863633B4-0x0000000186363474
-		public bool __Gen_Wrap_14(object P0, object P1, ref RankingRule P2); // 0x000000018AC3FDD8-0x000000018AC3FF48
-		public bool __Gen_Wrap_15(ref RankingRule P0, RankingRule P1); // 0x000000018AC3FF48-0x000000018AC400B8
-		public string __Gen_Wrap_16(ref MemoryRule P0); // 0x000000018AC400B8-0x000000018AC4020C
-		public bool __Gen_Wrap_17(ref MemoryRule P0, MemoryRule P1); // 0x000000018AC4020C-0x000000018AC40388
-		public string __Gen_Wrap_18(ref DeviceQualityMapItem P0); // 0x000000018AC40388-0x000000018AC404F4
-		public UnityEngine.Color __Gen_Wrap_19(ref DeviceQualityMapItem P0, int P1); // 0x000000018AC404F4-0x000000018AC40698
-		public UnityEngine.Color __Gen_Wrap_20(ref DeviceQualityMapItem P0); // 0x000000018AC40698-0x000000018AC40820
-		public DeviceQualityMapItem __Gen_Wrap_21(object P0); // 0x000000018AC40820-0x000000018AC4092C
-		public int __Gen_Wrap_22(object P0); // 0x0000000186360E84-0x0000000186360F54
-		public Beyond.Scripts.Quality.DeviceInfo __Gen_Wrap_23(object P0); // 0x000000018AC4092C-0x000000018AC40A1C
-		public int __Gen_Wrap_24(QualityTierLevel P0); // 0x0000000186366E40-0x0000000186366EFC
-		public int __Gen_Wrap_25(DeviceQualityMapItem P0); // 0x000000018AC40A1C-0x000000018AC40B20
-		public QualityTierComponentMatch __Gen_Wrap_26(object P0, object P1, int P2); // 0x000000018AC40B20-0x000000018AC40C58
-		public int __Gen_Wrap_27(QualityTierComponentMatch P0); // 0x000000018AC40C58-0x000000018AC40D48
-		public void __Gen_Wrap_28(object P0, object P1, object P2); // 0x0000000186364290-0x0000000186364388
-		public void __Gen_Wrap_29(object P0, bool P1); // 0x00000001866C2B40-0x00000001866C2C1C
-		public QualityTierComponentMatch __Gen_Wrap_30(object P0, object P1); // 0x000000018AC40EA4-0x000000018AC40FCC
-		public void __Gen_Wrap_31(object P0, int P1); // 0x00000001866F3838-0x00000001866F3914
-		public void __Gen_Wrap_32(object P0, LogicQualityLevel P1, LogicQualityLevel P2); // 0x000000018AC40FCC-0x000000018AC410C4
-		public void __Gen_Wrap_33(object P0, in EventData<LogicQualityLevel, LogicQualityLevel> P1); // 0x000000018AC410C4-0x000000018AC411E8
-		public void __Gen_Wrap_34(object P0, ThermalState P1, ThermalState P2); // 0x000000018AC411E8-0x000000018AC412CC
-		public void __Gen_Wrap_35(object P0, in EventData<ThermalState, ThermalState> P1); // 0x000000018AC412CC-0x000000018AC413E4
-		public System.Type __Gen_Wrap_36(object P0, object P1); // 0x000000018AC413E4-0x000000018AC414F0
-		public void __Gen_Wrap_37(object P0, object P1, int P2); // 0x00000001866F4838-0x00000001866F4930
-		public void __Gen_Wrap_38(object P0, GameSetting.GameSettingVideoQuality P1); // 0x00000001866F3838-0x00000001866F3914
-		public GameSetting.GameSettingVideoQuality __Gen_Wrap_39(object P0); // 0x0000000186360E84-0x0000000186360F54
-		public bool __Gen_Wrap_40(); // 0x00000001863623A8-0x0000000186362454
-		public bool __Gen_Wrap_41(object P0, object P1); // 0x0000000186366BC4-0x0000000186366CB0
-		public QualityTierType __Gen_Wrap_42(object P0, object P1); // 0x0000000186360610-0x00000001863606FC
-		public void __Gen_Wrap_43(object P0, float P1); // 0x00000001866C288C-0x00000001866C296C
-		public void __Gen_Wrap_44(object P0, object P1, float P2); // 0x00000001871C15C8-0x00000001871C16C4
-		public Vector2 __Gen_Wrap_45(object P0); // 0x000000018AC41658-0x000000018AC41734
-		public float __Gen_Wrap_46(object P0); // 0x00000001866C0730-0x00000001866C0800
-		public Vector3 __Gen_Wrap_47(object P0, object P1); // 0x000000018AC41734-0x000000018AC41854
-		public bool __Gen_Wrap_48(object P0, object P1, object P2, object P3); // 0x000000018AC41854-0x000000018AC4195C
-		public ValueTuple<float, float> __Gen_Wrap_49(object P0, object P1); // 0x000000018AC4195C-0x000000018AC41A54
-		public int __Gen_Wrap_50(int P0, int P1); // 0x0000000189C88C8C-0x0000000189C88D60
-		public float __Gen_Wrap_51(object P0, object P1); // 0x00000001866C0800-0x00000001866C08EC
-		public int __Gen_Wrap_52(QualityTierComponentMatch P0, QualityTierComponentMatch P1); // 0x000000018AC41B44-0x000000018AC41C6C
-		public void __Gen_Wrap_53(object P0, object P1, out int P2, out int P3); // 0x000000018AC41C6C-0x000000018AC41DA8
-		public bool __Gen_Wrap_54(object P0, object P1, int P2); // 0x000000018AC41DA8-0x000000018AC41E9C
-		public byte[] __Gen_Wrap_55(object P0); // 0x000000018AC41E9C-0x000000018AC41F78
-		public JsonSerializerSettings __Gen_Wrap_56(); // 0x000000018AC41F78-0x000000018AC42044
-		public void __Gen_Wrap_57(object P0, StreamingContext P1); // 0x000000018AC42044-0x000000018AC42144
-		public int __Gen_Wrap_58(FrameRateQuality.FrameRateQualityEnum P0); // 0x000000018A8A0364-0x000000018A8A0434
-		public void __Gen_Wrap_59(int P0, HgFrameRateControl.ReasonEnum P1); // 0x0000000187199E0C-0x0000000187199EE4
-		public int __Gen_Wrap_60(); // 0x0000000186377214-0x00000001863772AC
-		public int __Gen_Wrap_61(FrameRateQualityMobile.FrameRateQualityMobileEnum P0); // 0x000000018AC4228C-0x000000018AC42348
+		public void __Gen_Wrap_0(); // 0x00000001887ED074-0x00000001887ED104
+		public void __Gen_Wrap_1(object P0, object P1); // 0x0000000188B47220-0x0000000188B472F0
+		public string __Gen_Wrap_2(ref RankingRule P0); // 0x000000018CE350B8-0x000000018CE35208
+		public string __Gen_Wrap_3(ref DeviceMatchResult P0); // 0x000000018CE35208-0x000000018CE35364
+		public string __Gen_Wrap_4(object P0); // 0x000000018CE35364-0x000000018CE35444
+		public bool __Gen_Wrap_5(ref DeviceMatchResult P0); // 0x000000018CE35444-0x000000018CE35590
+		public bool __Gen_Wrap_6(object P0); // 0x0000000188B46E14-0x0000000188B46ED4
+		public string __Gen_Wrap_7(); // 0x000000018CE35590-0x000000018CE3564C
+		public DeviceMatchRules __Gen_Wrap_8(object P0); // 0x000000018CE3564C-0x000000018CE3572C
+		public int __Gen_Wrap_9(object P0, object P1); // 0x0000000188B4BB74-0x0000000188B4BC54
+		public int __Gen_Wrap_10(object P0, object P1, ESteamHardwareType P2); // 0x0000000182CD0600-0x0000000182CD09A0
+		public string __Gen_Wrap_11(object P0, object P1); // 0x0000000184E27150-0x0000000184E27B50
+		public bool __Gen_Wrap_12(object P0, object P1, object P2, ref RankingRule P3); // 0x0000000184E27B50-0x0000000184E28990
+		public bool __Gen_Wrap_13(object P0, object P1, object P2, ref RankingRule P3, out string P4); // 0x0000000184E28990-0x0000000184E29A60
+		public void __Gen_Wrap_14(object P0); // 0x0000000182510780-0x0000000182510A40
+		public bool __Gen_Wrap_15(object P0, object P1, ref RankingRule P2); // 0x0000000184E29A60-0x0000000184E2A820
+		public bool __Gen_Wrap_16(ref RankingRule P0, RankingRule P1); // 0x0000000184E2A820-0x0000000184E2B510
+		public string __Gen_Wrap_17(ref MemoryRule P0); // 0x0000000184E2B510-0x0000000184E2C3B0
+		public bool __Gen_Wrap_18(ref MemoryRule P0, MemoryRule P1); // 0x0000000184E2C3B0-0x0000000184E2D060
+		public string __Gen_Wrap_19(ref DeviceQualityMapItem P0); // 0x0000000184E2D060-0x0000000184E2DF80
+		public UnityEngine.Color __Gen_Wrap_20(ref DeviceQualityMapItem P0, int P1); // 0x0000000184E2DF80-0x0000000184E2EED0
+		public UnityEngine.Color __Gen_Wrap_21(ref DeviceQualityMapItem P0); // 0x0000000184E2EED0-0x0000000184E2FE20
+		public DeviceQualityMapItem __Gen_Wrap_22(object P0); // 0x0000000184E2FE20-0x0000000184E30710
+		public int __Gen_Wrap_23(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public Beyond.Scripts.Quality.DeviceInfo __Gen_Wrap_24(object P0); // 0x0000000184E30710-0x0000000184E31030
+		public int __Gen_Wrap_25(QualityTierLevel P0); // 0x000000018246EB30-0x000000018246EDF0
+		public int __Gen_Wrap_26(DeviceQualityMapItem P0); // 0x0000000184E31030-0x0000000184E315F0
+		public QualityTierComponentMatch __Gen_Wrap_27(object P0, object P1, int P2); // 0x0000000184E315F0-0x0000000184E31FD0
+		public int __Gen_Wrap_28(QualityTierComponentMatch P0); // 0x0000000184E31FD0-0x0000000184E32580
+		public void __Gen_Wrap_29(object P0, object P1, object P2); // 0x0000000182532090-0x00000001825324E0
+		public void __Gen_Wrap_30(object P0, bool P1); // 0x000000018253E590-0x000000018253E870
+		public QualityTierComponentMatch __Gen_Wrap_31(object P0, object P1); // 0x0000000184E32580-0x0000000184E32F40
+		public void __Gen_Wrap_32(object P0, int P1); // 0x00000001824828A0-0x0000000182482B70
+		public void __Gen_Wrap_33(object P0, LogicQualityLevel P1, LogicQualityLevel P2); // 0x0000000183B534B0-0x0000000183B537A0
+		public void __Gen_Wrap_34(object P0, in EventData<LogicQualityLevel, LogicQualityLevel> P1); // 0x0000000184E32F40-0x0000000184E335C0
+		public void __Gen_Wrap_35(object P0, ThermalState P1, ThermalState P2); // 0x0000000183B534B0-0x0000000183B537A0
+		public void __Gen_Wrap_36(object P0, in EventData<ThermalState, ThermalState> P1); // 0x0000000184E335C0-0x0000000184E33C40
+		public System.Type __Gen_Wrap_37(object P0, object P1); // 0x0000000184E33C40-0x0000000184E34640
+		public void __Gen_Wrap_38(object P0, object P1, int P2); // 0x0000000182528040-0x00000001825283D0
+		public void __Gen_Wrap_39(object P0, Beyond.GameSetting.GameSettingVideoQuality P1); // 0x00000001824828A0-0x0000000182482B70
+		public Beyond.GameSetting.GameSettingVideoQuality __Gen_Wrap_40(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public bool __Gen_Wrap_41(); // 0x0000000182541760-0x0000000182541930
+		public bool __Gen_Wrap_42(object P0, object P1); // 0x00000001827B9DC0-0x00000001827BA150
+		public QualityTierType __Gen_Wrap_43(object P0, object P1); // 0x0000000182224290-0x0000000182224620
+		public void __Gen_Wrap_44(object P0, float P1); // 0x0000000182659420-0x0000000182659700
+		public void __Gen_Wrap_45(object P0, object P1, float P2); // 0x00000001827B9100-0x00000001827B94A0
+		public Vector2 __Gen_Wrap_46(object P0); // 0x0000000184E34640-0x0000000184E34F30
+		public float __Gen_Wrap_47(object P0); // 0x00000001826A2110-0x00000001826A23D0
+		public Vector3 __Gen_Wrap_48(object P0, object P1); // 0x0000000184E34F30-0x0000000184E358F0
+		public bool __Gen_Wrap_49(object P0, object P1, object P2, object P3); // 0x0000000184E358F0-0x0000000184E35E20
+		public ValueTuple<float, float> __Gen_Wrap_50(object P0, object P1); // 0x0000000184E35E20-0x0000000184E367D0
+		public int __Gen_Wrap_51(int P0, int P1); // 0x00000001825DB8C0-0x00000001825DBAD0
+		public float __Gen_Wrap_52(object P0, object P1); // 0x0000000182E04540-0x0000000182E048D0
+		public int __Gen_Wrap_53(QualityTierComponentMatch P0, QualityTierComponentMatch P1); // 0x0000000184E367D0-0x0000000184E36E70
+		public void __Gen_Wrap_54(object P0, object P1, out int P2, out int P3); // 0x000000018362BD20-0x000000018362C110
+		public bool __Gen_Wrap_55(object P0, object P1, int P2); // 0x00000001824E73F0-0x00000001824E7790
+		public byte[] __Gen_Wrap_56(object P0); // 0x0000000184E36E70-0x0000000184E37790
+		public JsonSerializerSettings __Gen_Wrap_57(); // 0x0000000184E37790-0x0000000184E37FB0
+		public void __Gen_Wrap_58(object P0, StreamingContext P1); // 0x0000000184E37FB0-0x0000000184E38620
+		public int __Gen_Wrap_59(FrameRateQuality.FrameRateQualityEnum P0); // 0x0000000182655FC0-0x00000001826561C0
+		public void __Gen_Wrap_60(int P0, HgFrameRateControl.ReasonEnum P1); // 0x0000000182522690-0x0000000182522890
+		public int __Gen_Wrap_61(); // 0x00000001825212D0-0x00000001825214A0
+		public int __Gen_Wrap_62(FrameRateQualityMobile.FrameRateQualityMobileEnum P0); // 0x0000000182655FC0-0x00000001826561C0
+		public bool __Gen_Wrap_63(ref float P0, float P1); // 0x0000000184E38620-0x0000000184E38870
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 61215
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 88326
 	{
 		// Constructors
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x000000018AC4690C-0x000000018AC469A0
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x000000018CE35790-0x000000018CE35828
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod(); // 0x00000001841E1670-0x00000001841E1680
+		public void RefAsyncBuilderStartMethod(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 61216
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 88327
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
-		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x00000001853908C0-0x00000001853908D0
+		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x000000018AC46B88-0x000000018AC46BEC
-		public static bool IsPatched(int id); // 0x00000001836923C0-0x0000000183692410
-		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x000000018AC46A44-0x000000018AC46B10
-		public object CreateWrapper(int id); // 0x000000018AC46B10-0x000000018AC46B88
-		public object InitWrapperArray(int len); // 0x000000018AC46BEC-0x000000018AC46C78
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x000000018AC469A0-0x000000018AC46A44
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x000000018CE383F8-0x000000018CE3845C
+		public static bool IsPatched(int id); // 0x000000018CE384E8-0x000000018CE38564
+		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x000000018CE382B0-0x000000018CE3837C
+		public object CreateWrapper(int id); // 0x000000018CE3837C-0x000000018CE383F8
+		public object InitWrapperArray(int len); // 0x000000018CE3845C-0x000000018CE384E8
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x000000018CE3820C-0x000000018CE382B0
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 61217
+	public delegate void __HotPatchDelegate_0(); // TypeDefIndex: 88328; 0x0000000185B44B70-0x0000000185B44B80
+
+	public enum HotPatchIDMAP0 // TypeDefIndex: 88329
 	{
+		Beyond-PoolCore-ListPoolInitializer_RuntimeQuality-Initialize0 = 0,
 		Beyond-PoolCore-ListPoolInitializer_RuntimeQuality-InitializeAtRuntime0 = 0,
-		Beyond-PoolCore-ListPoolInitializer_RuntimeQuality-Initialize0 = 1,
-		Beyond-Scripts-Quality-DeviceInfo-SupplementFromRemote0 = 2,
-		Beyond-Scripts-Quality-DeviceMatchRules-Combine0 = 3,
+		Beyond-Scripts-Quality-QualityManager-_ReportQuality0 = 0,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-Init0 = 0,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-ResetFrameRate0 = 0,
+		Beyond-Scripts-Quality-Components-MemoryReleaseIntervalQuality-_Reset0 = 0,
+		Beyond-Scripts-Quality-Components-VSyncQuality-Init0 = 0,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-Init0 = 0,
+		Beyond-Scripts-Quality-DeviceMatchRules-Combine0 = 1,
+		Beyond-Scripts-Quality-DeviceInfo-SupplementFromRemote0 = 1,
+		Beyond-Scripts-Quality-QualityManager-LoadQualityTier0 = 1,
+		Beyond-Scripts-Quality-QualityManager-Init0 = 1,
+		Beyond-Scripts-Quality-QualityManager-InitOnlyDevice0 = 1,
+		Beyond-Scripts-Quality-QualityManager-InitResetQualityTierComponentFunction0 = 1,
+		Beyond-Scripts-Quality-QualityManager-RevertSetQualityTierComponentLevel0 = 1,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-RemoveQualitySettingSaveValue0 = 1,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-DlSSChange0 = 1,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-DlSSChange0 = 1,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-DlSSChange0 = 1,
+		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-FSR3Change0 = 1,
+		Beyond-Scripts-Quality-Components-ReflexQuality-DlSSChange0 = 1,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-DlSSChange0 = 1,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-FrameGenChange0 = 1,
+		Beyond-Scripts-Quality-RankingRule-ToString0 = 2,
+		Beyond-Scripts-Quality-DeviceMatchResult-ToString0 = 3,
 		Beyond-Scripts-Quality-DeviceInfo-ToString0 = 4,
-		Beyond-Scripts-Quality-DeviceMatchResult-ToString0 = 5,
-		Beyond-Scripts-Quality-RankingRule-ToString0 = 6,
-		Beyond-Scripts-Quality-DeviceInfo-IsNoMatchDevice0 = 8,
-		Beyond-Scripts-Quality-DeviceMatchResult-IsNoMatch0 = 9,
-		Beyond-Scripts-Quality-DeviceInfo-IsZeroDevices0 = 10,
-		Beyond-Scripts-Quality-DeviceInfo-get_cpuName0 = 11,
-		Beyond-Scripts-Quality-DeviceInfo-IsHUAWEIDevice0 = 12,
-		Beyond-Scripts-Quality-DeviceInfo-IsQualcommDevice0 = 13,
-		Beyond-Scripts-Quality-DeviceInfo-LoadingSettingRules0 = 14,
-		Beyond-Scripts-Quality-DeviceInfo-GetDeviceScore0 = 15,
-		Beyond-Scripts-Quality-DeviceInfo-CloudGameGetMatchedRule0 = 16,
-		Beyond-Scripts-Quality-DeviceInfo-StandaloneGetMatchedRule0 = 17,
-		Beyond-Scripts-Quality-DeviceInfo-StandaloneMatchGPURule0 = 18,
-		Beyond-Scripts-Quality-DeviceInfo-GetNvidiaStandardGPUName0 = 19,
-		Beyond-Scripts-Quality-DeviceInfo-RuleSuffixMatch0 = 20,
-		Beyond-Scripts-Quality-DeviceInfo-GetAmdStandardGPUName0 = 21,
-		Beyond-Scripts-Quality-DeviceInfo-GetIntelStandardGPUName0 = 22,
-		Beyond-Scripts-Quality-DeviceInfo-_ReportMatchRuleFailed0 = 23,
-		Beyond-Scripts-Quality-DeviceInfo-EditorSimulateGetMatchedRule0 = 24,
-		Beyond-Scripts-Quality-DeviceInfo-AndroidGetMatchedRule0 = 25,
-		Beyond-Scripts-Quality-DeviceInfo-MatchDeviceModeRule0 = 26,
-		Beyond-Scripts-Quality-DeviceInfo-RuleFullNameMatch0 = 27,
-		Beyond-Scripts-Quality-DeviceInfo-MatchGPURule0 = 28,
-		Beyond-Scripts-Quality-DeviceInfo-GetAdrenoStandardGPUName0 = 29,
-		Beyond-Scripts-Quality-DeviceInfo-GetMaliStandardGPUName0 = 30,
-		Beyond-Scripts-Quality-DeviceInfo-IOSGetMatchedRule0 = 31,
-		Beyond-Scripts-Quality-DeviceInfo-DefaultGetMatchedRule0 = 32,
-		Beyond-Scripts-Quality-DeviceInfo-StandaloneOSXGetMatchedRule0 = 33,
-		Beyond-Scripts-Quality-DeviceInfo-StandalonePS5GetMatchedRule0 = 34,
-		Beyond-Scripts-Quality-DeviceInfo-GetPowerVRStandardGPUName0 = 35,
-		Beyond-Scripts-Quality-RankingRule-Equals0 = 36,
-		Beyond-Scripts-Quality-MemoryRule-ToString0 = 37,
-		Beyond-Scripts-Quality-MemoryRule-Equals0 = 38,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-ToString0 = 39,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getColor0 = 40,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getVeryLowColor0 = 41,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getLowColor0 = 42,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getMiddleColor0 = 43,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getHighColor0 = 44,
-		Beyond-Scripts-Quality-DeviceQualityMapItem-getVeryHighColor0 = 45,
-		Beyond-Scripts-Quality-QualityManager-get_Config0 = 46,
-		Beyond-Scripts-Quality-QualityManager-get_currentTier0 = 47,
-		Beyond-Scripts-Quality-QualityManager-get_defaultTier0 = 48,
-		Beyond-Scripts-Quality-QualityManager-get_device0 = 49,
-		Beyond-Scripts-Quality-QualityManager-Init0 = 50,
-		Beyond-Scripts-Quality-QualityManager-LoadQualityTier0 = 51,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-ApplyOrder0 = 56,
-		Beyond-Scripts-Quality-QualityManager-ApplyQualityScore0 = 63,
-		Beyond-Scripts-Quality-QualityManager-setQualityTier0 = 64,
-		Beyond-Scripts-Quality-QualityManager-_SetQualityTierComponentLevel0 = 65,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-SafeApply0 = 66,
-		Beyond-Scripts-Quality-QualityManager-get_isInitializing0 = 67,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-InitApply0 = 68,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-Apply0 = 69,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-LowMemory0 = 70,
-		Beyond-Scripts-Quality-QualityManager-InvokeChangeCallBack0 = 71,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-SafeLowMemory0 = 72,
-		Beyond-Scripts-Quality-QualityManager-ApplyCallBack0 = 73,
-		Beyond-Scripts-Quality-QualityManager-_GetOverrideQualityTierComponentLevel0 = 74,
-		Beyond-Scripts-Quality-QualityManager-_DynamicInitQualitySetting0 = 75,
-		Beyond-Scripts-Quality-QualityManager-DynamicQualityChange0 = 76,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-CallDynamicQualityChange0 = 77,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-DynamicQualityChange0 = 78,
-		Beyond-Scripts-Quality-QualityManager-DynamicThermalChange0 = 79,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-CallDynamicThermalChange0 = 80,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-DynamicThermalChange0 = 81,
-		Beyond-Scripts-Quality-QualityManager-InitOnlyDevice0 = 82,
-		Beyond-Scripts-Quality-QualityManager-InitShaderLod0 = 83,
-		Beyond-Scripts-Quality-QualityManager-ApplyShaderTier0 = 84,
-		Beyond-Scripts-Quality-QualityManager-ForceSetQualityTierComponentLevel0 = 85,
-		Beyond-Scripts-Quality-QualityManager-_GetQualityComponentByName0 = 86,
-		Beyond-Scripts-Quality-QualityManager-FinishInit0 = 87,
-		Beyond-Scripts-Quality-QualityManager-Dispose0 = 88,
-		Beyond-Scripts-Quality-QualityManager-_DynamicReleaseQualitySetting0 = 89,
-		Beyond-Scripts-Quality-QualityManager-SetQualityTierByVideoQuality0 = 90,
-		Beyond-Scripts-Quality-QualityManager-GetDefaultVideoQuality0 = 91,
-		Beyond-Scripts-Quality-QualityManager-NoMatchDeviceOrZeroScore0 = 92,
-		Beyond-Scripts-Quality-QualityManager-IsQualcommDevice0 = 93,
-		Beyond-Scripts-Quality-QualityManager-IsHUAWEIDevice0 = 94,
-		Beyond-Scripts-Quality-QualityManager-IsIpadDevice0 = 95,
-		Beyond-Scripts-Quality-QualityManager-InitResetQualityTierComponentFunction0 = 96,
-		Beyond-Scripts-Quality-QualityManager-ResetQualityTierComponentValue0 = 97,
-		Beyond-Scripts-Quality-QualityManager-RevertSetQualityTierComponentLevel0 = 98,
-		Beyond-Scripts-Quality-QualityManager-NeedRestart0 = 99,
-		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierType0 = 100,
-		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierVersion0 = 101,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-Version0 = 102,
-		Beyond-Scripts-Quality-QualityManager-_IsToggleQualityTierComponent0 = 103,
-		Beyond-Scripts-Quality-QualityManager-_ToggleQualityTierComponentLevel0 = 104,
-		Beyond-Scripts-Quality-Components-ToggleQualityComponent-ChangeToggle0 = 105,
-		Beyond-Scripts-Quality-Components-ToggleQualityComponent-GetValue0 = 106,
-		Beyond-Scripts-Quality-QualityManager-IsEnumQualityTierComponent0 = 107,
-		Beyond-Scripts-Quality-QualityManager-GetEnumQualityTierComponentCount0 = 108,
-		Beyond-Scripts-Quality-QualityManager-SetEnumQualityTierComponentCount0 = 109,
-		Beyond-Scripts-Quality-QualityManager-IsSliderQualityTierComponent0 = 110,
-		Beyond-Scripts-Quality-QualityManager-SetSliderQualityTierComponentCount0 = 111,
-		Beyond-Scripts-Quality-Components-SliderQualityComponent-SetValue0 = 112,
-		Beyond-Scripts-Quality-QualityManager-GetSliderQualityTierComponent0 = 113,
-		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetRange0 = 114,
-		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetValue0 = 115,
-		Beyond-Scripts-Quality-QualityManager-InvokeQualityTierComponent0 = 116,
-		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierCount0 = 117,
-		Beyond-Scripts-Quality-QualityManager-GetQualityComponentDefaultTier0 = 118,
-		Beyond-Scripts-Quality-Components-ToggleQualityComponent-GetDefaultValue0 = 119,
-		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetDefaultValue0 = 120,
-		Beyond-Scripts-Quality-QualityManager-GetQualityComponentTier0 = 121,
-		Beyond-Scripts-Quality-QualityManager-SetQualityComponentTier0 = 122,
-		Beyond-Scripts-Quality-QualityManager-_ReportQuality0 = 123,
-		Beyond-Scripts-Quality-QualityManager-IsQualitySubSettingTierValid0 = 124,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-TierLimit0 = 125,
-		Beyond-Scripts-Quality-QualityManager-_GetCurrentComponentTierIndex0 = 126,
-		Beyond-Scripts-Quality-QualityManager-ToString0 = 127,
-		Beyond-Scripts-Quality-QualityManager-DebugQualityTierComponentInfo0 = 128,
-		Beyond-Scripts-Quality-QualityUtility-Decompress0 = 129,
-		Beyond-Scripts-Quality-QualityUtility-get_JsonSerializerSettings0 = 130,
-		Beyond-Scripts-Quality-Components-AntiAliasingQuality-Apply0 = 131,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-RemoveQualitySettingSaveValue0 = 132,
-		Beyond-Scripts-Quality-Components-QualityTierComponent-RemoveRegisterKey0 = 133,
-		Beyond-Scripts-Quality-Components-ToggleQualityComponent-Apply0 = 134,
-		Beyond-Scripts-Quality-Components-ToggleQualityComponent-Toggle0 = 135,
-		Beyond-Scripts-Quality-Components-CharacterRenderFeatureQuality-Apply0 = 136,
-		Beyond-Scripts-Quality-Components-ChromaticAberrationQuality-Toggle0 = 137,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-Apply0 = 138,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-OnDeserialized0 = 139,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-DlSSChange0 = 140,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowAuto0 = 141,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX10 = 142,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX20 = 143,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX30 = 144,
-		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShow0 = 145,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerModel-Apply0 = 146,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerModel-ShouldShow0 = 147,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-Apply0 = 148,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-ShouldShow0 = 149,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-OnDeserialized0 = 150,
-		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-DlSSChange0 = 151,
-		Beyond-Scripts-Quality-Components-EnvironmentRenderingFeatureQuality-Apply0 = 152,
-		Beyond-Scripts-Quality-Components-FrameGenQuality-Apply0 = 153,
-		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShow0 = 154,
-		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShowDLSS0 = 155,
-		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShowFSR30 = 156,
-		Beyond-Scripts-Quality-Components-FrameGenQualityMobile-Apply0 = 157,
-		Beyond-Scripts-Quality-Components-FrameGenQualityMobile-ShouldShow0 = 158,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-get_frameRate0 = 159,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-GetFrameRateFromEnum0 = 160,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-Version0 = 161,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-ShouldShow0 = 162,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-Apply0 = 163,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-__ForceSetFrameRate0 = 164,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-DlSSChange0 = 165,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-OnDeserialized0 = 166,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPS30Enabled0 = 167,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPS60Enabled0 = 168,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPSBNoLimitEnabled0 = 169,
-		Beyond-Scripts-Quality-Components-FrameRateQuality-_IsGDLSSGDisable0 = 170,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetDefaultFrameRate0 = 171,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-Init0 = 172,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-SetFrameRateOverrider0 = 173,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetFrameRate0 = 174,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-RecommendedDefaultFrameRate0 = 175,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetUserSettingFrameRate0 = 176,
-		Beyond-Scripts-Quality-Components-HgFrameRateControl-ResetFrameRate0 = 177,
-		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-get_frameRate0 = 178,
-		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-GetFrameRateFromEnum0 = 179,
-		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-Version0 = 180,
-		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-Apply0 = 181,
-		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-OnDeserialized0 = 182,
-		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-Apply0 = 183,
-		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-ShouldShow0 = 184,
-		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-OnDeserialized0 = 185,
-		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-FSR3Change0 = 186,
-		Beyond-Scripts-Quality-Components-GrassSparsityQuality-Apply0 = 187,
-		Beyond-Scripts-Quality-Components-HGAmbientOcclusionQuality-Apply0 = 188,
-		Beyond-Scripts-Quality-Components-HGAnisoLevelQuality-InitApply0 = 189,
-		Beyond-Scripts-Quality-Components-HGAnisoLevelQuality-Apply0 = 190,
-		Beyond-Scripts-Quality-Components-HGContactShadowQuality-Toggle0 = 191,
-		Beyond-Scripts-Quality-Components-HGIrradianceVolumeQuality-LowMemory0 = 192,
-		Beyond-Scripts-Quality-Components-HGLODStreamingComponent-Apply0 = 193,
-		Beyond-Scripts-Quality-Components-HGLODStreamingComponent-LowMemory0 = 194,
-		Beyond-Scripts-Quality-Components-HGReflectionProbeBinningQuality-LowMemory0 = 195,
-		Beyond-Scripts-Quality-Components-HGRPTierQuality-Apply0 = 196,
-		Beyond-Scripts-Quality-Components-HGScreenSpaceReflectionQuality-Apply0 = 197,
-		Beyond-Scripts-Quality-Components-HGShadowQuality-Apply0 = 198,
-		Beyond-Scripts-Quality-Components-HGTextureQuality-get_textureQualityTier0 = 199,
-		Beyond-Scripts-Quality-Components-HGTextureQuality-Apply0 = 200,
-		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-GetShaderLod0 = 201,
-		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-Apply0 = 202,
-		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-ShouldShowNoExLow0 = 203,
-		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-ShouldShowExLow0 = 204,
-		Beyond-Scripts-Quality-Components-HGVolumetricFogQuality-Apply0 = 205,
-		Beyond-Scripts-Quality-Components-LODGroupQuality-Apply0 = 206,
-		Beyond-Scripts-Quality-Components-PhysicsClothQuality-Apply0 = 207,
-		Beyond-Scripts-Quality-Components-PrefabInstantiateQuality-Apply0 = 208,
-		Beyond-Scripts-Quality-Components-PreloadLoadSettingQuality-Apply0 = 209,
-		Beyond-Scripts-Quality-Components-RayTracingQuality-get_supportsRayTracing0 = 210,
-		Beyond-Scripts-Quality-Components-RayTracingQuality-InitApply0 = 211,
-		Beyond-Scripts-Quality-Components-RayTracingQuality-Apply0 = 212,
-		Beyond-Scripts-Quality-Components-RayTracingQuality-ShouldShow0 = 213,
-		Beyond-Scripts-Quality-Components-RayTracingQuality-ApplyOrder0 = 214,
-		Beyond-Scripts-Quality-Components-ReflexQuality-Apply0 = 215,
-		Beyond-Scripts-Quality-Components-ReflexQuality-ShouldShow0 = 216,
-		Beyond-Scripts-Quality-Components-ReflexQuality-OnDeserialized0 = 217,
-		Beyond-Scripts-Quality-Components-ReflexQuality-DlSSChange0 = 218,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityMobile-get_renderingScaleFactor0 = 219,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityMobile-Apply0 = 220,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-get_renderingScale0 = 221,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-Apply0 = 222,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-ShouldShow0 = 223,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-OnDeserialized0 = 224,
-		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-DlSSChange0 = 225,
-		Beyond-Scripts-Quality-Components-ResLoadSettingQuality-Apply0 = 226,
-		Beyond-Scripts-Quality-Components-ResLoadSettingQuality-LowMemory0 = 227,
-		Beyond-Scripts-Quality-Components-SceneDetailQuality-Apply0 = 228,
-		Beyond-Scripts-Quality-Components-ShaderLodQuality-InitApply0 = 229,
-		Beyond-Scripts-Quality-Components-ShaderLodQuality-Apply0 = 230,
-		Beyond-Scripts-Quality-Components-SharpnessQuality-Apply0 = 231,
-		Beyond-Scripts-Quality-Components-SharpnessQuality-ShouldShow0 = 232,
-		Beyond-Scripts-Quality-Components-SliderTestComponent-Apply0 = 233,
-		Beyond-Scripts-Quality-Components-TickExclusiveQuality-Apply0 = 234,
-		Beyond-Scripts-Quality-Components-TickExclusiveQuality-DynamicQualityChange0 = 235,
-		Beyond-Scripts-Quality-Components-TickExclusiveQuality-_OnQualityOrThermalChanged0 = 236,
-		Beyond-Scripts-Quality-Components-TickExclusiveQuality-DynamicThermalChange0 = 237,
-		Beyond-Scripts-Quality-Components-UpscalerQuality-Apply0 = 238,
-		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShow0 = 239,
-		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShowDLSS0 = 240,
-		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShowFSR30 = 241,
-		Beyond-Scripts-Quality-Components-UpscalerQuality-Version0 = 242,
-		Beyond-Scripts-Quality-Components-VSyncQuality-Apply0 = 243,
-		Beyond-Scripts-Quality-Components-VSyncQuality-Remove0 = 244,
-		Beyond-Scripts-Quality-Components-VSyncQuality-Init0 = 245,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-Toggle0 = 246,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-Init0 = 247,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-Version0 = 248,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-OnDeserialized0 = 249,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-FrameGenChange0 = 250,
-		Beyond-Scripts-Quality-Components-VSyncQualityV2-ShouldShow0 = 251
+		Beyond-Scripts-Quality-QualityManager-ToString0 = 4,
+		Beyond-Scripts-Quality-QualityManager-DebugQualityTierComponentInfo0 = 4,
+		Beyond-Scripts-Quality-DeviceMatchResult-IsNoMatch0 = 5,
+		Beyond-Scripts-Quality-DeviceInfo-IsNoMatchDevice0 = 6,
+		Beyond-Scripts-Quality-DeviceInfo-IsZeroDevices0 = 6,
+		Beyond-Scripts-Quality-DeviceInfo-IsHUAWEIDevice0 = 6,
+		Beyond-Scripts-Quality-DeviceInfo-IsQualcommDevice0 = 6,
+		Beyond-Scripts-Quality-QualityManager-get_isInitializing0 = 6,
+		Beyond-Scripts-Quality-QualityManager-NoMatchDeviceOrZeroScore0 = 6,
+		Beyond-Scripts-Quality-QualityManager-IsQualcommDevice0 = 6,
+		Beyond-Scripts-Quality-QualityManager-IsHUAWEIDevice0 = 6,
+		Beyond-Scripts-Quality-QualityManager-NeedRestart0 = 6,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-GetValue0 = 6,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-GetDefaultValue0 = 6,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-TierLimit0 = 6,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowAuto0 = 6,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX10 = 6,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX20 = 6,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShowX30 = 6,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerModel-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShowDLSS0 = 6,
+		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShowFSR30 = 6,
+		Beyond-Scripts-Quality-Components-FrameGenQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-FrameGenQualityMobile-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPS30Enabled0 = 6,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPS60Enabled0 = 6,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-_FPSBNoLimitEnabled0 = 6,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-_IsGDLSSGDisable0 = 6,
+		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-ShouldShowNoExLow0 = 6,
+		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-ShouldShowExLow0 = 6,
+		Beyond-Scripts-Quality-Components-QNSSFrameGenQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-QNSSUpscalerQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-RayTracingQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-ReflexQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-SharpnessQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShowDLSS0 = 6,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-ShouldShowFSR30 = 6,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-ShouldShow0 = 6,
+		Beyond-Scripts-Quality-DeviceInfo-get_cpuName0 = 7,
+		Beyond-Scripts-Quality-DeviceInfo-LoadingSettingRules0 = 8,
+		Beyond-Scripts-Quality-DeviceInfo-CloudGameGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-StandaloneGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-GetDeviceScore0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-AndroidGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-IOSGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-DefaultGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-EditorSimulateGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-StandaloneOSXGetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-StandalonePS5GetMatchedRule0 = 9,
+		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierVersion0 = 9,
+		Beyond-Scripts-Quality-QualityManager-GetEnumQualityTierComponentCount0 = 9,
+		Beyond-Scripts-Quality-DeviceInfo-SteamDeckGetMatchedRule0 = 10,
+		Beyond-Scripts-Quality-DeviceInfo-GetNvidiaStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-GetAmdStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-GetIntelStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-GetAdrenoStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-GetMaliStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-GetPowerVRStandardGPUName0 = 11,
+		Beyond-Scripts-Quality-DeviceInfo-RuleSuffixMatch0 = 12,
+		Beyond-Scripts-Quality-DeviceInfo-MatchDeviceModeRule0 = 12,
+		Beyond-Scripts-Quality-DeviceInfo-StandaloneMatchGPURule0 = 13,
+		Beyond-Scripts-Quality-DeviceInfo-MatchGPURule0 = 13,
+		Beyond-Scripts-Quality-DeviceInfo-_ReportMatchRuleFailed0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-InitApply0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-LowMemory0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-SafeApply0 = 14,
+		Beyond-Scripts-Quality-QualityManager-ApplyCallBack0 = 14,
+		Beyond-Scripts-Quality-QualityManager-ApplyQualityScore0 = 14,
+		Beyond-Scripts-Quality-QualityManager-_DynamicInitQualitySetting0 = 14,
+		Beyond-Scripts-Quality-QualityManager-FinishInit0 = 14,
+		Beyond-Scripts-Quality-QualityManager-ApplyShaderTier0 = 14,
+		Beyond-Scripts-Quality-QualityManager-InitShaderLod0 = 14,
+		Beyond-Scripts-Quality-QualityManager-_DynamicReleaseQualitySetting0 = 14,
+		Beyond-Scripts-Quality-QualityManager-Dispose0 = 14,
+		Beyond-Scripts-Quality-Components-AntiAliasingQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-RemoveRegisterKey0 = 14,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-CharacterRenderFeatureQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-DLSSFrameGenQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerModel-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-DLSSUpscalerQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-EnvironmentRenderingFeatureQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FrameGenQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FrameGenQualityMobile-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-FSR3UpscalerQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-GrassSparsityQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGAmbientOcclusionQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGAnisoLevelQuality-InitApply0 = 14,
+		Beyond-Scripts-Quality-Components-HGAnisoLevelQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGIrradianceVolumeQuality-LowMemory0 = 14,
+		Beyond-Scripts-Quality-Components-HGLODStreamingComponent-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGLODStreamingComponent-LowMemory0 = 14,
+		Beyond-Scripts-Quality-Components-HGReflectionProbeBinningQuality-LowMemory0 = 14,
+		Beyond-Scripts-Quality-Components-HGRPTierQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGScreenSpaceReflectionQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGShadowQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGTextureQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-HGVolumetricFogQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-LODGroupQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-MemoryReleaseIntervalQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-PhysicsClothQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-PrefabInstantiateQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-PreloadLoadSettingQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-QNSSFrameGenQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-QNSSUpscalerQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-RayTracingQuality-InitApply0 = 14,
+		Beyond-Scripts-Quality-Components-RayTracingQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-ReflexQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-ReflexQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityMobile-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-ResLoadSettingQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-ResLoadSettingQuality-LowMemory0 = 14,
+		Beyond-Scripts-Quality-Components-SceneDetailQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-ShaderLodQuality-InitApply0 = 14,
+		Beyond-Scripts-Quality-Components-ShaderLodQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-SharpnessQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-SliderTestComponent-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-TickExclusiveQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-TickExclusiveQuality-_OnQualityOrThermalChanged0 = 14,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-PreInit0 = 14,
+		Beyond-Scripts-Quality-Components-VSyncQuality-Apply0 = 14,
+		Beyond-Scripts-Quality-Components-VSyncQuality-Remove0 = 14,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-PreInit0 = 14,
+		Beyond-Scripts-Quality-DeviceInfo-RuleFullNameMatch0 = 15,
+		Beyond-Scripts-Quality-RankingRule-Equals0 = 16,
+		Beyond-Scripts-Quality-MemoryRule-ToString0 = 17,
+		Beyond-Scripts-Quality-MemoryRule-Equals0 = 18,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-ToString0 = 19,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getColor0 = 20,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getVeryLowColor0 = 21,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getLowColor0 = 21,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getMiddleColor0 = 21,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getHighColor0 = 21,
+		Beyond-Scripts-Quality-DeviceQualityMapItem-getVeryHighColor0 = 21,
+		Beyond-Scripts-Quality-QualityManager-get_Config0 = 22,
+		Beyond-Scripts-Quality-QualityManager-get_currentTier0 = 23,
+		Beyond-Scripts-Quality-QualityManager-get_defaultTier0 = 23,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-ApplyOrder0 = 23,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-Version0 = 23,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-get_frameRate0 = 23,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-Version0 = 23,
+		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-get_frameRate0 = 23,
+		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-Version0 = 23,
+		Beyond-Scripts-Quality-Components-HGTextureQuality-get_textureQualityTier0 = 23,
+		Beyond-Scripts-Quality-Components-HGVolumetricCloudQuality-GetShaderLod0 = 23,
+		Beyond-Scripts-Quality-Components-RayTracingQuality-ApplyOrder0 = 23,
+		Beyond-Scripts-Quality-Components-UpscalerQuality-Version0 = 23,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-Version0 = 23,
+		Beyond-Scripts-Quality-QualityManager-get_device0 = 24,
+		Beyond-Scripts-Quality-QualityManager-_SetQualityTierComponentLevel0 = 25,
+		Beyond-Scripts-Quality-QualityManager-InvokeChangeCallBack0 = 26,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-SafeLowMemory0 = 27,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-Toggle0 = 27,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-SetToggleWithoutApply0 = 27,
+		Beyond-Scripts-Quality-Components-ChromaticAberrationQuality-Toggle0 = 27,
+		Beyond-Scripts-Quality-Components-HGContactShadowQuality-Toggle0 = 27,
+		Beyond-Scripts-Quality-Components-QNSSFrameGenQuality-Toggle0 = 27,
+		Beyond-Scripts-Quality-Components-QNSSUpscalerQuality-Toggle0 = 27,
+		Beyond-Scripts-Quality-Components-VSyncQualityV2-Toggle0 = 27,
+		Beyond-Scripts-Quality-QualityManager-_GetOverrideQualityTierComponentLevel0 = 28,
+		Beyond-Scripts-Quality-QualityManager-setQualityTier0 = 29,
+		Beyond-Scripts-Quality-Components-ToggleQualityComponent-ChangeToggle0 = 29,
+		Beyond-Scripts-Quality-Components-QNSSFrameGenQuality-_OnServerFILevelChanged0 = 29,
+		Beyond-Scripts-Quality-Components-QNSSUpscalerQuality-_OnServerSRLevelChanged0 = 29,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-DynamicQualityChange0 = 30,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-CallDynamicQualityChange0 = 30,
+		Beyond-Scripts-Quality-Components-TickExclusiveQuality-DynamicQualityChange0 = 30,
+		Beyond-Scripts-Quality-QualityManager-DynamicQualityChange0 = 31,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-DynamicThermalChange0 = 32,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-CallDynamicThermalChange0 = 32,
+		Beyond-Scripts-Quality-Components-TickExclusiveQuality-DynamicThermalChange0 = 32,
+		Beyond-Scripts-Quality-QualityManager-DynamicThermalChange0 = 33,
+		Beyond-Scripts-Quality-QualityManager-_GetQualityComponentByName0 = 34,
+		Beyond-Scripts-Quality-QualityManager-_ForceSetQualityTierComponentLevel0 = 35,
+		Beyond-Scripts-Quality-QualityManager-_ToggleQualityTierComponentLevel0 = 35,
+		Beyond-Scripts-Quality-QualityManager-SetEnumQualityTierComponentCount0 = 35,
+		Beyond-Scripts-Quality-QualityManager-SetQualityTierByVideoQuality0 = 36,
+		Beyond-Scripts-Quality-QualityManager-GetDefaultVideoQuality0 = 37,
+		Beyond-Scripts-Quality-QualityManager-IsIpadDevice0 = 38,
+		Beyond-Scripts-Quality-Components-MemoryReleaseIntervalQuality-TryStartShrinkMemory0 = 38,
+		Beyond-Scripts-Quality-Components-MemoryReleaseIntervalQuality-TryStartPsoRelease0 = 38,
+		Beyond-Scripts-Quality-Components-QNSSFrameGenQuality-_GetToggleFromUDSClient0 = 38,
+		Beyond-Scripts-Quality-Components-QNSSUpscalerQuality-_GetToggleFromUDSClient0 = 38,
+		Beyond-Scripts-Quality-Components-RayTracingQuality-get_supportsRayTracing0 = 38,
+		Beyond-Scripts-Quality-QualityManager-ResetQualityTierComponentValue0 = 39,
+		Beyond-Scripts-Quality-QualityManager-_IsToggleQualityTierComponent0 = 39,
+		Beyond-Scripts-Quality-QualityManager-IsEnumQualityTierComponent0 = 39,
+		Beyond-Scripts-Quality-QualityManager-IsSliderQualityTierComponent0 = 39,
+		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierType0 = 40,
+		Beyond-Scripts-Quality-Components-SliderQualityComponent-SetValue0 = 41,
+		Beyond-Scripts-Quality-QualityManager-SetSliderQualityTierComponentCount0 = 42,
+		Beyond-Scripts-Quality-QualityManager-SetQualityComponentTier0 = 42,
+		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetRange0 = 43,
+		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetValue0 = 44,
+		Beyond-Scripts-Quality-Components-SliderQualityComponent-GetDefaultValue0 = 44,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityMobile-get_renderingScaleFactor0 = 44,
+		Beyond-Scripts-Quality-Components-RenderingScaleQualityPC-get_renderingScale0 = 44,
+		Beyond-Scripts-Quality-QualityManager-GetSliderQualityTierComponent0 = 45,
+		Beyond-Scripts-Quality-QualityManager-InvokeQualityTierComponent0 = 46,
+		Beyond-Scripts-Quality-QualityManager-GetQualityTierComponentTierCount0 = 47,
+		Beyond-Scripts-Quality-QualityManager-GetQualityComponentDefaultTier0 = 48,
+		Beyond-Scripts-Quality-QualityManager-GetQualityComponentTier0 = 48,
+		Beyond-Scripts-Quality-QualityManager-_GetCurrentComponentTierIndex0 = 49,
+		Beyond-Scripts-Quality-QualityManager-IsQualitySubSettingTierValid0 = 50,
+		Beyond-Scripts-Quality-QualityUtility-Decompress0 = 51,
+		Beyond-Scripts-Quality-QualityUtility-get_JsonSerializerSettings0 = 52,
+		Beyond-Scripts-Quality-Components-QualityTierComponent-OnDeserialized0 = 53,
+		Beyond-Scripts-Quality-Components-FrameRateQuality-GetFrameRateFromEnum0 = 54,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-__ForceSetFrameRate0 = 55,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-SetFrameRateOverrider0 = 55,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetDefaultFrameRate0 = 56,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetFrameRate0 = 56,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-RecommendedDefaultFrameRate0 = 56,
+		Beyond-Scripts-Quality-Components-HgFrameRateControl-GetUserSettingFrameRate0 = 56,
+		Beyond-Scripts-Quality-Components-FrameRateQualityMobile-GetFrameRateFromEnum0 = 57,
+		Beyond-Scripts-Quality-Components-MemoryReleaseIntervalQuality-_TryStartInterval0 = 58
 	}
+
+	public delegate void __HotPatchDelegate_1(object P0, object P1); // TypeDefIndex: 88330; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate string __HotPatchDelegate_2(ref RankingRule P0); // TypeDefIndex: 88331; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate string __HotPatchDelegate_3(ref DeviceMatchResult P0); // TypeDefIndex: 88332; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate string __HotPatchDelegate_4(object P0); // TypeDefIndex: 88333; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_5(ref DeviceMatchResult P0); // TypeDefIndex: 88334; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_6(object P0); // TypeDefIndex: 88335; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate string __HotPatchDelegate_7(); // TypeDefIndex: 88336; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate DeviceMatchRules __HotPatchDelegate_8(object P0); // TypeDefIndex: 88337; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate int __HotPatchDelegate_9(object P0, object P1); // TypeDefIndex: 88338; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate int __HotPatchDelegate_10(object P0, object P1, ESteamHardwareType P2); // TypeDefIndex: 88339; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate string __HotPatchDelegate_11(object P0, object P1); // TypeDefIndex: 88340; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_12(object P0, object P1, object P2, ref RankingRule P3); // TypeDefIndex: 88341; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate bool __HotPatchDelegate_13(object P0, object P1, object P2, ref RankingRule P3, out string P4); // TypeDefIndex: 88342; 0x00000001812083C0-0x00000001812083E0
+
+	public delegate void __HotPatchDelegate_14(object P0); // TypeDefIndex: 88343; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_15(object P0, object P1, ref RankingRule P2); // TypeDefIndex: 88344; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate bool __HotPatchDelegate_16(ref RankingRule P0, RankingRule P1); // TypeDefIndex: 88345; 0x00000001857E4CE0-0x00000001857E4D10
+
+	public delegate string __HotPatchDelegate_17(ref MemoryRule P0); // TypeDefIndex: 88346; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_18(ref MemoryRule P0, MemoryRule P1); // TypeDefIndex: 88347; 0x0000000186036470-0x00000001860364A0
+
+	public delegate string __HotPatchDelegate_19(ref DeviceQualityMapItem P0); // TypeDefIndex: 88348; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate UnityEngine.Color __HotPatchDelegate_20(ref DeviceQualityMapItem P0, int P1); // TypeDefIndex: 88349; 0x00000001812C43A0-0x00000001812C43E0
+
+	public delegate UnityEngine.Color __HotPatchDelegate_21(ref DeviceQualityMapItem P0); // TypeDefIndex: 88350; 0x0000000186464680-0x00000001864646B0
+
+	public delegate DeviceQualityMapItem __HotPatchDelegate_22(object P0); // TypeDefIndex: 88351; 0x00000001811C4340-0x00000001811C4380
+
+	public delegate int __HotPatchDelegate_23(object P0); // TypeDefIndex: 88352; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate Beyond.Scripts.Quality.DeviceInfo __HotPatchDelegate_24(object P0); // TypeDefIndex: 88353; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate QualityTierComponentMatch __HotPatchDelegate_25(object P0, object P1, int P2); // TypeDefIndex: 88354; 0x00000001812D51A0-0x00000001812D51E0
+
+	public delegate void __HotPatchDelegate_26(object P0, object P1, object P2); // TypeDefIndex: 88355; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_27(object P0, bool P1); // TypeDefIndex: 88356; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate QualityTierComponentMatch __HotPatchDelegate_28(object P0, object P1); // TypeDefIndex: 88357; 0x00000001812C43A0-0x00000001812C43E0
+
+	public delegate void __HotPatchDelegate_29(object P0, int P1); // TypeDefIndex: 88358; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_30(object P0, LogicQualityLevel P1, LogicQualityLevel P2); // TypeDefIndex: 88359; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_31(object P0, in EventData<LogicQualityLevel, LogicQualityLevel> P1); // TypeDefIndex: 88360; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_32(object P0, ThermalState P1, ThermalState P2); // TypeDefIndex: 88361; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_33(object P0, in EventData<ThermalState, ThermalState> P1); // TypeDefIndex: 88362; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate System.Type __HotPatchDelegate_34(object P0, object P1); // TypeDefIndex: 88363; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_35(object P0, object P1, int P2); // TypeDefIndex: 88364; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_36(object P0, Beyond.GameSetting.GameSettingVideoQuality P1); // TypeDefIndex: 88365; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate Beyond.GameSetting.GameSettingVideoQuality __HotPatchDelegate_37(object P0); // TypeDefIndex: 88366; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_38(); // TypeDefIndex: 88367; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate bool __HotPatchDelegate_39(object P0, object P1); // TypeDefIndex: 88368; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate QualityTierType __HotPatchDelegate_40(object P0, object P1); // TypeDefIndex: 88369; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_41(object P0, float P1); // TypeDefIndex: 88370; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_42(object P0, object P1, float P2); // TypeDefIndex: 88371; 0x000000018124EAD0-0x000000018124EAF0
+
+	public delegate Vector2 __HotPatchDelegate_43(object P0); // TypeDefIndex: 88372; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate float __HotPatchDelegate_44(object P0); // TypeDefIndex: 88373; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate Vector3 __HotPatchDelegate_45(object P0, object P1); // TypeDefIndex: 88374; 0x0000000186AEB300-0x0000000186AEB340
+
+	public delegate bool __HotPatchDelegate_46(object P0, object P1, object P2, object P3); // TypeDefIndex: 88375; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate ValueTuple<float, float> __HotPatchDelegate_47(object P0, object P1); // TypeDefIndex: 88376; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate float __HotPatchDelegate_48(object P0, object P1); // TypeDefIndex: 88377; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_49(object P0, object P1, out int P2, out int P3); // TypeDefIndex: 88378; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate bool __HotPatchDelegate_50(object P0, object P1, int P2); // TypeDefIndex: 88379; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate byte[] __HotPatchDelegate_51(object P0); // TypeDefIndex: 88380; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate JsonSerializerSettings __HotPatchDelegate_52(); // TypeDefIndex: 88381; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate void __HotPatchDelegate_53(object P0, StreamingContext P1); // TypeDefIndex: 88382; 0x00000001857E4CE0-0x00000001857E4D10
+
+	public delegate int __HotPatchDelegate_54(FrameRateQuality.FrameRateQualityEnum P0); // TypeDefIndex: 88383; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_55(int P0, HgFrameRateControl.ReasonEnum P1); // TypeDefIndex: 88384; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate int __HotPatchDelegate_56(); // TypeDefIndex: 88385; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate int __HotPatchDelegate_57(FrameRateQualityMobile.FrameRateQualityMobileEnum P0); // TypeDefIndex: 88386; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_58(ref float P0, float P1); // TypeDefIndex: 88387; 0x00000001859B7730-0x00000001859B7740
 }

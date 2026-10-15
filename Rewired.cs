@@ -20,14 +20,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-// Image 49: Rewired.dll - Assembly: Rewired, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60358-60412
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 49: Rewired.dll - Assembly: Rewired, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 87537-87591
 
 namespace Rewired
 {
-	public interface IGamepadTemplate : IControllerTemplate // TypeDefIndex: 60359
+	public interface IGamepadTemplate : IControllerTemplate // TypeDefIndex: 87538
 	{
 		// Properties
 		IControllerTemplateButton actionBottomRow1 { get; }
@@ -61,7 +58,7 @@ namespace Rewired
 		IControllerTemplateDPad dPad { get; }
 	}
 
-	public interface IRacingWheelTemplate : IControllerTemplate // TypeDefIndex: 60360
+	public interface IRacingWheelTemplate : IControllerTemplate // TypeDefIndex: 87539
 	{
 		// Properties
 		IControllerTemplateAxis wheel { get; }
@@ -108,7 +105,7 @@ namespace Rewired
 		IControllerTemplateDPad dPad { get; }
 	}
 
-	public interface IHOTASTemplate : IControllerTemplate // TypeDefIndex: 60361
+	public interface IHOTASTemplate : IControllerTemplate // TypeDefIndex: 87540
 	{
 		// Properties
 		IControllerTemplateButton stickTrigger { get; }
@@ -201,7 +198,7 @@ namespace Rewired
 		IControllerTemplateHat throttleHat4 { get; }
 	}
 
-	public interface IFlightYokeTemplate : IControllerTemplate // TypeDefIndex: 60362
+	public interface IFlightYokeTemplate : IControllerTemplate // TypeDefIndex: 87541
 	{
 		// Properties
 		IControllerTemplateButton leftPaddle { get; }
@@ -255,7 +252,7 @@ namespace Rewired
 		IControllerTemplateHat rightGripHat { get; }
 	}
 
-	public interface IFlightPedalsTemplate : IControllerTemplate // TypeDefIndex: 60363
+	public interface IFlightPedalsTemplate : IControllerTemplate // TypeDefIndex: 87542
 	{
 		// Properties
 		IControllerTemplateAxis leftPedal { get; }
@@ -263,7 +260,7 @@ namespace Rewired
 		IControllerTemplateAxis slide { get; }
 	}
 
-	public interface ISixDofControllerTemplate : IControllerTemplate // TypeDefIndex: 60364
+	public interface ISixDofControllerTemplate : IControllerTemplate // TypeDefIndex: 87543
 	{
 		// Properties
 		IControllerTemplateAxis extraAxis1 { get; }
@@ -309,763 +306,763 @@ namespace Rewired
 		IControllerTemplateStick6D stick { get; }
 	}
 
-	public sealed class GamepadTemplate : ControllerTemplate, IGamepadTemplate // TypeDefIndex: 60365
+	public sealed class GamepadTemplate : ControllerTemplate, IGamepadTemplate // TypeDefIndex: 87544
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_leftStickX = 0; // Metadata: 0x0234D578
-		public const int elementId_leftStickY = 1; // Metadata: 0x0234D579
-		public const int elementId_rightStickX = 2; // Metadata: 0x0234D57A
-		public const int elementId_rightStickY = 3; // Metadata: 0x0234D57B
-		public const int elementId_actionBottomRow1 = 4; // Metadata: 0x0234D57C
-		public const int elementId_a = 4; // Metadata: 0x0234D57D
-		public const int elementId_actionBottomRow2 = 5; // Metadata: 0x0234D57E
-		public const int elementId_b = 5; // Metadata: 0x0234D57F
-		public const int elementId_actionBottomRow3 = 6; // Metadata: 0x0234D580
-		public const int elementId_c = 6; // Metadata: 0x0234D581
-		public const int elementId_actionTopRow1 = 7; // Metadata: 0x0234D582
-		public const int elementId_x = 7; // Metadata: 0x0234D583
-		public const int elementId_actionTopRow2 = 8; // Metadata: 0x0234D584
-		public const int elementId_y = 8; // Metadata: 0x0234D585
-		public const int elementId_actionTopRow3 = 9; // Metadata: 0x0234D586
-		public const int elementId_z = 9; // Metadata: 0x0234D587
-		public const int elementId_leftShoulder1 = 10; // Metadata: 0x0234D588
-		public const int elementId_leftBumper = 10; // Metadata: 0x0234D589
-		public const int elementId_leftShoulder2 = 11; // Metadata: 0x0234D58A
-		public const int elementId_leftTrigger = 11; // Metadata: 0x0234D58B
-		public const int elementId_rightShoulder1 = 12; // Metadata: 0x0234D58C
-		public const int elementId_rightBumper = 12; // Metadata: 0x0234D58D
-		public const int elementId_rightShoulder2 = 13; // Metadata: 0x0234D58E
-		public const int elementId_rightTrigger = 13; // Metadata: 0x0234D58F
-		public const int elementId_center1 = 14; // Metadata: 0x0234D590
-		public const int elementId_back = 14; // Metadata: 0x0234D591
-		public const int elementId_center2 = 15; // Metadata: 0x0234D592
-		public const int elementId_start = 15; // Metadata: 0x0234D593
-		public const int elementId_center3 = 16; // Metadata: 0x0234D594
-		public const int elementId_guide = 16; // Metadata: 0x0234D595
-		public const int elementId_leftStickButton = 17; // Metadata: 0x0234D596
-		public const int elementId_rightStickButton = 18; // Metadata: 0x0234D597
-		public const int elementId_dPadUp = 19; // Metadata: 0x0234D598
-		public const int elementId_dPadRight = 20; // Metadata: 0x0234D599
-		public const int elementId_dPadDown = 21; // Metadata: 0x0234D59A
-		public const int elementId_dPadLeft = 22; // Metadata: 0x0234D59B
-		public const int elementId_leftStick = 23; // Metadata: 0x0234D59C
-		public const int elementId_rightStick = 24; // Metadata: 0x0234D59D
-		public const int elementId_dPad = 25; // Metadata: 0x0234D59E
+		public const int elementId_leftStickX = 0; // Metadata: 0x02646444
+		public const int elementId_leftStickY = 1; // Metadata: 0x02646445
+		public const int elementId_rightStickX = 2; // Metadata: 0x02646446
+		public const int elementId_rightStickY = 3; // Metadata: 0x02646447
+		public const int elementId_actionBottomRow1 = 4; // Metadata: 0x02646448
+		public const int elementId_a = 4; // Metadata: 0x02646449
+		public const int elementId_actionBottomRow2 = 5; // Metadata: 0x0264644A
+		public const int elementId_b = 5; // Metadata: 0x0264644B
+		public const int elementId_actionBottomRow3 = 6; // Metadata: 0x0264644C
+		public const int elementId_c = 6; // Metadata: 0x0264644D
+		public const int elementId_actionTopRow1 = 7; // Metadata: 0x0264644E
+		public const int elementId_x = 7; // Metadata: 0x0264644F
+		public const int elementId_actionTopRow2 = 8; // Metadata: 0x02646450
+		public const int elementId_y = 8; // Metadata: 0x02646451
+		public const int elementId_actionTopRow3 = 9; // Metadata: 0x02646452
+		public const int elementId_z = 9; // Metadata: 0x02646453
+		public const int elementId_leftShoulder1 = 10; // Metadata: 0x02646454
+		public const int elementId_leftBumper = 10; // Metadata: 0x02646455
+		public const int elementId_leftShoulder2 = 11; // Metadata: 0x02646456
+		public const int elementId_leftTrigger = 11; // Metadata: 0x02646457
+		public const int elementId_rightShoulder1 = 12; // Metadata: 0x02646458
+		public const int elementId_rightBumper = 12; // Metadata: 0x02646459
+		public const int elementId_rightShoulder2 = 13; // Metadata: 0x0264645A
+		public const int elementId_rightTrigger = 13; // Metadata: 0x0264645B
+		public const int elementId_center1 = 14; // Metadata: 0x0264645C
+		public const int elementId_back = 14; // Metadata: 0x0264645D
+		public const int elementId_center2 = 15; // Metadata: 0x0264645E
+		public const int elementId_start = 15; // Metadata: 0x0264645F
+		public const int elementId_center3 = 16; // Metadata: 0x02646460
+		public const int elementId_guide = 16; // Metadata: 0x02646461
+		public const int elementId_leftStickButton = 17; // Metadata: 0x02646462
+		public const int elementId_rightStickButton = 18; // Metadata: 0x02646463
+		public const int elementId_dPadUp = 19; // Metadata: 0x02646464
+		public const int elementId_dPadRight = 20; // Metadata: 0x02646465
+		public const int elementId_dPadDown = 21; // Metadata: 0x02646466
+		public const int elementId_dPadLeft = 22; // Metadata: 0x02646467
+		public const int elementId_leftStick = 23; // Metadata: 0x02646468
+		public const int elementId_rightStick = 24; // Metadata: 0x02646469
+		public const int elementId_dPad = 25; // Metadata: 0x0264646A
 	
 		// Properties
-		IControllerTemplateButton IGamepadTemplate.actionBottomRow1 { get; } // 0x000000018A9C93BC-0x000000018A9C93FC 
-		IControllerTemplateButton IGamepadTemplate.a { get; } // 0x000000018A9C937C-0x000000018A9C93BC 
-		IControllerTemplateButton IGamepadTemplate.actionBottomRow2 { get; } // 0x000000018A9C93FC-0x000000018A9C943C 
-		IControllerTemplateButton IGamepadTemplate.b { get; } // 0x000000018A9C953C-0x000000018A9C957C 
-		IControllerTemplateButton IGamepadTemplate.actionBottomRow3 { get; } // 0x000000018A9C943C-0x000000018A9C947C 
-		IControllerTemplateButton IGamepadTemplate.c { get; } // 0x000000018A9C95BC-0x000000018A9C95FC 
-		IControllerTemplateButton IGamepadTemplate.actionTopRow1 { get; } // 0x000000018A9C947C-0x000000018A9C94BC 
-		IControllerTemplateButton IGamepadTemplate.x { get; } // 0x000000018A9C99FC-0x000000018A9C9A3C 
-		IControllerTemplateButton IGamepadTemplate.actionTopRow2 { get; } // 0x000000018A9C94BC-0x000000018A9C94FC 
-		IControllerTemplateButton IGamepadTemplate.y { get; } // 0x000000018A9C9A3C-0x000000018A9C9A7C 
-		IControllerTemplateButton IGamepadTemplate.actionTopRow3 { get; } // 0x000000018A9C94FC-0x000000018A9C953C 
-		IControllerTemplateButton IGamepadTemplate.z { get; } // 0x000000018A9C9A7C-0x000000018A9C9ABC 
-		IControllerTemplateButton IGamepadTemplate.leftShoulder1 { get; } // 0x000000018A9C977C-0x000000018A9C97BC 
-		IControllerTemplateButton IGamepadTemplate.leftBumper { get; } // 0x000000018A9C973C-0x000000018A9C977C 
-		IControllerTemplateAxis IGamepadTemplate.leftShoulder2 { get; } // 0x000000018A9C97BC-0x000000018A9C97FC 
-		IControllerTemplateAxis IGamepadTemplate.leftTrigger { get; } // 0x000000018A9C983C-0x000000018A9C987C 
-		IControllerTemplateButton IGamepadTemplate.rightShoulder1 { get; } // 0x000000018A9C98BC-0x000000018A9C98FC 
-		IControllerTemplateButton IGamepadTemplate.rightBumper { get; } // 0x000000018A9C987C-0x000000018A9C98BC 
-		IControllerTemplateAxis IGamepadTemplate.rightShoulder2 { get; } // 0x000000018A9C98FC-0x000000018A9C993C 
-		IControllerTemplateAxis IGamepadTemplate.rightTrigger { get; } // 0x000000018A9C997C-0x000000018A9C99BC 
-		IControllerTemplateButton IGamepadTemplate.center1 { get; } // 0x000000018A9C95FC-0x000000018A9C963C 
-		IControllerTemplateButton IGamepadTemplate.back { get; } // 0x000000018A9C957C-0x000000018A9C95BC 
-		IControllerTemplateButton IGamepadTemplate.center2 { get; } // 0x000000018A9C963C-0x000000018A9C967C 
-		IControllerTemplateButton IGamepadTemplate.start { get; } // 0x000000018A9C99BC-0x000000018A9C99FC 
-		IControllerTemplateButton IGamepadTemplate.center3 { get; } // 0x000000018A9C967C-0x000000018A9C96BC 
-		IControllerTemplateButton IGamepadTemplate.guide { get; } // 0x000000018A9C96FC-0x000000018A9C973C 
-		IControllerTemplateThumbStick IGamepadTemplate.leftStick { get; } // 0x000000018A9C97FC-0x000000018A9C983C 
-		IControllerTemplateThumbStick IGamepadTemplate.rightStick { get; } // 0x000000018A9C993C-0x000000018A9C997C 
-		IControllerTemplateDPad IGamepadTemplate.dPad { get; } // 0x000000018A9C96BC-0x000000018A9C96FC 
+		IControllerTemplateButton IGamepadTemplate.actionBottomRow1 { get; } // 0x000000018CBB910C-0x000000018CBB914C 
+		IControllerTemplateButton IGamepadTemplate.a { get; } // 0x000000018CBB90CC-0x000000018CBB910C 
+		IControllerTemplateButton IGamepadTemplate.actionBottomRow2 { get; } // 0x000000018CBB914C-0x000000018CBB918C 
+		IControllerTemplateButton IGamepadTemplate.b { get; } // 0x000000018CBB928C-0x000000018CBB92CC 
+		IControllerTemplateButton IGamepadTemplate.actionBottomRow3 { get; } // 0x000000018CBB918C-0x000000018CBB91CC 
+		IControllerTemplateButton IGamepadTemplate.c { get; } // 0x000000018CBB930C-0x000000018CBB934C 
+		IControllerTemplateButton IGamepadTemplate.actionTopRow1 { get; } // 0x000000018CBB91CC-0x000000018CBB920C 
+		IControllerTemplateButton IGamepadTemplate.x { get; } // 0x000000018CBB974C-0x000000018CBB978C 
+		IControllerTemplateButton IGamepadTemplate.actionTopRow2 { get; } // 0x000000018CBB920C-0x000000018CBB924C 
+		IControllerTemplateButton IGamepadTemplate.y { get; } // 0x000000018CBB978C-0x000000018CBB97CC 
+		IControllerTemplateButton IGamepadTemplate.actionTopRow3 { get; } // 0x000000018CBB924C-0x000000018CBB928C 
+		IControllerTemplateButton IGamepadTemplate.z { get; } // 0x000000018CBB97CC-0x000000018CBB980C 
+		IControllerTemplateButton IGamepadTemplate.leftShoulder1 { get; } // 0x000000018CBB94CC-0x000000018CBB950C 
+		IControllerTemplateButton IGamepadTemplate.leftBumper { get; } // 0x000000018CBB948C-0x000000018CBB94CC 
+		IControllerTemplateAxis IGamepadTemplate.leftShoulder2 { get; } // 0x000000018CBB950C-0x000000018CBB954C 
+		IControllerTemplateAxis IGamepadTemplate.leftTrigger { get; } // 0x000000018CBB958C-0x000000018CBB95CC 
+		IControllerTemplateButton IGamepadTemplate.rightShoulder1 { get; } // 0x000000018CBB960C-0x000000018CBB964C 
+		IControllerTemplateButton IGamepadTemplate.rightBumper { get; } // 0x000000018CBB95CC-0x000000018CBB960C 
+		IControllerTemplateAxis IGamepadTemplate.rightShoulder2 { get; } // 0x000000018CBB964C-0x000000018CBB968C 
+		IControllerTemplateAxis IGamepadTemplate.rightTrigger { get; } // 0x000000018CBB96CC-0x000000018CBB970C 
+		IControllerTemplateButton IGamepadTemplate.center1 { get; } // 0x000000018CBB934C-0x000000018CBB938C 
+		IControllerTemplateButton IGamepadTemplate.back { get; } // 0x000000018CBB92CC-0x000000018CBB930C 
+		IControllerTemplateButton IGamepadTemplate.center2 { get; } // 0x000000018CBB938C-0x000000018CBB93CC 
+		IControllerTemplateButton IGamepadTemplate.start { get; } // 0x000000018CBB970C-0x000000018CBB974C 
+		IControllerTemplateButton IGamepadTemplate.center3 { get; } // 0x000000018CBB93CC-0x000000018CBB940C 
+		IControllerTemplateButton IGamepadTemplate.guide { get; } // 0x000000018CBB944C-0x000000018CBB948C 
+		IControllerTemplateThumbStick IGamepadTemplate.leftStick { get; } // 0x000000018CBB954C-0x000000018CBB958C 
+		IControllerTemplateThumbStick IGamepadTemplate.rightStick { get; } // 0x000000018CBB968C-0x000000018CBB96CC 
+		IControllerTemplateDPad IGamepadTemplate.dPad { get; } // 0x000000018CBB940C-0x000000018CBB944C 
 	
 		// Constructors
-		public GamepadTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static GamepadTemplate(); // 0x000000018A9C9ABC-0x000000018A9C9B20
+		public GamepadTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static GamepadTemplate(); // 0x000000018CBB980C-0x000000018CBB9870
 	}
 
-	public sealed class RacingWheelTemplate : ControllerTemplate, IRacingWheelTemplate // TypeDefIndex: 60366
+	public sealed class RacingWheelTemplate : ControllerTemplate, IRacingWheelTemplate // TypeDefIndex: 87545
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_wheel = 0; // Metadata: 0x0234D59F
-		public const int elementId_accelerator = 1; // Metadata: 0x0234D5A0
-		public const int elementId_brake = 2; // Metadata: 0x0234D5A1
-		public const int elementId_clutch = 3; // Metadata: 0x0234D5A2
-		public const int elementId_shiftDown = 4; // Metadata: 0x0234D5A3
-		public const int elementId_shiftUp = 5; // Metadata: 0x0234D5A4
-		public const int elementId_wheelButton1 = 6; // Metadata: 0x0234D5A5
-		public const int elementId_wheelButton2 = 7; // Metadata: 0x0234D5A6
-		public const int elementId_wheelButton3 = 8; // Metadata: 0x0234D5A7
-		public const int elementId_wheelButton4 = 9; // Metadata: 0x0234D5A8
-		public const int elementId_wheelButton5 = 10; // Metadata: 0x0234D5A9
-		public const int elementId_wheelButton6 = 11; // Metadata: 0x0234D5AA
-		public const int elementId_wheelButton7 = 12; // Metadata: 0x0234D5AB
-		public const int elementId_wheelButton8 = 13; // Metadata: 0x0234D5AC
-		public const int elementId_wheelButton9 = 14; // Metadata: 0x0234D5AD
-		public const int elementId_wheelButton10 = 15; // Metadata: 0x0234D5AE
-		public const int elementId_consoleButton1 = 16; // Metadata: 0x0234D5AF
-		public const int elementId_consoleButton2 = 17; // Metadata: 0x0234D5B0
-		public const int elementId_consoleButton3 = 18; // Metadata: 0x0234D5B1
-		public const int elementId_consoleButton4 = 19; // Metadata: 0x0234D5B2
-		public const int elementId_consoleButton5 = 20; // Metadata: 0x0234D5B3
-		public const int elementId_consoleButton6 = 21; // Metadata: 0x0234D5B4
-		public const int elementId_consoleButton7 = 22; // Metadata: 0x0234D5B5
-		public const int elementId_consoleButton8 = 23; // Metadata: 0x0234D5B6
-		public const int elementId_consoleButton9 = 24; // Metadata: 0x0234D5B7
-		public const int elementId_consoleButton10 = 25; // Metadata: 0x0234D5B8
-		public const int elementId_shifter1 = 26; // Metadata: 0x0234D5B9
-		public const int elementId_shifter2 = 27; // Metadata: 0x0234D5BA
-		public const int elementId_shifter3 = 28; // Metadata: 0x0234D5BB
-		public const int elementId_shifter4 = 29; // Metadata: 0x0234D5BC
-		public const int elementId_shifter5 = 30; // Metadata: 0x0234D5BD
-		public const int elementId_shifter6 = 31; // Metadata: 0x0234D5BE
-		public const int elementId_shifter7 = 32; // Metadata: 0x0234D5BF
-		public const int elementId_shifter8 = 33; // Metadata: 0x0234D5C0
-		public const int elementId_shifter9 = 34; // Metadata: 0x0234D5C1
-		public const int elementId_shifter10 = 35; // Metadata: 0x0234D5C2
-		public const int elementId_reverseGear = 44; // Metadata: 0x0234D5C3
-		public const int elementId_select = 36; // Metadata: 0x0234D5C4
-		public const int elementId_start = 37; // Metadata: 0x0234D5C5
-		public const int elementId_systemButton = 38; // Metadata: 0x0234D5C6
-		public const int elementId_horn = 43; // Metadata: 0x0234D5C7
-		public const int elementId_dPadUp = 39; // Metadata: 0x0234D5C8
-		public const int elementId_dPadRight = 40; // Metadata: 0x0234D5C9
-		public const int elementId_dPadDown = 41; // Metadata: 0x0234D5CA
-		public const int elementId_dPadLeft = 42; // Metadata: 0x0234D5CB
-		public const int elementId_dPad = 45; // Metadata: 0x0234D5CC
+		public const int elementId_wheel = 0; // Metadata: 0x0264646B
+		public const int elementId_accelerator = 1; // Metadata: 0x0264646C
+		public const int elementId_brake = 2; // Metadata: 0x0264646D
+		public const int elementId_clutch = 3; // Metadata: 0x0264646E
+		public const int elementId_shiftDown = 4; // Metadata: 0x0264646F
+		public const int elementId_shiftUp = 5; // Metadata: 0x02646470
+		public const int elementId_wheelButton1 = 6; // Metadata: 0x02646471
+		public const int elementId_wheelButton2 = 7; // Metadata: 0x02646472
+		public const int elementId_wheelButton3 = 8; // Metadata: 0x02646473
+		public const int elementId_wheelButton4 = 9; // Metadata: 0x02646474
+		public const int elementId_wheelButton5 = 10; // Metadata: 0x02646475
+		public const int elementId_wheelButton6 = 11; // Metadata: 0x02646476
+		public const int elementId_wheelButton7 = 12; // Metadata: 0x02646477
+		public const int elementId_wheelButton8 = 13; // Metadata: 0x02646478
+		public const int elementId_wheelButton9 = 14; // Metadata: 0x02646479
+		public const int elementId_wheelButton10 = 15; // Metadata: 0x0264647A
+		public const int elementId_consoleButton1 = 16; // Metadata: 0x0264647B
+		public const int elementId_consoleButton2 = 17; // Metadata: 0x0264647C
+		public const int elementId_consoleButton3 = 18; // Metadata: 0x0264647D
+		public const int elementId_consoleButton4 = 19; // Metadata: 0x0264647E
+		public const int elementId_consoleButton5 = 20; // Metadata: 0x0264647F
+		public const int elementId_consoleButton6 = 21; // Metadata: 0x02646480
+		public const int elementId_consoleButton7 = 22; // Metadata: 0x02646481
+		public const int elementId_consoleButton8 = 23; // Metadata: 0x02646482
+		public const int elementId_consoleButton9 = 24; // Metadata: 0x02646483
+		public const int elementId_consoleButton10 = 25; // Metadata: 0x02646484
+		public const int elementId_shifter1 = 26; // Metadata: 0x02646485
+		public const int elementId_shifter2 = 27; // Metadata: 0x02646486
+		public const int elementId_shifter3 = 28; // Metadata: 0x02646487
+		public const int elementId_shifter4 = 29; // Metadata: 0x02646488
+		public const int elementId_shifter5 = 30; // Metadata: 0x02646489
+		public const int elementId_shifter6 = 31; // Metadata: 0x0264648A
+		public const int elementId_shifter7 = 32; // Metadata: 0x0264648B
+		public const int elementId_shifter8 = 33; // Metadata: 0x0264648C
+		public const int elementId_shifter9 = 34; // Metadata: 0x0264648D
+		public const int elementId_shifter10 = 35; // Metadata: 0x0264648E
+		public const int elementId_reverseGear = 44; // Metadata: 0x0264648F
+		public const int elementId_select = 36; // Metadata: 0x02646490
+		public const int elementId_start = 37; // Metadata: 0x02646491
+		public const int elementId_systemButton = 38; // Metadata: 0x02646492
+		public const int elementId_horn = 43; // Metadata: 0x02646493
+		public const int elementId_dPadUp = 39; // Metadata: 0x02646494
+		public const int elementId_dPadRight = 40; // Metadata: 0x02646495
+		public const int elementId_dPadDown = 41; // Metadata: 0x02646496
+		public const int elementId_dPadLeft = 42; // Metadata: 0x02646497
+		public const int elementId_dPad = 45; // Metadata: 0x02646498
 	
 		// Properties
-		IControllerTemplateAxis IRacingWheelTemplate.wheel { get; } // 0x000000018A9CC8C0-0x000000018A9CC8FC 
-		IControllerTemplateAxis IRacingWheelTemplate.accelerator { get; } // 0x000000018A9CBE80-0x000000018A9CBEC0 
-		IControllerTemplateAxis IRacingWheelTemplate.brake { get; } // 0x000000018A9CBEC0-0x000000018A9CBF00 
-		IControllerTemplateAxis IRacingWheelTemplate.clutch { get; } // 0x000000018A9CBF00-0x000000018A9CBF40 
-		IControllerTemplateButton IRacingWheelTemplate.shiftDown { get; } // 0x000000018A9CC2C0-0x000000018A9CC300 
-		IControllerTemplateButton IRacingWheelTemplate.shiftUp { get; } // 0x000000018A9CC300-0x000000018A9CC340 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton1 { get; } // 0x000000018A9CC680-0x000000018A9CC6C0 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton2 { get; } // 0x000000018A9CC6C0-0x000000018A9CC700 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton3 { get; } // 0x000000018A9CC700-0x000000018A9CC740 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton4 { get; } // 0x000000018A9CC740-0x000000018A9CC780 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton5 { get; } // 0x000000018A9CC780-0x000000018A9CC7C0 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton6 { get; } // 0x000000018A9CC7C0-0x000000018A9CC800 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton7 { get; } // 0x000000018A9CC800-0x000000018A9CC840 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton8 { get; } // 0x000000018A9CC840-0x000000018A9CC880 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton9 { get; } // 0x000000018A9CC880-0x000000018A9CC8C0 
-		IControllerTemplateButton IRacingWheelTemplate.wheelButton10 { get; } // 0x000000018A9CC640-0x000000018A9CC680 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton1 { get; } // 0x000000018A9CBF80-0x000000018A9CBFC0 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton2 { get; } // 0x000000018A9CBFC0-0x000000018A9CC000 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton3 { get; } // 0x000000018A9CC000-0x000000018A9CC040 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton4 { get; } // 0x000000018A9CC040-0x000000018A9CC080 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton5 { get; } // 0x000000018A9CC080-0x000000018A9CC0C0 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton6 { get; } // 0x000000018A9CC0C0-0x000000018A9CC100 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton7 { get; } // 0x000000018A9CC100-0x000000018A9CC140 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton8 { get; } // 0x000000018A9CC140-0x000000018A9CC180 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton9 { get; } // 0x000000018A9CC180-0x000000018A9CC1C0 
-		IControllerTemplateButton IRacingWheelTemplate.consoleButton10 { get; } // 0x000000018A9CBF40-0x000000018A9CBF80 
-		IControllerTemplateButton IRacingWheelTemplate.shifter1 { get; } // 0x000000018A9CC380-0x000000018A9CC3C0 
-		IControllerTemplateButton IRacingWheelTemplate.shifter2 { get; } // 0x000000018A9CC3C0-0x000000018A9CC400 
-		IControllerTemplateButton IRacingWheelTemplate.shifter3 { get; } // 0x000000018A9CC400-0x000000018A9CC440 
-		IControllerTemplateButton IRacingWheelTemplate.shifter4 { get; } // 0x000000018A9CC440-0x000000018A9CC480 
-		IControllerTemplateButton IRacingWheelTemplate.shifter5 { get; } // 0x000000018A9CC480-0x000000018A9CC4C0 
-		IControllerTemplateButton IRacingWheelTemplate.shifter6 { get; } // 0x000000018A9CC4C0-0x000000018A9CC500 
-		IControllerTemplateButton IRacingWheelTemplate.shifter7 { get; } // 0x000000018A9CC500-0x000000018A9CC540 
-		IControllerTemplateButton IRacingWheelTemplate.shifter8 { get; } // 0x000000018A9CC540-0x000000018A9CC580 
-		IControllerTemplateButton IRacingWheelTemplate.shifter9 { get; } // 0x000000018A9CC580-0x000000018A9CC5C0 
-		IControllerTemplateButton IRacingWheelTemplate.shifter10 { get; } // 0x000000018A9CC340-0x000000018A9CC380 
-		IControllerTemplateButton IRacingWheelTemplate.reverseGear { get; } // 0x000000018A9CC240-0x000000018A9CC280 
-		IControllerTemplateButton IRacingWheelTemplate.select { get; } // 0x000000018A9CC280-0x000000018A9CC2C0 
-		IControllerTemplateButton IRacingWheelTemplate.start { get; } // 0x000000018A9CC5C0-0x000000018A9CC600 
-		IControllerTemplateButton IRacingWheelTemplate.systemButton { get; } // 0x000000018A9CC600-0x000000018A9CC640 
-		IControllerTemplateButton IRacingWheelTemplate.horn { get; } // 0x000000018A9CC200-0x000000018A9CC240 
-		IControllerTemplateDPad IRacingWheelTemplate.dPad { get; } // 0x000000018A9CC1C0-0x000000018A9CC200 
+		IControllerTemplateAxis IRacingWheelTemplate.wheel { get; } // 0x000000018CBBC618-0x000000018CBBC654 
+		IControllerTemplateAxis IRacingWheelTemplate.accelerator { get; } // 0x000000018CBBBBD8-0x000000018CBBBC18 
+		IControllerTemplateAxis IRacingWheelTemplate.brake { get; } // 0x000000018CBBBC18-0x000000018CBBBC58 
+		IControllerTemplateAxis IRacingWheelTemplate.clutch { get; } // 0x000000018CBBBC58-0x000000018CBBBC98 
+		IControllerTemplateButton IRacingWheelTemplate.shiftDown { get; } // 0x000000018CBBC018-0x000000018CBBC058 
+		IControllerTemplateButton IRacingWheelTemplate.shiftUp { get; } // 0x000000018CBBC058-0x000000018CBBC098 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton1 { get; } // 0x000000018CBBC3D8-0x000000018CBBC418 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton2 { get; } // 0x000000018CBBC418-0x000000018CBBC458 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton3 { get; } // 0x000000018CBBC458-0x000000018CBBC498 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton4 { get; } // 0x000000018CBBC498-0x000000018CBBC4D8 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton5 { get; } // 0x000000018CBBC4D8-0x000000018CBBC518 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton6 { get; } // 0x000000018CBBC518-0x000000018CBBC558 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton7 { get; } // 0x000000018CBBC558-0x000000018CBBC598 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton8 { get; } // 0x000000018CBBC598-0x000000018CBBC5D8 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton9 { get; } // 0x000000018CBBC5D8-0x000000018CBBC618 
+		IControllerTemplateButton IRacingWheelTemplate.wheelButton10 { get; } // 0x000000018CBBC398-0x000000018CBBC3D8 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton1 { get; } // 0x000000018CBBBCD8-0x000000018CBBBD18 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton2 { get; } // 0x000000018CBBBD18-0x000000018CBBBD58 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton3 { get; } // 0x000000018CBBBD58-0x000000018CBBBD98 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton4 { get; } // 0x000000018CBBBD98-0x000000018CBBBDD8 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton5 { get; } // 0x000000018CBBBDD8-0x000000018CBBBE18 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton6 { get; } // 0x000000018CBBBE18-0x000000018CBBBE58 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton7 { get; } // 0x000000018CBBBE58-0x000000018CBBBE98 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton8 { get; } // 0x000000018CBBBE98-0x000000018CBBBED8 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton9 { get; } // 0x000000018CBBBED8-0x000000018CBBBF18 
+		IControllerTemplateButton IRacingWheelTemplate.consoleButton10 { get; } // 0x000000018CBBBC98-0x000000018CBBBCD8 
+		IControllerTemplateButton IRacingWheelTemplate.shifter1 { get; } // 0x000000018CBBC0D8-0x000000018CBBC118 
+		IControllerTemplateButton IRacingWheelTemplate.shifter2 { get; } // 0x000000018CBBC118-0x000000018CBBC158 
+		IControllerTemplateButton IRacingWheelTemplate.shifter3 { get; } // 0x000000018CBBC158-0x000000018CBBC198 
+		IControllerTemplateButton IRacingWheelTemplate.shifter4 { get; } // 0x000000018CBBC198-0x000000018CBBC1D8 
+		IControllerTemplateButton IRacingWheelTemplate.shifter5 { get; } // 0x000000018CBBC1D8-0x000000018CBBC218 
+		IControllerTemplateButton IRacingWheelTemplate.shifter6 { get; } // 0x000000018CBBC218-0x000000018CBBC258 
+		IControllerTemplateButton IRacingWheelTemplate.shifter7 { get; } // 0x000000018CBBC258-0x000000018CBBC298 
+		IControllerTemplateButton IRacingWheelTemplate.shifter8 { get; } // 0x000000018CBBC298-0x000000018CBBC2D8 
+		IControllerTemplateButton IRacingWheelTemplate.shifter9 { get; } // 0x000000018CBBC2D8-0x000000018CBBC318 
+		IControllerTemplateButton IRacingWheelTemplate.shifter10 { get; } // 0x000000018CBBC098-0x000000018CBBC0D8 
+		IControllerTemplateButton IRacingWheelTemplate.reverseGear { get; } // 0x000000018CBBBF98-0x000000018CBBBFD8 
+		IControllerTemplateButton IRacingWheelTemplate.select { get; } // 0x000000018CBBBFD8-0x000000018CBBC018 
+		IControllerTemplateButton IRacingWheelTemplate.start { get; } // 0x000000018CBBC318-0x000000018CBBC358 
+		IControllerTemplateButton IRacingWheelTemplate.systemButton { get; } // 0x000000018CBBC358-0x000000018CBBC398 
+		IControllerTemplateButton IRacingWheelTemplate.horn { get; } // 0x000000018CBBBF58-0x000000018CBBBF98 
+		IControllerTemplateDPad IRacingWheelTemplate.dPad { get; } // 0x000000018CBBBF18-0x000000018CBBBF58 
 	
 		// Constructors
-		public RacingWheelTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static RacingWheelTemplate(); // 0x000000018A9CC8FC-0x000000018A9CC960
+		public RacingWheelTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static RacingWheelTemplate(); // 0x000000018CBBC654-0x000000018CBBC6B8
 	}
 
-	public sealed class HOTASTemplate : ControllerTemplate, IHOTASTemplate // TypeDefIndex: 60367
+	public sealed class HOTASTemplate : ControllerTemplate, IHOTASTemplate // TypeDefIndex: 87546
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_stickX = 0; // Metadata: 0x0234D5CD
-		public const int elementId_stickY = 1; // Metadata: 0x0234D5CE
-		public const int elementId_stickRotate = 2; // Metadata: 0x0234D5CF
-		public const int elementId_stickMiniStick1X = 78; // Metadata: 0x0234D5D0
-		public const int elementId_stickMiniStick1Y = 79; // Metadata: 0x0234D5D2
-		public const int elementId_stickMiniStick1Press = 80; // Metadata: 0x0234D5D4
-		public const int elementId_stickMiniStick2X = 81; // Metadata: 0x0234D5D6
-		public const int elementId_stickMiniStick2Y = 82; // Metadata: 0x0234D5D8
-		public const int elementId_stickMiniStick2Press = 83; // Metadata: 0x0234D5DA
-		public const int elementId_stickTrigger = 3; // Metadata: 0x0234D5DC
-		public const int elementId_stickTriggerStage2 = 4; // Metadata: 0x0234D5DD
-		public const int elementId_stickPinkyButton = 5; // Metadata: 0x0234D5DE
-		public const int elementId_stickPinkyTrigger = 154; // Metadata: 0x0234D5DF
-		public const int elementId_stickButton1 = 6; // Metadata: 0x0234D5E1
-		public const int elementId_stickButton2 = 7; // Metadata: 0x0234D5E2
-		public const int elementId_stickButton3 = 8; // Metadata: 0x0234D5E3
-		public const int elementId_stickButton4 = 9; // Metadata: 0x0234D5E4
-		public const int elementId_stickButton5 = 10; // Metadata: 0x0234D5E5
-		public const int elementId_stickButton6 = 11; // Metadata: 0x0234D5E6
-		public const int elementId_stickButton7 = 12; // Metadata: 0x0234D5E7
-		public const int elementId_stickButton8 = 13; // Metadata: 0x0234D5E8
-		public const int elementId_stickButton9 = 14; // Metadata: 0x0234D5E9
-		public const int elementId_stickButton10 = 15; // Metadata: 0x0234D5EA
-		public const int elementId_stickBaseButton1 = 18; // Metadata: 0x0234D5EB
-		public const int elementId_stickBaseButton2 = 19; // Metadata: 0x0234D5EC
-		public const int elementId_stickBaseButton3 = 20; // Metadata: 0x0234D5ED
-		public const int elementId_stickBaseButton4 = 21; // Metadata: 0x0234D5EE
-		public const int elementId_stickBaseButton5 = 22; // Metadata: 0x0234D5EF
-		public const int elementId_stickBaseButton6 = 23; // Metadata: 0x0234D5F0
-		public const int elementId_stickBaseButton7 = 24; // Metadata: 0x0234D5F1
-		public const int elementId_stickBaseButton8 = 25; // Metadata: 0x0234D5F2
-		public const int elementId_stickBaseButton9 = 26; // Metadata: 0x0234D5F3
-		public const int elementId_stickBaseButton10 = 27; // Metadata: 0x0234D5F4
-		public const int elementId_stickBaseButton11 = 161; // Metadata: 0x0234D5F5
-		public const int elementId_stickBaseButton12 = 162; // Metadata: 0x0234D5F7
-		public const int elementId_stickHat1Up = 28; // Metadata: 0x0234D5F9
-		public const int elementId_stickHat1UpRight = 29; // Metadata: 0x0234D5FA
-		public const int elementId_stickHat1Right = 30; // Metadata: 0x0234D5FB
-		public const int elementId_stickHat1DownRight = 31; // Metadata: 0x0234D5FC
-		public const int elementId_stickHat1Down = 32; // Metadata: 0x0234D5FD
-		public const int elementId_stickHat1DownLeft = 33; // Metadata: 0x0234D5FE
-		public const int elementId_stickHat1Left = 34; // Metadata: 0x0234D5FF
-		public const int elementId_stickHat1Up_Left = 35; // Metadata: 0x0234D600
-		public const int elementId_stickHat2Up = 36; // Metadata: 0x0234D601
-		public const int elementId_stickHat2Up_right = 37; // Metadata: 0x0234D602
-		public const int elementId_stickHat2Right = 38; // Metadata: 0x0234D603
-		public const int elementId_stickHat2Down_Right = 39; // Metadata: 0x0234D604
-		public const int elementId_stickHat2Down = 40; // Metadata: 0x0234D605
-		public const int elementId_stickHat2Down_Left = 41; // Metadata: 0x0234D606
-		public const int elementId_stickHat2Left = 42; // Metadata: 0x0234D607
-		public const int elementId_stickHat2Up_Left = 43; // Metadata: 0x0234D608
-		public const int elementId_stickHat3Up = 84; // Metadata: 0x0234D609
-		public const int elementId_stickHat3Up_Right = 85; // Metadata: 0x0234D60B
-		public const int elementId_stickHat3Right = 86; // Metadata: 0x0234D60D
-		public const int elementId_stickHat3Down_Right = 87; // Metadata: 0x0234D60F
-		public const int elementId_stickHat3Down = 88; // Metadata: 0x0234D611
-		public const int elementId_stickHat3Down_Left = 89; // Metadata: 0x0234D613
-		public const int elementId_stickHat3Left = 90; // Metadata: 0x0234D615
-		public const int elementId_stickHat3Up_Left = 91; // Metadata: 0x0234D617
-		public const int elementId_stickHat4Up = 92; // Metadata: 0x0234D619
-		public const int elementId_stickHat4Up_Right = 93; // Metadata: 0x0234D61B
-		public const int elementId_stickHat4Right = 94; // Metadata: 0x0234D61D
-		public const int elementId_stickHat4Down_Right = 95; // Metadata: 0x0234D61F
-		public const int elementId_stickHat4Down = 96; // Metadata: 0x0234D621
-		public const int elementId_stickHat4Down_Left = 97; // Metadata: 0x0234D623
-		public const int elementId_stickHat4Left = 98; // Metadata: 0x0234D625
-		public const int elementId_stickHat4Up_Left = 99; // Metadata: 0x0234D627
-		public const int elementId_mode1 = 44; // Metadata: 0x0234D629
-		public const int elementId_mode2 = 45; // Metadata: 0x0234D62A
-		public const int elementId_mode3 = 46; // Metadata: 0x0234D62B
-		public const int elementId_throttle1Axis = 49; // Metadata: 0x0234D62C
-		public const int elementId_throttle2Axis = 155; // Metadata: 0x0234D62D
-		public const int elementId_throttle1MinDetent = 166; // Metadata: 0x0234D62F
-		public const int elementId_throttle2MinDetent = 167; // Metadata: 0x0234D631
-		public const int elementId_throttleButton1 = 50; // Metadata: 0x0234D633
-		public const int elementId_throttleButton2 = 51; // Metadata: 0x0234D634
-		public const int elementId_throttleButton3 = 52; // Metadata: 0x0234D635
-		public const int elementId_throttleButton4 = 53; // Metadata: 0x0234D636
-		public const int elementId_throttleButton5 = 54; // Metadata: 0x0234D637
-		public const int elementId_throttleButton6 = 55; // Metadata: 0x0234D638
-		public const int elementId_throttleButton7 = 56; // Metadata: 0x0234D639
-		public const int elementId_throttleButton8 = 57; // Metadata: 0x0234D63A
-		public const int elementId_throttleButton9 = 58; // Metadata: 0x0234D63B
-		public const int elementId_throttleButton10 = 59; // Metadata: 0x0234D63C
-		public const int elementId_throttleBaseButton1 = 60; // Metadata: 0x0234D63D
-		public const int elementId_throttleBaseButton2 = 61; // Metadata: 0x0234D63E
-		public const int elementId_throttleBaseButton3 = 62; // Metadata: 0x0234D63F
-		public const int elementId_throttleBaseButton4 = 63; // Metadata: 0x0234D640
-		public const int elementId_throttleBaseButton5 = 64; // Metadata: 0x0234D641
-		public const int elementId_throttleBaseButton6 = 65; // Metadata: 0x0234D643
-		public const int elementId_throttleBaseButton7 = 66; // Metadata: 0x0234D645
-		public const int elementId_throttleBaseButton8 = 67; // Metadata: 0x0234D647
-		public const int elementId_throttleBaseButton9 = 68; // Metadata: 0x0234D649
-		public const int elementId_throttleBaseButton10 = 69; // Metadata: 0x0234D64B
-		public const int elementId_throttleBaseButton11 = 132; // Metadata: 0x0234D64D
-		public const int elementId_throttleBaseButton12 = 133; // Metadata: 0x0234D64F
-		public const int elementId_throttleBaseButton13 = 134; // Metadata: 0x0234D651
-		public const int elementId_throttleBaseButton14 = 135; // Metadata: 0x0234D653
-		public const int elementId_throttleBaseButton15 = 136; // Metadata: 0x0234D655
-		public const int elementId_throttleSlider1 = 70; // Metadata: 0x0234D657
-		public const int elementId_throttleSlider2 = 71; // Metadata: 0x0234D659
-		public const int elementId_throttleSlider3 = 72; // Metadata: 0x0234D65B
-		public const int elementId_throttleSlider4 = 73; // Metadata: 0x0234D65D
-		public const int elementId_throttleDial1 = 74; // Metadata: 0x0234D65F
-		public const int elementId_throttleDial2 = 142; // Metadata: 0x0234D661
-		public const int elementId_throttleDial3 = 143; // Metadata: 0x0234D663
-		public const int elementId_throttleDial4 = 144; // Metadata: 0x0234D665
-		public const int elementId_throttleMiniStickX = 75; // Metadata: 0x0234D667
-		public const int elementId_throttleMiniStickY = 76; // Metadata: 0x0234D669
-		public const int elementId_throttleMiniStickPress = 77; // Metadata: 0x0234D66B
-		public const int elementId_throttleWheel1Forward = 145; // Metadata: 0x0234D66D
-		public const int elementId_throttleWheel1Back = 146; // Metadata: 0x0234D66F
-		public const int elementId_throttleWheel1Press = 147; // Metadata: 0x0234D671
-		public const int elementId_throttleWheel2Forward = 148; // Metadata: 0x0234D673
-		public const int elementId_throttleWheel2Back = 149; // Metadata: 0x0234D675
-		public const int elementId_throttleWheel2Press = 150; // Metadata: 0x0234D677
-		public const int elementId_throttleWheel3Forward = 151; // Metadata: 0x0234D679
-		public const int elementId_throttleWheel3Back = 152; // Metadata: 0x0234D67B
-		public const int elementId_throttleWheel3Press = 153; // Metadata: 0x0234D67D
-		public const int elementId_throttleHat1Up = 100; // Metadata: 0x0234D67F
-		public const int elementId_throttleHat1Up_Right = 101; // Metadata: 0x0234D681
-		public const int elementId_throttleHat1Right = 102; // Metadata: 0x0234D683
-		public const int elementId_throttleHat1Down_Right = 103; // Metadata: 0x0234D685
-		public const int elementId_throttleHat1Down = 104; // Metadata: 0x0234D687
-		public const int elementId_throttleHat1Down_Left = 105; // Metadata: 0x0234D689
-		public const int elementId_throttleHat1Left = 106; // Metadata: 0x0234D68B
-		public const int elementId_throttleHat1Up_Left = 107; // Metadata: 0x0234D68D
-		public const int elementId_throttleHat2Up = 108; // Metadata: 0x0234D68F
-		public const int elementId_throttleHat2Up_Right = 109; // Metadata: 0x0234D691
-		public const int elementId_throttleHat2Right = 110; // Metadata: 0x0234D693
-		public const int elementId_throttleHat2Down_Right = 111; // Metadata: 0x0234D695
-		public const int elementId_throttleHat2Down = 112; // Metadata: 0x0234D697
-		public const int elementId_throttleHat2Down_Left = 113; // Metadata: 0x0234D699
-		public const int elementId_throttleHat2Left = 114; // Metadata: 0x0234D69B
-		public const int elementId_throttleHat2Up_Left = 115; // Metadata: 0x0234D69D
-		public const int elementId_throttleHat3Up = 116; // Metadata: 0x0234D69F
-		public const int elementId_throttleHat3Up_Right = 117; // Metadata: 0x0234D6A1
-		public const int elementId_throttleHat3Right = 118; // Metadata: 0x0234D6A3
-		public const int elementId_throttleHat3Down_Right = 119; // Metadata: 0x0234D6A5
-		public const int elementId_throttleHat3Down = 120; // Metadata: 0x0234D6A7
-		public const int elementId_throttleHat3Down_Left = 121; // Metadata: 0x0234D6A9
-		public const int elementId_throttleHat3Left = 122; // Metadata: 0x0234D6AB
-		public const int elementId_throttleHat3Up_Left = 123; // Metadata: 0x0234D6AD
-		public const int elementId_throttleHat4Up = 124; // Metadata: 0x0234D6AF
-		public const int elementId_throttleHat4Up_Right = 125; // Metadata: 0x0234D6B1
-		public const int elementId_throttleHat4Right = 126; // Metadata: 0x0234D6B3
-		public const int elementId_throttleHat4Down_Right = 127; // Metadata: 0x0234D6B5
-		public const int elementId_throttleHat4Down = 128; // Metadata: 0x0234D6B7
-		public const int elementId_throttleHat4Down_Left = 129; // Metadata: 0x0234D6B9
-		public const int elementId_throttleHat4Left = 130; // Metadata: 0x0234D6BB
-		public const int elementId_throttleHat4Up_Left = 131; // Metadata: 0x0234D6BD
-		public const int elementId_leftPedal = 168; // Metadata: 0x0234D6BF
-		public const int elementId_rightPedal = 169; // Metadata: 0x0234D6C1
-		public const int elementId_slidePedals = 170; // Metadata: 0x0234D6C3
-		public const int elementId_stick = 171; // Metadata: 0x0234D6C5
-		public const int elementId_stickMiniStick1 = 172; // Metadata: 0x0234D6C7
-		public const int elementId_stickMiniStick2 = 173; // Metadata: 0x0234D6C9
-		public const int elementId_stickHat1 = 174; // Metadata: 0x0234D6CB
-		public const int elementId_stickHat2 = 175; // Metadata: 0x0234D6CD
-		public const int elementId_stickHat3 = 176; // Metadata: 0x0234D6CF
-		public const int elementId_stickHat4 = 177; // Metadata: 0x0234D6D1
-		public const int elementId_throttle1 = 178; // Metadata: 0x0234D6D3
-		public const int elementId_throttle2 = 179; // Metadata: 0x0234D6D5
-		public const int elementId_throttleMiniStick = 180; // Metadata: 0x0234D6D7
-		public const int elementId_throttleHat1 = 181; // Metadata: 0x0234D6D9
-		public const int elementId_throttleHat2 = 182; // Metadata: 0x0234D6DB
-		public const int elementId_throttleHat3 = 183; // Metadata: 0x0234D6DD
-		public const int elementId_throttleHat4 = 184; // Metadata: 0x0234D6DF
+		public const int elementId_stickX = 0; // Metadata: 0x02646499
+		public const int elementId_stickY = 1; // Metadata: 0x0264649A
+		public const int elementId_stickRotate = 2; // Metadata: 0x0264649B
+		public const int elementId_stickMiniStick1X = 78; // Metadata: 0x0264649C
+		public const int elementId_stickMiniStick1Y = 79; // Metadata: 0x0264649E
+		public const int elementId_stickMiniStick1Press = 80; // Metadata: 0x026464A0
+		public const int elementId_stickMiniStick2X = 81; // Metadata: 0x026464A2
+		public const int elementId_stickMiniStick2Y = 82; // Metadata: 0x026464A4
+		public const int elementId_stickMiniStick2Press = 83; // Metadata: 0x026464A6
+		public const int elementId_stickTrigger = 3; // Metadata: 0x026464A8
+		public const int elementId_stickTriggerStage2 = 4; // Metadata: 0x026464A9
+		public const int elementId_stickPinkyButton = 5; // Metadata: 0x026464AA
+		public const int elementId_stickPinkyTrigger = 154; // Metadata: 0x026464AB
+		public const int elementId_stickButton1 = 6; // Metadata: 0x026464AD
+		public const int elementId_stickButton2 = 7; // Metadata: 0x026464AE
+		public const int elementId_stickButton3 = 8; // Metadata: 0x026464AF
+		public const int elementId_stickButton4 = 9; // Metadata: 0x026464B0
+		public const int elementId_stickButton5 = 10; // Metadata: 0x026464B1
+		public const int elementId_stickButton6 = 11; // Metadata: 0x026464B2
+		public const int elementId_stickButton7 = 12; // Metadata: 0x026464B3
+		public const int elementId_stickButton8 = 13; // Metadata: 0x026464B4
+		public const int elementId_stickButton9 = 14; // Metadata: 0x026464B5
+		public const int elementId_stickButton10 = 15; // Metadata: 0x026464B6
+		public const int elementId_stickBaseButton1 = 18; // Metadata: 0x026464B7
+		public const int elementId_stickBaseButton2 = 19; // Metadata: 0x026464B8
+		public const int elementId_stickBaseButton3 = 20; // Metadata: 0x026464B9
+		public const int elementId_stickBaseButton4 = 21; // Metadata: 0x026464BA
+		public const int elementId_stickBaseButton5 = 22; // Metadata: 0x026464BB
+		public const int elementId_stickBaseButton6 = 23; // Metadata: 0x026464BC
+		public const int elementId_stickBaseButton7 = 24; // Metadata: 0x026464BD
+		public const int elementId_stickBaseButton8 = 25; // Metadata: 0x026464BE
+		public const int elementId_stickBaseButton9 = 26; // Metadata: 0x026464BF
+		public const int elementId_stickBaseButton10 = 27; // Metadata: 0x026464C0
+		public const int elementId_stickBaseButton11 = 161; // Metadata: 0x026464C1
+		public const int elementId_stickBaseButton12 = 162; // Metadata: 0x026464C3
+		public const int elementId_stickHat1Up = 28; // Metadata: 0x026464C5
+		public const int elementId_stickHat1UpRight = 29; // Metadata: 0x026464C6
+		public const int elementId_stickHat1Right = 30; // Metadata: 0x026464C7
+		public const int elementId_stickHat1DownRight = 31; // Metadata: 0x026464C8
+		public const int elementId_stickHat1Down = 32; // Metadata: 0x026464C9
+		public const int elementId_stickHat1DownLeft = 33; // Metadata: 0x026464CA
+		public const int elementId_stickHat1Left = 34; // Metadata: 0x026464CB
+		public const int elementId_stickHat1Up_Left = 35; // Metadata: 0x026464CC
+		public const int elementId_stickHat2Up = 36; // Metadata: 0x026464CD
+		public const int elementId_stickHat2Up_right = 37; // Metadata: 0x026464CE
+		public const int elementId_stickHat2Right = 38; // Metadata: 0x026464CF
+		public const int elementId_stickHat2Down_Right = 39; // Metadata: 0x026464D0
+		public const int elementId_stickHat2Down = 40; // Metadata: 0x026464D1
+		public const int elementId_stickHat2Down_Left = 41; // Metadata: 0x026464D2
+		public const int elementId_stickHat2Left = 42; // Metadata: 0x026464D3
+		public const int elementId_stickHat2Up_Left = 43; // Metadata: 0x026464D4
+		public const int elementId_stickHat3Up = 84; // Metadata: 0x026464D5
+		public const int elementId_stickHat3Up_Right = 85; // Metadata: 0x026464D7
+		public const int elementId_stickHat3Right = 86; // Metadata: 0x026464D9
+		public const int elementId_stickHat3Down_Right = 87; // Metadata: 0x026464DB
+		public const int elementId_stickHat3Down = 88; // Metadata: 0x026464DD
+		public const int elementId_stickHat3Down_Left = 89; // Metadata: 0x026464DF
+		public const int elementId_stickHat3Left = 90; // Metadata: 0x026464E1
+		public const int elementId_stickHat3Up_Left = 91; // Metadata: 0x026464E3
+		public const int elementId_stickHat4Up = 92; // Metadata: 0x026464E5
+		public const int elementId_stickHat4Up_Right = 93; // Metadata: 0x026464E7
+		public const int elementId_stickHat4Right = 94; // Metadata: 0x026464E9
+		public const int elementId_stickHat4Down_Right = 95; // Metadata: 0x026464EB
+		public const int elementId_stickHat4Down = 96; // Metadata: 0x026464ED
+		public const int elementId_stickHat4Down_Left = 97; // Metadata: 0x026464EF
+		public const int elementId_stickHat4Left = 98; // Metadata: 0x026464F1
+		public const int elementId_stickHat4Up_Left = 99; // Metadata: 0x026464F3
+		public const int elementId_mode1 = 44; // Metadata: 0x026464F5
+		public const int elementId_mode2 = 45; // Metadata: 0x026464F6
+		public const int elementId_mode3 = 46; // Metadata: 0x026464F7
+		public const int elementId_throttle1Axis = 49; // Metadata: 0x026464F8
+		public const int elementId_throttle2Axis = 155; // Metadata: 0x026464F9
+		public const int elementId_throttle1MinDetent = 166; // Metadata: 0x026464FB
+		public const int elementId_throttle2MinDetent = 167; // Metadata: 0x026464FD
+		public const int elementId_throttleButton1 = 50; // Metadata: 0x026464FF
+		public const int elementId_throttleButton2 = 51; // Metadata: 0x02646500
+		public const int elementId_throttleButton3 = 52; // Metadata: 0x02646501
+		public const int elementId_throttleButton4 = 53; // Metadata: 0x02646502
+		public const int elementId_throttleButton5 = 54; // Metadata: 0x02646503
+		public const int elementId_throttleButton6 = 55; // Metadata: 0x02646504
+		public const int elementId_throttleButton7 = 56; // Metadata: 0x02646505
+		public const int elementId_throttleButton8 = 57; // Metadata: 0x02646506
+		public const int elementId_throttleButton9 = 58; // Metadata: 0x02646507
+		public const int elementId_throttleButton10 = 59; // Metadata: 0x02646508
+		public const int elementId_throttleBaseButton1 = 60; // Metadata: 0x02646509
+		public const int elementId_throttleBaseButton2 = 61; // Metadata: 0x0264650A
+		public const int elementId_throttleBaseButton3 = 62; // Metadata: 0x0264650B
+		public const int elementId_throttleBaseButton4 = 63; // Metadata: 0x0264650C
+		public const int elementId_throttleBaseButton5 = 64; // Metadata: 0x0264650D
+		public const int elementId_throttleBaseButton6 = 65; // Metadata: 0x0264650F
+		public const int elementId_throttleBaseButton7 = 66; // Metadata: 0x02646511
+		public const int elementId_throttleBaseButton8 = 67; // Metadata: 0x02646513
+		public const int elementId_throttleBaseButton9 = 68; // Metadata: 0x02646515
+		public const int elementId_throttleBaseButton10 = 69; // Metadata: 0x02646517
+		public const int elementId_throttleBaseButton11 = 132; // Metadata: 0x02646519
+		public const int elementId_throttleBaseButton12 = 133; // Metadata: 0x0264651B
+		public const int elementId_throttleBaseButton13 = 134; // Metadata: 0x0264651D
+		public const int elementId_throttleBaseButton14 = 135; // Metadata: 0x0264651F
+		public const int elementId_throttleBaseButton15 = 136; // Metadata: 0x02646521
+		public const int elementId_throttleSlider1 = 70; // Metadata: 0x02646523
+		public const int elementId_throttleSlider2 = 71; // Metadata: 0x02646525
+		public const int elementId_throttleSlider3 = 72; // Metadata: 0x02646527
+		public const int elementId_throttleSlider4 = 73; // Metadata: 0x02646529
+		public const int elementId_throttleDial1 = 74; // Metadata: 0x0264652B
+		public const int elementId_throttleDial2 = 142; // Metadata: 0x0264652D
+		public const int elementId_throttleDial3 = 143; // Metadata: 0x0264652F
+		public const int elementId_throttleDial4 = 144; // Metadata: 0x02646531
+		public const int elementId_throttleMiniStickX = 75; // Metadata: 0x02646533
+		public const int elementId_throttleMiniStickY = 76; // Metadata: 0x02646535
+		public const int elementId_throttleMiniStickPress = 77; // Metadata: 0x02646537
+		public const int elementId_throttleWheel1Forward = 145; // Metadata: 0x02646539
+		public const int elementId_throttleWheel1Back = 146; // Metadata: 0x0264653B
+		public const int elementId_throttleWheel1Press = 147; // Metadata: 0x0264653D
+		public const int elementId_throttleWheel2Forward = 148; // Metadata: 0x0264653F
+		public const int elementId_throttleWheel2Back = 149; // Metadata: 0x02646541
+		public const int elementId_throttleWheel2Press = 150; // Metadata: 0x02646543
+		public const int elementId_throttleWheel3Forward = 151; // Metadata: 0x02646545
+		public const int elementId_throttleWheel3Back = 152; // Metadata: 0x02646547
+		public const int elementId_throttleWheel3Press = 153; // Metadata: 0x02646549
+		public const int elementId_throttleHat1Up = 100; // Metadata: 0x0264654B
+		public const int elementId_throttleHat1Up_Right = 101; // Metadata: 0x0264654D
+		public const int elementId_throttleHat1Right = 102; // Metadata: 0x0264654F
+		public const int elementId_throttleHat1Down_Right = 103; // Metadata: 0x02646551
+		public const int elementId_throttleHat1Down = 104; // Metadata: 0x02646553
+		public const int elementId_throttleHat1Down_Left = 105; // Metadata: 0x02646555
+		public const int elementId_throttleHat1Left = 106; // Metadata: 0x02646557
+		public const int elementId_throttleHat1Up_Left = 107; // Metadata: 0x02646559
+		public const int elementId_throttleHat2Up = 108; // Metadata: 0x0264655B
+		public const int elementId_throttleHat2Up_Right = 109; // Metadata: 0x0264655D
+		public const int elementId_throttleHat2Right = 110; // Metadata: 0x0264655F
+		public const int elementId_throttleHat2Down_Right = 111; // Metadata: 0x02646561
+		public const int elementId_throttleHat2Down = 112; // Metadata: 0x02646563
+		public const int elementId_throttleHat2Down_Left = 113; // Metadata: 0x02646565
+		public const int elementId_throttleHat2Left = 114; // Metadata: 0x02646567
+		public const int elementId_throttleHat2Up_Left = 115; // Metadata: 0x02646569
+		public const int elementId_throttleHat3Up = 116; // Metadata: 0x0264656B
+		public const int elementId_throttleHat3Up_Right = 117; // Metadata: 0x0264656D
+		public const int elementId_throttleHat3Right = 118; // Metadata: 0x0264656F
+		public const int elementId_throttleHat3Down_Right = 119; // Metadata: 0x02646571
+		public const int elementId_throttleHat3Down = 120; // Metadata: 0x02646573
+		public const int elementId_throttleHat3Down_Left = 121; // Metadata: 0x02646575
+		public const int elementId_throttleHat3Left = 122; // Metadata: 0x02646577
+		public const int elementId_throttleHat3Up_Left = 123; // Metadata: 0x02646579
+		public const int elementId_throttleHat4Up = 124; // Metadata: 0x0264657B
+		public const int elementId_throttleHat4Up_Right = 125; // Metadata: 0x0264657D
+		public const int elementId_throttleHat4Right = 126; // Metadata: 0x0264657F
+		public const int elementId_throttleHat4Down_Right = 127; // Metadata: 0x02646581
+		public const int elementId_throttleHat4Down = 128; // Metadata: 0x02646583
+		public const int elementId_throttleHat4Down_Left = 129; // Metadata: 0x02646585
+		public const int elementId_throttleHat4Left = 130; // Metadata: 0x02646587
+		public const int elementId_throttleHat4Up_Left = 131; // Metadata: 0x02646589
+		public const int elementId_leftPedal = 168; // Metadata: 0x0264658B
+		public const int elementId_rightPedal = 169; // Metadata: 0x0264658D
+		public const int elementId_slidePedals = 170; // Metadata: 0x0264658F
+		public const int elementId_stick = 171; // Metadata: 0x02646591
+		public const int elementId_stickMiniStick1 = 172; // Metadata: 0x02646593
+		public const int elementId_stickMiniStick2 = 173; // Metadata: 0x02646595
+		public const int elementId_stickHat1 = 174; // Metadata: 0x02646597
+		public const int elementId_stickHat2 = 175; // Metadata: 0x02646599
+		public const int elementId_stickHat3 = 176; // Metadata: 0x0264659B
+		public const int elementId_stickHat4 = 177; // Metadata: 0x0264659D
+		public const int elementId_throttle1 = 178; // Metadata: 0x0264659F
+		public const int elementId_throttle2 = 179; // Metadata: 0x026465A1
+		public const int elementId_throttleMiniStick = 180; // Metadata: 0x026465A3
+		public const int elementId_throttleHat1 = 181; // Metadata: 0x026465A5
+		public const int elementId_throttleHat2 = 182; // Metadata: 0x026465A7
+		public const int elementId_throttleHat3 = 183; // Metadata: 0x026465A9
+		public const int elementId_throttleHat4 = 184; // Metadata: 0x026465AB
 	
 		// Properties
-		IControllerTemplateButton IHOTASTemplate.stickTrigger { get; } // 0x000000018A9CA460-0x000000018A9CA4A0 
-		IControllerTemplateButton IHOTASTemplate.stickTriggerStage2 { get; } // 0x000000018A9CA420-0x000000018A9CA460 
-		IControllerTemplateButton IHOTASTemplate.stickPinkyButton { get; } // 0x000000018A9CA3A0-0x000000018A9CA3E0 
-		IControllerTemplateButton IHOTASTemplate.stickPinkyTrigger { get; } // 0x000000018A9CA3E0-0x000000018A9CA420 
-		IControllerTemplateButton IHOTASTemplate.stickButton1 { get; } // 0x000000018A9C9FE0-0x000000018A9CA020 
-		IControllerTemplateButton IHOTASTemplate.stickButton2 { get; } // 0x000000018A9CA020-0x000000018A9CA060 
-		IControllerTemplateButton IHOTASTemplate.stickButton3 { get; } // 0x000000018A9CA060-0x000000018A9CA0A0 
-		IControllerTemplateButton IHOTASTemplate.stickButton4 { get; } // 0x000000018A9CA0A0-0x000000018A9CA0E0 
-		IControllerTemplateButton IHOTASTemplate.stickButton5 { get; } // 0x000000018A9CA0E0-0x000000018A9CA120 
-		IControllerTemplateButton IHOTASTemplate.stickButton6 { get; } // 0x000000018A9CA120-0x000000018A9CA160 
-		IControllerTemplateButton IHOTASTemplate.stickButton7 { get; } // 0x000000018A9CA160-0x000000018A9CA1A0 
-		IControllerTemplateButton IHOTASTemplate.stickButton8 { get; } // 0x000000018A9CA1A0-0x000000018A9CA1E0 
-		IControllerTemplateButton IHOTASTemplate.stickButton9 { get; } // 0x000000018A9CA1E0-0x000000018A9CA220 
-		IControllerTemplateButton IHOTASTemplate.stickButton10 { get; } // 0x000000018A9C9FA0-0x000000018A9C9FE0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton1 { get; } // 0x000000018A9C9D60-0x000000018A9C9DA0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton2 { get; } // 0x000000018A9C9DA0-0x000000018A9C9DE0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton3 { get; } // 0x000000018A9C9DE0-0x000000018A9C9E20 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton4 { get; } // 0x000000018A9C9E20-0x000000018A9C9E60 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton5 { get; } // 0x000000018A9C9E60-0x000000018A9C9EA0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton6 { get; } // 0x000000018A9C9EA0-0x000000018A9C9EE0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton7 { get; } // 0x000000018A9C9EE0-0x000000018A9C9F20 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton8 { get; } // 0x000000018A9C9F20-0x000000018A9C9F60 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton9 { get; } // 0x000000018A9C9F60-0x000000018A9C9FA0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton10 { get; } // 0x000000018A9C9CA0-0x000000018A9C9CE0 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton11 { get; } // 0x000000018A9C9CE0-0x000000018A9C9D20 
-		IControllerTemplateButton IHOTASTemplate.stickBaseButton12 { get; } // 0x000000018A9C9D20-0x000000018A9C9D60 
-		IControllerTemplateButton IHOTASTemplate.mode1 { get; } // 0x000000018A9C9B60-0x000000018A9C9BA0 
-		IControllerTemplateButton IHOTASTemplate.mode2 { get; } // 0x000000018A9C9BA0-0x000000018A9C9BE0 
-		IControllerTemplateButton IHOTASTemplate.mode3 { get; } // 0x000000018A9C9BE0-0x000000018A9C9C20 
-		IControllerTemplateButton IHOTASTemplate.throttleButton1 { get; } // 0x000000018A9CA960-0x000000018A9CA9A0 
-		IControllerTemplateButton IHOTASTemplate.throttleButton2 { get; } // 0x000000018A9CA9A0-0x000000018A9CA9E0 
-		IControllerTemplateButton IHOTASTemplate.throttleButton3 { get; } // 0x000000018A9CA9E0-0x000000018A9CAA20 
-		IControllerTemplateButton IHOTASTemplate.throttleButton4 { get; } // 0x000000018A9CAA20-0x000000018A9CAA60 
-		IControllerTemplateButton IHOTASTemplate.throttleButton5 { get; } // 0x000000018A9CAA60-0x000000018A9CAAA0 
-		IControllerTemplateButton IHOTASTemplate.throttleButton6 { get; } // 0x000000018A9CAAA0-0x000000018A9CAAE0 
-		IControllerTemplateButton IHOTASTemplate.throttleButton7 { get; } // 0x000000018A9CAAE0-0x000000018A9CAB20 
-		IControllerTemplateButton IHOTASTemplate.throttleButton8 { get; } // 0x000000018A9CAB20-0x000000018A9CAB60 
-		IControllerTemplateButton IHOTASTemplate.throttleButton9 { get; } // 0x000000018A9CAB60-0x000000018A9CABA0 
-		IControllerTemplateButton IHOTASTemplate.throttleButton10 { get; } // 0x000000018A9CA920-0x000000018A9CA960 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton1 { get; } // 0x000000018A9CA6E0-0x000000018A9CA720 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton2 { get; } // 0x000000018A9CA720-0x000000018A9CA760 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton3 { get; } // 0x000000018A9CA760-0x000000018A9CA7A0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton4 { get; } // 0x000000018A9CA7A0-0x000000018A9CA7E0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton5 { get; } // 0x000000018A9CA7E0-0x000000018A9CA820 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton6 { get; } // 0x000000018A9CA820-0x000000018A9CA860 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton7 { get; } // 0x000000018A9CA860-0x000000018A9CA8A0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton8 { get; } // 0x000000018A9CA8A0-0x000000018A9CA8E0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton9 { get; } // 0x000000018A9CA8E0-0x000000018A9CA920 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton10 { get; } // 0x000000018A9CA560-0x000000018A9CA5A0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton11 { get; } // 0x000000018A9CA5A0-0x000000018A9CA5E0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton12 { get; } // 0x000000018A9CA5E0-0x000000018A9CA620 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton13 { get; } // 0x000000018A9CA620-0x000000018A9CA660 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton14 { get; } // 0x000000018A9CA660-0x000000018A9CA6A0 
-		IControllerTemplateButton IHOTASTemplate.throttleBaseButton15 { get; } // 0x000000018A9CA6A0-0x000000018A9CA6E0 
-		IControllerTemplateAxis IHOTASTemplate.throttleSlider1 { get; } // 0x000000018A9CADE0-0x000000018A9CAE20 
-		IControllerTemplateAxis IHOTASTemplate.throttleSlider2 { get; } // 0x000000018A9CAE20-0x000000018A9CAE60 
-		IControllerTemplateAxis IHOTASTemplate.throttleSlider3 { get; } // 0x000000018A9CAE60-0x000000018A9CAEA0 
-		IControllerTemplateAxis IHOTASTemplate.throttleSlider4 { get; } // 0x000000018A9CAEA0-0x000000018A9CAEE0 
-		IControllerTemplateAxis IHOTASTemplate.throttleDial1 { get; } // 0x000000018A9CABA0-0x000000018A9CABE0 
-		IControllerTemplateAxis IHOTASTemplate.throttleDial2 { get; } // 0x000000018A9CABE0-0x000000018A9CAC20 
-		IControllerTemplateAxis IHOTASTemplate.throttleDial3 { get; } // 0x000000018A9CAC20-0x000000018A9CAC60 
-		IControllerTemplateAxis IHOTASTemplate.throttleDial4 { get; } // 0x000000018A9CAC60-0x000000018A9CACA0 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel1Forward { get; } // 0x000000018A9CAF20-0x000000018A9CAF60 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel1Back { get; } // 0x000000018A9CAEE0-0x000000018A9CAF20 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel1Press { get; } // 0x000000018A9CAF60-0x000000018A9CAFA0 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel2Forward { get; } // 0x000000018A9CAFE0-0x000000018A9CB020 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel2Back { get; } // 0x000000018A9CAFA0-0x000000018A9CAFE0 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel2Press { get; } // 0x000000018A9CB020-0x000000018A9CB060 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel3Forward { get; } // 0x000000018A9CB0A0-0x000000018A9CB0E0 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel3Back { get; } // 0x000000018A9CB060-0x000000018A9CB0A0 
-		IControllerTemplateButton IHOTASTemplate.throttleWheel3Press { get; } // 0x000000018A9CB0E0-0x000000018A9CB120 
-		IControllerTemplateAxis IHOTASTemplate.leftPedal { get; } // 0x000000018A9C9B20-0x000000018A9C9B60 
-		IControllerTemplateAxis IHOTASTemplate.rightPedal { get; } // 0x000000018A9C9C20-0x000000018A9C9C60 
-		IControllerTemplateAxis IHOTASTemplate.slidePedals { get; } // 0x000000018A9C9C60-0x000000018A9C9CA0 
-		IControllerTemplateStick IHOTASTemplate.stick { get; } // 0x000000018A9CA4A0-0x000000018A9CA4E0 
-		IControllerTemplateThumbStick IHOTASTemplate.stickMiniStick1 { get; } // 0x000000018A9CA320-0x000000018A9CA360 
-		IControllerTemplateThumbStick IHOTASTemplate.stickMiniStick2 { get; } // 0x000000018A9CA360-0x000000018A9CA3A0 
-		IControllerTemplateHat IHOTASTemplate.stickHat1 { get; } // 0x000000018A9CA220-0x000000018A9CA260 
-		IControllerTemplateHat IHOTASTemplate.stickHat2 { get; } // 0x000000018A9CA260-0x000000018A9CA2A0 
-		IControllerTemplateHat IHOTASTemplate.stickHat3 { get; } // 0x000000018A9CA2A0-0x000000018A9CA2E0 
-		IControllerTemplateHat IHOTASTemplate.stickHat4 { get; } // 0x000000018A9CA2E0-0x000000018A9CA320 
-		IControllerTemplateThrottle IHOTASTemplate.throttle1 { get; } // 0x000000018A9CA4E0-0x000000018A9CA520 
-		IControllerTemplateThrottle IHOTASTemplate.throttle2 { get; } // 0x000000018A9CA520-0x000000018A9CA560 
-		IControllerTemplateThumbStick IHOTASTemplate.throttleMiniStick { get; } // 0x000000018A9CADA0-0x000000018A9CADE0 
-		IControllerTemplateHat IHOTASTemplate.throttleHat1 { get; } // 0x000000018A9CACA0-0x000000018A9CACE0 
-		IControllerTemplateHat IHOTASTemplate.throttleHat2 { get; } // 0x000000018A9CACE0-0x000000018A9CAD20 
-		IControllerTemplateHat IHOTASTemplate.throttleHat3 { get; } // 0x000000018A9CAD20-0x000000018A9CAD60 
-		IControllerTemplateHat IHOTASTemplate.throttleHat4 { get; } // 0x000000018A9CAD60-0x000000018A9CADA0 
+		IControllerTemplateButton IHOTASTemplate.stickTrigger { get; } // 0x000000018CBBA1B0-0x000000018CBBA1F0 
+		IControllerTemplateButton IHOTASTemplate.stickTriggerStage2 { get; } // 0x000000018CBBA170-0x000000018CBBA1B0 
+		IControllerTemplateButton IHOTASTemplate.stickPinkyButton { get; } // 0x000000018CBBA0F0-0x000000018CBBA130 
+		IControllerTemplateButton IHOTASTemplate.stickPinkyTrigger { get; } // 0x000000018CBBA130-0x000000018CBBA170 
+		IControllerTemplateButton IHOTASTemplate.stickButton1 { get; } // 0x000000018CBB9D30-0x000000018CBB9D70 
+		IControllerTemplateButton IHOTASTemplate.stickButton2 { get; } // 0x000000018CBB9D70-0x000000018CBB9DB0 
+		IControllerTemplateButton IHOTASTemplate.stickButton3 { get; } // 0x000000018CBB9DB0-0x000000018CBB9DF0 
+		IControllerTemplateButton IHOTASTemplate.stickButton4 { get; } // 0x000000018CBB9DF0-0x000000018CBB9E30 
+		IControllerTemplateButton IHOTASTemplate.stickButton5 { get; } // 0x000000018CBB9E30-0x000000018CBB9E70 
+		IControllerTemplateButton IHOTASTemplate.stickButton6 { get; } // 0x000000018CBB9E70-0x000000018CBB9EB0 
+		IControllerTemplateButton IHOTASTemplate.stickButton7 { get; } // 0x000000018CBB9EB0-0x000000018CBB9EF0 
+		IControllerTemplateButton IHOTASTemplate.stickButton8 { get; } // 0x000000018CBB9EF0-0x000000018CBB9F30 
+		IControllerTemplateButton IHOTASTemplate.stickButton9 { get; } // 0x000000018CBB9F30-0x000000018CBB9F70 
+		IControllerTemplateButton IHOTASTemplate.stickButton10 { get; } // 0x000000018CBB9CF0-0x000000018CBB9D30 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton1 { get; } // 0x000000018CBB9AB0-0x000000018CBB9AF0 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton2 { get; } // 0x000000018CBB9AF0-0x000000018CBB9B30 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton3 { get; } // 0x000000018CBB9B30-0x000000018CBB9B70 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton4 { get; } // 0x000000018CBB9B70-0x000000018CBB9BB0 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton5 { get; } // 0x000000018CBB9BB0-0x000000018CBB9BF0 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton6 { get; } // 0x000000018CBB9BF0-0x000000018CBB9C30 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton7 { get; } // 0x000000018CBB9C30-0x000000018CBB9C70 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton8 { get; } // 0x000000018CBB9C70-0x000000018CBB9CB0 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton9 { get; } // 0x000000018CBB9CB0-0x000000018CBB9CF0 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton10 { get; } // 0x000000018CBB99F0-0x000000018CBB9A30 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton11 { get; } // 0x000000018CBB9A30-0x000000018CBB9A70 
+		IControllerTemplateButton IHOTASTemplate.stickBaseButton12 { get; } // 0x000000018CBB9A70-0x000000018CBB9AB0 
+		IControllerTemplateButton IHOTASTemplate.mode1 { get; } // 0x000000018CBB98B0-0x000000018CBB98F0 
+		IControllerTemplateButton IHOTASTemplate.mode2 { get; } // 0x000000018CBB98F0-0x000000018CBB9930 
+		IControllerTemplateButton IHOTASTemplate.mode3 { get; } // 0x000000018CBB9930-0x000000018CBB9970 
+		IControllerTemplateButton IHOTASTemplate.throttleButton1 { get; } // 0x000000018CBBA6B0-0x000000018CBBA6F0 
+		IControllerTemplateButton IHOTASTemplate.throttleButton2 { get; } // 0x000000018CBBA6F0-0x000000018CBBA730 
+		IControllerTemplateButton IHOTASTemplate.throttleButton3 { get; } // 0x000000018CBBA730-0x000000018CBBA770 
+		IControllerTemplateButton IHOTASTemplate.throttleButton4 { get; } // 0x000000018CBBA770-0x000000018CBBA7B0 
+		IControllerTemplateButton IHOTASTemplate.throttleButton5 { get; } // 0x000000018CBBA7B0-0x000000018CBBA7F0 
+		IControllerTemplateButton IHOTASTemplate.throttleButton6 { get; } // 0x000000018CBBA7F0-0x000000018CBBA830 
+		IControllerTemplateButton IHOTASTemplate.throttleButton7 { get; } // 0x000000018CBBA830-0x000000018CBBA870 
+		IControllerTemplateButton IHOTASTemplate.throttleButton8 { get; } // 0x000000018CBBA870-0x000000018CBBA8B0 
+		IControllerTemplateButton IHOTASTemplate.throttleButton9 { get; } // 0x000000018CBBA8B0-0x000000018CBBA8F0 
+		IControllerTemplateButton IHOTASTemplate.throttleButton10 { get; } // 0x000000018CBBA670-0x000000018CBBA6B0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton1 { get; } // 0x000000018CBBA430-0x000000018CBBA470 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton2 { get; } // 0x000000018CBBA470-0x000000018CBBA4B0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton3 { get; } // 0x000000018CBBA4B0-0x000000018CBBA4F0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton4 { get; } // 0x000000018CBBA4F0-0x000000018CBBA530 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton5 { get; } // 0x000000018CBBA530-0x000000018CBBA570 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton6 { get; } // 0x000000018CBBA570-0x000000018CBBA5B0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton7 { get; } // 0x000000018CBBA5B0-0x000000018CBBA5F0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton8 { get; } // 0x000000018CBBA5F0-0x000000018CBBA630 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton9 { get; } // 0x000000018CBBA630-0x000000018CBBA670 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton10 { get; } // 0x000000018CBBA2B0-0x000000018CBBA2F0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton11 { get; } // 0x000000018CBBA2F0-0x000000018CBBA330 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton12 { get; } // 0x000000018CBBA330-0x000000018CBBA370 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton13 { get; } // 0x000000018CBBA370-0x000000018CBBA3B0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton14 { get; } // 0x000000018CBBA3B0-0x000000018CBBA3F0 
+		IControllerTemplateButton IHOTASTemplate.throttleBaseButton15 { get; } // 0x000000018CBBA3F0-0x000000018CBBA430 
+		IControllerTemplateAxis IHOTASTemplate.throttleSlider1 { get; } // 0x000000018CBBAB30-0x000000018CBBAB70 
+		IControllerTemplateAxis IHOTASTemplate.throttleSlider2 { get; } // 0x000000018CBBAB70-0x000000018CBBABB0 
+		IControllerTemplateAxis IHOTASTemplate.throttleSlider3 { get; } // 0x000000018CBBABB0-0x000000018CBBABF0 
+		IControllerTemplateAxis IHOTASTemplate.throttleSlider4 { get; } // 0x000000018CBBABF0-0x000000018CBBAC30 
+		IControllerTemplateAxis IHOTASTemplate.throttleDial1 { get; } // 0x000000018CBBA8F0-0x000000018CBBA930 
+		IControllerTemplateAxis IHOTASTemplate.throttleDial2 { get; } // 0x000000018CBBA930-0x000000018CBBA970 
+		IControllerTemplateAxis IHOTASTemplate.throttleDial3 { get; } // 0x000000018CBBA970-0x000000018CBBA9B0 
+		IControllerTemplateAxis IHOTASTemplate.throttleDial4 { get; } // 0x000000018CBBA9B0-0x000000018CBBA9F0 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel1Forward { get; } // 0x000000018CBBAC70-0x000000018CBBACB0 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel1Back { get; } // 0x000000018CBBAC30-0x000000018CBBAC70 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel1Press { get; } // 0x000000018CBBACB0-0x000000018CBBACF0 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel2Forward { get; } // 0x000000018CBBAD30-0x000000018CBBAD70 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel2Back { get; } // 0x000000018CBBACF0-0x000000018CBBAD30 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel2Press { get; } // 0x000000018CBBAD70-0x000000018CBBADB0 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel3Forward { get; } // 0x000000018CBBADF0-0x000000018CBBAE30 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel3Back { get; } // 0x000000018CBBADB0-0x000000018CBBADF0 
+		IControllerTemplateButton IHOTASTemplate.throttleWheel3Press { get; } // 0x000000018CBBAE30-0x000000018CBBAE70 
+		IControllerTemplateAxis IHOTASTemplate.leftPedal { get; } // 0x000000018CBB9870-0x000000018CBB98B0 
+		IControllerTemplateAxis IHOTASTemplate.rightPedal { get; } // 0x000000018CBB9970-0x000000018CBB99B0 
+		IControllerTemplateAxis IHOTASTemplate.slidePedals { get; } // 0x000000018CBB99B0-0x000000018CBB99F0 
+		IControllerTemplateStick IHOTASTemplate.stick { get; } // 0x000000018CBBA1F0-0x000000018CBBA230 
+		IControllerTemplateThumbStick IHOTASTemplate.stickMiniStick1 { get; } // 0x000000018CBBA070-0x000000018CBBA0B0 
+		IControllerTemplateThumbStick IHOTASTemplate.stickMiniStick2 { get; } // 0x000000018CBBA0B0-0x000000018CBBA0F0 
+		IControllerTemplateHat IHOTASTemplate.stickHat1 { get; } // 0x000000018CBB9F70-0x000000018CBB9FB0 
+		IControllerTemplateHat IHOTASTemplate.stickHat2 { get; } // 0x000000018CBB9FB0-0x000000018CBB9FF0 
+		IControllerTemplateHat IHOTASTemplate.stickHat3 { get; } // 0x000000018CBB9FF0-0x000000018CBBA030 
+		IControllerTemplateHat IHOTASTemplate.stickHat4 { get; } // 0x000000018CBBA030-0x000000018CBBA070 
+		IControllerTemplateThrottle IHOTASTemplate.throttle1 { get; } // 0x000000018CBBA230-0x000000018CBBA270 
+		IControllerTemplateThrottle IHOTASTemplate.throttle2 { get; } // 0x000000018CBBA270-0x000000018CBBA2B0 
+		IControllerTemplateThumbStick IHOTASTemplate.throttleMiniStick { get; } // 0x000000018CBBAAF0-0x000000018CBBAB30 
+		IControllerTemplateHat IHOTASTemplate.throttleHat1 { get; } // 0x000000018CBBA9F0-0x000000018CBBAA30 
+		IControllerTemplateHat IHOTASTemplate.throttleHat2 { get; } // 0x000000018CBBAA30-0x000000018CBBAA70 
+		IControllerTemplateHat IHOTASTemplate.throttleHat3 { get; } // 0x000000018CBBAA70-0x000000018CBBAAB0 
+		IControllerTemplateHat IHOTASTemplate.throttleHat4 { get; } // 0x000000018CBBAAB0-0x000000018CBBAAF0 
 	
 		// Constructors
-		public HOTASTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static HOTASTemplate(); // 0x000000018A9CB120-0x000000018A9CB184
+		public HOTASTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static HOTASTemplate(); // 0x000000018CBBAE70-0x000000018CBBAED4
 	}
 
-	public sealed class FlightYokeTemplate : ControllerTemplate, IFlightYokeTemplate // TypeDefIndex: 60368
+	public sealed class FlightYokeTemplate : ControllerTemplate, IFlightYokeTemplate // TypeDefIndex: 87547
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_rotateYoke = 0; // Metadata: 0x0234D6E1
-		public const int elementId_yokeZ = 1; // Metadata: 0x0234D6E2
-		public const int elementId_leftPaddle = 59; // Metadata: 0x0234D6E3
-		public const int elementId_rightPaddle = 60; // Metadata: 0x0234D6E4
-		public const int elementId_lever1Axis = 2; // Metadata: 0x0234D6E5
-		public const int elementId_lever1MinDetent = 64; // Metadata: 0x0234D6E6
-		public const int elementId_lever2Axis = 3; // Metadata: 0x0234D6E8
-		public const int elementId_lever2MinDetent = 65; // Metadata: 0x0234D6E9
-		public const int elementId_lever3Axis = 4; // Metadata: 0x0234D6EB
-		public const int elementId_lever3MinDetent = 66; // Metadata: 0x0234D6EC
-		public const int elementId_lever4Axis = 5; // Metadata: 0x0234D6EE
-		public const int elementId_lever4MinDetent = 67; // Metadata: 0x0234D6EF
-		public const int elementId_lever5Axis = 6; // Metadata: 0x0234D6F1
-		public const int elementId_lever5MinDetent = 68; // Metadata: 0x0234D6F2
-		public const int elementId_leftGripButton1 = 7; // Metadata: 0x0234D6F4
-		public const int elementId_leftGripButton2 = 8; // Metadata: 0x0234D6F5
-		public const int elementId_leftGripButton3 = 9; // Metadata: 0x0234D6F6
-		public const int elementId_leftGripButton4 = 10; // Metadata: 0x0234D6F7
-		public const int elementId_leftGripButton5 = 11; // Metadata: 0x0234D6F8
-		public const int elementId_leftGripButton6 = 12; // Metadata: 0x0234D6F9
-		public const int elementId_rightGripButton1 = 13; // Metadata: 0x0234D6FA
-		public const int elementId_rightGripButton2 = 14; // Metadata: 0x0234D6FB
-		public const int elementId_rightGripButton3 = 15; // Metadata: 0x0234D6FC
-		public const int elementId_rightGripButton4 = 16; // Metadata: 0x0234D6FD
-		public const int elementId_rightGripButton5 = 17; // Metadata: 0x0234D6FE
-		public const int elementId_rightGripButton6 = 18; // Metadata: 0x0234D6FF
-		public const int elementId_centerButton1 = 19; // Metadata: 0x0234D700
-		public const int elementId_centerButton2 = 20; // Metadata: 0x0234D701
-		public const int elementId_centerButton3 = 21; // Metadata: 0x0234D702
-		public const int elementId_centerButton4 = 22; // Metadata: 0x0234D703
-		public const int elementId_centerButton5 = 23; // Metadata: 0x0234D704
-		public const int elementId_centerButton6 = 24; // Metadata: 0x0234D705
-		public const int elementId_centerButton7 = 25; // Metadata: 0x0234D706
-		public const int elementId_centerButton8 = 26; // Metadata: 0x0234D707
-		public const int elementId_wheel1Up = 53; // Metadata: 0x0234D708
-		public const int elementId_wheel1Down = 54; // Metadata: 0x0234D709
-		public const int elementId_wheel1Press = 55; // Metadata: 0x0234D70A
-		public const int elementId_wheel2Up = 56; // Metadata: 0x0234D70B
-		public const int elementId_wheel2Down = 57; // Metadata: 0x0234D70C
-		public const int elementId_wheel2Press = 58; // Metadata: 0x0234D70D
-		public const int elementId_leftGripHatUp = 27; // Metadata: 0x0234D70E
-		public const int elementId_leftGripHatUpRight = 28; // Metadata: 0x0234D70F
-		public const int elementId_leftGripHatRight = 29; // Metadata: 0x0234D710
-		public const int elementId_leftGripHatDownRight = 30; // Metadata: 0x0234D711
-		public const int elementId_leftGripHatDown = 31; // Metadata: 0x0234D712
-		public const int elementId_leftGripHatDownLeft = 32; // Metadata: 0x0234D713
-		public const int elementId_leftGripHatLeft = 33; // Metadata: 0x0234D714
-		public const int elementId_leftGripHatUpLeft = 34; // Metadata: 0x0234D715
-		public const int elementId_rightGripHatUp = 35; // Metadata: 0x0234D716
-		public const int elementId_rightGripHatUpRight = 36; // Metadata: 0x0234D717
-		public const int elementId_rightGripHatRight = 37; // Metadata: 0x0234D718
-		public const int elementId_rightGripHatDownRight = 38; // Metadata: 0x0234D719
-		public const int elementId_rightGripHatDown = 39; // Metadata: 0x0234D71A
-		public const int elementId_rightGripHatDownLeft = 40; // Metadata: 0x0234D71B
-		public const int elementId_rightGripHatLeft = 41; // Metadata: 0x0234D71C
-		public const int elementId_rightGripHatUpLeft = 42; // Metadata: 0x0234D71D
-		public const int elementId_consoleButton1 = 43; // Metadata: 0x0234D71E
-		public const int elementId_consoleButton2 = 44; // Metadata: 0x0234D71F
-		public const int elementId_consoleButton3 = 45; // Metadata: 0x0234D720
-		public const int elementId_consoleButton4 = 46; // Metadata: 0x0234D721
-		public const int elementId_consoleButton5 = 47; // Metadata: 0x0234D722
-		public const int elementId_consoleButton6 = 48; // Metadata: 0x0234D723
-		public const int elementId_consoleButton7 = 49; // Metadata: 0x0234D724
-		public const int elementId_consoleButton8 = 50; // Metadata: 0x0234D725
-		public const int elementId_consoleButton9 = 51; // Metadata: 0x0234D726
-		public const int elementId_consoleButton10 = 52; // Metadata: 0x0234D727
-		public const int elementId_mode1 = 61; // Metadata: 0x0234D728
-		public const int elementId_mode2 = 62; // Metadata: 0x0234D729
-		public const int elementId_mode3 = 63; // Metadata: 0x0234D72A
-		public const int elementId_yoke = 69; // Metadata: 0x0234D72B
-		public const int elementId_lever1 = 70; // Metadata: 0x0234D72D
-		public const int elementId_lever2 = 71; // Metadata: 0x0234D72F
-		public const int elementId_lever3 = 72; // Metadata: 0x0234D731
-		public const int elementId_lever4 = 73; // Metadata: 0x0234D733
-		public const int elementId_lever5 = 74; // Metadata: 0x0234D735
-		public const int elementId_leftGripHat = 75; // Metadata: 0x0234D737
-		public const int elementId_rightGripHat = 76; // Metadata: 0x0234D739
+		public const int elementId_rotateYoke = 0; // Metadata: 0x026465AD
+		public const int elementId_yokeZ = 1; // Metadata: 0x026465AE
+		public const int elementId_leftPaddle = 59; // Metadata: 0x026465AF
+		public const int elementId_rightPaddle = 60; // Metadata: 0x026465B0
+		public const int elementId_lever1Axis = 2; // Metadata: 0x026465B1
+		public const int elementId_lever1MinDetent = 64; // Metadata: 0x026465B2
+		public const int elementId_lever2Axis = 3; // Metadata: 0x026465B4
+		public const int elementId_lever2MinDetent = 65; // Metadata: 0x026465B5
+		public const int elementId_lever3Axis = 4; // Metadata: 0x026465B7
+		public const int elementId_lever3MinDetent = 66; // Metadata: 0x026465B8
+		public const int elementId_lever4Axis = 5; // Metadata: 0x026465BA
+		public const int elementId_lever4MinDetent = 67; // Metadata: 0x026465BB
+		public const int elementId_lever5Axis = 6; // Metadata: 0x026465BD
+		public const int elementId_lever5MinDetent = 68; // Metadata: 0x026465BE
+		public const int elementId_leftGripButton1 = 7; // Metadata: 0x026465C0
+		public const int elementId_leftGripButton2 = 8; // Metadata: 0x026465C1
+		public const int elementId_leftGripButton3 = 9; // Metadata: 0x026465C2
+		public const int elementId_leftGripButton4 = 10; // Metadata: 0x026465C3
+		public const int elementId_leftGripButton5 = 11; // Metadata: 0x026465C4
+		public const int elementId_leftGripButton6 = 12; // Metadata: 0x026465C5
+		public const int elementId_rightGripButton1 = 13; // Metadata: 0x026465C6
+		public const int elementId_rightGripButton2 = 14; // Metadata: 0x026465C7
+		public const int elementId_rightGripButton3 = 15; // Metadata: 0x026465C8
+		public const int elementId_rightGripButton4 = 16; // Metadata: 0x026465C9
+		public const int elementId_rightGripButton5 = 17; // Metadata: 0x026465CA
+		public const int elementId_rightGripButton6 = 18; // Metadata: 0x026465CB
+		public const int elementId_centerButton1 = 19; // Metadata: 0x026465CC
+		public const int elementId_centerButton2 = 20; // Metadata: 0x026465CD
+		public const int elementId_centerButton3 = 21; // Metadata: 0x026465CE
+		public const int elementId_centerButton4 = 22; // Metadata: 0x026465CF
+		public const int elementId_centerButton5 = 23; // Metadata: 0x026465D0
+		public const int elementId_centerButton6 = 24; // Metadata: 0x026465D1
+		public const int elementId_centerButton7 = 25; // Metadata: 0x026465D2
+		public const int elementId_centerButton8 = 26; // Metadata: 0x026465D3
+		public const int elementId_wheel1Up = 53; // Metadata: 0x026465D4
+		public const int elementId_wheel1Down = 54; // Metadata: 0x026465D5
+		public const int elementId_wheel1Press = 55; // Metadata: 0x026465D6
+		public const int elementId_wheel2Up = 56; // Metadata: 0x026465D7
+		public const int elementId_wheel2Down = 57; // Metadata: 0x026465D8
+		public const int elementId_wheel2Press = 58; // Metadata: 0x026465D9
+		public const int elementId_leftGripHatUp = 27; // Metadata: 0x026465DA
+		public const int elementId_leftGripHatUpRight = 28; // Metadata: 0x026465DB
+		public const int elementId_leftGripHatRight = 29; // Metadata: 0x026465DC
+		public const int elementId_leftGripHatDownRight = 30; // Metadata: 0x026465DD
+		public const int elementId_leftGripHatDown = 31; // Metadata: 0x026465DE
+		public const int elementId_leftGripHatDownLeft = 32; // Metadata: 0x026465DF
+		public const int elementId_leftGripHatLeft = 33; // Metadata: 0x026465E0
+		public const int elementId_leftGripHatUpLeft = 34; // Metadata: 0x026465E1
+		public const int elementId_rightGripHatUp = 35; // Metadata: 0x026465E2
+		public const int elementId_rightGripHatUpRight = 36; // Metadata: 0x026465E3
+		public const int elementId_rightGripHatRight = 37; // Metadata: 0x026465E4
+		public const int elementId_rightGripHatDownRight = 38; // Metadata: 0x026465E5
+		public const int elementId_rightGripHatDown = 39; // Metadata: 0x026465E6
+		public const int elementId_rightGripHatDownLeft = 40; // Metadata: 0x026465E7
+		public const int elementId_rightGripHatLeft = 41; // Metadata: 0x026465E8
+		public const int elementId_rightGripHatUpLeft = 42; // Metadata: 0x026465E9
+		public const int elementId_consoleButton1 = 43; // Metadata: 0x026465EA
+		public const int elementId_consoleButton2 = 44; // Metadata: 0x026465EB
+		public const int elementId_consoleButton3 = 45; // Metadata: 0x026465EC
+		public const int elementId_consoleButton4 = 46; // Metadata: 0x026465ED
+		public const int elementId_consoleButton5 = 47; // Metadata: 0x026465EE
+		public const int elementId_consoleButton6 = 48; // Metadata: 0x026465EF
+		public const int elementId_consoleButton7 = 49; // Metadata: 0x026465F0
+		public const int elementId_consoleButton8 = 50; // Metadata: 0x026465F1
+		public const int elementId_consoleButton9 = 51; // Metadata: 0x026465F2
+		public const int elementId_consoleButton10 = 52; // Metadata: 0x026465F3
+		public const int elementId_mode1 = 61; // Metadata: 0x026465F4
+		public const int elementId_mode2 = 62; // Metadata: 0x026465F5
+		public const int elementId_mode3 = 63; // Metadata: 0x026465F6
+		public const int elementId_yoke = 69; // Metadata: 0x026465F7
+		public const int elementId_lever1 = 70; // Metadata: 0x026465F9
+		public const int elementId_lever2 = 71; // Metadata: 0x026465FB
+		public const int elementId_lever3 = 72; // Metadata: 0x026465FD
+		public const int elementId_lever4 = 73; // Metadata: 0x026465FF
+		public const int elementId_lever5 = 74; // Metadata: 0x02646601
+		public const int elementId_leftGripHat = 75; // Metadata: 0x02646603
+		public const int elementId_rightGripHat = 76; // Metadata: 0x02646605
 	
 		// Properties
-		IControllerTemplateButton IFlightYokeTemplate.leftPaddle { get; } // 0x000000018A9C8D18-0x000000018A9C8D58 
-		IControllerTemplateButton IFlightYokeTemplate.rightPaddle { get; } // 0x000000018A9C9118-0x000000018A9C9158 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton1 { get; } // 0x000000018A9C8B58-0x000000018A9C8B98 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton2 { get; } // 0x000000018A9C8B98-0x000000018A9C8BD8 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton3 { get; } // 0x000000018A9C8BD8-0x000000018A9C8C18 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton4 { get; } // 0x000000018A9C8C18-0x000000018A9C8C58 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton5 { get; } // 0x000000018A9C8C58-0x000000018A9C8C98 
-		IControllerTemplateButton IFlightYokeTemplate.leftGripButton6 { get; } // 0x000000018A9C8C98-0x000000018A9C8CD8 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton1 { get; } // 0x000000018A9C8F58-0x000000018A9C8F98 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton2 { get; } // 0x000000018A9C8F98-0x000000018A9C8FD8 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton3 { get; } // 0x000000018A9C8FD8-0x000000018A9C9018 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton4 { get; } // 0x000000018A9C9018-0x000000018A9C9058 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton5 { get; } // 0x000000018A9C9058-0x000000018A9C9098 
-		IControllerTemplateButton IFlightYokeTemplate.rightGripButton6 { get; } // 0x000000018A9C9098-0x000000018A9C90D8 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton1 { get; } // 0x000000018A9C86D8-0x000000018A9C8718 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton2 { get; } // 0x000000018A9C8718-0x000000018A9C8758 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton3 { get; } // 0x000000018A9C8758-0x000000018A9C8798 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton4 { get; } // 0x000000018A9C8798-0x000000018A9C87D8 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton5 { get; } // 0x000000018A9C87D8-0x000000018A9C8818 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton6 { get; } // 0x000000018A9C8818-0x000000018A9C8858 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton7 { get; } // 0x000000018A9C8858-0x000000018A9C8898 
-		IControllerTemplateButton IFlightYokeTemplate.centerButton8 { get; } // 0x000000018A9C8898-0x000000018A9C88D8 
-		IControllerTemplateButton IFlightYokeTemplate.wheel1Up { get; } // 0x000000018A9C91D8-0x000000018A9C9218 
-		IControllerTemplateButton IFlightYokeTemplate.wheel1Down { get; } // 0x000000018A9C9158-0x000000018A9C9198 
-		IControllerTemplateButton IFlightYokeTemplate.wheel1Press { get; } // 0x000000018A9C9198-0x000000018A9C91D8 
-		IControllerTemplateButton IFlightYokeTemplate.wheel2Up { get; } // 0x000000018A9C9298-0x000000018A9C92D8 
-		IControllerTemplateButton IFlightYokeTemplate.wheel2Down { get; } // 0x000000018A9C9218-0x000000018A9C9258 
-		IControllerTemplateButton IFlightYokeTemplate.wheel2Press { get; } // 0x000000018A9C9258-0x000000018A9C9298 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton1 { get; } // 0x000000018A9C8918-0x000000018A9C8958 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton2 { get; } // 0x000000018A9C8958-0x000000018A9C8998 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton3 { get; } // 0x000000018A9C8998-0x000000018A9C89D8 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton4 { get; } // 0x000000018A9C89D8-0x000000018A9C8A18 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton5 { get; } // 0x000000018A9C8A18-0x000000018A9C8A58 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton6 { get; } // 0x000000018A9C8A58-0x000000018A9C8A98 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton7 { get; } // 0x000000018A9C8A98-0x000000018A9C8AD8 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton8 { get; } // 0x000000018A9C8AD8-0x000000018A9C8B18 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton9 { get; } // 0x000000018A9C8B18-0x000000018A9C8B58 
-		IControllerTemplateButton IFlightYokeTemplate.consoleButton10 { get; } // 0x000000018A9C88D8-0x000000018A9C8918 
-		IControllerTemplateButton IFlightYokeTemplate.mode1 { get; } // 0x000000018A9C8E98-0x000000018A9C8ED8 
-		IControllerTemplateButton IFlightYokeTemplate.mode2 { get; } // 0x000000018A9C8ED8-0x000000018A9C8F18 
-		IControllerTemplateButton IFlightYokeTemplate.mode3 { get; } // 0x000000018A9C8F18-0x000000018A9C8F58 
-		IControllerTemplateYoke IFlightYokeTemplate.yoke { get; } // 0x000000018A9C92D8-0x000000018A9C9318 
-		IControllerTemplateThrottle IFlightYokeTemplate.lever1 { get; } // 0x000000018A9C8D58-0x000000018A9C8D98 
-		IControllerTemplateThrottle IFlightYokeTemplate.lever2 { get; } // 0x000000018A9C8D98-0x000000018A9C8DD8 
-		IControllerTemplateThrottle IFlightYokeTemplate.lever3 { get; } // 0x000000018A9C8DD8-0x000000018A9C8E18 
-		IControllerTemplateThrottle IFlightYokeTemplate.lever4 { get; } // 0x000000018A9C8E18-0x000000018A9C8E58 
-		IControllerTemplateThrottle IFlightYokeTemplate.lever5 { get; } // 0x000000018A9C8E58-0x000000018A9C8E98 
-		IControllerTemplateHat IFlightYokeTemplate.leftGripHat { get; } // 0x000000018A9C8CD8-0x000000018A9C8D18 
-		IControllerTemplateHat IFlightYokeTemplate.rightGripHat { get; } // 0x000000018A9C90D8-0x000000018A9C9118 
+		IControllerTemplateButton IFlightYokeTemplate.leftPaddle { get; } // 0x000000018CBB8A68-0x000000018CBB8AA8 
+		IControllerTemplateButton IFlightYokeTemplate.rightPaddle { get; } // 0x000000018CBB8E68-0x000000018CBB8EA8 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton1 { get; } // 0x000000018CBB88A8-0x000000018CBB88E8 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton2 { get; } // 0x000000018CBB88E8-0x000000018CBB8928 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton3 { get; } // 0x000000018CBB8928-0x000000018CBB8968 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton4 { get; } // 0x000000018CBB8968-0x000000018CBB89A8 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton5 { get; } // 0x000000018CBB89A8-0x000000018CBB89E8 
+		IControllerTemplateButton IFlightYokeTemplate.leftGripButton6 { get; } // 0x000000018CBB89E8-0x000000018CBB8A28 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton1 { get; } // 0x000000018CBB8CA8-0x000000018CBB8CE8 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton2 { get; } // 0x000000018CBB8CE8-0x000000018CBB8D28 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton3 { get; } // 0x000000018CBB8D28-0x000000018CBB8D68 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton4 { get; } // 0x000000018CBB8D68-0x000000018CBB8DA8 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton5 { get; } // 0x000000018CBB8DA8-0x000000018CBB8DE8 
+		IControllerTemplateButton IFlightYokeTemplate.rightGripButton6 { get; } // 0x000000018CBB8DE8-0x000000018CBB8E28 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton1 { get; } // 0x000000018CBB8428-0x000000018CBB8468 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton2 { get; } // 0x000000018CBB8468-0x000000018CBB84A8 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton3 { get; } // 0x000000018CBB84A8-0x000000018CBB84E8 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton4 { get; } // 0x000000018CBB84E8-0x000000018CBB8528 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton5 { get; } // 0x000000018CBB8528-0x000000018CBB8568 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton6 { get; } // 0x000000018CBB8568-0x000000018CBB85A8 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton7 { get; } // 0x000000018CBB85A8-0x000000018CBB85E8 
+		IControllerTemplateButton IFlightYokeTemplate.centerButton8 { get; } // 0x000000018CBB85E8-0x000000018CBB8628 
+		IControllerTemplateButton IFlightYokeTemplate.wheel1Up { get; } // 0x000000018CBB8F28-0x000000018CBB8F68 
+		IControllerTemplateButton IFlightYokeTemplate.wheel1Down { get; } // 0x000000018CBB8EA8-0x000000018CBB8EE8 
+		IControllerTemplateButton IFlightYokeTemplate.wheel1Press { get; } // 0x000000018CBB8EE8-0x000000018CBB8F28 
+		IControllerTemplateButton IFlightYokeTemplate.wheel2Up { get; } // 0x000000018CBB8FE8-0x000000018CBB9028 
+		IControllerTemplateButton IFlightYokeTemplate.wheel2Down { get; } // 0x000000018CBB8F68-0x000000018CBB8FA8 
+		IControllerTemplateButton IFlightYokeTemplate.wheel2Press { get; } // 0x000000018CBB8FA8-0x000000018CBB8FE8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton1 { get; } // 0x000000018CBB8668-0x000000018CBB86A8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton2 { get; } // 0x000000018CBB86A8-0x000000018CBB86E8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton3 { get; } // 0x000000018CBB86E8-0x000000018CBB8728 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton4 { get; } // 0x000000018CBB8728-0x000000018CBB8768 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton5 { get; } // 0x000000018CBB8768-0x000000018CBB87A8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton6 { get; } // 0x000000018CBB87A8-0x000000018CBB87E8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton7 { get; } // 0x000000018CBB87E8-0x000000018CBB8828 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton8 { get; } // 0x000000018CBB8828-0x000000018CBB8868 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton9 { get; } // 0x000000018CBB8868-0x000000018CBB88A8 
+		IControllerTemplateButton IFlightYokeTemplate.consoleButton10 { get; } // 0x000000018CBB8628-0x000000018CBB8668 
+		IControllerTemplateButton IFlightYokeTemplate.mode1 { get; } // 0x000000018CBB8BE8-0x000000018CBB8C28 
+		IControllerTemplateButton IFlightYokeTemplate.mode2 { get; } // 0x000000018CBB8C28-0x000000018CBB8C68 
+		IControllerTemplateButton IFlightYokeTemplate.mode3 { get; } // 0x000000018CBB8C68-0x000000018CBB8CA8 
+		IControllerTemplateYoke IFlightYokeTemplate.yoke { get; } // 0x000000018CBB9028-0x000000018CBB9068 
+		IControllerTemplateThrottle IFlightYokeTemplate.lever1 { get; } // 0x000000018CBB8AA8-0x000000018CBB8AE8 
+		IControllerTemplateThrottle IFlightYokeTemplate.lever2 { get; } // 0x000000018CBB8AE8-0x000000018CBB8B28 
+		IControllerTemplateThrottle IFlightYokeTemplate.lever3 { get; } // 0x000000018CBB8B28-0x000000018CBB8B68 
+		IControllerTemplateThrottle IFlightYokeTemplate.lever4 { get; } // 0x000000018CBB8B68-0x000000018CBB8BA8 
+		IControllerTemplateThrottle IFlightYokeTemplate.lever5 { get; } // 0x000000018CBB8BA8-0x000000018CBB8BE8 
+		IControllerTemplateHat IFlightYokeTemplate.leftGripHat { get; } // 0x000000018CBB8A28-0x000000018CBB8A68 
+		IControllerTemplateHat IFlightYokeTemplate.rightGripHat { get; } // 0x000000018CBB8E28-0x000000018CBB8E68 
 	
 		// Constructors
-		public FlightYokeTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static FlightYokeTemplate(); // 0x000000018A9C9318-0x000000018A9C937C
+		public FlightYokeTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static FlightYokeTemplate(); // 0x000000018CBB9068-0x000000018CBB90CC
 	}
 
-	public sealed class FlightPedalsTemplate : ControllerTemplate, IFlightPedalsTemplate // TypeDefIndex: 60369
+	public sealed class FlightPedalsTemplate : ControllerTemplate, IFlightPedalsTemplate // TypeDefIndex: 87548
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_leftPedal = 0; // Metadata: 0x0234D73B
-		public const int elementId_rightPedal = 1; // Metadata: 0x0234D73C
-		public const int elementId_slide = 2; // Metadata: 0x0234D73D
+		public const int elementId_leftPedal = 0; // Metadata: 0x02646607
+		public const int elementId_rightPedal = 1; // Metadata: 0x02646608
+		public const int elementId_slide = 2; // Metadata: 0x02646609
 	
 		// Properties
-		IControllerTemplateAxis IFlightPedalsTemplate.leftPedal { get; } // 0x000000018A9C85B0-0x000000018A9C85EC 
-		IControllerTemplateAxis IFlightPedalsTemplate.rightPedal { get; } // 0x000000018A9C85EC-0x000000018A9C862C 
-		IControllerTemplateAxis IFlightPedalsTemplate.slide { get; } // 0x000000018A9C862C-0x000000018A9C866C 
+		IControllerTemplateAxis IFlightPedalsTemplate.leftPedal { get; } // 0x000000018CBB8300-0x000000018CBB833C 
+		IControllerTemplateAxis IFlightPedalsTemplate.rightPedal { get; } // 0x000000018CBB833C-0x000000018CBB837C 
+		IControllerTemplateAxis IFlightPedalsTemplate.slide { get; } // 0x000000018CBB837C-0x000000018CBB83BC 
 	
 		// Constructors
-		public FlightPedalsTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static FlightPedalsTemplate(); // 0x000000018A9C866C-0x000000018A9C86D0
+		public FlightPedalsTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static FlightPedalsTemplate(); // 0x000000018CBB83BC-0x000000018CBB8420
 	}
 
-	public sealed class SixDofControllerTemplate : ControllerTemplate, ISixDofControllerTemplate // TypeDefIndex: 60370
+	public sealed class SixDofControllerTemplate : ControllerTemplate, ISixDofControllerTemplate // TypeDefIndex: 87549
 	{
 		// Fields
 		public static readonly Guid typeGuid; // 0x00
-		public const int elementId_positionX = 1; // Metadata: 0x0234D73E
-		public const int elementId_positionY = 2; // Metadata: 0x0234D73F
-		public const int elementId_positionZ = 0; // Metadata: 0x0234D740
-		public const int elementId_rotationX = 3; // Metadata: 0x0234D741
-		public const int elementId_rotationY = 5; // Metadata: 0x0234D742
-		public const int elementId_rotationZ = 4; // Metadata: 0x0234D743
-		public const int elementId_throttle1Axis = 6; // Metadata: 0x0234D744
-		public const int elementId_throttle1MinDetent = 50; // Metadata: 0x0234D745
-		public const int elementId_throttle2Axis = 7; // Metadata: 0x0234D746
-		public const int elementId_throttle2MinDetent = 51; // Metadata: 0x0234D747
-		public const int elementId_extraAxis1 = 8; // Metadata: 0x0234D748
-		public const int elementId_extraAxis2 = 9; // Metadata: 0x0234D749
-		public const int elementId_extraAxis3 = 10; // Metadata: 0x0234D74A
-		public const int elementId_extraAxis4 = 11; // Metadata: 0x0234D74B
-		public const int elementId_button1 = 12; // Metadata: 0x0234D74C
-		public const int elementId_button2 = 13; // Metadata: 0x0234D74D
-		public const int elementId_button3 = 14; // Metadata: 0x0234D74E
-		public const int elementId_button4 = 15; // Metadata: 0x0234D74F
-		public const int elementId_button5 = 16; // Metadata: 0x0234D750
-		public const int elementId_button6 = 17; // Metadata: 0x0234D751
-		public const int elementId_button7 = 18; // Metadata: 0x0234D752
-		public const int elementId_button8 = 19; // Metadata: 0x0234D753
-		public const int elementId_button9 = 20; // Metadata: 0x0234D754
-		public const int elementId_button10 = 21; // Metadata: 0x0234D755
-		public const int elementId_button11 = 22; // Metadata: 0x0234D756
-		public const int elementId_button12 = 23; // Metadata: 0x0234D757
-		public const int elementId_button13 = 24; // Metadata: 0x0234D758
-		public const int elementId_button14 = 25; // Metadata: 0x0234D759
-		public const int elementId_button15 = 26; // Metadata: 0x0234D75A
-		public const int elementId_button16 = 27; // Metadata: 0x0234D75B
-		public const int elementId_button17 = 28; // Metadata: 0x0234D75C
-		public const int elementId_button18 = 29; // Metadata: 0x0234D75D
-		public const int elementId_button19 = 30; // Metadata: 0x0234D75E
-		public const int elementId_button20 = 31; // Metadata: 0x0234D75F
-		public const int elementId_button21 = 55; // Metadata: 0x0234D760
-		public const int elementId_button22 = 56; // Metadata: 0x0234D761
-		public const int elementId_button23 = 57; // Metadata: 0x0234D762
-		public const int elementId_button24 = 58; // Metadata: 0x0234D763
-		public const int elementId_button25 = 59; // Metadata: 0x0234D764
-		public const int elementId_button26 = 60; // Metadata: 0x0234D765
-		public const int elementId_button27 = 61; // Metadata: 0x0234D766
-		public const int elementId_button28 = 62; // Metadata: 0x0234D767
-		public const int elementId_button29 = 63; // Metadata: 0x0234D768
-		public const int elementId_button30 = 64; // Metadata: 0x0234D769
-		public const int elementId_button31 = 65; // Metadata: 0x0234D76B
-		public const int elementId_button32 = 66; // Metadata: 0x0234D76D
-		public const int elementId_hat1Up = 32; // Metadata: 0x0234D76F
-		public const int elementId_hat1UpRight = 33; // Metadata: 0x0234D770
-		public const int elementId_hat1Right = 34; // Metadata: 0x0234D771
-		public const int elementId_hat1DownRight = 35; // Metadata: 0x0234D772
-		public const int elementId_hat1Down = 36; // Metadata: 0x0234D773
-		public const int elementId_hat1DownLeft = 37; // Metadata: 0x0234D774
-		public const int elementId_hat1Left = 38; // Metadata: 0x0234D775
-		public const int elementId_hat1UpLeft = 39; // Metadata: 0x0234D776
-		public const int elementId_hat2Up = 40; // Metadata: 0x0234D777
-		public const int elementId_hat2UpRight = 41; // Metadata: 0x0234D778
-		public const int elementId_hat2Right = 42; // Metadata: 0x0234D779
-		public const int elementId_hat2DownRight = 43; // Metadata: 0x0234D77A
-		public const int elementId_hat2Down = 44; // Metadata: 0x0234D77B
-		public const int elementId_hat2DownLeft = 45; // Metadata: 0x0234D77C
-		public const int elementId_hat2Left = 46; // Metadata: 0x0234D77D
-		public const int elementId_hat2UpLeft = 47; // Metadata: 0x0234D77E
-		public const int elementId_hat1 = 48; // Metadata: 0x0234D77F
-		public const int elementId_hat2 = 49; // Metadata: 0x0234D780
-		public const int elementId_throttle1 = 52; // Metadata: 0x0234D781
-		public const int elementId_throttle2 = 53; // Metadata: 0x0234D782
-		public const int elementId_stick = 54; // Metadata: 0x0234D783
+		public const int elementId_positionX = 1; // Metadata: 0x0264660A
+		public const int elementId_positionY = 2; // Metadata: 0x0264660B
+		public const int elementId_positionZ = 0; // Metadata: 0x0264660C
+		public const int elementId_rotationX = 3; // Metadata: 0x0264660D
+		public const int elementId_rotationY = 5; // Metadata: 0x0264660E
+		public const int elementId_rotationZ = 4; // Metadata: 0x0264660F
+		public const int elementId_throttle1Axis = 6; // Metadata: 0x02646610
+		public const int elementId_throttle1MinDetent = 50; // Metadata: 0x02646611
+		public const int elementId_throttle2Axis = 7; // Metadata: 0x02646612
+		public const int elementId_throttle2MinDetent = 51; // Metadata: 0x02646613
+		public const int elementId_extraAxis1 = 8; // Metadata: 0x02646614
+		public const int elementId_extraAxis2 = 9; // Metadata: 0x02646615
+		public const int elementId_extraAxis3 = 10; // Metadata: 0x02646616
+		public const int elementId_extraAxis4 = 11; // Metadata: 0x02646617
+		public const int elementId_button1 = 12; // Metadata: 0x02646618
+		public const int elementId_button2 = 13; // Metadata: 0x02646619
+		public const int elementId_button3 = 14; // Metadata: 0x0264661A
+		public const int elementId_button4 = 15; // Metadata: 0x0264661B
+		public const int elementId_button5 = 16; // Metadata: 0x0264661C
+		public const int elementId_button6 = 17; // Metadata: 0x0264661D
+		public const int elementId_button7 = 18; // Metadata: 0x0264661E
+		public const int elementId_button8 = 19; // Metadata: 0x0264661F
+		public const int elementId_button9 = 20; // Metadata: 0x02646620
+		public const int elementId_button10 = 21; // Metadata: 0x02646621
+		public const int elementId_button11 = 22; // Metadata: 0x02646622
+		public const int elementId_button12 = 23; // Metadata: 0x02646623
+		public const int elementId_button13 = 24; // Metadata: 0x02646624
+		public const int elementId_button14 = 25; // Metadata: 0x02646625
+		public const int elementId_button15 = 26; // Metadata: 0x02646626
+		public const int elementId_button16 = 27; // Metadata: 0x02646627
+		public const int elementId_button17 = 28; // Metadata: 0x02646628
+		public const int elementId_button18 = 29; // Metadata: 0x02646629
+		public const int elementId_button19 = 30; // Metadata: 0x0264662A
+		public const int elementId_button20 = 31; // Metadata: 0x0264662B
+		public const int elementId_button21 = 55; // Metadata: 0x0264662C
+		public const int elementId_button22 = 56; // Metadata: 0x0264662D
+		public const int elementId_button23 = 57; // Metadata: 0x0264662E
+		public const int elementId_button24 = 58; // Metadata: 0x0264662F
+		public const int elementId_button25 = 59; // Metadata: 0x02646630
+		public const int elementId_button26 = 60; // Metadata: 0x02646631
+		public const int elementId_button27 = 61; // Metadata: 0x02646632
+		public const int elementId_button28 = 62; // Metadata: 0x02646633
+		public const int elementId_button29 = 63; // Metadata: 0x02646634
+		public const int elementId_button30 = 64; // Metadata: 0x02646635
+		public const int elementId_button31 = 65; // Metadata: 0x02646637
+		public const int elementId_button32 = 66; // Metadata: 0x02646639
+		public const int elementId_hat1Up = 32; // Metadata: 0x0264663B
+		public const int elementId_hat1UpRight = 33; // Metadata: 0x0264663C
+		public const int elementId_hat1Right = 34; // Metadata: 0x0264663D
+		public const int elementId_hat1DownRight = 35; // Metadata: 0x0264663E
+		public const int elementId_hat1Down = 36; // Metadata: 0x0264663F
+		public const int elementId_hat1DownLeft = 37; // Metadata: 0x02646640
+		public const int elementId_hat1Left = 38; // Metadata: 0x02646641
+		public const int elementId_hat1UpLeft = 39; // Metadata: 0x02646642
+		public const int elementId_hat2Up = 40; // Metadata: 0x02646643
+		public const int elementId_hat2UpRight = 41; // Metadata: 0x02646644
+		public const int elementId_hat2Right = 42; // Metadata: 0x02646645
+		public const int elementId_hat2DownRight = 43; // Metadata: 0x02646646
+		public const int elementId_hat2Down = 44; // Metadata: 0x02646647
+		public const int elementId_hat2DownLeft = 45; // Metadata: 0x02646648
+		public const int elementId_hat2Left = 46; // Metadata: 0x02646649
+		public const int elementId_hat2UpLeft = 47; // Metadata: 0x0264664A
+		public const int elementId_hat1 = 48; // Metadata: 0x0264664B
+		public const int elementId_hat2 = 49; // Metadata: 0x0264664C
+		public const int elementId_throttle1 = 52; // Metadata: 0x0264664D
+		public const int elementId_throttle2 = 53; // Metadata: 0x0264664E
+		public const int elementId_stick = 54; // Metadata: 0x0264664F
 	
 		// Properties
-		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis1 { get; } // 0x000000018A9D3998-0x000000018A9D39D8 
-		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis2 { get; } // 0x000000018A9D39D8-0x000000018A9D3A18 
-		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis3 { get; } // 0x000000018A9D3A18-0x000000018A9D3A58 
-		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis4 { get; } // 0x000000018A9D3A58-0x000000018A9D3A98 
-		IControllerTemplateButton ISixDofControllerTemplate.button1 { get; } // 0x000000018A9D3418-0x000000018A9D3458 
-		IControllerTemplateButton ISixDofControllerTemplate.button2 { get; } // 0x000000018A9D36D8-0x000000018A9D3718 
-		IControllerTemplateButton ISixDofControllerTemplate.button3 { get; } // 0x000000018A9D37D8-0x000000018A9D3818 
-		IControllerTemplateButton ISixDofControllerTemplate.button4 { get; } // 0x000000018A9D3818-0x000000018A9D3858 
-		IControllerTemplateButton ISixDofControllerTemplate.button5 { get; } // 0x000000018A9D3858-0x000000018A9D3898 
-		IControllerTemplateButton ISixDofControllerTemplate.button6 { get; } // 0x000000018A9D3898-0x000000018A9D38D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button7 { get; } // 0x000000018A9D38D8-0x000000018A9D3918 
-		IControllerTemplateButton ISixDofControllerTemplate.button8 { get; } // 0x000000018A9D3918-0x000000018A9D3958 
-		IControllerTemplateButton ISixDofControllerTemplate.button9 { get; } // 0x000000018A9D3958-0x000000018A9D3998 
-		IControllerTemplateButton ISixDofControllerTemplate.button10 { get; } // 0x000000018A9D3198-0x000000018A9D31D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button11 { get; } // 0x000000018A9D31D8-0x000000018A9D3218 
-		IControllerTemplateButton ISixDofControllerTemplate.button12 { get; } // 0x000000018A9D3218-0x000000018A9D3258 
-		IControllerTemplateButton ISixDofControllerTemplate.button13 { get; } // 0x000000018A9D3258-0x000000018A9D3298 
-		IControllerTemplateButton ISixDofControllerTemplate.button14 { get; } // 0x000000018A9D3298-0x000000018A9D32D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button15 { get; } // 0x000000018A9D32D8-0x000000018A9D3318 
-		IControllerTemplateButton ISixDofControllerTemplate.button16 { get; } // 0x000000018A9D3318-0x000000018A9D3358 
-		IControllerTemplateButton ISixDofControllerTemplate.button17 { get; } // 0x000000018A9D3358-0x000000018A9D3398 
-		IControllerTemplateButton ISixDofControllerTemplate.button18 { get; } // 0x000000018A9D3398-0x000000018A9D33D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button19 { get; } // 0x000000018A9D33D8-0x000000018A9D3418 
-		IControllerTemplateButton ISixDofControllerTemplate.button20 { get; } // 0x000000018A9D3458-0x000000018A9D3498 
-		IControllerTemplateButton ISixDofControllerTemplate.button21 { get; } // 0x000000018A9D3498-0x000000018A9D34D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button22 { get; } // 0x000000018A9D34D8-0x000000018A9D3518 
-		IControllerTemplateButton ISixDofControllerTemplate.button23 { get; } // 0x000000018A9D3518-0x000000018A9D3558 
-		IControllerTemplateButton ISixDofControllerTemplate.button24 { get; } // 0x000000018A9D3558-0x000000018A9D3598 
-		IControllerTemplateButton ISixDofControllerTemplate.button25 { get; } // 0x000000018A9D3598-0x000000018A9D35D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button26 { get; } // 0x000000018A9D35D8-0x000000018A9D3618 
-		IControllerTemplateButton ISixDofControllerTemplate.button27 { get; } // 0x000000018A9D3618-0x000000018A9D3658 
-		IControllerTemplateButton ISixDofControllerTemplate.button28 { get; } // 0x000000018A9D3658-0x000000018A9D3698 
-		IControllerTemplateButton ISixDofControllerTemplate.button29 { get; } // 0x000000018A9D3698-0x000000018A9D36D8 
-		IControllerTemplateButton ISixDofControllerTemplate.button30 { get; } // 0x000000018A9D3718-0x000000018A9D3758 
-		IControllerTemplateButton ISixDofControllerTemplate.button31 { get; } // 0x000000018A9D3758-0x000000018A9D3798 
-		IControllerTemplateButton ISixDofControllerTemplate.button32 { get; } // 0x000000018A9D3798-0x000000018A9D37D8 
-		IControllerTemplateHat ISixDofControllerTemplate.hat1 { get; } // 0x000000018A9D3A98-0x000000018A9D3AD8 
-		IControllerTemplateHat ISixDofControllerTemplate.hat2 { get; } // 0x000000018A9D3AD8-0x000000018A9D3B18 
-		IControllerTemplateThrottle ISixDofControllerTemplate.throttle1 { get; } // 0x000000018A9D3B58-0x000000018A9D3B98 
-		IControllerTemplateThrottle ISixDofControllerTemplate.throttle2 { get; } // 0x000000018A9D3B98-0x000000018A9D3BD8 
-		IControllerTemplateStick6D ISixDofControllerTemplate.stick { get; } // 0x000000018A9D3B18-0x000000018A9D3B58 
+		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis1 { get; } // 0x000000018CBC37D4-0x000000018CBC3814 
+		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis2 { get; } // 0x000000018CBC3814-0x000000018CBC3854 
+		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis3 { get; } // 0x000000018CBC3854-0x000000018CBC3894 
+		IControllerTemplateAxis ISixDofControllerTemplate.extraAxis4 { get; } // 0x000000018CBC3894-0x000000018CBC38D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button1 { get; } // 0x000000018CBC3254-0x000000018CBC3294 
+		IControllerTemplateButton ISixDofControllerTemplate.button2 { get; } // 0x000000018CBC3514-0x000000018CBC3554 
+		IControllerTemplateButton ISixDofControllerTemplate.button3 { get; } // 0x000000018CBC3614-0x000000018CBC3654 
+		IControllerTemplateButton ISixDofControllerTemplate.button4 { get; } // 0x000000018CBC3654-0x000000018CBC3694 
+		IControllerTemplateButton ISixDofControllerTemplate.button5 { get; } // 0x000000018CBC3694-0x000000018CBC36D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button6 { get; } // 0x000000018CBC36D4-0x000000018CBC3714 
+		IControllerTemplateButton ISixDofControllerTemplate.button7 { get; } // 0x000000018CBC3714-0x000000018CBC3754 
+		IControllerTemplateButton ISixDofControllerTemplate.button8 { get; } // 0x000000018CBC3754-0x000000018CBC3794 
+		IControllerTemplateButton ISixDofControllerTemplate.button9 { get; } // 0x000000018CBC3794-0x000000018CBC37D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button10 { get; } // 0x000000018CBC2FD4-0x000000018CBC3014 
+		IControllerTemplateButton ISixDofControllerTemplate.button11 { get; } // 0x000000018CBC3014-0x000000018CBC3054 
+		IControllerTemplateButton ISixDofControllerTemplate.button12 { get; } // 0x000000018CBC3054-0x000000018CBC3094 
+		IControllerTemplateButton ISixDofControllerTemplate.button13 { get; } // 0x000000018CBC3094-0x000000018CBC30D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button14 { get; } // 0x000000018CBC30D4-0x000000018CBC3114 
+		IControllerTemplateButton ISixDofControllerTemplate.button15 { get; } // 0x000000018CBC3114-0x000000018CBC3154 
+		IControllerTemplateButton ISixDofControllerTemplate.button16 { get; } // 0x000000018CBC3154-0x000000018CBC3194 
+		IControllerTemplateButton ISixDofControllerTemplate.button17 { get; } // 0x000000018CBC3194-0x000000018CBC31D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button18 { get; } // 0x000000018CBC31D4-0x000000018CBC3214 
+		IControllerTemplateButton ISixDofControllerTemplate.button19 { get; } // 0x000000018CBC3214-0x000000018CBC3254 
+		IControllerTemplateButton ISixDofControllerTemplate.button20 { get; } // 0x000000018CBC3294-0x000000018CBC32D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button21 { get; } // 0x000000018CBC32D4-0x000000018CBC3314 
+		IControllerTemplateButton ISixDofControllerTemplate.button22 { get; } // 0x000000018CBC3314-0x000000018CBC3354 
+		IControllerTemplateButton ISixDofControllerTemplate.button23 { get; } // 0x000000018CBC3354-0x000000018CBC3394 
+		IControllerTemplateButton ISixDofControllerTemplate.button24 { get; } // 0x000000018CBC3394-0x000000018CBC33D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button25 { get; } // 0x000000018CBC33D4-0x000000018CBC3414 
+		IControllerTemplateButton ISixDofControllerTemplate.button26 { get; } // 0x000000018CBC3414-0x000000018CBC3454 
+		IControllerTemplateButton ISixDofControllerTemplate.button27 { get; } // 0x000000018CBC3454-0x000000018CBC3494 
+		IControllerTemplateButton ISixDofControllerTemplate.button28 { get; } // 0x000000018CBC3494-0x000000018CBC34D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button29 { get; } // 0x000000018CBC34D4-0x000000018CBC3514 
+		IControllerTemplateButton ISixDofControllerTemplate.button30 { get; } // 0x000000018CBC3554-0x000000018CBC3594 
+		IControllerTemplateButton ISixDofControllerTemplate.button31 { get; } // 0x000000018CBC3594-0x000000018CBC35D4 
+		IControllerTemplateButton ISixDofControllerTemplate.button32 { get; } // 0x000000018CBC35D4-0x000000018CBC3614 
+		IControllerTemplateHat ISixDofControllerTemplate.hat1 { get; } // 0x000000018CBC38D4-0x000000018CBC3914 
+		IControllerTemplateHat ISixDofControllerTemplate.hat2 { get; } // 0x000000018CBC3914-0x000000018CBC3954 
+		IControllerTemplateThrottle ISixDofControllerTemplate.throttle1 { get; } // 0x000000018CBC3994-0x000000018CBC39D4 
+		IControllerTemplateThrottle ISixDofControllerTemplate.throttle2 { get; } // 0x000000018CBC39D4-0x000000018CBC3A14 
+		IControllerTemplateStick6D ISixDofControllerTemplate.stick { get; } // 0x000000018CBC3954-0x000000018CBC3994 
 	
 		// Constructors
-		public SixDofControllerTemplate(object payload); // 0x000000018A9C86D0-0x000000018A9C86D8
-		static SixDofControllerTemplate(); // 0x000000018A9D3BD8-0x000000018A9D3C3C
+		public SixDofControllerTemplate(object payload); // 0x000000018CBB8420-0x000000018CBB8428
+		static SixDofControllerTemplate(); // 0x000000018CBC3A14-0x000000018CBC3A78
 	}
 
 	[AddComponentMenu("Rewired/Input Manager")]
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public sealed class InputManager : InputManager_Base // TypeDefIndex: 60371
+	public sealed class InputManager : InputManager_Base // TypeDefIndex: 87550
 	{
 		// Fields
 		private bool ignoreRecompile; // 0x50
 	
 		// Constructors
-		public InputManager(); // 0x0000000184D1C6F0-0x0000000184D1C700
+		public InputManager(); // 0x000000018717B040-0x000000018717B050
 	
 		// Methods
-		protected override void OnInitialized(); // 0x0000000183FCE990-0x0000000183FCE9A0
-		protected override void OnDeinitialized(); // 0x000000018A9CB20C-0x000000018A9CB214
-		protected override void DetectPlatform(); // 0x0000000184D30AD0-0x0000000184D30B30
-		protected override void CheckRecompile(); // 0x00000001841E1670-0x00000001841E1680
-		protected override IExternalTools GetExternalTools(); // 0x0000000184D5E7E0-0x0000000184D5E820
-		private bool CheckDeviceName(string searchPattern, string deviceName, string deviceModel); // 0x000000018A9CB184-0x000000018A9CB20C
-		private void SubscribeEvents(); // 0x0000000183FCEEE0-0x0000000183FCEF90
-		private void UnsubscribeEvents(); // 0x0000000183FCEF90-0x0000000183FCF030
-		private void OnSceneLoaded(Scene scene, LoadSceneMode mode); // 0x0000000183CB71B0-0x0000000183CB71C0
+		protected override void OnInitialized(); // 0x00000001861B2800-0x00000001861B2810
+		protected override void OnDeinitialized(); // 0x000000018CBBAF5C-0x000000018CBBAF64
+		protected override void DetectPlatform(); // 0x0000000185DE33B0-0x0000000185DE3410
+		protected override void CheckRecompile(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override IExternalTools GetExternalTools(); // 0x00000001871FCCE0-0x00000001871FCD20
+		private bool CheckDeviceName(string searchPattern, string deviceName, string deviceModel); // 0x000000018CBBAED4-0x000000018CBBAF5C
+		private void SubscribeEvents(); // 0x00000001861B2D50-0x00000001861B2E00
+		private void UnsubscribeEvents(); // 0x00000001861B2E00-0x00000001861B2EA0
+		private void OnSceneLoaded(Scene scene, LoadSceneMode mode); // 0x00000001856F1660-0x00000001856F1670
 	}
 }
 
 namespace Rewired.Data
 {
-	public class UserDataStore_File : UserDataStore_KeyValue // TypeDefIndex: 60380
+	public class UserDataStore_File : UserDataStore_KeyValue // TypeDefIndex: 87559
 	{
 		// Fields
 		private static readonly string thisScriptName; // 0x00
-		private const string logPrefix = "Rewired: "; // Metadata: 0x0234D784
-		private const string defaultExtensionText = ".json"; // Metadata: 0x0234D78E
-		private const string defaultExtensionBinary = ".bin"; // Metadata: 0x0234D794
-		private const string defaultFileName = "RewiredSaveData.json"; // Metadata: 0x0234D799
+		private const string logPrefix = "Rewired: "; // Metadata: 0x02646650
+		private const string defaultExtensionText = ".json"; // Metadata: 0x0264665A
+		private const string defaultExtensionBinary = ".bin"; // Metadata: 0x02646660
+		private const string defaultFileName = "RewiredSaveData.json"; // Metadata: 0x02646665
 		[SerializeField]
 		[Tooltip("The data file name. Changing this will make saved data already stored with the old file name no longer accessible.")]
 		private string _fileName; // 0x38
@@ -1082,14 +1079,14 @@ namespace Rewired.Data
 		private bool _initialized; // 0x60
 	
 		// Properties
-		public string directory { get; set; } // 0x000000018A9D4434-0x000000018A9D446C 0x000000018A9D44B0-0x000000018A9D44E0
-		public string fileName { get; set; } // 0x0000000184D85A50-0x0000000184D85A60 0x000000018A9D44E0-0x000000018A9D4510
-		public DataFormat dataFormat { get; set; } // 0x0000000184D865E0-0x0000000184D865F0 0x000000018A9D446C-0x000000018A9D4480
-		protected IDataHandler dataHandler { get; set; } // 0x000000018A9D4334-0x000000018A9D4434 0x000000018A9D4480-0x000000018A9D44B0
-		protected override IDataStore dataStore { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public string directory { get; set; } // 0x000000018CBC4268-0x000000018CBC42A0 0x000000018CBC42E4-0x000000018CBC4314
+		public string fileName { get; set; } // 0x0000000182986470-0x0000000182986480 0x000000018CBC4314-0x000000018CBC4344
+		public DataFormat dataFormat { get; set; } // 0x0000000182271C50-0x0000000182271C60 0x000000018CBC42A0-0x000000018CBC42B4
+		protected IDataHandler dataHandler { get; set; } // 0x000000018CBC4168-0x000000018CBC4268 0x000000018CBC42B4-0x000000018CBC42E4
+		protected override IDataStore dataStore { get; } // 0x000000018226EBD0-0x000000018226EBE0 
 	
 		// Nested types
-		private sealed class DataStore : UserDataStore_KeyValue.IDataStore // TypeDefIndex: 60373
+		private sealed class DataStore : UserDataStore_KeyValue.IDataStore // TypeDefIndex: 87552
 		{
 			// Fields
 			private Dictionary<string, object> _data; // 0x10
@@ -1097,65 +1094,65 @@ namespace Rewired.Data
 			private IDataHandler _dataHandler; // 0x20
 	
 			// Constructors
-			public DataStore(string fileName, string absDirectory, IDataHandler dataHandler); // 0x000000018A9C7FAC-0x000000018A9C80DC
+			public DataStore(string fileName, string absDirectory, IDataHandler dataHandler); // 0x000000018CBB7CFC-0x000000018CBB7E2C
 	
 			// Methods
-			public bool TryGetValue(string key, out object value); // 0x000000018A9C7F2C-0x000000018A9C7FAC
-			public bool SetValue(string key, object value); // 0x000000018A9C7EB4-0x000000018A9C7F2C
-			public bool Save(); // 0x000000018A9C7DB8-0x000000018A9C7EB4
-			public bool Load(); // 0x000000018A9C7C0C-0x000000018A9C7DB8
-			public bool Clear(); // 0x000000018A9C7AD8-0x000000018A9C7C0C
+			public bool TryGetValue(string key, out object value); // 0x000000018CBB7C78-0x000000018CBB7CFC
+			public bool SetValue(string key, object value); // 0x000000018CBB7C00-0x000000018CBB7C78
+			public bool Save(); // 0x000000018CBB7B04-0x000000018CBB7C00
+			public bool Load(); // 0x000000018CBB7958-0x000000018CBB7B04
+			public bool Clear(); // 0x000000018CBB7824-0x000000018CBB7958
 		}
 	
-		private sealed class LocalFileDataHandler : IDataHandler // TypeDefIndex: 60374
+		private sealed class LocalFileDataHandler : IDataHandler // TypeDefIndex: 87553
 		{
 			// Fields
 			private readonly Func<DataFormat> _dataFormatDelegate; // 0x10
 			private readonly Codec _codec; // 0x18
 	
 			// Constructors
-			public LocalFileDataHandler(Func<DataFormat> dataFormatDelegate, Codec codec); // 0x000000018A9CB794-0x000000018A9CB864
+			public LocalFileDataHandler(Func<DataFormat> dataFormatDelegate, Codec codec); // 0x000000018CBBB4E4-0x000000018CBBB5B4
 	
 			// Methods
-			public bool Load(string absoluteFilePath, out string data); // 0x000000018A9CB3CC-0x000000018A9CB5B0
-			public bool Save(string absoluteFilePath, string data); // 0x000000018A9CB5B0-0x000000018A9CB794
-			public bool Clear(string absoluteFilePath); // 0x000000018A9CB30C-0x000000018A9CB3CC
+			public bool Load(string absoluteFilePath, out string data); // 0x000000018CBBB11C-0x000000018CBBB300
+			public bool Save(string absoluteFilePath, string data); // 0x000000018CBBB300-0x000000018CBBB4E4
+			public bool Clear(string absoluteFilePath); // 0x000000018CBBB05C-0x000000018CBBB11C
 		}
 	
-		private abstract class Codec // TypeDefIndex: 60375
+		private abstract class Codec // TypeDefIndex: 87554
 		{
 			// Constructors
-			protected Codec(); // 0x00000001841E1670-0x00000001841E1680
+			protected Codec(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
 			public abstract byte[] Encode(string @string);
 			public abstract string Decode(byte[] data);
 		}
 	
-		private sealed class UTF8Text : Codec // TypeDefIndex: 60376
+		private sealed class UTF8Text : Codec // TypeDefIndex: 87555
 		{
 			// Constructors
-			public UTF8Text(); // 0x00000001841E1670-0x00000001841E1680
+			public UTF8Text(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public override byte[] Encode(string @string); // 0x000000018A9D3EBC-0x000000018A9D3EEC
-			public override string Decode(byte[] data); // 0x000000018A9D3E8C-0x000000018A9D3EBC
+			public override byte[] Encode(string @string); // 0x000000018CBC3D08-0x000000018CBC3D38
+			public override string Decode(byte[] data); // 0x000000018CBC3CD8-0x000000018CBC3D08
 		}
 	
-		private sealed class CLZF2 : Codec // TypeDefIndex: 60377
+		private sealed class CLZF2 : Codec // TypeDefIndex: 87556
 		{
 			// Fields
 			private readonly Utils.Libraries.CLZF2.CLZF2 _cLZF2; // 0x10
 	
 			// Constructors
-			public CLZF2(); // 0x000000018A9C7574-0x000000018A9C75D8
+			public CLZF2(); // 0x000000018CBB7230-0x000000018CBB7294
 	
 			// Methods
-			public override byte[] Encode(string @string); // 0x000000018A9C7524-0x000000018A9C7574
-			public override string Decode(byte[] data); // 0x000000018A9C74C8-0x000000018A9C7524
+			public override byte[] Encode(string @string); // 0x000000018CBB71E0-0x000000018CBB7230
+			public override string Decode(byte[] data); // 0x000000018CBB7184-0x000000018CBB71E0
 		}
 	
-		public interface IDataHandler // TypeDefIndex: 60378
+		public interface IDataHandler // TypeDefIndex: 87557
 		{
 			// Methods
 			bool Load(string absoluteFilePath, out string data);
@@ -1163,31 +1160,31 @@ namespace Rewired.Data
 			bool Clear(string absoluteFilePath);
 		}
 	
-		public enum DataFormat // TypeDefIndex: 60379
+		public enum DataFormat // TypeDefIndex: 87558
 		{
 			Text = 0,
 			Binary = 1
 		}
 	
 		// Constructors
-		public UserDataStore_File(); // 0x000000018A9D42D4-0x000000018A9D4334
-		static UserDataStore_File(); // 0x000000018A9D423C-0x000000018A9D42D4
+		public UserDataStore_File(); // 0x000000018CBC4108-0x000000018CBC4168
+		static UserDataStore_File(); // 0x000000018CBC4070-0x000000018CBC4108
 	
 		// Methods
-		protected virtual void SetInitialValues(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnInitialize(); // 0x000000018A9D4218-0x000000018A9D423C
-		private void OnDataSourceChanged(); // 0x000000018A9D4148-0x000000018A9D4218
+		protected virtual void SetInitialValues(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnInitialize(); // 0x000000018CBC404C-0x000000018CBC4070
+		private void OnDataSourceChanged(); // 0x000000018CBC3F78-0x000000018CBC404C
 		[CompilerGenerated]
-		private DataFormat _get_dataHandler_b__17_0(); // 0x0000000184D865E0-0x0000000184D865F0
+		private DataFormat _get_dataHandler_b__17_0(); // 0x0000000182271C50-0x0000000182271C60
 	}
 
-	public abstract class UserDataStore_KeyValue : UserDataStore // TypeDefIndex: 60390
+	public abstract class UserDataStore_KeyValue : UserDataStore // TypeDefIndex: 87569
 	{
 		// Fields
 		private static readonly string thisScriptName; // 0x00
-		private const string logPrefix = "Rewired: "; // Metadata: 0x0234D7B0
-		private const string key_controllerAssignments = "ControllerAssignments"; // Metadata: 0x0234D7BA
-		private const int controllerMapKeyVersion = 0; // Metadata: 0x0234D7D0
+		private const string logPrefix = "Rewired: "; // Metadata: 0x0264667C
+		private const string key_controllerAssignments = "ControllerAssignments"; // Metadata: 0x02646686
+		private const int controllerMapKeyVersion = 0; // Metadata: 0x0264669C
 		[SerializeField]
 		[Tooltip("Should this script be used? If disabled, nothing will be saved or loaded.")]
 		private bool _isEnabled; // 0x18
@@ -1217,27 +1214,27 @@ namespace Rewired.Data
 		private readonly StringBuilder _sb; // 0x30
 	
 		// Properties
-		public bool isEnabled { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
-		public bool loadDataOnStart { get; set; } // 0x0000000184D866A0-0x0000000184D866B0 0x0000000184D866C0-0x0000000184D866D0
-		public bool loadJoystickAssignments { get; set; } // 0x00000001815AF940-0x00000001815AF950 0x0000000184D866E0-0x0000000184D866F0
-		public bool loadKeyboardAssignments { get; set; } // 0x0000000184D895D0-0x0000000184D895E0 0x0000000184D89600-0x0000000184D89610
-		public bool loadMouseAssignments { get; set; } // 0x0000000184D86150-0x0000000184D86160 0x0000000184D86160-0x0000000184D86170
+		public bool isEnabled { get; set; } // 0x000000018225E050-0x000000018225E060 0x000000018225E060-0x000000018225E070
+		public bool loadDataOnStart { get; set; } // 0x000000018225E010-0x000000018225E020 0x000000018225E020-0x000000018225E030
+		public bool loadJoystickAssignments { get; set; } // 0x000000018226EDC0-0x000000018226EDD0 0x000000018226EDD0-0x000000018226EDE0
+		public bool loadKeyboardAssignments { get; set; } // 0x00000001872364A0-0x00000001872364B0 0x00000001872364D0-0x00000001872364E0
+		public bool loadMouseAssignments { get; set; } // 0x000000018226EB80-0x000000018226EB90 0x000000018226EB90-0x000000018226EBA0
 		protected abstract IDataStore dataStore { get; }
-		private bool loadControllerAssignments { get; } // 0x000000018A9D9A2C-0x000000018A9D9A40 
-		private List<int> allActionIds { get; } // 0x000000018A9D98EC-0x000000018A9D9A2C 
-		private string allActionIdsString { get; } // 0x000000018A9D97D4-0x000000018A9D98EC 
+		private bool loadControllerAssignments { get; } // 0x000000018CBC997C-0x000000018CBC9990 
+		private List<int> allActionIds { get; } // 0x000000018CBC983C-0x000000018CBC997C 
+		private string allActionIdsString { get; } // 0x000000018CBC9724-0x000000018CBC983C 
 	
 		// Nested types
-		private class ControllerAssignmentSaveInfo // TypeDefIndex: 60383
+		private class ControllerAssignmentSaveInfo // TypeDefIndex: 87562
 		{
 			// Fields
 			public PlayerInfo[] players; // 0x10
 	
 			// Properties
-			public int playerCount { get; } // 0x0000000183141B90-0x0000000183141BB0 
+			public int playerCount { get; } // 0x000000018564C6A0-0x000000018564C6C0 
 	
 			// Nested types
-			public class PlayerInfo // TypeDefIndex: 60381
+			public class PlayerInfo // TypeDefIndex: 87560
 			{
 				// Fields
 				public int id; // 0x10
@@ -1246,17 +1243,17 @@ namespace Rewired.Data
 				public JoystickInfo[] joysticks; // 0x18
 	
 				// Properties
-				public int joystickCount { get; } // 0x0000000183BA3DE0-0x0000000183BA3E00 
+				public int joystickCount { get; } // 0x0000000185384260-0x0000000185384280 
 	
 				// Constructors
-				public PlayerInfo(); // 0x00000001841E1670-0x00000001841E1680
+				public PlayerInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				public int IndexOfJoystick(int joystickId); // 0x000000018A9CBB8C-0x000000018A9CBC08
-				public bool ContainsJoystick(int joystickId); // 0x000000018A9CBB74-0x000000018A9CBB8C
+				public int IndexOfJoystick(int joystickId); // 0x000000018CBBB8DC-0x000000018CBBB960
+				public bool ContainsJoystick(int joystickId); // 0x000000018CBBB8C4-0x000000018CBBB8DC
 			}
 	
-			public class JoystickInfo // TypeDefIndex: 60382
+			public class JoystickInfo // TypeDefIndex: 87561
 			{
 				// Fields
 				public Guid instanceGuid; // 0x10
@@ -1264,29 +1261,29 @@ namespace Rewired.Data
 				public int id; // 0x28
 	
 				// Constructors
-				public JoystickInfo(); // 0x00000001841E1670-0x00000001841E1680
+				public JoystickInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public ControllerAssignmentSaveInfo(); // 0x00000001841E1670-0x00000001841E1680
-			public ControllerAssignmentSaveInfo(int playerCount); // 0x000000018A9C766C-0x000000018A9C7734
+			public ControllerAssignmentSaveInfo(); // 0x0000000186805BA0-0x0000000186805BB0
+			public ControllerAssignmentSaveInfo(int playerCount); // 0x000000018CBB7330-0x000000018CBB73F8
 	
 			// Methods
-			public int IndexOfPlayer(int playerId); // 0x000000018A9C75F0-0x000000018A9C766C
-			public bool ContainsPlayer(int playerId); // 0x000000018A9C75D8-0x000000018A9C75F0
+			public int IndexOfPlayer(int playerId); // 0x000000018CBB72AC-0x000000018CBB7330
+			public bool ContainsPlayer(int playerId); // 0x000000018CBB7294-0x000000018CBB72AC
 		}
 	
-		private class JoystickAssignmentHistoryInfo // TypeDefIndex: 60384
+		private class JoystickAssignmentHistoryInfo // TypeDefIndex: 87563
 		{
 			// Fields
 			public readonly Rewired.Joystick joystick; // 0x10
 			public readonly int oldJoystickId; // 0x18
 	
 			// Constructors
-			public JoystickAssignmentHistoryInfo(Rewired.Joystick joystick, int oldJoystickId); // 0x000000018A9CB290-0x000000018A9CB30C
+			public JoystickAssignmentHistoryInfo(Rewired.Joystick joystick, int oldJoystickId); // 0x000000018CBBAFE0-0x000000018CBBB05C
 		}
 	
-		protected interface IDataStore // TypeDefIndex: 60385
+		protected interface IDataStore // TypeDefIndex: 87564
 		{
 			// Methods
 			bool Save();
@@ -1297,46 +1294,46 @@ namespace Rewired.Data
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0 // TypeDefIndex: 60386
+		private sealed class __c__DisplayClass71_0 // TypeDefIndex: 87565
 		{
 			// Fields
 			public Rewired.Joystick joystick; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass71_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass71_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__0(JoystickAssignmentHistoryInfo x); // 0x000000018A98CBF4-0x000000018A98CC14
+			internal bool _LoadJoystickAssignmentsNow_b__0(JoystickAssignmentHistoryInfo x); // 0x000000018CB3DE4C-0x000000018CB3DE6C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_1 // TypeDefIndex: 60387
+		private sealed class __c__DisplayClass71_1 // TypeDefIndex: 87566
 		{
 			// Fields
 			public ControllerAssignmentSaveInfo.JoystickInfo joystickInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass71_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass71_1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__1(JoystickAssignmentHistoryInfo x); // 0x000000018A9D3E64-0x000000018A9D3E8C
+			internal bool _LoadJoystickAssignmentsNow_b__1(JoystickAssignmentHistoryInfo x); // 0x000000018CBC3CB0-0x000000018CBC3CD8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_2 // TypeDefIndex: 60388
+		private sealed class __c__DisplayClass71_2 // TypeDefIndex: 87567
 		{
 			// Fields
 			public Rewired.Joystick match; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass71_2(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass71_2(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__2(JoystickAssignmentHistoryInfo x); // 0x000000018A98CBF4-0x000000018A98CC14
+			internal bool _LoadJoystickAssignmentsNow_b__2(JoystickAssignmentHistoryInfo x); // 0x000000018CB3DE4C-0x000000018CB3DE6C
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadJoystickAssignmentsDeferred_d__73 : IEnumerator<object> // TypeDefIndex: 60389
+		private sealed class _LoadJoystickAssignmentsDeferred_d__73 : IEnumerator<object> // TypeDefIndex: 87568
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1344,109 +1341,109 @@ namespace Rewired.Data
 			public UserDataStore_KeyValue __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadJoystickAssignmentsDeferred_d__73(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _LoadJoystickAssignmentsDeferred_d__73(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018A9D3C3C-0x000000018A9D3D04
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CBC3A78-0x000000018CBC3B48
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018A9D3D04-0x000000018A9D3D50
+			void IEnumerator.Reset(); // 0x000000018CBC3B48-0x000000018CBC3B94
 		}
 	
 		// Constructors
-		protected UserDataStore_KeyValue(); // 0x000000018A9D9758-0x000000018A9D97D4
-		static UserDataStore_KeyValue(); // 0x000000018A9D96C0-0x000000018A9D9758
+		protected UserDataStore_KeyValue(); // 0x000000018CBC96A8-0x000000018CBC9724
+		static UserDataStore_KeyValue(); // 0x000000018CBC9610-0x000000018CBC96A8
 	
 		// Methods
-		public override void Save(); // 0x000000018A9D934C-0x000000018A9D9408
-		public override void SaveControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D86D0-0x000000018A9D87B4
-		public override void SaveControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D85FC-0x000000018A9D86D0
-		public override void SavePlayerData(int playerId); // 0x000000018A9D928C-0x000000018A9D934C
-		public override void SaveInputBehavior(int playerId, int behaviorId); // 0x000000018A9D8DE0-0x000000018A9D8EB0
-		public override void Load(); // 0x000000018A9D7D84-0x000000018A9D7E40
-		public override void LoadControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D5EE4-0x000000018A9D5FC8
-		public override void LoadControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D5FC8-0x000000018A9D6098
-		public override void LoadPlayerData(int playerId); // 0x000000018A9D7CC4-0x000000018A9D7D84
-		public override void LoadInputBehavior(int playerId, int behaviorId); // 0x000000018A9D664C-0x000000018A9D671C
-		protected override void OnInitialize(); // 0x000000018A9D7F18-0x000000018A9D7FA0
-		protected override void OnControllerConnected(ControllerStatusChangedEventArgs args); // 0x000000018A9D7E40-0x000000018A9D7EB8
-		protected override void OnControllerPreDisconnect(ControllerStatusChangedEventArgs args); // 0x000000018A9D7EE8-0x000000018A9D7F18
-		protected override void OnControllerDisconnected(ControllerStatusChangedEventArgs args); // 0x000000018A9D7EB8-0x000000018A9D7EE8
-		public override void SaveControllerMap(int playerId, ControllerMap controllerMap); // 0x000000018A9D898C-0x000000018A9D8A30
-		public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9D61AC-0x000000018A9D626C
-		public virtual void ClearSaveData(); // 0x000000018A9D4CC0-0x000000018A9D4D14
-		private int LoadAll(); // 0x000000018A9D5B50-0x000000018A9D5C54
-		private int LoadPlayerDataNow(int playerId); // 0x000000018A9D7A2C-0x000000018A9D7A9C
-		private int LoadPlayerDataNow(Player player); // 0x000000018A9D7A9C-0x000000018A9D7CC4
-		private int LoadAllJoystickCalibrationData(); // 0x000000018A9D5A84-0x000000018A9D5B50
-		private int LoadJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018A9D7574-0x000000018A9D75AC
-		private int LoadJoystickCalibrationData(int joystickId); // 0x000000018A9D75AC-0x000000018A9D761C
-		private int LoadJoystickData(int joystickId); // 0x000000018A9D761C-0x000000018A9D7764
-		private int LoadControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D5E58-0x000000018A9D5EC4
-		private int LoadControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D5EC4-0x000000018A9D5EE4
-		private int LoadControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D626C-0x000000018A9D64E4
-		private ControllerMap LoadControllerMap(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9D6098-0x000000018A9D61AC
-		private int LoadInputBehaviors(int playerId); // 0x000000018A9D671C-0x000000018A9D6844
-		private int LoadInputBehaviorNow(int playerId, int behaviorId); // 0x000000018A9D64E4-0x000000018A9D65A8
-		private int LoadInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018A9D65A8-0x000000018A9D664C
-		private bool LoadControllerAssignmentsNow(); // 0x000000018A9D5D98-0x000000018A9D5E58
-		private bool LoadKeyboardAndMouseAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018A9D7764-0x000000018A9D7A2C
-		private bool LoadJoystickAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018A9D68A0-0x000000018A9D7574
-		private ControllerAssignmentSaveInfo LoadControllerAssignmentData(); // 0x000000018A9D5C54-0x000000018A9D5D98
+		public override void Save(); // 0x000000018CBC9294-0x000000018CBC9350
+		public override void SaveControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC85D8-0x000000018CBC86C0
+		public override void SaveControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC8504-0x000000018CBC85D8
+		public override void SavePlayerData(int playerId); // 0x000000018CBC91D4-0x000000018CBC9294
+		public override void SaveInputBehavior(int playerId, int behaviorId); // 0x000000018CBC8D14-0x000000018CBC8DE4
+		public override void Load(); // 0x000000018CBC7C88-0x000000018CBC7D44
+		public override void LoadControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC5DC0-0x000000018CBC5EA8
+		public override void LoadControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC5EA8-0x000000018CBC5F78
+		public override void LoadPlayerData(int playerId); // 0x000000018CBC7BC8-0x000000018CBC7C88
+		public override void LoadInputBehavior(int playerId, int behaviorId); // 0x000000018CBC6540-0x000000018CBC6610
+		protected override void OnInitialize(); // 0x000000018CBC7E1C-0x000000018CBC7EA4
+		protected override void OnControllerConnected(ControllerStatusChangedEventArgs args); // 0x000000018CBC7D44-0x000000018CBC7DBC
+		protected override void OnControllerPreDisconnect(ControllerStatusChangedEventArgs args); // 0x000000018CBC7DEC-0x000000018CBC7E1C
+		protected override void OnControllerDisconnected(ControllerStatusChangedEventArgs args); // 0x000000018CBC7DBC-0x000000018CBC7DEC
+		public override void SaveControllerMap(int playerId, ControllerMap controllerMap); // 0x000000018CBC88A4-0x000000018CBC8948
+		public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBC6098-0x000000018CBC615C
+		public virtual void ClearSaveData(); // 0x000000018CBC4B14-0x000000018CBC4B68
+		private int LoadAll(); // 0x000000018CBC5A28-0x000000018CBC5B2C
+		private int LoadPlayerDataNow(int playerId); // 0x000000018CBC7918-0x000000018CBC7988
+		private int LoadPlayerDataNow(Player player); // 0x000000018CBC7988-0x000000018CBC7BC8
+		private int LoadAllJoystickCalibrationData(); // 0x000000018CBC595C-0x000000018CBC5A28
+		private int LoadJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018CBC7458-0x000000018CBC7490
+		private int LoadJoystickCalibrationData(int joystickId); // 0x000000018CBC7490-0x000000018CBC7500
+		private int LoadJoystickData(int joystickId); // 0x000000018CBC7500-0x000000018CBC764C
+		private int LoadControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC5D30-0x000000018CBC5DA0
+		private int LoadControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC5DA0-0x000000018CBC5DC0
+		private int LoadControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC615C-0x000000018CBC63D8
+		private ControllerMap LoadControllerMap(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBC5F78-0x000000018CBC6098
+		private int LoadInputBehaviors(int playerId); // 0x000000018CBC6610-0x000000018CBC6738
+		private int LoadInputBehaviorNow(int playerId, int behaviorId); // 0x000000018CBC63D8-0x000000018CBC649C
+		private int LoadInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018CBC649C-0x000000018CBC6540
+		private bool LoadControllerAssignmentsNow(); // 0x000000018CBC5C70-0x000000018CBC5D30
+		private bool LoadKeyboardAndMouseAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018CBC764C-0x000000018CBC7918
+		private bool LoadJoystickAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018CBC6794-0x000000018CBC7458
+		private ControllerAssignmentSaveInfo LoadControllerAssignmentData(); // 0x000000018CBC5B2C-0x000000018CBC5C70
 		[IteratorStateMachine(typeof(_LoadJoystickAssignmentsDeferred_d__73))]
-		private IEnumerator LoadJoystickAssignmentsDeferred(); // 0x000000018A9D6844-0x000000018A9D68A0
-		private void SaveAll(); // 0x000000018A9D80D8-0x000000018A9D81D4
-		private void SavePlayerDataNow(int playerId); // 0x000000018A9D9204-0x000000018A9D928C
-		private void SavePlayerDataNow(Player player); // 0x000000018A9D9140-0x000000018A9D9204
-		private void SaveAllJoystickCalibrationData(); // 0x000000018A9D801C-0x000000018A9D80D8
-		private void SaveJoystickCalibrationData(int joystickId); // 0x000000018A9D8F1C-0x000000018A9D8F8C
-		private void SaveJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018A9D8F8C-0x000000018A9D9020
-		private void SaveJoystickData(int joystickId); // 0x000000018A9D9020-0x000000018A9D9140
-		private void SaveControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D85A0-0x000000018A9D85E8
-		private void SaveControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D85E8-0x000000018A9D85FC
-		private void SaveControllerMaps(Player player, PlayerSaveData playerSaveData); // 0x000000018A9D8B3C-0x000000018A9D8C90
-		private void SaveControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9D8A30-0x000000018A9D8B3C
-		private void SaveControllerMap(Player player, ControllerMap controllerMap); // 0x000000018A9D87B4-0x000000018A9D898C
-		private void SaveInputBehaviors(Player player, PlayerSaveData playerSaveData); // 0x000000018A9D8EB0-0x000000018A9D8F1C
-		private void SaveInputBehaviorNow(int playerId, int behaviorId); // 0x000000018A9D8D04-0x000000018A9D8DE0
-		private void SaveInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018A9D8C90-0x000000018A9D8D04
-		private bool SaveControllerAssignments(); // 0x000000018A9D81D4-0x000000018A9D85A0
-		private static void AppendBaseKey(StringBuilder sb, Player player); // 0x000000018A9D4A00-0x000000018A9D4A70
-		private string GetControllerMapKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018A9D4F6C-0x000000018A9D5088
-		private string GetControllerMapKnownActionIdsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018A9D5088-0x000000018A9D51A4
-		private static void AppendControllerMapKeyCommonSuffix(StringBuilder sb, Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int keyVersion); // 0x000000018A9D4A70-0x000000018A9D4CC0
-		private string GetJoystickCalibrationMapKey(Rewired.Joystick joystick); // 0x000000018A9D58EC-0x000000018A9D5A84
-		private string GetInputBehaviorKey(Player player, int inputBehaviorId); // 0x000000018A9D5770-0x000000018A9D5868
-		private string GetControllerMapJson(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9D4E64-0x000000018A9D4F6C
-		private List<int> GetControllerMapKnownActionIds(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9D51A4-0x000000018A9D537C
-		private string GetJoystickCalibrationMapJson(Rewired.Joystick joystick); // 0x000000018A9D5868-0x000000018A9D58EC
-		private string GetInputBehaviorJson(Player player, int id); // 0x000000018A9D56DC-0x000000018A9D5770
-		private void AddDefaultMappingsForNewActions(ControllerIdentifier controllerIdentifier, ControllerMap controllerMap, List<int> knownActionIds); // 0x000000018A9D4510-0x000000018A9D4A00
-		private Rewired.Joystick FindJoystickPrecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo); // 0x000000018A9D4D14-0x000000018A9D4E64
-		private bool TryFindJoysticksImprecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo, out List<Rewired.Joystick> matches); // 0x000000018A9D9408-0x000000018A9D95BC
-		private void RefreshLayoutManager(int playerId); // 0x000000018A9D7FA0-0x000000018A9D801C
-		private static int GetDuplicateIndex(Player player, ControllerIdentifier controllerIdentifier); // 0x000000018A9D537C-0x000000018A9D56DC
-		private static bool TryGetString(IDataStore store, string key, out string result); // 0x000000018A9D95BC-0x000000018A9D96C0
+		private IEnumerator LoadJoystickAssignmentsDeferred(); // 0x000000018CBC6738-0x000000018CBC6794
+		private void SaveAll(); // 0x000000018CBC7FDC-0x000000018CBC80D8
+		private void SavePlayerDataNow(int playerId); // 0x000000018CBC914C-0x000000018CBC91D4
+		private void SavePlayerDataNow(Player player); // 0x000000018CBC9088-0x000000018CBC914C
+		private void SaveAllJoystickCalibrationData(); // 0x000000018CBC7F20-0x000000018CBC7FDC
+		private void SaveJoystickCalibrationData(int joystickId); // 0x000000018CBC8E60-0x000000018CBC8ED0
+		private void SaveJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018CBC8ED0-0x000000018CBC8F64
+		private void SaveJoystickData(int joystickId); // 0x000000018CBC8F64-0x000000018CBC9088
+		private void SaveControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC84A8-0x000000018CBC84F0
+		private void SaveControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC84F0-0x000000018CBC8504
+		private void SaveControllerMaps(Player player, PlayerSaveData playerSaveData); // 0x000000018CBC8A64-0x000000018CBC8BC4
+		private void SaveControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBC8948-0x000000018CBC8A64
+		private void SaveControllerMap(Player player, ControllerMap controllerMap); // 0x000000018CBC86C0-0x000000018CBC88A4
+		private void SaveInputBehaviors(Player player, PlayerSaveData playerSaveData); // 0x000000018CBC8DE4-0x000000018CBC8E60
+		private void SaveInputBehaviorNow(int playerId, int behaviorId); // 0x000000018CBC8C38-0x000000018CBC8D14
+		private void SaveInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018CBC8BC4-0x000000018CBC8C38
+		private bool SaveControllerAssignments(); // 0x000000018CBC80D8-0x000000018CBC84A8
+		private static void AppendBaseKey(StringBuilder sb, Player player); // 0x000000018CBC4848-0x000000018CBC48B8
+		private string GetControllerMapKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018CBC4DF0-0x000000018CBC4F10
+		private string GetControllerMapKnownActionIdsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018CBC4F10-0x000000018CBC5030
+		private static void AppendControllerMapKeyCommonSuffix(StringBuilder sb, Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int keyVersion); // 0x000000018CBC48B8-0x000000018CBC4B14
+		private string GetJoystickCalibrationMapKey(Rewired.Joystick joystick); // 0x000000018CBC57AC-0x000000018CBC595C
+		private string GetInputBehaviorKey(Player player, int inputBehaviorId); // 0x000000018CBC562C-0x000000018CBC5724
+		private string GetControllerMapJson(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBC4CE4-0x000000018CBC4DF0
+		private List<int> GetControllerMapKnownActionIds(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBC5030-0x000000018CBC5208
+		private string GetJoystickCalibrationMapJson(Rewired.Joystick joystick); // 0x000000018CBC5724-0x000000018CBC57AC
+		private string GetInputBehaviorJson(Player player, int id); // 0x000000018CBC5594-0x000000018CBC562C
+		private void AddDefaultMappingsForNewActions(ControllerIdentifier controllerIdentifier, ControllerMap controllerMap, List<int> knownActionIds); // 0x000000018CBC4344-0x000000018CBC4848
+		private Rewired.Joystick FindJoystickPrecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo); // 0x000000018CBC4B68-0x000000018CBC4CE4
+		private bool TryFindJoysticksImprecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo, out List<Rewired.Joystick> matches); // 0x000000018CBC9350-0x000000018CBC9504
+		private void RefreshLayoutManager(int playerId); // 0x000000018CBC7EA4-0x000000018CBC7F20
+		private static int GetDuplicateIndex(Player player, ControllerIdentifier controllerIdentifier); // 0x000000018CBC5208-0x000000018CBC5594
+		private static bool TryGetString(IDataStore store, string key, out string result); // 0x000000018CBC9504-0x000000018CBC9610
 	}
 
-	public class UserDataStore_PlayerPrefs : UserDataStore // TypeDefIndex: 60399
+	public class UserDataStore_PlayerPrefs : UserDataStore // TypeDefIndex: 87578
 	{
 		// Fields
-		private const string thisScriptName = "UserDataStore_PlayerPrefs"; // Metadata: 0x0234D7D1
-		private const string logPrefix = "Rewired: "; // Metadata: 0x0234D7EB
-		private const string editorLoadedMessage = "\n***IMPORTANT:*** Changes made to the Rewired Input Manager configuration after the last time XML data was saved WILL NOT be used because the loaded old saved data has overwritten these values. If you change something in the Rewired Input Manager such as a Joystick Map or Input Behavior settings, you will not see these changes reflected in the current configuration. Clear PlayerPrefs using the inspector option on the UserDataStore_PlayerPrefs component."; // Metadata: 0x0234D7F5
-		private const string playerPrefsKeySuffix_controllerAssignments = "ControllerAssignments"; // Metadata: 0x0234D9C0
-		private const int controllerMapPPKeyVersion_original = 0; // Metadata: 0x0234D9D6
-		private const int controllerMapPPKeyVersion_includeDuplicateJoystickIndex = 1; // Metadata: 0x0234D9D7
-		private const int controllerMapPPKeyVersion_supportDisconnectedControllers = 2; // Metadata: 0x0234D9D8
-		private const int controllerMapPPKeyVersion_includeFormatVersion = 2; // Metadata: 0x0234D9D9
-		private const int controllerMapPPKeyVersion = 2; // Metadata: 0x0234D9DA
+		private const string thisScriptName = "UserDataStore_PlayerPrefs"; // Metadata: 0x0264669D
+		private const string logPrefix = "Rewired: "; // Metadata: 0x026466B7
+		private const string editorLoadedMessage = "\n***IMPORTANT:*** Changes made to the Rewired Input Manager configuration after the last time XML data was saved WILL NOT be used because the loaded old saved data has overwritten these values. If you change something in the Rewired Input Manager such as a Joystick Map or Input Behavior settings, you will not see these changes reflected in the current configuration. Clear PlayerPrefs using the inspector option on the UserDataStore_PlayerPrefs component."; // Metadata: 0x026466C1
+		private const string playerPrefsKeySuffix_controllerAssignments = "ControllerAssignments"; // Metadata: 0x0264688C
+		private const int controllerMapPPKeyVersion_original = 0; // Metadata: 0x026468A2
+		private const int controllerMapPPKeyVersion_includeDuplicateJoystickIndex = 1; // Metadata: 0x026468A3
+		private const int controllerMapPPKeyVersion_supportDisconnectedControllers = 2; // Metadata: 0x026468A4
+		private const int controllerMapPPKeyVersion_includeFormatVersion = 2; // Metadata: 0x026468A5
+		private const int controllerMapPPKeyVersion = 2; // Metadata: 0x026468A6
 		[SerializeField]
 		[Tooltip("Should this script be used? If disabled, nothing will be saved or loaded.")]
 		private bool isEnabled; // 0x18
@@ -1477,28 +1474,28 @@ namespace Rewired.Data
 		private string __allActionIdsString; // 0x38
 	
 		// Properties
-		public bool IsEnabled { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
-		public bool LoadDataOnStart { get; set; } // 0x0000000184D866A0-0x0000000184D866B0 0x0000000184D866C0-0x0000000184D866D0
-		public bool LoadJoystickAssignments { get; set; } // 0x00000001815AF940-0x00000001815AF950 0x0000000184D866E0-0x0000000184D866F0
-		public bool LoadKeyboardAssignments { get; set; } // 0x0000000184D895D0-0x0000000184D895E0 0x0000000184D89600-0x0000000184D89610
-		public bool LoadMouseAssignments { get; set; } // 0x0000000184D86150-0x0000000184D86160 0x0000000184D86160-0x0000000184D86170
-		public string PlayerPrefsKeyPrefix { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		private string playerPrefsKey_controllerAssignments { get; } // 0x000000018A9DE92C-0x000000018A9DE9E8 
-		private bool loadControllerAssignments { get; } // 0x000000018A9D9A2C-0x000000018A9D9A40 
-		private List<int> allActionIds { get; } // 0x000000018A9DE7EC-0x000000018A9DE92C 
-		private string allActionIdsString { get; } // 0x000000018A9DE6D4-0x000000018A9DE7EC 
+		public bool IsEnabled { get; set; } // 0x000000018225E050-0x000000018225E060 0x000000018225E060-0x000000018225E070
+		public bool LoadDataOnStart { get; set; } // 0x000000018225E010-0x000000018225E020 0x000000018225E020-0x000000018225E030
+		public bool LoadJoystickAssignments { get; set; } // 0x000000018226EDC0-0x000000018226EDD0 0x000000018226EDD0-0x000000018226EDE0
+		public bool LoadKeyboardAssignments { get; set; } // 0x00000001872364A0-0x00000001872364B0 0x00000001872364D0-0x00000001872364E0
+		public bool LoadMouseAssignments { get; set; } // 0x000000018226EB80-0x000000018226EB90 0x000000018226EB90-0x000000018226EBA0
+		public string PlayerPrefsKeyPrefix { get; set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		private string playerPrefsKey_controllerAssignments { get; } // 0x000000018CBCE98C-0x000000018CBCEA48 
+		private bool loadControllerAssignments { get; } // 0x000000018CBC997C-0x000000018CBC9990 
+		private List<int> allActionIds { get; } // 0x000000018CBCE84C-0x000000018CBCE98C 
+		private string allActionIdsString { get; } // 0x000000018CBCE734-0x000000018CBCE84C 
 	
 		// Nested types
-		private class ControllerAssignmentSaveInfo // TypeDefIndex: 60393
+		private class ControllerAssignmentSaveInfo // TypeDefIndex: 87572
 		{
 			// Fields
 			public PlayerInfo[] players; // 0x10
 	
 			// Properties
-			public int playerCount { get; } // 0x0000000183141B90-0x0000000183141BB0 
+			public int playerCount { get; } // 0x000000018564C6A0-0x000000018564C6C0 
 	
 			// Nested types
-			public class PlayerInfo // TypeDefIndex: 60391
+			public class PlayerInfo // TypeDefIndex: 87570
 			{
 				// Fields
 				public int id; // 0x10
@@ -1507,17 +1504,17 @@ namespace Rewired.Data
 				public JoystickInfo[] joysticks; // 0x18
 	
 				// Properties
-				public int joystickCount { get; } // 0x0000000183BA3DE0-0x0000000183BA3E00 
+				public int joystickCount { get; } // 0x0000000185384260-0x0000000185384280 
 	
 				// Constructors
-				public PlayerInfo(); // 0x00000001841E1670-0x00000001841E1680
+				public PlayerInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				public int IndexOfJoystick(int joystickId); // 0x000000018A9CBB8C-0x000000018A9CBC08
-				public bool ContainsJoystick(int joystickId); // 0x000000018A9CBB74-0x000000018A9CBB8C
+				public int IndexOfJoystick(int joystickId); // 0x000000018CBBB8DC-0x000000018CBBB960
+				public bool ContainsJoystick(int joystickId); // 0x000000018CBBB8C4-0x000000018CBBB8DC
 			}
 	
-			public class JoystickInfo // TypeDefIndex: 60392
+			public class JoystickInfo // TypeDefIndex: 87571
 			{
 				// Fields
 				public Guid instanceGuid; // 0x10
@@ -1525,69 +1522,69 @@ namespace Rewired.Data
 				public int id; // 0x28
 	
 				// Constructors
-				public JoystickInfo(); // 0x00000001841E1670-0x00000001841E1680
+				public JoystickInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public ControllerAssignmentSaveInfo(); // 0x00000001841E1670-0x00000001841E1680
-			public ControllerAssignmentSaveInfo(int playerCount); // 0x000000018A9C7734-0x000000018A9C77FC
+			public ControllerAssignmentSaveInfo(); // 0x0000000186805BA0-0x0000000186805BB0
+			public ControllerAssignmentSaveInfo(int playerCount); // 0x000000018CBB73F8-0x000000018CBB74C0
 	
 			// Methods
-			public int IndexOfPlayer(int playerId); // 0x000000018A9C75F0-0x000000018A9C766C
-			public bool ContainsPlayer(int playerId); // 0x000000018A9C75D8-0x000000018A9C75F0
+			public int IndexOfPlayer(int playerId); // 0x000000018CBB72AC-0x000000018CBB7330
+			public bool ContainsPlayer(int playerId); // 0x000000018CBB7294-0x000000018CBB72AC
 		}
 	
-		private class JoystickAssignmentHistoryInfo // TypeDefIndex: 60394
+		private class JoystickAssignmentHistoryInfo // TypeDefIndex: 87573
 		{
 			// Fields
 			public readonly Rewired.Joystick joystick; // 0x10
 			public readonly int oldJoystickId; // 0x18
 	
 			// Constructors
-			public JoystickAssignmentHistoryInfo(Rewired.Joystick joystick, int oldJoystickId); // 0x000000018A9CB214-0x000000018A9CB290
+			public JoystickAssignmentHistoryInfo(Rewired.Joystick joystick, int oldJoystickId); // 0x000000018CBBAF64-0x000000018CBBAFE0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0 // TypeDefIndex: 60395
+		private sealed class __c__DisplayClass78_0 // TypeDefIndex: 87574
 		{
 			// Fields
 			public Rewired.Joystick joystick; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass78_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass78_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__0(JoystickAssignmentHistoryInfo x); // 0x000000018A98CBF4-0x000000018A98CC14
+			internal bool _LoadJoystickAssignmentsNow_b__0(JoystickAssignmentHistoryInfo x); // 0x000000018CB3DE4C-0x000000018CB3DE6C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_1 // TypeDefIndex: 60396
+		private sealed class __c__DisplayClass78_1 // TypeDefIndex: 87575
 		{
 			// Fields
 			public ControllerAssignmentSaveInfo.JoystickInfo joystickInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass78_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass78_1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__1(JoystickAssignmentHistoryInfo x); // 0x000000018A9D3E64-0x000000018A9D3E8C
+			internal bool _LoadJoystickAssignmentsNow_b__1(JoystickAssignmentHistoryInfo x); // 0x000000018CBC3CB0-0x000000018CBC3CD8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_2 // TypeDefIndex: 60397
+		private sealed class __c__DisplayClass78_2 // TypeDefIndex: 87576
 		{
 			// Fields
 			public Rewired.Joystick match; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass78_2(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass78_2(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _LoadJoystickAssignmentsNow_b__2(JoystickAssignmentHistoryInfo x); // 0x000000018A98CBF4-0x000000018A98CC14
+			internal bool _LoadJoystickAssignmentsNow_b__2(JoystickAssignmentHistoryInfo x); // 0x000000018CB3DE4C-0x000000018CB3DE6C
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadJoystickAssignmentsDeferred_d__80 : IEnumerator<object> // TypeDefIndex: 60398
+		private sealed class _LoadJoystickAssignmentsDeferred_d__80 : IEnumerator<object> // TypeDefIndex: 87577
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1595,100 +1592,100 @@ namespace Rewired.Data
 			public UserDataStore_PlayerPrefs __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadJoystickAssignmentsDeferred_d__80(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _LoadJoystickAssignmentsDeferred_d__80(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018A9D3D50-0x000000018A9D3E18
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CBC3B94-0x000000018CBC3C64
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018A9D3E18-0x000000018A9D3E64
+			void IEnumerator.Reset(); // 0x000000018CBC3C64-0x000000018CBC3CB0
 		}
 	
 		// Constructors
-		public UserDataStore_PlayerPrefs(); // 0x000000018A9DE67C-0x000000018A9DE6D4
+		public UserDataStore_PlayerPrefs(); // 0x000000018CBCE6DC-0x000000018CBCE734
 	
 		// Methods
-		public override void Save(); // 0x000000018A9DE45C-0x000000018A9DE4C8
-		public override void SaveControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DD8EC-0x000000018A9DD984
-		public override void SaveControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DD984-0x000000018A9DDA0C
-		public override void SavePlayerData(int playerId); // 0x000000018A9DE3E4-0x000000018A9DE45C
-		public override void SaveInputBehavior(int playerId, int behaviorId); // 0x000000018A9DDFB0-0x000000018A9DE038
-		public override void Load(); // 0x000000018A9DD0FC-0x000000018A9DD168
-		public override void LoadControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DB408-0x000000018A9DB4A0
-		public override void LoadControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DB380-0x000000018A9DB408
-		public override void LoadPlayerData(int playerId); // 0x000000018A9DD084-0x000000018A9DD0FC
-		public override void LoadInputBehavior(int playerId, int behaviorId); // 0x000000018A9DBA54-0x000000018A9DBADC
-		protected override void OnInitialize(); // 0x000000018A9DD240-0x000000018A9DD2C8
-		protected override void OnControllerConnected(ControllerStatusChangedEventArgs args); // 0x000000018A9DD168-0x000000018A9DD1E0
-		protected override void OnControllerPreDisconnect(ControllerStatusChangedEventArgs args); // 0x000000018A9DD210-0x000000018A9DD240
-		protected override void OnControllerDisconnected(ControllerStatusChangedEventArgs args); // 0x000000018A9DD1E0-0x000000018A9DD210
-		public override void SaveControllerMap(int playerId, ControllerMap controllerMap); // 0x000000018A9DDA0C-0x000000018A9DDA98
-		public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9DB4A0-0x000000018A9DB560
-		private int LoadAll(); // 0x000000018A9DB018-0x000000018A9DB11C
-		private int LoadPlayerDataNow(int playerId); // 0x000000018A9DCDEC-0x000000018A9DCE5C
-		private int LoadPlayerDataNow(Player player); // 0x000000018A9DCE5C-0x000000018A9DD084
-		private int LoadAllJoystickCalibrationData(); // 0x000000018A9DAF4C-0x000000018A9DB018
-		private int LoadJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018A9DC934-0x000000018A9DC96C
-		private int LoadJoystickCalibrationData(int joystickId); // 0x000000018A9DC96C-0x000000018A9DC9DC
-		private int LoadJoystickData(int joystickId); // 0x000000018A9DC9DC-0x000000018A9DCB24
-		private int LoadControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DB2F4-0x000000018A9DB360
-		private int LoadControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DB360-0x000000018A9DB380
-		private int LoadControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DB674-0x000000018A9DB8EC
-		private ControllerMap LoadControllerMap(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9DB560-0x000000018A9DB674
-		private int LoadInputBehaviors(int playerId); // 0x000000018A9DBADC-0x000000018A9DBC04
-		private int LoadInputBehaviorNow(int playerId, int behaviorId); // 0x000000018A9DB990-0x000000018A9DBA54
-		private int LoadInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018A9DB8EC-0x000000018A9DB990
-		private bool LoadControllerAssignmentsNow(); // 0x000000018A9DB234-0x000000018A9DB2F4
-		private bool LoadKeyboardAndMouseAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018A9DCB24-0x000000018A9DCDEC
-		private bool LoadJoystickAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018A9DBC60-0x000000018A9DC934
-		private ControllerAssignmentSaveInfo LoadControllerAssignmentData(); // 0x000000018A9DB11C-0x000000018A9DB234
+		public override void Save(); // 0x000000018CBCE4BC-0x000000018CBCE528
+		public override void SaveControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCD910-0x000000018CBCD9AC
+		public override void SaveControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCD9AC-0x000000018CBCDA34
+		public override void SavePlayerData(int playerId); // 0x000000018CBCE444-0x000000018CBCE4BC
+		public override void SaveInputBehavior(int playerId, int behaviorId); // 0x000000018CBCDFFC-0x000000018CBCE084
+		public override void Load(); // 0x000000018CBCD120-0x000000018CBCD18C
+		public override void LoadControllerData(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCB404-0x000000018CBCB4A0
+		public override void LoadControllerData(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCB37C-0x000000018CBCB404
+		public override void LoadPlayerData(int playerId); // 0x000000018CBCD0A8-0x000000018CBCD120
+		public override void LoadInputBehavior(int playerId, int behaviorId); // 0x000000018CBCBA68-0x000000018CBCBAF0
+		protected override void OnInitialize(); // 0x000000018CBCD264-0x000000018CBCD2EC
+		protected override void OnControllerConnected(ControllerStatusChangedEventArgs args); // 0x000000018CBCD18C-0x000000018CBCD204
+		protected override void OnControllerPreDisconnect(ControllerStatusChangedEventArgs args); // 0x000000018CBCD234-0x000000018CBCD264
+		protected override void OnControllerDisconnected(ControllerStatusChangedEventArgs args); // 0x000000018CBCD204-0x000000018CBCD234
+		public override void SaveControllerMap(int playerId, ControllerMap controllerMap); // 0x000000018CBCDA34-0x000000018CBCDAC0
+		public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBCB4A0-0x000000018CBCB564
+		private int LoadAll(); // 0x000000018CBCB010-0x000000018CBCB114
+		private int LoadPlayerDataNow(int playerId); // 0x000000018CBCCDF8-0x000000018CBCCE68
+		private int LoadPlayerDataNow(Player player); // 0x000000018CBCCE68-0x000000018CBCD0A8
+		private int LoadAllJoystickCalibrationData(); // 0x000000018CBCAF44-0x000000018CBCB010
+		private int LoadJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018CBCC938-0x000000018CBCC970
+		private int LoadJoystickCalibrationData(int joystickId); // 0x000000018CBCC970-0x000000018CBCC9E0
+		private int LoadJoystickData(int joystickId); // 0x000000018CBCC9E0-0x000000018CBCCB2C
+		private int LoadControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCB2EC-0x000000018CBCB35C
+		private int LoadControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCB35C-0x000000018CBCB37C
+		private int LoadControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCB684-0x000000018CBCB900
+		private ControllerMap LoadControllerMap(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBCB564-0x000000018CBCB684
+		private int LoadInputBehaviors(int playerId); // 0x000000018CBCBAF0-0x000000018CBCBC18
+		private int LoadInputBehaviorNow(int playerId, int behaviorId); // 0x000000018CBCB9A4-0x000000018CBCBA68
+		private int LoadInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018CBCB900-0x000000018CBCB9A4
+		private bool LoadControllerAssignmentsNow(); // 0x000000018CBCB22C-0x000000018CBCB2EC
+		private bool LoadKeyboardAndMouseAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018CBCCB2C-0x000000018CBCCDF8
+		private bool LoadJoystickAssignmentsNow(ControllerAssignmentSaveInfo data); // 0x000000018CBCBC74-0x000000018CBCC938
+		private ControllerAssignmentSaveInfo LoadControllerAssignmentData(); // 0x000000018CBCB114-0x000000018CBCB22C
 		[IteratorStateMachine(typeof(_LoadJoystickAssignmentsDeferred_d__80))]
-		private IEnumerator LoadJoystickAssignmentsDeferred(); // 0x000000018A9DBC04-0x000000018A9DBC60
-		private void SaveAll(); // 0x000000018A9DD400-0x000000018A9DD4E4
-		private void SavePlayerDataNow(int playerId); // 0x000000018A9DE2A8-0x000000018A9DE320
-		private void SavePlayerDataNow(Player player); // 0x000000018A9DE320-0x000000018A9DE3E4
-		private void SaveAllJoystickCalibrationData(); // 0x000000018A9DD344-0x000000018A9DD400
-		private void SaveJoystickCalibrationData(int joystickId); // 0x000000018A9DE0A4-0x000000018A9DE114
-		private void SaveJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018A9DE114-0x000000018A9DE188
-		private void SaveJoystickData(int joystickId); // 0x000000018A9DE188-0x000000018A9DE2A8
-		private void SaveControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DD8A0-0x000000018A9DD8EC
-		private void SaveControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DD87C-0x000000018A9DD8A0
-		private void SaveControllerMaps(Player player, PlayerSaveData playerSaveData); // 0x000000018A9DDC3C-0x000000018A9DDD90
-		private void SaveControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018A9DDD90-0x000000018A9DDE9C
-		private void SaveControllerMap(Player player, ControllerMap controllerMap); // 0x000000018A9DDA98-0x000000018A9DDC3C
-		private void SaveInputBehaviors(Player player, PlayerSaveData playerSaveData); // 0x000000018A9DE038-0x000000018A9DE0A4
-		private void SaveInputBehaviorNow(int playerId, int behaviorId); // 0x000000018A9DDEE8-0x000000018A9DDFB0
-		private void SaveInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018A9DDE9C-0x000000018A9DDEE8
-		private bool SaveControllerAssignments(); // 0x000000018A9DD4E4-0x000000018A9DD87C
-		private bool ControllerAssignmentSaveDataExists(); // 0x000000018A9D9F30-0x000000018A9D9F7C
-		private string GetBasePlayerPrefsKey(Player player); // 0x000000018A9DA0CC-0x000000018A9DA130
-		private string GetControllerMapPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018A9DA698-0x000000018A9DA760
-		private string GetControllerMapKnownActionIdsPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018A9DA130-0x000000018A9DA1F8
-		private static string GetControllerMapPlayerPrefsKeyCommonSuffix(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018A9DA394-0x000000018A9DA698
-		private string GetJoystickCalibrationMapPlayerPrefsKey(Rewired.Joystick joystick); // 0x000000018A9DADA8-0x000000018A9DAED8
-		private string GetInputBehaviorPlayerPrefsKey(Player player, int inputBehaviorId); // 0x000000018A9DAC98-0x000000018A9DAD24
-		private string GetControllerMapXml(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9DA880-0x000000018A9DA938
-		private List<int> GetControllerMapKnownActionIds(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018A9DA1F8-0x000000018A9DA394
-		private string GetJoystickCalibrationMapXml(Rewired.Joystick joystick); // 0x000000018A9DAED8-0x000000018A9DAF4C
-		private string GetInputBehaviorXml(Player player, int id); // 0x000000018A9DAD24-0x000000018A9DADA8
-		private void AddDefaultMappingsForNewActions(ControllerIdentifier controllerIdentifier, ControllerMap controllerMap, List<int> knownActionIds); // 0x000000018A9D9A40-0x000000018A9D9F30
-		private Rewired.Joystick FindJoystickPrecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo); // 0x000000018A9D9F7C-0x000000018A9DA0CC
-		private bool TryFindJoysticksImprecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo, out List<Rewired.Joystick> matches); // 0x000000018A9DE4C8-0x000000018A9DE67C
-		private static int GetDuplicateIndex(Player player, ControllerIdentifier controllerIdentifier); // 0x000000018A9DA938-0x000000018A9DAC98
-		private void RefreshLayoutManager(int playerId); // 0x000000018A9DD2C8-0x000000018A9DD344
-		private static System.Type GetControllerMapType(Rewired.ControllerType controllerType); // 0x000000018A9DA760-0x000000018A9DA880
+		private IEnumerator LoadJoystickAssignmentsDeferred(); // 0x000000018CBCBC18-0x000000018CBCBC74
+		private void SaveAll(); // 0x000000018CBCD424-0x000000018CBCD508
+		private void SavePlayerDataNow(int playerId); // 0x000000018CBCE308-0x000000018CBCE380
+		private void SavePlayerDataNow(Player player); // 0x000000018CBCE380-0x000000018CBCE444
+		private void SaveAllJoystickCalibrationData(); // 0x000000018CBCD368-0x000000018CBCD424
+		private void SaveJoystickCalibrationData(int joystickId); // 0x000000018CBCE100-0x000000018CBCE170
+		private void SaveJoystickCalibrationData(Rewired.Joystick joystick); // 0x000000018CBCE170-0x000000018CBCE1E4
+		private void SaveJoystickData(int joystickId); // 0x000000018CBCE1E4-0x000000018CBCE308
+		private void SaveControllerDataNow(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCD8C4-0x000000018CBCD910
+		private void SaveControllerDataNow(Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCD8A0-0x000000018CBCD8C4
+		private void SaveControllerMaps(Player player, PlayerSaveData playerSaveData); // 0x000000018CBCDC6C-0x000000018CBCDDCC
+		private void SaveControllerMaps(int playerId, Rewired.ControllerType controllerType, int controllerId); // 0x000000018CBCDDCC-0x000000018CBCDEE8
+		private void SaveControllerMap(Player player, ControllerMap controllerMap); // 0x000000018CBCDAC0-0x000000018CBCDC6C
+		private void SaveInputBehaviors(Player player, PlayerSaveData playerSaveData); // 0x000000018CBCE084-0x000000018CBCE100
+		private void SaveInputBehaviorNow(int playerId, int behaviorId); // 0x000000018CBCDF34-0x000000018CBCDFFC
+		private void SaveInputBehaviorNow(Player player, InputBehavior inputBehavior); // 0x000000018CBCDEE8-0x000000018CBCDF34
+		private bool SaveControllerAssignments(); // 0x000000018CBCD508-0x000000018CBCD8A0
+		private bool ControllerAssignmentSaveDataExists(); // 0x000000018CBC9E94-0x000000018CBC9EE0
+		private string GetBasePlayerPrefsKey(Player player); // 0x000000018CBCA05C-0x000000018CBCA0C0
+		private string GetControllerMapPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018CBCA640-0x000000018CBCA708
+		private string GetControllerMapKnownActionIdsPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018CBCA0C0-0x000000018CBCA188
+		private static string GetControllerMapPlayerPrefsKeyCommonSuffix(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion); // 0x000000018CBCA324-0x000000018CBCA640
+		private string GetJoystickCalibrationMapPlayerPrefsKey(Rewired.Joystick joystick); // 0x000000018CBCAD84-0x000000018CBCAED0
+		private string GetInputBehaviorPlayerPrefsKey(Player player, int inputBehaviorId); // 0x000000018CBCAC74-0x000000018CBCAD00
+		private string GetControllerMapXml(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBCA830-0x000000018CBCA8E8
+		private List<int> GetControllerMapKnownActionIds(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId); // 0x000000018CBCA188-0x000000018CBCA324
+		private string GetJoystickCalibrationMapXml(Rewired.Joystick joystick); // 0x000000018CBCAED0-0x000000018CBCAF44
+		private string GetInputBehaviorXml(Player player, int id); // 0x000000018CBCAD00-0x000000018CBCAD84
+		private void AddDefaultMappingsForNewActions(ControllerIdentifier controllerIdentifier, ControllerMap controllerMap, List<int> knownActionIds); // 0x000000018CBC9990-0x000000018CBC9E94
+		private Rewired.Joystick FindJoystickPrecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo); // 0x000000018CBC9EE0-0x000000018CBCA05C
+		private bool TryFindJoysticksImprecise(ControllerAssignmentSaveInfo.JoystickInfo joystickInfo, out List<Rewired.Joystick> matches); // 0x000000018CBCE528-0x000000018CBCE6DC
+		private static int GetDuplicateIndex(Player player, ControllerIdentifier controllerIdentifier); // 0x000000018CBCA8E8-0x000000018CBCAC74
+		private void RefreshLayoutManager(int playerId); // 0x000000018CBCD2EC-0x000000018CBCD368
+		private static System.Type GetControllerMapType(Rewired.ControllerType controllerType); // 0x000000018CBCA708-0x000000018CBCA830
 	}
 }
 
 namespace Rewired.Integration.UnityUI
 {
-	public class PlayerPointerEventData : PointerEventData // TypeDefIndex: 60401
+	public class PlayerPointerEventData : PointerEventData // TypeDefIndex: 87580
 	{
 		// Fields
 		[CompilerGenerated]
@@ -1705,22 +1702,22 @@ namespace Rewired.Integration.UnityUI
 		private int _buttonIndex_k__BackingField; // 0x17C
 	
 		// Properties
-		public int playerId { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA6C30-0x0000000184DA6C40 0x0000000184DA6C40-0x0000000184DA6C50
-		public int inputSourceIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D903F0-0x0000000184D90400 0x0000000184D90470-0x0000000184D90480
-		public IMouseInputSource mouseSource { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8DF00-0x0000000184D8DF10 0x0000000186B8B954-0x0000000186B8B968
-		public ITouchInputSource touchSource { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8DEF0-0x0000000184D8DF00 0x0000000186B8B940-0x0000000186B8B954
-		public PointerEventType sourceType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA2300-0x0000000184DA2310 0x0000000184DA6C50-0x0000000184DA6C60
-		public int buttonIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D92A50-0x0000000184D92A60 0x0000000184D92A60-0x0000000184D92A70
+		public int playerId { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187233DA0-0x0000000187233DB0 0x0000000187254CD0-0x0000000187254CE0
+		public int inputSourceIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723E370-0x000000018723E380 0x000000018723E3E0-0x000000018723E3F0
+		public IMouseInputSource mouseSource { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723C240-0x000000018723C250 0x0000000188DC4DF4-0x0000000188DC4E08
+		public ITouchInputSource touchSource { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723C230-0x000000018723C240 0x0000000188DC4DE0-0x0000000188DC4DF4
+		public PointerEventType sourceType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187233DD0-0x0000000187233DE0 0x0000000187254CE0-0x0000000187254CF0
+		public int buttonIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723E950-0x000000018723E960 0x000000018723E990-0x000000018723E9A0
 	
 		// Constructors
-		public PlayerPointerEventData(EventSystem eventSystem); // 0x000000018A9CBE54-0x000000018A9CBE80
+		public PlayerPointerEventData(EventSystem eventSystem); // 0x000000018CBBBBAC-0x000000018CBBBBD8
 	
 		// Methods
-		public override string ToString(); // 0x000000018A9CBC08-0x000000018A9CBE54
+		public override string ToString(); // 0x000000018CBBB960-0x000000018CBBBBAC
 	}
 
 	[AddComponentMenu("Rewired/Rewired Event System")]
-	public class RewiredEventSystem : EventSystem // TypeDefIndex: 60402
+	public class RewiredEventSystem : EventSystem // TypeDefIndex: 87581
 	{
 		// Fields
 		[SerializeField]
@@ -1728,25 +1725,25 @@ namespace Rewired.Integration.UnityUI
 		private bool _alwaysUpdate; // 0x50
 	
 		// Properties
-		public bool alwaysUpdate { get; set; } // 0x0000000184D86800-0x0000000184D86810 0x0000000184D86840-0x0000000184D86850
+		public bool alwaysUpdate { get; set; } // 0x000000018225DFF0-0x000000018225E000 0x000000018225E000-0x000000018225E010
 	
 		// Constructors
-		public RewiredEventSystem(); // 0x000000018A9CCA9C-0x000000018A9CCAE8
+		public RewiredEventSystem(); // 0x000000018CBBC7EC-0x000000018CBBC838
 	
 		// Methods
-		protected override void Update(); // 0x000000018A9CC960-0x000000018A9CCA9C
+		protected override void Update(); // 0x000000018CBBC6B8-0x000000018CBBC7EC
 	}
 
-	public abstract class RewiredPointerInputModule : BaseInputModule // TypeDefIndex: 60407
+	public abstract class RewiredPointerInputModule : BaseInputModule // TypeDefIndex: 87586
 	{
 		// Fields
-		public const int kMouseLeftId = -1; // Metadata: 0x0234D9DB
-		public const int kMouseRightId = -2; // Metadata: 0x0234D9DC
-		public const int kMouseMiddleId = -3; // Metadata: 0x0234D9DD
-		public const int kFakeTouchesId = -4; // Metadata: 0x0234D9DE
-		private const int customButtonsStartingId = -2147483520; // Metadata: 0x0234D9DF
-		private const int customButtonsMaxCount = 128; // Metadata: 0x0234D9E4
-		private const int customButtonsLastId = -2147483392; // Metadata: 0x0234D9E6
+		public const int kMouseLeftId = -1; // Metadata: 0x026468A7
+		public const int kMouseRightId = -2; // Metadata: 0x026468A8
+		public const int kMouseMiddleId = -3; // Metadata: 0x026468A9
+		public const int kFakeTouchesId = -4; // Metadata: 0x026468AA
+		private const int customButtonsStartingId = -2147483520; // Metadata: 0x026468AB
+		private const int customButtonsMaxCount = 128; // Metadata: 0x026468B0
+		private const int customButtonsLastId = -2147483392; // Metadata: 0x026468B2
 		private readonly List<IMouseInputSource> m_MouseInputSourcesList; // 0x48
 		private Dictionary<int, Dictionary<int, PlayerPointerEventData>[]> m_PlayerPointerData; // 0x50
 		private ITouchInputSource m_UserDefaultTouchInputSource; // 0x58
@@ -1754,56 +1751,56 @@ namespace Rewired.Integration.UnityUI
 		private readonly MouseState m_MouseState; // 0x68
 	
 		// Properties
-		private UnityInputSource defaultInputSource { get; } // 0x000000018A9CF360-0x000000018A9CF3C8 
-		private IMouseInputSource defaultMouseInputSource { get; } // 0x000000018A9CF3C8-0x000000018A9CF3D0 
-		protected ITouchInputSource defaultTouchInputSource { get; } // 0x000000018A9CF3C8-0x000000018A9CF3D0 
-		protected virtual bool isMouseSupported { get; } // 0x000000018A9CF3D0-0x000000018A9CF484 
+		private UnityInputSource defaultInputSource { get; } // 0x000000018CBBF120-0x000000018CBBF18C 
+		private IMouseInputSource defaultMouseInputSource { get; } // 0x000000018CBBF18C-0x000000018CBBF194 
+		protected ITouchInputSource defaultTouchInputSource { get; } // 0x000000018CBBF18C-0x000000018CBBF194 
+		protected virtual bool isMouseSupported { get; } // 0x000000018CBBF194-0x000000018CBBF248 
 	
 		// Nested types
-		protected class MouseState // TypeDefIndex: 60403
+		protected class MouseState // TypeDefIndex: 87582
 		{
 			// Fields
 			private List<ButtonState> m_TrackedButtons; // 0x10
 	
 			// Constructors
-			public MouseState(); // 0x000000018A9CBAFC-0x000000018A9CBB74
+			public MouseState(); // 0x000000018CBBB84C-0x000000018CBBB8C4
 	
 			// Methods
-			public bool AnyPressesThisFrame(); // 0x000000018A9CB878-0x000000018A9CB904
-			public bool AnyReleasesThisFrame(); // 0x000000018A9CB904-0x000000018A9CB990
-			public ButtonState GetButtonState(int button); // 0x000000018A9CB990-0x000000018A9CBAAC
-			public void SetButtonState(int button, PointerEventData.FramePressState stateForMouseButton, PlayerPointerEventData data); // 0x000000018A9CBAAC-0x000000018A9CBAFC
+			public bool AnyPressesThisFrame(); // 0x000000018CBBB5C8-0x000000018CBBB654
+			public bool AnyReleasesThisFrame(); // 0x000000018CBBB654-0x000000018CBBB6E0
+			public ButtonState GetButtonState(int button); // 0x000000018CBBB6E0-0x000000018CBBB7FC
+			public void SetButtonState(int button, PointerEventData.FramePressState stateForMouseButton, PlayerPointerEventData data); // 0x000000018CBBB7FC-0x000000018CBBB84C
 		}
 	
-		public class MouseButtonEventData // TypeDefIndex: 60404
+		public class MouseButtonEventData // TypeDefIndex: 87583
 		{
 			// Fields
 			public PointerEventData.FramePressState buttonState; // 0x10
 			public PlayerPointerEventData buttonData; // 0x18
 	
 			// Constructors
-			public MouseButtonEventData(); // 0x00000001841E1670-0x00000001841E1680
+			public MouseButtonEventData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool PressedThisFrame(); // 0x000000018A9CB864-0x000000018A9CB878
-			public bool ReleasedThisFrame(); // 0x000000018863E6DC-0x000000018863E6F0
+			public bool PressedThisFrame(); // 0x000000018CBBB5B4-0x000000018CBBB5C8
+			public bool ReleasedThisFrame(); // 0x000000018AB0B2F0-0x000000018AB0B304
 		}
 	
-		protected class ButtonState // TypeDefIndex: 60405
+		protected class ButtonState // TypeDefIndex: 87584
 		{
 			// Fields
 			private int m_Button; // 0x10
 			private MouseButtonEventData m_EventData; // 0x18
 	
 			// Properties
-			public MouseButtonEventData eventData { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-			public int button { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+			public MouseButtonEventData eventData { get; set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+			public int button { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
 	
 			// Constructors
-			public ButtonState(); // 0x00000001841E1670-0x00000001841E1680
+			public ButtonState(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private sealed class UnityInputSource : IMouseInputSource, ITouchInputSource // TypeDefIndex: 60406
+		private sealed class UnityInputSource : IMouseInputSource, ITouchInputSource // TypeDefIndex: 87585
 		{
 			// Fields
 			private Vector2 m_MousePosition; // 0x10
@@ -1811,74 +1808,74 @@ namespace Rewired.Integration.UnityUI
 			private int m_LastUpdatedFrame; // 0x20
 	
 			// Properties
-			int IMouseInputSource.playerId { get; } // 0x000000018A9D3F9C-0x000000018A9D3FB0 
-			int ITouchInputSource.playerId { get; } // 0x000000018A9D3F9C-0x000000018A9D3FB0 
-			bool IMouseInputSource.enabled { get; } // 0x000000018A9D3F64-0x000000018A9D3F7C 
-			bool IMouseInputSource.locked { get; } // 0x000000018A9D3F7C-0x000000018A9D3F9C 
-			int IMouseInputSource.buttonCount { get; } // 0x000000018A9D3F4C-0x000000018A9D3F64 
-			Vector2 IMouseInputSource.screenPosition { get; } // 0x000000018A9D3FF0-0x000000018A9D4020 
-			Vector2 IMouseInputSource.screenPositionDelta { get; } // 0x000000018A9D3FB0-0x000000018A9D3FF0 
-			Vector2 IMouseInputSource.wheelDelta { get; } // 0x000000018A9D4020-0x000000018A9D4038 
-			bool ITouchInputSource.touchSupported { get; } // 0x000000018A9D40B4-0x000000018A9D40CC 
-			int ITouchInputSource.touchCount { get; } // 0x000000018A9D409C-0x000000018A9D40B4 
+			int IMouseInputSource.playerId { get; } // 0x000000018CBC3DE8-0x000000018CBC3DFC 
+			int ITouchInputSource.playerId { get; } // 0x000000018CBC3DE8-0x000000018CBC3DFC 
+			bool IMouseInputSource.enabled { get; } // 0x000000018CBC3DB0-0x000000018CBC3DC8 
+			bool IMouseInputSource.locked { get; } // 0x000000018CBC3DC8-0x000000018CBC3DE8 
+			int IMouseInputSource.buttonCount { get; } // 0x000000018CBC3D98-0x000000018CBC3DB0 
+			Vector2 IMouseInputSource.screenPosition { get; } // 0x000000018CBC3E3C-0x000000018CBC3E6C 
+			Vector2 IMouseInputSource.screenPositionDelta { get; } // 0x000000018CBC3DFC-0x000000018CBC3E3C 
+			Vector2 IMouseInputSource.wheelDelta { get; } // 0x000000018CBC3E6C-0x000000018CBC3E84 
+			bool ITouchInputSource.touchSupported { get; } // 0x000000018CBC3F00-0x000000018CBC3F18 
+			int ITouchInputSource.touchCount { get; } // 0x000000018CBC3EE8-0x000000018CBC3F00 
 	
 			// Constructors
-			public UnityInputSource(); // 0x0000000184D91890-0x0000000184D918A0
+			public UnityInputSource(); // 0x00000001872407F0-0x0000000187240800
 	
 			// Methods
-			bool IMouseInputSource.GetButtonDown(int button); // 0x000000018A9D3EEC-0x000000018A9D3F0C
-			bool IMouseInputSource.GetButtonUp(int button); // 0x000000018A9D3F0C-0x000000018A9D3F2C
-			bool IMouseInputSource.GetButton(int button); // 0x000000018A9D3F2C-0x000000018A9D3F4C
-			Touch ITouchInputSource.GetTouch(int index); // 0x000000018A9D4038-0x000000018A9D409C
-			private void TryUpdate(); // 0x000000018A9D40CC-0x000000018A9D4148
+			bool IMouseInputSource.GetButtonDown(int button); // 0x000000018CBC3D38-0x000000018CBC3D58
+			bool IMouseInputSource.GetButtonUp(int button); // 0x000000018CBC3D58-0x000000018CBC3D78
+			bool IMouseInputSource.GetButton(int button); // 0x000000018CBC3D78-0x000000018CBC3D98
+			Touch ITouchInputSource.GetTouch(int index); // 0x000000018CBC3E84-0x000000018CBC3EE8
+			private void TryUpdate(); // 0x000000018CBC3F18-0x000000018CBC3F78
 		}
 	
 		// Constructors
-		protected RewiredPointerInputModule(); // 0x000000018A9CF25C-0x000000018A9CF360
+		protected RewiredPointerInputModule(); // 0x000000018CBBF01C-0x000000018CBBF120
 	
 		// Methods
-		protected bool IsDefaultMouse(IMouseInputSource mouse); // 0x000000018A9CE5FC-0x000000018A9CE618
-		public IMouseInputSource GetMouseInputSource(int playerId, int mouseIndex); // 0x000000018A9CD648-0x000000018A9CD7E0
-		public void RemoveMouseInputSource(IMouseInputSource source); // 0x000000018A9CEB4C-0x000000018A9CEBF4
-		public void AddMouseInputSource(IMouseInputSource source); // 0x000000018A9CCAE8-0x000000018A9CCBC4
-		public int GetMouseInputSourceCount(int playerId); // 0x000000018A9CD530-0x000000018A9CD648
-		public ITouchInputSource GetTouchInputSource(int playerId, int sourceIndex); // 0x000000018A9CE33C-0x000000018A9CE3B0
-		public void RemoveTouchInputSource(ITouchInputSource source); // 0x000000018A9CECA0-0x000000018A9CED1C
-		public void AddTouchInputSource(ITouchInputSource source); // 0x000000018A9CCBC4-0x000000018A9CCC88
-		public int GetTouchInputSourceCount(int playerId); // 0x000000018A9CE314-0x000000018A9CE33C
-		protected void ClearMouseInputSources(); // 0x000000018A9CCC88-0x000000018A9CCCD0
+		protected bool IsDefaultMouse(IMouseInputSource mouse); // 0x000000018CBBE378-0x000000018CBBE394
+		public IMouseInputSource GetMouseInputSource(int playerId, int mouseIndex); // 0x000000018CBBD3DC-0x000000018CBBD574
+		public void RemoveMouseInputSource(IMouseInputSource source); // 0x000000018CBBE8E4-0x000000018CBBE98C
+		public void AddMouseInputSource(IMouseInputSource source); // 0x000000018CBBC838-0x000000018CBBC914
+		public int GetMouseInputSourceCount(int playerId); // 0x000000018CBBD2C4-0x000000018CBBD3DC
+		public ITouchInputSource GetTouchInputSource(int playerId, int sourceIndex); // 0x000000018CBBE0AC-0x000000018CBBE120
+		public void RemoveTouchInputSource(ITouchInputSource source); // 0x000000018CBBEA3C-0x000000018CBBEAB8
+		public void AddTouchInputSource(ITouchInputSource source); // 0x000000018CBBC914-0x000000018CBBC9D8
+		public int GetTouchInputSourceCount(int playerId); // 0x000000018CBBE084-0x000000018CBBE0AC
+		protected void ClearMouseInputSources(); // 0x000000018CBBC9D8-0x000000018CBBCA20
 		protected abstract bool IsDefaultPlayer(int playerId);
-		protected bool GetPointerData(int playerId, int pointerIndex, int pointerTypeId, out PlayerPointerEventData data, bool create, PointerEventType pointerEventType); // 0x000000018A9CDFAC-0x000000018A9CE314
-		private PlayerPointerEventData CreatePointerEventData(int playerId, int pointerIndex, int pointerTypeId, PointerEventType pointerEventType); // 0x000000018A9CD104-0x000000018A9CD240
-		protected void RemovePointerData(PlayerPointerEventData data); // 0x000000018A9CEBF4-0x000000018A9CECA0
-		protected PlayerPointerEventData GetTouchPointerEventData(int playerId, int touchDeviceIndex, Touch input, out bool pressed, out bool released); // 0x000000018A9CE3B0-0x000000018A9CE5FC
-		protected virtual MouseState GetMousePointerEventData(int playerId, int mouseIndex); // 0x000000018A9CD7E0-0x000000018A9CDFAC
-		protected PlayerPointerEventData GetLastPointerEventData(int playerId, int pointerIndex, int pointerTypeId, bool ignorePointerTypeId, PointerEventType pointerEventType); // 0x000000018A9CD30C-0x000000018A9CD530
-		private static bool ShouldStartDrag(Vector2 pressPos, Vector2 currentPos, float threshold, bool useDragThreshold); // 0x000000018A9CED1C-0x000000018A9CED5C
-		protected virtual void ProcessMove(PlayerPointerEventData pointerEvent); // 0x000000018A9CEA68-0x000000018A9CEB4C
-		protected virtual void ProcessDrag(PlayerPointerEventData pointerEvent); // 0x000000018A9CE808-0x000000018A9CEA68
-		public override bool IsPointerOverGameObject(int pointerTypeId); // 0x000000018A9CE618-0x000000018A9CE808
-		protected void ClearSelection(); // 0x000000018A9CCCD0-0x000000018A9CD028
-		public override string ToString(); // 0x000000018A9CEDC8-0x000000018A9CF25C
-		protected void DeselectIfSelectionChanged(GameObject currentOverGo, BaseEventData pointerEvent); // 0x000000018A9CD240-0x000000018A9CD30C
-		protected void CopyFromTo(PointerEventData from, PointerEventData to); // 0x000000018A9CD028-0x000000018A9CD104
-		protected PointerEventData.FramePressState StateForMouseButton(int playerId, int mouseIndex, int buttonId); // 0x000000018A9CED5C-0x000000018A9CEDC8
+		protected bool GetPointerData(int playerId, int pointerIndex, int pointerTypeId, out PlayerPointerEventData data, bool create, PointerEventType pointerEventType); // 0x000000018CBBDD00-0x000000018CBBE084
+		private PlayerPointerEventData CreatePointerEventData(int playerId, int pointerIndex, int pointerTypeId, PointerEventType pointerEventType); // 0x000000018CBBCE74-0x000000018CBBCFB4
+		protected void RemovePointerData(PlayerPointerEventData data); // 0x000000018CBBE98C-0x000000018CBBEA3C
+		protected PlayerPointerEventData GetTouchPointerEventData(int playerId, int touchDeviceIndex, Touch input, out bool pressed, out bool released); // 0x000000018CBBE120-0x000000018CBBE378
+		protected virtual MouseState GetMousePointerEventData(int playerId, int mouseIndex); // 0x000000018CBBD574-0x000000018CBBDD00
+		protected PlayerPointerEventData GetLastPointerEventData(int playerId, int pointerIndex, int pointerTypeId, bool ignorePointerTypeId, PointerEventType pointerEventType); // 0x000000018CBBD080-0x000000018CBBD2C4
+		private static bool ShouldStartDrag(Vector2 pressPos, Vector2 currentPos, float threshold, bool useDragThreshold); // 0x000000018CBBEAB8-0x000000018CBBEAF8
+		protected virtual void ProcessMove(PlayerPointerEventData pointerEvent); // 0x000000018CBBE800-0x000000018CBBE8E4
+		protected virtual void ProcessDrag(PlayerPointerEventData pointerEvent); // 0x000000018CBBE59C-0x000000018CBBE800
+		public override bool IsPointerOverGameObject(int pointerTypeId); // 0x000000018CBBE394-0x000000018CBBE59C
+		protected void ClearSelection(); // 0x000000018CBBCA20-0x000000018CBBCD98
+		public override string ToString(); // 0x000000018CBBEB64-0x000000018CBBF01C
+		protected void DeselectIfSelectionChanged(GameObject currentOverGo, BaseEventData pointerEvent); // 0x000000018CBBCFB4-0x000000018CBBD080
+		protected void CopyFromTo(PointerEventData from, PointerEventData to); // 0x000000018CBBCD98-0x000000018CBBCE74
+		protected PointerEventData.FramePressState StateForMouseButton(int playerId, int mouseIndex, int buttonId); // 0x000000018CBBEAF8-0x000000018CBBEB64
 	}
 
-	public enum PointerEventType // TypeDefIndex: 60408
+	public enum PointerEventType // TypeDefIndex: 87587
 	{
 		Mouse = 0,
 		Touch = 1
 	}
 
 	[AddComponentMenu("Rewired/Rewired Standalone Input Module")]
-	public sealed class RewiredStandaloneInputModule : RewiredPointerInputModule // TypeDefIndex: 60410
+	public sealed class RewiredStandaloneInputModule : RewiredPointerInputModule // TypeDefIndex: 87589
 	{
 		// Fields
-		private const string DEFAULT_ACTION_MOVE_HORIZONTAL = "UIHorizontal"; // Metadata: 0x0234D9ED
-		private const string DEFAULT_ACTION_MOVE_VERTICAL = "UIVertical"; // Metadata: 0x0234D9FA
-		private const string DEFAULT_ACTION_SUBMIT = "UISubmit"; // Metadata: 0x0234DA05
-		private const string DEFAULT_ACTION_CANCEL = "UICancel"; // Metadata: 0x0234DA0E
+		private const string DEFAULT_ACTION_MOVE_HORIZONTAL = "UIHorizontal"; // Metadata: 0x026468B9
+		private const string DEFAULT_ACTION_MOVE_VERTICAL = "UIVertical"; // Metadata: 0x026468C6
+		private const string DEFAULT_ACTION_SUBMIT = "UISubmit"; // Metadata: 0x026468D1
+		private const string DEFAULT_ACTION_CANCEL = "UICancel"; // Metadata: 0x026468DA
 		[SerializeField]
 		[Tooltip("(Optional) Link the Rewired Input Manager here for easier access to Player ids, etc.")]
 		private InputManager_Base rewiredInputManager; // 0x70
@@ -1967,120 +1964,120 @@ namespace Rewired.Integration.UnityUI
 		private bool m_HasFocus; // 0x104
 	
 		// Properties
-		public InputManager_Base RewiredInputManager { get; set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
-		public bool UseAllRewiredGamePlayers { get; set; } // 0x0000000184D86F90-0x0000000184D86FA0 0x000000018A9D2DD0-0x000000018A9D2DEC
-		public bool UseRewiredSystemPlayer { get; set; } // 0x0000000184D88E40-0x0000000184D88E50 0x000000018A9D2DEC-0x000000018A9D2E08
-		public int[] RewiredPlayerIds { get; set; } // 0x000000018A9D2914-0x000000018A9D2964 0x000000018A9D2C3C-0x000000018A9D2CC8
-		public bool UsePlayingPlayersOnly { get; set; } // 0x00000001811F2750-0x00000001811F2760 0x00000001811F2760-0x00000001811F2770
-		public List<Rewired.Components.PlayerMouse> PlayerMice { get; set; } // 0x000000018A9D289C-0x000000018A9D2914 0x000000018A9D2B80-0x000000018A9D2C3C
-		public bool MoveOneElementPerAxisPress { get; set; } // 0x0000000184D86C50-0x0000000184D86C60 0x0000000184D86C70-0x0000000184D86C80
-		public bool allowMouseInput { get; set; } // 0x0000000184DA6C90-0x0000000184DA6CA0 0x0000000184DA6CE0-0x0000000184DA6CF0
-		public bool allowMouseInputIfTouchSupported { get; set; } // 0x0000000184DA6C80-0x0000000184DA6C90 0x0000000184DA6CD0-0x0000000184DA6CE0
-		public bool allowTouchInput { get; set; } // 0x0000000184DA6CA0-0x0000000184DA6CB0 0x0000000184DA6CF0-0x0000000184DA6D00
-		public bool deselectIfBackgroundClicked { get; set; } // 0x0000000184DA6CB0-0x0000000184DA6CC0 0x0000000184DA6D00-0x0000000184DA6D10
-		private bool deselectBeforeSelecting { get; set; } // 0x0000000184D90A50-0x0000000184D90A60 0x0000000184D90A60-0x0000000184D90A70
-		public bool SetActionsById { get; set; } // 0x0000000184DA34C0-0x0000000184DA34D0 0x000000018A9D2CC8-0x000000018A9D2CE0
-		public int HorizontalActionId { get; set; } // 0x0000000184D86C60-0x0000000184D86C70 0x000000018A9D2A90-0x000000018A9D2B80
-		public int VerticalActionId { get; set; } // 0x0000000184D88CD0-0x0000000184D88CE0 0x000000018A9D2E08-0x000000018A9D2EF8
-		public int SubmitActionId { get; set; } // 0x0000000184D88C90-0x0000000184D88CA0 0x000000018A9D2CE0-0x000000018A9D2DD0
-		public int CancelActionId { get; set; } // 0x0000000184D88C80-0x0000000184D88C90 0x000000018A9D29A0-0x000000018A9D2A90
-		protected override bool isMouseSupported { get; } // 0x000000018A9D2964-0x000000018A9D29A0 
-		private bool isTouchAllowed { get; } // 0x0000000184DA6CA0-0x0000000184DA6CB0 
+		public InputManager_Base RewiredInputManager { get; set; } // 0x0000000187232FC0-0x0000000187232FD0 0x0000000188800CD0-0x0000000188800CE0
+		public bool UseAllRewiredGamePlayers { get; set; } // 0x000000018226EFA0-0x000000018226EFB0 0x000000018CBC2C0C-0x000000018CBC2C28
+		public bool UseRewiredSystemPlayer { get; set; } // 0x0000000187235D90-0x0000000187235DA0 0x000000018CBC2C28-0x000000018CBC2C44
+		public int[] RewiredPlayerIds { get; set; } // 0x000000018CBC2750-0x000000018CBC27A0 0x000000018CBC2A78-0x000000018CBC2B04
+		public bool UsePlayingPlayersOnly { get; set; } // 0x000000018236FC60-0x000000018236FC70 0x000000018236FC70-0x000000018236FC80
+		public List<Rewired.Components.PlayerMouse> PlayerMice { get; set; } // 0x000000018CBC26D8-0x000000018CBC2750 0x000000018CBC29BC-0x000000018CBC2A78
+		public bool MoveOneElementPerAxisPress { get; set; } // 0x0000000182271B80-0x0000000182271B90 0x0000000182271B90-0x0000000182271BA0
+		public bool allowMouseInput { get; set; } // 0x0000000184F59D60-0x0000000184F59D70 0x0000000184F59D70-0x0000000184F59D80
+		public bool allowMouseInputIfTouchSupported { get; set; } // 0x0000000187254D10-0x0000000187254D20 0x0000000187254D60-0x0000000187254D70
+		public bool allowTouchInput { get; set; } // 0x0000000187254D20-0x0000000187254D30 0x0000000187254D70-0x0000000187254D80
+		public bool deselectIfBackgroundClicked { get; set; } // 0x0000000187254D40-0x0000000187254D50 0x0000000187254D90-0x0000000187254DA0
+		private bool deselectBeforeSelecting { get; set; } // 0x0000000187254D30-0x0000000187254D40 0x0000000187254D80-0x0000000187254D90
+		public bool SetActionsById { get; set; } // 0x0000000187248B20-0x0000000187248B30 0x000000018CBC2B04-0x000000018CBC2B1C
+		public int HorizontalActionId { get; set; } // 0x0000000182271AF0-0x0000000182271B00 0x000000018CBC28CC-0x000000018CBC29BC
+		public int VerticalActionId { get; set; } // 0x0000000187235C10-0x0000000187235C20 0x000000018CBC2C44-0x000000018CBC2D34
+		public int SubmitActionId { get; set; } // 0x0000000187235BE0-0x0000000187235BF0 0x000000018CBC2B1C-0x000000018CBC2C0C
+		public int CancelActionId { get; set; } // 0x0000000187235BD0-0x0000000187235BE0 0x000000018CBC27DC-0x000000018CBC28CC
+		protected override bool isMouseSupported { get; } // 0x000000018CBC27A0-0x000000018CBC27DC 
+		private bool isTouchAllowed { get; } // 0x0000000187254D20-0x0000000187254D30 
 		[Obsolete("allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead")]
-		public bool allowActivationOnMobileDevice { get; set; } // 0x0000000184DA6C70-0x0000000184DA6C80 0x0000000184DA6CC0-0x0000000184DA6CD0
-		public bool forceModuleActive { get; set; } // 0x0000000184DA6C70-0x0000000184DA6C80 0x0000000184DA6CC0-0x0000000184DA6CD0
-		public float inputActionsPerSecond { get; set; } // 0x0000000184D8E2E0-0x0000000184D8E2F0 0x0000000184D8E320-0x0000000184D8E330
-		public float repeatDelay { get; set; } // 0x0000000184D8E2C0-0x0000000184D8E2D0 0x0000000184D8E300-0x0000000184D8E310
-		public string horizontalAxis { get; set; } // 0x0000000184D86250-0x0000000184D86260 0x000000018A9D2FA0-0x000000018A9D3048
-		public string verticalAxis { get; set; } // 0x0000000184D85EF0-0x0000000184D85F00 0x000000018A9D30F0-0x000000018A9D3198
-		public string submitButton { get; set; } // 0x0000000184D892F0-0x0000000184D89300 0x000000018A9D3048-0x000000018A9D30F0
-		public string cancelButton { get; set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x000000018A9D2EF8-0x000000018A9D2FA0
+		public bool allowActivationOnMobileDevice { get; set; } // 0x0000000187254D00-0x0000000187254D10 0x0000000187254D50-0x0000000187254D60
+		public bool forceModuleActive { get; set; } // 0x0000000187254D00-0x0000000187254D10 0x0000000187254D50-0x0000000187254D60
+		public float inputActionsPerSecond { get; set; } // 0x000000018723B6F0-0x000000018723B700 0x000000018723B730-0x000000018723B740
+		public float repeatDelay { get; set; } // 0x000000018723B6D0-0x000000018723B6E0 0x000000018723B710-0x000000018723B720
+		public string horizontalAxis { get; set; } // 0x0000000187232F90-0x0000000187232FA0 0x000000018CBC2DDC-0x000000018CBC2E84
+		public string verticalAxis { get; set; } // 0x0000000187232C80-0x0000000187232C90 0x000000018CBC2F2C-0x000000018CBC2FD4
+		public string submitButton { get; set; } // 0x0000000187236200-0x0000000187236210 0x000000018CBC2E84-0x000000018CBC2F2C
+		public string cancelButton { get; set; } // 0x000000018723BB00-0x000000018723BB10 0x000000018CBC2D34-0x000000018CBC2DDC
 	
 		// Nested types
 		[Serializable]
-		public class PlayerSetting // TypeDefIndex: 60409
+		public class PlayerSetting // TypeDefIndex: 87588
 		{
 			// Fields
 			public int playerId; // 0x10
 			public List<Rewired.Components.PlayerMouse> playerMice; // 0x18
 	
 			// Constructors
-			public PlayerSetting(); // 0x000000018ABD38A0-0x000000018ABD3918
-			private PlayerSetting(PlayerSetting other); // 0x000000018ABD3918-0x000000018ABD3B40
+			public PlayerSetting(); // 0x000000018CDC82D0-0x000000018CDC8348
+			private PlayerSetting(PlayerSetting other); // 0x000000018CDC8348-0x000000018CDC8584
 	
 			// Methods
-			public PlayerSetting Clone(); // 0x000000018ABD3840-0x000000018ABD38A0
+			public PlayerSetting Clone(); // 0x000000018CDC8270-0x000000018CDC82D0
 		}
 	
 		// Constructors
-		private RewiredStandaloneInputModule(); // 0x000000018A9D270C-0x000000018A9D289C
+		private RewiredStandaloneInputModule(); // 0x000000018CBC2548-0x000000018CBC26D8
 	
 		// Methods
-		protected override void Awake(); // 0x000000018A9CF53C-0x000000018A9CF620
-		public override void UpdateModule(); // 0x000000018A9D26A4-0x000000018A9D270C
-		public override bool IsModuleSupported(); // 0x0000000182FFF600-0x0000000182FFF610
-		public override bool ShouldActivateModule(); // 0x000000018A9D22C4-0x000000018A9D263C
-		public override void ActivateModule(); // 0x000000018A9CF484-0x000000018A9CF53C
-		public override void DeactivateModule(); // 0x000000018A9CF828-0x000000018A9CF830
-		public override void Process(); // 0x000000018A9D14F0-0x000000018A9D15E0
-		private bool ProcessTouchEvents(); // 0x000000018A9D0DE4-0x000000018A9D0F48
-		private void ProcessTouchPress(PointerEventData pointerEvent, bool pressed, bool released); // 0x000000018A9D0F48-0x000000018A9D14F0
-		private bool SendSubmitEventToSelectedObject(); // 0x000000018A9D1904-0x000000018A9D1AF4
-		private Vector2 GetRawMoveVector(); // 0x000000018A9CFB84-0x000000018A9CFECC
-		private bool SendMoveEventToSelectedObject(); // 0x000000018A9D15E0-0x000000018A9D1904
-		private void CheckButtonOrKeyMovement(out bool downHorizontal, out bool downVertical); // 0x000000018A9CF620-0x000000018A9CF78C
-		private void ProcessMouseEvents(); // 0x000000018A9D0754-0x000000018A9D0894
-		private void ProcessMouseEvent(int playerId, int pointerIndex); // 0x000000018A9D0460-0x000000018A9D0754
-		private bool SendUpdateEventToSelectedObject(); // 0x000000018A9D1AF4-0x000000018A9D1BC8
-		private void ProcessMousePress(MouseButtonEventData data); // 0x000000018A9D0894-0x000000018A9D0DE4
-		private void HandleMouseTouchDeselectionOnSelectionChanged(GameObject currentOverGo, BaseEventData pointerEvent); // 0x000000018A9CFECC-0x000000018A9D0038
-		private void OnApplicationFocus(bool hasFocus); // 0x0000000184DA6C60-0x0000000184DA6C70
-		private bool ShouldIgnoreEventsOnNoFocus(); // 0x000000018A9D263C-0x000000018A9D26A4
-		protected override void OnDestroy(); // 0x000000018A9D032C-0x000000018A9D0440
-		protected override bool IsDefaultPlayer(int playerId); // 0x000000018A9D01D0-0x000000018A9D032C
-		private void InitializeRewired(); // 0x000000018A9D0038-0x000000018A9D01D0
-		private void SetupRewiredVars(); // 0x000000018A9D1F64-0x000000018A9D22C4
-		private void SetUpRewiredPlayerMice(); // 0x000000018A9D1E78-0x000000018A9D1F64
-		private void SetUpRewiredActions(); // 0x000000018A9D1BC8-0x000000018A9D1E78
-		private bool GetButton(Player player, int actionId); // 0x000000018A9CF9C8-0x000000018A9CF9FC
-		private bool GetButtonDown(Player player, int actionId); // 0x000000018A9CF994-0x000000018A9CF9C8
-		private bool GetNegativeButton(Player player, int actionId); // 0x000000018A9CFB50-0x000000018A9CFB84
-		private bool GetNegativeButtonDown(Player player, int actionId); // 0x000000018A9CFB1C-0x000000018A9CFB50
-		private float GetAxis(Player player, int actionId); // 0x000000018A9CF960-0x000000018A9CF994
-		private void CheckEditorRecompile(); // 0x000000018A9CF78C-0x000000018A9CF7E8
-		private void OnEditorRecompile(); // 0x000000018A9D0440-0x000000018A9D0450
-		private void ClearRewiredVars(); // 0x000000018A9CF7E8-0x000000018A9CF828
-		private bool DidAnyMouseMove(); // 0x000000018A9CF830-0x000000018A9CF960
-		private bool GetMouseButtonDownOnAnyMouse(int buttonIndex); // 0x000000018A9CF9FC-0x000000018A9CFB1C
-		private void OnRewiredInitialized(); // 0x000000018A9D0450-0x000000018A9D0458
-		private void OnRewiredShutDown(); // 0x000000018A9D0458-0x000000018A9D0460
+		protected override void Awake(); // 0x000000018CBBF300-0x000000018CBBF3E4
+		public override void UpdateModule(); // 0x000000018CBC24E0-0x000000018CBC2548
+		public override bool IsModuleSupported(); // 0x00000001851A4410-0x00000001851A4420
+		public override bool ShouldActivateModule(); // 0x000000018CBC20F0-0x000000018CBC2478
+		public override void ActivateModule(); // 0x000000018CBBF248-0x000000018CBBF300
+		public override void DeactivateModule(); // 0x000000018CBBF600-0x000000018CBBF608
+		public override void Process(); // 0x000000018CBC12E8-0x000000018CBC13D8
+		private bool ProcessTouchEvents(); // 0x000000018CBC0BDC-0x000000018CBC0D48
+		private void ProcessTouchPress(PointerEventData pointerEvent, bool pressed, bool released); // 0x000000018CBC0D48-0x000000018CBC12E8
+		private bool SendSubmitEventToSelectedObject(); // 0x000000018CBC1700-0x000000018CBC1900
+		private Vector2 GetRawMoveVector(); // 0x000000018CBBF974-0x000000018CBBFCCC
+		private bool SendMoveEventToSelectedObject(); // 0x000000018CBC13D8-0x000000018CBC1700
+		private void CheckButtonOrKeyMovement(out bool downHorizontal, out bool downVertical); // 0x000000018CBBF3E4-0x000000018CBBF564
+		private void ProcessMouseEvents(); // 0x000000018CBC0558-0x000000018CBC0690
+		private void ProcessMouseEvent(int playerId, int pointerIndex); // 0x000000018CBC0264-0x000000018CBC0558
+		private bool SendUpdateEventToSelectedObject(); // 0x000000018CBC1900-0x000000018CBC19D4
+		private void ProcessMousePress(MouseButtonEventData data); // 0x000000018CBC0690-0x000000018CBC0BDC
+		private void HandleMouseTouchDeselectionOnSelectionChanged(GameObject currentOverGo, BaseEventData pointerEvent); // 0x000000018CBBFCCC-0x000000018CBBFE38
+		private void OnApplicationFocus(bool hasFocus); // 0x0000000187254CF0-0x0000000187254D00
+		private bool ShouldIgnoreEventsOnNoFocus(); // 0x000000018CBC2478-0x000000018CBC24E0
+		protected override void OnDestroy(); // 0x000000018CBC0130-0x000000018CBC0244
+		protected override bool IsDefaultPlayer(int playerId); // 0x000000018CBBFFD0-0x000000018CBC0130
+		private void InitializeRewired(); // 0x000000018CBBFE38-0x000000018CBBFFD0
+		private void SetupRewiredVars(); // 0x000000018CBC1D7C-0x000000018CBC20F0
+		private void SetUpRewiredPlayerMice(); // 0x000000018CBC1C90-0x000000018CBC1D7C
+		private void SetUpRewiredActions(); // 0x000000018CBC19D4-0x000000018CBC1C90
+		private bool GetButton(Player player, int actionId); // 0x000000018CBBF7AC-0x000000018CBBF7E0
+		private bool GetButtonDown(Player player, int actionId); // 0x000000018CBBF778-0x000000018CBBF7AC
+		private bool GetNegativeButton(Player player, int actionId); // 0x000000018CBBF940-0x000000018CBBF974
+		private bool GetNegativeButtonDown(Player player, int actionId); // 0x000000018CBBF90C-0x000000018CBBF940
+		private float GetAxis(Player player, int actionId); // 0x000000018CBBF744-0x000000018CBBF778
+		private void CheckEditorRecompile(); // 0x000000018CBBF564-0x000000018CBBF5C0
+		private void OnEditorRecompile(); // 0x000000018CBC0244-0x000000018CBC0254
+		private void ClearRewiredVars(); // 0x000000018CBBF5C0-0x000000018CBBF600
+		private bool DidAnyMouseMove(); // 0x000000018CBBF608-0x000000018CBBF744
+		private bool GetMouseButtonDownOnAnyMouse(int buttonIndex); // 0x000000018CBBF7E0-0x000000018CBBF90C
+		private void OnRewiredInitialized(); // 0x000000018CBC0254-0x000000018CBC025C
+		private void OnRewiredShutDown(); // 0x000000018CBC025C-0x000000018CBC0264
 	}
 }
 
 namespace Rewired.Internal
 {
-	public static class ControllerTemplateFactory // TypeDefIndex: 60400
+	public static class ControllerTemplateFactory // TypeDefIndex: 87579
 	{
 		// Fields
 		private static readonly System.Type[] _defaultTemplateTypes; // 0x00
 		private static readonly System.Type[] _defaultTemplateInterfaceTypes; // 0x08
 	
 		// Properties
-		public static System.Type[] templateTypes { get; } // 0x000000018A9C7A88-0x000000018A9C7AD8 
-		public static System.Type[] templateInterfaceTypes { get; } // 0x000000018A9C7A38-0x000000018A9C7A88 
+		public static System.Type[] templateTypes { get; } // 0x000000018CBB77D4-0x000000018CBB7824 
+		public static System.Type[] templateInterfaceTypes { get; } // 0x000000018CBB7784-0x000000018CBB77D4 
 	
 		// Constructors
-		static ControllerTemplateFactory(); // 0x00000001847F2CF0-0x00000001847F3080
+		static ControllerTemplateFactory(); // 0x0000000186C7F550-0x0000000186C7F8E0
 	
 		// Methods
-		public static IControllerTemplate Create(Guid typeGuid, object payload); // 0x000000018A9C77FC-0x000000018A9C7A38
+		public static IControllerTemplate Create(Guid typeGuid, object payload); // 0x000000018CBB74C0-0x000000018CBB7784
 	}
 }
 
 namespace Rewired.Localization
 {
 	[AddComponentMenu("Rewired/Localization/Localized String Provider")]
-	public class LocalizedStringProvider : LocalizedStringProviderBase // TypeDefIndex: 60411
+	public class LocalizedStringProvider : LocalizedStringProviderBase // TypeDefIndex: 87590
 	{
 		// Fields
 		[SerializeField]
@@ -2092,20 +2089,20 @@ namespace Rewired.Localization
 		private bool _initialized; // 0x30
 	
 		// Properties
-		protected virtual Dictionary<string, string> dictionary { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public virtual TextAsset localizedStringsFile { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x000000018ABD381C-0x000000018ABD3840
-		protected override bool initialized { get; } // 0x0000000184D865F0-0x0000000184D86600 
+		protected virtual Dictionary<string, string> dictionary { get; set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public virtual TextAsset localizedStringsFile { get; set; } // 0x000000018225E800-0x000000018225E810 0x000000018CDC824C-0x000000018CDC8270
+		protected override bool initialized { get; } // 0x00000001822434B0-0x00000001822434C0 
 	
 		// Constructors
-		public LocalizedStringProvider(); // 0x000000018ABD379C-0x000000018ABD381C
+		public LocalizedStringProvider(); // 0x000000018CDC81CC-0x000000018CDC824C
 	
 		// Methods
-		protected override bool Initialize(); // 0x000000018ABD3578-0x000000018ABD3594
-		protected virtual bool TryLoadLocalizedStringData(); // 0x000000018ABD3610-0x000000018ABD379C
-		protected override bool TryGetLocalizedString(string key, out string result); // 0x000000018ABD3594-0x000000018ABD3610
+		protected override bool Initialize(); // 0x000000018CDC7FA4-0x000000018CDC7FC0
+		protected virtual bool TryLoadLocalizedStringData(); // 0x000000018CDC8040-0x000000018CDC81CC
+		protected override bool TryGetLocalizedString(string key, out string result); // 0x000000018CDC7FC0-0x000000018CDC8040
 	}
 
-	public abstract class LocalizedStringProviderBase : MonoBehaviour, ILocalizedStringProvider // TypeDefIndex: 60412
+	public abstract class LocalizedStringProviderBase : MonoBehaviour, ILocalizedStringProvider // TypeDefIndex: 87591
 	{
 		// Fields
 		[SerializeField]
@@ -2113,28 +2110,28 @@ namespace Rewired.Localization
 		private bool _prefetch; // 0x18
 	
 		// Properties
-		public virtual bool prefetch { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x000000018ABD34A4-0x000000018ABD3578
+		public virtual bool prefetch { get; set; } // 0x000000018225E050-0x000000018225E060 0x000000018CDC7ED0-0x000000018CDC7FA4
 		protected abstract bool initialized { get; }
 	
 		// Constructors
-		protected LocalizedStringProviderBase(); // 0x0000000185393520-0x0000000185393538
+		protected LocalizedStringProviderBase(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected virtual void OnEnable(); // 0x000000018ABD31A0-0x000000018ABD31D8
-		protected virtual void OnDisable(); // 0x000000018ABD30B0-0x000000018ABD31A0
-		protected virtual void Update(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void TrySetLocalizedStringProvider(); // 0x000000018ABD32F0-0x000000018ABD34A4
+		protected virtual void OnEnable(); // 0x000000018CDC7BCC-0x000000018CDC7C04
+		protected virtual void OnDisable(); // 0x000000018CDC7ADC-0x000000018CDC7BCC
+		protected virtual void Update(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void TrySetLocalizedStringProvider(); // 0x000000018CDC7D1C-0x000000018CDC7ED0
 		protected abstract bool Initialize();
-		public virtual void Reload(); // 0x000000018ABD31D8-0x000000018ABD32A4
+		public virtual void Reload(); // 0x000000018CDC7C04-0x000000018CDC7CD0
 		protected abstract bool TryGetLocalizedString(string key, out string result);
-		bool ILocalizedStringProvider.TryGetLocalizedString(string key, out string result); // 0x000000018ABD32A4-0x000000018ABD32F0
+		bool ILocalizedStringProvider.TryGetLocalizedString(string key, out string result); // 0x000000018CDC7CD0-0x000000018CDC7D1C
 	}
 }
 
 namespace Rewired.Utils
 {
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public class ExternalTools : IExternalTools // TypeDefIndex: 60372
+	public class ExternalTools : IExternalTools // TypeDefIndex: 87551
 	{
 		// Fields
 		private static Func<object> _getPlatformInitializerDelegate; // 0x00
@@ -2144,46 +2141,46 @@ namespace Rewired.Utils
 		private Action<uint, bool> XboxOneInput_OnGamepadStateChange; // 0x20
 	
 		// Properties
-		public static Func<object> getPlatformInitializerDelegate { get; set; } // 0x000000018A9C8428-0x000000018A9C8460 0x000000018A9C8560-0x000000018A9C85B0
-		public bool isEditorPaused { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
-		public bool UnityInput_IsTouchPressureSupported { get; } // 0x000000018A9C8420-0x000000018A9C8428 
+		public static Func<object> getPlatformInitializerDelegate { get; set; } // 0x000000018CBB8178-0x000000018CBB81B0 0x000000018CBB82B0-0x000000018CBB8300
+		public bool isEditorPaused { get; } // 0x00000001829D0800-0x00000001829D0810 
+		public bool UnityInput_IsTouchPressureSupported { get; } // 0x000000018CBB8170-0x000000018CBB8178 
 	
 		// Events
 		public event Action<bool> EditorPausedStateChangedEvent {
-			add; // 0x00000001842B37C0-0x00000001842B3840
-			remove; // 0x000000018A9C8460-0x000000018A9C84D4
+			add; // 0x0000000187121DE0-0x0000000187121E60
+			remove; // 0x000000018CBB81B0-0x000000018CBB8224
 		}
 		public event Action<uint, bool> XboxOneInput_OnGamepadStateChange {
-			add; // 0x000000018A9C8394-0x000000018A9C8420
-			remove; // 0x000000018A9C84D4-0x000000018A9C8560
+			add; // 0x000000018CBB80E4-0x000000018CBB8170
+			remove; // 0x000000018CBB8224-0x000000018CBB82B0
 		}
 	
 		// Constructors
-		public ExternalTools(); // 0x00000001841E1670-0x00000001841E1680
+		public ExternalTools(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public void Destroy(); // 0x00000001841E1670-0x00000001841E1680
-		public object GetPlatformInitializer(); // 0x000000018539494C-0x0000000185394954
-		public string GetFocusedEditorWindowTitle(); // 0x000000018A9C81E8-0x000000018A9C8220
-		public bool IsEditorSceneViewFocused(); // 0x00000001812081B0-0x0000000181208610
-		public bool LinuxInput_IsJoystickPreconfigured(string name); // 0x00000001812081B0-0x0000000181208610
-		public int XboxOneInput_GetUserIdForGamepad(uint id); // 0x00000001811EC580-0x00000001811EC590
-		public ulong XboxOneInput_GetControllerId(uint unityJoystickId); // 0x00000001811EC580-0x00000001811EC590
-		public bool XboxOneInput_IsGamepadActive(uint unityJoystickId); // 0x00000001812081B0-0x0000000181208610
-		public string XboxOneInput_GetControllerType(ulong xboxControllerId); // 0x000000018A9C835C-0x000000018A9C8394
-		public uint XboxOneInput_GetJoystickId(ulong xboxControllerId); // 0x00000001811EC580-0x00000001811EC590
-		public void XboxOne_Gamepad_UpdatePlugin(); // 0x00000001841E1670-0x00000001841E1680
-		public bool XboxOne_Gamepad_SetGamepadVibration(ulong xboxOneJoystickId, float leftMotor, float rightMotor, float leftTriggerLevel, float rightTriggerLevel); // 0x00000001812081B0-0x0000000181208610
-		public void XboxOne_Gamepad_PulseVibrateMotor(ulong xboxOneJoystickId, int motorInt, float startLevel, float endLevel, ulong durationMS); // 0x00000001841E1670-0x00000001841E1680
-		public void GetDeviceVIDPIDs(out List<int> vids, out List<int> pids); // 0x000000018A9C8138-0x000000018A9C81E8
-		public int GetAndroidAPILevel(); // 0x0000000184DA2BB0-0x0000000184DA2BC0
-		public void WindowsStandalone_ForwardRawInput(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // 0x0000000184031BA0-0x0000000184031C00
-		public bool UnityUI_Graphic_GetRaycastTarget(object graphic); // 0x000000018A9C8220-0x000000018A9C82B4
-		public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value); // 0x000000018A9C82B4-0x000000018A9C835C
-		public float UnityInput_GetTouchPressure(ref Touch touch); // 0x0000000184DA6C20-0x0000000184DA6C30
-		public float UnityInput_GetTouchMaximumPossiblePressure(ref Touch touch); // 0x0000000184DA6C10-0x0000000184DA6C20
-		public IControllerTemplate CreateControllerTemplate(Guid typeGuid, object payload); // 0x000000018A9C80DC-0x000000018A9C8138
-		public System.Type[] GetControllerTemplateTypes(); // 0x000000018381A8D0-0x000000018381A9A0
-		public System.Type[] GetControllerTemplateInterfaceTypes(); // 0x000000018381A9A0-0x000000018381AA40
+		public void Destroy(); // 0x0000000186805BA0-0x0000000186805BB0
+		public object GetPlatformInitializer(); // 0x000000018783D134-0x000000018783D13C
+		public string GetFocusedEditorWindowTitle(); // 0x000000018CBB7F38-0x000000018CBB7F70
+		public bool IsEditorSceneViewFocused(); // 0x00000001843FFFF0-0x0000000184400000
+		public bool LinuxInput_IsJoystickPreconfigured(string name); // 0x00000001843FFFF0-0x0000000184400000
+		public int XboxOneInput_GetUserIdForGamepad(uint id); // 0x0000000185829EC0-0x0000000185829ED0
+		public ulong XboxOneInput_GetControllerId(uint unityJoystickId); // 0x0000000185829EC0-0x0000000185829ED0
+		public bool XboxOneInput_IsGamepadActive(uint unityJoystickId); // 0x00000001843FFFF0-0x0000000184400000
+		public string XboxOneInput_GetControllerType(ulong xboxControllerId); // 0x000000018CBB80AC-0x000000018CBB80E4
+		public uint XboxOneInput_GetJoystickId(ulong xboxControllerId); // 0x0000000185829EC0-0x0000000185829ED0
+		public void XboxOne_Gamepad_UpdatePlugin(); // 0x0000000186805BA0-0x0000000186805BB0
+		public bool XboxOne_Gamepad_SetGamepadVibration(ulong xboxOneJoystickId, float leftMotor, float rightMotor, float leftTriggerLevel, float rightTriggerLevel); // 0x00000001843FFFF0-0x0000000184400000
+		public void XboxOne_Gamepad_PulseVibrateMotor(ulong xboxOneJoystickId, int motorInt, float startLevel, float endLevel, ulong durationMS); // 0x0000000186805BA0-0x0000000186805BB0
+		public void GetDeviceVIDPIDs(out List<int> vids, out List<int> pids); // 0x000000018CBB7E88-0x000000018CBB7F38
+		public int GetAndroidAPILevel(); // 0x0000000184E58B60-0x0000000184E58B70
+		public void WindowsStandalone_ForwardRawInput(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // 0x00000001861A0470-0x00000001861A0510
+		public bool UnityUI_Graphic_GetRaycastTarget(object graphic); // 0x000000018CBB7F70-0x000000018CBB8004
+		public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value); // 0x000000018CBB8004-0x000000018CBB80AC
+		public float UnityInput_GetTouchPressure(ref Touch touch); // 0x0000000187254CC0-0x0000000187254CD0
+		public float UnityInput_GetTouchMaximumPossiblePressure(ref Touch touch); // 0x0000000187254CB0-0x0000000187254CC0
+		public IControllerTemplate CreateControllerTemplate(Guid typeGuid, object payload); // 0x000000018CBB7E2C-0x000000018CBB7E88
+		public System.Type[] GetControllerTemplateTypes(); // 0x0000000185B6F2C0-0x0000000185B6F390
+		public System.Type[] GetControllerTemplateInterfaceTypes(); // 0x0000000185B6F390-0x0000000185B6F430
 	}
 }

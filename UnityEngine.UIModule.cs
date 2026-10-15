@@ -11,168 +11,11 @@ using UnityEngine;
 using UnityEngine.Bindings;
 using UnityEngine.Scripting;
 
-// Image 100: UnityEngine.UIModule.dll - Assembly: UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63196-63218
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 100: UnityEngine.UIModule.dll - Assembly: UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 90585-90607
 
 namespace UnityEngine
 {
-	public interface ICanvasRaycastFilter // TypeDefIndex: 63197
+	public interface ICanvasRaycastFilter // TypeDefIndex: 90586
 	{
 		// Methods
 		bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera);
@@ -180,32 +23,32 @@ namespace UnityEngine
 
 	[NativeClass("UI::CanvasGroup")]
 	[NativeHeader("Modules/UI/CanvasGroup.h")]
-	public sealed class CanvasGroup : UnityEngine.Behaviour, ICanvasRaycastFilter // TypeDefIndex: 63198
+	public sealed class CanvasGroup : UnityEngine.Behaviour, ICanvasRaycastFilter // TypeDefIndex: 90587
 	{
 		// Properties
 		[NativeProperty("Color", false, UnityEngine.Bindings.TargetType.Function)]
-		public UnityEngine.Color color { get; set; } // 0x0000000182FA9CA0-0x0000000182FA9D00 0x0000000185390B3C-0x0000000185390B50
+		public UnityEngine.Color color { get; set; } // 0x00000001857E42F0-0x00000001857E4320 0x0000000187837B18-0x0000000187837B2C
 		[NativeProperty("Alpha", false, UnityEngine.Bindings.TargetType.Function)]
-		public float alpha { get; set; } // 0x0000000183966E10-0x0000000183966E50 0x0000000183046300-0x0000000183046350
+		public float alpha { get; set; } // 0x00000001857A3710-0x00000001857A3750 0x0000000185359A20-0x0000000185359A70
 		[NativeProperty("Interactable", false, UnityEngine.Bindings.TargetType.Function)]
-		public bool interactable { get; set; } // 0x0000000182FC7E30-0x0000000182FC7E70 0x00000001839D4A20-0x00000001839D4A70
+		public bool interactable { get; set; } // 0x00000001851C77C0-0x00000001851C7800 0x0000000186779E50-0x0000000186779EA0
 		[NativeProperty("BlocksRaycasts", false, UnityEngine.Bindings.TargetType.Function)]
-		public bool blocksRaycasts { get; set; } // 0x00000001830912E0-0x0000000183091320 0x00000001839D4B90-0x00000001839D4BE0
+		public bool blocksRaycasts { get; set; } // 0x00000001861A1F40-0x00000001861A1F80 0x0000000186779FC0-0x000000018677A010
 		[NativeProperty("IgnoreParentGroups", false, UnityEngine.Bindings.TargetType.Function)]
-		public bool ignoreParentGroups { get; set; } // 0x0000000182FC7DF0-0x0000000182FC7E30 0x000000018B567398-0x000000018B5673DC
+		public bool ignoreParentGroups { get; set; } // 0x00000001851C7800-0x00000001851C7840 0x000000018D691FD0-0x000000018D692014
 	
 		// Constructors
-		public CanvasGroup(); // 0x0000000185393520-0x0000000185393538
+		public CanvasGroup(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera); // 0x0000000185390FCC-0x0000000185390FD8
-		private void get_color_Injected(out UnityEngine.Color ret); // 0x0000000182FA9D00-0x0000000182FA9D50
-		private void set_color_Injected(ref UnityEngine.Color value); // 0x0000000183B143B0-0x0000000183B14400
+		public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera); // 0x0000000187835B10-0x0000000187835B1C
+		private void get_color_Injected(out UnityEngine.Color ret); // 0x00000001857E4320-0x00000001857E4370
+		private void set_color_Injected(ref UnityEngine.Color value); // 0x00000001850D0820-0x00000001850D0870
 	}
 
 	[NativeClass("UI::CanvasRenderer")]
 	[NativeHeader("Modules/UI/CanvasRenderer.h")]
-	public sealed class CanvasRenderer : Component // TypeDefIndex: 63203
+	public sealed class CanvasRenderer : Component // TypeDefIndex: 90592
 	{
 		// Fields
 		[CompilerGenerated]
@@ -213,19 +56,19 @@ namespace UnityEngine
 		private bool _isMask_k__BackingField; // 0x18
 	
 		// Properties
-		public bool hasPopInstruction { set; } // 0x00000001841D2390-0x00000001841D23E0
-		public int materialCount { get; set; } // 0x0000000182EDDCF0-0x0000000182EDDD30 0x00000001831BD070-0x00000001831BD0C0
-		public int popMaterialCount { set; } // 0x00000001841D22D0-0x00000001841D2320
-		public int absoluteDepth { get; } // 0x00000001831BF7C0-0x00000001831BF800 
-		public bool hasMoved { get; } // 0x000000018B567684-0x000000018B5676B8 
-		public bool cullTransparentMesh { get; set; } // 0x000000018418F2D0-0x000000018418F310 0x000000018B5676B8-0x000000018B5676FC
+		public bool hasPopInstruction { set; } // 0x00000001852DF970-0x00000001852DF9C0
+		public int materialCount { get; set; } // 0x0000000185A08AD0-0x0000000185A08B10 0x00000001852E3850-0x00000001852E38A0
+		public int popMaterialCount { set; } // 0x00000001852DF9C0-0x00000001852DFA10
+		public int absoluteDepth { get; } // 0x0000000185148610-0x0000000185148650 
+		public bool hasMoved { get; } // 0x000000018D6922BC-0x000000018D6922F0 
+		public bool cullTransparentMesh { get; set; } // 0x00000001862A50F0-0x00000001862A5130 0x0000000186B24DB0-0x0000000186B24E00
 		[NativeProperty("ShouldCull", false, UnityEngine.Bindings.TargetType.Function)]
-		public bool cull { get; set; } // 0x00000001831BEDB0-0x00000001831BEDF0 0x0000000183519F70-0x0000000183519FC0
-		public Vector2 clippingSoftness { set; } // 0x0000000185391498-0x00000001853914B4
-		public Vector4 clippingHGSoftness { set; } // 0x0000000185391484-0x0000000185391498
+		public bool cull { get; set; } // 0x00000001851485D0-0x0000000185148610 0x0000000185044AA0-0x0000000185044AF0
+		public Vector2 clippingSoftness { set; } // 0x0000000187834D44-0x0000000187834D60
+		public Vector4 clippingHGSoftness { set; } // 0x0000000187834D30-0x0000000187834D44
 	
 		// Nested types
-		public enum HGFillMethod // TypeDefIndex: 63199
+		public enum HGFillMethod // TypeDefIndex: 90588
 		{
 			Horizontal = 0,
 			Vertical = 1,
@@ -234,7 +77,7 @@ namespace UnityEngine
 			Radial360 = 4
 		}
 	
-		public enum HGImageType // TypeDefIndex: 63200
+		public enum HGImageType // TypeDefIndex: 90589
 		{
 			Simple = 0,
 			Sliced = 1,
@@ -246,7 +89,7 @@ namespace UnityEngine
 	
 		[NativeHeader("Modules/UI/HGUI/HGImage.h")]
 		[NativeType(CodegenOptions.Custom, "HyperGryph::HGImageData")]
-		public struct HGImageData // TypeDefIndex: 63201
+		public struct HGImageData // TypeDefIndex: 90590
 		{
 			// Fields
 			public HGImageType type; // 0x00
@@ -261,7 +104,7 @@ namespace UnityEngine
 			public bool fillClockwise; // 0x1E
 		}
 	
-		public struct InstanceRange // TypeDefIndex: 63202
+		public struct InstanceRange // TypeDefIndex: 90591
 		{
 			// Fields
 			public ushort start; // 0x00
@@ -269,48 +112,48 @@ namespace UnityEngine
 		}
 	
 		// Methods
-		public void SetColor(UnityEngine.Color color); // 0x00000001843ED860-0x00000001843ED880
-		public UnityEngine.Color GetColor(); // 0x000000018343F240-0x000000018343F2A0
-		public void EnableRectClipping(Rect rect); // 0x00000001853916A8-0x00000001853916BC
-		public void DisableRectClipping(); // 0x00000001831EB190-0x00000001831EB1D0
-		public void SetMaterial(Material material, int index); // 0x00000001831BD010-0x00000001831BD070
-		public Material GetMaterial(int index); // 0x000000018B5674C0-0x000000018B567500
-		public void SetPopMaterial(Material material, int index); // 0x00000001841D2320-0x00000001841D2380
-		public void SetTexture(Texture texture); // 0x00000001831BD0C0-0x00000001831BD110
-		public void SetAlphaTexture(Texture texture); // 0x0000000183F20C10-0x0000000183F20C60
-		public void SetMesh(Mesh mesh); // 0x00000001831F2610-0x00000001831F2660
-		public void Clear(); // 0x000000018351A5F0-0x000000018351A630
-		public void SetImageMeshRebuildData(HGImageData imageData, Sprite sprite, Rect adjustedRect); // 0x000000018B567558-0x000000018B567570
-		public void SetAlpha(float alpha); // 0x000000018B567500-0x000000018B567558
-		public float GetInheritedAlpha(); // 0x00000001833A0AE0-0x00000001833A0B20
-		public void SetMaterial(Material material, Texture texture); // 0x0000000182EDDC40-0x0000000182EDDCF0
-		public Material GetMaterial(); // 0x000000018B5674B4-0x000000018B5674C0
-		public static void SplitUIVertexStreams(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents, List<int> indices); // 0x000000018B567618-0x000000018B567684
-		public static void CreateUIVertexStream(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents, List<int> indices); // 0x000000018B567450-0x000000018B5674B4
-		public static void AddUIVertexStream(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents); // 0x000000018B5673DC-0x000000018B5673EC
+		public void SetColor(UnityEngine.Color color); // 0x0000000186199ED0-0x0000000186199F20
+		public UnityEngine.Color GetColor(); // 0x0000000185576C50-0x0000000185576CB0
+		public void EnableRectClipping(Rect rect); // 0x000000018783A0E0-0x000000018783A0F4
+		public void DisableRectClipping(); // 0x0000000185CEADB0-0x0000000185CEADF0
+		public void SetMaterial(Material material, int index); // 0x00000001852E38A0-0x00000001852E3900
+		public Material GetMaterial(int index); // 0x000000018D6920F8-0x000000018D692138
+		public void SetPopMaterial(Material material, int index); // 0x00000001852DF2C0-0x00000001852DF320
+		public void SetTexture(Texture texture); // 0x00000001852E3800-0x00000001852E3850
+		public void SetAlphaTexture(Texture texture); // 0x00000001861A1320-0x00000001861A1370
+		public void SetMesh(Mesh mesh); // 0x00000001856C0720-0x00000001856C0770
+		public void Clear(); // 0x00000001850FEBE0-0x00000001850FEC20
+		public void SetImageMeshRebuildData(HGImageData imageData, Sprite sprite, Rect adjustedRect); // 0x000000018D692190-0x000000018D6921A8
+		public void SetAlpha(float alpha); // 0x000000018D692138-0x000000018D692190
+		public float GetInheritedAlpha(); // 0x0000000185140550-0x0000000185140590
+		public void SetMaterial(Material material, Texture texture); // 0x0000000185A08A20-0x0000000185A08AD0
+		public Material GetMaterial(); // 0x000000018D6920EC-0x000000018D6920F8
+		public static void SplitUIVertexStreams(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents, List<int> indices); // 0x000000018D692250-0x000000018D6922BC
+		public static void CreateUIVertexStream(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents, List<int> indices); // 0x000000018D692088-0x000000018D6920EC
+		public static void AddUIVertexStream(List<UIVertex> verts, List<Vector3> positions, List<Color32> colors, List<Vector4> uv0S, List<Vector4> uv1S, List<Vector4> uv2S, List<Vector4> uv3S, List<Vector3> normals, List<Vector4> tangents); // 0x000000018D692014-0x000000018D692024
 		[StaticAccessor("UI", StaticAccessorType.DoubleColon)]
-		private static void SplitIndicesStreamsInternal(object verts, object indices); // 0x000000018B567570-0x000000018B5675B4
+		private static void SplitIndicesStreamsInternal(object verts, object indices); // 0x000000018D6921A8-0x000000018D6921EC
 		[StaticAccessor("UI", StaticAccessorType.DoubleColon)]
-		private static void SplitUIVertexStreamsInternal(object verts, object positions, object colors, object uv0S, object uv1S, object uv2S, object uv3S, object normals, object tangents); // 0x000000018B5675B4-0x000000018B567618
+		private static void SplitUIVertexStreamsInternal(object verts, object positions, object colors, object uv0S, object uv1S, object uv2S, object uv3S, object normals, object tangents); // 0x000000018D6921EC-0x000000018D692250
 		[StaticAccessor("UI", StaticAccessorType.DoubleColon)]
-		private static void CreateUIVertexStreamInternal(object verts, object positions, object colors, object uv0S, object uv1S, object uv2S, object uv3S, object normals, object tangents, object indices); // 0x000000018B5673EC-0x000000018B567450
-		private unsafe void UpdateInstanceRange(uint rangeCount, void* ranges); // 0x0000000183AA7CD0-0x0000000183AA7D30
-		public void UpdateInstanceRange(uint rangeCount, NativeArray<InstanceRange> rangers); // 0x0000000183AA7C70-0x0000000183AA7CD0
-		private unsafe void* BeginInstanceBufferWrite(uint count, uint stride); // 0x0000000183D21200-0x0000000183D21260
-		private unsafe void* BeginPrefabBufferWrite(uint count, uint stride); // 0x00000001844C5000-0x00000001844C5060
-		public void EndInstanceBufferWrite(); // 0x00000001833C6CD0-0x00000001833C6D10
-		public void EndPrefabBufferWrite(); // 0x00000001845A7E00-0x00000001845A7E40
+		private static void CreateUIVertexStreamInternal(object verts, object positions, object colors, object uv0S, object uv1S, object uv2S, object uv3S, object normals, object tangents, object indices); // 0x000000018D692024-0x000000018D692088
+		private unsafe void UpdateInstanceRange(uint rangeCount, void* ranges); // 0x000000018544BF30-0x000000018544BF90
+		public void UpdateInstanceRange(uint rangeCount, NativeArray<InstanceRange> rangers); // 0x000000018544BED0-0x000000018544BF30
+		private unsafe void* BeginInstanceBufferWrite(uint count, uint stride); // 0x0000000185F2B4A0-0x0000000185F2B500
+		private unsafe void* BeginPrefabBufferWrite(uint count, uint stride); // 0x000000018682B580-0x000000018682B5E0
+		public void EndInstanceBufferWrite(); // 0x0000000185447B60-0x0000000185447BA0
+		public void EndPrefabBufferWrite(); // 0x000000018697DBE0-0x000000018697DC20
 		public NativeArray<T> BeginInstanceDataWrite<T>(int count)
 			where T : struct;
 		public NativeArray<T> BeginPrefabBufferWrite<T>(int count)
 			where T : struct;
-		public void EnableInstance(); // 0x0000000183941830-0x0000000183941870
-		private void SetColor_Injected(ref UnityEngine.Color color); // 0x00000001843ED880-0x00000001843ED8D0
-		private void GetColor_Injected(out UnityEngine.Color ret); // 0x000000018343F2A0-0x000000018343F2F0
-		private void EnableRectClipping_Injected(ref Rect rect); // 0x00000001840F3870-0x00000001840F38C0
-		private void set_clippingSoftness_Injected(ref Vector2 value); // 0x0000000183AC9A30-0x0000000183AC9A80
-		private void set_clippingHGSoftness_Injected(ref Vector4 value); // 0x0000000183AC9A80-0x0000000183AC9B40
-		private void SetImageMeshRebuildData_Injected(ref HGImageData imageData, Sprite sprite, ref Rect adjustedRect); // 0x00000001834AD380-0x00000001834AD3F0
+		public void EnableInstance(); // 0x00000001867DD450-0x00000001867DD490
+		private void SetColor_Injected(ref UnityEngine.Color color); // 0x0000000186199F20-0x0000000186199F70
+		private void GetColor_Injected(out UnityEngine.Color ret); // 0x0000000185576CB0-0x0000000185576D00
+		private void EnableRectClipping_Injected(ref Rect rect); // 0x0000000185CEADF0-0x0000000185CEAE40
+		private void set_clippingSoftness_Injected(ref Vector2 value); // 0x0000000185B6BC30-0x0000000185B6BC80
+		private void set_clippingHGSoftness_Injected(ref Vector4 value); // 0x0000000185B6BC80-0x0000000185B6BCD0
+		private void SetImageMeshRebuildData_Injected(ref HGImageData imageData, Sprite sprite, ref Rect adjustedRect); // 0x00000001864486B0-0x0000000186448720
 	}
 
 	[NativeHeader("Runtime/Transform/RectTransform.h")]
@@ -318,37 +161,37 @@ namespace UnityEngine
 	[NativeHeader("Modules/UI/Canvas.h")]
 	[NativeHeader("Runtime/Camera/Camera.h")]
 	[StaticAccessor("UI", StaticAccessorType.DoubleColon)]
-	public sealed class RectTransformUtility // TypeDefIndex: 63204
+	public sealed class RectTransformUtility // TypeDefIndex: 90593
 	{
 		// Fields
 		private static readonly Vector3[] s_Corners; // 0x00
 	
 		// Constructors
-		private RectTransformUtility(); // 0x00000001841E1670-0x00000001841E1680
-		static RectTransformUtility(); // 0x0000000184D36610-0x0000000184D36680
+		private RectTransformUtility(); // 0x0000000186805BA0-0x0000000186805BB0
+		static RectTransformUtility(); // 0x00000001871DAC50-0x00000001871DACC0
 	
 		// Methods
-		public static Vector2 PixelAdjustPoint(Vector2 point, Transform elementTransform, Canvas canvas); // 0x000000018B5688E4-0x000000018B568954
-		public static Rect PixelAdjustRect(RectTransform rectTransform, Canvas canvas); // 0x000000018B5689A8-0x000000018B568A14
-		private static bool PointInRectangle(Vector2 screenPoint, RectTransform rect, Camera cam, Vector4 offset); // 0x00000001831BEB80-0x00000001831BEC00
-		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint); // 0x000000018B568A14-0x000000018B568A6C
-		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint, Camera cam); // 0x0000000183091150-0x00000001830911F0
-		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint, Camera cam, Vector4 offset); // 0x00000001831BEAD0-0x00000001831BEB80
-		public static bool ScreenPointToWorldPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam, out Vector3 worldPoint); // 0x0000000183095B10-0x0000000183095EC0
-		public static bool ScreenPointToLocalPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam, out Vector2 localPoint); // 0x0000000183095A10-0x0000000183095B10
-		public static Ray ScreenPointToRay(Camera cam, Vector2 screenPos); // 0x0000000183095F50-0x00000001830960D0
-		public static Vector2 WorldToScreenPoint(Camera cam, Vector3 worldPoint); // 0x0000000183097530-0x0000000183097620
-		public static Bounds CalculateRelativeRectTransformBounds(Transform root, Transform child); // 0x000000018B568030-0x000000018B5683B0
-		public static Bounds CalculateRelativeRectTransformBounds(Transform trans); // 0x000000018B5683B0-0x000000018B568428
-		public static void FlipLayoutOnAxis(RectTransform rect, int axis, bool keepPositioning, bool recursive); // 0x000000018B568640-0x000000018B568880
-		public static void FlipLayoutAxes(RectTransform rect, bool keepPositioning, bool recursive); // 0x000000018B568428-0x000000018B568640
-		private static Vector2 GetTransposed(Vector2 input); // 0x0000000184DBEF00-0x0000000184DBEF20
-		private static void PixelAdjustPoint_Injected(ref Vector2 point, Transform elementTransform, Canvas canvas, out Vector2 ret); // 0x000000018B568880-0x000000018B5688E4
-		private static void PixelAdjustRect_Injected(RectTransform rectTransform, Canvas canvas, out Rect ret); // 0x000000018B568954-0x000000018B5689A8
-		private static bool PointInRectangle_Injected(ref Vector2 screenPoint, RectTransform rect, Camera cam, ref Vector4 offset); // 0x00000001831BEC00-0x00000001831BEC70
+		public static Vector2 PixelAdjustPoint(Vector2 point, Transform elementTransform, Canvas canvas); // 0x000000018D6934BC-0x000000018D693530
+		public static Rect PixelAdjustRect(RectTransform rectTransform, Canvas canvas); // 0x000000018D693584-0x000000018D6935F0
+		private static bool PointInRectangle(Vector2 screenPoint, RectTransform rect, Camera cam, Vector4 offset); // 0x0000000185147AF0-0x0000000185147B70
+		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint); // 0x000000018D6935F0-0x000000018D693648
+		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint, Camera cam); // 0x0000000185F2C880-0x0000000185F2C920
+		public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint, Camera cam, Vector4 offset); // 0x0000000185147A40-0x0000000185147AF0
+		public static bool ScreenPointToWorldPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam, out Vector3 worldPoint); // 0x000000018550F140-0x000000018550F790
+		public static bool ScreenPointToLocalPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam, out Vector2 localPoint); // 0x000000018550EE20-0x000000018550EF20
+		public static Ray ScreenPointToRay(Camera cam, Vector2 screenPos); // 0x000000018550F820-0x000000018550F9D0
+		public static Vector2 WorldToScreenPoint(Camera cam, Vector3 worldPoint); // 0x00000001856BC610-0x00000001856BC700
+		public static Bounds CalculateRelativeRectTransformBounds(Transform root, Transform child); // 0x000000018D692BE4-0x000000018D692F84
+		public static Bounds CalculateRelativeRectTransformBounds(Transform trans); // 0x000000018D692F84-0x000000018D692FFC
+		public static void FlipLayoutOnAxis(RectTransform rect, int axis, bool keepPositioning, bool recursive); // 0x000000018D693214-0x000000018D693458
+		public static void FlipLayoutAxes(RectTransform rect, bool keepPositioning, bool recursive); // 0x000000018D692FFC-0x000000018D693214
+		private static Vector2 GetTransposed(Vector2 input); // 0x0000000187263D90-0x0000000187263DB0
+		private static void PixelAdjustPoint_Injected(ref Vector2 point, Transform elementTransform, Canvas canvas, out Vector2 ret); // 0x000000018D693458-0x000000018D6934BC
+		private static void PixelAdjustRect_Injected(RectTransform rectTransform, Canvas canvas, out Rect ret); // 0x000000018D693530-0x000000018D693584
+		private static bool PointInRectangle_Injected(ref Vector2 screenPoint, RectTransform rect, Camera cam, ref Vector4 offset); // 0x0000000185147B70-0x0000000185147BE0
 	}
 
-	public enum RenderMode // TypeDefIndex: 63205
+	public enum RenderMode // TypeDefIndex: 90594
 	{
 		ScreenSpaceOverlay = 0,
 		ScreenSpaceCamera = 1,
@@ -356,7 +199,7 @@ namespace UnityEngine
 	}
 
 	[Flags]
-	public enum AdditionalCanvasShaderChannels // TypeDefIndex: 63206
+	public enum AdditionalCanvasShaderChannels // TypeDefIndex: 90595
 	{
 		None = 0,
 		TexCoord1 = 1,
@@ -371,7 +214,7 @@ namespace UnityEngine
 	[NativeHeader("Modules/UI/Canvas.h")]
 	[NativeHeader("Modules/UI/CanvasManager.h")]
 	[RequireComponent(typeof(RectTransform))]
-	public sealed class Canvas : UnityEngine.Behaviour // TypeDefIndex: 63208
+	public sealed class Canvas : UnityEngine.Behaviour // TypeDefIndex: 90597
 	{
 		// Fields
 		[CompilerGenerated]
@@ -391,108 +234,108 @@ namespace UnityEngine
 		private static Action<int> _externEndRenderOverlays_k__BackingField; // 0x20
 	
 		// Properties
-		public UnityEngine.RenderMode renderMode { get; set; } // 0x0000000182FC7500-0x0000000182FC7540 0x000000018434F490-0x000000018434F4E0
-		public bool isRootCanvas { get; } // 0x0000000182FC74C0-0x0000000182FC7500 
-		public Rect pixelRect { get; } // 0x000000018B567AE4-0x000000018B567B10 
-		public float scaleFactor { get; set; } // 0x00000001831C2F50-0x00000001831C2F90 0x00000001830997E0-0x0000000183099830
-		public float referencePixelsPerUnit { get; set; } // 0x00000001831C4660-0x00000001831C4710 0x000000018B567EA4-0x000000018B567EE8
-		public bool overridePixelPerfect { get; set; } // 0x000000018B567A6C-0x000000018B567AA0 0x000000018B567E1C-0x000000018B567E60
-		public bool vertexColorAlwaysGammaSpace { get; set; } // 0x000000018B567BE0-0x000000018B567C14 0x000000018B567FEC-0x000000018B568030
-		public bool pixelPerfect { get; set; } // 0x00000001831C2F90-0x00000001831C2FD0 0x000000018B567E60-0x000000018B567EA4
-		public float planeDistance { get; set; } // 0x000000018B567B10-0x000000018B567B44 0x000000018434BB80-0x000000018434BBD0
-		public int renderOrder { get; } // 0x000000018B567B44-0x000000018B567B78 
-		public bool overrideSorting { get; set; } // 0x00000001831ED780-0x00000001831ED7C0 0x00000001837D4DF0-0x00000001837D4E40
-		public int sortingOrder { get; set; } // 0x0000000183296810-0x0000000183296850 0x00000001837D4F10-0x00000001837D4F60
-		public int targetDisplay { get; set; } // 0x0000000183B3BFE0-0x0000000183B3C020 0x000000018B567FAC-0x000000018B567FEC
-		public int sortingLayerID { get; set; } // 0x0000000183F0A8C0-0x0000000183F0A900 0x000000018B567F28-0x000000018B567F68
-		public int cachedSortingLayerValue { get; } // 0x000000018B5678F4-0x000000018B567928 
-		public AdditionalCanvasShaderChannels additionalShaderChannels { get; set; } // 0x000000018418F290-0x000000018418F2D0 0x000000018B567C14-0x000000018B567C54
-		public string sortingLayerName { get; set; } // 0x000000018B567BAC-0x000000018B567BE0 0x000000018B567F68-0x000000018B567FAC
-		public Canvas rootCanvas { get; } // 0x000000018323FB20-0x000000018323FB60 
-		public Vector2 renderingDisplaySize { get; } // 0x00000001834AD3F0-0x00000001834AD440 
-		public bool doCPUFrameInterpolation { get; set; } // 0x000000018B567928-0x000000018B56795C 0x000000018B567C54-0x000000018B567C98
-		public bool joinGPUFrameInterpolation { get; set; } // 0x000000018B567A04-0x000000018B567A38 0x000000018B567D94-0x000000018B567DD8
-		internal static Action<int> externBeginRenderOverlays { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018B56795C-0x000000018B567994 0x000000018B567C98-0x000000018B567CEC
-		internal static Action<int, int> externRenderOverlaysBefore { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018B5679CC-0x000000018B567A04 0x000000018B567D40-0x000000018B567D94
-		internal static Action<int> externEndRenderOverlays { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018B567994-0x000000018B5679CC 0x000000018B567CEC-0x000000018B567D40
+		public UnityEngine.RenderMode renderMode { get; set; } // 0x00000001850BDED0-0x00000001850BDF10 0x0000000186557BC0-0x0000000186557C10
+		public bool isRootCanvas { get; } // 0x00000001850BDE90-0x00000001850BDED0 
+		public Rect pixelRect { get; } // 0x000000018D6926D8-0x000000018D692704 
+		public float scaleFactor { get; set; } // 0x000000018569E7B0-0x000000018569E860 0x000000018676A3C0-0x000000018676A410
+		public float referencePixelsPerUnit { get; set; } // 0x0000000185D80B70-0x0000000185D80BB0 0x000000018D692A58-0x000000018D692A9C
+		public bool overridePixelPerfect { get; set; } // 0x000000018D692660-0x000000018D692694 0x000000018D6929D0-0x000000018D692A14
+		public bool vertexColorAlwaysGammaSpace { get; set; } // 0x000000018D6927D4-0x000000018D692808 0x000000018D692BA0-0x000000018D692BE4
+		public bool pixelPerfect { get; set; } // 0x0000000185E76C70-0x0000000185E76CB0 0x000000018D692A14-0x000000018D692A58
+		public float planeDistance { get; set; } // 0x000000018D692704-0x000000018D692738 0x0000000186554A10-0x0000000186554B80
+		public int renderOrder { get; } // 0x000000018D692738-0x000000018D69276C 
+		public bool overrideSorting { get; set; } // 0x00000001852E16B0-0x00000001852E16F0 0x000000018531D6A0-0x000000018531D6F0
+		public int sortingOrder { get; set; } // 0x000000018531E270-0x000000018531E2B0 0x000000018531D650-0x000000018531D6A0
+		public int targetDisplay { get; set; } // 0x00000001850BEE00-0x00000001850BEE40 0x000000018D692B60-0x000000018D692BA0
+		public int sortingLayerID { get; set; } // 0x000000018616F8C0-0x000000018616F900 0x000000018D692ADC-0x000000018D692B1C
+		public int cachedSortingLayerValue { get; } // 0x000000018D6924E8-0x000000018D69251C 
+		public AdditionalCanvasShaderChannels additionalShaderChannels { get; set; } // 0x00000001862A50B0-0x00000001862A50F0 0x000000018709C940-0x000000018709C990
+		public string sortingLayerName { get; set; } // 0x000000018D6927A0-0x000000018D6927D4 0x000000018D692B1C-0x000000018D692B60
+		public Canvas rootCanvas { get; } // 0x00000001851472C0-0x0000000185147300 
+		public Vector2 renderingDisplaySize { get; } // 0x00000001850BEE40-0x00000001850BEE90 
+		public bool doCPUFrameInterpolation { get; set; } // 0x000000018D69251C-0x000000018D692550 0x000000018D692808-0x000000018D69284C
+		public bool joinGPUFrameInterpolation { get; set; } // 0x000000018D6925F8-0x000000018D69262C 0x000000018D692948-0x000000018D69298C
+		internal static Action<int> externBeginRenderOverlays { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018D692550-0x000000018D692588 0x000000018D69284C-0x000000018D6928A0
+		internal static Action<int, int> externRenderOverlaysBefore { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018D6925C0-0x000000018D6925F8 0x000000018D6928F4-0x000000018D692948
+		internal static Action<int> externEndRenderOverlays { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018D692588-0x000000018D6925C0 0x000000018D6928A0-0x000000018D6928F4
 		[NativeProperty("Camera", false, UnityEngine.Bindings.TargetType.Function)]
-		public Camera worldCamera { get; set; } // 0x0000000183096EB0-0x0000000183096EF0 0x00000001841E54D0-0x00000001841E5520
+		public Camera worldCamera { get; set; } // 0x00000001850FC0B0-0x00000001850FC0F0 0x00000001863F6D80-0x00000001863F6DD0
 		[NativeProperty("SortingBucketNormalizedSize", false, UnityEngine.Bindings.TargetType.Function)]
-		public float normalizedSortingGridSize { get; set; } // 0x000000018B567A38-0x000000018B567A6C 0x000000018B567DD8-0x000000018B567E1C
+		public float normalizedSortingGridSize { get; set; } // 0x000000018D69262C-0x000000018D692660 0x000000018D69298C-0x000000018D6929D0
 		[NativeProperty("SortingBucketNormalizedSize", false, UnityEngine.Bindings.TargetType.Function)]
 		[Obsolete("Setting normalizedSize via a int is not supported. Please use normalizedSortingGridSize", false)]
-		public int sortingGridNormalizedSize { get; set; } // 0x000000018B567B78-0x000000018B567BAC 0x000000018B567EE8-0x000000018B567F28
+		public int sortingGridNormalizedSize { get; set; } // 0x000000018D69276C-0x000000018D6927A0 0x000000018D692A9C-0x000000018D692ADC
 	
 		// Events
 		public static event WillRenderCanvases preWillRenderCanvases {
-			add; // 0x0000000183099AA0-0x0000000183099B30
-			remove; // 0x0000000183099990-0x0000000183099A20
+			add; // 0x000000018527B9D0-0x000000018527BA60
+			remove; // 0x000000018527B8C0-0x000000018527B950
 		}
 		public static event WillRenderCanvases willRenderCanvases {
-			add; // 0x000000018309A6D0-0x000000018309A790
-			remove; // 0x000000018309A050-0x000000018309A110
+			add; // 0x000000018527D240-0x000000018527D300
+			remove; // 0x000000018527C6A0-0x000000018527C760
 		}
 	
 		// Nested types
-		public delegate void WillRenderCanvases(); // TypeDefIndex: 63207; 0x00000001853DEDB8-0x00000001853DEDC8
+		public delegate void WillRenderCanvases(); // TypeDefIndex: 90596; 0x0000000185B44B70-0x0000000185B44B80
 	
 		// Constructors
-		public Canvas(); // 0x0000000185393520-0x0000000185393538
+		public Canvas(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
 		[FreeFunction("UI::CanvasManager::SetExternalCanvasEnabled")]
-		internal static void SetExternalCanvasEnabled(bool enabled); // 0x000000018B56787C-0x000000018B5678B0
+		internal static void SetExternalCanvasEnabled(bool enabled); // 0x000000018D692470-0x000000018D6924A4
 		[FreeFunction("UI::GetDefaultUIMaterial")]
 		[Obsolete("Shared default material now used for text and general UI elements, call Canvas.GetDefaultCanvasMaterial()", false)]
-		public static Material GetDefaultCanvasTextMaterial(); // 0x000000018B5677C8-0x000000018B5677F4
+		public static Material GetDefaultCanvasTextMaterial(); // 0x000000018D6923BC-0x000000018D6923E8
 		[FreeFunction("UI::GetDefaultUIMaterial")]
-		public static Material GetDefaultCanvasMaterial(); // 0x000000018B56779C-0x000000018B5677C8
+		public static Material GetDefaultCanvasMaterial(); // 0x000000018D692390-0x000000018D6923BC
 		[FreeFunction("UI::GetETC1SupportedCanvasMaterial")]
-		public static Material GetETC1SupportedCanvasMaterial(); // 0x000000018B5677F4-0x000000018B567820
-		internal void UpdateCanvasRectTransform(bool alignWithCamera); // 0x000000018B5678B0-0x000000018B5678F4
-		public static void ForceUpdateCanvases(); // 0x0000000183BFD110-0x0000000183BFD130
+		public static Material GetETC1SupportedCanvasMaterial(); // 0x000000018D6923E8-0x000000018D692414
+		internal void UpdateCanvasRectTransform(bool alignWithCamera); // 0x000000018D6924A4-0x000000018D6924E8
+		public static void ForceUpdateCanvases(); // 0x00000001859E1730-0x00000001859E1750
 		[RequiredByNativeCode]
-		private static void SendPreWillRenderCanvases(); // 0x000000018314D620-0x000000018314D640
+		private static void SendPreWillRenderCanvases(); // 0x00000001859E2D40-0x00000001859E2D60
 		[RequiredByNativeCode]
-		private static void SendWillRenderCanvases(); // 0x000000018314D640-0x000000018314DA60
+		private static void SendWillRenderCanvases(); // 0x00000001859E2D60-0x00000001859E3080
 		[RequiredByNativeCode]
-		private static void BeginRenderExtraOverlays(int displayIndex); // 0x000000018B5676FC-0x000000018B56774C
+		private static void BeginRenderExtraOverlays(int displayIndex); // 0x000000018D6922F0-0x000000018D692340
 		[RequiredByNativeCode]
-		private static void RenderExtraOverlaysBefore(int displayIndex, int sortingOrder); // 0x000000018B567820-0x000000018B56787C
+		private static void RenderExtraOverlaysBefore(int displayIndex, int sortingOrder); // 0x000000018D692414-0x000000018D692470
 		[RequiredByNativeCode]
-		private static void EndRenderExtraOverlays(int displayIndex); // 0x000000018B56774C-0x000000018B56779C
-		private void get_pixelRect_Injected(out Rect ret); // 0x000000018B567AA0-0x000000018B567AE4
-		private void get_renderingDisplaySize_Injected(out Vector2 ret); // 0x00000001834AD440-0x00000001834AD490
+		private static void EndRenderExtraOverlays(int displayIndex); // 0x000000018D692340-0x000000018D692390
+		private void get_pixelRect_Injected(out Rect ret); // 0x000000018D692694-0x000000018D6926D8
+		private void get_renderingDisplaySize_Injected(out Vector2 ret); // 0x00000001850BEF10-0x00000001850BEF60
 	}
 
 	[NativeHeader("Modules/UI/Canvas.h")]
 	[StaticAccessor("UI::SystemProfilerApi", StaticAccessorType.DoubleColon)]
-	public static class UISystemProfilerApi // TypeDefIndex: 63210
+	public static class UISystemProfilerApi // TypeDefIndex: 90599
 	{
 		// Nested types
-		public enum SampleType // TypeDefIndex: 63209
+		public enum SampleType // TypeDefIndex: 90598
 		{
 			Layout = 0,
 			Render = 1
 		}
 	
 		// Methods
-		public static void BeginSample(SampleType type); // 0x00000001831BCF90-0x00000001831BCFD0
-		public static void EndSample(SampleType type); // 0x00000001831BCF50-0x00000001831BCF90
-		public static void AddMarker(string name, UnityEngine.Object obj); // 0x00000001831EABC0-0x00000001831EAC10
+		public static void BeginSample(SampleType type); // 0x00000001851C1380-0x00000001851C13C0
+		public static void EndSample(SampleType type); // 0x00000001851C1340-0x00000001851C1380
+		public static void AddMarker(string name, UnityEngine.Object obj); // 0x0000000185044AF0-0x0000000185044B40
 	}
 }
 
 namespace UnityEngine.UI
 {
 	[NativeHeader("Modules/UI/HGUI/HGRectMaskClipping.h")]
-	public static class HGRectMaskClippingBindings // TypeDefIndex: 63216
+	public static class HGRectMaskClippingBindings // TypeDefIndex: 90605
 	{
 		// Properties
-		public static bool EnableRectMaskOpt { get; } // 0x0000000185397CB4-0x0000000185397CC0 
+		public static bool EnableRectMaskOpt { get; } // 0x000000018783D444-0x000000018783D450 
 	
 		// Nested types
-		public struct HGRectMaskInput // TypeDefIndex: 63211
+		public struct HGRectMaskInput // TypeDefIndex: 90600
 		{
 			// Fields
 			public int maskRTInstanceID; // 0x00
@@ -506,7 +349,7 @@ namespace UnityEngine.UI
 			public int forceClip; // 0x2C
 		}
 	
-		public struct HGClipperInput // TypeDefIndex: 63212
+		public struct HGClipperInput // TypeDefIndex: 90601
 		{
 			// Fields
 			public int rtInstanceID; // 0x00
@@ -514,14 +357,14 @@ namespace UnityEngine.UI
 			public Vector4 padding; // 0x08
 		}
 	
-		public struct HGClipTargetInput // TypeDefIndex: 63213
+		public struct HGClipTargetInput // TypeDefIndex: 90602
 		{
 			// Fields
 			public int rtInstanceID; // 0x00
 			public int canvasRendererInstanceID; // 0x04
 		}
 	
-		public struct HGRectMaskOutput // TypeDefIndex: 63214
+		public struct HGRectMaskOutput // TypeDefIndex: 90603
 		{
 			// Fields
 			public Rect clipRect; // 0x00
@@ -529,7 +372,7 @@ namespace UnityEngine.UI
 			public int maskIsCulled; // 0x14
 		}
 	
-		public struct HGClipTargetOutput // TypeDefIndex: 63215
+		public struct HGClipTargetOutput // TypeDefIndex: 90604
 		{
 			// Fields
 			public int shouldCull; // 0x00
@@ -538,19 +381,19 @@ namespace UnityEngine.UI
 	
 		// Methods
 		[FreeFunction("HyperGryph::BatchComputeRectMaskClipping")]
-		public static unsafe void BatchComputeRectMaskClipping(void* maskInputs, int maskCount, void* clipperInputs, int clipperCount, void* targetInputs, int targetCount, void* maskOutputs, void* targetOutputs); // 0x0000000183E4D4C0-0x0000000183E4D530
+		public static unsafe void BatchComputeRectMaskClipping(void* maskInputs, int maskCount, void* clipperInputs, int clipperCount, void* targetInputs, int targetCount, void* maskOutputs, void* targetOutputs); // 0x000000018613AAE0-0x000000018613AB50
 		[FreeFunction("HyperGryph::HGGetRectMaskOptEnabled")]
-		private static bool GetEnableRectMaskOpt(); // 0x00000001834AD490-0x00000001834AD4D0
+		private static bool GetEnableRectMaskOpt(); // 0x00000001872220B0-0x00000001872220F0
 	}
 
 	[NativeHeader("Modules/UI/HGUI/HGRectMaskClipping.h")]
-	public static class HGImageBatchBindings // TypeDefIndex: 63218
+	public static class HGImageBatchBindings // TypeDefIndex: 90607
 	{
 		// Properties
-		public static bool EnableImageOpt { get; } // 0x0000000185397CC0-0x0000000185397CCC 
+		public static bool EnableImageOpt { get; } // 0x000000018783D450-0x000000018783D45C 
 	
 		// Nested types
-		public struct HGBatchImageInput // TypeDefIndex: 63217
+		public struct HGBatchImageInput // TypeDefIndex: 90606
 		{
 			// Fields
 			public int canvasRendererInstanceID; // 0x00
@@ -561,8 +404,8 @@ namespace UnityEngine.UI
 	
 		// Methods
 		[FreeFunction("HyperGryph::BatchSetImageMeshRebuildData")]
-		public static unsafe void BatchSetImageMeshRebuildData(void* inputs, int count); // 0x0000000183F68610-0x0000000183F68660
+		public static unsafe void BatchSetImageMeshRebuildData(void* inputs, int count); // 0x00000001851C03D0-0x00000001851C0740
 		[FreeFunction("HyperGryph::HGGetImageOptEnabled")]
-		private static bool GetEnableImageOpt(); // 0x00000001834AD4D0-0x00000001834AD510
+		private static bool GetEnableImageOpt(); // 0x0000000187222130-0x0000000187222170
 	}
 }

@@ -9,29 +9,11 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Image 76: System.Drawing.dll - Assembly: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a - Types 62413-62423
-[assembly: AssemblyCompany("Mono development team")]
-[assembly: AssemblyCopyright("(c) Various Mono authors")]
-[assembly: AssemblyDefaultAlias("System.Drawing.dll")]
-[assembly: AssemblyDelaySign(true)]
-[assembly: AssemblyDescription("System.Drawing.dll")]
-[assembly: AssemblyFileVersion("4.0.30319.17020")]
-[assembly: AssemblyInformationalVersion("4.0.30319.17020")]
-[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
-[assembly: AssemblyTitle("System.Drawing.dll")]
-[assembly: CLSCompliant(true)]
-[assembly: ComCompatibleVersion(1, 0, 3300, 0)]
-[assembly: CompilationRelaxations(CompilationRelaxations.NoStringInterning)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Dependency("System,", LoadHint.Always)]
-[assembly: NeutralResourcesLanguage("en-US")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: SatelliteContractVersion("4.0.0.0")]
+// Image 75: System.Drawing.dll - Assembly: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a - Types 89716-89726
 
 namespace System.Drawing
 {
-	public enum KnownColor // TypeDefIndex: 62415
+	public enum KnownColor // TypeDefIndex: 89718
 	{
 		ActiveBorder = 1,
 		ActiveCaption = 2,
@@ -209,26 +191,26 @@ namespace System.Drawing
 		MenuHighlight = 174
 	}
 
-	internal static class KnownColorTable // TypeDefIndex: 62416
+	internal static class KnownColorTable // TypeDefIndex: 89719
 	{
 		// Fields
 		private static int[] s_colorTable; // 0x00
 		private static string[] s_colorNameTable; // 0x08
 	
 		// Methods
-		private static void EnsureColorTable(); // 0x000000018AE0AFF8-0x000000018AE0B03C
-		private static void InitColorTable(); // 0x000000018AE0C67C-0x000000018AE0D264
-		private static void EnsureColorNameTable(); // 0x000000018AE0AFB0-0x000000018AE0AFF8
-		private static void InitColorNameTable(); // 0x000000018AE0B03C-0x000000018AE0C67C
-		public static int KnownColorToArgb(KnownColor color); // 0x000000018AE0D264-0x000000018AE0D2C4
-		public static string KnownColorToName(KnownColor color); // 0x000000018AE0D2C4-0x000000018AE0D324
-		private static void UpdateSystemColors(int[] colorTable); // 0x000000018AE0D324-0x000000018AE0D554
+		private static void EnsureColorTable(); // 0x000000018CFCB9F4-0x000000018CFCBA38
+		private static void InitColorTable(); // 0x000000018CFCD078-0x000000018CFCDC60
+		private static void EnsureColorNameTable(); // 0x000000018CFCB9AC-0x000000018CFCB9F4
+		private static void InitColorNameTable(); // 0x000000018CFCBA38-0x000000018CFCD078
+		public static int KnownColorToArgb(KnownColor color); // 0x000000018CFCDC60-0x000000018CFCDCC0
+		public static string KnownColorToName(KnownColor color); // 0x000000018CFCDCC0-0x000000018CFCDD20
+		private static void UpdateSystemColors(int[] colorTable); // 0x000000018CFCDD20-0x000000018CFCDF50
 	}
 
 	[Serializable]
 	[DebuggerDisplay("{NameAndARGBValue}")]
 	[IsReadOnly]
-	public struct Color : IEquatable<Color> // TypeDefIndex: 62417
+	public struct Color : IEquatable<Color> // TypeDefIndex: 89720
 	{
 		// Fields
 		private readonly string name; // 0x00
@@ -237,62 +219,62 @@ namespace System.Drawing
 		private readonly short state; // 0x12
 	
 		// Properties
-		public byte R { get; } // 0x000000018AE0AE90-0x000000018AE0AEA4 
-		public byte G { get; } // 0x000000018AE0AE04-0x000000018AE0AE18 
-		public byte B { get; } // 0x000000018AE0ADFC-0x000000018AE0AE04 
-		public byte A { get; } // 0x000000018AE0ADE8-0x000000018AE0ADFC 
-		public bool IsKnownColor { get; } // 0x000000018AE0AE18-0x000000018AE0AE20 
-		public string Name { get; } // 0x000000018AE0AE20-0x000000018AE0AE90 
-		private long Value { get; } // 0x000000018AE0AEA4-0x000000018AE0AED0 
+		public byte R { get; } // 0x000000018CFCB874-0x000000018CFCB888 
+		public byte G { get; } // 0x000000018CFCB7E8-0x000000018CFCB7FC 
+		public byte B { get; } // 0x000000018CFCB7E0-0x000000018CFCB7E8 
+		public byte A { get; } // 0x000000018CFCB7CC-0x000000018CFCB7E0 
+		public bool IsKnownColor { get; } // 0x000000018CFCB7FC-0x000000018CFCB804 
+		public string Name { get; } // 0x000000018CFCB804-0x000000018CFCB874 
+		private long Value { get; } // 0x000000018CFCB888-0x000000018CFCB8B4 
 	
 		// Methods
-		public override string ToString(); // 0x000000018AE0ABEC-0x000000018AE0ADE8
-		public static bool operator ==(Color left, Color right); // 0x000000018AE0AED0-0x000000018AE0AF50
-		public override bool Equals(object obj); // 0x000000018AE0AA60-0x000000018AE0AAD8
-		public bool Equals(Color other); // 0x000000018AE0AAD8-0x000000018AE0AB1C
-		public override int GetHashCode(); // 0x000000018AE0AB1C-0x000000018AE0ABEC
+		public override string ToString(); // 0x000000018CFCB5D0-0x000000018CFCB7CC
+		public static bool operator ==(Color left, Color right); // 0x000000018CFCB8B4-0x000000018CFCB934
+		public override bool Equals(object obj); // 0x000000018CFCB454-0x000000018CFCB4CC
+		public bool Equals(Color other); // 0x000000018CFCB4CC-0x000000018CFCB510
+		public override int GetHashCode(); // 0x000000018CFCB510-0x000000018CFCB5D0
 	}
 
 	[Serializable]
-	public struct Point : IEquatable<Point> // TypeDefIndex: 62418
+	public struct Point : IEquatable<Point> // TypeDefIndex: 89721
 	{
 		// Fields
 		private int x; // 0x00
 		private int y; // 0x04
 	
 		// Properties
-		public int X { get; } // 0x0000000182B77620-0x0000000182B77630 
-		public int Y { get; } // 0x0000000184D88B20-0x0000000184D88B30 
+		public int X { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+		public int Y { get; } // 0x00000001872342E0-0x00000001872342F0 
 	
 		// Methods
-		public static bool operator ==(Point left, Point right); // 0x00000001863518F0-0x0000000186351908
-		public override bool Equals(object obj); // 0x000000018AE0D788-0x000000018AE0D7EC
-		public bool Equals(Point other); // 0x000000018AE0D77C-0x000000018AE0D788
-		public override int GetHashCode(); // 0x000000018AE0D7EC-0x000000018AE0D844
-		public override string ToString(); // 0x000000018AE0D844-0x000000018AE0D944
+		public static bool operator ==(Point left, Point right); // 0x00000001887DD0F0-0x00000001887DD108
+		public override bool Equals(object obj); // 0x000000018CFCE184-0x000000018CFCE1E8
+		public bool Equals(Point other); // 0x000000018CFCE178-0x000000018CFCE184
+		public override int GetHashCode(); // 0x000000018CFCE1E8-0x000000018CFCE240
+		public override string ToString(); // 0x000000018CFCE240-0x000000018CFCE340
 	}
 
 	[Serializable]
-	public struct PointF : IEquatable<PointF> // TypeDefIndex: 62419
+	public struct PointF : IEquatable<PointF> // TypeDefIndex: 89722
 	{
 		// Fields
 		private float x; // 0x00
 		private float y; // 0x04
 	
 		// Properties
-		public float X { get; } // 0x0000000184D871D0-0x0000000184D871E0 
-		public float Y { get; } // 0x0000000184D9C560-0x0000000184D9C570 
+		public float X { get; } // 0x00000001872342D0-0x00000001872342E0 
+		public float Y { get; } // 0x000000018724A6D0-0x000000018724A6E0 
 	
 		// Methods
-		public static bool operator ==(PointF left, PointF right); // 0x000000018AE0D744-0x000000018AE0D77C
-		public override bool Equals(object obj); // 0x000000018AE0D560-0x000000018AE0D5D0
-		public bool Equals(PointF other); // 0x000000018AE0D554-0x000000018AE0D560
-		public override int GetHashCode(); // 0x000000018AE0D5D0-0x000000018AE0D654
-		public override string ToString(); // 0x000000018AE0D654-0x000000018AE0D744
+		public static bool operator ==(PointF left, PointF right); // 0x000000018CFCE140-0x000000018CFCE178
+		public override bool Equals(object obj); // 0x000000018CFCDF5C-0x000000018CFCDFCC
+		public bool Equals(PointF other); // 0x000000018CFCDF50-0x000000018CFCDF5C
+		public override int GetHashCode(); // 0x000000018CFCDFCC-0x000000018CFCE050
+		public override string ToString(); // 0x000000018CFCE050-0x000000018CFCE140
 	}
 
 	[Serializable]
-	public struct Rectangle : IEquatable<Rectangle> // TypeDefIndex: 62420
+	public struct Rectangle : IEquatable<Rectangle> // TypeDefIndex: 89723
 	{
 		// Fields
 		private int x; // 0x00
@@ -301,21 +283,21 @@ namespace System.Drawing
 		private int height; // 0x0C
 	
 		// Properties
-		public int X { get; } // 0x0000000182B77620-0x0000000182B77630 
-		public int Y { get; } // 0x0000000184D88B20-0x0000000184D88B30 
-		public int Width { get; } // 0x0000000184D88B10-0x0000000184D88B20 
-		public int Height { get; } // 0x0000000184D8CAD0-0x0000000184D8CAE0 
+		public int X { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+		public int Y { get; } // 0x00000001872342E0-0x00000001872342F0 
+		public int Width { get; } // 0x0000000184431A70-0x0000000184431A80 
+		public int Height { get; } // 0x0000000184431980-0x0000000184431990 
 	
 		// Methods
-		public override bool Equals(object obj); // 0x000000018AE0DC64-0x000000018AE0DCDC
-		public bool Equals(Rectangle other); // 0x000000018AE0DCDC-0x000000018AE0DD08
-		public static bool operator ==(Rectangle left, Rectangle right); // 0x00000001868AFB90-0x00000001868AFBB4
-		public override int GetHashCode(); // 0x000000018AE0DD08-0x000000018AE0DD94
-		public override string ToString(); // 0x000000018AE0DD94-0x000000018AE0DF18
+		public override bool Equals(object obj); // 0x000000018CFCE660-0x000000018CFCE6D8
+		public bool Equals(Rectangle other); // 0x000000018CFCE6D8-0x000000018CFCE704
+		public static bool operator ==(Rectangle left, Rectangle right); // 0x0000000188BCAFE8-0x0000000188BCB00C
+		public override int GetHashCode(); // 0x000000018CFCE704-0x000000018CFCE790
+		public override string ToString(); // 0x000000018CFCE790-0x000000018CFCE914
 	}
 
 	[Serializable]
-	public struct RectangleF : IEquatable<RectangleF> // TypeDefIndex: 62421
+	public struct RectangleF : IEquatable<RectangleF> // TypeDefIndex: 89724
 	{
 		// Fields
 		private float x; // 0x00
@@ -324,69 +306,69 @@ namespace System.Drawing
 		private float height; // 0x0C
 	
 		// Properties
-		public float X { get; } // 0x0000000184D871D0-0x0000000184D871E0 
-		public float Y { get; } // 0x0000000184D9C560-0x0000000184D9C570 
-		public float Width { get; } // 0x0000000184D9C280-0x0000000184D9C290 
-		public float Height { get; } // 0x0000000184D9CC80-0x0000000184D9CC90 
+		public float X { get; } // 0x00000001872342D0-0x00000001872342E0 
+		public float Y { get; } // 0x000000018724A6D0-0x000000018724A6E0 
+		public float Width { get; } // 0x000000018724A400-0x000000018724A410 
+		public float Height { get; } // 0x000000018724AEC0-0x000000018724AED0 
 	
 		// Methods
-		public override bool Equals(object obj); // 0x000000018AE0D944-0x000000018AE0D9BC
-		public bool Equals(RectangleF other); // 0x000000018AE0D9BC-0x000000018AE0D9E8
-		public static bool operator ==(RectangleF left, RectangleF right); // 0x000000018415FC30-0x000000018415FC70
-		public override int GetHashCode(); // 0x000000018AE0D9E8-0x000000018AE0DAD0
-		public override string ToString(); // 0x000000018AE0DAD0-0x000000018AE0DC64
+		public override bool Equals(object obj); // 0x000000018CFCE340-0x000000018CFCE3B8
+		public bool Equals(RectangleF other); // 0x000000018CFCE3B8-0x000000018CFCE3E4
+		public static bool operator ==(RectangleF left, RectangleF right); // 0x00000001862F2760-0x00000001862F27A0
+		public override int GetHashCode(); // 0x000000018CFCE3E4-0x000000018CFCE4CC
+		public override string ToString(); // 0x000000018CFCE4CC-0x000000018CFCE660
 	}
 
 	[Serializable]
-	public struct Size : IEquatable<Size> // TypeDefIndex: 62422
+	public struct Size : IEquatable<Size> // TypeDefIndex: 89725
 	{
 		// Fields
 		private int width; // 0x00
 		private int height; // 0x04
 	
 		// Properties
-		public int Width { get; } // 0x0000000182B77620-0x0000000182B77630 
-		public int Height { get; } // 0x0000000184D88B20-0x0000000184D88B30 
+		public int Width { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+		public int Height { get; } // 0x00000001872342E0-0x00000001872342F0 
 	
 		// Methods
-		public static bool operator ==(Size sz1, Size sz2); // 0x00000001863518F0-0x0000000186351908
-		public override bool Equals(object obj); // 0x000000018AE0E0FC-0x000000018AE0E160
-		public bool Equals(Size other); // 0x000000018AE0D77C-0x000000018AE0D788
-		public override int GetHashCode(); // 0x000000018AE0E160-0x000000018AE0E1B8
-		public override string ToString(); // 0x000000018AE0E1B8-0x000000018AE0E2A8
+		public static bool operator ==(Size sz1, Size sz2); // 0x00000001887DD0F0-0x00000001887DD108
+		public override bool Equals(object obj); // 0x000000018CFCEAF8-0x000000018CFCEB5C
+		public bool Equals(Size other); // 0x000000018CFCE178-0x000000018CFCE184
+		public override int GetHashCode(); // 0x000000018CFCEB5C-0x000000018CFCEBB4
+		public override string ToString(); // 0x000000018CFCEBB4-0x000000018CFCECA4
 	}
 
 	[Serializable]
-	public struct SizeF : IEquatable<SizeF> // TypeDefIndex: 62423
+	public struct SizeF : IEquatable<SizeF> // TypeDefIndex: 89726
 	{
 		// Fields
 		private float width; // 0x00
 		private float height; // 0x04
 	
 		// Properties
-		public float Width { get; } // 0x0000000184D871D0-0x0000000184D871E0 
-		public float Height { get; } // 0x0000000184D9C560-0x0000000184D9C570 
+		public float Width { get; } // 0x00000001872342D0-0x00000001872342E0 
+		public float Height { get; } // 0x000000018724A6D0-0x000000018724A6E0 
 	
 		// Methods
-		public static bool operator ==(SizeF sz1, SizeF sz2); // 0x000000018AE0D744-0x000000018AE0D77C
-		public override bool Equals(object obj); // 0x000000018AE0DF18-0x000000018AE0DF88
-		public bool Equals(SizeF other); // 0x000000018AE0D554-0x000000018AE0D560
-		public override int GetHashCode(); // 0x000000018AE0DF88-0x000000018AE0E00C
-		public override string ToString(); // 0x000000018AE0E00C-0x000000018AE0E0FC
+		public static bool operator ==(SizeF sz1, SizeF sz2); // 0x000000018CFCE140-0x000000018CFCE178
+		public override bool Equals(object obj); // 0x000000018CFCE914-0x000000018CFCE984
+		public bool Equals(SizeF other); // 0x000000018CFCDF50-0x000000018CFCDF5C
+		public override int GetHashCode(); // 0x000000018CFCE984-0x000000018CFCEA08
+		public override string ToString(); // 0x000000018CFCEA08-0x000000018CFCEAF8
 	}
 }
 
 namespace System.Numerics.Hashing
 {
-	internal static class HashHelpers // TypeDefIndex: 62414
+	internal static class HashHelpers // TypeDefIndex: 89717
 	{
 		// Fields
 		public static readonly int RandomSeed; // 0x00
 	
 		// Constructors
-		static HashHelpers(); // 0x000000018AE0AF50-0x000000018AE0AFB0
+		static HashHelpers(); // 0x000000018CFCB934-0x000000018CFCB9AC
 	
 		// Methods
-		public static int Combine(int h1, int h2); // 0x0000000184DA4450-0x0000000184DA4470
+		public static int Combine(int h1, int h2); // 0x0000000187251FA0-0x0000000187251FC0
 	}
 }

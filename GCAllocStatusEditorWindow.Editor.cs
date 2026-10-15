@@ -8,25 +8,18 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Image 159: GCAllocStatusEditorWindow.Editor.dll - Assembly: GCAllocStatusEditorWindow.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63950-63956
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 160: GCAllocStatusEditorWindow.Editor.dll - Assembly: GCAllocStatusEditorWindow.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91433-91441
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 63952
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 91434
 	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
 		// Constructors
-		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public CameraControlConfigAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 63953
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 91435
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -36,38 +29,57 @@ namespace Beyond.SourceGenerator
 	}
 
 	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 63954
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 91436
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public AnimatorBlackboardAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class SwapRuntimeStateAttribute : Attribute // TypeDefIndex: 91437
+	{
+		// Constructors
+		public SwapRuntimeStateAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class ResetOnSwapAttribute : Attribute // TypeDefIndex: 91438
+	{
+		// Constructors
+		public ResetOnSwapAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 63955
+	internal class DataNAttribute : Attribute // TypeDefIndex: 91439
 	{
 		// Fields
 		public int capacity; // 0x10
 		public int tSize; // 0x14
 		public bool ring; // 0x18
+		public bool native; // 0x19
 	
 		// Constructors
-		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public DataNAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 63956
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 91440
 	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
 		// Constructors
-		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public ECSComponentAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
 	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 63951
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 91441
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public HGConstantBufferLayoutAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }

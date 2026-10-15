@@ -12,14 +12,11 @@ using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityEngine;
 
-// Image 127: AbilityUnsafe.Gameplay.Beyond.dll - Assembly: AbilityUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63726-63739
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 127: AbilityUnsafe.Gameplay.Beyond.dll - Assembly: AbilityUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91172-91185
 
 namespace Beyond
 {
-	public struct FPtrAnimNativeCurve // TypeDefIndex: 63730
+	public struct FPtrAnimNativeCurve // TypeDefIndex: 91176
 	{
 		// Fields
 		private unsafe Keyframe* m_values; // 0x00
@@ -31,33 +28,33 @@ namespace Beyond
 		public static readonly float3x3 CURVE_MATRIX_PRIME; // 0x44
 	
 		// Nested types
-		public struct KeyframeComparer : IComparer<Keyframe> // TypeDefIndex: 63729
+		public struct KeyframeComparer : IComparer<Keyframe> // TypeDefIndex: 91175
 		{
 			// Methods
-			public int Compare(Keyframe keyframe1, Keyframe keyframe2); // 0x000000018389FD40-0x000000018389FD80
+			public int Compare(Keyframe keyframe1, Keyframe keyframe2); // 0x000000018501A0C0-0x000000018501A100
 		}
 	
 		// Constructors
-		static FPtrAnimNativeCurve(); // 0x000000018327F8A0-0x000000018327FA90
+		static FPtrAnimNativeCurve(); // 0x0000000186CEDEC0-0x0000000186CEE0B0
 	
 		// Methods
-		public bool IsValid(); // 0x000000018423A5F0-0x000000018423A600
-		public NativeArray<Keyframe> CreateCurve(AnimationCurve animationCurve, Unity.Collections.Allocator allocator); // 0x0000000183B05230-0x0000000183B053A0
-		public NativeArray<Keyframe> CreateLine(float val, Unity.Collections.Allocator allocator); // 0x000000018419F010-0x000000018419F140
-		public float Evaluate(float time); // 0x0000000185398984-0x0000000185398AA8
-		public static unsafe int GetInsertionIndex(Keyframe* keys, int valuesLength, float time); // 0x0000000185398D98-0x0000000185398DFC
-		public float WrapTime(float time); // 0x000000018539938C-0x0000000185399468
-		public float Evaluate(float time, ref Keyframe keyframe, ref Keyframe nextKeyframe); // 0x0000000185398AA8-0x0000000185398D98
-		public float CubicBezier([IsReadOnly] in float4 curveMatrix, float t); // 0x00000001853988E8-0x000000018539892C
-		public float CubicBezier([IsReadOnly] in float3 curveMatrix, float t); // 0x00000001853988A0-0x00000001853988E8
-		public float DeCasteljauBezier(int degree, float4 coords, float t); // 0x000000018539892C-0x0000000185398984
-		public void GetTWithBisectionMethod(float time, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff); // 0x0000000185398DFC-0x0000000185398F64
-		public void GetTWithNewtonMethod(float time, [IsReadOnly] in float4 xCoords, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff); // 0x0000000185398F64-0x0000000185399208
-		public float UseNewtonMethod(float4 curveCoords, float coord, float t, float3 curvePrimeCoords, float4 primePrimeCoords, out float coordAtT); // 0x0000000185399240-0x000000018539938C
-		public void UpdateTLimits(float x, float time, float t, ref float tBottom, ref float tTop); // 0x0000000185399208-0x0000000185399240
+		public bool IsValid(); // 0x00000001853CC6D0-0x00000001853CC6E0
+		public NativeArray<Keyframe> CreateCurve(AnimationCurve animationCurve, Unity.Collections.Allocator allocator); // 0x0000000185364D60-0x0000000185364ED0
+		public NativeArray<Keyframe> CreateLine(float val, Unity.Collections.Allocator allocator); // 0x0000000186564DC0-0x0000000186564EF0
+		public float Evaluate(float time); // 0x000000018783E100-0x000000018783E228
+		public static unsafe int GetInsertionIndex(Keyframe* keys, int valuesLength, float time); // 0x000000018783E524-0x000000018783E588
+		public float WrapTime(float time); // 0x000000018783EB28-0x000000018783EC04
+		public float Evaluate(float time, ref Keyframe keyframe, ref Keyframe nextKeyframe); // 0x000000018783E228-0x000000018783E524
+		public float CubicBezier([IsReadOnly] in float4 curveMatrix, float t); // 0x000000018783E064-0x000000018783E0A8
+		public float CubicBezier([IsReadOnly] in float3 curveMatrix, float t); // 0x000000018783E01C-0x000000018783E064
+		public float DeCasteljauBezier(int degree, float4 coords, float t); // 0x000000018783E0A8-0x000000018783E100
+		public void GetTWithBisectionMethod(float time, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff); // 0x000000018783E588-0x000000018783E6F0
+		public void GetTWithNewtonMethod(float time, [IsReadOnly] in float4 xCoords, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff); // 0x000000018783E6F0-0x000000018783E9A0
+		public float UseNewtonMethod(float4 curveCoords, float coord, float t, float3 curvePrimeCoords, float4 primePrimeCoords, out float coordAtT); // 0x000000018783E9D8-0x000000018783EB28
+		public void UpdateTLimits(float x, float time, float t, ref float tBottom, ref float tTop); // 0x000000018783E9A0-0x000000018783E9D8
 	}
 
-	public struct FPtrNativeCurve // TypeDefIndex: 63731
+	public struct FPtrNativeCurve // TypeDefIndex: 91177
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -67,28 +64,28 @@ namespace Beyond
 		private UnityEngine.WrapMode m_postWrapMode; // 0x10
 	
 		// Methods
-		public bool IsValid(); // 0x000000018423A5F0-0x000000018423A600
-		public NativeArray<float> CreateCurve(AnimationCurve curve, int resolution); // 0x0000000185399468-0x000000018539963C
-		public float Evaluate(float t); // 0x000000018539963C-0x000000018539978C
-		private float _Repeat(float t, float length); // 0x0000000185398300-0x000000018539834C
-		private float _Pingpong(float t, float length); // 0x000000018539978C-0x00000001853997C0
+		public bool IsValid(); // 0x00000001853CC6D0-0x00000001853CC6E0
+		public NativeArray<float> CreateCurve(AnimationCurve curve, int resolution); // 0x000000018783EC04-0x000000018783EDD8
+		public float Evaluate(float t); // 0x000000018783EDD8-0x000000018783EF34
+		private float _Repeat(float t, float length); // 0x000000018783DA84-0x000000018783DAD0
+		private float _Pingpong(float t, float length); // 0x000000018783EF34-0x000000018783EF68
 	}
 }
 
 namespace Beyond.Gameplay.AbilityUnsafe
 {
-	public enum ENPCAbilityPathFollowStateType // TypeDefIndex: 63737
+	public enum ENPCAbilityPathFollowStateType // TypeDefIndex: 91183
 	{
 		Idle = 0,
 		Move = 1,
 		MoveStop = 2
 	}
 
-	public struct FNPCAbilityPathFollowFragment // TypeDefIndex: 63739
+	public struct FNPCAbilityPathFollowFragment // TypeDefIndex: 91185
 	{
 		// Fields
-		public const int TOTAL_POINT_CAPACITY = 32; // Metadata: 0x02352B1E
-		public const int ELEMENT_PER_POINT = 7; // Metadata: 0x02352B1F
+		public const int TOTAL_POINT_CAPACITY = 32; // Metadata: 0x0264B4A2
+		public const int ELEMENT_PER_POINT = 7; // Metadata: 0x0264B4A3
 		private unsafe fixed /* 0x00000000-0x00000000 */ float m_pathPointQueue[0]; // 0x00
 		private int m_front; // 0x380
 		private int m_pointCount; // 0x384
@@ -113,78 +110,78 @@ namespace Beyond.Gameplay.AbilityUnsafe
 		public float groundSlopeAngle; // 0x3DC
 	
 		// Properties
-		public int pointCount { get; } // 0x0000000184D859F0-0x0000000184D85A00 
-		public Vector3 aim { get; } // 0x0000000185393E6C-0x0000000185393E9C 
-		public int aimStyle { get; } // 0x0000000185393E60-0x0000000185393E6C 
-		public int aimExtInfo { get; } // 0x0000000185398894-0x00000001853988A0 
-		public float aimDesiredSpeed { get; } // 0x0000000185398888-0x0000000185398894 
-		public Vector3 startPos { get; set; } // 0x0000000184D85A00-0x0000000184D85A20 0x0000000184D85A20-0x0000000184D85A40
+		public int pointCount { get; } // 0x0000000187232740-0x0000000187232750 
+		public Vector3 aim { get; } // 0x0000000187836988-0x00000001878369B8 
+		public int aimStyle { get; } // 0x000000018783697C-0x0000000187836988 
+		public int aimExtInfo { get; } // 0x000000018783E010-0x000000018783E01C 
+		public float aimDesiredSpeed { get; } // 0x0000000187839638-0x0000000187839644 
+		public Vector3 startPos { get; set; } // 0x0000000187232750-0x0000000187232770 0x0000000187232770-0x0000000187232790
 	
 		// Nested types
 		[CompilerGenerated]
 		[UnsafeValueType]
-		public struct _m_pathPointQueue_e__FixedBuffer // TypeDefIndex: 63738
+		public struct _m_pathPointQueue_e__FixedBuffer // TypeDefIndex: 91184
 		{
 			// Fields
 			public float FixedElementField; // 0x00
 		}
 	
 		// Methods
-		public void Init(); // 0x00000001846AB460-0x00000001846AB490
-		public void MarkPathFollowEnd(); // 0x0000000184D859C0-0x0000000184D859F0
-		public void MarkMoveStop(float time); // 0x0000000184D85990-0x0000000184D859C0
-		public void SetPathIsLoop(bool bIsLoop); // 0x00000001853987A4-0x00000001853987D0
-		public bool GetPathIsLoop(); // 0x00000001838D73D0-0x00000001838D73E0
-		public bool PushPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed, bool patrolActionPoint); // 0x00000001838D97D0-0x00000001838D9920
-		public bool PopPathPoint(); // 0x0000000185398588-0x00000001853986A4
-		private bool _RefreshScope(); // 0x0000000185398868-0x0000000185398888
-		public void CalGroundSlope(Vector3 curPos, Vector3 steeringPos, float speed, float smoothTime); // 0x000000018539834C-0x0000000185398470
-		public static float SlopeAngleDeg(Vector3 pos, Vector3 aim); // 0x00000001853987D0-0x0000000185398868
-		public bool ReplaceLastPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed); // 0x00000001853986A4-0x0000000185398774
-		public void ClearAllPathPoints(); // 0x0000000184D85970-0x0000000184D85990
-		public Vector3 GetPathPoint(int idx); // 0x00000001838D7570-0x00000001838D75D0
-		public int GetPathPointStyle(int idx); // 0x00000001838D4F40-0x00000001838D4FD0
-		public int GetPathPointExtInfo(int idx); // 0x00000001853984D0-0x0000000185398500
-		public float GetPathPointDesiredSpeed(int idx); // 0x000000018468ABE0-0x000000018468AC20
-		public void SetAimPointDesiredSpeed(float speed); // 0x0000000185398774-0x00000001853987A4
-		public bool IsSubActionPoint(int idx); // 0x0000000185398550-0x0000000185398588
-		public bool IsPathFull(); // 0x0000000185398544-0x0000000185398550
-		public int GetPointCount(); // 0x00000001838D73B0-0x00000001838D73D0
-		public float GetPathLength(Vector3 currentLocation); // 0x00000001838D73E0-0x00000001838D7570
-		public int GetEffectPointCount(); // 0x00000001853984BC-0x00000001853984D0
-		public static int FloatToInt32Bits(float v); // 0x0000000185398470-0x00000001853984BC
-		public static float Int32BitsToFloat(int v); // 0x0000000185398500-0x0000000185398544
+		public void Init(); // 0x0000000185A72A10-0x0000000185A72A40
+		public void MarkPathFollowEnd(); // 0x0000000187232710-0x0000000187232740
+		public void MarkMoveStop(float time); // 0x00000001872326E0-0x0000000187232710
+		public void SetPathIsLoop(bool bIsLoop); // 0x000000018783DF2C-0x000000018783DF58
+		public bool GetPathIsLoop(); // 0x0000000185572D90-0x0000000185572DA0
+		public bool PushPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed, bool patrolActionPoint); // 0x0000000185A72A90-0x0000000185A72BE0
+		public bool PopPathPoint(); // 0x000000018783DD0C-0x000000018783DE28
+		private bool _RefreshScope(); // 0x000000018783DFF0-0x000000018783E010
+		public void CalGroundSlope(Vector3 curPos, Vector3 steeringPos, float speed, float smoothTime); // 0x000000018783DAD0-0x000000018783DBF4
+		public static float SlopeAngleDeg(Vector3 pos, Vector3 aim); // 0x000000018783DF58-0x000000018783DFF0
+		public bool ReplaceLastPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed); // 0x000000018783DE28-0x000000018783DEFC
+		public void ClearAllPathPoints(); // 0x00000001872326C0-0x00000001872326E0
+		public Vector3 GetPathPoint(int idx); // 0x0000000185573120-0x0000000185573180
+		public int GetPathPointStyle(int idx); // 0x0000000185571080-0x0000000185571110
+		public int GetPathPointExtInfo(int idx); // 0x000000018783DC54-0x000000018783DC84
+		public float GetPathPointDesiredSpeed(int idx); // 0x0000000186A37060-0x0000000186A370A0
+		public void SetAimPointDesiredSpeed(float speed); // 0x000000018783DEFC-0x000000018783DF2C
+		public bool IsSubActionPoint(int idx); // 0x000000018783DCD4-0x000000018783DD0C
+		public bool IsPathFull(); // 0x000000018783DCC8-0x000000018783DCD4
+		public int GetPointCount(); // 0x0000000185572D70-0x0000000185572D90
+		public float GetPathLength(Vector3 currentLocation); // 0x0000000185572EE0-0x0000000185573120
+		public int GetEffectPointCount(); // 0x000000018783DC40-0x000000018783DC54
+		public static int FloatToInt32Bits(float v); // 0x000000018783DBF4-0x000000018783DC40
+		public static float Int32BitsToFloat(int v); // 0x000000018783DC84-0x000000018783DCC8
 	}
 }
 
 namespace Beyond.NPC.Ability
 {
-	public class NPCAbilityUnsafeUtils // TypeDefIndex: 63732
+	public class NPCAbilityUnsafeUtils // TypeDefIndex: 91178
 	{
 		// Constructors
-		public NPCAbilityUnsafeUtils(); // 0x00000001841E1670-0x00000001841E1680
+		public NPCAbilityUnsafeUtils(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public struct FNPCUnionAnimationAbilityCommand // TypeDefIndex: 63736
+	public struct FNPCUnionAnimationAbilityCommand // TypeDefIndex: 91182
 	{
 		// Fields
 		public ENPCUnionAnimationAbilityCommandType cmdType; // 0x00
 		public FixedBytes4094 Payload; // 0x04
 	
 		// Nested types
-		public enum ENPCUnionAnimationAbilityCommandType // TypeDefIndex: 63733
+		public enum ENPCUnionAnimationAbilityCommandType // TypeDefIndex: 91179
 		{
 			DoAnimatorStepBegin = 0,
 			DoAnimatorStepEnd = 1
 		}
 	
-		public struct DoAnimatorStepEndParams // TypeDefIndex: 63734
+		public struct DoAnimatorStepEndParams // TypeDefIndex: 91180
 		{
 			// Fields
 			public float stepEndDegree; // 0x00
 		}
 	
-		public struct DoAnimatorUpdateStepBeginDegreeParams // TypeDefIndex: 63735
+		public struct DoAnimatorUpdateStepBeginDegreeParams // TypeDefIndex: 91181
 		{
 			// Fields
 			public float stepBeginDegree; // 0x00
@@ -202,10 +199,10 @@ namespace Microsoft.CodeAnalysis
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 63727
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 91173
 	{
 		// Constructors
-		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public EmbeddedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
@@ -213,9 +210,9 @@ namespace System.Runtime.CompilerServices
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 63728
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 91174
 	{
 		// Constructors
-		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public IsUnmanagedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }

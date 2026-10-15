@@ -7,14 +7,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 162: InfinityCode.MeshToTerrain.dll - Assembly: InfinityCode.MeshToTerrain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63966-63968
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 164: InfinityCode.MeshToTerrain.dll - Assembly: InfinityCode.MeshToTerrain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91457-91459
 
 namespace InfinityCode.MeshToTerrain
 {
-	public class MeshToTerrainBoundsHelper : MonoBehaviour // TypeDefIndex: 63967
+	public class MeshToTerrainBoundsHelper : MonoBehaviour // TypeDefIndex: 91458
 	{
 		// Fields
 		public Action OnBoundChanged; // 0x18
@@ -22,12 +19,12 @@ namespace InfinityCode.MeshToTerrain
 		public Bounds bounds; // 0x28
 	
 		// Constructors
-		public MeshToTerrainBoundsHelper(); // 0x0000000185393520-0x0000000185393538
+		public MeshToTerrainBoundsHelper(); // 0x00000001878364A0-0x00000001878364B8
 	}
 
-	public class MeshToTerrainDocumentation : ScriptableObject // TypeDefIndex: 63968
+	public class MeshToTerrainDocumentation : ScriptableObject // TypeDefIndex: 91459
 	{
 		// Constructors
-		public MeshToTerrainDocumentation(); // 0x0000000183573370-0x0000000183573380
+		public MeshToTerrainDocumentation(); // 0x0000000185DD6260-0x0000000185DD6270
 	}
 }

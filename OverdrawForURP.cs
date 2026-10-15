@@ -7,14 +7,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 164: OverdrawForURP.dll - Assembly: OverdrawForURP, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63972-63973
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 166: OverdrawForURP.dll - Assembly: OverdrawForURP, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91463-91464
 
 namespace OverdrawForURP
 {
-	public class OverdrawRendererFeature : ScriptableObject // TypeDefIndex: 63973
+	public class OverdrawRendererFeature : ScriptableObject // TypeDefIndex: 91464
 	{
 		// Fields
 		[SerializeField]
@@ -23,9 +20,9 @@ namespace OverdrawForURP
 		private Shader transparentShader; // 0x20
 	
 		// Constructors
-		public OverdrawRendererFeature(); // 0x0000000183573370-0x0000000183573380
+		public OverdrawRendererFeature(); // 0x0000000185DD6260-0x0000000185DD6270
 	
 		// Methods
-		public void OnCreate(); // 0x000000018A8E2ACC-0x000000018A8E344C
+		public void OnCreate(); // 0x000000018CA9525C-0x000000018CA95C10
 	}
 }

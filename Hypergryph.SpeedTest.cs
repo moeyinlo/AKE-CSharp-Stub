@@ -13,31 +13,28 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-// Image 93: Hypergryph.SpeedTest.dll - Assembly: Hypergryph.SpeedTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62970-63002
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 94: Hypergryph.SpeedTest.dll - Assembly: Hypergryph.SpeedTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 90353-90385
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 63002
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 90385
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_32 _4DAABD10C615552E680FD1F3F9C9E1B1C74413B5F519EDE1335CD44C46B11EC8; // 0x00 // Static value (base64): wPMOHOdju8Icw1WjQwOsUDmURL/2jEoirzmMChZu4UM= - Metadata: 0x0235242C
-	internal static readonly __StaticArrayInitTypeSize_16 _701AA427DC569405D7608BAD336BBED96E382E97EE07C02CFED96D856E313AE5; // 0x20 // Static value (base64): M0Z4YRknUGSVAZNyZGCEAA== - Metadata: 0x02352454
+	internal static readonly __StaticArrayInitTypeSize_32 _4DAABD10C615552E680FD1F3F9C9E1B1C74413B5F519EDE1335CD44C46B11EC8; // 0x00 // Static value (base64): wPMOHOdju8Icw1WjQwOsUDmURL/2jEoirzmMChZu4UM= - Metadata: 0x0264AE08
+	internal static readonly __StaticArrayInitTypeSize_16 _701AA427DC569405D7608BAD336BBED96E382E97EE07C02CFED96D856E313AE5; // 0x20 // Static value (base64): M0Z4YRknUGSVAZNyZGCEAA== - Metadata: 0x0264AE30
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 63000
+	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 90383
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 63001
+	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 90384
 	{
 	}
 }
 
 namespace Hypergryph.SpeedTest
 {
-	public class EventLogWrapper // TypeDefIndex: 62977
+	public class EventLogWrapper // TypeDefIndex: 90360
 	{
 		// Fields
 		private static readonly EventLogWrapper _instance; // 0x00
@@ -45,25 +42,25 @@ namespace Hypergryph.SpeedTest
 		private string _gameVersion; // 0x18
 	
 		// Properties
-		public static EventLogWrapper Instance { get; } // 0x0000000189DF6434-0x0000000189DF6484 
+		public static EventLogWrapper Instance { get; } // 0x000000018C23B8E8-0x000000018C23B938 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 62971
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 90354
 		{
 			// Fields
 			public EventLogWrapper __4__this; // 0x10
 			public string region; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass11_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass11_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _init_b__0(); // 0x00000001840BA980-0x00000001840BA9B0
+			internal bool _init_b__0(); // 0x00000001871E8660-0x00000001871E8690
 		}
 	
 		[CompilerGenerated]
-		private struct _init_d__11 : IAsyncStateMachine // TypeDefIndex: 62972
+		private struct _init_d__11 : IAsyncStateMachine // TypeDefIndex: 90355
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -74,13 +71,13 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter<bool> __u__2; // 0x40
 	
 			// Methods
-			private void MoveNext(); // 0x0000000183811CC0-0x00000001838121F0
+			private void MoveNext(); // 0x00000001861B43A0-0x00000001861B48D0
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x00000001853982D4-0x00000001853982E0
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018783BAEC-0x000000018783BAF8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 62974
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 90357
 		{
 			// Fields
 			public EventLogWrapper __4__this; // 0x10
@@ -88,7 +85,7 @@ namespace Hypergryph.SpeedTest
 			public Dictionary<string, object> data; // 0x20
 	
 			// Nested types
-			private struct __EventTrack_b__0_d : IAsyncStateMachine // TypeDefIndex: 62973
+			private struct __EventTrack_b__0_d : IAsyncStateMachine // TypeDefIndex: 90356
 			{
 				// Fields
 				public int __1__state; // 0x00
@@ -97,20 +94,20 @@ namespace Hypergryph.SpeedTest
 				private TaskAwaiter __u__1; // 0x28
 	
 				// Methods
-				private void MoveNext(); // 0x0000000189DF9A98-0x0000000189DF9D28
+				private void MoveNext(); // 0x000000018C23EFE0-0x000000018C23F278
 				[DebuggerHidden]
-				private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DF9D28-0x0000000189DF9D84
+				private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C23F278-0x000000018C23F2D4
 			}
 	
 			// Constructors
-			public __c__DisplayClass12_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass12_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal async System.Threading.Tasks.Task _EventTrack_b__0(); // 0x0000000189DF9D84-0x0000000189DF9E34
+			internal async System.Threading.Tasks.Task _EventTrack_b__0(); // 0x000000018C23F2D4-0x000000018C23F388
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 62975
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 90358
 		{
 			// Fields
 			public EventLogWrapper __4__this; // 0x10
@@ -118,14 +115,14 @@ namespace Hypergryph.SpeedTest
 			public JObject properties; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass13_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass13_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _ExecuteEventTrackSafely_b__0(); // 0x0000000189DF9E34-0x0000000189DF9F44
+			internal bool _ExecuteEventTrackSafely_b__0(); // 0x000000018C23F388-0x000000018C23F498
 		}
 	
 		[CompilerGenerated]
-		private struct _ExecuteEventTrackSafely_d__13 : IAsyncStateMachine // TypeDefIndex: 62976
+		private struct _ExecuteEventTrackSafely_d__13 : IAsyncStateMachine // TypeDefIndex: 90359
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -137,51 +134,51 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter<bool> __u__1; // 0x40
 	
 			// Methods
-			private void MoveNext(); // 0x0000000189DF8968-0x0000000189DF8E54
+			private void MoveNext(); // 0x000000018C23DE4C-0x000000018C23E344
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DF8E54-0x0000000189DF8EB0
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C23E344-0x000000018C23E3A0
 		}
 	
 		// Constructors
-		private EventLogWrapper(); // 0x0000000184CDB9D0-0x0000000184CDBAA0
-		static EventLogWrapper(); // 0x0000000184CDB960-0x0000000184CDB9D0
+		private EventLogWrapper(); // 0x00000001870F02B0-0x00000001870F0310
+		static EventLogWrapper(); // 0x00000001870F0240-0x00000001870F02B0
 	
 		// Methods
-		public async void init(); // 0x00000001830749A0-0x0000000183074A50
-		public void EventTrack(string name, Dictionary<string, object> data); // 0x0000000189DF625C-0x0000000189DF6348
-		private async System.Threading.Tasks.Task ExecuteEventTrackSafely(string name, Dictionary<string, object> data); // 0x0000000189DF6348-0x0000000189DF6434
+		public async void init(); // 0x0000000186DFFDD0-0x0000000186DFFE80
+		public void EventTrack(string name, Dictionary<string, object> data); // 0x000000018C23B70C-0x000000018C23B7F8
+		private async System.Threading.Tasks.Task ExecuteEventTrackSafely(string name, Dictionary<string, object> data); // 0x000000018C23B7F8-0x000000018C23B8E8
 	}
 
-	public static class HGSpeedTestSDKVersion // TypeDefIndex: 62978
+	public static class HGSpeedTestSDKVersion // TypeDefIndex: 90361
 	{
 		// Fields
 		public static readonly string VERSION; // 0x00
 	
 		// Constructors
-		static HGSpeedTestSDKVersion(); // 0x0000000189DF6484-0x0000000189DF64E0
+		static HGSpeedTestSDKVersion(); // 0x000000018C23B938-0x000000018C23B994
 	}
 
-	public class SpeedTestServerInfo // TypeDefIndex: 62979
+	public class SpeedTestServerInfo // TypeDefIndex: 90362
 	{
 		// Fields
 		public string host; // 0x10
 		public string name; // 0x18
 	
 		// Constructors
-		public SpeedTestServerInfo(string host, string name); // 0x00000001832AF420-0x00000001832AF450
+		public SpeedTestServerInfo(string host, string name); // 0x0000000185381AC0-0x0000000185381AF0
 	}
 
-	public class TaskResult // TypeDefIndex: 62980
+	public class TaskResult // TypeDefIndex: 90363
 	{
 		// Fields
 		public int taskCode; // 0x10
 		public string message; // 0x18
 	
 		// Constructors
-		public TaskResult(int code, string message); // 0x0000000185391D70-0x0000000185391D80
+		public TaskResult(int code, string message); // 0x0000000185CF10D0-0x0000000185CF1300
 	}
 
-	public class SpeedTestResult // TypeDefIndex: 62981
+	public class SpeedTestResult // TypeDefIndex: 90364
 	{
 		// Fields
 		public string host; // 0x10
@@ -190,16 +187,16 @@ namespace Hypergryph.SpeedTest
 		public int resultCode; // 0x24
 	
 		// Constructors
-		public SpeedTestResult(int resultCode, int latency, SpeedTestServerInfo server); // 0x0000000189DF8928-0x0000000189DF8968
+		public SpeedTestResult(int resultCode, int latency, SpeedTestServerInfo server); // 0x000000018C23DE0C-0x000000018C23DE4C
 	}
 
-	public enum SpeedTestProtocol // TypeDefIndex: 62982
+	public enum SpeedTestProtocol // TypeDefIndex: 90365
 	{
 		TCP = 0,
 		UDP = 1
 	}
 
-	public class HGSpeedTestSDK // TypeDefIndex: 62989
+	public class HGSpeedTestSDK // TypeDefIndex: 90372
 	{
 		// Fields
 		private static readonly HGSpeedTestSDK _instance; // 0x00
@@ -212,7 +209,7 @@ namespace Hypergryph.SpeedTest
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _OnApplicationPause_d__16 : IAsyncStateMachine // TypeDefIndex: 62983
+		private struct _OnApplicationPause_d__16 : IAsyncStateMachine // TypeDefIndex: 90366
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -222,13 +219,13 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter<bool> __u__1; // 0x30
 	
 			// Methods
-			private void MoveNext(); // 0x00000001838121F0-0x00000001838123D0
+			private void MoveNext(); // 0x00000001861B48D0-0x00000001861B4AB0
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018459AD30-0x000000018459AD90
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000186517A10-0x0000000186517A70
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 62984
+		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 90367
 		{
 			// Fields
 			public HGSpeedTestSDK __4__this; // 0x10
@@ -237,25 +234,25 @@ namespace Hypergryph.SpeedTest
 			public SpeedTestProtocol protocol; // 0x24
 	
 			// Constructors
-			public __c__DisplayClass17_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass17_0(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_1 // TypeDefIndex: 62985
+		private sealed class __c__DisplayClass17_1 // TypeDefIndex: 90368
 		{
 			// Fields
 			public SpeedTestServerInfo server; // 0x10
 			public __c__DisplayClass17_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass17_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass17_1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _StartSpeedTest_b__0(); // 0x0000000189DF9F44-0x0000000189DF9FD0
+			internal void _StartSpeedTest_b__0(); // 0x000000018C23F498-0x000000018C23F528
 		}
 	
 		[CompilerGenerated]
-		private struct _StartSpeedTest_d__17 : IAsyncStateMachine // TypeDefIndex: 62986
+		private struct _StartSpeedTest_d__17 : IAsyncStateMachine // TypeDefIndex: 90369
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -268,62 +265,62 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter __u__1; // 0x40
 	
 			// Methods
-			private void MoveNext(); // 0x0000000189DF8EB0-0x0000000189DF9A38
+			private void MoveNext(); // 0x000000018C23E3A0-0x000000018C23EF80
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DF9A38-0x0000000189DF9A98
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C23EF80-0x000000018C23EFE0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 62987
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 90370
 		{
 			// Fields
 			public Action<SpeedTestResult> callback; // 0x10
 			public SpeedTestResult result; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass20_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _NotifyRoundResult_b__0(); // 0x0000000189DF9FD0-0x0000000189DFA0A4
+			internal void _NotifyRoundResult_b__0(); // 0x000000018C23F528-0x000000018C23F5FC
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 62988
+		private sealed class __c // TypeDefIndex: 90371
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<long, long> __9__27_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189DFA0A4-0x0000000189DFAAD8
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C23F5FC-0x000000018C23FCD0
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal long _GetP50_b__27_0(long x); // 0x0000000184D88C30-0x0000000184D88C40
+			internal long _GetP50_b__27_0(long x); // 0x000000018459BB50-0x000000018459BB60
 		}
 	
 		// Constructors
-		private HGSpeedTestSDK(); // 0x0000000184A14000-0x0000000184A14170
-		static HGSpeedTestSDK(); // 0x0000000184A13F90-0x0000000184A14000
+		private HGSpeedTestSDK(); // 0x0000000186DFFC60-0x0000000186DFFDD0
+		static HGSpeedTestSDK(); // 0x0000000186DFFBF0-0x0000000186DFFC60
 	
 		// Methods
-		public static HGSpeedTestSDK GetInstance(); // 0x0000000189DF7074-0x0000000189DF70C4
-		public async System.Threading.Tasks.Task OnApplicationPause(bool pauseStatus); // 0x0000000183F266A0-0x0000000183F26780
-		public async Task<TaskResult> StartSpeedTest(List<SpeedTestServerInfo> serverList, Action<SpeedTestResult> callback, int round = 1 /* Metadata: 0x02352427 */, SpeedTestProtocol protocol = SpeedTestProtocol.TCP /* Metadata: 0x02352428 */); // 0x0000000189DF7B78-0x0000000189DF7C94
-		private void OnSpeedTestStart(); // 0x0000000189DF77D0-0x0000000189DF7938
-		private TaskResult OnSpeedTaskResult(int code, string message); // 0x0000000189DF75B0-0x0000000189DF77D0
-		private void NotifyRoundResult(Action<SpeedTestResult> callback, int code, int latency, SpeedTestServerInfo server); // 0x0000000189DF7278-0x0000000189DF75B0
-		private void CleanupConnections(); // 0x0000000189DF64E0-0x0000000189DF6978
-		private void TestServerLatency(SpeedTestServerInfo server, Action<SpeedTestResult> callback, int round, SpeedTestProtocol protocol, CancellationToken cancellationToken); // 0x0000000189DF7C94-0x0000000189DF82B8
-		private int EstablishConnection(SpeedTestServerInfo server); // 0x0000000189DF6A78-0x0000000189DF7074
-		private SpeedTestResult TestTcpLatency(SpeedTestServerInfo server, List<long> serverLatencyList, CancellationToken cancellationToken); // 0x0000000189DF82B8-0x0000000189DF886C
-		private long SendTcpPackage(NetworkStream stream); // 0x0000000189DF7938-0x0000000189DF7B78
-		private byte[] CreateTcpPacket(); // 0x0000000189DF6978-0x0000000189DF6A78
-		public long GetP50(List<long> latencies); // 0x0000000189DF70C4-0x0000000189DF7278
+		public static HGSpeedTestSDK GetInstance(); // 0x000000018C23C530-0x000000018C23C580
+		public async System.Threading.Tasks.Task OnApplicationPause(bool pauseStatus); // 0x000000018628A430-0x000000018628A510
+		public async Task<TaskResult> StartSpeedTest(List<SpeedTestServerInfo> serverList, Action<SpeedTestResult> callback, int round = 1 /* Metadata: 0x0264AE02 */, SpeedTestProtocol protocol = SpeedTestProtocol.TCP /* Metadata: 0x0264AE03 */); // 0x000000018C23D048-0x000000018C23D168
+		private void OnSpeedTestStart(); // 0x000000018C23CC90-0x000000018C23CDF8
+		private TaskResult OnSpeedTaskResult(int code, string message); // 0x000000018C23CA70-0x000000018C23CC90
+		private void NotifyRoundResult(Action<SpeedTestResult> callback, int code, int latency, SpeedTestServerInfo server); // 0x000000018C23C734-0x000000018C23CA70
+		private void CleanupConnections(); // 0x000000018C23B994-0x000000018C23BE40
+		private void TestServerLatency(SpeedTestServerInfo server, Action<SpeedTestResult> callback, int round, SpeedTestProtocol protocol, CancellationToken cancellationToken); // 0x000000018C23D168-0x000000018C23D788
+		private int EstablishConnection(SpeedTestServerInfo server); // 0x000000018C23BF40-0x000000018C23C530
+		private SpeedTestResult TestTcpLatency(SpeedTestServerInfo server, List<long> serverLatencyList, CancellationToken cancellationToken); // 0x000000018C23D788-0x000000018C23DD50
+		private long SendTcpPackage(NetworkStream stream); // 0x000000018C23CDF8-0x000000018C23D048
+		private byte[] CreateTcpPacket(); // 0x000000018C23BE40-0x000000018C23BF40
+		public long GetP50(List<long> latencies); // 0x000000018C23C580-0x000000018C23C734
 	}
 
-	internal class NativeConfigLoader // TypeDefIndex: 62991
+	internal class NativeConfigLoader // TypeDefIndex: 90374
 	{
 		// Fields
 		private static NativeConfigLoader instance; // 0x00
@@ -333,7 +330,7 @@ namespace Hypergryph.SpeedTest
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _init_d__7 : IAsyncStateMachine // TypeDefIndex: 62990
+		private struct _init_d__7 : IAsyncStateMachine // TypeDefIndex: 90373
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -342,49 +339,49 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter<string> __u__1; // 0x28
 	
 			// Methods
-			private void MoveNext(); // 0x0000000184863740-0x0000000184863950
+			private void MoveNext(); // 0x000000018611DB90-0x000000018611DDA0
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018459AD90-0x000000018459ADF0
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000186517A70-0x0000000186517AD0
 		}
 	
 		// Constructors
-		private NativeConfigLoader(); // 0x0000000184CE7FF0-0x0000000184CE8030
-		static NativeConfigLoader(); // 0x0000000184CE7F80-0x0000000184CE7FF0
+		private NativeConfigLoader(); // 0x000000018710C9B0-0x000000018710C9F0
+		static NativeConfigLoader(); // 0x000000018710C940-0x000000018710C9B0
 	
 		// Methods
-		public async System.Threading.Tasks.Task init(); // 0x0000000184CDA8D0-0x0000000184CDA990
-		public static NativeConfigLoader GetInstance(); // 0x0000000189DF886C-0x0000000189DF88BC
-		public string GetGameVersion(); // 0x0000000184D862C0-0x0000000184D862D0
-		public string GetRegion(); // 0x00000001838115F0-0x0000000183811630
-		private string GetRegionFromConfig(); // 0x0000000183F4DB30-0x0000000183F4DBE0
-		public string ReadWinConfig(); // 0x0000000183F4D9D0-0x0000000183F4DB30
+		public async System.Threading.Tasks.Task init(); // 0x00000001861B4AF0-0x00000001861B4BB0
+		public static NativeConfigLoader GetInstance(); // 0x000000018C23DD50-0x000000018C23DDA0
+		public string GetGameVersion(); // 0x000000018225E800-0x000000018225E810
+		public string GetRegion(); // 0x00000001861B4AB0-0x00000001861B4AF0
+		private string GetRegionFromConfig(); // 0x00000001861B5280-0x00000001861B5890
+		private string GetRegionFromWIN(); // 0x000000018492DDA0-0x0000000184930A60
 		[CompilerGenerated]
-		private string _init_b__7_0(); // 0x00000001841A7470-0x00000001841A74A0
+		private string _init_b__7_0(); // 0x000000018611E5C0-0x000000018611E5F0
 	}
 
-	public class SpeedTestLogger // TypeDefIndex: 62993
+	public class SpeedTestLogger // TypeDefIndex: 90376
 	{
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 62992
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 90375
 		{
 			// Fields
 			public string logInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass3_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _PrintLogToView_b__0(); // 0x0000000183AC6D90-0x0000000183AC6EA0
+			internal void _PrintLogToView_b__0(); // 0x00000001850D0BD0-0x00000001850D0CE0
 		}
 	
 		// Methods
-		public static void Debug(string message); // 0x0000000183073F00-0x0000000183073F80
-		public static void Error(string message); // 0x0000000189DF88BC-0x0000000189DF8928
-		public static void PrintLogToView(string logInfo); // 0x0000000183073F80-0x0000000183074030
+		public static void Debug(string message); // 0x000000018602AE60-0x000000018602AEE0
+		public static void Error(string message); // 0x000000018C23DDA0-0x000000018C23DE0C
+		public static void PrintLogToView(string logInfo); // 0x000000018602AEE0-0x000000018602AF90
 	}
 
-	internal class UnityMainThread // TypeDefIndex: 62998
+	internal class UnityMainThread // TypeDefIndex: 90381
 	{
 		// Fields
 		private static SynchronizationContext MainContext; // 0x00
@@ -392,20 +389,20 @@ namespace Hypergryph.SpeedTest
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 62994
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 90377
 		{
 			// Fields
 			public Action action; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass3_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _RunOnMainThread_b__0(object _); // 0x0000000184CC60B0-0x0000000184CC60D0
+			internal void _RunOnMainThread_b__0(object _); // 0x00000001870B4690-0x00000001870B46B0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass4_0<T> // TypeDefIndex: 62995
+		private sealed class __c__DisplayClass4_0<T> // TypeDefIndex: 90378
 		{
 			// Fields
 			public TaskCompletionSource<T> tcs;
@@ -420,22 +417,22 @@ namespace Hypergryph.SpeedTest
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 62996
+		private sealed class __c // TypeDefIndex: 90379
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<bool> __9__5_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000184D41EF0-0x0000000184D41F50
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E51E0-0x00000001871E5240
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _isAppFocused_b__5_0(); // 0x0000000185396550-0x0000000185396560
+			internal bool _isAppFocused_b__5_0(); // 0x000000018783C5E0-0x000000018783C5E8
 		}
 	
 		[CompilerGenerated]
-		private struct _isAppFocused_d__5 : IAsyncStateMachine // TypeDefIndex: 62997
+		private struct _isAppFocused_d__5 : IAsyncStateMachine // TypeDefIndex: 90380
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -443,20 +440,20 @@ namespace Hypergryph.SpeedTest
 			private TaskAwaiter<bool> __u__1; // 0x20
 	
 			// Methods
-			private void MoveNext(); // 0x0000000183811A60-0x0000000183811CC0
+			private void MoveNext(); // 0x00000001861B4150-0x00000001861B43A0
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x00000001848BB2C0-0x00000001848BB330
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000186EE01F0-0x0000000186EE0260
 		}
 	
 		// Methods
 		[RuntimeInitializeOnLoadMethod]
-		public static void Init(); // 0x0000000183FCE3F0-0x0000000183FCE490
-		public static void RunOnMainThread(Action action); // 0x0000000183074030-0x0000000183074120
+		public static void Init(); // 0x00000001861B3B30-0x00000001861B3BD0
+		public static void RunOnMainThread(Action action); // 0x000000018602B0E0-0x000000018602B1D0
 		public static Task<T> RunOnMainThread<T>(Func<T> func);
-		public static async Task<bool> isAppFocused(); // 0x0000000183812500-0x00000001838125C0
+		public static async Task<bool> isAppFocused(); // 0x00000001861B4BB0-0x00000001861B4C80
 	}
 
-	public class WinConfigParser // TypeDefIndex: 62999
+	public class WinConfigParser // TypeDefIndex: 90382
 	{
 		// Fields
 		private static readonly byte[] iv; // 0x00
@@ -464,13 +461,13 @@ namespace Hypergryph.SpeedTest
 		private static readonly string public_key_str; // 0x10
 	
 		// Constructors
-		static WinConfigParser(); // 0x0000000184B4BB30-0x0000000184B4BC50
+		static WinConfigParser(); // 0x0000000186FC9EE0-0x0000000186FCA000
 	
 		// Methods
-		public static string ParseEncryptionFile(string encryptionfile, string verifyfile); // 0x00000001830757F0-0x0000000183075970
-		private static string DecryptConfig(byte[] encryptedData, byte[] key, byte[] iv); // 0x0000000183C0D7B0-0x0000000183C0DDD0
-		private static bool VerifySignature(string data, string sign); // 0x0000000183C0A840-0x0000000183C0B260
-		private static void ImportRsaPublicKeyManually(RSACryptoServiceProvider rsa, byte[] publicKeyBytes); // 0x0000000183FE4EF0-0x0000000183FE5100
-		private static byte[] ExtractPublicKeyFromPem(string pemString); // 0x0000000183C0B260-0x0000000183C0B3B0
+		public static string ParseEncryptionFile(string encryptionfile, string verifyfile); // 0x0000000186029750-0x00000001860298D0
+		private static string DecryptConfig(byte[] encryptedData, byte[] key, byte[] iv); // 0x00000001860298D0-0x0000000186029F20
+		private static bool VerifySignature(string data, string sign); // 0x0000000186029F20-0x000000018602A970
+		private static void ImportRsaPublicKeyManually(RSACryptoServiceProvider rsa, byte[] publicKeyBytes); // 0x0000000185BD38A0-0x0000000185BD3AD0
+		private static byte[] ExtractPublicKeyFromPem(string pemString); // 0x000000018602A970-0x000000018602AAC0
 	}
 }

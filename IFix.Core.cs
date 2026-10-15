@@ -11,90 +11,168 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Unity.IL2CPP.CompilerServices;
 
-// Image 71: IFix.Core.dll - Assembly: IFix.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62233-62269
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 65: IFix.Core.dll - Assembly: IFix.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 89261-89302
 
 namespace IFix
 {
 	[AttributeUsage(AttributeTargets.Class)]
-	public class CustomBridgeAttribute : Attribute // TypeDefIndex: 62260
+	public class CustomBridgeAttribute : Attribute // TypeDefIndex: 89293
 	{
 		// Constructors
-		public CustomBridgeAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public CustomBridgeAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace IFix.Core
 {
-	public class IDTagAttribute : Attribute // TypeDefIndex: 62234
+	public class IDTagAttribute : Attribute // TypeDefIndex: 89262
 	{
 		// Fields
 		public int ID; // 0x10
 	
 		// Constructors
-		public IDTagAttribute(int id); // 0x00000001814F51F0-0x00000001814F5220
+		public IDTagAttribute(int id); // 0x0000000182234E90-0x0000000182234EA0
 	}
 
-	public static class PatchManager // TypeDefIndex: 62238
+	public static class PatchManager // TypeDefIndex: 89271
 	{
 		// Fields
-		private static Dictionary<Assembly, Action> removers; // 0x00
+		private static readonly object patchLock; // 0x00
+		private static bool hotPatchApiResolved; // 0x08
+		private static MethodInfo hotPatchSetPatchMethod; // 0x10
+		private static MethodInfo hotPatchClearPatchMethod; // 0x18
+		private static PatchState patchState; // 0x20
 		[CompilerGenerated]
-		private static Func<ParameterInfo, System.Type> __f__am_cache0; // 0x08
+		private static Func<ParameterInfo, System.Type> __f__am_cache0; // 0x28
 	
 		// Nested types
+		private enum PatchKind // TypeDefIndex: 89263
+		{
+			Legacy = 0,
+			Incremental = 1
+		}
+	
+		private sealed class PatchEntry // TypeDefIndex: 89264
+		{
+			// Fields
+			public PatchKind kind; // 0x10
+			public System.Type targetType; // 0x18
+			public Assembly wrapperAssembly; // 0x20
+			public VirtualMachine virtualMachine; // 0x28
+			public int[] positions; // 0x30
+			public int[] methodIds; // 0x38
+			public WrappersManager wm; // 0x40
+			public MethodBase[] hotPatchMethods; // 0x48
+			public Delegate[] hotPatchHandlers; // 0x50
+	
+			// Properties
+			public bool isHotPatch { get; } // 0x0000000184930A60-0x0000000184930A70 
+	
+			// Constructors
+			public PatchEntry(); // 0x0000000186805BA0-0x0000000186805BB0
+		}
+	
+		private sealed class HotPatchBinding // TypeDefIndex: 89265
+		{
+			// Fields
+			public PatchEntry entry; // 0x10
+			public Delegate handler; // 0x18
+	
+			// Constructors
+			public HotPatchBinding(); // 0x0000000186805BA0-0x0000000186805BB0
+		}
+	
+		private sealed class PatchState // TypeDefIndex: 89266
+		{
+			// Fields
+			public Dictionary<System.Type, List<PatchEntry>> activePatches; // 0x10
+			public Dictionary<MethodBase, List<HotPatchBinding>> activeHotPatches; // 0x18
+			public Dictionary<VirtualMachine, PatchEntry> patchesByVM; // 0x20
+			public Dictionary<Assembly, VirtualMachine> legacyPatches; // 0x28
+	
+			// Constructors
+			public PatchState(); // 0x0000000184947DC0-0x00000001849490E0
+		}
+	
+		private sealed class WrapperArrayUpdate // TypeDefIndex: 89267
+		{
+			// Fields
+			public System.Reflection.FieldInfo field; // 0x10
+			public Array previousArray; // 0x18
+			public Array nextArray; // 0x20
+	
+			// Constructors
+			public WrapperArrayUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		}
+	
+		private sealed class HotPatchUpdate // TypeDefIndex: 89268
+		{
+			// Fields
+			public MethodBase method; // 0x10
+			public Delegate previousHandler; // 0x18
+			public Delegate nextHandler; // 0x20
+	
+			// Constructors
+			public HotPatchUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		}
+	
 		[CompilerGenerated]
-		private sealed class _readMethod_c__AnonStorey0 // TypeDefIndex: 62235
+		private sealed class _readMethod_c__AnonStorey0 // TypeDefIndex: 89269
 		{
 			// Fields
 			internal System.Type[] genericArgInfos; // 0x10
 	
 			// Constructors
-			public _readMethod_c__AnonStorey0(); // 0x00000001841E1670-0x00000001841E1680
+			public _readMethod_c__AnonStorey0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal string __m__0(System.Text.RegularExpressions.Match m); // 0x0000000189E11FB4-0x0000000189E12020
+			internal string __m__0(System.Text.RegularExpressions.Match m); // 0x000000018C2532E0-0x000000018C25334C
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Load_c__AnonStorey1 // TypeDefIndex: 62236
+		private sealed class _LoadInternal_c__AnonStorey1 // TypeDefIndex: 89270
 		{
 			// Fields
 			internal List<IntPtr> nativePointers; // 0x10
 	
 			// Constructors
-			public _Load_c__AnonStorey1(); // 0x00000001841E1670-0x00000001841E1680
-		}
-	
-		[CompilerGenerated]
-		private sealed class _Load_c__AnonStorey2 // TypeDefIndex: 62237
-		{
-			// Fields
-			internal WrappersManager wrapperManager; // 0x10
-			internal _Load_c__AnonStorey1 __f__ref_1; // 0x18
-	
-			// Constructors
-			public _Load_c__AnonStorey2(); // 0x00000001841E1670-0x00000001841E1680
+			public _LoadInternal_c__AnonStorey1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __m__0(); // 0x0000000189E11EF4-0x0000000189E11F94
-			internal void __m__1(); // 0x0000000189E11F94-0x0000000189E11FB4
+			internal void __m__0(); // 0x00000001849490E0-0x0000000184949990
 		}
 	
 		// Constructors
-		static PatchManager(); // 0x0000000189E0FA04-0x0000000189E0FA90
+		static PatchManager(); // 0x000000018C24FD20-0x000000018C24FE70
 	
 		// Methods
-		private static MethodBase readMethod(BinaryReader reader, System.Type[] externTypes); // 0x0000000189E0FD0C-0x0000000189E106C8
-		private static int getMapId(List<System.Type> idMapArray, MethodBase method); // 0x0000000189E0FA90-0x0000000189E0FD0C
-		private static int[] readSlotInfo(BinaryReader reader, Dictionary<MethodInfo, int> itfMethodToId, System.Type[] externTypes, int maxId); // 0x0000000189E106C8-0x0000000189E1098C
-		public static VirtualMachine Load(Stream stream, bool checkNew = true /* Metadata: 0x02350A04 */); // 0x0000000189E0B1AC-0x0000000189E0F870
-		public static void Unload(Assembly assembly); // 0x0000000189E0F870-0x0000000189E0FA04
+		private static PatchState CloneState(PatchState source); // 0x0000000184936D40-0x0000000184939F60
+		private static void AddEntry(PatchState state, PatchEntry entry); // 0x0000000184931080-0x0000000184932DB0
+		private static void RemoveEntry(PatchState state, PatchEntry entry); // 0x0000000184944020-0x00000001849458C0
+		private static WrapperArrayUpdate BuildWrapperArrayUpdate(PatchState state, System.Type targetType, WrappersManager fallbackManager); // 0x0000000184934040-0x0000000184936D40
+		private static Delegate GetEffectiveHotPatchHandler(PatchState state, MethodBase method); // 0x0000000184939F60-0x000000018493A830
+		private static HotPatchUpdate BuildHotPatchUpdate(PatchState candidate, MethodBase method); // 0x0000000184933920-0x0000000184934040
+		private static void ApplyHotPatchHandler(MethodBase method, Delegate handler); // 0x0000000184932DB0-0x0000000184933920
+		private static void PublishState(PatchState candidate, Dictionary<System.Type, WrappersManager> affectedTargets, HashSet<MethodBase> affectedHotPatchMethods); // 0x000000018493FD00-0x0000000184942A20
+		private static void AddAffectedEntry(PatchEntry entry, Dictionary<System.Type, WrappersManager> affectedTargets, HashSet<MethodBase> affectedHotPatchMethods); // 0x0000000184930A70-0x0000000184931080
+		private static void RegisterPatch(System.Type targetType, VirtualMachine virtualMachine, int[] positions, int[] methodIds, WrappersManager wrapperManager, PatchKind kind, MethodBase[] hotPatchMethods, Delegate[] hotPatchHandlers); // 0x0000000184942A20-0x0000000184944020
+		private static MethodBase readMethod(BinaryReader reader, System.Type[] externTypes); // 0x000000018C250164-0x000000018C250B90
+		private static int getMapId(List<System.Type> idMapArray, MethodBase method); // 0x000000018C24FFDC-0x000000018C250164
+		private static string getMapFieldName(MethodBase method); // 0x000000018C24FE70-0x000000018C24FFDC
+		private static System.Type getHotPatchDelegateType(List<System.Type> hotPatchIdMapList, Assembly assembly, MethodBase method); // 0x0000000184946D40-0x0000000184947DC0
+		private static void resolveHotPatchApi(); // 0x000000018C250E64-0x000000018C2510F8
+		private static int[] readSlotInfo(BinaryReader reader, Dictionary<MethodInfo, int> itfMethodToId, System.Type[] externTypes, int maxId); // 0x000000018C250B90-0x000000018C250E64
+		public static VirtualMachine Load(Stream stream, bool checkNew = true /* Metadata: 0x02648989 */); // 0x000000018C24FB58-0x000000018C24FBAC
+		public static VirtualMachine LoadIncremental(Stream stream, bool checkNew = true /* Metadata: 0x0264898A */); // 0x000000018493A830-0x000000018493AB50
+		private static VirtualMachine LoadInternal(Stream stream, bool checkNew, PatchKind kind); // 0x000000018493AB50-0x000000018493FD00
+		public static void UnloadIncremental(VirtualMachine virtualMachine); // 0x00000001849468D0-0x0000000184946D40
+		public static void Unload(Assembly assembly); // 0x000000018C24FBAC-0x000000018C24FD20
+		private static void RemovePatch(VirtualMachine virtualMachine, bool incrementalOnly); // 0x00000001849458C0-0x00000001849468D0
 		[CompilerGenerated]
-		private static System.Type _readMethod_m__0(ParameterInfo p); // 0x00000001853E4DA0-0x00000001853E4DB8
+		private static System.Type _readMethod_m__0(ParameterInfo p); // 0x000000018788A2DC-0x000000018788A2F4
 	}
 
-	public enum Code // TypeDefIndex: 62239
+	public enum Code // TypeDefIndex: 89272
 	{
 		Blt_Un = 0,
 		Ldind_U1 = 1,
@@ -280,14 +358,14 @@ namespace IFix.Core
 		Stind_I4 = 181
 	}
 
-	public struct Instruction // TypeDefIndex: 62240
+	public struct Instruction // TypeDefIndex: 89273
 	{
 		// Fields
 		public Code Code; // 0x00
 		public int Operand; // 0x04
 	}
 
-	public enum ExceptionHandlerType // TypeDefIndex: 62241
+	public enum ExceptionHandlerType // TypeDefIndex: 89274
 	{
 		Catch = 0,
 		Filter = 1,
@@ -295,7 +373,7 @@ namespace IFix.Core
 		Fault = 4
 	}
 
-	public sealed class ExceptionHandler // TypeDefIndex: 62242
+	public sealed class ExceptionHandler // TypeDefIndex: 89275
 	{
 		// Fields
 		public System.Type CatchType; // 0x10
@@ -307,10 +385,10 @@ namespace IFix.Core
 		public int TryStart; // 0x2C
 	
 		// Constructors
-		public ExceptionHandler(); // 0x00000001841E1670-0x00000001841E1680
+		public ExceptionHandler(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class AnonymousStorey // TypeDefIndex: 62243
+	public class AnonymousStorey // TypeDefIndex: 89276
 	{
 		// Fields
 		private Value[] unmanagedFields; // 0x10
@@ -323,23 +401,23 @@ namespace IFix.Core
 		private int toStringMethodId; // 0x3C
 	
 		// Constructors
-		public AnonymousStorey(int fieldNum, int[] fieldTypes, int typeID, int[] vTable, VirtualMachine virtualMachine); // 0x0000000189E071B0-0x0000000189E073C8
+		public AnonymousStorey(int fieldNum, int[] fieldTypes, int typeID, int[] vTable, VirtualMachine virtualMachine); // 0x000000018C24BBD8-0x000000018C24BDE8
 	
 		// Methods
-		internal unsafe void Ldfld(int fieldIndex, Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack); // 0x0000000189E06EDC-0x0000000189E06FB8
-		internal unsafe void Stfld(int fieldIndex, Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack); // 0x0000000189E0702C-0x0000000189E070F0
-		internal object Get(int fieldIndex, System.Type type, VirtualMachine virtualMachine, bool valueTypeClone); // 0x0000000189E06E60-0x0000000189E06EDC
-		internal void Set(int fieldIndex, object obj, System.Type type, VirtualMachine virtualMachine); // 0x0000000189E06FB8-0x0000000189E0702C
-		public bool ObjectEquals(object obj); // 0x0000000182FB1840-0x0000000182FB1850
-		public override bool Equals(object obj); // 0x0000000189E06C20-0x0000000189E06CDC
-		public int ObjectGetHashCode(); // 0x0000000184D87100-0x0000000184D87110
-		public override int GetHashCode(); // 0x0000000189E06DC4-0x0000000189E06E60
-		public string ObjectToString(); // 0x000000018669AD6C-0x000000018669AD74
-		public override string ToString(); // 0x0000000189E070F0-0x0000000189E071B0
-		~AnonymousStorey(); // 0x0000000189E06CDC-0x0000000189E06DC4
+		internal unsafe void Ldfld(int fieldIndex, Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack); // 0x000000018C24B8F4-0x000000018C24B9D0
+		internal unsafe void Stfld(int fieldIndex, Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack); // 0x000000018C24BA48-0x000000018C24BB0C
+		internal object Get(int fieldIndex, System.Type type, VirtualMachine virtualMachine, bool valueTypeClone); // 0x000000018C24B874-0x000000018C24B8F4
+		internal void Set(int fieldIndex, object obj, System.Type type, VirtualMachine virtualMachine); // 0x000000018C24B9D0-0x000000018C24BA48
+		public bool ObjectEquals(object obj); // 0x0000000184F9DDF0-0x0000000184F9DE00
+		public override bool Equals(object obj); // 0x000000018C24B624-0x000000018C24B6E4
+		public int ObjectGetHashCode(); // 0x0000000187235B50-0x0000000187235B60
+		public override int GetHashCode(); // 0x000000018C24B7D4-0x000000018C24B874
+		public string ObjectToString(); // 0x0000000188ABB3B8-0x0000000188ABB3C0
+		public override string ToString(); // 0x000000018C24BB0C-0x000000018C24BBD8
+		~AnonymousStorey(); // 0x000000018C24B6E4-0x000000018C24B7D4
 	}
 
-	public class AnonymousStoreyInfo // TypeDefIndex: 62244
+	public class AnonymousStoreyInfo // TypeDefIndex: 89277
 	{
 		// Fields
 		public int FieldNum; // 0x10
@@ -350,10 +428,10 @@ namespace IFix.Core
 		public int[] VTable; // 0x30
 	
 		// Constructors
-		public AnonymousStoreyInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public AnonymousStoreyInfo(); // 0x000000018C24B5E4-0x000000018C24B624
 	}
 
-	public enum ValueType // TypeDefIndex: 62245
+	public enum ValueType // TypeDefIndex: 89278
 	{
 		Integer = 0,
 		Long = 1,
@@ -368,7 +446,7 @@ namespace IFix.Core
 		ArrayReference = 10
 	}
 
-	public struct Value // TypeDefIndex: 62246
+	public struct Value // TypeDefIndex: 89279
 	{
 		// Fields
 		public IFix.Core.ValueType Type; // 0x00
@@ -376,7 +454,7 @@ namespace IFix.Core
 		public int Value2; // 0x08
 	}
 
-	internal class GenericDelegateFactory // TypeDefIndex: 62250
+	internal class GenericDelegateFactory // TypeDefIndex: 89283
 	{
 		// Fields
 		private static MethodInfo[] genericAction; // 0x00
@@ -399,66 +477,66 @@ namespace IFix.Core
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Create_c__AnonStorey0 // TypeDefIndex: 62247
+		private sealed class _Create_c__AnonStorey0 // TypeDefIndex: 89280
 		{
 			// Fields
 			internal System.Type delegateType; // 0x10
 	
 			// Constructors
-			public _Create_c__AnonStorey0(); // 0x00000001841E1670-0x00000001841E1680
+			public _Create_c__AnonStorey0(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Create_c__AnonStorey1 // TypeDefIndex: 62248
+		private sealed class _Create_c__AnonStorey1 // TypeDefIndex: 89281
 		{
 			// Fields
 			internal MethodInfo methodInfo; // 0x10
 			internal _Create_c__AnonStorey0 __f__ref_0; // 0x18
 	
 			// Constructors
-			public _Create_c__AnonStorey1(); // 0x00000001841E1670-0x00000001841E1680
+			public _Create_c__AnonStorey1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal Delegate __m__0(GenericDelegate o); // 0x0000000189E11ECC-0x0000000189E11EF4
+			internal Delegate __m__0(GenericDelegate o); // 0x000000018C2532B8-0x000000018C2532E0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Create_c__AnonStorey2 // TypeDefIndex: 62249
+		private sealed class _Create_c__AnonStorey2 // TypeDefIndex: 89282
 		{
 			// Fields
 			internal MethodInfo methodInfo; // 0x10
 			internal _Create_c__AnonStorey0 __f__ref_0; // 0x18
 	
 			// Constructors
-			public _Create_c__AnonStorey2(); // 0x00000001841E1670-0x00000001841E1680
+			public _Create_c__AnonStorey2(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal Delegate __m__0(GenericDelegate o); // 0x0000000189E11ECC-0x0000000189E11EF4
+			internal Delegate __m__0(GenericDelegate o); // 0x000000018C2532B8-0x000000018C2532E0
 		}
 	
 		// Constructors
-		static GenericDelegateFactory(); // 0x0000000189E0A5D4-0x0000000189E0A6B4
+		static GenericDelegateFactory(); // 0x000000018C24EF28-0x000000018C24F010
 	
 		// Methods
-		private static void PreventStripping(object obj); // 0x0000000189E0A2F8-0x0000000189E0A4B8
-		internal static Delegate Create(System.Type delegateType, VirtualMachine virtualMachine, int methodId, object anonObj); // 0x0000000189E09798-0x0000000189E0A2F8
+		private static void PreventStripping(object obj); // 0x000000018C24EC48-0x000000018C24EE0C
+		internal static Delegate Create(System.Type delegateType, VirtualMachine virtualMachine, int methodId, object anonObj); // 0x000000018C24E0E8-0x000000018C24EC48
 		[CompilerGenerated]
-		private static bool _Create_m__0(MethodInfo m); // 0x0000000189E0A4B8-0x0000000189E0A50C
+		private static bool _Create_m__0(MethodInfo m); // 0x000000018C24EE0C-0x000000018C24EE60
 		[CompilerGenerated]
-		private static int _Create_m__1(MethodInfo m); // 0x0000000189E0A50C-0x0000000189E0A538
+		private static int _Create_m__1(MethodInfo m); // 0x000000018C24EE60-0x000000018C24EE8C
 		[CompilerGenerated]
-		private static bool _Create_m__2(MethodInfo m); // 0x0000000189E0A538-0x0000000189E0A58C
+		private static bool _Create_m__2(MethodInfo m); // 0x000000018C24EE8C-0x000000018C24EEE0
 		[CompilerGenerated]
-		private static int _Create_m__3(MethodInfo m); // 0x0000000189E0A50C-0x0000000189E0A538
+		private static int _Create_m__3(MethodInfo m); // 0x000000018C24EE60-0x000000018C24EE8C
 		[CompilerGenerated]
-		private static bool _Create_m__4(ParameterInfo p); // 0x0000000189E0A58C-0x0000000189E0A5D4
+		private static bool _Create_m__4(ParameterInfo p); // 0x000000018C24EEE0-0x000000018C24EF28
 		[CompilerGenerated]
-		private static Delegate _Create_m__5(GenericDelegate x); // 0x00000001811EC580-0x00000001811EC590
+		private static Delegate _Create_m__5(GenericDelegate x); // 0x0000000185829EC0-0x0000000185829ED0
 		[CompilerGenerated]
-		private static System.Type _Create_m__6(ParameterInfo pinfo); // 0x00000001853E4DA0-0x00000001853E4DB8
+		private static System.Type _Create_m__6(ParameterInfo pinfo); // 0x000000018788A2DC-0x000000018788A2F4
 	}
 
-	internal class GenericDelegate // TypeDefIndex: 62251
+	internal class GenericDelegate // TypeDefIndex: 89284
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -468,10 +546,10 @@ namespace IFix.Core
 		private int extraArgNum; // 0x2C
 	
 		// Constructors
-		internal GenericDelegate(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x0000000189E0A748-0x0000000189E0A788
+		internal GenericDelegate(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x000000018C24F0AC-0x000000018C24F0F4
 	
 		// Methods
-		public void Action(); // 0x0000000189E0A6B4-0x0000000189E0A748
+		public void Action(); // 0x000000018C24F010-0x000000018C24F0AC
 		public void Action<T1>(T1 p1)
 			where T1 : class;
 		public void Action<T1, T2>(T1 p1, T2 p2)
@@ -508,19 +586,19 @@ namespace IFix.Core
 			where TResult : class;
 	}
 
-	public class ObjectClone // TypeDefIndex: 62254
+	public class ObjectClone // TypeDefIndex: 89287
 	{
 		// Fields
 		private MethodInfo memberwiseClone; // 0x10
 	
 		// Constructors
-		public ObjectClone(); // 0x0000000189E0B114-0x0000000189E0B1AC
+		public ObjectClone(); // 0x000000018C24FAC0-0x000000018C24FB58
 	
 		// Methods
-		public object Clone(object obj); // 0x0000000189E0B0F0-0x0000000189E0B114
+		public object Clone(object obj); // 0x000000018C24FA9C-0x000000018C24FAC0
 	}
 
-	internal class ReflectionMethodInvoker // TypeDefIndex: 62255
+	internal class ReflectionMethodInvoker // TypeDefIndex: 89288
 	{
 		// Fields
 		private int paramCount; // 0x10
@@ -536,20 +614,23 @@ namespace IFix.Core
 		private bool isNullableValue; // 0x49
 	
 		// Constructors
-		public ReflectionMethodInvoker(MethodBase method); // 0x0000000189E11880-0x0000000189E11CB4
+		public ReflectionMethodInvoker(MethodBase method); // 0x000000018C252914-0x000000018C252D54
 	
 		// Methods
-		public void Invoke(VirtualMachine virtualMachine, ref Call call, bool isInstantiate); // 0x0000000189E1098C-0x0000000189E11880
+		public void Invoke(VirtualMachine virtualMachine, ref Call call, bool isInstantiate); // 0x000000018C2510F8-0x000000018C252914
+		private object invokeConstructorAndUnwrap(object[] args); // 0x000000018C252D54-0x000000018C252E18
+		private object invokeMethodAndUnwrap(object instance, object[] args); // 0x000000018C252E18-0x000000018C252EDC
+		private void tryWriteBackPreservingPrimary(object instance, IntPtr pointerAddr); // 0x000000018C252EDC-0x000000018C2530A0
 	}
 
-	internal struct UnmanagedStack // TypeDefIndex: 62256
+	internal struct UnmanagedStack // TypeDefIndex: 89289
 	{
 		// Fields
 		public unsafe Value* Base; // 0x00
 		public unsafe Value* Top; // 0x08
 	}
 
-	internal class ThreadStackInfo // TypeDefIndex: 62257
+	internal class ThreadStackInfo // TypeDefIndex: 89290
 	{
 		// Fields
 		public unsafe UnmanagedStack* UnmanagedStack; // 0x10
@@ -559,25 +640,25 @@ namespace IFix.Core
 		private static LocalDataStoreSlot localSlot; // 0x00
 	
 		// Properties
-		internal static ThreadStackInfo Stack { get; } // 0x0000000189E11DE8-0x0000000189E11ECC 
+		internal static ThreadStackInfo Stack { get; } // 0x000000018C2531D4-0x000000018C2532B8 
 	
 		// Constructors
-		public ThreadStackInfo(); // 0x0000000189E11D50-0x0000000189E11DE8
-		static ThreadStackInfo(); // 0x0000000189E11D00-0x0000000189E11D50
+		public ThreadStackInfo(); // 0x000000018C25313C-0x000000018C2531D4
+		static ThreadStackInfo(); // 0x000000018C2530EC-0x000000018C25313C
 	}
 
-	internal static class EvaluationStackOperation // TypeDefIndex: 62258
+	internal static class EvaluationStackOperation // TypeDefIndex: 89291
 	{
 		// Methods
-		internal static unsafe void UnboxPrimitive(Value* evaluationStackPointer, object obj, System.Type type); // 0x0000000189E08AD8-0x0000000189E08FAC
-		internal static object mGet(bool isArray, object root, int layer, int[] fieldIdList, System.Reflection.FieldInfo[] fieldInfos, Dictionary<int, NewFieldInfo> newFieldInfos); // 0x0000000189E09354-0x0000000189E09570
-		internal static void mSet(bool isArray, object root, object val, int layer, int[] fieldIdList, System.Reflection.FieldInfo[] fieldInfos, Dictionary<int, NewFieldInfo> newFieldInfos); // 0x0000000189E09570-0x0000000189E09798
-		internal static unsafe object ToObject(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, System.Type type, VirtualMachine virtualMachine, bool valueTypeClone = true /* Metadata: 0x02350B43 */); // 0x0000000189E07EDC-0x0000000189E08AD8
-		public static unsafe void PushObject(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, object obj, System.Type type); // 0x0000000189E07B74-0x0000000189E07EDC
-		public static unsafe void UpdateReference(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, object obj, VirtualMachine virtualMachine, System.Type type); // 0x0000000189E08FAC-0x0000000189E09354
+		internal static unsafe void UnboxPrimitive(Value* evaluationStackPointer, object obj, System.Type type); // 0x000000018C24D3BC-0x000000018C24D8BC
+		internal static object mGet(bool isArray, object root, int layer, int[] fieldIdList, System.Reflection.FieldInfo[] fieldInfos, Dictionary<int, NewFieldInfo> newFieldInfos); // 0x000000018C24DC6C-0x000000018C24DE90
+		internal static void mSet(bool isArray, object root, object val, int layer, int[] fieldIdList, System.Reflection.FieldInfo[] fieldInfos, Dictionary<int, NewFieldInfo> newFieldInfos); // 0x000000018C24DE90-0x000000018C24E0E8
+		internal static unsafe object ToObject(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, System.Type type, VirtualMachine virtualMachine, bool valueTypeClone = true /* Metadata: 0x02648ACB */); // 0x000000018C24C8EC-0x000000018C24D3BC
+		public static unsafe void PushObject(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, object obj, System.Type type); // 0x000000018C24C628-0x000000018C24C8EC
+		public static unsafe void UpdateReference(Value* evaluationStackBase, Value* evaluationStackPointer, object[] managedStack, object obj, VirtualMachine virtualMachine, System.Type type); // 0x000000018C24D8BC-0x000000018C24DC6C
 	}
 
-	public struct Call // TypeDefIndex: 62259
+	public struct Call // TypeDefIndex: 89292
 	{
 		// Fields
 		internal unsafe Value* argumentBase; // 0x00
@@ -587,56 +668,55 @@ namespace IFix.Core
 		internal unsafe Value** topWriteBack; // 0x20
 	
 		// Methods
-		public static Call Begin(); // 0x0000000189E07448-0x0000000189E0750C
-		internal static Call BeginForStack(ThreadStackInfo stack); // 0x0000000189E073C8-0x0000000189E07448
-		public void PushBoolean(bool b); // 0x0000000189E076A8-0x0000000189E076D8
-		public bool GetBoolean(int offset = 0 /* Metadata: 0x02350B44 */); // 0x0000000189E0750C-0x0000000189E07540
-		public void PushByte(byte b); // 0x0000000189E076D8-0x0000000189E076E4
-		public byte GetByte(int offset = 0 /* Metadata: 0x02350B45 */); // 0x0000000189E07540-0x0000000189E07548
-		public sbyte GetSByte(int offset = 0 /* Metadata: 0x02350B46 */); // 0x0000000189E07540-0x0000000189E07548
-		public void PushInt16(short s); // 0x0000000189E07718-0x0000000189E07724
-		public short GetInt16(int offset = 0 /* Metadata: 0x02350B47 */); // 0x0000000189E07540-0x0000000189E07548
-		public void PushChar(char c); // 0x0000000189E076E4-0x0000000189E076F0
-		public char GetChar(int offset = 0 /* Metadata: 0x02350B48 */); // 0x0000000189E07540-0x0000000189E07548
-		public void PushUInt16(ushort us); // 0x0000000189E076E4-0x0000000189E076F0
-		public ushort GetUInt16(int offset = 0 /* Metadata: 0x02350B49 */); // 0x0000000189E07540-0x0000000189E07548
-		public void PushInt32(int i); // 0x0000000189E07724-0x0000000189E07754
-		public int GetInt32(int offset = 0 /* Metadata: 0x02350B4A */); // 0x0000000189E07578-0x0000000189E075A8
-		public void PushUInt32(uint ui); // 0x0000000189E078D0-0x0000000189E078D8
-		public uint GetUInt32(int offset = 0 /* Metadata: 0x02350B4B */); // 0x0000000189E07540-0x0000000189E07548
-		public void PushInt64(long i); // 0x0000000189E07754-0x0000000189E07784
-		public long GetInt64(int offset = 0 /* Metadata: 0x02350B4C */); // 0x0000000189E075A8-0x0000000189E075D8
-		public void PushUInt64(ulong i); // 0x0000000189E078D8-0x0000000189E078E0
-		public ulong GetUInt64(int offset = 0 /* Metadata: 0x02350B4D */); // 0x0000000189E075D8-0x0000000189E075E0
-		public void PushSingle(float f); // 0x0000000189E078A8-0x0000000189E078D0
-		public float GetSingle(int offset = 0 /* Metadata: 0x02350B4E */); // 0x0000000189E07678-0x0000000189E076A8
-		public void PushDouble(double d); // 0x0000000189E076F0-0x0000000189E07718
-		public double GetDouble(int offset = 0 /* Metadata: 0x02350B4F */); // 0x0000000189E07548-0x0000000189E07578
-		public void PushIntPtr(IntPtr i); // 0x0000000189E07784-0x0000000189E07790
-		public IntPtr GetIntPtr(int offset = 0 /* Metadata: 0x02350B50 */); // 0x0000000189E075D8-0x0000000189E075E0
-		public void PushObject(object o); // 0x0000000189E077CC-0x0000000189E07868
-		public void PushValueType(object o); // 0x0000000189E078E0-0x0000000189E0797C
-		public object GetObject(int offset = 0 /* Metadata: 0x02350B51 */); // 0x0000000189E075E0-0x0000000189E07678
-		public T GetAsType<T>(int offset = 0 /* Metadata: 0x02350B52 */);
-		public void PushObjectAsResult(object obj, System.Type type); // 0x0000000189E07790-0x0000000189E077CC
-		public void PushRef(int offset); // 0x0000000189E07868-0x0000000189E078A8
-		public void UpdateReference(int offset, object obj, VirtualMachine virtualMachine, System.Type type); // 0x0000000189E0797C-0x0000000189E07A2C
+		public static Call Begin(); // 0x000000018C24BE68-0x000000018C24BF2C
+		internal static Call BeginForStack(ThreadStackInfo stack); // 0x000000018C24BDE8-0x000000018C24BE68
+		public void PushBoolean(bool b); // 0x000000018C24C0C8-0x000000018C24C0FC
+		public bool GetBoolean(int offset = 0 /* Metadata: 0x02648ACC */); // 0x000000018C24BF2C-0x000000018C24BF60
+		public void PushByte(byte b); // 0x000000018C24C0FC-0x000000018C24C108
+		public byte GetByte(int offset = 0 /* Metadata: 0x02648ACD */); // 0x000000018C24BF60-0x000000018C24BF68
+		public void PushInt16(short s); // 0x000000018C24C13C-0x000000018C24C148
+		public short GetInt16(int offset = 0 /* Metadata: 0x02648ACE */); // 0x000000018C24BF60-0x000000018C24BF68
+		public void PushChar(char c); // 0x000000018C24C108-0x000000018C24C114
+		public char GetChar(int offset = 0 /* Metadata: 0x02648ACF */); // 0x000000018C24BF60-0x000000018C24BF68
+		public void PushUInt16(ushort us); // 0x000000018C24C108-0x000000018C24C114
+		public ushort GetUInt16(int offset = 0 /* Metadata: 0x02648AD0 */); // 0x000000018C24BF60-0x000000018C24BF68
+		public void PushInt32(int i); // 0x000000018C24C148-0x000000018C24C178
+		public int GetInt32(int offset = 0 /* Metadata: 0x02648AD1 */); // 0x000000018C24BF98-0x000000018C24BFC8
+		public void PushUInt32(uint ui); // 0x000000018C24C2F4-0x000000018C24C2FC
+		public uint GetUInt32(int offset = 0 /* Metadata: 0x02648AD2 */); // 0x000000018C24BF60-0x000000018C24BF68
+		public void PushInt64(long i); // 0x000000018C24C178-0x000000018C24C1A8
+		public long GetInt64(int offset = 0 /* Metadata: 0x02648AD3 */); // 0x000000018C24BFC8-0x000000018C24BFF8
+		public void PushUInt64(ulong i); // 0x000000018C24C2FC-0x000000018C24C304
+		public ulong GetUInt64(int offset = 0 /* Metadata: 0x02648AD4 */); // 0x000000018C24BFF8-0x000000018C24C000
+		public void PushSingle(float f); // 0x000000018C24C2CC-0x000000018C24C2F4
+		public float GetSingle(int offset = 0 /* Metadata: 0x02648AD5 */); // 0x000000018C24C098-0x000000018C24C0C8
+		public void PushDouble(double d); // 0x000000018C24C114-0x000000018C24C13C
+		public double GetDouble(int offset = 0 /* Metadata: 0x02648AD6 */); // 0x000000018C24BF68-0x000000018C24BF98
+		public void PushIntPtr(IntPtr i); // 0x000000018C24C1A8-0x000000018C24C1B4
+		public IntPtr GetIntPtr(int offset = 0 /* Metadata: 0x02648AD7 */); // 0x000000018C24BFF8-0x000000018C24C000
+		public void PushObject(object o); // 0x000000018C24C1F0-0x000000018C24C28C
+		public void PushValueType(object o); // 0x000000018C24C304-0x000000018C24C3A0
+		public object GetObject(int offset = 0 /* Metadata: 0x02648AD8 */); // 0x000000018C24C000-0x000000018C24C098
+		public T GetAsType<T>(int offset = 0 /* Metadata: 0x02648AD9 */);
+		public void PushObjectAsResult(object obj, System.Type type); // 0x000000018C24C1B4-0x000000018C24C1F0
+		public void PushRef(int offset); // 0x000000018C24C28C-0x000000018C24C2CC
+		public void UpdateReference(int offset, object obj, VirtualMachine virtualMachine, System.Type type); // 0x000000018C24C3A0-0x000000018C24C454
 	}
 
-	public static class Utils // TypeDefIndex: 62261
+	public static class Utils // TypeDefIndex: 89294
 	{
 		// Fields
 		private static Dictionary<System.Type, MethodInfo> delegateAdptCache; // 0x00
 	
 		// Constructors
-		static Utils(); // 0x0000000189E123F0-0x0000000189E1247C
+		static Utils(); // 0x000000018C253754-0x000000018C2537E0
 	
 		// Methods
-		public static bool IsAssignable(MethodInfo delegateMethod, MethodInfo method); // 0x0000000189E12020-0x0000000189E1218C
-		public static Delegate TryAdapterToDelegate(object obj, System.Type delegateType, string perfix); // 0x0000000189E1218C-0x0000000189E123F0
+		public static bool IsAssignable(MethodInfo delegateMethod, MethodInfo method); // 0x000000018C25334C-0x000000018C2534E8
+		public static Delegate TryAdapterToDelegate(object obj, System.Type delegateType, string perfix); // 0x000000018C2534E8-0x000000018C253754
 	}
 
-	internal class RuntimeException : Exception // TypeDefIndex: 62262
+	internal class RuntimeException : Exception // TypeDefIndex: 89295
 	{
 		// Fields
 		[CompilerGenerated]
@@ -644,39 +724,40 @@ namespace IFix.Core
 		private Exception _Real_k__BackingField; // 0x90
 	
 		// Properties
-		public Exception Real { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86220-0x0000000184D86230 0x0000000186402330-0x0000000186402344
+		public Exception Real { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271B70-0x0000000182271B80 0x0000000188800C9C-0x0000000188800CB0
 	
 		// Constructors
-		public RuntimeException(); // 0x0000000189E11CB4-0x0000000189E11D00
+		public RuntimeException(); // 0x000000018C2530A0-0x000000018C2530EC
 	}
 
-	public delegate void ExternInvoker(VirtualMachine vm, ref Call call, bool isInstantiate); // TypeDefIndex: 62263; 0x0000000181546280-0x00000001815462A0
+	public delegate void ExternInvoker(VirtualMachine vm, ref Call call, bool isInstantiate); // TypeDefIndex: 89296; 0x00000001811DF7F0-0x00000001811DF810
 
-	internal class FieldAddr // TypeDefIndex: 62264
+	internal class FieldAddr // TypeDefIndex: 89297
 	{
 		// Fields
 		public object Object; // 0x10
 		public int[] FieldIdList; // 0x18
 	
 		// Constructors
-		public FieldAddr(); // 0x00000001841E1670-0x00000001841E1680
+		public FieldAddr(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class Cleanner // TypeDefIndex: 62265
+	public class Cleanner // TypeDefIndex: 89298
 	{
 		// Fields
 		private static bool start; // 0x00
 	
 		// Constructors
-		public Cleanner(); // 0x00000001841E1670-0x00000001841E1680
+		public Cleanner(); // 0x0000000186805BA0-0x0000000186805BB0
+		static Cleanner(); // 0x000000018C24C5F0-0x000000018C24C628
 	
 		// Methods
-		public static void Start(); // 0x0000000189E07AE8-0x0000000189E07B3C
-		public static void Stop(); // 0x0000000189E07B3C-0x0000000189E07B74
-		~Cleanner(); // 0x0000000189E07A2C-0x0000000189E07AE8
+		public static void Start(); // 0x000000018C24C52C-0x000000018C24C5A0
+		public static void Stop(); // 0x000000018C24C5A0-0x000000018C24C5F0
+		~Cleanner(); // 0x000000018C24C454-0x000000018C24C52C
 	}
 
-	public class NewFieldInfo // TypeDefIndex: 62266
+	public class NewFieldInfo // TypeDefIndex: 89299
 	{
 		// Fields
 		public string Name; // 0x10
@@ -689,20 +770,20 @@ namespace IFix.Core
 		private static readonly Dictionary<int, WeakReference> objList; // 0x18
 	
 		// Constructors
-		public NewFieldInfo(); // 0x00000001841E1670-0x00000001841E1680
-		static NewFieldInfo(); // 0x0000000189E0AF8C-0x0000000189E0B0F0
+		public NewFieldInfo(); // 0x0000000186805BA0-0x0000000186805BB0
+		static NewFieldInfo(); // 0x000000018C24F938-0x000000018C24FA9C
 	
 		// Methods
-		private object SetDefaultValue(object obj); // 0x0000000189E0AAEC-0x0000000189E0AB64
-		public static void Sweep(); // 0x0000000189E0AD80-0x0000000189E0AF8C
-		public void CheckInit(VirtualMachine virtualMachine, object obj); // 0x0000000189E0A788-0x0000000189E0A898
-		public int ObjectToIndex(object obj); // 0x0000000189E0AA8C-0x0000000189E0AAEC
-		public bool HasInitialize(object obj); // 0x0000000189E0A984-0x0000000189E0AA8C
-		public object GetValue(object obj); // 0x0000000189E0A898-0x0000000189E0A984
-		public void SetValue(object obj, object value); // 0x0000000189E0AB64-0x0000000189E0AD80
+		private object SetDefaultValue(object obj); // 0x000000018C24F488-0x000000018C24F500
+		public static void Sweep(); // 0x000000018C24F71C-0x000000018C24F938
+		public void CheckInit(VirtualMachine virtualMachine, object obj); // 0x000000018C24F0F4-0x000000018C24F20C
+		public int ObjectToIndex(object obj); // 0x000000018C24F428-0x000000018C24F488
+		public bool HasInitialize(object obj); // 0x000000018C24F310-0x000000018C24F428
+		public object GetValue(object obj); // 0x000000018C24F20C-0x000000018C24F310
+		public void SetValue(object obj, object value); // 0x000000018C24F500-0x000000018C24F71C
 	}
 
-	public class VirtualMachine // TypeDefIndex: 62268
+	public class VirtualMachine // TypeDefIndex: 89301
 	{
 		// Fields
 		internal ObjectClone objectClone; // 0x10
@@ -727,102 +808,101 @@ namespace IFix.Core
 		private static Action<string> __f__mg_cache0; // 0x08
 	
 		// Properties
-		public ExceptionHandler[][] ExceptionHandlers { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		public System.Type[] ExternTypes { get; set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
-		public MethodBase[] ExternMethods { get; set; } // 0x0000000184D85A60-0x0000000184D85A70 0x0000000189E13534-0x0000000189E135A4
-		public string[] InternStrings { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
-		public System.Reflection.FieldInfo[] FieldInfos { set; } // 0x00000001836E5590-0x00000001836E55A0
-		public Dictionary<int, NewFieldInfo> NewFieldInfos { set; } // 0x00000001863CC164-0x00000001863CC174
-		public AnonymousStoreyInfo[] AnonymousStoreyInfos { set; } // 0x000000018485F170-0x000000018485F180
-		public System.Type[] StaticFieldTypes { set; } // 0x0000000189E135A4-0x0000000189E13620
-		public int[] Cctors { set; } // 0x0000000185395D30-0x0000000185395D44
-		public WrappersManager WrappersManager { get; set; } // 0x0000000184D86220-0x0000000184D86230 0x0000000186402330-0x0000000186402344
+		public ExceptionHandler[][] ExceptionHandlers { get; set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		public System.Type[] ExternTypes { get; set; } // 0x000000018226EE80-0x000000018226EE90 0x0000000185B68F50-0x0000000185B68F60
+		public MethodBase[] ExternMethods { get; set; } // 0x000000018226EEA0-0x000000018226EEB0 0x000000018C2548B4-0x000000018C254924
+		public string[] InternStrings { get; set; } // 0x000000018226EBD0-0x000000018226EBE0 0x00000001869E1E00-0x00000001869E1E10
+		public System.Reflection.FieldInfo[] FieldInfos { set; } // 0x00000001856B9750-0x00000001856B9760
+		public Dictionary<int, NewFieldInfo> NewFieldInfos { set; } // 0x0000000188800CB0-0x0000000188800CC0
+		public AnonymousStoreyInfo[] AnonymousStoreyInfos { set; } // 0x0000000186B19440-0x0000000186B19450
+		public System.Type[] StaticFieldTypes { set; } // 0x000000018C254924-0x000000018C2549A0
+		public int[] Cctors { set; } // 0x0000000188800C74-0x0000000188800C88
+		public WrappersManager WrappersManager { get; set; } // 0x0000000182271B70-0x0000000182271B80 0x0000000188800C9C-0x0000000188800CB0
 	
 		// Nested types
-		private class CalliInvokerInfo // TypeDefIndex: 62267
+		private class CalliInvokerInfo // TypeDefIndex: 89300
 		{
 			// Fields
 			public ExternInvoker Invoker; // 0x10
 			public int ArgumentCount; // 0x18
 	
 			// Constructors
-			public CalliInvokerInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public CalliInvokerInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		internal unsafe VirtualMachine(Instruction** unmanaged_codes, Action on_dispose); // 0x0000000189E12634-0x0000000189E12760
-		static VirtualMachine(); // 0x0000000183AF9D30-0x0000000183AF9E10
+		internal unsafe VirtualMachine(Instruction** unmanaged_codes, Action on_dispose); // 0x000000018C2539C8-0x000000018C253B10
+		static VirtualMachine(); // 0x00000001870A89C0-0x00000001870A8AA0
 	
 		// Methods
-		~VirtualMachine(); // 0x0000000189E1252C-0x0000000189E125BC
-		private unsafe void checkCctorExecute(int fieldId, Value* argumentBase, object[] managedStack, Value* evaluationStackBase); // 0x0000000189E12DFC-0x0000000189E12E80
+		~VirtualMachine(); // 0x000000018C253890-0x000000018C253950
+		private unsafe void checkCctorExecute(int fieldId, Value* argumentBase, object[] managedStack, Value* evaluationStackBase); // 0x000000018C2541C4-0x000000018C254250
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe void store(Value* stackBase, Value* dst, Value* src, object[] managedStack); // 0x0000000189E1384C-0x0000000189E139F8
+		private unsafe void store(Value* stackBase, Value* dst, Value* src, object[] managedStack); // 0x000000018C254BCC-0x000000018C254D80
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe void copy(Value* stackBase, Value* dst, Value* src, object[] managedStack); // 0x0000000189E12E80-0x0000000189E12FC0
+		private unsafe void copy(Value* stackBase, Value* dst, Value* src, object[] managedStack); // 0x000000018C254250-0x000000018C254394
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe void resolveStackReference(Value* value, Value* stackBase, object[] managedStack); // 0x0000000189E133D8-0x0000000189E13534
+		private unsafe void resolveStackReference(Value* value, Value* stackBase, object[] managedStack); // 0x000000018C25475C-0x000000018C2548B4
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe byte* stackReferenceToPointer(Value* value); // 0x0000000189E13620-0x0000000189E13634
+		private unsafe byte* stackReferenceToPointer(Value* value); // 0x000000018C2549A0-0x000000018C2549B4
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
-		private unsafe bool tryConvertStackReferenceToPointer(Value* value); // 0x0000000189E13A7C-0x0000000189E13AA4
+		private unsafe bool tryConvertStackReferenceToPointer(Value* value); // 0x000000018C254E04-0x000000018C254E2C
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe byte* pointerValueToAddress(Value* value, object[] managedStack); // 0x0000000189E13258-0x0000000189E133D8
+		private unsafe byte* pointerValueToAddress(Value* value, object[] managedStack); // 0x000000018C25463C-0x000000018C25475C
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe long valueToInt64(Value* value); // 0x0000000189E13CB4-0x0000000189E13DB0
+		private unsafe long valueToInt64(Value* value); // 0x000000018C25503C-0x000000018C255138
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe float valueToFloat(Value* value); // 0x0000000189E13BAC-0x0000000189E13CB4
+		private unsafe float valueToFloat(Value* value); // 0x000000018C254F34-0x000000018C25503C
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe double valueToDouble(Value* value); // 0x0000000189E13AA4-0x0000000189E13BAC
+		private unsafe double valueToDouble(Value* value); // 0x000000018C254E2C-0x000000018C254F34
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-		private unsafe void storeToRawPointer(byte* destination, Value* src, Code code); // 0x0000000189E13634-0x0000000189E1384C
+		private unsafe void storeToRawPointer(byte* destination, Value* src, Code code); // 0x000000018C2549B4-0x000000018C254BCC
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
 		[Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
-		private unsafe void loadFromRawPointer(byte* source, Value* dest, Code code); // 0x0000000189E13078-0x0000000189E13258
-		public void Execute(int methodIndex, ref Call call, int argsCount, int refCount = 0 /* Metadata: 0x02350B53 */); // 0x0000000189E124C4-0x0000000189E1252C
-		public unsafe Value* Execute(int methodIndex, Value* argumentBase, object[] managedStack, Value* evaluationStackBase, int argsCount); // 0x0000000189E1247C-0x0000000189E124C4
-		private void throwRuntimeException(Exception e, bool bWrap); // 0x0000000189E139F8-0x0000000189E13A7C
-		private ExceptionHandler getExceptionHandler(int methodIndex, System.Type exceptionType, int pc); // 0x0000000189E12FC0-0x0000000189E13078
-		private unsafe void arrayGet(object obj, int idx, Value* val, object[] managedStack, Value* evaluationStackBase); // 0x0000000189E12760-0x0000000189E12ACC
-		private unsafe void arraySet(object obj, int idx, Value* val, object[] managedStack, Value* evaluationStackBase); // 0x0000000189E12ACC-0x0000000189E12DFC
-		public static void _Info(string a); // 0x0000000189E125BC-0x0000000189E12634
-		public unsafe Value* Execute(Instruction* pc, Value* argumentBase, object[] managedStack, Value* evaluationStackBase, int argsCount, int methodIndex, int refCount = 0 /* Metadata: 0x02350B54 */, Value** topWriteBack = null); // 0x0000000189DFAAD8-0x0000000189E06C20
+		private unsafe void loadFromRawPointer(byte* source, Value* dest, Code code); // 0x000000018C25444C-0x000000018C25463C
+		public void Execute(int methodIndex, ref Call call, int argsCount, int refCount = 0 /* Metadata: 0x02648ADA */); // 0x000000018C253828-0x000000018C253890
+		public unsafe Value* Execute(int methodIndex, Value* argumentBase, object[] managedStack, Value* evaluationStackBase, int argsCount); // 0x000000018C2537E0-0x000000018C253828
+		private void throwRuntimeException(Exception e, bool bWrap); // 0x000000018C254D80-0x000000018C254E04
+		private ExceptionHandler getExceptionHandler(int methodIndex, System.Type exceptionType, int pc); // 0x000000018C254394-0x000000018C25444C
+		private unsafe void arrayGet(object obj, int idx, Value* val, object[] managedStack, Value* evaluationStackBase); // 0x000000018C253B10-0x000000018C253E7C
+		private unsafe void arraySet(object obj, int idx, Value* val, object[] managedStack, Value* evaluationStackBase); // 0x000000018C253E7C-0x000000018C2541C4
+		public static void _Info(string a); // 0x000000018C253950-0x000000018C2539C8
+		public unsafe Value* Execute(Instruction* pc, Value* argumentBase, object[] managedStack, Value* evaluationStackBase, int argsCount, int methodIndex, int refCount = 0 /* Metadata: 0x02648ADB */, Value** topWriteBack = null); // 0x000000018C23FCD0-0x000000018C24B5E4
 	}
 
-	public interface WrappersManager // TypeDefIndex: 62269
+	public interface WrappersManager // TypeDefIndex: 89302
 	{
 		// Methods
 		Delegate CreateDelegate(System.Type type, int id, object anon);
 		AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine);
 		object CreateWrapper(int id);
-		object InitWrapperArray(int len);
 	}
 }
 
 namespace Unity.IL2CPP.CompilerServices
 {
-	internal enum Option // TypeDefIndex: 62252
+	internal enum Option // TypeDefIndex: 89285
 	{
 		NullChecks = 1,
 		ArrayBoundsChecks = 2,
@@ -830,7 +910,7 @@ namespace Unity.IL2CPP.CompilerServices
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
-	internal class Il2CppSetOptionAttribute : Attribute // TypeDefIndex: 62253
+	internal class Il2CppSetOptionAttribute : Attribute // TypeDefIndex: 89286
 	{
 		// Fields
 		[CompilerGenerated]
@@ -841,10 +921,10 @@ namespace Unity.IL2CPP.CompilerServices
 		private object _Value_k__BackingField; // 0x18
 	
 		// Properties
-		private Unity.IL2CPP.CompilerServices.Option Option { [CompilerGenerated] set; } // 0x00000001814F51F0-0x00000001814F5220
-		private object Value { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
+		private Unity.IL2CPP.CompilerServices.Option Option { [CompilerGenerated] set; } // 0x0000000182234E90-0x0000000182234EA0
+		private object Value { [CompilerGenerated] set; } // 0x0000000187835500-0x0000000187835510
 	
 		// Constructors
-		internal Il2CppSetOptionAttribute(Unity.IL2CPP.CompilerServices.Option option, object value); // 0x0000000185391D70-0x0000000185391D80
+		internal Il2CppSetOptionAttribute(Unity.IL2CPP.CompilerServices.Option option, object value); // 0x0000000185CF10D0-0x0000000185CF1300
 	}
 }

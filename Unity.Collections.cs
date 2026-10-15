@@ -21,75 +21,44 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Scripting;
 
-// Image 54: Unity.Collections.dll - Assembly: Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60687-60877
-[assembly: BurstCompiler.StaticTypeReinit(typeof(xxHash3.Hash128Long_000008FE_BurstDirectCall))]
-[assembly: BurstCompiler.StaticTypeReinit(typeof(AllocatorManager.StackAllocator.Try_000000A0_BurstDirectCall))]
-[assembly: BurstCompiler.StaticTypeReinit(typeof(AllocatorManager.SlabAllocator.Try_000000AE_BurstDirectCall))]
-[assembly: BurstCompiler.StaticTypeReinit(typeof(RewindableAllocator.Try_000008B6_BurstDirectCall))]
-[assembly: BurstCompiler.StaticTypeReinit(typeof(xxHash3.Hash64Long_000008F7_BurstDirectCall))]
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: InternalsVisibleTo("Unity.Burst.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections.BurstCompatibilityTestCodeGen")]
-[assembly: InternalsVisibleTo("Unity.Collections.CodeGen")]
-[assembly: InternalsVisibleTo("Unity.Collections.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.CodeGen")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities.Editor")]
-[assembly: InternalsVisibleTo("Unity.Entities.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.Rendering.Hybrid")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Runtime.Tests")]
-[assembly: InternalsVisibleTo("Unity.Runtime.IO.Tests")]
-[assembly: InternalsVisibleTo("Unity.Runtime.UnityInstance")]
-[assembly: InternalsVisibleTo("Unity.Tiny.Animation")]
-[assembly: InternalsVisibleTo("Unity.Tiny.Core.Tests")]
-[assembly: InternalsVisibleTo("Unity.Tiny.GameSave")]
-[assembly: InternalsVisibleTo("Unity.Tiny.GameSave.Tests")]
-[assembly: InternalsVisibleTo("Unity.Tiny.Rendering.Native")]
-[assembly: InternalsVisibleTo("Unity.Scenes")]
-[assembly: InternalsVisibleTo("Unity.Scenes.Editor")]
-[assembly: InternalsVisibleTo("Samples.GridPath.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities.PerformanceTests")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 54: Unity.Collections.dll - Assembly: Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 88036-88230
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 60875
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 88228
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_192 _2CF2F88BF9B71283059B6DF53E5BCDE20ADBFD9E8D6CE2C1AB106262BB283BED; // 0x00 // Static value (base64): uP5sOSOkS758AYEs9yGtHN7UbemDkJfbckCkpLezZx/LeeZOzMDleIJa0H3M/3IhuAhGdPdDJI7gNZDmgTomTDwoUruRwwDLiNBlixtTLqNxZEiXog35TjgZ70ap3qzYqPp2P+OcND/53LvHxwtPHYpR4EvNtFkxyJ9+ydl4c2TqxayDNNPrw8WBoP/6E2PrFw3dUbfw2knTFlUmKdRonisWvlh9R6H8j/i40XrQMc5FyzqPlRYEKK/X+8q7S0B+ - Metadata: 0x0234EDD4
+	internal static readonly __StaticArrayInitTypeSize_192 _2CF2F88BF9B71283059B6DF53E5BCDE20ADBFD9E8D6CE2C1AB106262BB283BED; // 0x00 // Static value (base64): uP5sOSOkS758AYEs9yGtHN7UbemDkJfbckCkpLezZx/LeeZOzMDleIJa0H3M/3IhuAhGdPdDJI7gNZDmgTomTDwoUruRwwDLiNBlixtTLqNxZEiXog35TjgZ70ap3qzYqPp2P+OcND/53LvHxwtPHYpR4EvNtFkxyJ9+ydl4c2TqxayDNNPrw8WBoP/6E2PrFw3dUbfw2knTFlUmKdRonisWvlh9R6H8j/i40XrQMc5FyzqPlRYEKK/X+8q7S0B+ - Metadata: 0x02647F60
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_192 // TypeDefIndex: 60874
+	private struct __StaticArrayInitTypeSize_192 // TypeDefIndex: 88227
 	{
 	}
 }
 
 [DOTSCompilerGenerated]
-internal class __JobReflectionRegistrationOutput__486165037 // TypeDefIndex: 60876
+internal class __JobReflectionRegistrationOutput__3703794347 // TypeDefIndex: 88229
 {
 	// Methods
-	public static void CreateJobReflectionData(); // 0x0000000182EC09F0-0x0000000182EC2B20
+	public static void CreateJobReflectionData(); // 0x0000000184F4AEA0-0x0000000184F4CEA0
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-	public static void EarlyInit(); // 0x0000000182EC2B20-0x0000000182EC6590
+	public static void EarlyInit(); // 0x0000000184F4CEA0-0x0000000184F50750
 }
 
-internal static class _BurstDirectCallInitializer // TypeDefIndex: 60877
+internal static class _BurstDirectCallInitializer // TypeDefIndex: 88230
 {
 	// Methods
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-	private static void Initialize(); // 0x0000000184CAF720-0x0000000184CAF7D0
+	private static void Initialize(); // 0x000000018709F1F0-0x000000018709F2A0
 }
 
 namespace Microsoft.CodeAnalysis
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 60688
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 88037
 	{
 		// Constructors
-		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public EmbeddedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
@@ -97,16 +66,16 @@ namespace System.Runtime.CompilerServices
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 60689
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 88038
 	{
 		// Constructors
-		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public IsUnmanagedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace Unity.Collections
 {
-	public static class AllocatorManager // TypeDefIndex: 60732
+	public static class AllocatorManager // TypeDefIndex: 88081
 	{
 		// Fields
 		public static readonly AllocatorHandle Invalid; // 0x00
@@ -118,28 +87,28 @@ namespace Unity.Collections
 	
 		// Nested types
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate int TryFunction(IntPtr allocatorState, ref Block block); // TypeDefIndex: 60713; 0x00000001815802E0-0x00000001815802F0
+		public delegate int TryFunction(IntPtr allocatorState, ref Block block); // TypeDefIndex: 88062; 0x00000001859B7730-0x00000001859B7740
 	
-		public struct AllocatorHandle : IAllocator // TypeDefIndex: 60714
+		public struct AllocatorHandle : IAllocator // TypeDefIndex: 88063
 		{
 			// Fields
 			public ushort Index; // 0x00
 			public ushort Version; // 0x02
 	
 			// Properties
-			internal ref TableEntry TableEntry { get; } // 0x000000018B15FC48-0x000000018B15FCC4 
-			public int Value { get; } // 0x0000000184D87110-0x0000000184D87120 
-			public AllocatorHandle Handle { get; } // 0x0000000182B77620-0x0000000182B77630 
-			public Unity.Collections.Allocator ToAllocator { get; } // 0x0000000184DAB3E0-0x0000000184DAB3F0 
+			internal ref TableEntry TableEntry { get; } // 0x000000018D2A9344-0x000000018D2A93C0 
+			public int Value { get; } // 0x000000018448B780-0x000000018448B790 
+			public AllocatorHandle Handle { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+			public Unity.Collections.Allocator ToAllocator { get; } // 0x00000001872592A0-0x00000001872592B0 
 	
 			// Methods
-			internal void Rewind(); // 0x00000001841E1670-0x00000001841E1680
-			public static implicit operator AllocatorHandle(Unity.Collections.Allocator a); // 0x0000000184DAB3F0-0x0000000184DAB410
-			public int Try(ref Block block); // 0x0000000183347A00-0x0000000183347A60
-			public void Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			internal void Rewind(); // 0x0000000186805BA0-0x0000000186805BB0
+			public static implicit operator AllocatorHandle(Unity.Collections.Allocator a); // 0x00000001872592B0-0x00000001872592D0
+			public int Try(ref Block block); // 0x0000000185163E00-0x0000000185163E60
+			public void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public struct Range : IDisposable // TypeDefIndex: 60715
+		public struct Range : IDisposable // TypeDefIndex: 88064
 		{
 			// Fields
 			public IntPtr Pointer; // 0x00
@@ -147,10 +116,10 @@ namespace Unity.Collections
 			public AllocatorHandle Allocator; // 0x0C
 	
 			// Methods
-			public void Dispose(); // 0x000000018B163650-0x000000018B163688
+			public void Dispose(); // 0x000000018D2ACC8C-0x000000018D2ACCC4
 		}
 	
-		public struct Block : IDisposable // TypeDefIndex: 60716
+		public struct Block : IDisposable // TypeDefIndex: 88065
 		{
 			// Fields
 			public Range Range; // 0x00
@@ -162,16 +131,16 @@ namespace Unity.Collections
 			public uint Padding2; // 0x1C
 	
 			// Properties
-			public long Bytes { get; } // 0x0000000184DAB4F0-0x0000000184DAB500 
-			public long AllocatedBytes { get; } // 0x0000000184DAB4E0-0x0000000184DAB4F0 
-			public int Alignment { get; set; } // 0x0000000184DAB4D0-0x0000000184DAB4E0 0x0000000183347C90-0x0000000183347CE0
+			public long Bytes { get; } // 0x00000001872593B0-0x00000001872593C0 
+			public long AllocatedBytes { get; } // 0x00000001872593A0-0x00000001872593B0 
+			public int Alignment { get; set; } // 0x0000000187259390-0x00000001872593A0 0x0000000185164010-0x0000000185164060
 	
 			// Methods
-			public void Dispose(); // 0x000000018B15FF9C-0x000000018B15FFA4
-			public int TryFree(); // 0x000000018B15FFA4-0x000000018B15FFF4
+			public void Dispose(); // 0x000000018D2A96A0-0x000000018D2A96A8
+			public int TryFree(); // 0x000000018D2A96A8-0x000000018D2A96F8
 		}
 	
-		public interface IAllocator : IDisposable // TypeDefIndex: 60717
+		public interface IAllocator : IDisposable // TypeDefIndex: 88066
 		{
 			// Properties
 			AllocatorHandle Handle { get; }
@@ -181,7 +150,7 @@ namespace Unity.Collections
 		}
 	
 		[BurstCompile(CompileSynchronously = true)]
-		internal struct StackAllocator : IAllocator // TypeDefIndex: 60720
+		internal struct StackAllocator : IAllocator // TypeDefIndex: 88069
 		{
 			// Fields
 			internal AllocatorHandle m_handle; // 0x00
@@ -189,42 +158,42 @@ namespace Unity.Collections
 			internal long m_top; // 0x28
 	
 			// Properties
-			public AllocatorHandle Handle { get; } // 0x0000000182B77620-0x0000000182B77630 
+			public AllocatorHandle Handle { get; } // 0x00000001844AD290-0x00000001844AD2A0 
 	
 			// Nested types
-			public delegate int Try_000000A0_PostfixBurstDelegate(IntPtr allocatorState, ref Block block); // TypeDefIndex: 60718; 0x00000001815802E0-0x00000001815802F0
+			public delegate int Try_000000A0_PostfixBurstDelegate(IntPtr allocatorState, ref Block block); // TypeDefIndex: 88067; 0x00000001859B7730-0x00000001859B7740
 	
-			internal static class Try_000000A0_BurstDirectCall // TypeDefIndex: 60719
+			internal static class Try_000000A0_BurstDirectCall // TypeDefIndex: 88068
 			{
 				// Fields
 				private static IntPtr Pointer; // 0x00
 				private static IntPtr DeferredCompilation; // 0x08
 	
 				// Constructors
-				static Try_000000A0_BurstDirectCall(); // 0x0000000183FAEA50-0x0000000183FAEA60
+				static Try_000000A0_BurstDirectCall(); // 0x000000018633AD50-0x000000018633AD60
 	
 				// Methods
 				[BurstDiscard]
-				private static void GetFunctionPointerDiscard(ref IntPtr param_00081eb6); // 0x000000018B163EFC-0x000000018B164000
-				private static IntPtr GetFunctionPointer(); // 0x000000018B164000-0x000000018B164054
-				public static void Constructor(); // 0x0000000183FB0750-0x0000000183FB07E0
-				public static void Initialize(); // 0x00000001841E1670-0x00000001841E1680
-				public static int Invoke(IntPtr allocatorState, ref Block block); // 0x000000018B164054-0x000000018B1640E0
+				private static void GetFunctionPointerDiscard(ref IntPtr param_000bada3); // 0x000000018D2AD484-0x000000018D2AD588
+				private static IntPtr GetFunctionPointer(); // 0x000000018D2AD588-0x000000018D2AD5DC
+				public static void Constructor(); // 0x000000018633C270-0x000000018633C300
+				public static void Initialize(); // 0x0000000186805BA0-0x0000000186805BB0
+				public static int Invoke(IntPtr allocatorState, ref Block block); // 0x000000018D2AD5DC-0x000000018D2AD668
 			}
 	
 			// Methods
-			public int Try(ref Block block); // 0x000000018B163D48-0x000000018B163DD4
+			public int Try(ref Block block); // 0x000000018D2AD390-0x000000018D2AD424
 			[BurstCompile(CompileSynchronously = true)]
 			[AOT.MonoPInvokeCallback(typeof(TryFunction))]
-			public static int Try(IntPtr allocatorState, ref Block block); // 0x000000018B163CEC-0x000000018B163D48
-			public void Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			public static int Try(IntPtr allocatorState, ref Block block); // 0x000000018D2AD334-0x000000018D2AD390
+			public void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
 			[BurstCompile(CompileSynchronously = true)]
 			[AOT.MonoPInvokeCallback(typeof(TryFunction))]
-			public static int Try_BurstManaged(IntPtr allocatorState, ref Block block); // 0x000000018B163CE4-0x000000018B163CEC
+			public static int Try_BurstManaged(IntPtr allocatorState, ref Block block); // 0x000000018D2AD32C-0x000000018D2AD334
 		}
 	
 		[BurstCompile(CompileSynchronously = true)]
-		internal struct SlabAllocator : IAllocator // TypeDefIndex: 60723
+		internal struct SlabAllocator : IAllocator // TypeDefIndex: 88072
 		{
 			// Fields
 			internal AllocatorHandle m_handle; // 0x00
@@ -235,49 +204,49 @@ namespace Unity.Collections
 			internal long allocatedBytes; // 0x1038
 	
 			// Properties
-			public AllocatorHandle Handle { get; } // 0x0000000182B77620-0x0000000182B77630 
-			internal int SlabSizeInBytes { get; } // 0x0000000184DAB540-0x0000000184DAB550 
+			public AllocatorHandle Handle { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+			internal int SlabSizeInBytes { get; } // 0x0000000187259460-0x0000000187259470 
 	
 			// Nested types
-			public delegate int Try_000000AE_PostfixBurstDelegate(IntPtr allocatorState, ref Block block); // TypeDefIndex: 60721; 0x00000001815802E0-0x00000001815802F0
+			public delegate int Try_000000AE_PostfixBurstDelegate(IntPtr allocatorState, ref Block block); // TypeDefIndex: 88070; 0x00000001859B7730-0x00000001859B7740
 	
-			internal static class Try_000000AE_BurstDirectCall // TypeDefIndex: 60722
+			internal static class Try_000000AE_BurstDirectCall // TypeDefIndex: 88071
 			{
 				// Fields
 				private static IntPtr Pointer; // 0x00
 				private static IntPtr DeferredCompilation; // 0x08
 	
 				// Constructors
-				static Try_000000AE_BurstDirectCall(); // 0x0000000183FAEA60-0x0000000183FAEA70
+				static Try_000000AE_BurstDirectCall(); // 0x000000018633AD60-0x000000018633AD70
 	
 				// Methods
 				[BurstDiscard]
-				private static void GetFunctionPointerDiscard(ref IntPtr param_00081ec2); // 0x000000018B1640E0-0x000000018B1641E4
-				private static IntPtr GetFunctionPointer(); // 0x000000018B1641E4-0x000000018B164238
-				public static void Constructor(); // 0x0000000183FB07E0-0x0000000183FB0870
-				public static void Initialize(); // 0x00000001841E1670-0x00000001841E1680
-				public static int Invoke(IntPtr allocatorState, ref Block block); // 0x000000018B164238-0x000000018B1642C4
+				private static void GetFunctionPointerDiscard(ref IntPtr param_000badaf); // 0x000000018D2AD668-0x000000018D2AD76C
+				private static IntPtr GetFunctionPointer(); // 0x000000018D2AD76C-0x000000018D2AD7C0
+				public static void Constructor(); // 0x000000018633C300-0x000000018633C390
+				public static void Initialize(); // 0x0000000186805BA0-0x0000000186805BB0
+				public static int Invoke(IntPtr allocatorState, ref Block block); // 0x000000018D2AD7C0-0x000000018D2AD84C
 			}
 	
 			// Methods
-			public int Try(ref Block block); // 0x000000018B163AC8-0x000000018B163CB4
+			public int Try(ref Block block); // 0x000000018D2AD124-0x000000018D2AD2FC
 			[BurstCompile(CompileSynchronously = true)]
 			[AOT.MonoPInvokeCallback(typeof(TryFunction))]
-			public static int Try(IntPtr allocatorState, ref Block block); // 0x000000018B163A6C-0x000000018B163AC8
-			public void Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			public static int Try(IntPtr allocatorState, ref Block block); // 0x000000018D2AD0C8-0x000000018D2AD124
+			public void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
 			[BurstCompile(CompileSynchronously = true)]
 			[AOT.MonoPInvokeCallback(typeof(TryFunction))]
-			public static int Try_BurstManaged(IntPtr allocatorState, ref Block block); // 0x000000018B163A64-0x000000018B163A6C
+			public static int Try_BurstManaged(IntPtr allocatorState, ref Block block); // 0x000000018D2AD0C0-0x000000018D2AD0C8
 		}
 	
-		internal struct TableEntry // TypeDefIndex: 60724
+		internal struct TableEntry // TypeDefIndex: 88073
 		{
 			// Fields
 			internal IntPtr function; // 0x00
 			internal IntPtr state; // 0x08
 		}
 	
-		internal struct Array16<T> // TypeDefIndex: 60725
+		internal struct Array16<T> // TypeDefIndex: 88074
 			where T : struct
 		{
 			// Fields
@@ -299,7 +268,7 @@ namespace Unity.Collections
 			internal T f15;
 		}
 	
-		internal struct Array256<T> // TypeDefIndex: 60726
+		internal struct Array256<T> // TypeDefIndex: 88075
 			where T : struct
 		{
 			// Fields
@@ -321,7 +290,7 @@ namespace Unity.Collections
 			internal Array16<T> f15;
 		}
 	
-		internal struct Array4096<T> // TypeDefIndex: 60727
+		internal struct Array4096<T> // TypeDefIndex: 88076
 			where T : struct
 		{
 			// Fields
@@ -343,7 +312,7 @@ namespace Unity.Collections
 			internal Array256<T> f15;
 		}
 	
-		internal struct Array32768<T> : IIndexable<T> // TypeDefIndex: 60728
+		internal struct Array32768<T> : IIndexable<T> // TypeDefIndex: 88077
 			where T : struct
 		{
 			// Fields
@@ -363,50 +332,50 @@ namespace Unity.Collections
 			public ref ref T ElementAt(int index);
 		}
 	
-		internal sealed class SharedStatics // TypeDefIndex: 60730
+		internal sealed class SharedStatics // TypeDefIndex: 88079
 		{
 			// Nested types
-			internal sealed class TableEntry // TypeDefIndex: 60729
+			internal sealed class TableEntry // TypeDefIndex: 88078
 			{
 				// Fields
 				internal static readonly SharedStatic<Array32768<AllocatorManager.TableEntry>> Ref; // 0x00
 	
 				// Constructors
-				static TableEntry(); // 0x000000018B163DD4-0x000000018B163E34
+				static TableEntry(); // 0x000000018D2AD424-0x000000018D2AD484
 			}
 		}
 	
-		internal static class Managed // TypeDefIndex: 60731
+		internal static class Managed // TypeDefIndex: 88080
 		{
 			// Fields
 			internal static TryFunction[] TryFunctionDelegates; // 0x00
 	
 			// Constructors
-			static Managed(); // 0x000000018B1632EC-0x000000018B163354
+			static Managed(); // 0x000000018D2AC92C-0x000000018D2AC994
 		}
 	
 		// Constructors
-		static AllocatorManager(); // 0x0000000184CA1340-0x0000000184CA1430
+		static AllocatorManager(); // 0x000000018707BE70-0x000000018707C050
 	
 		// Methods
-		public static unsafe void* Allocate(AllocatorHandle handle, int itemSizeInBytes, int alignmentInBytes, int items = 1 /* Metadata: 0x0234EDAA */); // 0x0000000183345120-0x0000000183345290
-		public static unsafe T* Allocate<T>(AllocatorHandle handle, int items = 1 /* Metadata: 0x0234EDAB */)
+		public static unsafe void* Allocate(AllocatorHandle handle, int itemSizeInBytes, int alignmentInBytes, int items = 1 /* Metadata: 0x02647F35 */); // 0x0000000185161550-0x00000001851616C0
+		public static unsafe T* Allocate<T>(AllocatorHandle handle, int items = 1 /* Metadata: 0x02647F36 */)
 			where T : struct;
-		public static unsafe void Free(AllocatorHandle handle, void* pointer); // 0x000000018B15FCC4-0x000000018B15FD24
-		public static unsafe void Free<T>(AllocatorHandle handle, T* pointer, int items = 1 /* Metadata: 0x0234EDAC */)
+		public static unsafe void Free(AllocatorHandle handle, void* pointer); // 0x000000018D2A93C0-0x000000018D2A9420
+		public static unsafe void Free<T>(AllocatorHandle handle, T* pointer, int items = 1 /* Metadata: 0x02647F37 */)
 			where T : struct;
 		[BurstDiscard]
-		private static void CheckDelegate(ref bool useDelegate); // 0x0000000184D910F0-0x0000000184D91100
-		private static bool UseDelegate(); // 0x000000018B15FD24-0x000000018B15FD60
-		private static int allocate_block(ref Block block); // 0x000000018B15FD60-0x000000018B15FDF0
+		private static void CheckDelegate(ref bool useDelegate); // 0x000000018723EE00-0x000000018723EE10
+		private static bool UseDelegate(); // 0x000000018D2A9420-0x000000018D2A945C
+		private static int allocate_block(ref Block block); // 0x000000018D2A945C-0x000000018D2A94EC
 		[BurstDiscard]
-		private static void forward_mono_allocate_block(ref Block block, ref int error); // 0x000000018B15FDF0-0x000000018B15FEF8
-		internal static Unity.Collections.Allocator LegacyOf(AllocatorHandle handle); // 0x0000000183347C00-0x0000000183347C10
-		private static int TryLegacy(ref Block block); // 0x0000000183347AA0-0x0000000183347C00
-		public static int Try(ref Block block); // 0x0000000183347A60-0x0000000183347AA0
-		internal static bool IsCustomAllocator(AllocatorHandle allocator); // 0x0000000183347DF0-0x0000000183347E00
-		public static void Initialize_StackAllocator_Try_000000A0_BurstDirectCall(); // 0x0000000184CAF810-0x0000000184CAF850
-		public static void Initialize_SlabAllocator_Try_000000AE_BurstDirectCall(); // 0x0000000184CAF7D0-0x0000000184CAF810
+		private static void forward_mono_allocate_block(ref Block block, ref int error); // 0x000000018D2A94EC-0x000000018D2A95F4
+		internal static Unity.Collections.Allocator LegacyOf(AllocatorHandle handle); // 0x0000000185164000-0x0000000185164010
+		private static int TryLegacy(ref Block block); // 0x0000000185163EA0-0x0000000185164000
+		public static int Try(ref Block block); // 0x0000000185163E60-0x0000000185163EA0
+		internal static bool IsCustomAllocator(AllocatorHandle allocator); // 0x00000001851641B0-0x00000001851641C0
+		public static void Initialize_StackAllocator_Try_000000A0_BurstDirectCall(); // 0x000000018709F2E0-0x000000018709F320
+		public static void Initialize_SlabAllocator_Try_000000AE_BurstDirectCall(); // 0x000000018709F2A0-0x000000018709F2E0
 	
 		// Extension methods
 		internal static Block AllocateBlock<T>(this ref ref T t, int sizeOf, int alignOf, int items)
@@ -428,62 +397,62 @@ namespace Unity.Collections
 			where U : struct;
 	}
 
-	internal class CreatePropertyAttribute : Attribute // TypeDefIndex: 60733
+	internal class CreatePropertyAttribute : Attribute // TypeDefIndex: 88082
 	{
 		// Constructors
-		public CreatePropertyAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public CreatePropertyAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[BurstCompatible]
-	internal struct Bitwise // TypeDefIndex: 60734
+	internal struct Bitwise // TypeDefIndex: 88083
 	{
 		// Methods
-		internal static int FromBool(bool value); // 0x00000001838C4530-0x00000001838C4540
-		internal static uint ExtractBits(uint input, int pos, uint mask); // 0x0000000184DAB470-0x0000000184DAB480
-		internal static uint ReplaceBits(uint input, int pos, uint mask, uint value); // 0x0000000184DAB4B0-0x0000000184DAB4D0
-		internal static uint SetBits(uint input, int pos, uint mask, bool value); // 0x00000001838C44E0-0x00000001838C4500
-		internal static ulong ExtractBits(ulong input, int pos, ulong mask); // 0x0000000184DAB460-0x0000000184DAB470
-		internal static ulong ReplaceBits(ulong input, int pos, ulong mask, ulong value); // 0x0000000184DAB480-0x0000000184DAB4B0
-		internal static ulong SetBits(ulong input, int pos, ulong mask, bool value); // 0x00000001838C4500-0x00000001838C4530
+		internal static int FromBool(bool value); // 0x0000000185A250B0-0x0000000185A250C0
+		internal static uint ExtractBits(uint input, int pos, uint mask); // 0x0000000187259330-0x0000000187259340
+		internal static uint ReplaceBits(uint input, int pos, uint mask, uint value); // 0x0000000187259370-0x0000000187259390
+		internal static uint SetBits(uint input, int pos, uint mask, bool value); // 0x0000000185A25050-0x0000000185A25080
+		internal static ulong ExtractBits(ulong input, int pos, ulong mask); // 0x0000000187259320-0x0000000187259330
+		internal static ulong ReplaceBits(ulong input, int pos, ulong mask, ulong value); // 0x0000000187259340-0x0000000187259370
+		internal static ulong SetBits(ulong input, int pos, ulong mask, bool value); // 0x0000000185A25080-0x0000000185A250B0
 	}
 
 	[BurstCompatible]
 	[DebuggerTypeProxy(typeof(BitField32DebugView))]
-	public struct BitField32 // TypeDefIndex: 60735
+	public struct BitField32 // TypeDefIndex: 88084
 	{
 		// Fields
 		public uint Value; // 0x00
 	
 		// Methods
-		public void SetBits(int pos, bool value); // 0x0000000185390AE8-0x0000000185390B14
-		public uint GetBits(int pos, int numBits = 1 /* Metadata: 0x0234EDAD */); // 0x0000000184DAB410-0x0000000184DAB430
-		public bool IsSet(int pos); // 0x0000000182F95910-0x0000000182F95920
+		public void SetBits(int pos, bool value); // 0x0000000187836580-0x00000001878365AC
+		public uint GetBits(int pos, int numBits = 1 /* Metadata: 0x02647F38 */); // 0x00000001872592D0-0x00000001872592F0
+		public bool IsSet(int pos); // 0x0000000185BF03E0-0x0000000185BF03F0
 	}
 
-	internal sealed class BitField32DebugView // TypeDefIndex: 60736
+	internal sealed class BitField32DebugView // TypeDefIndex: 88085
 	{
 	}
 
 	[BurstCompatible]
 	[DebuggerTypeProxy(typeof(BitField64DebugView))]
-	public struct BitField64 // TypeDefIndex: 60737
+	public struct BitField64 // TypeDefIndex: 88086
 	{
 		// Fields
 		public ulong Value; // 0x00
 	
 		// Methods
-		public void SetBits(int pos, bool value); // 0x0000000185390AB4-0x0000000185390AE8
-		public ulong GetBits(int pos, int numBits = 1 /* Metadata: 0x0234EDAE */); // 0x0000000184DAB430-0x0000000184DAB460
-		public bool IsSet(int pos); // 0x00000001837EBDF0-0x00000001837EBE10
-		public bool TestAny(int pos, int numBits = 1 /* Metadata: 0x0234EDAF */); // 0x00000001837EDE40-0x00000001837EDE70
+		public void SetBits(int pos, bool value); // 0x00000001878365BC-0x00000001878365EC
+		public ulong GetBits(int pos, int numBits = 1 /* Metadata: 0x02647F39 */); // 0x00000001872592F0-0x0000000187259320
+		public bool IsSet(int pos); // 0x0000000185B1AFA0-0x0000000185B1AFC0
+		public bool TestAny(int pos, int numBits = 1 /* Metadata: 0x02647F3A */); // 0x0000000185B1D160-0x0000000185B1D190
 	}
 
-	internal sealed class BitField64DebugView // TypeDefIndex: 60738
+	internal sealed class BitField64DebugView // TypeDefIndex: 88087
 	{
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property, AllowMultiple = true)]
-	public class BurstCompatibleAttribute : Attribute // TypeDefIndex: 60739
+	public class BurstCompatibleAttribute : Attribute // TypeDefIndex: 88088
 	{
 		// Fields
 		[CompilerGenerated]
@@ -491,34 +460,34 @@ namespace Unity.Collections
 		public string RequiredUnityDefine; // 0x18
 	
 		// Properties
-		public System.Type[] GenericTypeArguments { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public System.Type[] GenericTypeArguments { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		public BurstCompatibleAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public BurstCompatibleAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property)]
-	public class NotBurstCompatibleAttribute : Attribute // TypeDefIndex: 60740
+	public class NotBurstCompatibleAttribute : Attribute // TypeDefIndex: 88089
 	{
 		// Constructors
-		public NotBurstCompatibleAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public NotBurstCompatibleAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public interface INativeDisposable : IDisposable // TypeDefIndex: 60741
+	public interface INativeDisposable : IDisposable // TypeDefIndex: 88090
 	{
 	}
 
 	[BurstCompatible]
-	public static class CollectionHelper // TypeDefIndex: 60742
+	public static class CollectionHelper // TypeDefIndex: 88091
 	{
 		// Methods
-		public static int Log2Floor(int value); // 0x0000000185F0E0A0-0x0000000185F0E4F0
-		public static int Align(int size, int alignmentPowerOfTwo); // 0x00000001837F5AD0-0x00000001837F5AF0
-		public static unsafe uint Hash(void* ptr, int bytes); // 0x00000001843CED80-0x00000001843CEDB0
-		internal static bool ShouldDeallocate(AllocatorManager.AllocatorHandle allocator); // 0x0000000183CCB240-0x0000000183CCB260
-		internal static int AssumePositive(int value); // 0x0000000184D88BE0-0x0000000184D88BF0
+		public static int Log2Floor(int value); // 0x000000018D2A96F8-0x000000018D2A9710
+		public static int Align(int size, int alignmentPowerOfTwo); // 0x00000001859358B0-0x00000001859358D0
+		public static unsafe uint Hash(void* ptr, int bytes); // 0x00000001867F9520-0x00000001867F9550
+		internal static bool ShouldDeallocate(AllocatorManager.AllocatorHandle allocator); // 0x0000000185E695A0-0x0000000185E695C0
+		internal static int AssumePositive(int value); // 0x0000000187235A70-0x0000000187235A80
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-		public static NativeArray<T> CreateNativeArray<T>(int length, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDB0 */)
+		public static NativeArray<T> CreateNativeArray<T>(int length, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F3B */)
 			where T : struct;
 		[NotBurstCompatible]
 		public static NativeArray<T> CreateNativeArray<T>(T[] array, AllocatorManager.AllocatorHandle allocator)
@@ -526,7 +495,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	internal struct FixedList // TypeDefIndex: 60743
+	internal struct FixedList // TypeDefIndex: 88092
 	{
 		// Methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
@@ -545,7 +514,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(FixedList32BytesDebugView<T>))]
-	public struct FixedList32Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 60744
+	public struct FixedList32Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 88093
 		where T : struct
 	{
 		// Fields
@@ -587,7 +556,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class FixedList32BytesExtensions // TypeDefIndex: 60745
+	public static class FixedList32BytesExtensions // TypeDefIndex: 88094
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -598,7 +567,7 @@ namespace Unity.Collections
 			where T : struct, IEquatable<U>;
 	}
 
-	internal sealed class FixedList32BytesDebugView<T> // TypeDefIndex: 60746
+	internal sealed class FixedList32BytesDebugView<T> // TypeDefIndex: 88095
 		where T : struct
 	{
 	}
@@ -606,7 +575,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(FixedList64BytesDebugView<T>))]
-	public struct FixedList64Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 60747
+	public struct FixedList64Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 88096
 		where T : struct
 	{
 		// Fields
@@ -648,7 +617,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class FixedList64BytesExtensions // TypeDefIndex: 60748
+	public static class FixedList64BytesExtensions // TypeDefIndex: 88097
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -659,7 +628,7 @@ namespace Unity.Collections
 			where T : struct, IEquatable<U>;
 	}
 
-	internal sealed class FixedList64BytesDebugView<T> // TypeDefIndex: 60749
+	internal sealed class FixedList64BytesDebugView<T> // TypeDefIndex: 88098
 		where T : struct
 	{
 	}
@@ -667,7 +636,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(FixedList128BytesDebugView<T>))]
-	public struct FixedList128Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 60750
+	public struct FixedList128Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 88099
 		where T : struct
 	{
 		// Fields
@@ -712,7 +681,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class FixedList128BytesExtensions // TypeDefIndex: 60751
+	public static class FixedList128BytesExtensions // TypeDefIndex: 88100
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -726,7 +695,7 @@ namespace Unity.Collections
 			where T : struct, IEquatable<U>;
 	}
 
-	internal sealed class FixedList128BytesDebugView<T> // TypeDefIndex: 60752
+	internal sealed class FixedList128BytesDebugView<T> // TypeDefIndex: 88101
 		where T : struct
 	{
 	}
@@ -734,7 +703,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(FixedList512BytesDebugView<T>))]
-	public struct FixedList512Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 60754
+	public struct FixedList512Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 88103
 		where T : struct
 	{
 		// Fields
@@ -753,7 +722,7 @@ namespace Unity.Collections
 		public T this[int index] { get => default; set {} }
 	
 		// Nested types
-		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 60753
+		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 88102
 		{
 			// Fields
 			private FixedList512Bytes<T> m_List;
@@ -804,7 +773,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class FixedList512BytesExtensions // TypeDefIndex: 60755
+	public static class FixedList512BytesExtensions // TypeDefIndex: 88104
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -818,7 +787,7 @@ namespace Unity.Collections
 			where T : struct, IEquatable<U>;
 	}
 
-	internal sealed class FixedList512BytesDebugView<T> // TypeDefIndex: 60756
+	internal sealed class FixedList512BytesDebugView<T> // TypeDefIndex: 88105
 		where T : struct
 	{
 	}
@@ -826,7 +795,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(FixedList4096BytesDebugView<T>))]
-	public struct FixedList4096Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 60757
+	public struct FixedList4096Bytes<T> : INativeList<T>, IEnumerable<T>, IEquatable<FixedList32Bytes<T>>, IComparable<FixedList32Bytes<T>>, IEquatable<FixedList64Bytes<T>>, IComparable<FixedList64Bytes<T>>, IEquatable<FixedList128Bytes<T>>, IComparable<FixedList128Bytes<T>>, IEquatable<FixedList512Bytes<T>>, IComparable<FixedList512Bytes<T>>, IEquatable<FixedList4096Bytes<T>>, IComparable<FixedList4096Bytes<T>> // TypeDefIndex: 88106
 		where T : struct
 	{
 		// Fields
@@ -870,7 +839,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class FixedList4096BytesExtensions // TypeDefIndex: 60758
+	public static class FixedList4096BytesExtensions // TypeDefIndex: 88107
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -881,14 +850,14 @@ namespace Unity.Collections
 			where T : struct, IEquatable<U>;
 	}
 
-	internal sealed class FixedList4096BytesDebugView<T> // TypeDefIndex: 60759
+	internal sealed class FixedList4096BytesDebugView<T> // TypeDefIndex: 88108
 		where T : struct
 	{
 	}
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes16 // TypeDefIndex: 60760
+	public struct FixedBytes16 // TypeDefIndex: 88109
 	{
 		// Fields
 		public byte byte0000; // 0x00
@@ -911,7 +880,7 @@ namespace Unity.Collections
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes30 // TypeDefIndex: 60761
+	public struct FixedBytes30 // TypeDefIndex: 88110
 	{
 		// Fields
 		public FixedBytes16 offset0000; // 0x00
@@ -934,10 +903,10 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible]
 	[DefaultMember("Item")]
-	public struct FixedString32Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 60762
+	public struct FixedString32Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 88111
 	{
 		// Fields
-		internal const ushort utf8MaxLengthInBytes = 29; // Metadata: 0x0234EDB2
+		internal const ushort utf8MaxLengthInBytes = 29; // Metadata: 0x02647F3D
 		[SerializeField]
 		internal ushort utf8LengthInBytes; // 0x00
 		[SerializeField]
@@ -947,50 +916,50 @@ namespace Unity.Collections
 		[CreateProperty]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		[NotBurstCompatible]
-		public string Value { get; } // 0x0000000185395BE4-0x0000000185395BF0 
-		public int Length { get; set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184DAB510-0x0000000184DAB520
-		public bool IsEmpty { get; } // 0x000000018B160F5C-0x000000018B160F64 
+		public string Value { get; } // 0x000000018783B020-0x000000018783B02C 
+		public int Length { get; set; } // 0x000000018448B780-0x000000018448B790 0x00000001872593D0-0x00000001872593E0
+		public bool IsEmpty { get; } // 0x000000018D2AA648-0x000000018D2AA650 
 	
 		// Constructors
 		[NotBurstCompatible]
-		public FixedString32Bytes(string source); // 0x00000001838759B0-0x00000001838759D0
+		public FixedString32Bytes(string source); // 0x00000001855D7380-0x00000001855D74B0
 	
 		// Methods
-		public unsafe byte* GetUnsafePtr(); // 0x0000000184DAB500-0x0000000184DAB510
-		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDB1 */); // 0x000000018B160EF0-0x000000018B160F5C
+		public unsafe byte* GetUnsafePtr(); // 0x00000001872593C0-0x00000001872593D0
+		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F3C */); // 0x000000018D2AA5DC-0x000000018D2AA648
 		[NotBurstCompatible]
-		public int CompareTo(string other); // 0x000000018B160A44-0x000000018B160A7C
+		public int CompareTo(string other); // 0x000000018D2AA130-0x000000018D2AA168
 		[NotBurstCompatible]
-		public bool Equals(string other); // 0x000000018B160B60-0x000000018B160BE4
+		public bool Equals(string other); // 0x000000018D2AA24C-0x000000018D2AA2D0
 		[NotBurstCompatible]
-		internal int Initialize(string source); // 0x00000001838759D0-0x0000000183875B10
-		public int CompareTo(FixedString32Bytes other); // 0x000000018B160AC8-0x000000018B160B14
-		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018B160FF0-0x000000018B161070
-		public bool Equals(FixedString32Bytes other); // 0x000000018B160C0C-0x000000018B160C20
-		public int CompareTo(FixedString64Bytes other); // 0x000000018B160B14-0x000000018B160B60
-		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018B160F64-0x000000018B160FF0
-		public bool Equals(FixedString64Bytes other); // 0x000000018B160BF8-0x000000018B160C0C
-		public int CompareTo(FixedString128Bytes other); // 0x000000018B1609F8-0x000000018B160A44
-		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018B1610FC-0x000000018B161188
-		public bool Equals(FixedString128Bytes other); // 0x000000018B160C20-0x000000018B160C34
-		public int CompareTo(FixedString512Bytes other); // 0x000000018B1609AC-0x000000018B1609F8
-		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018B161070-0x000000018B1610FC
-		public bool Equals(FixedString512Bytes other); // 0x000000018B160BE4-0x000000018B160BF8
-		public int CompareTo(FixedString4096Bytes other); // 0x000000018B160A7C-0x000000018B160AC8
-		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018B161188-0x000000018B161214
-		public bool Equals(FixedString4096Bytes other); // 0x000000018B160EDC-0x000000018B160EF0
+		internal int Initialize(string source); // 0x00000001855D74B0-0x00000001855D75D0
+		public int CompareTo(FixedString32Bytes other); // 0x000000018D2AA1B4-0x000000018D2AA200
+		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x00000001855D7B10-0x00000001855D7C20
+		public bool Equals(FixedString32Bytes other); // 0x000000018D2AA2F8-0x000000018D2AA30C
+		public int CompareTo(FixedString64Bytes other); // 0x000000018D2AA200-0x000000018D2AA24C
+		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018D2AA650-0x000000018D2AA6DC
+		public bool Equals(FixedString64Bytes other); // 0x000000018D2AA2E4-0x000000018D2AA2F8
+		public int CompareTo(FixedString128Bytes other); // 0x000000018D2AA0E4-0x000000018D2AA130
+		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018D2AA768-0x000000018D2AA7F4
+		public bool Equals(FixedString128Bytes other); // 0x000000018D2AA30C-0x000000018D2AA320
+		public int CompareTo(FixedString512Bytes other); // 0x000000018D2AA098-0x000000018D2AA0E4
+		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018D2AA6DC-0x000000018D2AA768
+		public bool Equals(FixedString512Bytes other); // 0x000000018D2AA2D0-0x000000018D2AA2E4
+		public int CompareTo(FixedString4096Bytes other); // 0x000000018D2AA168-0x000000018D2AA1B4
+		public static bool operator ==([IsReadOnly] in FixedString32Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018D2AA7F4-0x000000018D2AA880
+		public bool Equals(FixedString4096Bytes other); // 0x000000018D2AA5C8-0x000000018D2AA5DC
 		[NotBurstCompatible]
-		public static implicit operator FixedString32Bytes(string b); // 0x0000000183875980-0x00000001838759B0
+		public static implicit operator FixedString32Bytes(string b); // 0x00000001855D7260-0x00000001855D7380
 		[NotBurstCompatible]
-		public override string ToString(); // 0x0000000185395BE4-0x0000000185395BF0
-		public override int GetHashCode(); // 0x00000001834D7A80-0x00000001834D7AC0
+		public override string ToString(); // 0x000000018783B020-0x000000018783B02C
+		public override int GetHashCode(); // 0x0000000185D63FE0-0x0000000185D64020
 		[NotBurstCompatible]
-		public override bool Equals(object obj); // 0x000000018B160C34-0x000000018B160EDC
+		public override bool Equals(object obj); // 0x000000018D2AA320-0x000000018D2AA5C8
 	}
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes62 // TypeDefIndex: 60763
+	public struct FixedBytes62 // TypeDefIndex: 88112
 	{
 		// Fields
 		public FixedBytes16 offset0000; // 0x00
@@ -1015,10 +984,10 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible]
 	[DefaultMember("Item")]
-	public struct FixedString64Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 60764
+	public struct FixedString64Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 88113
 	{
 		// Fields
-		internal const ushort utf8MaxLengthInBytes = 61; // Metadata: 0x0234EDB5
+		internal const ushort utf8MaxLengthInBytes = 61; // Metadata: 0x02647F40
 		[SerializeField]
 		internal ushort utf8LengthInBytes; // 0x00
 		[SerializeField]
@@ -1028,49 +997,49 @@ namespace Unity.Collections
 		[CreateProperty]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		[NotBurstCompatible]
-		public string Value { get; } // 0x00000001853945DC-0x00000001853945E8 
-		public int Length { get; set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184DAB510-0x0000000184DAB520
+		public string Value { get; } // 0x0000000187834F10-0x0000000187834F1C 
+		public int Length { get; set; } // 0x000000018448B780-0x000000018448B790 0x00000001872593D0-0x00000001872593E0
 	
 		// Constructors
 		[NotBurstCompatible]
-		public FixedString64Bytes(string source); // 0x000000018B162A28-0x000000018B162A44
+		public FixedString64Bytes(string source); // 0x000000018D2AC090-0x000000018D2AC0AC
 	
 		// Methods
-		public unsafe byte* GetUnsafePtr(); // 0x0000000184DAB500-0x0000000184DAB510
-		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDB4 */); // 0x000000018B1629BC-0x000000018B162A28
+		public unsafe byte* GetUnsafePtr(); // 0x00000001872593C0-0x00000001872593D0
+		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F3F */); // 0x000000018D2AC024-0x000000018D2AC090
 		[NotBurstCompatible]
-		public int CompareTo(string other); // 0x000000018B1624A8-0x000000018B1624E0
+		public int CompareTo(string other); // 0x000000018D2ABB14-0x000000018D2ABB4C
 		[NotBurstCompatible]
-		public bool Equals(string other); // 0x000000018B16285C-0x000000018B1628E0
+		public bool Equals(string other); // 0x000000018D2ABEC8-0x000000018D2ABF4C
 		[NotBurstCompatible]
-		internal int Initialize(string source); // 0x000000018B162944-0x000000018B1629BC
-		public int CompareTo(FixedString32Bytes other); // 0x000000018B1624E0-0x000000018B16252C
-		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018B162B5C-0x000000018B162BE8
-		public bool Equals(FixedString32Bytes other); // 0x000000018B162820-0x000000018B162834
-		public int CompareTo(FixedString64Bytes other); // 0x000000018B16252C-0x000000018B162578
-		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018B162BE8-0x000000018B162C68
-		public bool Equals(FixedString64Bytes other); // 0x000000018B162848-0x000000018B16285C
-		public int CompareTo(FixedString128Bytes other); // 0x000000018B162410-0x000000018B16245C
-		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018B162AD0-0x000000018B162B5C
-		public bool Equals(FixedString128Bytes other); // 0x000000018B162834-0x000000018B162848
-		public int CompareTo(FixedString512Bytes other); // 0x000000018B1623C4-0x000000018B162410
-		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018B162A44-0x000000018B162AD0
-		public bool Equals(FixedString512Bytes other); // 0x000000018B1628E0-0x000000018B1628F4
-		public int CompareTo(FixedString4096Bytes other); // 0x000000018B16245C-0x000000018B1624A8
-		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018B162C68-0x000000018B162CF4
-		public bool Equals(FixedString4096Bytes other); // 0x000000018B1628F4-0x000000018B162908
+		internal int Initialize(string source); // 0x000000018D2ABFB0-0x000000018D2AC024
+		public int CompareTo(FixedString32Bytes other); // 0x000000018D2ABB4C-0x000000018D2ABB98
+		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018D2AC1C4-0x000000018D2AC250
+		public bool Equals(FixedString32Bytes other); // 0x000000018D2ABE8C-0x000000018D2ABEA0
+		public int CompareTo(FixedString64Bytes other); // 0x000000018D2ABB98-0x000000018D2ABBE4
+		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018D2AC250-0x000000018D2AC2D0
+		public bool Equals(FixedString64Bytes other); // 0x000000018D2ABEB4-0x000000018D2ABEC8
+		public int CompareTo(FixedString128Bytes other); // 0x000000018D2ABA7C-0x000000018D2ABAC8
+		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018D2AC138-0x000000018D2AC1C4
+		public bool Equals(FixedString128Bytes other); // 0x000000018D2ABEA0-0x000000018D2ABEB4
+		public int CompareTo(FixedString512Bytes other); // 0x000000018D2ABA30-0x000000018D2ABA7C
+		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018D2AC0AC-0x000000018D2AC138
+		public bool Equals(FixedString512Bytes other); // 0x000000018D2ABF4C-0x000000018D2ABF60
+		public int CompareTo(FixedString4096Bytes other); // 0x000000018D2ABAC8-0x000000018D2ABB14
+		public static bool operator ==([IsReadOnly] in FixedString64Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018D2AC2D0-0x000000018D2AC35C
+		public bool Equals(FixedString4096Bytes other); // 0x000000018D2ABF60-0x000000018D2ABF74
 		[NotBurstCompatible]
-		public static implicit operator FixedString64Bytes(string b); // 0x000000018B162CF4-0x000000018B162D20
+		public static implicit operator FixedString64Bytes(string b); // 0x000000018D2AC35C-0x000000018D2AC388
 		[NotBurstCompatible]
-		public override string ToString(); // 0x00000001853945DC-0x00000001853945E8
-		public override int GetHashCode(); // 0x000000018B162908-0x000000018B162944
+		public override string ToString(); // 0x0000000187834F10-0x0000000187834F1C
+		public override int GetHashCode(); // 0x000000018D2ABF74-0x000000018D2ABFB0
 		[NotBurstCompatible]
-		public override bool Equals(object obj); // 0x000000018B162578-0x000000018B162820
+		public override bool Equals(object obj); // 0x000000018D2ABBE4-0x000000018D2ABE8C
 	}
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes126 // TypeDefIndex: 60765
+	public struct FixedBytes126 // TypeDefIndex: 88114
 	{
 		// Fields
 		public FixedBytes16 offset0000; // 0x00
@@ -1099,58 +1068,58 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible]
 	[DefaultMember("Item")]
-	public struct FixedString128Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 60766
+	public struct FixedString128Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 88115
 	{
 		// Fields
-		internal const ushort utf8MaxLengthInBytes = 125; // Metadata: 0x0234EDB8
+		internal const ushort utf8MaxLengthInBytes = 125; // Metadata: 0x02647F43
 		[SerializeField]
 		internal ushort utf8LengthInBytes; // 0x00
 		[SerializeField]
 		internal FixedBytes126 bytes; // 0x02
 	
 		// Properties
-		public int Length { get; set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184DAB510-0x0000000184DAB520
+		public int Length { get; set; } // 0x000000018448B780-0x000000018448B790 0x00000001872593D0-0x00000001872593E0
 	
 		// Constructors
 		[NotBurstCompatible]
-		public FixedString128Bytes(string source); // 0x0000000183875060-0x0000000183875090
+		public FixedString128Bytes(string source); // 0x00000001859D2E80-0x00000001859D2EB0
 	
 		// Methods
-		public unsafe byte* GetUnsafePtr(); // 0x0000000184DAB500-0x0000000184DAB510
-		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDB7 */); // 0x000000018B160690-0x000000018B1606FC
+		public unsafe byte* GetUnsafePtr(); // 0x00000001872593C0-0x00000001872593D0
+		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F42 */); // 0x000000018D2A9D7C-0x000000018D2A9DE8
 		[NotBurstCompatible]
-		public int CompareTo(string other); // 0x000000018B1601BC-0x000000018B1601F0
+		public int CompareTo(string other); // 0x000000018D2A98A8-0x000000018D2A98DC
 		[NotBurstCompatible]
-		public bool Equals(string other); // 0x000000018B1602D8-0x000000018B16035C
+		public bool Equals(string other); // 0x000000018D2A99C4-0x000000018D2A9A48
 		[NotBurstCompatible]
-		internal int Initialize(string source); // 0x0000000183875090-0x0000000183875110
-		public int CompareTo(FixedString32Bytes other); // 0x000000018B16023C-0x000000018B160288
-		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018B160788-0x000000018B160814
-		public bool Equals(FixedString32Bytes other); // 0x000000018B1602C4-0x000000018B1602D8
-		public int CompareTo(FixedString64Bytes other); // 0x000000018B1601F0-0x000000018B16023C
-		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018B160894-0x000000018B160920
-		public bool Equals(FixedString64Bytes other); // 0x000000018B16035C-0x000000018B160370
-		public int CompareTo(FixedString128Bytes other); // 0x000000018B160124-0x000000018B160170
-		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018B160814-0x000000018B160894
-		public bool Equals(FixedString128Bytes other); // 0x000000018B1602B0-0x000000018B1602C4
-		public int CompareTo(FixedString512Bytes other); // 0x000000018B160170-0x000000018B1601BC
-		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018B1606FC-0x000000018B160788
-		public bool Equals(FixedString512Bytes other); // 0x000000018B160288-0x000000018B16029C
-		public int CompareTo(FixedString4096Bytes other); // 0x000000018B1600D8-0x000000018B160124
-		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018B160920-0x000000018B1609AC
-		public bool Equals(FixedString4096Bytes other); // 0x000000018B16029C-0x000000018B1602B0
+		internal int Initialize(string source); // 0x00000001859D2EB0-0x00000001859D2F30
+		public int CompareTo(FixedString32Bytes other); // 0x000000018D2A9928-0x000000018D2A9974
+		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018D2A9E74-0x000000018D2A9F00
+		public bool Equals(FixedString32Bytes other); // 0x000000018D2A99B0-0x000000018D2A99C4
+		public int CompareTo(FixedString64Bytes other); // 0x000000018D2A98DC-0x000000018D2A9928
+		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018D2A9F80-0x000000018D2AA00C
+		public bool Equals(FixedString64Bytes other); // 0x000000018D2A9A48-0x000000018D2A9A5C
+		public int CompareTo(FixedString128Bytes other); // 0x000000018D2A9810-0x000000018D2A985C
+		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018D2A9F00-0x000000018D2A9F80
+		public bool Equals(FixedString128Bytes other); // 0x000000018D2A999C-0x000000018D2A99B0
+		public int CompareTo(FixedString512Bytes other); // 0x000000018D2A985C-0x000000018D2A98A8
+		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018D2A9DE8-0x000000018D2A9E74
+		public bool Equals(FixedString512Bytes other); // 0x000000018D2A9974-0x000000018D2A9988
+		public int CompareTo(FixedString4096Bytes other); // 0x000000018D2A97C4-0x000000018D2A9810
+		public static bool operator ==([IsReadOnly] in FixedString128Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018D2AA00C-0x000000018D2AA098
+		public bool Equals(FixedString4096Bytes other); // 0x000000018D2A9988-0x000000018D2A999C
 		[NotBurstCompatible]
-		public static implicit operator FixedString128Bytes(string b); // 0x0000000183875020-0x0000000183875060
+		public static implicit operator FixedString128Bytes(string b); // 0x00000001859D2E40-0x00000001859D2E80
 		[NotBurstCompatible]
-		public override string ToString(); // 0x000000018B160654-0x000000018B160690
-		public override int GetHashCode(); // 0x000000018B160618-0x000000018B160654
+		public override string ToString(); // 0x000000018D2A9D40-0x000000018D2A9D7C
+		public override int GetHashCode(); // 0x000000018D2A9D04-0x000000018D2A9D40
 		[NotBurstCompatible]
-		public override bool Equals(object obj); // 0x000000018B160370-0x000000018B160618
+		public override bool Equals(object obj); // 0x000000018D2A9A5C-0x000000018D2A9D04
 	}
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes510 // TypeDefIndex: 60767
+	public struct FixedBytes510 // TypeDefIndex: 88116
 	{
 		// Fields
 		public FixedBytes16 offset0000; // 0x00
@@ -1203,7 +1172,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible]
 	[DefaultMember("Item")]
-	public struct FixedString512Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 60768
+	public struct FixedString512Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 88117
 	{
 		// Fields
 		[SerializeField]
@@ -1212,40 +1181,40 @@ namespace Unity.Collections
 		internal FixedBytes510 bytes; // 0x02
 	
 		// Properties
-		public int Length { get; } // 0x0000000184D87110-0x0000000184D87120 
+		public int Length { get; } // 0x000000018448B780-0x000000018448B790 
 	
 		// Methods
-		public unsafe byte* GetUnsafePtr(); // 0x0000000184DAB500-0x0000000184DAB510
-		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDBA */); // 0x000000018B1620A4-0x000000018B162114
+		public unsafe byte* GetUnsafePtr(); // 0x00000001872593C0-0x00000001872593D0
+		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F45 */); // 0x000000018D2AB710-0x000000018D2AB780
 		[NotBurstCompatible]
-		public int CompareTo(string other); // 0x000000018B161C1C-0x000000018B161C50
+		public int CompareTo(string other); // 0x000000018D2AB288-0x000000018D2AB2BC
 		[NotBurstCompatible]
-		public bool Equals(string other); // 0x000000018B161FA8-0x000000018B16202C
-		public int CompareTo(FixedString32Bytes other); // 0x000000018B161C50-0x000000018B161C9C
-		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018B162338-0x000000018B1623C4
-		public bool Equals(FixedString32Bytes other); // 0x000000018B161CB0-0x000000018B161CC4
-		public int CompareTo(FixedString64Bytes other); // 0x000000018B161B84-0x000000018B161BD0
-		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018B1622AC-0x000000018B162338
-		public bool Equals(FixedString64Bytes other); // 0x000000018B161C9C-0x000000018B161CB0
-		public int CompareTo(FixedString128Bytes other); // 0x000000018B161B38-0x000000018B161B84
-		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018B162194-0x000000018B162220
-		public bool Equals(FixedString128Bytes other); // 0x000000018B161F80-0x000000018B161F94
-		public int CompareTo(FixedString512Bytes other); // 0x000000018B161AEC-0x000000018B161B38
-		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018B162114-0x000000018B162194
-		public bool Equals(FixedString512Bytes other); // 0x000000018B161F6C-0x000000018B161F80
-		public int CompareTo(FixedString4096Bytes other); // 0x000000018B161BD0-0x000000018B161C1C
-		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018B162220-0x000000018B1622AC
-		public bool Equals(FixedString4096Bytes other); // 0x000000018B161F94-0x000000018B161FA8
+		public bool Equals(string other); // 0x000000018D2AB614-0x000000018D2AB698
+		public int CompareTo(FixedString32Bytes other); // 0x000000018D2AB2BC-0x000000018D2AB308
+		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018D2AB9A4-0x000000018D2ABA30
+		public bool Equals(FixedString32Bytes other); // 0x000000018D2AB31C-0x000000018D2AB330
+		public int CompareTo(FixedString64Bytes other); // 0x000000018D2AB1F0-0x000000018D2AB23C
+		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018D2AB918-0x000000018D2AB9A4
+		public bool Equals(FixedString64Bytes other); // 0x000000018D2AB308-0x000000018D2AB31C
+		public int CompareTo(FixedString128Bytes other); // 0x000000018D2AB1A4-0x000000018D2AB1F0
+		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018D2AB800-0x000000018D2AB88C
+		public bool Equals(FixedString128Bytes other); // 0x000000018D2AB5EC-0x000000018D2AB600
+		public int CompareTo(FixedString512Bytes other); // 0x000000018D2AB158-0x000000018D2AB1A4
+		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018D2AB780-0x000000018D2AB800
+		public bool Equals(FixedString512Bytes other); // 0x000000018D2AB5D8-0x000000018D2AB5EC
+		public int CompareTo(FixedString4096Bytes other); // 0x000000018D2AB23C-0x000000018D2AB288
+		public static bool operator ==([IsReadOnly] in FixedString512Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018D2AB88C-0x000000018D2AB918
+		public bool Equals(FixedString4096Bytes other); // 0x000000018D2AB600-0x000000018D2AB614
 		[NotBurstCompatible]
-		public override string ToString(); // 0x000000018B162068-0x000000018B1620A4
-		public override int GetHashCode(); // 0x000000018B16202C-0x000000018B162068
+		public override string ToString(); // 0x000000018D2AB6D4-0x000000018D2AB710
+		public override int GetHashCode(); // 0x000000018D2AB698-0x000000018D2AB6D4
 		[NotBurstCompatible]
-		public override bool Equals(object obj); // 0x000000018B161CC4-0x000000018B161F6C
+		public override bool Equals(object obj); // 0x000000018D2AB330-0x000000018D2AB5D8
 	}
 
 	[Serializable]
 	[BurstCompatible]
-	public struct FixedBytes4094 // TypeDefIndex: 60769
+	public struct FixedBytes4094 // TypeDefIndex: 88118
 	{
 		// Fields
 		public FixedBytes16 offset0000; // 0x00
@@ -1522,7 +1491,7 @@ namespace Unity.Collections
 	[Serializable]
 	[BurstCompatible]
 	[DefaultMember("Item")]
-	public struct FixedString4096Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 60770
+	public struct FixedString4096Bytes : INativeList<byte>, IUTF8Bytes, IComparable<string>, IEquatable<string>, IComparable<FixedString32Bytes>, IEquatable<FixedString32Bytes>, IComparable<FixedString64Bytes>, IEquatable<FixedString64Bytes>, IComparable<FixedString128Bytes>, IEquatable<FixedString128Bytes>, IComparable<FixedString512Bytes>, IEquatable<FixedString512Bytes>, IComparable<FixedString4096Bytes>, IEquatable<FixedString4096Bytes> // TypeDefIndex: 88119
 	{
 		// Fields
 		[SerializeField]
@@ -1531,42 +1500,42 @@ namespace Unity.Collections
 		internal FixedBytes4094 bytes; // 0x02
 	
 		// Properties
-		public int Length { get; } // 0x0000000184D87110-0x0000000184D87120 
+		public int Length { get; } // 0x000000018448B780-0x000000018448B790 
 	
 		// Methods
-		public unsafe byte* GetUnsafePtr(); // 0x0000000184DAB500-0x0000000184DAB510
-		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDBB */); // 0x000000018B1617CC-0x000000018B16183C
+		public unsafe byte* GetUnsafePtr(); // 0x00000001872593C0-0x00000001872593D0
+		public bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F46 */); // 0x000000018D2AAE38-0x000000018D2AAEA8
 		[NotBurstCompatible]
-		public int CompareTo(string other); // 0x000000018B161390-0x000000018B1613C4
+		public int CompareTo(string other); // 0x000000018D2AA9FC-0x000000018D2AAA30
 		[NotBurstCompatible]
-		public bool Equals(string other); // 0x000000018B1613D8-0x000000018B16145C
-		public int CompareTo(FixedString32Bytes other); // 0x000000018B1612F8-0x000000018B161344
-		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018B161948-0x000000018B1619D4
-		public bool Equals(FixedString32Bytes other); // 0x000000018B16172C-0x000000018B161740
-		public int CompareTo(FixedString64Bytes other); // 0x000000018B161344-0x000000018B161390
-		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018B1618BC-0x000000018B161948
-		public bool Equals(FixedString64Bytes other); // 0x000000018B161740-0x000000018B161754
-		public int CompareTo(FixedString128Bytes other); // 0x000000018B1612AC-0x000000018B1612F8
-		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018B1619D4-0x000000018B161A60
-		public bool Equals(FixedString128Bytes other); // 0x000000018B16145C-0x000000018B161470
-		public int CompareTo(FixedString512Bytes other); // 0x000000018B161214-0x000000018B161260
-		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018B161A60-0x000000018B161AEC
-		public bool Equals(FixedString512Bytes other); // 0x000000018B161470-0x000000018B161484
-		public int CompareTo(FixedString4096Bytes other); // 0x000000018B161260-0x000000018B1612AC
-		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018B16183C-0x000000018B1618BC
-		public bool Equals(FixedString4096Bytes other); // 0x000000018B1613C4-0x000000018B1613D8
+		public bool Equals(string other); // 0x000000018D2AAA44-0x000000018D2AAAC8
+		public int CompareTo(FixedString32Bytes other); // 0x000000018D2AA964-0x000000018D2AA9B0
+		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString32Bytes b); // 0x000000018D2AAFB4-0x000000018D2AB040
+		public bool Equals(FixedString32Bytes other); // 0x000000018D2AAD98-0x000000018D2AADAC
+		public int CompareTo(FixedString64Bytes other); // 0x000000018D2AA9B0-0x000000018D2AA9FC
+		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString64Bytes b); // 0x000000018D2AAF28-0x000000018D2AAFB4
+		public bool Equals(FixedString64Bytes other); // 0x000000018D2AADAC-0x000000018D2AADC0
+		public int CompareTo(FixedString128Bytes other); // 0x000000018D2AA918-0x000000018D2AA964
+		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString128Bytes b); // 0x000000018D2AB040-0x000000018D2AB0CC
+		public bool Equals(FixedString128Bytes other); // 0x000000018D2AAAC8-0x000000018D2AAADC
+		public int CompareTo(FixedString512Bytes other); // 0x000000018D2AA880-0x000000018D2AA8CC
+		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString512Bytes b); // 0x000000018D2AB0CC-0x000000018D2AB158
+		public bool Equals(FixedString512Bytes other); // 0x000000018D2AAADC-0x000000018D2AAAF0
+		public int CompareTo(FixedString4096Bytes other); // 0x000000018D2AA8CC-0x000000018D2AA918
+		public static bool operator ==([IsReadOnly] in FixedString4096Bytes a, [IsReadOnly] in FixedString4096Bytes b); // 0x000000018D2AAEA8-0x000000018D2AAF28
+		public bool Equals(FixedString4096Bytes other); // 0x000000018D2AAA30-0x000000018D2AAA44
 		[NotBurstCompatible]
-		public override string ToString(); // 0x000000018B161790-0x000000018B1617CC
-		public override int GetHashCode(); // 0x000000018B161754-0x000000018B161790
+		public override string ToString(); // 0x000000018D2AADFC-0x000000018D2AAE38
+		public override int GetHashCode(); // 0x000000018D2AADC0-0x000000018D2AADFC
 		[NotBurstCompatible]
-		public override bool Equals(object obj); // 0x000000018B161484-0x000000018B16172C
+		public override bool Equals(object obj); // 0x000000018D2AAAF0-0x000000018D2AAD98
 	}
 
 	[BurstCompatible]
 	[BurstCompatible]
 	[BurstCompatible]
 	[BurstCompatible]
-	public static class FixedStringMethods // TypeDefIndex: 60771
+	public static class FixedStringMethods // TypeDefIndex: 88120
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(FixedString128Bytes) })]
@@ -1590,45 +1559,44 @@ namespace Unity.Collections
 			where T : struct, INativeList<byte>, IUTF8Bytes;
 	}
 
-	public interface IUTF8Bytes // TypeDefIndex: 60772
+	public interface IUTF8Bytes // TypeDefIndex: 88121
 	{
 		// Methods
 		byte* GetUnsafePtr();
-		bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDBC */);
+		bool TryResize(int newLength, NativeArrayOptions clearOptions = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F47 */);
 	}
 
-	public static class ListExtensions // TypeDefIndex: 60773
+	public static class ListExtensions // TypeDefIndex: 88122
 	{
 		// Extension methods
-		public static bool RemoveSwapBack<T>(this List<T> list, T value);
 		public static void RemoveAtSwapBack<T>(this List<T> list, int index);
 		public static NativeArray<T> ToNativeArray<T>(this List<T> list, AllocatorManager.AllocatorHandle allocator)
 			where T : struct;
 	}
 
 	[BurstCompatible]
-	internal struct Memory // TypeDefIndex: 60776
+	internal struct Memory // TypeDefIndex: 88125
 	{
 		// Nested types
 		[BurstCompatible]
-		internal struct Unmanaged // TypeDefIndex: 60775
+		internal struct Unmanaged // TypeDefIndex: 88124
 		{
 			// Nested types
 			[BurstCompatible]
-			internal struct Array // TypeDefIndex: 60774
+			internal struct Array // TypeDefIndex: 88123
 			{
 				// Methods
-				private static bool IsCustom(AllocatorManager.AllocatorHandle allocator); // 0x0000000183347DF0-0x0000000183347E00
-				private static unsafe void* CustomResize(void* oldPointer, long oldCount, long newCount, AllocatorManager.AllocatorHandle allocator, long size, int align); // 0x000000018B15FEF8-0x000000018B15FF9C
-				internal static unsafe void* Resize(void* oldPointer, long oldCount, long newCount, AllocatorManager.AllocatorHandle allocator, long size, int align); // 0x0000000183347CE0-0x0000000183347DE0
+				private static bool IsCustom(AllocatorManager.AllocatorHandle allocator); // 0x00000001851641B0-0x00000001851641C0
+				private static unsafe void* CustomResize(void* oldPointer, long oldCount, long newCount, AllocatorManager.AllocatorHandle allocator, long size, int align); // 0x000000018D2A95F4-0x000000018D2A96A0
+				internal static unsafe void* Resize(void* oldPointer, long oldCount, long newCount, AllocatorManager.AllocatorHandle allocator, long size, int align); // 0x0000000185164090-0x00000001851641B0
 				[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 				internal static unsafe T* Resize<T>(T* oldPointer, long oldCount, long newCount, AllocatorManager.AllocatorHandle allocator)
 					where T : struct;
 			}
 	
 			// Methods
-			internal static unsafe void* Allocate(long size, int align, AllocatorManager.AllocatorHandle allocator); // 0x0000000183347C10-0x0000000183347C90
-			internal static unsafe void Free(void* pointer, AllocatorManager.AllocatorHandle allocator); // 0x0000000183CCB260-0x0000000183CCB2A0
+			internal static unsafe void* Allocate(long size, int align, AllocatorManager.AllocatorHandle allocator); // 0x0000000185164060-0x0000000185164090
+			internal static unsafe void Free(void* pointer, AllocatorManager.AllocatorHandle allocator); // 0x0000000185E695C0-0x0000000185E69600
 			[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 			internal static unsafe void Free<T>(T* pointer, AllocatorManager.AllocatorHandle allocator)
 				where T : struct;
@@ -1636,7 +1604,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public static class NativeArrayExtensions // TypeDefIndex: 60777
+	public static class NativeArrayExtensions // TypeDefIndex: 88126
 	{
 		// Methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -1656,11 +1624,11 @@ namespace Unity.Collections
 			where T : struct
 			where U : struct;
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-		internal static void Initialize<T>(this ref NativeArray<T> array, int length, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x0234EDBD */)
+		internal static void Initialize<T>(this ref NativeArray<T> array, int length, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x02647F48 */)
 			where T : struct;
 	}
 
-	public interface IIndexable<T> // TypeDefIndex: 60778
+	public interface IIndexable<T> // TypeDefIndex: 88127
 		where T : struct
 	{
 		// Properties
@@ -1668,7 +1636,7 @@ namespace Unity.Collections
 	}
 
 	[DefaultMember("Item")]
-	public interface INativeList<T> : IIndexable<T> // TypeDefIndex: 60779
+	public interface INativeList<T> : IIndexable<T> // TypeDefIndex: 88128
 		where T : struct
 	{
 	}
@@ -1677,7 +1645,7 @@ namespace Unity.Collections
 	[DebuggerDisplay("Length = {Length}")]
 	[DebuggerTypeProxy(typeof(NativeListDebugView<T>))]
 	[NativeContainer]
-	public struct NativeList<T> : INativeDisposable, INativeList<T>, IEnumerable<T> // TypeDefIndex: 60781
+	public struct NativeList<T> : INativeDisposable, INativeList<T>, IEnumerable<T> // TypeDefIndex: 88130
 		where T : struct
 	{
 		// Fields
@@ -1696,7 +1664,7 @@ namespace Unity.Collections
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		[NativeContainer]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60780
+		public struct ParallelWriter // TypeDefIndex: 88129
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -1732,7 +1700,7 @@ namespace Unity.Collections
 		[NotBurstCompatible]
 		public JobHandle Dispose(JobHandle inputDeps);
 		[NotBurstCompatible]
-		public JobHandle CrossFrameDispose(JobHandle inputDeps, JobQueuePriority priority = JobQueuePriority.NormalJobPriority /* Metadata: 0x0234EDBE */);
+		public JobHandle CrossFrameDispose(JobHandle inputDeps, JobQueuePriority priority = JobQueuePriority.NormalJobPriority /* Metadata: 0x02647F49 */);
 		public void Clear();
 		public static implicit operator NativeArray<T>(NativeList<T> nativeList);
 		public NativeArray<T> AsArray();
@@ -1751,28 +1719,28 @@ namespace Unity.Collections
 
 	[BurstCompatible]
 	[NativeContainer]
-	internal struct NativeListDispose // TypeDefIndex: 60782
+	internal struct NativeListDispose // TypeDefIndex: 88131
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
 		public unsafe UntypedUnsafeList* m_ListData; // 0x00
 	
 		// Methods
-		public void Dispose(); // 0x000000018B163504-0x000000018B163540
+		public void Dispose(); // 0x000000018D2ACB40-0x000000018D2ACB7C
 	}
 
 	[BurstCompatible]
 	[BurstCompile]
-	internal struct NativeListDisposeJob : IJob // TypeDefIndex: 60783
+	internal struct NativeListDisposeJob : IJob // TypeDefIndex: 88132
 	{
 		// Fields
 		internal NativeListDispose Data; // 0x00
 	
 		// Methods
-		public void Execute(); // 0x000000018B1634FC-0x000000018B163504
+		public void Execute(); // 0x000000018D2ACB38-0x000000018D2ACB40
 	}
 
-	internal sealed class NativeListDebugView<T> // TypeDefIndex: 60784
+	internal sealed class NativeListDebugView<T> // TypeDefIndex: 88133
 		where T : struct
 	{
 	}
@@ -1781,7 +1749,7 @@ namespace Unity.Collections
 	[DebuggerDisplay("Count = {m_HashMapData.Count()}, Capacity = {m_HashMapData.Capacity}, IsCreated = {m_HashMapData.IsCreated}, IsEmpty = {IsEmpty}")]
 	[DebuggerTypeProxy(typeof(NativeParallelHashMapDebuggerTypeProxy<TKey, TValue>))]
 	[NativeContainer]
-	public struct NativeParallelHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 60787
+	public struct NativeParallelHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 88136
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -1799,7 +1767,7 @@ namespace Unity.Collections
 		[DebuggerDisplay("Capacity = {m_Writer.Capacity}")]
 		[NativeContainer]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60785
+		public struct ParallelWriter // TypeDefIndex: 88134
 		{
 			// Fields
 			internal UnsafeParallelHashMap<TKey, TValue> m_Writer;
@@ -1810,7 +1778,7 @@ namespace Unity.Collections
 	
 		[NativeContainer]
 		[NativeContainerIsReadOnly]
-		public struct Enumerator : IEnumerator<KeyValue<TKey, TValue>> // TypeDefIndex: 60786
+		public struct Enumerator : IEnumerator<KeyValue<TKey, TValue>> // TypeDefIndex: 88135
 		{
 			// Fields
 			internal UnsafeParallelHashMapDataEnumerator m_Enumerator;
@@ -1848,14 +1816,14 @@ namespace Unity.Collections
 		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	internal sealed class NativeParallelHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 60788
+	internal sealed class NativeParallelHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 88137
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
 	}
 
 	[BurstCompatible]
-	public static class NativeParallelHashMapExtensions // TypeDefIndex: 60789
+	public static class NativeParallelHashMapExtensions // TypeDefIndex: 88138
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
@@ -1866,7 +1834,7 @@ namespace Unity.Collections
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(NativeHashSetDebuggerTypeProxy<T>))]
-	public struct NativeParallelHashSet<T> : INativeDisposable, IEnumerable<T> // TypeDefIndex: 60791
+	public struct NativeParallelHashSet<T> : INativeDisposable, IEnumerable<T> // TypeDefIndex: 88140
 		where T : struct, IEquatable<T>
 	{
 		// Fields
@@ -1879,7 +1847,7 @@ namespace Unity.Collections
 		// Nested types
 		[NativeContainer]
 		[NativeContainerIsReadOnly]
-		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 60790
+		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 88139
 		{
 			// Fields
 			internal UnsafeParallelHashMapDataEnumerator m_Enumerator;
@@ -1910,13 +1878,13 @@ namespace Unity.Collections
 		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	internal sealed class NativeHashSetDebuggerTypeProxy<T> // TypeDefIndex: 60792
+	internal sealed class NativeHashSetDebuggerTypeProxy<T> // TypeDefIndex: 88141
 		where T : struct, IEquatable<T>
 	{
 	}
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-	public struct NativeParallelMultiHashMapIterator<TKey> // TypeDefIndex: 60793
+	public struct NativeParallelMultiHashMapIterator<TKey> // TypeDefIndex: 88142
 		where TKey : struct
 	{
 		// Fields
@@ -1928,7 +1896,7 @@ namespace Unity.Collections
 	[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 	[DebuggerTypeProxy(typeof(NativeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue>))]
 	[NativeContainer]
-	public struct NativeParallelMultiHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 60796
+	public struct NativeParallelMultiHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 88145
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -1944,7 +1912,7 @@ namespace Unity.Collections
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 		[NativeContainer]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60794
+		public struct ParallelWriter // TypeDefIndex: 88143
 		{
 			// Fields
 			internal UnsafeParallelMultiHashMap<TKey, TValue> m_Writer;
@@ -1953,7 +1921,7 @@ namespace Unity.Collections
 			public void Add(TKey key, TValue item);
 		}
 	
-		public struct Enumerator : IEnumerator<TValue> // TypeDefIndex: 60795
+		public struct Enumerator : IEnumerator<TValue> // TypeDefIndex: 88144
 		{
 			// Fields
 			internal NativeParallelMultiHashMap<TKey, TValue> hashmap;
@@ -2000,13 +1968,13 @@ namespace Unity.Collections
 		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	internal sealed class NativeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 60797
+	internal sealed class NativeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 88146
 		where TKey : struct, IEquatable<TKey>, IComparable<TKey>
 		where TValue : struct
 	{
 	}
 
-	internal struct NativeQueueBlockHeader // TypeDefIndex: 60798
+	internal struct NativeQueueBlockHeader // TypeDefIndex: 88147
 	{
 		// Fields
 		public unsafe NativeQueueBlockHeader* m_NextBlock; // 0x00
@@ -2014,7 +1982,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	internal struct NativeQueueBlockPoolData // TypeDefIndex: 60799
+	internal struct NativeQueueBlockPoolData // TypeDefIndex: 88148
 	{
 		// Fields
 		internal IntPtr m_FirstBlock; // 0x00
@@ -2023,27 +1991,27 @@ namespace Unity.Collections
 		internal int m_AllocLock; // 0x10
 	
 		// Methods
-		public unsafe NativeQueueBlockHeader* AllocateBlock(); // 0x0000000183FA3AD0-0x0000000183FA3B50
-		public unsafe void FreeBlock(NativeQueueBlockHeader* block); // 0x0000000183EE1D30-0x0000000183EE1E00
+		public unsafe NativeQueueBlockHeader* AllocateBlock(); // 0x000000018630B940-0x000000018630B9C0
+		public unsafe void FreeBlock(NativeQueueBlockHeader* block); // 0x0000000186228850-0x0000000186228920
 	}
 
-	internal class NativeQueueBlockPool // TypeDefIndex: 60800
+	internal class NativeQueueBlockPool // TypeDefIndex: 88149
 	{
 		// Fields
 		private static readonly SharedStatic<IntPtr> Data; // 0x00
 	
 		// Constructors
-		static NativeQueueBlockPool(); // 0x000000018452F380-0x000000018452F3E0
+		static NativeQueueBlockPool(); // 0x00000001869F0F60-0x00000001869F0FC0
 	
 		// Methods
-		internal static unsafe NativeQueueBlockPoolData* GetQueueBlockPool(); // 0x0000000183FE6EC0-0x0000000183FE6FE0
+		internal static unsafe NativeQueueBlockPoolData* GetQueueBlockPool(); // 0x00000001865B56D0-0x00000001865B57F0
 		[BurstDiscard]
-		private static void AppDomainOnDomainUnload(); // 0x0000000183B0D570-0x0000000183B0D600
-		private static void OnDomainUnload(object sender, EventArgs e); // 0x000000018B163540-0x000000018B163614
+		private static void AppDomainOnDomainUnload(); // 0x0000000185B800E0-0x0000000185B80170
+		private static void OnDomainUnload(object sender, EventArgs e); // 0x000000018D2ACB7C-0x000000018D2ACC50
 	}
 
 	[BurstCompatible]
-	internal struct NativeQueueData // TypeDefIndex: 60801
+	internal struct NativeQueueData // TypeDefIndex: 88150
 	{
 		// Fields
 		public IntPtr m_FirstBlock; // 0x00
@@ -2053,20 +2021,20 @@ namespace Unity.Collections
 		public unsafe byte* m_CurrentWriteBlockTLS; // 0x18
 	
 		// Methods
-		internal unsafe NativeQueueBlockHeader* GetCurrentWriteBlockTLS(int threadIndex); // 0x0000000184DAB520-0x0000000184DAB530
-		internal unsafe void SetCurrentWriteBlockTLS(int threadIndex, NativeQueueBlockHeader* currentWriteBlock); // 0x0000000184DAB530-0x0000000184DAB540
+		internal unsafe NativeQueueBlockHeader* GetCurrentWriteBlockTLS(int threadIndex); // 0x00000001872593E0-0x00000001872593F0
+		internal unsafe void SetCurrentWriteBlockTLS(int threadIndex, NativeQueueBlockHeader* currentWriteBlock); // 0x00000001872593F0-0x0000000187259400
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		public static unsafe NativeQueueBlockHeader* AllocateWriteBlockMT<T>(NativeQueueData* data, NativeQueueBlockPoolData* pool, int threadIndex)
 			where T : struct;
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		public static unsafe void AllocateQueue<T>(AllocatorManager.AllocatorHandle label, out NativeQueueData* outBuf)
 			where T : struct;
-		public static unsafe void DeallocateQueue(NativeQueueData* data, NativeQueueBlockPoolData* pool, AllocatorManager.AllocatorHandle allocation); // 0x00000001841649C0-0x0000000184164A10
+		public static unsafe void DeallocateQueue(NativeQueueData* data, NativeQueueBlockPoolData* pool, AllocatorManager.AllocatorHandle allocation); // 0x000000018674A070-0x000000018674A0C0
 	}
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[NativeContainer]
-	public struct NativeQueue<T> : INativeDisposable // TypeDefIndex: 60803
+	public struct NativeQueue<T> : INativeDisposable // TypeDefIndex: 88152
 		where T : struct
 	{
 		// Fields
@@ -2084,7 +2052,7 @@ namespace Unity.Collections
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		[NativeContainer]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60802
+		public struct ParallelWriter // TypeDefIndex: 88151
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2115,7 +2083,7 @@ namespace Unity.Collections
 
 	[BurstCompatible]
 	[NativeContainer]
-	internal struct NativeQueueDispose // TypeDefIndex: 60804
+	internal struct NativeQueueDispose // TypeDefIndex: 88153
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2125,22 +2093,22 @@ namespace Unity.Collections
 		internal AllocatorManager.AllocatorHandle m_AllocatorLabel; // 0x10
 	
 		// Methods
-		public void Dispose(); // 0x000000018B16361C-0x000000018B163630
+		public void Dispose(); // 0x000000018D2ACC58-0x000000018D2ACC6C
 	}
 
 	[BurstCompile]
-	internal struct NativeQueueDisposeJob : IJob // TypeDefIndex: 60805
+	internal struct NativeQueueDisposeJob : IJob // TypeDefIndex: 88154
 	{
 		// Fields
 		public NativeQueueDispose Data; // 0x00
 	
 		// Methods
-		public void Execute(); // 0x000000018B163614-0x000000018B16361C
+		public void Execute(); // 0x000000018D2ACC50-0x000000018D2ACC58
 	}
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[NativeContainer]
-	public struct NativeReference<T> : INativeDisposable, IEquatable<NativeReference<T>> // TypeDefIndex: 60806
+	public struct NativeReference<T> : INativeDisposable, IEquatable<NativeReference<T>> // TypeDefIndex: 88155
 		where T : struct
 	{
 		// Fields
@@ -2153,7 +2121,7 @@ namespace Unity.Collections
 		public bool IsCreated { get; }
 	
 		// Constructors
-		public unsafe NativeReference(AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.ClearMemory /* Metadata: 0x0234EDBF */);
+		public unsafe NativeReference(AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.ClearMemory /* Metadata: 0x02647F4A */);
 		public unsafe NativeReference(T value, AllocatorManager.AllocatorHandle allocator);
 	
 		// Methods
@@ -2167,7 +2135,7 @@ namespace Unity.Collections
 	}
 
 	[NativeContainer]
-	internal struct NativeReferenceDispose // TypeDefIndex: 60807
+	internal struct NativeReferenceDispose // TypeDefIndex: 88156
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2175,25 +2143,25 @@ namespace Unity.Collections
 		internal AllocatorManager.AllocatorHandle m_AllocatorLabel; // 0x08
 	
 		// Methods
-		public void Dispose(); // 0x000000018B163638-0x000000018B163648
+		public void Dispose(); // 0x000000018D2ACC74-0x000000018D2ACC84
 	}
 
 	[BurstCompile]
-	internal struct NativeReferenceDisposeJob : IJob // TypeDefIndex: 60808
+	internal struct NativeReferenceDisposeJob : IJob // TypeDefIndex: 88157
 	{
 		// Fields
 		internal NativeReferenceDispose Data; // 0x00
 	
 		// Methods
-		public void Execute(); // 0x000000018B163630-0x000000018B163638
+		public void Execute(); // 0x000000018D2ACC6C-0x000000018D2ACC74
 	}
 
 	[BurstCompatible]
-	public static class NativeSortExtension // TypeDefIndex: 60810
+	public static class NativeSortExtension // TypeDefIndex: 88159
 	{
 		// Nested types
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-		public struct DefaultComparer<T> : IComparer<T> // TypeDefIndex: 60809
+		public struct DefaultComparer<T> : IComparer<T> // TypeDefIndex: 88158
 			where T : IComparable<T>
 		{
 			// Methods
@@ -2258,7 +2226,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible(RequiredUnityDefine = "UNITY_2020_2_OR_NEWER", GenericTypeArguments = new System.Type[2] {typeof(int), typeof(NativeSortExtension.DefaultComparer<int>) })]
-	public struct SortJob<T, U> // TypeDefIndex: 60813
+	public struct SortJob<T, U> // TypeDefIndex: 88162
 		where T : struct
 		where U : IComparer<T>
 	{
@@ -2269,7 +2237,7 @@ namespace Unity.Collections
 	
 		// Nested types
 		[BurstCompile]
-		private struct SegmentSort : IJobParallelFor // TypeDefIndex: 60811
+		private struct SegmentSort : IJobParallelFor // TypeDefIndex: 88160
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2283,7 +2251,7 @@ namespace Unity.Collections
 		}
 	
 		[BurstCompile]
-		private struct SegmentSortMerge : IJob // TypeDefIndex: 60812
+		private struct SegmentSortMerge : IJob // TypeDefIndex: 88161
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2303,14 +2271,17 @@ namespace Unity.Collections
 
 	[BurstCompatible]
 	[NativeContainer]
-	public struct NativeStream : IDisposable // TypeDefIndex: 60816
+	public struct NativeStream : IDisposable // TypeDefIndex: 88167
 	{
 		// Fields
 		private UnsafeStream m_Stream; // 0x00
 	
+		// Properties
+		public bool IsCreated { get; } // 0x00000001853AE700-0x00000001853AE710 
+	
 		// Nested types
 		[BurstCompile]
-		private struct ConstructJobList : IJob // TypeDefIndex: 60814
+		private struct ConstructJobList : IJob // TypeDefIndex: 88163
 		{
 			// Fields
 			public NativeStream Container; // 0x00
@@ -2319,11 +2290,11 @@ namespace Unity.Collections
 			public unsafe UntypedUnsafeList* List; // 0x10
 	
 			// Methods
-			public void Execute(); // 0x000000018B160024-0x000000018B160048
+			public void Execute(); // 0x000000018D2A9710-0x000000018D2A9734
 		}
 	
 		[BurstCompile]
-		private struct ConstructJob : IJob // TypeDefIndex: 60815
+		private struct ConstructJob : IJob // TypeDefIndex: 88164
 		{
 			// Fields
 			public NativeStream Container; // 0x00
@@ -2331,25 +2302,76 @@ namespace Unity.Collections
 			public NativeArray<int> Length; // 0x10
 	
 			// Methods
-			public void Execute(); // 0x000000018B160048-0x000000018B160058
+			public void Execute(); // 0x000000018D2A9734-0x000000018D2A9744
 		}
 	
+		[BurstCompatible]
+		[NativeContainer]
+		[NativeContainerSupportsMinMaxWriteRestriction]
+		public struct Writer // TypeDefIndex: 88165
+		{
+			// Fields
+			private UnsafeStream.Writer m_Writer; // 0x00
+	
+			// Constructors
+			internal Writer(ref NativeStream stream); // 0x0000000187839D00-0x0000000187839D3C
+	
+			// Methods
+			public void BeginForEachIndex(int foreachIndex); // 0x00000001872594D0-0x00000001872594F0
+			public void EndForEachIndex(); // 0x0000000187835620-0x0000000187835628
+			[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
+			public void Write<T>(T value)
+				where T : struct;
+			[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
+			public ref ref T Allocate<T>()
+				where T : struct;
+			public unsafe byte* Allocate(int size); // 0x0000000187834DF0-0x0000000187834DF8
+		}
+	
+		[BurstCompatible]
+		[NativeContainer]
+		[NativeContainerIsReadOnly]
+		public struct Reader // TypeDefIndex: 88166
+		{
+			// Fields
+			private UnsafeStream.Reader m_Reader; // 0x00
+	
+			// Constructors
+			internal Reader(ref NativeStream stream); // 0x0000000187259400-0x0000000187259440
+	
+			// Methods
+			public int BeginForEachIndex(int foreachIndex); // 0x000000018D2ACCC4-0x000000018D2ACCCC
+			public void EndForEachIndex(); // 0x0000000186805BA0-0x0000000186805BB0
+			public unsafe byte* ReadUnsafePtr(int size); // 0x0000000185167440-0x0000000185167470
+			[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
+			public ref ref T Read<T>()
+				where T : struct;
+		}
+	
+		// Constructors
+		public NativeStream(int bufferCount, AllocatorManager.AllocatorHandle allocator); // 0x0000000185167980-0x0000000185167A80
+	
 		// Methods
-		public void Dispose(); // 0x000000018B160058-0x000000018B160060
-		private void AllocateForEach(int forEachCount); // 0x000000018B163648-0x000000018B163650
+		public Reader AsReader(); // 0x0000000185679070-0x00000001856790A0
+		public Writer AsWriter(); // 0x0000000185C1B370-0x0000000185C1B3E0
+		public void Dispose(); // 0x000000018D2A9744-0x000000018D2A974C
+		[NotBurstCompatible]
+		public JobHandle Dispose(JobHandle inputDeps); // 0x000000018783799C-0x00000001878379D0
+		private static void AllocateBlock(out NativeStream stream, AllocatorManager.AllocatorHandle allocator); // 0x0000000187834DF8-0x0000000187834E00
+		private void AllocateForEach(int forEachCount); // 0x000000018D2ACC84-0x000000018D2ACC8C
 	}
 
-	internal struct Spinner // TypeDefIndex: 60817
+	internal struct Spinner // TypeDefIndex: 88168
 	{
 		// Fields
 		private int m_value; // 0x00
 	
 		// Methods
-		public void Lock(); // 0x000000018B163CB4-0x000000018B163CC8
-		public void Unlock(); // 0x000000018B163CC8-0x000000018B163CE4
+		public void Lock(); // 0x000000018D2AD2FC-0x000000018D2AD310
+		public void Unlock(); // 0x000000018D2AD310-0x000000018D2AD32C
 	}
 
-	internal struct UnmanagedArray<T> : IDisposable // TypeDefIndex: 60818
+	internal struct UnmanagedArray<T> : IDisposable // TypeDefIndex: 88169
 		where T : struct
 	{
 		// Fields
@@ -2365,7 +2387,7 @@ namespace Unity.Collections
 	}
 
 	[BurstCompile]
-	public struct RewindableAllocator : AllocatorManager.IAllocator // TypeDefIndex: 60822
+	public struct RewindableAllocator : AllocatorManager.IAllocator // TypeDefIndex: 88173
 	{
 		// Fields
 		private Spinner m_spinner; // 0x00
@@ -2377,11 +2399,11 @@ namespace Unity.Collections
 		private bool m_enableBlockFree; // 0x24
 	
 		// Properties
-		public AllocatorManager.AllocatorHandle Handle { get; } // 0x0000000184D88B20-0x0000000184D88B30 
+		public AllocatorManager.AllocatorHandle Handle { get; } // 0x00000001872342E0-0x00000001872342F0 
 	
 		// Nested types
 		[BurstCompatible]
-		internal struct MemoryBlock : IDisposable // TypeDefIndex: 60819
+		internal struct MemoryBlock : IDisposable // TypeDefIndex: 88170
 		{
 			// Fields
 			public unsafe byte* m_pointer; // 0x00
@@ -2390,60 +2412,60 @@ namespace Unity.Collections
 			public long m_allocations; // 0x18
 	
 			// Constructors
-			public unsafe MemoryBlock(long bytes); // 0x000000018B1634A8-0x000000018B1634FC
+			public unsafe MemoryBlock(long bytes); // 0x000000018D2ACAE4-0x000000018D2ACB38
 	
 			// Methods
-			public void Rewind(); // 0x0000000184D92200-0x0000000184D92210
-			public void Dispose(); // 0x000000018B16336C-0x000000018B1633CC
-			public int TryAllocate(ref AllocatorManager.Block block); // 0x000000018B1633CC-0x000000018B1634A8
-			public bool Contains(IntPtr ptr); // 0x000000018B163354-0x000000018B16336C
+			public void Rewind(); // 0x00000001872401F0-0x0000000187240200
+			public void Dispose(); // 0x000000018D2AC9AC-0x000000018D2ACA0C
+			public int TryAllocate(ref AllocatorManager.Block block); // 0x000000018D2ACA0C-0x000000018D2ACAE4
+			public bool Contains(IntPtr ptr); // 0x000000018D2AC994-0x000000018D2AC9AC
 		}
 	
-		public delegate int Try_000008B6_PostfixBurstDelegate(IntPtr state, ref AllocatorManager.Block block); // TypeDefIndex: 60820; 0x00000001815802E0-0x00000001815802F0
+		public delegate int Try_000008B6_PostfixBurstDelegate(IntPtr state, ref AllocatorManager.Block block); // TypeDefIndex: 88171; 0x00000001859B7730-0x00000001859B7740
 	
-		internal static class Try_000008B6_BurstDirectCall // TypeDefIndex: 60821
+		internal static class Try_000008B6_BurstDirectCall // TypeDefIndex: 88172
 		{
 			// Fields
 			private static IntPtr Pointer; // 0x00
 			private static IntPtr DeferredCompilation; // 0x08
 	
 			// Constructors
-			static Try_000008B6_BurstDirectCall(); // 0x0000000183FAEA70-0x0000000183FAEA80
+			static Try_000008B6_BurstDirectCall(); // 0x000000018633AD70-0x000000018633AD80
 	
 			// Methods
 			[BurstDiscard]
-			private static void GetFunctionPointerDiscard(ref IntPtr param_00082103); // 0x000000018B1642C4-0x000000018B1643C8
-			private static IntPtr GetFunctionPointer(); // 0x000000018B1643C8-0x000000018B16441C
-			public static void Constructor(); // 0x0000000183FB0870-0x0000000183FB0900
-			public static void Initialize(); // 0x00000001841E1670-0x00000001841E1680
-			public static int Invoke(IntPtr state, ref AllocatorManager.Block block); // 0x000000018B16441C-0x000000018B1644A8
+			private static void GetFunctionPointerDiscard(ref IntPtr param_000baffa); // 0x000000018D2AD84C-0x000000018D2AD950
+			private static IntPtr GetFunctionPointer(); // 0x000000018D2AD950-0x000000018D2AD9A4
+			public static void Constructor(); // 0x000000018633C390-0x000000018633C420
+			public static void Initialize(); // 0x0000000186805BA0-0x0000000186805BB0
+			public static int Invoke(IntPtr state, ref AllocatorManager.Block block); // 0x000000018D2AD9A4-0x000000018D2ADA30
 		}
 	
 		// Methods
-		public void Rewind(); // 0x000000018B163754-0x000000018B163838
-		public void Dispose(); // 0x000000018B163688-0x000000018B163754
-		public int Try(ref AllocatorManager.Block block); // 0x000000018B163840-0x000000018B163A08
+		public void Rewind(); // 0x000000018D2ACDA0-0x000000018D2ACE98
+		public void Dispose(); // 0x000000018D2ACCCC-0x000000018D2ACDA0
+		public int Try(ref AllocatorManager.Block block); // 0x000000018D2ACEA0-0x000000018D2AD064
 		[BurstCompile]
 		[AOT.MonoPInvokeCallback(typeof(AllocatorManager.TryFunction))]
-		internal static int Try(IntPtr state, ref AllocatorManager.Block block); // 0x000000018B163A08-0x000000018B163A64
+		internal static int Try(IntPtr state, ref AllocatorManager.Block block); // 0x000000018D2AD064-0x000000018D2AD0C0
 		[BurstCompile]
 		[AOT.MonoPInvokeCallback(typeof(AllocatorManager.TryFunction))]
-		public static int Try_BurstManaged(IntPtr state, ref AllocatorManager.Block block); // 0x000000018B163838-0x000000018B163840
+		public static int Try_BurstManaged(IntPtr state, ref AllocatorManager.Block block); // 0x000000018D2ACE98-0x000000018D2ACEA0
 	}
 
-	public enum FormatError // TypeDefIndex: 60823
+	public enum FormatError // TypeDefIndex: 88174
 	{
 		None = 0,
 		Overflow = 1
 	}
 
-	public enum CopyError // TypeDefIndex: 60824
+	public enum CopyError // TypeDefIndex: 88175
 	{
 		None = 0,
 		Truncation = 1
 	}
 
-	public enum ConversionError // TypeDefIndex: 60825
+	public enum ConversionError // TypeDefIndex: 88176
 	{
 		None = 0,
 		Overflow = 1,
@@ -2452,180 +2474,180 @@ namespace Unity.Collections
 	}
 
 	[BurstCompatible]
-	public struct Unicode // TypeDefIndex: 60827
+	public struct Unicode // TypeDefIndex: 88178
 	{
 		// Properties
-		public static Rune ReplacementCharacter { get; } // 0x0000000184DAB550-0x0000000184DAB560 
+		public static Rune ReplacementCharacter { get; } // 0x0000000187259470-0x0000000187259480 
 	
 		// Nested types
 		[BurstCompatible]
-		public struct Rune // TypeDefIndex: 60826
+		public struct Rune // TypeDefIndex: 88177
 		{
 			// Fields
 			public int value; // 0x00
 		}
 	
 		// Methods
-		public static bool IsValidCodePoint(int codepoint); // 0x0000000183875EB0-0x0000000183875EC0
-		public static bool NotTrailer(byte b); // 0x000000018B164628-0x000000018B164634
-		public static unsafe ConversionError Utf8ToUcs(out Rune rune, byte* buffer, ref int index, int capacity); // 0x0000000183875E20-0x0000000183875E60
-		private static bool IsLeadingSurrogate(char c); // 0x0000000183875EC0-0x0000000183875EE0
-		private static bool IsTrailingSurrogate(char c); // 0x000000018A7E1B0C-0x000000018A7E1B28
-		public static unsafe ConversionError Utf16ToUcs(out Rune rune, char* buffer, ref int index, int capacity); // 0x0000000183875CE0-0x0000000183875D60
-		public static unsafe ConversionError UcsToUtf8(byte* buffer, ref int index, int capacity, Rune rune); // 0x0000000183875CA0-0x0000000183875CE0
-		public static unsafe ConversionError UcsToUtf16(char* buffer, ref int index, int capacity, Rune rune); // 0x0000000183875E60-0x0000000183875EB0
-		public static unsafe ConversionError Utf16ToUtf8(char* utf16Buffer, int utf16Length, byte* utf8Buffer, out int utf8Length, int utf8Capacity); // 0x0000000183875BE0-0x0000000183875CA0
-		public static unsafe ConversionError Utf8ToUtf16(byte* utf8Buffer, int utf8Length, char* utf16Buffer, out int utf16Length, int utf16Capacity); // 0x0000000183875D60-0x0000000183875E20
+		public static bool IsValidCodePoint(int codepoint); // 0x00000001855D8480-0x00000001855D8490
+		public static bool NotTrailer(byte b); // 0x000000018D2ADB14-0x000000018D2ADB20
+		public static unsafe ConversionError Utf8ToUcs(out Rune rune, byte* buffer, ref int index, int capacity); // 0x00000001855D8430-0x00000001855D8480
+		private static bool IsLeadingSurrogate(char c); // 0x00000001855D8490-0x00000001855D84B0
+		private static bool IsTrailingSurrogate(char c); // 0x000000018C99D5F4-0x000000018C99D610
+		public static unsafe ConversionError Utf16ToUcs(out Rune rune, char* buffer, ref int index, int capacity); // 0x00000001855D8200-0x00000001855D8270
+		public static unsafe ConversionError UcsToUtf8(byte* buffer, ref int index, int capacity, Rune rune); // 0x00000001855D81C0-0x00000001855D8200
+		public static unsafe ConversionError UcsToUtf16(char* buffer, ref int index, int capacity, Rune rune); // 0x00000001855D83E0-0x00000001855D8430
+		public static unsafe ConversionError Utf16ToUtf8(char* utf16Buffer, int utf16Length, byte* utf8Buffer, out int utf8Length, int utf8Capacity); // 0x00000001855D80E0-0x00000001855D81C0
+		public static unsafe ConversionError Utf8ToUtf16(byte* utf8Buffer, int utf8Length, char* utf16Buffer, out int utf16Length, int utf16Capacity); // 0x00000001855D8320-0x00000001855D83E0
 	}
 
 	[BurstCompatible]
-	public static class UTF8ArrayUnsafeUtility // TypeDefIndex: 60829
+	public static class UTF8ArrayUnsafeUtility // TypeDefIndex: 88180
 	{
 		// Nested types
-		internal struct Comparison // TypeDefIndex: 60828
+		internal struct Comparison // TypeDefIndex: 88179
 		{
 			// Fields
 			public bool terminates; // 0x00
 			public int result; // 0x04
 	
 			// Constructors
-			public Comparison(Unicode.Rune runeA, ConversionError errorA, Unicode.Rune runeB, ConversionError errorB); // 0x000000018B15FFF4-0x000000018B160024
+			public Comparison(Unicode.Rune runeA, ConversionError errorA, Unicode.Rune runeB, ConversionError errorB); // 0x00000001855D84B0-0x00000001855D84F0
 		}
 	
 		// Methods
-		public static unsafe CopyError Copy(byte* dest, out int destLength, int destUTF8MaxLengthInBytes, char* src, int srcLength); // 0x000000018B1644A8-0x000000018B1644DC
-		public static unsafe CopyError Copy(byte* dest, out ushort destLength, ushort destUTF8MaxLengthInBytes, char* src, int srcLength); // 0x0000000183875B10-0x0000000183875BE0
-		public static unsafe int StrCmp(byte* utf8BufferA, int utf8LengthInBytesA, byte* utf8BufferB, int utf8LengthInBytesB); // 0x000000018B164590-0x000000018B164628
-		public static unsafe bool EqualsUTF8Bytes(byte* aBytes, int aLength, byte* bBytes, int bLength); // 0x000000018B1644DC-0x000000018B1644F8
-		public static unsafe int StrCmp(byte* utf8Buffer, int utf8LengthInBytes, char* utf16Buffer, int utf16LengthInChars); // 0x000000018B1644F8-0x000000018B164590
+		public static unsafe CopyError Copy(byte* dest, out int destLength, int destUTF8MaxLengthInBytes, char* src, int srcLength); // 0x000000018D2ADA30-0x000000018D2ADA64
+		public static unsafe CopyError Copy(byte* dest, out ushort destLength, ushort destUTF8MaxLengthInBytes, char* src, int srcLength); // 0x00000001855D75D0-0x00000001855D76C0
+		public static unsafe int StrCmp(byte* utf8BufferA, int utf8LengthInBytesA, byte* utf8BufferB, int utf8LengthInBytesB); // 0x00000001855D8270-0x00000001855D8320
+		public static unsafe bool EqualsUTF8Bytes(byte* aBytes, int aLength, byte* bBytes, int bLength); // 0x00000001855D7C20-0x00000001855D7CD0
+		public static unsafe int StrCmp(byte* utf8Buffer, int utf8LengthInBytes, char* utf16Buffer, int utf16LengthInChars); // 0x000000018D2ADA64-0x000000018D2ADB14
 	}
 
 	[BurstCompatible]
 	[BurstCompatible]
 	[BurstCompatible]
 	[BurstCompile]
-	public static class xxHash3 // TypeDefIndex: 60835
+	public static class xxHash3 // TypeDefIndex: 88186
 	{
 		// Nested types
-		private struct ulong2 // TypeDefIndex: 60830
+		private struct ulong2 // TypeDefIndex: 88181
 		{
 			// Fields
 			public ulong x; // 0x00
 			public ulong y; // 0x08
 	
 			// Constructors
-			public ulong2(ulong x, ulong y); // 0x0000000184D861B0-0x0000000184D861C0
+			public ulong2(ulong x, ulong y); // 0x0000000187232F10-0x0000000187232F20
 		}
 	
-		public unsafe delegate ulong Hash64Long_000008F7_PostfixBurstDelegate(byte* input, byte* dest, long length, byte* secret); // TypeDefIndex: 60831; 0x00000001814D0D00-0x00000001814D0D20
+		public unsafe delegate ulong Hash64Long_000008F7_PostfixBurstDelegate(byte* input, byte* dest, long length, byte* secret); // TypeDefIndex: 88182; 0x00000001811CDB70-0x00000001811CDB90
 	
-		internal static class Hash64Long_000008F7_BurstDirectCall // TypeDefIndex: 60832
+		internal static class Hash64Long_000008F7_BurstDirectCall // TypeDefIndex: 88183
 		{
 			// Fields
 			private static IntPtr Pointer; // 0x00
 			private static IntPtr DeferredCompilation; // 0x08
 	
 			// Constructors
-			static Hash64Long_000008F7_BurstDirectCall(); // 0x0000000183FAEA80-0x0000000183FAEA90
+			static Hash64Long_000008F7_BurstDirectCall(); // 0x000000018633AD80-0x000000018633AD90
 	
 			// Methods
 			[BurstDiscard]
-			private static void GetFunctionPointerDiscard(ref IntPtr param_000821ea); // 0x000000018B163010-0x000000018B163114
-			private static IntPtr GetFunctionPointer(); // 0x000000018B163114-0x000000018B163168
-			public static void Constructor(); // 0x0000000183FB0900-0x0000000183FB0990
-			public static void Initialize(); // 0x00000001841E1670-0x00000001841E1680
-			public static unsafe ulong Invoke(byte* input, byte* dest, long length, byte* secret); // 0x000000018B163168-0x000000018B163218
+			private static void GetFunctionPointerDiscard(ref IntPtr param_000bb0e1); // 0x000000018D2AC664-0x000000018D2AC768
+			private static IntPtr GetFunctionPointer(); // 0x000000018D2AC768-0x000000018D2AC7BC
+			public static void Constructor(); // 0x000000018633C420-0x000000018633C4B0
+			public static void Initialize(); // 0x0000000186805BA0-0x0000000186805BB0
+			public static unsafe ulong Invoke(byte* input, byte* dest, long length, byte* secret); // 0x000000018D2AC7BC-0x000000018D2AC86C
 		}
 	
-		public unsafe delegate void Hash128Long_000008FE_PostfixBurstDelegate(byte* input, byte* dest, long length, byte* secret, out uint4 result); // TypeDefIndex: 60833; 0x00000001814DD080-0x00000001814DD0A0
+		public unsafe delegate void Hash128Long_000008FE_PostfixBurstDelegate(byte* input, byte* dest, long length, byte* secret, out uint4 result); // TypeDefIndex: 88184; 0x00000001812083C0-0x00000001812083E0
 	
-		internal static class Hash128Long_000008FE_BurstDirectCall // TypeDefIndex: 60834
+		internal static class Hash128Long_000008FE_BurstDirectCall // TypeDefIndex: 88185
 		{
 			// Fields
 			private static IntPtr Pointer; // 0x00
 			private static IntPtr DeferredCompilation; // 0x08
 	
 			// Constructors
-			static Hash128Long_000008FE_BurstDirectCall(); // 0x0000000183FAEA90-0x0000000183FAEAA0
+			static Hash128Long_000008FE_BurstDirectCall(); // 0x000000018633AD90-0x000000018633ADA0
 	
 			// Methods
 			[BurstDiscard]
-			private static void GetFunctionPointerDiscard(ref IntPtr param_000821f6); // 0x000000018B162D20-0x000000018B162E24
-			private static IntPtr GetFunctionPointer(); // 0x000000018B162E24-0x000000018B162E78
-			public static void Constructor(); // 0x0000000183FB0990-0x0000000183FB0A20
-			public static void Initialize(); // 0x00000001841E1670-0x00000001841E1680
-			public static unsafe void Invoke(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018B162E78-0x000000018B162F3C
+			private static void GetFunctionPointerDiscard(ref IntPtr param_000bb0ed); // 0x000000018D2AC388-0x000000018D2AC48C
+			private static IntPtr GetFunctionPointer(); // 0x000000018D2AC48C-0x000000018D2AC4E0
+			public static void Constructor(); // 0x000000018633C4B0-0x000000018633C540
+			public static void Initialize(); // 0x0000000186805BA0-0x0000000186805BB0
+			public static unsafe void Invoke(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018D2AC4E0-0x000000018D2AC5A4
 		}
 	
 		// Methods
-		internal static unsafe void Avx2HashLongInternalLoop(ulong* acc, byte* input, byte* dest, long length, byte* secret, int isHash64); // 0x0000000184D83230-0x0000000184D83240
-		internal static unsafe void Avx2ScrambleAcc(ulong* acc, byte* secret); // 0x0000000184D83230-0x0000000184D83240
-		internal static unsafe void Avx2Accumulate(ulong* acc, byte* input, byte* dest, byte* secret, long nbStripes, int isHash64); // 0x0000000184D83230-0x0000000184D83240
-		internal static unsafe void Avx2Accumulate512(ulong* acc, byte* input, byte* dest, byte* secret); // 0x0000000184D83230-0x0000000184D83240
-		public static unsafe uint2 Hash64(void* input, long length); // 0x0000000182F835D0-0x0000000182F838B0
-		public static unsafe uint4 Hash128(void* input, long length); // 0x000000018B1653CC-0x000000018B165470
-		internal static unsafe ulong Hash64Internal(byte* input, byte* dest, long length, byte* secret, ulong seed); // 0x0000000182F838B0-0x0000000182F83BD0
-		internal static unsafe void Hash128Internal(byte* input, byte* dest, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018B164B90-0x000000018B164CD8
-		private static unsafe ulong Hash64Len1To3(byte* input, long len, byte* secret, ulong seed); // 0x00000001840F2920-0x00000001840F2960
-		private static unsafe ulong Hash64Len4To8(byte* input, long length, byte* secret, ulong seed); // 0x0000000182F84BC0-0x0000000182F84C00
-		private static unsafe ulong Hash64Len9To16(byte* input, long length, byte* secret, ulong seed); // 0x0000000183F6B640-0x0000000183F6B6A0
-		private static unsafe ulong Hash64Len0To16(byte* input, long length, byte* secret, ulong seed); // 0x0000000182F84B10-0x0000000182F84BC0
-		private static unsafe ulong Hash64Len17To128(byte* input, long length, byte* secret, ulong seed); // 0x0000000182F84CB0-0x0000000182F84EF0
-		private static unsafe ulong Hash64Len129To240(byte* input, long length, byte* secret, ulong seed); // 0x000000018461E140-0x000000018461E220
+		internal static unsafe void Avx2HashLongInternalLoop(ulong* acc, byte* input, byte* dest, long length, byte* secret, int isHash64); // 0x000000018722B770-0x000000018722B780
+		internal static unsafe void Avx2ScrambleAcc(ulong* acc, byte* secret); // 0x000000018722B770-0x000000018722B780
+		internal static unsafe void Avx2Accumulate(ulong* acc, byte* input, byte* dest, byte* secret, long nbStripes, int isHash64); // 0x000000018722B770-0x000000018722B780
+		internal static unsafe void Avx2Accumulate512(ulong* acc, byte* input, byte* dest, byte* secret); // 0x000000018722B770-0x000000018722B780
+		public static unsafe uint2 Hash64(void* input, long length); // 0x000000018529A440-0x000000018529A730
+		public static unsafe uint4 Hash128(void* input, long length); // 0x000000018D2AE764-0x000000018D2AE810
+		internal static unsafe ulong Hash64Internal(byte* input, byte* dest, long length, byte* secret, ulong seed); // 0x000000018529A730-0x000000018529AA50
+		internal static unsafe void Hash128Internal(byte* input, byte* dest, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018D2ADF24-0x000000018D2AE078
+		private static unsafe ulong Hash64Len1To3(byte* input, long len, byte* secret, ulong seed); // 0x0000000185B42F70-0x0000000185B42FB0
+		private static unsafe ulong Hash64Len4To8(byte* input, long length, byte* secret, ulong seed); // 0x0000000185B42C90-0x0000000185B42CD0
+		private static unsafe ulong Hash64Len9To16(byte* input, long length, byte* secret, ulong seed); // 0x0000000185B42CD0-0x0000000185B42D30
+		private static unsafe ulong Hash64Len0To16(byte* input, long length, byte* secret, ulong seed); // 0x0000000185B42BE0-0x0000000185B42C90
+		private static unsafe ulong Hash64Len17To128(byte* input, long length, byte* secret, ulong seed); // 0x0000000185B42D30-0x0000000185B42F70
+		private static unsafe ulong Hash64Len129To240(byte* input, long length, byte* secret, ulong seed); // 0x0000000185B42B00-0x0000000185B42BE0
 		[BurstCompile]
-		private static unsafe ulong Hash64Long(byte* input, byte* dest, long length, byte* secret); // 0x000000018B165470-0x000000018B1654E4
-		private static unsafe void Hash128Len1To3(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018B165114-0x000000018B1651AC
-		private static unsafe void Hash128Len4To8(byte* input, long len, byte* secret, ulong seed, out uint4 result); // 0x000000018B1651AC-0x000000018B16525C
-		private static unsafe void Hash128Len9To16(byte* input, long len, byte* secret, ulong seed, out uint4 result); // 0x000000018B16525C-0x000000018B16534C
-		private static unsafe void Hash128Len0To16(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018B164CD8-0x000000018B164D7C
-		private static unsafe void Hash128Len17To128(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018B164F84-0x000000018B165114
-		private static unsafe void Hash128Len129To240(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018B164D7C-0x000000018B164F84
+		private static unsafe ulong Hash64Long(byte* input, byte* dest, long length, byte* secret); // 0x000000018D2AE810-0x000000018D2AE888
+		private static unsafe void Hash128Len1To3(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE4AC-0x000000018D2AE544
+		private static unsafe void Hash128Len4To8(byte* input, long len, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE544-0x000000018D2AE5F8
+		private static unsafe void Hash128Len9To16(byte* input, long len, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE5F8-0x000000018D2AE6EC
+		private static unsafe void Hash128Len0To16(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE078-0x000000018D2AE10C
+		private static unsafe void Hash128Len17To128(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE318-0x000000018D2AE4AC
+		private static unsafe void Hash128Len129To240(byte* input, long length, byte* secret, ulong seed, out uint4 result); // 0x000000018D2AE10C-0x000000018D2AE318
 		[BurstCompile]
-		private static unsafe void Hash128Long(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018B16534C-0x000000018B1653CC
-		internal static uint2 ToUint2(ulong u); // 0x0000000184DAB5F0-0x0000000184DAB610
-		internal static uint4 ToUint4(ulong ul0, ulong ul1); // 0x0000000184DAB610-0x0000000184DAB630
-		internal static unsafe void EncodeSecretKey(byte* dst, byte* secret, ulong seed); // 0x000000018B164B60-0x000000018B164B90
-		private static unsafe ulong Read64LE(void* addr); // 0x0000000182B76770-0x0000000182B76780
-		private static unsafe uint Read32LE(void* addr); // 0x0000000182B77620-0x0000000182B77630
-		private static unsafe void Write64LE(void* addr, ulong value); // 0x0000000184D88B60-0x0000000184D88B70
-		private static ulong Mul32To64(uint x, uint y); // 0x0000000184DA5160-0x0000000184DA5170
-		private static ulong Swap64(ulong x); // 0x0000000184DAB5E0-0x0000000184DAB5F0
-		private static uint Swap32(uint x); // 0x0000000184DA4CD0-0x0000000184DA4CE0
-		private static uint RotL32(uint x, int r); // 0x0000000184D882E0-0x0000000184D88300
-		private static ulong RotL64(ulong x, int r); // 0x0000000184DAB5C0-0x0000000184DAB5E0
-		private static ulong XorShift64(ulong v64, int shift); // 0x0000000184DAB630-0x0000000184DAB650
-		private static ulong Mul128Fold64(ulong lhs, ulong rhs); // 0x000000018B16563C-0x000000018B165660
-		private static unsafe ulong Mix16(byte* input, byte* secret, ulong seed); // 0x000000018B165570-0x000000018B165590
-		private static unsafe ulong2 Mix32(ulong2 acc, byte* input_1, byte* input_2, byte* secret, ulong seed); // 0x000000018B16559C-0x000000018B16563C
-		private static ulong Avalanche(ulong h64); // 0x0000000184DAB590-0x0000000184DAB5C0
-		private static ulong AvalancheH64(ulong h64); // 0x00000001840F2960-0x00000001840F29A0
-		private static ulong rrmxmx(ulong h64, ulong length); // 0x0000000184DAB650-0x0000000184DAB6B0
-		private static unsafe ulong Mix2Acc(ulong acc0, ulong acc1, byte* secret); // 0x000000018B165590-0x000000018B16559C
-		internal static unsafe ulong MergeAcc(ulong* acc, byte* secret, ulong start); // 0x000000018B1654E4-0x000000018B165570
-		private static unsafe void DefaultHashLongInternalLoop(ulong* acc, byte* input, byte* dest, long length, byte* secret, int isHash64); // 0x000000018B1649BC-0x000000018B164B30
-		internal static unsafe void DefaultAccumulate(ulong* acc, byte* input, byte* dest, byte* secret, long nbStripes, int isHash64); // 0x000000018B164918-0x000000018B1649BC
-		internal static unsafe void DefaultAccumulate512(ulong* acc, byte* input, byte* dest, byte* secret, int isHash64); // 0x000000018B164898-0x000000018B164918
-		internal static unsafe void DefaultScrambleAcc(ulong* acc, byte* secret); // 0x000000018B164B30-0x000000018B164B60
+		private static unsafe void Hash128Long(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018D2AE6EC-0x000000018D2AE764
+		internal static uint2 ToUint2(ulong u); // 0x0000000187259580-0x00000001872595A0
+		internal static uint4 ToUint4(ulong ul0, ulong ul1); // 0x00000001872595A0-0x00000001872595C0
+		internal static unsafe void EncodeSecretKey(byte* dst, byte* secret, ulong seed); // 0x000000018D2ADEF4-0x000000018D2ADF24
+		private static unsafe ulong Read64LE(void* addr); // 0x0000000184431970-0x0000000184431980
+		private static unsafe uint Read32LE(void* addr); // 0x00000001844AD290-0x00000001844AD2A0
+		private static unsafe void Write64LE(void* addr, ulong value); // 0x000000018561B5B0-0x000000018561B5C0
+		private static ulong Mul32To64(uint x, uint y); // 0x0000000187253020-0x0000000187253030
+		private static ulong Swap64(ulong x); // 0x0000000187259570-0x0000000187259580
+		private static uint Swap32(uint x); // 0x0000000187252C60-0x0000000187252C70
+		private static uint RotL32(uint x, int r); // 0x0000000187235270-0x0000000187235290
+		private static ulong RotL64(ulong x, int r); // 0x0000000187259550-0x0000000187259570
+		private static ulong XorShift64(ulong v64, int shift); // 0x00000001872595C0-0x00000001872595E0
+		private static ulong Mul128Fold64(ulong lhs, ulong rhs); // 0x000000018D2AE9E0-0x000000018D2AEA04
+		private static unsafe ulong Mix16(byte* input, byte* secret, ulong seed); // 0x000000018D2AE914-0x000000018D2AE934
+		private static unsafe ulong2 Mix32(ulong2 acc, byte* input_1, byte* input_2, byte* secret, ulong seed); // 0x000000018D2AE940-0x000000018D2AE9E0
+		private static ulong Avalanche(ulong h64); // 0x0000000187259520-0x0000000187259550
+		private static ulong AvalancheH64(ulong h64); // 0x0000000185B42FB0-0x0000000185B42FF0
+		private static ulong rrmxmx(ulong h64, ulong length); // 0x00000001872595E0-0x0000000187259640
+		private static unsafe ulong Mix2Acc(ulong acc0, ulong acc1, byte* secret); // 0x000000018D2AE934-0x000000018D2AE940
+		internal static unsafe ulong MergeAcc(ulong* acc, byte* secret, ulong start); // 0x000000018D2AE888-0x000000018D2AE914
+		private static unsafe void DefaultHashLongInternalLoop(ulong* acc, byte* input, byte* dest, long length, byte* secret, int isHash64); // 0x000000018D2ADD38-0x000000018D2ADEC4
+		internal static unsafe void DefaultAccumulate(ulong* acc, byte* input, byte* dest, byte* secret, long nbStripes, int isHash64); // 0x000000018D2ADC94-0x000000018D2ADD38
+		internal static unsafe void DefaultAccumulate512(ulong* acc, byte* input, byte* dest, byte* secret, int isHash64); // 0x000000018D2ADC14-0x000000018D2ADC94
+		internal static unsafe void DefaultScrambleAcc(ulong* acc, byte* secret); // 0x000000018D2ADEC4-0x000000018D2ADEF4
 		[BurstCompile]
-		public static unsafe ulong Hash64Long_BurstManaged(byte* input, byte* dest, long length, byte* secret); // 0x000000018B15FA9C-0x000000018B15FC48
+		public static unsafe ulong Hash64Long_BurstManaged(byte* input, byte* dest, long length, byte* secret); // 0x000000018D2A9194-0x000000018D2A9344
 		[BurstCompile]
-		public static unsafe void Hash128Long_BurstManaged(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018B15F960-0x000000018B15FA9C
+		public static unsafe void Hash128Long_BurstManaged(byte* input, byte* dest, long length, byte* secret, out uint4 result); // 0x000000018D2A9054-0x000000018D2A9194
 	}
 
-	internal static class xxHashDefaultKey // TypeDefIndex: 60836
+	internal static class xxHashDefaultKey // TypeDefIndex: 88187
 	{
 		// Fields
 		public static readonly byte[] kSecret; // 0x00
 	
 		// Constructors
-		static xxHashDefaultKey(); // 0x0000000184D164D0-0x0000000184D16560
+		static xxHashDefaultKey(); // 0x00000001871762B0-0x0000000187176340
 	}
 }
 
 namespace Unity.Collections.LowLevel.Unsafe
 {
 	[BurstCompatible]
-	public static class NativeListUnsafeUtility // TypeDefIndex: 60838
+	public static class NativeListUnsafeUtility // TypeDefIndex: 88189
 	{
 		// Methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
@@ -2642,7 +2664,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	}
 
 	[BurstCompatible]
-	public static class NativeReferenceUnsafeUtility // TypeDefIndex: 60839
+	public static class NativeReferenceUnsafeUtility // TypeDefIndex: 88190
 	{
 		// Extension methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
@@ -2654,7 +2676,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	}
 
 	[BurstCompatible]
-	public struct UnsafeAppendBuffer : INativeDisposable // TypeDefIndex: 60840
+	public struct UnsafeAppendBuffer : INativeDisposable // TypeDefIndex: 88191
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2665,11 +2687,11 @@ namespace Unity.Collections.LowLevel.Unsafe
 		public readonly int Alignment; // 0x14
 	
 		// Methods
-		public void Dispose(); // 0x000000018B164634-0x000000018B1646B8
+		public void Dispose(); // 0x000000018D2ADB20-0x000000018D2ADBA8
 	}
 
 	[BurstCompile]
-	internal struct UnsafeDisposeJob : IJob // TypeDefIndex: 60841
+	internal struct UnsafeDisposeJob : IJob // TypeDefIndex: 88192
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2677,10 +2699,10 @@ namespace Unity.Collections.LowLevel.Unsafe
 		public AllocatorManager.AllocatorHandle Allocator; // 0x08
 	
 		// Methods
-		public void Execute(); // 0x000000018B1646B8-0x000000018B16470C
+		public void Execute(); // 0x000000018D2ADBA8-0x000000018D2ADBFC
 	}
 
-	internal struct UntypedUnsafeList // TypeDefIndex: 60842
+	internal struct UntypedUnsafeList // TypeDefIndex: 88193
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2695,7 +2717,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerDisplay("Length = {Length}, Capacity = {Capacity}, IsCreated = {IsCreated}, IsEmpty = {IsEmpty}")]
 	[DebuggerTypeProxy(typeof(UnsafeListTDebugView<T>))]
-	public struct UnsafeList<T> : INativeDisposable, INativeList<T>, IEnumerable<T> // TypeDefIndex: 60845
+	public struct UnsafeList<T> : INativeDisposable, INativeList<T>, IEnumerable<T> // TypeDefIndex: 88196
 		where T : struct
 	{
 		// Fields
@@ -2717,7 +2739,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	
 		// Nested types
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-		public struct ParallelReader // TypeDefIndex: 60843
+		public struct ParallelReader // TypeDefIndex: 88194
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2729,7 +2751,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 		}
 	
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
-		public struct ParallelWriter // TypeDefIndex: 60844
+		public struct ParallelWriter // TypeDefIndex: 88195
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2744,22 +2766,22 @@ namespace Unity.Collections.LowLevel.Unsafe
 		}
 	
 		// Constructors
-		public unsafe UnsafeList(int initialCapacity, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x0234EDC8 */);
+		public unsafe UnsafeList(int initialCapacity, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x02647F53 */);
 	
 		// Methods
 		public ref ref T ElementAt(int index);
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(AllocatorManager.AllocatorHandle) })]
-		internal static unsafe UnsafeList<T>* Create<U>(int initialCapacity, ref ref U allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x0234EDC9 */)
+		internal static unsafe UnsafeList<T>* Create<U>(int initialCapacity, ref ref U allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x02647F54 */)
 			where U : struct, AllocatorManager.IAllocator;
-		public static unsafe UnsafeList<T>* Create(int initialCapacity, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x0234EDCA */);
+		public static unsafe UnsafeList<T>* Create(int initialCapacity, AllocatorManager.AllocatorHandle allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x02647F55 */);
 		public static unsafe void Destroy(UnsafeList<T>* listData);
 		public void Dispose();
 		[NotBurstCompatible]
 		public JobHandle Dispose(JobHandle inputDeps);
 		[NotBurstCompatible]
-		public JobHandle CrossFrameDispose(JobHandle inputDeps, JobQueuePriority priority = JobQueuePriority.NormalJobPriority /* Metadata: 0x0234EDCB */);
+		public JobHandle CrossFrameDispose(JobHandle inputDeps, JobQueuePriority priority = JobQueuePriority.NormalJobPriority /* Metadata: 0x02647F56 */);
 		public void Clear();
-		public void Resize(int length, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x0234EDCC */);
+		public void Resize(int length, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x02647F57 */);
 		private void Realloc<U>(ref ref U allocator, int newCapacity)
 			where U : struct, AllocatorManager.IAllocator;
 		private void SetCapacity<U>(ref ref U allocator, int capacity)
@@ -2779,13 +2801,13 @@ namespace Unity.Collections.LowLevel.Unsafe
 		IEnumerator<T> IEnumerable<T>.GetEnumerator();
 	}
 
-	internal sealed class UnsafeListTDebugView<T> // TypeDefIndex: 60846
+	internal sealed class UnsafeListTDebugView<T> // TypeDefIndex: 88197
 		where T : struct
 	{
 	}
 
 	[BurstCompatible]
-	internal struct UnsafeParallelHashMapData // TypeDefIndex: 60848
+	internal struct UnsafeParallelHashMapData // TypeDefIndex: 88199
 	{
 		// Fields
 		internal unsafe byte* values; // 0x00
@@ -2796,20 +2818,20 @@ namespace Unity.Collections.LowLevel.Unsafe
 		internal int bucketCapacityMask; // 0x24
 		internal int allocatedIndexLength; // 0x28
 		internal unsafe fixed /* 0x00000000-0x00000000 */ int firstFreeTLS[0]; // 0x40
-		internal const int IntsPerCacheLine = 16; // Metadata: 0x0234EDCD
+		internal const int IntsPerCacheLine = 16; // Metadata: 0x02647F58
 	
 		// Nested types
 		[CompilerGenerated]
 		[UnsafeValueType]
-		public struct _firstFreeTLS_e__FixedBuffer // TypeDefIndex: 60847
+		public struct _firstFreeTLS_e__FixedBuffer // TypeDefIndex: 88198
 		{
 			// Fields
 			public int FixedElementField; // 0x00
 		}
 	
 		// Methods
-		internal static int GetBucketSize(int capacity); // 0x0000000184DAB580-0x0000000184DAB590
-		internal static int GrowCapacity(int capacity); // 0x000000018352EE60-0x000000018352EE70
+		internal static int GetBucketSize(int capacity); // 0x00000001872594A0-0x00000001872594B0
+		internal static int GrowCapacity(int capacity); // 0x00000001857FABE0-0x00000001857FABF0
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 		internal static unsafe void AllocateHashMap<TKey, TValue>(int length, int bucketLength, AllocatorManager.AllocatorHandle label, out UnsafeParallelHashMapData* outBuf)
 			where TKey : struct
@@ -2818,14 +2840,14 @@ namespace Unity.Collections.LowLevel.Unsafe
 		internal static unsafe void ReallocateHashMap<TKey, TValue>(UnsafeParallelHashMapData* data, int newCapacity, int newBucketCapacity, AllocatorManager.AllocatorHandle label)
 			where TKey : struct
 			where TValue : struct;
-		internal static unsafe void DeallocateHashMap(UnsafeParallelHashMapData* data, AllocatorManager.AllocatorHandle allocator); // 0x00000001837F6580-0x00000001837F65D0
+		internal static unsafe void DeallocateHashMap(UnsafeParallelHashMapData* data, AllocatorManager.AllocatorHandle allocator); // 0x0000000185935990-0x00000001859359E0
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 		internal static int CalculateDataSize<TKey, TValue>(int length, int bucketLength, out int keyOffset, out int nextOffset, out int bucketOffset)
 			where TKey : struct
 			where TValue : struct;
-		internal static unsafe bool IsEmpty(UnsafeParallelHashMapData* data); // 0x000000018394D400-0x000000018394D450
-		internal static unsafe int GetCount(UnsafeParallelHashMapData* data); // 0x0000000183A09AA0-0x0000000183A09B10
-		internal static unsafe bool MoveNext(UnsafeParallelHashMapData* data, ref int bucketIndex, ref int nextIndex, out int index); // 0x00000001834ACF90-0x00000001834AD040
+		internal static unsafe bool IsEmpty(UnsafeParallelHashMapData* data); // 0x0000000185ABBB40-0x0000000185ABBC20
+		internal static unsafe int GetCount(UnsafeParallelHashMapData* data); // 0x0000000185C1EB90-0x0000000185C1EC40
+		internal static unsafe bool MoveNext(UnsafeParallelHashMapData* data, ref int bucketIndex, ref int nextIndex, out int index); // 0x0000000185848290-0x0000000185848460
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		internal static unsafe void GetKeyArray<TKey>(UnsafeParallelHashMapData* data, NativeArray<TKey> result)
 			where TKey : struct;
@@ -2836,7 +2858,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 
 	[BurstCompatible]
 	[NativeContainer]
-	internal struct UnsafeParallelHashMapDataDispose // TypeDefIndex: 60849
+	internal struct UnsafeParallelHashMapDataDispose // TypeDefIndex: 88200
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2844,21 +2866,21 @@ namespace Unity.Collections.LowLevel.Unsafe
 		internal AllocatorManager.AllocatorHandle m_AllocatorLabel; // 0x08
 	
 		// Methods
-		public void Dispose(); // 0x000000018B164714-0x000000018B164724
+		public void Dispose(); // 0x000000018D2ADC04-0x000000018D2ADC14
 	}
 
 	[BurstCompile]
-	internal struct UnsafeParallelHashMapDataDisposeJob : IJob // TypeDefIndex: 60850
+	internal struct UnsafeParallelHashMapDataDisposeJob : IJob // TypeDefIndex: 88201
 	{
 		// Fields
 		internal UnsafeParallelHashMapDataDispose Data; // 0x00
 	
 		// Methods
-		public void Execute(); // 0x000000018B16470C-0x000000018B164714
+		public void Execute(); // 0x000000018D2ADBFC-0x000000018D2ADC04
 	}
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
-	internal struct UnsafeParallelHashMapBase<TKey, TValue> // TypeDefIndex: 60851
+	internal struct UnsafeParallelHashMapBase<TKey, TValue> // TypeDefIndex: 88202
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -2878,7 +2900,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 	[DebuggerDisplay("Key = {Key}, Value = {Value}")]
-	public struct KeyValue<TKey, TValue> // TypeDefIndex: 60852
+	public struct KeyValue<TKey, TValue> // TypeDefIndex: 88203
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -2892,7 +2914,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 		public ref TValue Value { get; }
 	}
 
-	internal struct UnsafeParallelHashMapDataEnumerator // TypeDefIndex: 60853
+	internal struct UnsafeParallelHashMapDataEnumerator // TypeDefIndex: 88204
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2902,11 +2924,11 @@ namespace Unity.Collections.LowLevel.Unsafe
 		internal int m_NextIndex; // 0x10
 	
 		// Constructors
-		internal unsafe UnsafeParallelHashMapDataEnumerator(UnsafeParallelHashMapData* data); // 0x0000000184DAB560-0x0000000184DAB580
+		internal unsafe UnsafeParallelHashMapDataEnumerator(UnsafeParallelHashMapData* data); // 0x0000000187259480-0x00000001872594A0
 	
 		// Methods
-		internal bool MoveNext(); // 0x0000000183824360-0x0000000183824390
-		internal void Reset(); // 0x0000000184D95D70-0x0000000184D95D90
+		internal bool MoveNext(); // 0x0000000185B570C0-0x0000000185B570F0
+		internal void Reset(); // 0x0000000187243FD0-0x0000000187243FF0
 		internal KeyValue<TKey, TValue> GetCurrent<TKey, TValue>()
 			where TKey : struct, IEquatable<TKey>
 			where TValue : struct;
@@ -2917,7 +2939,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 	[DebuggerDisplay("Count = {Count()}, Capacity = {Capacity}, IsCreated = {IsCreated}, IsEmpty = {IsEmpty}")]
 	[DebuggerTypeProxy(typeof(UnsafeParallelHashMapDebuggerTypeProxy<TKey, TValue>))]
-	public struct UnsafeParallelHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 60855
+	public struct UnsafeParallelHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 88206
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -2935,7 +2957,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 		// Nested types
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60854
+		public struct ParallelWriter // TypeDefIndex: 88205
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -2969,7 +2991,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	}
 
 	[BurstCompile]
-	internal struct UnsafeParallelHashMapDisposeJob : IJob // TypeDefIndex: 60856
+	internal struct UnsafeParallelHashMapDisposeJob : IJob // TypeDefIndex: 88207
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
@@ -2977,10 +2999,10 @@ namespace Unity.Collections.LowLevel.Unsafe
 		public AllocatorManager.AllocatorHandle Allocator; // 0x08
 	
 		// Methods
-		public void Execute(); // 0x000000018B164714-0x000000018B164724
+		public void Execute(); // 0x000000018D2ADC04-0x000000018D2ADC14
 	}
 
-	internal sealed class UnsafeParallelHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 60857
+	internal sealed class UnsafeParallelHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 88208
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -2988,14 +3010,14 @@ namespace Unity.Collections.LowLevel.Unsafe
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 	[DebuggerTypeProxy(typeof(UnsafeHashSetDebuggerTypeProxy<T>))]
-	public struct UnsafeParallelHashSet<T> : INativeDisposable, IEnumerable<T> // TypeDefIndex: 60859
+	public struct UnsafeParallelHashSet<T> : INativeDisposable, IEnumerable<T> // TypeDefIndex: 88210
 		where T : struct, IEquatable<T>
 	{
 		// Fields
 		internal UnsafeParallelHashMap<T, bool> m_Data;
 	
 		// Nested types
-		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 60858
+		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 88209
 		{
 			// Fields
 			internal UnsafeParallelHashMapDataEnumerator m_Enumerator;
@@ -3024,12 +3046,12 @@ namespace Unity.Collections.LowLevel.Unsafe
 		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	internal sealed class UnsafeHashSetDebuggerTypeProxy<T> // TypeDefIndex: 60860
+	internal sealed class UnsafeHashSetDebuggerTypeProxy<T> // TypeDefIndex: 88211
 		where T : struct, IEquatable<T>
 	{
 	}
 
-	public static class HashSetExtensions // TypeDefIndex: 60861
+	public static class HashSetExtensions // TypeDefIndex: 88212
 	{
 		// Extension methods
 		public static void UnionWith<T>(this UnsafeParallelHashSet<T> container, UnsafeParallelHashSet<T> other)
@@ -3038,7 +3060,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 
 	[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 	[DebuggerTypeProxy(typeof(UnsafeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue>))]
-	public struct UnsafeParallelMultiHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 60863
+	public struct UnsafeParallelMultiHashMap<TKey, TValue> : INativeDisposable, IEnumerable<KeyValue<TKey, TValue>> // TypeDefIndex: 88214
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -3055,7 +3077,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 		// Nested types
 		[BurstCompatible(GenericTypeArguments = new System.Type[2] {typeof(int), typeof(int) })]
 		[NativeContainerIsAtomicWriteOnly]
-		public struct ParallelWriter // TypeDefIndex: 60862
+		public struct ParallelWriter // TypeDefIndex: 88213
 		{
 			// Fields
 			[NativeDisableUnsafePtrRestriction]
@@ -3087,14 +3109,14 @@ namespace Unity.Collections.LowLevel.Unsafe
 		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	internal sealed class UnsafeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 60864
+	internal sealed class UnsafeParallelMultiHashMapDebuggerTypeProxy<TKey, TValue> // TypeDefIndex: 88215
 		where TKey : struct, IEquatable<TKey>, IComparable<TKey>
 		where TValue : struct
 	{
 	}
 
 	[BurstCompatible]
-	internal struct UnsafeStreamBlock // TypeDefIndex: 60866
+	internal struct UnsafeStreamBlock // TypeDefIndex: 88217
 	{
 		// Fields
 		internal unsafe UnsafeStreamBlock* Next; // 0x00
@@ -3103,7 +3125,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 		// Nested types
 		[CompilerGenerated]
 		[UnsafeValueType]
-		public struct _Data_e__FixedBuffer // TypeDefIndex: 60865
+		public struct _Data_e__FixedBuffer // TypeDefIndex: 88216
 		{
 			// Fields
 			public byte FixedElementField; // 0x00
@@ -3111,7 +3133,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	}
 
 	[BurstCompatible]
-	internal struct UnsafeStreamRange // TypeDefIndex: 60867
+	internal struct UnsafeStreamRange // TypeDefIndex: 88218
 	{
 		// Fields
 		internal unsafe UnsafeStreamBlock* Block; // 0x00
@@ -3122,7 +3144,7 @@ namespace Unity.Collections.LowLevel.Unsafe
 	}
 
 	[BurstCompatible]
-	internal struct UnsafeStreamBlockData // TypeDefIndex: 60868
+	internal struct UnsafeStreamBlockData // TypeDefIndex: 88219
 	{
 		// Fields
 		internal AllocatorManager.AllocatorHandle Allocator; // 0x00
@@ -3131,29 +3153,35 @@ namespace Unity.Collections.LowLevel.Unsafe
 		internal unsafe UnsafeStreamBlock* Free; // 0x18
 		internal unsafe UnsafeStreamRange* Ranges; // 0x20
 		internal int RangeCount; // 0x28
+	
+		// Methods
+		internal unsafe UnsafeStreamBlock* Allocate(UnsafeStreamBlock* oldBlock, int threadIndex); // 0x0000000185DEB0D0-0x0000000185DEB140
 	}
 
 	[BurstCompatible]
-	public struct UnsafeStream : INativeDisposable // TypeDefIndex: 60872
+	public struct UnsafeStream : INativeDisposable // TypeDefIndex: 88225
 	{
 		// Fields
 		[NativeDisableUnsafePtrRestriction]
 		internal unsafe UnsafeStreamBlockData* m_Block; // 0x00
 		internal AllocatorManager.AllocatorHandle m_Allocator; // 0x08
 	
+		// Properties
+		public bool IsCreated { get; } // 0x00000001853AE700-0x00000001853AE710 
+	
 		// Nested types
 		[BurstCompile]
-		private struct DisposeJob : IJob // TypeDefIndex: 60869
+		private struct DisposeJob : IJob // TypeDefIndex: 88220
 		{
 			// Fields
 			public UnsafeStream Container; // 0x00
 	
 			// Methods
-			public void Execute(); // 0x000000018B160058-0x000000018B160060
+			public void Execute(); // 0x000000018D2A9744-0x000000018D2A974C
 		}
 	
 		[BurstCompile]
-		private struct ConstructJobList : IJob // TypeDefIndex: 60870
+		private struct ConstructJobList : IJob // TypeDefIndex: 88221
 		{
 			// Fields
 			public UnsafeStream Container; // 0x00
@@ -3162,11 +3190,11 @@ namespace Unity.Collections.LowLevel.Unsafe
 			public unsafe UntypedUnsafeList* List; // 0x10
 	
 			// Methods
-			public void Execute(); // 0x000000018B160024-0x000000018B160048
+			public void Execute(); // 0x000000018D2A9710-0x000000018D2A9734
 		}
 	
 		[BurstCompile]
-		private struct ConstructJob : IJob // TypeDefIndex: 60871
+		private struct ConstructJob : IJob // TypeDefIndex: 88222
 		{
 			// Fields
 			public UnsafeStream Container; // 0x00
@@ -3174,17 +3202,75 @@ namespace Unity.Collections.LowLevel.Unsafe
 			public NativeArray<int> Length; // 0x10
 	
 			// Methods
-			public void Execute(); // 0x000000018B160048-0x000000018B160058
+			public void Execute(); // 0x000000018D2A9734-0x000000018D2A9744
+		}
+	
+		[BurstCompatible]
+		public struct Writer // TypeDefIndex: 88223
+		{
+			// Fields
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe UnsafeStreamBlockData* m_BlockStream; // 0x00
+			[NativeDisableUnsafePtrRestriction]
+			private unsafe UnsafeStreamBlock* m_CurrentBlock; // 0x08
+			[NativeDisableUnsafePtrRestriction]
+			private unsafe byte* m_CurrentPtr; // 0x10
+			[NativeDisableUnsafePtrRestriction]
+			private unsafe byte* m_CurrentBlockEnd; // 0x18
+			internal int m_ForeachIndex; // 0x20
+			private int m_ElementCount; // 0x24
+			[NativeDisableUnsafePtrRestriction]
+			private unsafe UnsafeStreamBlock* m_FirstBlock; // 0x28
+			private int m_FirstOffset; // 0x30
+			private int m_NumberOfBlocks; // 0x34
+			[NativeSetThreadIndex]
+			private int m_ThreadIndex; // 0x38
+	
+			// Constructors
+			internal unsafe Writer(ref UnsafeStream stream); // 0x00000001872594F0-0x0000000187259520
+	
+			// Methods
+			public void BeginForEachIndex(int foreachIndex); // 0x00000001872594D0-0x00000001872594F0
+			public void EndForEachIndex(); // 0x0000000185C69E20-0x0000000185C69F20
+			public unsafe byte* Allocate(int size); // 0x0000000185DEAFF0-0x0000000185DEB0D0
+		}
+	
+		[BurstCompatible]
+		public struct Reader // TypeDefIndex: 88224
+		{
+			// Fields
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe UnsafeStreamBlockData* m_BlockStream; // 0x00
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe UnsafeStreamBlock* m_CurrentBlock; // 0x08
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe byte* m_CurrentPtr; // 0x10
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe byte* m_CurrentBlockEnd; // 0x18
+			internal int m_RemainingItemCount; // 0x20
+			internal int m_LastBlockSize; // 0x24
+	
+			// Constructors
+			internal unsafe Reader(ref UnsafeStream stream); // 0x0000000187259440-0x0000000187259460
+	
+			// Methods
+			public int BeginForEachIndex(int foreachIndex); // 0x0000000186079790-0x0000000186079860
+			public void EndForEachIndex(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Methods
-		internal void AllocateForEach(int forEachCount); // 0x000000018B164724-0x000000018B1647A4
-		private void Deallocate(); // 0x000000018B1647A4-0x000000018B164898
-		public void Dispose(); // 0x000000018B160058-0x000000018B160060
+		internal static void AllocateBlock(out UnsafeStream stream, AllocatorManager.AllocatorHandle allocator); // 0x00000001851678F0-0x0000000185167980
+		internal void AllocateForEach(int forEachCount); // 0x0000000185167860-0x00000001851678F0
+		public Reader AsReader(); // 0x00000001872594B0-0x00000001872594D0
+		public Writer AsWriter(); // 0x0000000185FF0770-0x0000000185FF07A0
+		private void Deallocate(); // 0x0000000185A76220-0x0000000185A76500
+		public void Dispose(); // 0x000000018D2A9744-0x000000018D2A974C
+		[NotBurstCompatible]
+		public JobHandle Dispose(JobHandle inputDeps); // 0x0000000186077460-0x0000000186077560
 	}
 
 	[BurstCompatible]
-	public static class UnsafeUtilityExtensions // TypeDefIndex: 60873
+	public static class UnsafeUtilityExtensions // TypeDefIndex: 88226
 	{
 		// Methods
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
@@ -3193,13 +3279,13 @@ namespace Unity.Collections.LowLevel.Unsafe
 		[BurstCompatible(GenericTypeArguments = new System.Type[1] {typeof(int) })]
 		public static ref ref T AsRef<T>([IsReadOnly] in ref T value)
 			where T : struct;
-		public static IntPtr Malloc(long size, int alignment, Unity.Collections.Allocator allocator); // 0x0000000183116130-0x0000000183116140
+		public static IntPtr Malloc(long size, int alignment, Unity.Collections.Allocator allocator); // 0x00000001869A6780-0x00000001869A6790
 	}
 }
 
 namespace Unity.Collections.NotBurstCompatible
 {
-	public static class Extensions // TypeDefIndex: 60837
+	public static class Extensions // TypeDefIndex: 88188
 	{
 		// Extension methods
 		[NotBurstCompatible]
@@ -3210,30 +3296,30 @@ namespace Unity.Collections.NotBurstCompatible
 
 namespace Unity.Jobs
 {
-	public class EarlyInitHelpers // TypeDefIndex: 60690
+	public class EarlyInitHelpers // TypeDefIndex: 88039
 	{
 		// Methods
-		public static void JobReflectionDataCreationFailed(Exception ex, System.Type jobType); // 0x000000018B160060-0x000000018B1600D8
+		public static void JobReflectionDataCreationFailed(Exception ex, System.Type jobType); // 0x000000018D2A974C-0x000000018D2A97C4
 	}
 
 	[JobProducerType(typeof(IJobBurstSchedulableExtensions.JobBurstSchedulableProducer<T>))]
-	public interface IJobBurstSchedulable // TypeDefIndex: 60691
+	public interface IJobBurstSchedulable // TypeDefIndex: 88040
 	{
 		// Methods
 		void Execute();
 	}
 
-	public static class IJobBurstSchedulableExtensions // TypeDefIndex: 60694
+	public static class IJobBurstSchedulableExtensions // TypeDefIndex: 88043
 	{
 		// Nested types
-		internal struct JobBurstSchedulableProducer<T> // TypeDefIndex: 60693
+		internal struct JobBurstSchedulableProducer<T> // TypeDefIndex: 88042
 			where T : struct, IJobBurstSchedulable
 		{
 			// Fields
 			internal static readonly SharedStatic<IntPtr> jobReflectionData;
 	
 			// Nested types
-			internal delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 60692; 0x00000000-0x00000000
+			internal delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 88041; 0x00000000-0x00000000
 	
 			// Constructors
 			static JobBurstSchedulableProducer();
@@ -3246,23 +3332,23 @@ namespace Unity.Jobs
 	}
 
 	[JobProducerType(typeof(IJobParallelForBatchExtensions.JobParallelForBatchProducer<T>))]
-	public interface IJobParallelForBatch // TypeDefIndex: 60695
+	public interface IJobParallelForBatch // TypeDefIndex: 88044
 	{
 		// Methods
 		void Execute(int startIndex, int count);
 	}
 
-	public static class IJobParallelForBatchExtensions // TypeDefIndex: 60698
+	public static class IJobParallelForBatchExtensions // TypeDefIndex: 88047
 	{
 		// Nested types
-		internal struct JobParallelForBatchProducer<T> // TypeDefIndex: 60697
+		internal struct JobParallelForBatchProducer<T> // TypeDefIndex: 88046
 			where T : struct, IJobParallelForBatch
 		{
 			// Fields
 			internal static readonly SharedStatic<IntPtr> jobReflectionData;
 	
 			// Nested types
-			internal delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 60696; 0x00000000-0x00000000
+			internal delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 88045; 0x00000000-0x00000000
 	
 			// Constructors
 			static JobParallelForBatchProducer();
@@ -3283,23 +3369,23 @@ namespace Unity.Jobs
 	}
 
 	[JobProducerType(typeof(IJobParallelForExtensionsBurstSchedulable.JobParallelForBurstSchedulableProducer<T>))]
-	public interface IJobParallelForBurstSchedulable // TypeDefIndex: 60699
+	public interface IJobParallelForBurstSchedulable // TypeDefIndex: 88048
 	{
 		// Methods
 		void Execute(int index);
 	}
 
-	public static class IJobParallelForExtensionsBurstSchedulable // TypeDefIndex: 60702
+	public static class IJobParallelForExtensionsBurstSchedulable // TypeDefIndex: 88051
 	{
 		// Nested types
-		internal struct JobParallelForBurstSchedulableProducer<T> // TypeDefIndex: 60701
+		internal struct JobParallelForBurstSchedulableProducer<T> // TypeDefIndex: 88050
 			where T : struct, IJobParallelForBurstSchedulable
 		{
 			// Fields
 			internal static readonly SharedStatic<IntPtr> jobReflectionData;
 	
 			// Nested types
-			internal delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 60700; 0x00000000-0x00000000
+			internal delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 88049; 0x00000000-0x00000000
 	
 			// Constructors
 			static JobParallelForBurstSchedulableProducer();
@@ -3312,23 +3398,23 @@ namespace Unity.Jobs
 	}
 
 	[JobProducerType(typeof(IJobParallelForDeferExtensions.JobParallelForDeferProducer<T>))]
-	public interface IJobParallelForDefer // TypeDefIndex: 60703
+	public interface IJobParallelForDefer // TypeDefIndex: 88052
 	{
 		// Methods
 		void Execute(int index);
 	}
 
-	public static class IJobParallelForDeferExtensions // TypeDefIndex: 60706
+	public static class IJobParallelForDeferExtensions // TypeDefIndex: 88055
 	{
 		// Nested types
-		internal struct JobParallelForDeferProducer<T> // TypeDefIndex: 60705
+		internal struct JobParallelForDeferProducer<T> // TypeDefIndex: 88054
 			where T : struct, IJobParallelForDefer
 		{
 			// Fields
 			internal static readonly SharedStatic<IntPtr> jobReflectionData;
 	
 			// Nested types
-			public delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 60704; 0x00000000-0x00000000
+			public delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 88053; 0x00000000-0x00000000
 	
 			// Constructors
 			static JobParallelForDeferProducer();
@@ -3356,23 +3442,23 @@ namespace Unity.Jobs
 	}
 
 	[JobProducerType(typeof(JobParallelIndexListExtensions.JobParallelForFilterProducer<T>))]
-	public interface IJobParallelForFilter // TypeDefIndex: 60707
+	public interface IJobParallelForFilter // TypeDefIndex: 88056
 	{
 		// Methods
 		bool Execute(int index);
 	}
 
-	public static class JobParallelIndexListExtensions // TypeDefIndex: 60711
+	public static class JobParallelIndexListExtensions // TypeDefIndex: 88060
 	{
 		// Nested types
-		internal struct JobParallelForFilterProducer<T> // TypeDefIndex: 60710
+		internal struct JobParallelForFilterProducer<T> // TypeDefIndex: 88059
 			where T : struct, IJobParallelForFilter
 		{
 			// Fields
 			internal static readonly SharedStatic<IntPtr> jobReflectionData;
 	
 			// Nested types
-			public struct JobWrapper // TypeDefIndex: 60708
+			public struct JobWrapper // TypeDefIndex: 88057
 			{
 				// Fields
 				[NativeDisableParallelForRestriction]
@@ -3381,7 +3467,7 @@ namespace Unity.Jobs
 				public T JobData;
 			}
 	
-			public delegate void ExecuteJobFunction(ref JobWrapper<T> jobWrapper, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 60709; 0x00000000-0x00000000
+			public delegate void ExecuteJobFunction(ref JobWrapper<T> jobWrapper, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 88058; 0x00000000-0x00000000
 	
 			// Constructors
 			static JobParallelForFilterProducer();
@@ -3396,9 +3482,9 @@ namespace Unity.Jobs
 	}
 
 	[AttributeUsage(AttributeTargets.Class)]
-	internal class DOTSCompilerGeneratedAttribute : Attribute // TypeDefIndex: 60712
+	internal class DOTSCompilerGeneratedAttribute : Attribute // TypeDefIndex: 88061
 	{
 		// Constructors
-		public DOTSCompilerGeneratedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public DOTSCompilerGeneratedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }

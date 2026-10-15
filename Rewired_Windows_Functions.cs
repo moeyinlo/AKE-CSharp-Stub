@@ -6,16 +6,13 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 165: Rewired_Windows_Functions.dll - Assembly: Rewired_Windows_Functions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63974-63975
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 167: Rewired_Windows_Functions.dll - Assembly: Rewired_Windows_Functions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91465-91466
 
 namespace Rewired.Internal.Windows
 {
-	public static class Functions // TypeDefIndex: 63975
+	public static class Functions // TypeDefIndex: 91466
 	{
 		// Methods
-		public static void ForwardRawInput(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // 0x0000000184031C00-0x0000000184031C40
+		public static void ForwardRawInput(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // 0x00000001861A0510-0x00000001861A05A0
 	}
 }

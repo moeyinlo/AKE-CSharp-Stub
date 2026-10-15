@@ -9,16 +9,14 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using AOT;
 using UnityEngine;
 
-// Image 72: HGSDKInterfaces.dll - Assembly: HGSDKInterfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62270-62303
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 71: HGSDKInterfaces.dll - Assembly: HGSDKInterfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 89562-89595
 
-public enum CSLogSeverity // TypeDefIndex: 62271
+public enum CSLogSeverity // TypeDefIndex: 89563
 {
 	LogSilent = 0,
 	LogError = 1,
@@ -28,14 +26,14 @@ public enum CSLogSeverity // TypeDefIndex: 62271
 	LogVerbose = 5
 }
 
-public enum CSReportType // TypeDefIndex: 62272
+public enum CSReportType // TypeDefIndex: 89564
 {
 	InterfaceReport = 0,
 	LogCallback = 1,
 	LogCallbackThreaded = 2
 }
 
-public enum JankReportInfoOption // TypeDefIndex: 62273
+public enum JankReportInfoOption // TypeDefIndex: 89565
 {
 	JankOnlyBasicInfo = 0,
 	JankSystemLog = 1,
@@ -46,179 +44,187 @@ public enum JankReportInfoOption // TypeDefIndex: 62273
 	JankAndroidAllJavaStack = 32
 }
 
-public sealed class CrashSightAgent // TypeDefIndex: 62278
+public sealed class CrashSightAgent // TypeDefIndex: 89570
 {
 	// Fields
 	private static HGCrashSightCallback _crashSightCallback; // 0x00
 	private static HGCrashSightLogCallback _crashSightLogCallback; // 0x08
 	private static string crashUploadUrl; // 0x10
-	public static List<int> callbackThreads; // 0x18
-	public static object callbackThreadsLock; // 0x20
+	private const int MaxCustomAttachPathCount = 3; // Metadata: 0x026494AF
+	private static readonly List<string> _customAttachPaths; // 0x18
+	public static List<int> callbackThreads; // 0x20
+	public static object callbackThreadsLock; // 0x28
 	[CompilerGenerated]
-	private static LogCallbackDelegate _LogCallbackEventHandler; // 0x28
-	private static LogFilterDelegate s_logFilter; // 0x30
-	private static bool _isInitialized; // 0x38
-	private static UnityEngine.LogType _autoReportLogLevel; // 0x3C
-	private static bool _debugMode; // 0x40
-	private static bool _autoQuitApplicationAfterReport; // 0x41
-	private static Func<Dictionary<string, string>> _LogCallbackExtrasHandler; // 0x48
-	private static bool _uncaughtAutoReportOnce; // 0x50
-	public static readonly string s_UnityBuildVersion; // 0x58
-	public static readonly string s_CommandLine; // 0x60
-	public static readonly string s_UserName; // 0x68
-	public static readonly string s_UserDomainName; // 0x70
-	public static readonly string s_DeviceModel; // 0x78
-	public static readonly string s_DeviceName; // 0x80
-	public static readonly string s_DeviceUniqueIdentifier; // 0x88
-	public static readonly string s_DeviceType; // 0x90
-	public static readonly string s_GraphicsDeviceName; // 0x98
-	public static readonly string s_GraphicsDeviceType; // 0xA0
-	public static readonly string s_GraphicsDeviceVersion; // 0xA8
-	public static readonly string s_GraphicsDeviceVendor; // 0xB0
-	public static readonly int s_GraphicsMemorySize; // 0xB8
-	public static readonly string s_NvidiaDriverVersion; // 0xC0
-	public static readonly string[] s_BootParams; // 0xC8
-	public static string[] s_vmas; // 0xD0
+	private static LogCallbackDelegate _LogCallbackEventHandler; // 0x30
+	private static LogFilterDelegate s_logFilter; // 0x38
+	private static bool _isInitialized; // 0x40
+	private static UnityEngine.LogType _autoReportLogLevel; // 0x44
+	private static bool _debugMode; // 0x48
+	private static bool _autoQuitApplicationAfterReport; // 0x49
+	private static Func<Dictionary<string, string>> _LogCallbackExtrasHandler; // 0x50
+	private static bool _uncaughtAutoReportOnce; // 0x58
+	private static readonly string[] s_skipFramePatterns; // 0x60
+	private static readonly Regex s_exceptionMessageRegex; // 0x68
+	private static readonly Regex s_unhandledExceptionRegex; // 0x70
+	public static readonly string s_UnityBuildVersion; // 0x78
+	public static readonly string s_CommandLine; // 0x80
+	public static readonly string s_UserName; // 0x88
+	public static readonly string s_UserDomainName; // 0x90
+	public static readonly string s_DeviceModel; // 0x98
+	public static readonly string s_DeviceName; // 0xA0
+	public static readonly string s_DeviceUniqueIdentifier; // 0xA8
+	public static readonly string s_DeviceType; // 0xB0
+	public static readonly string s_GraphicsDeviceName; // 0xB8
+	public static readonly string s_GraphicsDeviceType; // 0xC0
+	public static readonly string s_GraphicsDeviceVersion; // 0xC8
+	public static readonly string s_GraphicsDeviceVendor; // 0xD0
+	public static readonly int s_GraphicsMemorySize; // 0xD8
+	public static readonly string s_NvidiaDriverVersion; // 0xE0
+	public static readonly string s_hgShaderFeatureProfile; // 0xE8
+	public static readonly string[] s_BootParams; // 0xF0
+	public static string[] s_vmas; // 0xF8
 
 	// Properties
-	public static bool AutoQuitApplicationAfterReport { get; } // 0x0000000189D2B4B0-0x0000000189D2B500 
-	public static bool IsInitialized { get; } // 0x0000000189D2B500-0x0000000189D2B534 
+	public static bool AutoQuitApplicationAfterReport { get; } // 0x000000018C171780-0x000000018C1717D0 
+	public static bool IsInitialized { get; } // 0x000000018C1717D0-0x000000018C171804 
 
 	// Events
 	private static event LogCallbackDelegate _LogCallbackEventHandler {
-		add; // 0x0000000189D2B2B8-0x0000000189D2B38C
-		remove; // 0x0000000189D2B534-0x0000000189D2B608
+		add; // 0x000000018C171588-0x000000018C17165C
+		remove; // 0x000000018C171804-0x000000018C1718D8
 	}
 
 	// Nested types
-	private class HGCrashSightCallback : CrashSightCallback // TypeDefIndex: 62274
+	private class HGCrashSightCallback : CrashSightCallback // TypeDefIndex: 89566
 	{
 		// Constructors
-		public HGCrashSightCallback(); // 0x0000000184D7C2B0-0x0000000184D7C2F0
+		public HGCrashSightCallback(); // 0x0000000186A76580-0x0000000186A765C0
 
 		// Methods
-		public override string OnCrashBaseRetEvent(int methodId, int crashType); // 0x000000018321CB90-0x000000018321CC50
+		public override string OnCrashBaseRetEvent(int methodId, int crashType); // 0x00000001869F8910-0x00000001869FA570
 	}
 
-	private class HGCrashSightLogCallback : CrashSightLogCallback // TypeDefIndex: 62275
+	private class HGCrashSightLogCallback : CrashSightLogCallback // TypeDefIndex: 89567
 	{
 		// Constructors
-		public HGCrashSightLogCallback(); // 0x0000000184D7C270-0x0000000184D7C2B0
+		public HGCrashSightLogCallback(); // 0x0000000186A765C0-0x0000000186A76600
 
 		// Methods
-		public override string OnSetLogPathEvent(int methodId, int crashType); // 0x0000000189D2CCD0-0x0000000189D2CD80
-		public override void OnLogUploadResultEvent(int methodId, int crashType, int result); // 0x0000000189D2CB70-0x0000000189D2CCD0
+		public override string OnSetLogPathEvent(int methodId, int crashType); // 0x000000018C172F9C-0x000000018C173020
+		public override void OnLogUploadResultEvent(int methodId, int crashType, int result); // 0x000000018C172E3C-0x000000018C172F9C
 	}
 
-	public delegate void LogCallbackDelegate(string condition, string stackTrace, UnityEngine.LogType type); // TypeDefIndex: 62276; 0x0000000181546280-0x00000001815462A0
+	public delegate void LogCallbackDelegate(string condition, string stackTrace, UnityEngine.LogType type); // TypeDefIndex: 89568; 0x00000001811DF7F0-0x00000001811DF810
 
-	public delegate bool LogFilterDelegate(string condition, string stackTrace, UnityEngine.LogType type); // TypeDefIndex: 62277; 0x00000001814F3120-0x00000001814F3140
+	public delegate bool LogFilterDelegate(string condition, string stackTrace, UnityEngine.LogType type); // TypeDefIndex: 89569; 0x00000001811DF7F0-0x00000001811DF810
 
 	// Constructors
-	public CrashSightAgent(); // 0x00000001841E1670-0x00000001841E1680
-	static CrashSightAgent(); // 0x00000001841A7870-0x00000001841A7E60
+	public CrashSightAgent(); // 0x0000000186805BA0-0x0000000186805BB0
+	static CrashSightAgent(); // 0x0000000186A76680-0x0000000186A79890
 
 	// Methods
-	public static void SetLogFilter(LogFilterDelegate filter); // 0x0000000189D2A0C8-0x0000000189D2A128
-	public static void InitWithAppId(string appId, bool forceOnUiThread = false /* Metadata: 0x02350B65 */); // 0x0000000183B11DF0-0x0000000183B11F70
-	public static void ReportException(Exception e, string message); // 0x0000000189D29968-0x0000000189D29AC4
-	public static void ReportException(string name, string message, string stackTrace); // 0x0000000189D2974C-0x0000000189D298B4
-	public static void ReportException(int type, string exceptionName, string exceptionMsg, string exceptionStack, Dictionary<string, string> extInfo, int dumpNativeType = 0 /* Metadata: 0x02350B66 */, string errorAttachmentPath = "" /* Metadata: 0x02350B67 */); // 0x0000000189D298B4-0x0000000189D29968
-	public static void SetUserId(string userId); // 0x0000000183A86070-0x0000000183A86150
-	public static void AddSceneData(string key, string value); // 0x000000018321F280-0x000000018321F3D0
-	public static void SetUserValue(string key, int value); // 0x00000001843A7E70-0x00000001843A7F20
-	public static void SetUserValue(string key, string value); // 0x000000018321F110-0x000000018321F170
-	public static void SetUserValue(string key, string[] value); // 0x0000000183B5BFD0-0x0000000183B5C090
-	public static void SetAppVersion(string appVersion); // 0x0000000184A223E0-0x0000000184A22490
-	public static void ConfigCrashServerUrl(string crashServerUrl); // 0x0000000184B0E060-0x0000000184B0E110
-	public static void SetLogPath(string logPath); // 0x0000000189D2A128-0x0000000189D2A174
-	public static void ConfigDebugMode(bool enable); // 0x0000000184A064E0-0x0000000184A065D0
-	public static void SetDeviceId(string deviceId); // 0x0000000189D29D88-0x0000000189D29DD4
-	public static void ConfigCrashReporter(int logLevel); // 0x0000000189D28C18-0x0000000189D28C60
-	public static void ConfigCrashReporter(CSLogSeverity logLevel); // 0x0000000189D28BD0-0x0000000189D28C18
-	public static void PrintLog(CSLogSeverity level, string format, params object[] args); // 0x0000000183608920-0x0000000183608980
-	public static void TestNativeCrash(); // 0x0000000189D2A6D0-0x0000000189D2A754
-	public static void SetEnvironmentName(string serverEnv); // 0x0000000189D29E68-0x0000000189D29EB4
-	public static void EnableAnrMonitor(int timeoutMs = 5000 /* Metadata: 0x02350B68 */); // 0x0000000189D28E3C-0x0000000189D28E84
-	public static void DisableAnrMonitor(); // 0x0000000189D28DFC-0x0000000189D28E3C
-	public static void RegisterCrashCallback(CrashSightCallback callback); // 0x0000000183B11C50-0x0000000183B11D10
-	public static void UnregisterCrashCallback(); // 0x0000000189D2A8E0-0x0000000189D2A920
-	public static void RegisterCrashLogCallback(CrashSightLogCallback callback); // 0x0000000183B11B40-0x0000000183B11C50
-	public static void EnableExceptionHandler(); // 0x0000000189D28E84-0x0000000189D28F14
-	public static void RegisterLogCallback(LogCallbackDelegate handler); // 0x0000000189D295CC-0x0000000189D2965C
-	public static void UnregisterLogCallback(LogCallbackDelegate handler); // 0x0000000189D2A920-0x0000000189D2A984
-	public static void SetLogCallbackExtrasHandler(Func<Dictionary<string, string>> handler); // 0x0000000189D2A010-0x0000000189D2A0C8
-	public static void ConfigAutoQuitApplication(bool autoQuit); // 0x0000000189D28B34-0x0000000189D28B88
-	public static void DebugLog(string tag, string format); // 0x000000018321F230-0x000000018321F280
-	public static void _RegisterExceptionHandler(); // 0x0000000183B0D1D0-0x0000000183B0D490
-	public static void _UnregisterExceptionHandler(); // 0x0000000189D2B0E8-0x0000000189D2B2B8
-	public static void SetCrashSightStackTraceEnable(bool enable); // 0x00000001841E1670-0x00000001841E1680
-	public static void ConfigCallbackType(int callbackType); // 0x0000000189D28B88-0x0000000189D28BD0
-	public static void SetDeviceModel(string deviceModel); // 0x0000000189D29DD4-0x0000000189D29E20
-	public static void ReportLogInfo(string msgType, string msg); // 0x0000000189D29B58-0x0000000189D29BB4
-	public static void SetScene(string sceneId, bool upload = false /* Metadata: 0x02350B6A */); // 0x0000000189D2A280-0x0000000189D2A378
-	public static void SetScene(int sceneId, bool upload = false /* Metadata: 0x02350B6B */); // 0x0000000189D2A378-0x0000000189D2A3D8
-	public static long GetCrashThreadId(); // 0x0000000189D28F14-0x0000000189D28FA0
-	public static void SetCustomizedDeviceID(string deviceId); // 0x0000000189D29CF0-0x0000000189D29D3C
-	public static string GetSDKDefinedDeviceID(); // 0x0000000189D2907C-0x0000000189D290BC
-	public static void SetCustomizedMatchID(string matchId); // 0x0000000189D29D3C-0x0000000189D29D88
-	public static string GetSDKSessionID(); // 0x0000000189D290BC-0x0000000189D290FC
-	public static void TestOomCrash(); // 0x0000000189D2A7D8-0x0000000189D2A85C
-	public static void TestJavaCrash(); // 0x0000000189D2A64C-0x0000000189D2A6D0
-	public static void TestANR(); // 0x0000000189D2A5C8-0x0000000189D2A64C
-	public static string GetCrashUuid(); // 0x0000000189D28FA0-0x0000000189D28FE0
-	public static void SetLogcatBufferSize(int size); // 0x0000000189D2A174-0x0000000189D2A1BC
-	public static void TestOcCrash(); // 0x0000000189D2A754-0x0000000189D2A7D8
-	public static void StartDumpRoutine(int dumpMode, int startTimeMode, long startTime, long dumpInterval, int dumpTimes, bool saveLocal, string savePath); // 0x0000000189D2A498-0x0000000189D2A548
-	public static void StartMonitorFdCount(int interval, int limit, int dumpType); // 0x0000000189D2A548-0x0000000189D2A5C8
-	public static int getExceptionType(string name); // 0x0000000189D2B444-0x0000000189D2B4B0
-	public static void TestUseAfterFree(); // 0x0000000189D2A85C-0x0000000189D2A8E0
-	public static void ReRegistAllMonitors(); // 0x0000000189D2954C-0x0000000189D295CC
-	public static void CloseAllMonitors(); // 0x0000000189D28AC8-0x0000000189D28B34
-	public static void setEnableGetPackageInfo(bool enable); // 0x0000000189D2B6C0-0x0000000189D2B778
-	public static void setCatchMultiSignal(bool enable); // 0x0000000189D2B608-0x0000000189D2B6C0
-	public static void enableDetailedPageTracing(bool enable); // 0x0000000189D2B38C-0x0000000189D2B444
-	public static bool IsLastSessionCrash(); // 0x0000000189D294C4-0x0000000189D2954C
-	public static string GetLastSessionUserId(); // 0x0000000189D28FE0-0x0000000189D2907C
-	public static bool CheckFdCount(int limit, int dumpType, bool upload); // 0x0000000189D28A44-0x0000000189D28AC8
-	public static void SetOomLogPath(string logPath); // 0x0000000189D2A1BC-0x0000000189D2A208
-	public static void ReportJank(int type, string exceptionName, string exceptionMsg, string exceptionStack, string paramsJson, int reportInfoOption, string jankAttachmentPath); // 0x0000000189D29AC4-0x0000000189D29B58
-	public static void ReportStuck(int threadId, int maxChecks, long checkInterval, string name, string message, Dictionary<string, string> extInfo, int dumpNativeType, string attachPath); // 0x0000000189D29BB4-0x0000000189D29C58
-	public static void SetVehEnable(bool enable); // 0x0000000189D2A3D8-0x0000000189D2A44C
-	public static void ReportCrash(); // 0x0000000189D2965C-0x0000000189D296C8
-	public static void ReportDump(string dump_path, bool is_async); // 0x0000000189D296C8-0x0000000189D2974C
-	public static void SetExtraHandler(bool extra_handle_enable); // 0x0000000189D29F9C-0x0000000189D2A010
-	public static void UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x0000000189D2A9D0-0x0000000189D2AA54
-	public static void SetDumpType(int dump_type); // 0x0000000189D29E20-0x0000000189D29E68
-	public static void AddValidExpCode(ulong exp_code); // 0x0000000189D289F8-0x0000000189D28A44
-	public static void UploadCrashWithGuid(string guid); // 0x0000000189D2A984-0x0000000189D2A9D0
-	public static void SetCrashUploadEnable(bool enable); // 0x0000000189D29C58-0x0000000189D29CA4
-	public static void SetWorkSpace(string workspace); // 0x0000000189D2A44C-0x0000000189D2A498
-	public static void SetCustomAttachDir(string path); // 0x0000000189D29CA4-0x0000000189D29CF0
-	public static void SetErrorUploadInterval(int interval); // 0x0000000189D29F28-0x0000000189D29F9C
-	public static void SetErrorUploadEnable(bool enable); // 0x0000000189D29EB4-0x0000000189D29F28
-	public static void SetRecordFileDir(string record_dir); // 0x0000000189D2A208-0x0000000189D2A280
+	public static void SetLogFilter(LogFilterDelegate filter); // 0x000000018C170360-0x000000018C1703C0
+	public static void InitWithAppId(string appId, bool forceOnUiThread = false /* Metadata: 0x026494A8 */); // 0x0000000186ACFC30-0x0000000186AD28E0
+	public static void ReportException(Exception e, string message); // 0x000000018C16FC48-0x000000018C16FDA4
+	public static void ReportException(string name, string message, string stackTrace); // 0x000000018C16FA20-0x000000018C16FB90
+	public static void ReportException(int type, string exceptionName, string exceptionMsg, string exceptionStack, Dictionary<string, string> extInfo, int dumpNativeType = 0 /* Metadata: 0x026494A9 */, string errorAttachmentPath = "" /* Metadata: 0x026494AA */); // 0x000000018C16FB90-0x000000018C16FC48
+	public static void SetUserId(string userId); // 0x00000001850CDBB0-0x00000001850CDC90
+	public static void AddSceneData(string key, string value); // 0x00000001854BE7E0-0x00000001854BE950
+	public static void SetUserValue(string key, int value); // 0x0000000186A25530-0x0000000186A255E0
+	public static void SetUserValue(string key, string value); // 0x00000001854BE780-0x00000001854BE7E0
+	public static void SetUserValue(string key, string[] value); // 0x0000000185EB9890-0x0000000185EB9950
+	public static void SetAppVersion(string appVersion); // 0x0000000186EB75D0-0x0000000186EB7680
+	public static void ConfigCrashServerUrl(string crashServerUrl); // 0x0000000186F8B470-0x0000000186F8B520
+	public static void SetLogPath(string logPath); // 0x000000018C1703C0-0x000000018C17040C
+	public static void ConfigDebugMode(bool enable); // 0x000000018709E7F0-0x000000018709E8E0
+	public static void SetDeviceId(string deviceId); // 0x000000018C170020-0x000000018C17006C
+	public static void ConfigCrashReporter(int logLevel); // 0x000000018C16EEE8-0x000000018C16EF30
+	public static void ConfigCrashReporter(CSLogSeverity logLevel); // 0x000000018C16EEA0-0x000000018C16EEE8
+	public static void PrintLog(CSLogSeverity level, string format, params object[] args); // 0x00000001854C1DE0-0x00000001854C1E40
+	public static void TestNativeCrash(); // 0x000000018C170970-0x000000018C1709F4
+	public static void SetEnvironmentName(string serverEnv); // 0x000000018C170100-0x000000018C17014C
+	public static void EnableAnrMonitor(int timeoutMs = 5000 /* Metadata: 0x026494AB */); // 0x000000018C16F110-0x000000018C16F158
+	public static void DisableAnrMonitor(); // 0x000000018C16F0D0-0x000000018C16F110
+	public static void RegisterCrashCallback(CrashSightCallback callback); // 0x0000000186ACF680-0x0000000186ACF740
+	public static void UnregisterCrashCallback(); // 0x000000018C170B80-0x000000018C170BC0
+	public static void RegisterCrashLogCallback(CrashSightLogCallback callback); // 0x0000000186ACF740-0x0000000186ACF850
+	public static void EnableExceptionHandler(); // 0x000000018C16F158-0x000000018C16F1E8
+	public static void RegisterLogCallback(LogCallbackDelegate handler); // 0x000000018C16F8A0-0x000000018C16F930
+	public static void UnregisterLogCallback(LogCallbackDelegate handler); // 0x000000018C170BC0-0x000000018C170C24
+	public static void SetLogCallbackExtrasHandler(Func<Dictionary<string, string>> handler); // 0x000000018C1702A8-0x000000018C170360
+	public static void ConfigAutoQuitApplication(bool autoQuit); // 0x000000018C16EE04-0x000000018C16EE58
+	public static void DebugLog(string tag, string format); // 0x00000001854BE950-0x00000001854BE9A0
+	public static void _RegisterExceptionHandler(); // 0x0000000185B82E60-0x0000000185B83120
+	public static void _UnregisterExceptionHandler(); // 0x000000018C1713B8-0x000000018C171588
+	public static void SetCrashSightStackTraceEnable(bool enable); // 0x0000000186805BA0-0x0000000186805BB0
+	public static void ConfigCallbackType(int callbackType); // 0x000000018C16EE58-0x000000018C16EEA0
+	public static void SetDeviceModel(string deviceModel); // 0x000000018C17006C-0x000000018C1700B8
+	public static void ReportLogInfo(string msgType, string msg); // 0x000000018C16FE1C-0x000000018C16FE78
+	public static void SetScene(string sceneId, bool upload = false /* Metadata: 0x026494AD */); // 0x000000018C170518-0x000000018C170614
+	public static void SetScene(int sceneId, bool upload = false /* Metadata: 0x026494AE */); // 0x000000018C170614-0x000000018C170674
+	public static long GetCrashThreadId(); // 0x000000018C16F1E8-0x000000018C16F274
+	public static void SetCustomizedDeviceID(string deviceId); // 0x000000018C16FF88-0x000000018C16FFD4
+	public static string GetSDKDefinedDeviceID(); // 0x000000018C16F350-0x000000018C16F390
+	public static void SetCustomizedMatchID(string matchId); // 0x000000018C16FFD4-0x000000018C170020
+	public static string GetSDKSessionID(); // 0x000000018C16F390-0x000000018C16F3D0
+	public static void TestOomCrash(); // 0x000000018C170A78-0x000000018C170AFC
+	public static void TestJavaCrash(); // 0x000000018C1708EC-0x000000018C170970
+	public static void TestANR(); // 0x000000018C170868-0x000000018C1708EC
+	public static string GetCrashUuid(); // 0x000000018C16F274-0x000000018C16F2B4
+	public static void SetLogcatBufferSize(int size); // 0x000000018C17040C-0x000000018C170454
+	public static void TestOcCrash(); // 0x000000018C1709F4-0x000000018C170A78
+	public static void StartDumpRoutine(int dumpMode, int startTimeMode, long startTime, long dumpInterval, int dumpTimes, bool saveLocal, string savePath); // 0x000000018C170734-0x000000018C1707E8
+	public static void StartMonitorFdCount(int interval, int limit, int dumpType); // 0x000000018C1707E8-0x000000018C170868
+	public static int getExceptionType(string name); // 0x000000018C171714-0x000000018C171780
+	public static void TestUseAfterFree(); // 0x000000018C170AFC-0x000000018C170B80
+	public static void ReRegistAllMonitors(); // 0x000000018C16F820-0x000000018C16F8A0
+	public static void CloseAllMonitors(); // 0x000000018C16ED98-0x000000018C16EE04
+	public static void setEnableGetPackageInfo(bool enable); // 0x000000018C171990-0x000000018C171A48
+	public static void setCatchMultiSignal(bool enable); // 0x000000018C1718D8-0x000000018C171990
+	public static void enableDetailedPageTracing(bool enable); // 0x000000018C17165C-0x000000018C171714
+	public static bool IsLastSessionCrash(); // 0x000000018C16F798-0x000000018C16F820
+	public static string GetLastSessionUserId(); // 0x000000018C16F2B4-0x000000018C16F350
+	public static bool CheckFdCount(int limit, int dumpType, bool upload); // 0x000000018C16ED14-0x000000018C16ED98
+	public static void SetOomLogPath(string logPath); // 0x000000018C170454-0x000000018C1704A0
+	public static void ReportJank(int type, string exceptionName, string exceptionMsg, string exceptionStack, string paramsJson, int reportInfoOption, string jankAttachmentPath); // 0x000000018C16FDA4-0x000000018C16FE1C
+	public static void ReportStuck(int threadId, int maxChecks, long checkInterval, string name, string message, Dictionary<string, string> extInfo, int dumpNativeType, string attachPath); // 0x000000018C16FE78-0x000000018C16FEF0
+	public static void SetVehEnable(bool enable); // 0x000000018C170674-0x000000018C1706E8
+	public static void ReportCrash(); // 0x000000018C16F930-0x000000018C16F99C
+	public static void ReportDump(string dump_path, bool is_async); // 0x000000018C16F99C-0x000000018C16FA20
+	public static void SetExtraHandler(bool extra_handle_enable); // 0x000000018C170234-0x000000018C1702A8
+	public static void UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x000000018C170C70-0x000000018C170CF4
+	public static void SetDumpType(int dump_type); // 0x000000018C1700B8-0x000000018C170100
+	public static void AddValidExpCode(ulong exp_code); // 0x000000018C16ECC8-0x000000018C16ED14
+	public static void UploadCrashWithGuid(string guid); // 0x000000018C170C24-0x000000018C170C70
+	public static void SetCrashUploadEnable(bool enable); // 0x000000018C16FEF0-0x000000018C16FF3C
+	public static void SetWorkSpace(string workspace); // 0x000000018C1706E8-0x000000018C170734
+	public static void SetCustomAttachDir(string path); // 0x000000018C16FF3C-0x000000018C16FF88
+	public static void SetErrorUploadInterval(int interval); // 0x000000018C1701C0-0x000000018C170234
+	public static void SetErrorUploadEnable(bool enable); // 0x000000018C17014C-0x000000018C1701C0
+	public static void SetRecordFileDir(string record_dir); // 0x000000018C1704A0-0x000000018C170518
 	[Obsolete("\u8BE5\u63A5\u53E3\u5DF2\u5E9F\u5F03\uFF0C\u8BF7\u4F7F\u7528 InitWithAppId \u8FDB\u884C\u521D\u59CB\u5316")]
-	public static void InitContext(string userId, string version, string key); // 0x0000000189D290FC-0x0000000189D292DC
+	public static void InitContext(string userId, string version, string key); // 0x000000018C16F3D0-0x000000018C16F5B0
 	[Obsolete("\u8BE5\u63A5\u53E3\u5DF2\u5E9F\u5F03\uFF0C\u8BF7\u4F7F\u7528 InitWithAppId \u8FDB\u884C\u521D\u59CB\u5316")]
-	public static void Init(string app_id, string app_key, string app_version); // 0x0000000189D292DC-0x0000000189D294C4
+	public static void Init(string app_id, string app_key, string app_version); // 0x000000018C16F5B0-0x000000018C16F798
 	[Obsolete("\u8BE5\u63A5\u53E3\u5DF2\u5E9F\u5F03")]
-	public static void ConfigDefault(string channel, string version, string user, long delay); // 0x0000000189D28C60-0x0000000189D28DFC
-	private static void _OnLogCallbackHandlerMain(string condition, string stackTrace, UnityEngine.LogType type); // 0x000000018321F3F0-0x000000018321F450
-	private static void _OnLogCallbackHandlerThreaded(string condition, string stackTrace, UnityEngine.LogType type); // 0x000000018321F450-0x000000018321F4B0
-	private static void _OnLogCallbackHandler(string condition, string stackTrace, UnityEngine.LogType type, CSReportType rType); // 0x000000018321F4B0-0x000000018321F7B0
-	private static void _OnUncaughtExceptionHandler(object sender, UnhandledExceptionEventArgs args); // 0x0000000189D2AF2C-0x0000000189D2B0E8
-	private static void _HandleException(Exception e, string message, bool uncaught); // 0x0000000189D2AA54-0x0000000189D2AF2C
-	private static bool ShouldSkipFrame(string frame); // 0x0000000182F0CE30-0x0000000182F0D270
-	private static void _reportException(bool uncaught, string name, string reason, string stackTrace); // 0x0000000182F0E3C0-0x0000000182F0F8B0
-	private static void AddTrackCustomData(); // 0x000000018321EDC0-0x000000018321F110
-	private static void AddLocalLogFile(); // 0x00000001841E1670-0x00000001841E1680
-	private static int valueOf(UnityEngine.LogType logLevel); // 0x000000018321FBA0-0x000000018321FBF0
-	private static bool isEnableAutoReport(UnityEngine.LogType logLevel); // 0x000000018321FAD0-0x000000018321FBA0
-	private static void _HandleException(UnityEngine.LogType logLevel, string name, string message, string stackTrace, bool uncaught, CSReportType rType); // 0x000000018321F7B0-0x000000018321FAD0
+	public static void ConfigDefault(string channel, string version, string user, long delay); // 0x000000018C16EF30-0x000000018C16F0D0
+	private static void _OnLogCallbackHandlerMain(string condition, string stackTrace, UnityEngine.LogType type); // 0x00000001854BCD80-0x00000001854BCDE0
+	private static void _OnLogCallbackHandlerThreaded(string condition, string stackTrace, UnityEngine.LogType type); // 0x00000001854BCDE0-0x00000001854BCE40
+	private static void _OnLogCallbackHandler(string condition, string stackTrace, UnityEngine.LogType type, CSReportType rType); // 0x00000001854BD080-0x00000001854BD2F0
+	private static void _OnUncaughtExceptionHandler(object sender, UnhandledExceptionEventArgs args); // 0x000000018C1711FC-0x000000018C1713B8
+	private static void _HandleException(Exception e, string message, bool uncaught); // 0x000000018C170CF4-0x000000018C1711FC
+	private static bool ShouldSkipFrame(string frame); // 0x0000000185F1DF30-0x0000000185F1E060
+	private static void _reportException(bool uncaught, string name, string reason, string stackTrace); // 0x00000001852FA290-0x00000001852FD5A0
+	private static void InitCustomAttachPaths(); // 0x000000018490F1F0-0x00000001849105C0
+	private static void AddVmaAllocationFailureInfo(); // 0x000000018490E4F0-0x000000018490F1F0
+	private static void AddGpuMemorySupplementInfo(); // 0x000000018490C5F0-0x000000018490E4F0
+	private static void AddTrackCustomData(); // 0x00000001854BE3F0-0x00000001854BE780
+	private static int valueOf(UnityEngine.LogType logLevel); // 0x00000001854BD030-0x00000001854BD080
+	private static bool isEnableAutoReport(UnityEngine.LogType logLevel); // 0x00000001854BCFD0-0x00000001854BD030
+	private static void _HandleException(UnityEngine.LogType logLevel, string name, string message, string stackTrace, bool uncaught, CSReportType rType); // 0x00000001854BD2F0-0x00000001854BE3F0
 }
 
-public class CrashSightAnrMonitor // TypeDefIndex: 62281
+public class CrashSightAnrMonitor // TypeDefIndex: 89573
 {
 	// Fields
 	private static CrashSightMonoBehaviour monoBehaviour; // 0x00
@@ -232,12 +238,12 @@ public class CrashSightAnrMonitor // TypeDefIndex: 62281
 	private static Thread thread; // 0x20
 
 	// Properties
-	protected static bool Paused { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000189D2C088-0x0000000189D2C0D8 0x0000000189D2C0D8-0x0000000189D2C12C
+	protected static bool Paused { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018C172360-0x000000018C1723B0 0x000000018C1723B0-0x000000018C172404
 
 	// Nested types
 	[Serializable]
 	[CompilerGenerated]
-	private sealed class __c // TypeDefIndex: 62279
+	private sealed class __c // TypeDefIndex: 89571
 	{
 		// Fields
 		public static readonly __c __9; // 0x00
@@ -246,17 +252,17 @@ public class CrashSightAnrMonitor // TypeDefIndex: 62281
 		public static Action __9__11_2; // 0x18
 
 		// Constructors
-		static __c(); // 0x0000000189D2E9D8-0x0000000189D2EA3C
-		public __c(); // 0x00000001841E1670-0x00000001841E1680
+		static __c(); // 0x000000018C174D80-0x000000018C174DE4
+		public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void _Start_b__11_0(); // 0x0000000189D2E918-0x0000000189D2E958
-		internal void _Start_b__11_1(); // 0x0000000189D2E958-0x0000000189D2E998
-		internal void _Start_b__11_2(); // 0x0000000189D2E998-0x0000000189D2E9D8
+		internal void _Start_b__11_0(); // 0x000000018C174CC0-0x000000018C174D00
+		internal void _Start_b__11_1(); // 0x000000018C174D00-0x000000018C174D40
+		internal void _Start_b__11_2(); // 0x000000018C174D40-0x000000018C174D80
 	}
 
 	[CompilerGenerated]
-	private sealed class _UpdateUiStatus_d__13 : IEnumerator<object> // TypeDefIndex: 62280
+	private sealed class _UpdateUiStatus_d__13 : IEnumerator<object> // TypeDefIndex: 89572
 	{
 		// Fields
 		private int __1__state; // 0x10
@@ -264,77 +270,77 @@ public class CrashSightAnrMonitor // TypeDefIndex: 62281
 		private WaitForSecondsRealtime _waitForSeconds_5__2; // 0x20
 
 		// Properties
-		object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-		object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+		object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+		object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 
 		// Constructors
 		[DebuggerHidden]
-		public _UpdateUiStatus_d__13(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+		public _UpdateUiStatus_d__13(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 
 		// Methods
 		[DebuggerHidden]
-		void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-		private bool MoveNext(); // 0x0000000189D2EA3C-0x0000000189D2EB98
+		void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+		private bool MoveNext(); // 0x000000018C174DE4-0x000000018C174F4C
 		[DebuggerHidden]
-		void IEnumerator.Reset(); // 0x0000000189D2EB98-0x0000000189D2EBE4
+		void IEnumerator.Reset(); // 0x000000018C174F4C-0x000000018C174F98
 	}
 
 	// Constructors
-	public CrashSightAnrMonitor(); // 0x00000001841E1670-0x00000001841E1680
-	static CrashSightAnrMonitor(); // 0x0000000189D2BFCC-0x0000000189D2C088
+	public CrashSightAnrMonitor(); // 0x0000000186805BA0-0x0000000186805BB0
+	static CrashSightAnrMonitor(); // 0x000000018C1722A0-0x000000018C172360
 
 	// Methods
-	public static void Start(int timeoutMs = 5000 /* Metadata: 0x02350B6C */); // 0x0000000189D2BAA0-0x0000000189D2BF38
-	public static void Stop(); // 0x0000000189D2BF38-0x0000000189D2BF88
+	public static void Start(int timeoutMs = 5000 /* Metadata: 0x026494B0 */); // 0x000000018C171D74-0x000000018C17220C
+	public static void Stop(); // 0x000000018C17220C-0x000000018C17225C
 	[IteratorStateMachine(typeof(_UpdateUiStatus_d__13))]
-	private static IEnumerator UpdateUiStatus(); // 0x0000000189D2BF88-0x0000000189D2BFCC
-	private static void Run(); // 0x0000000189D2B844-0x0000000189D2BAA0
-	private static void Report(); // 0x0000000189D2B778-0x0000000189D2B844
+	private static IEnumerator UpdateUiStatus(); // 0x000000018C17225C-0x000000018C1722A0
+	private static void Run(); // 0x000000018C171B14-0x000000018C171D74
+	private static void Report(); // 0x000000018C171A48-0x000000018C171B14
 }
 
-public class UnityAnrException : Exception // TypeDefIndex: 62282
+public class UnityAnrException : Exception // TypeDefIndex: 89574
 {
 	// Constructors
-	internal UnityAnrException(); // 0x0000000189D366AC-0x0000000189D366F8
-	internal UnityAnrException(string message); // 0x0000000189D36650-0x0000000189D366AC
-	internal UnityAnrException(string message, Exception innerException); // 0x0000000189D366F8-0x0000000189D367A8
+	internal UnityAnrException(); // 0x000000018C17CB34-0x000000018C17CB80
+	internal UnityAnrException(string message); // 0x000000018C17CAD8-0x000000018C17CB34
+	internal UnityAnrException(string message, Exception innerException); // 0x000000018C17CB80-0x000000018C17CC30
 }
 
-public abstract class CrashSightCallback // TypeDefIndex: 62283
+public abstract class CrashSightCallback // TypeDefIndex: 89575
 {
 	// Fields
 	private static bool isQuitting; // 0x00
 	private static object quitLocker; // 0x08
 
 	// Constructors
-	static CrashSightCallback(); // 0x00000001833295B0-0x0000000183329690
-	protected CrashSightCallback(); // 0x00000001841E1670-0x00000001841E1680
+	static CrashSightCallback(); // 0x0000000185BC0700-0x0000000185BC07E0
+	protected CrashSightCallback(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	private static void OnApplicationQuitting(); // 0x0000000189D2C230-0x0000000189D2C324
-	public static bool IsQuitting(); // 0x0000000189D2C12C-0x0000000189D2C230
+	private static void OnApplicationQuitting(); // 0x000000018C17250C-0x000000018C172604
+	public static bool IsQuitting(); // 0x000000018C172404-0x000000018C17250C
 	public abstract string OnCrashBaseRetEvent(int methodId, int crashType);
 }
 
-public abstract class CrashSightLogCallback // TypeDefIndex: 62284
+public abstract class CrashSightLogCallback // TypeDefIndex: 89576
 {
 	// Fields
 	private static bool isQuitting; // 0x00
 	private static object quitLocker; // 0x08
 
 	// Constructors
-	static CrashSightLogCallback(); // 0x0000000183329690-0x0000000183329770
-	protected CrashSightLogCallback(); // 0x00000001841E1670-0x00000001841E1680
+	static CrashSightLogCallback(); // 0x0000000185BC07E0-0x0000000185BC08C0
+	protected CrashSightLogCallback(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	private static void OnApplicationQuitting(); // 0x0000000189D2C428-0x0000000189D2C51C
-	public static bool IsQuitting(); // 0x0000000189D2C324-0x0000000189D2C428
+	private static void OnApplicationQuitting(); // 0x000000018C17270C-0x000000018C172804
+	public static bool IsQuitting(); // 0x000000018C172604-0x000000018C17270C
 	public abstract string OnSetLogPathEvent(int methodId, int crashType);
 	public abstract void OnLogUploadResultEvent(int methodId, int crashType, int result);
 }
 
 [AddComponentMenu("")]
-public class CrashSightMonoBehaviour : MonoBehaviour // TypeDefIndex: 62285
+public class CrashSightMonoBehaviour : MonoBehaviour // TypeDefIndex: 89577
 {
 	// Fields
 	private static CrashSightMonoBehaviour _instance; // 0x00
@@ -347,73 +353,73 @@ public class CrashSightMonoBehaviour : MonoBehaviour // TypeDefIndex: 62285
 	internal bool _isRunning; // 0x30
 
 	// Properties
-	public static CrashSightMonoBehaviour Instance { get; } // 0x0000000189D2C7E8-0x0000000189D2C908 
+	public static CrashSightMonoBehaviour Instance { get; } // 0x000000018C172AB4-0x000000018C172BD4 
 
 	// Events
 	public event Action ApplicationResuming {
-		add; // 0x0000000189D2C754-0x0000000189D2C7E8
-		remove; // 0x0000000189D2CA30-0x0000000189D2CAC4
+		add; // 0x000000018C172A20-0x000000018C172AB4
+		remove; // 0x000000018C172CFC-0x000000018C172D90
 	}
 	public event Action ApplicationPausing {
-		add; // 0x0000000189D2C62C-0x0000000189D2C6C0
-		remove; // 0x0000000189D2C908-0x0000000189D2C99C
+		add; // 0x000000018C1728F8-0x000000018C17298C
+		remove; // 0x000000018C172BD4-0x000000018C172C68
 	}
 	public event Action ApplicationQuitting {
-		add; // 0x0000000189D2C6C0-0x0000000189D2C754
-		remove; // 0x0000000189D2C99C-0x0000000189D2CA30
+		add; // 0x000000018C17298C-0x000000018C172A20
+		remove; // 0x000000018C172C68-0x000000018C172CFC
 	}
 
 	// Constructors
-	public CrashSightMonoBehaviour(); // 0x0000000189D2C610-0x0000000189D2C62C
+	public CrashSightMonoBehaviour(); // 0x0000000188DACB74-0x0000000188DACB90
 
 	// Methods
-	public void UpdatePauseStatus(bool paused); // 0x0000000189D2C5DC-0x0000000189D2C610
-	internal void OnApplicationPause(bool pauseStatus); // 0x0000000189D2C578-0x0000000189D2C580
-	internal void OnApplicationFocus(bool hasFocus); // 0x0000000189D2C56C-0x0000000189D2C578
-	private void OnApplicationQuit(); // 0x0000000189D2C580-0x0000000189D2C5DC
-	private void Awake(); // 0x0000000189D2C51C-0x0000000189D2C56C
+	public void UpdatePauseStatus(bool paused); // 0x000000018C1728C4-0x000000018C1728F8
+	internal void OnApplicationPause(bool pauseStatus); // 0x000000018C172860-0x000000018C172868
+	internal void OnApplicationFocus(bool hasFocus); // 0x000000018C172854-0x000000018C172860
+	private void OnApplicationQuit(); // 0x000000018C172868-0x000000018C1728C4
+	private void Awake(); // 0x000000018C172804-0x000000018C172854
 }
 
-public class CrashSightStackTrace // TypeDefIndex: 62286
+public class CrashSightStackTrace // TypeDefIndex: 89578
 {
 	// Fields
 	public static bool enable; // 0x00
 	private static string stackTrace; // 0x08
 
 	// Constructors
-	public CrashSightStackTrace(); // 0x00000001841E1670-0x00000001841E1680
+	public CrashSightStackTrace(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public static void setEnable(bool enable); // 0x00000001841E1670-0x00000001841E1680
-	public static string ExtractStackTrace(); // 0x0000000189D2CAC4-0x0000000189D2CB70
+	public static void setEnable(bool enable); // 0x0000000186805BA0-0x0000000186805BB0
+	public static string ExtractStackTrace(); // 0x000000018C172D90-0x000000018C172E3C
 }
 
 namespace GCloud.UQM
 {
-	public delegate void OnUQMRetEventHandler<T>(T ret); // TypeDefIndex: 62287; 0x00000000-0x00000000
+	public delegate void OnUQMRetEventHandler<T>(T ret); // TypeDefIndex: 89579; 0x00000000-0x00000000
 
-	public delegate string OnUQMStringRetEventHandler<T>(T ret, T crashType); // TypeDefIndex: 62288; 0x00000000-0x00000000
+	public delegate string OnUQMStringRetEventHandler<T>(T ret, T crashType); // TypeDefIndex: 89580; 0x00000000-0x00000000
 
-	public delegate string OnUQMStringRetSetLogPathEventHandler<T>(T ret, T crashType); // TypeDefIndex: 62289; 0x00000000-0x00000000
+	public delegate string OnUQMStringRetSetLogPathEventHandler<T>(T ret, T crashType); // TypeDefIndex: 89581; 0x00000000-0x00000000
 
-	public delegate void OnUQMRetLogUploadEventHandler<T>(T ret, T crashType, T result); // TypeDefIndex: 62290; 0x00000000-0x00000000
+	public delegate void OnUQMRetLogUploadEventHandler<T>(T ret, T crashType, T result); // TypeDefIndex: 89582; 0x00000000-0x00000000
 
-	public class UQM // TypeDefIndex: 62291
+	public class UQM // TypeDefIndex: 89583
 	{
 		// Fields
-		public const string LibName = "CrashSight64"; // Metadata: 0x02350B6E
+		public const string LibName = "CrashSight64"; // Metadata: 0x026494B2
 		private static bool initialized; // 0x00
 		public static bool isDebug; // 0x01
 	
 		// Constructors
-		public UQM(); // 0x00000001841E1670-0x00000001841E1680
-		static UQM(); // 0x0000000189D36618-0x0000000189D36650
+		public UQM(); // 0x0000000186805BA0-0x0000000186805BB0
+		static UQM(); // 0x000000018C17CAA0-0x000000018C17CAD8
 	
 		// Methods
-		public static void Init(); // 0x0000000189D36554-0x0000000189D36618
+		public static void Init(); // 0x000000018C17C9DC-0x000000018C17CAA0
 	}
 
-	public enum UQMCrashLevel // TypeDefIndex: 62292
+	public enum UQMCrashLevel // TypeDefIndex: 89584
 	{
 		CSLogLevelSilent = 0,
 		CSLogLevelError = 1,
@@ -423,7 +429,7 @@ namespace GCloud.UQM
 		CSLogLevelVerbose = 5
 	}
 
-	public static class UQMCrash // TypeDefIndex: 62293
+	public static class UQMCrash // TypeDefIndex: 89585
 	{
 		// Fields
 		[CompilerGenerated]
@@ -438,137 +444,137 @@ namespace GCloud.UQM
 		private static readonly string GAME_AGENT_CLASS; // 0x28
 	
 		// Properties
-		public static AndroidJavaClass CrashSightPlatform { get; } // 0x0000000189D35954-0x0000000189D35A38 
+		public static AndroidJavaClass CrashSightPlatform { get; } // 0x000000018C17BDD4-0x000000018C17BEB8 
 	
 		// Events
 		public static event OnUQMStringRetEventHandler<int> CrashBaseRetEvent {
-			add; // 0x0000000183B12130-0x0000000183B12210
-			remove; // 0x0000000189D35A38-0x0000000189D35AFC
+			add; // 0x0000000186ACF3E0-0x0000000186ACF4C0
+			remove; // 0x000000018C17BEB8-0x000000018C17BF7C
 		}
 		public static event OnUQMStringRetSetLogPathEventHandler<int> CrashSetLogPathRetEvent {
-			add; // 0x0000000183B12050-0x0000000183B12130
-			remove; // 0x0000000189D35BC4-0x0000000189D35C8C
+			add; // 0x0000000186ACF4C0-0x0000000186ACF5A0
+			remove; // 0x000000018C17C044-0x000000018C17C10C
 		}
 		public static event OnUQMRetLogUploadEventHandler<int> CrashLogUploadRetEvent {
-			add; // 0x0000000183B11F70-0x0000000183B12050
-			remove; // 0x0000000189D35AFC-0x0000000189D35BC4
+			add; // 0x0000000186ACF5A0-0x0000000186ACF680
+			remove; // 0x000000018C17BF7C-0x000000018C17C044
 		}
 	
 		// Constructors
-		static UQMCrash(); // 0x0000000184CE9450-0x0000000184CE9500
+		static UQMCrash(); // 0x000000018710F290-0x000000018710F340
 	
 		// Methods
-		private static extern void CS_InitContext(string id, string version, string key); // 0x0000000189D2EE6C-0x0000000189D2EF3C
-		private static extern void CS_ReportExceptionW(int type, string name, string message, string stack_trace, string extras, bool is_async, string attachmentPath = "" /* Metadata: 0x02350B81 */); // 0x0000000183608AB0-0x0000000183608BB0
-		private static extern void CS_SetUserValue(string key, string value); // 0x0000000183608980-0x0000000183608A00
-		private static extern void CS_SetVehEnable(bool enable); // 0x0000000189D2F518-0x0000000189D2F590
-		private static extern void CS_SetExtraHandler(bool extra_handle_enable); // 0x0000000189D2F4E4-0x0000000189D2F518
-		private static extern void CS_SetCustomLogDirW(string log_path); // 0x0000000189D2F2D4-0x0000000189D2F354
-		private static extern void CS_SetUserId(string user_id); // 0x0000000183A86210-0x0000000183A86260
-		private static extern void CS_MonitorEnable(bool enable); // 0x0000000189D2EF3C-0x0000000189D2EFB4
-		private static extern void CS_PrintLog(int level, string tag, string format, string arg); // 0x0000000183608A00-0x0000000183608AB0
-		private static extern void CS_UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x0000000189D2F704-0x0000000189D2F798
-		private static extern void CS_ReportCrash(); // 0x0000000189D2EFB4-0x0000000189D2F01C
-		private static extern void CS_ReportDump(string dump_dir, bool is_async); // 0x0000000189D2F01C-0x0000000189D2F0B0
-		private static extern void CS_SetEnvironmentName(string name); // 0x0000000189D2F458-0x0000000189D2F4E4
-		private static extern void CS_InitWithAppId(string app_id); // 0x0000000183B12470-0x0000000183B124D0
-		private static extern void CS_SetAppVersion(string app_version); // 0x0000000184A22540-0x0000000184A225A0
-		private static extern void CS_ConfigCrashServerUrl(string crash_server_url); // 0x00000001838277E0-0x0000000183827880
-		private static extern void CS_ConfigDebugMode(bool enable); // 0x0000000183827EB0-0x0000000183827EF0
-		private static extern void CS_SetDeviceId(string device_id); // 0x0000000189D2F354-0x0000000189D2F3E0
-		private static extern void CS_ConfigCrashReporter(int log_level); // 0x0000000189D2EDF4-0x0000000189D2EE6C
-		private static extern void CS_TestNativeCrash(); // 0x0000000189D2F610-0x0000000189D2F678
-		private static extern void CS_SetDumpType(int dump_type); // 0x0000000189D2F3E0-0x0000000189D2F458
-		private static extern void CS_AddValidExpCode(ulong exp_code); // 0x0000000189D2ED7C-0x0000000189D2EDF4
-		private static extern void CS_UploadCrashWithGuid(string guid); // 0x0000000189D2F678-0x0000000189D2F704
-		private static extern void CS_SetCrashUploadEnable(bool enable); // 0x0000000189D2F1DC-0x0000000189D2F254
-		private static extern void CS_SetWorkSpaceW(string workspace); // 0x0000000189D2F590-0x0000000189D2F610
-		private static extern void CS_SetEngineInfo(string version, string buildConfig, string language, string locale); // 0x00000001838275C0-0x00000001838276D0
-		private static extern void CS_SetCustomAttachDirW(string log_path); // 0x0000000189D2F254-0x0000000189D2F2D4
-		private static extern void CS_UseSavedUserId(bool enable); // 0x0000000189D2F798-0x0000000189D2F810
-		private static extern void CS_ReportStuck(int threadId, int maxChecks, int checkInterval, string name, string message, string extraInfo, int dumpNativeType, string attachPath); // 0x0000000189D2F0B0-0x0000000189D2F1DC
-		private static void LoadCrashSightCoreSo(); // 0x00000001841E1670-0x00000001841E1680
-		public static void ConfigCallbackType(int callbackType); // 0x0000000189D2FD74-0x0000000189D2FEFC
-		public static void ConfigGameType(int gameType); // 0x0000000183B124D0-0x0000000183B125A0
-		public static void ConfigAutoReportLogLevel(int level); // 0x0000000189D2FBE0-0x0000000189D2FD74
-		public static void ConfigCrashServerUrl(string serverUrl); // 0x0000000184B0E110-0x0000000184B0E1C0
-		public static void ConfigDebugMode(bool enable); // 0x0000000184A065D0-0x0000000184A066C0
-		public static void ConfigDefault(string channel, string version, string user, long delay); // 0x0000000189D2FEFC-0x0000000189D3016C
-		public static void InitWithAppId(string appId, bool forceOnUiThread); // 0x0000000183B12380-0x0000000183B12470
-		public static void InitContext(string userId, string version, string key); // 0x0000000189D308B0-0x0000000189D30A58
-		public static void LogRecord(int level, string message); // 0x0000000183608BF0-0x0000000183608DA0
-		public static void AddSceneData(string k, string v); // 0x000000018321F170-0x000000018321F230
-		public static void ReportException(int type, string name, string message, string stackTrace, string extras, bool quitProgram); // 0x0000000183608620-0x0000000183608850
-		public static void ReportException(int type, string exceptionName, string exceptionMsg, string exceptionStack, Dictionary<string, string> extInfo, int dumpNativeType = 0 /* Metadata: 0x02350B82 */, string errorAttachmentPath = "" /* Metadata: 0x02350B83 */); // 0x0000000189D31B88-0x0000000189D31D8C
-		public static void SetUserId(string userId); // 0x0000000183A86150-0x0000000183A86210
-		public static void SetScene(string sceneId, bool upload); // 0x0000000189D33CB4-0x0000000189D33E70
-		public static void ReRegistAllMonitors(); // 0x0000000189D316E4-0x0000000189D3184C
-		public static void CloseAllMonitors(); // 0x0000000189D2FA78-0x0000000189D2FBE0
-		public static void ReportLogInfo(string msgType, string msg); // 0x0000000189D320A4-0x0000000189D3220C
-		public static void SetAppVersion(string appVersion); // 0x0000000184A22490-0x0000000184A22540
-		public static void SetDeviceId(string deviceId); // 0x0000000189D32C38-0x0000000189D32DC0
-		public static void SetCustomizedDeviceID(string deviceId); // 0x0000000189D32940-0x0000000189D32ABC
-		public static string GetSDKDefinedDeviceID(); // 0x0000000189D305B8-0x0000000189D30734
-		public static void SetCustomizedMatchID(string matchId); // 0x0000000189D32ABC-0x0000000189D32C38
-		public static string GetSDKSessionID(); // 0x0000000189D30734-0x0000000189D308B0
-		public static string GetCrashUuid(); // 0x0000000189D302C0-0x0000000189D3043C
-		public static void SetDeviceModel(string deviceModel); // 0x0000000189D32DC0-0x0000000189D32F3C
-		public static void SetLogPath(string logPath); // 0x0000000189D336DC-0x0000000189D33864
-		public static void SetCrashCallback(); // 0x0000000183B11D80-0x0000000183B11DF0
-		public static void UnsetCrashCallback(); // 0x0000000189D35190-0x0000000189D352E0
-		public static void SetCrashLogCallback(); // 0x0000000183B11D10-0x0000000183B11D80
-		internal static string OnCrashCallbackMessage(int methodId, int crashType); // 0x0000000183F04C00-0x0000000183F04D70
-		internal static string OnCrashCallbackData(int methodId, int crashType); // 0x0000000189D30DC4-0x0000000189D30FA0
-		internal static string OnCrashSetLogPathMessage(int methodId, int crashType); // 0x0000000189D31378-0x0000000189D3155C
-		internal static string OnCrashLogUploadMessage(int methodId, int crashType, int result); // 0x0000000189D3117C-0x0000000189D31378
-		internal static string OnCrashCallbackNoRet(int methodId, int crashType); // 0x0000000189D30FA0-0x0000000189D3117C
-		public static void ConfigCallBack(); // 0x0000000183B11A30-0x0000000183B11A90
-		public static void UnregisterCallBack(); // 0x0000000189D3513C-0x0000000189D35190
-		public static void ConfigLogCallBack(); // 0x0000000183B119D0-0x0000000183B11A30
-		public static void TestOomCrash(); // 0x0000000189D34E6C-0x0000000189D34FD4
-		public static void TestJavaCrash(); // 0x0000000189D34A2C-0x0000000189D34B94
-		public static void TestOcCrash(); // 0x0000000189D34D04-0x0000000189D34E6C
-		public static void TestNativeCrash(); // 0x0000000189D34B94-0x0000000189D34D04
-		public static void TestANR(); // 0x0000000189D348C4-0x0000000189D34A2C
-		public static long GetCrashThreadId(); // 0x0000000189D3016C-0x0000000189D302C0
-		public static void SetLogcatBufferSize(int size); // 0x0000000189D33864-0x0000000189D339D4
-		public static void SetCallbackMsg(string data); // 0x0000000189D325CC-0x0000000189D32748
-		public static void StartDumpRoutine(int dumpMode, int startTimeMode, long startTime, long dumpInterval, int dumpTimes, bool saveLocal, string savePath); // 0x0000000189D3432C-0x0000000189D34684
-		public static void StartMonitorFdCount(int interval, int limit, int dumpType); // 0x0000000189D34684-0x0000000189D348C4
-		public static int getExceptionType(string name); // 0x0000000189D357D4-0x0000000189D35954
-		public static void TestUseAfterFree(); // 0x0000000189D34FD4-0x0000000189D3513C
-		public static void SetServerEnv(string serverEnv); // 0x0000000189D33E70-0x0000000189D33FF8
-		public static void SetVehEnable(bool enable); // 0x0000000189D33FF8-0x0000000189D341A4
-		public static void ReportCrash(); // 0x0000000189D3184C-0x0000000189D319BC
-		public static void ReportDump(string dump_path, bool is_async); // 0x0000000189D319BC-0x0000000189D31B88
-		public static void SetExtraHandler(bool extra_handle_enable); // 0x0000000189D33530-0x0000000189D336DC
-		public static void UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x0000000189D35468-0x0000000189D35634
-		public static void SetErrorUploadInterval(int interval); // 0x0000000189D333C0-0x0000000189D33530
-		public static void SetErrorUploadEnable(bool enable); // 0x0000000189D33238-0x0000000189D333C0
-		public static void SetRecordFileDir(string record_dir); // 0x0000000189D33B50-0x0000000189D33CB4
-		public static void Init(string app_id, string app_key, string app_version); // 0x0000000189D30A58-0x0000000189D30C70
-		public static void setEnableGetPackageInfo(bool enable); // 0x0000000189D35E2C-0x0000000189D35FCC
-		public static void SetDumpType(int dump_type); // 0x0000000189D32F3C-0x0000000189D330D0
-		public static void AddValidExpCode(ulong exp_code); // 0x0000000189D2EBE4-0x0000000189D2ED7C
-		public static void UploadCrashWithGuid(string guid); // 0x0000000189D352E0-0x0000000189D35468
-		public static void SetCrashUploadEnable(bool enable); // 0x0000000189D32748-0x0000000189D328F4
-		public static void SetWorkSpace(string workspace); // 0x0000000189D341A4-0x0000000189D3432C
-		public static void SetEngineInfo(string version, string buildConfig, string language, string locale); // 0x0000000183B0B510-0x0000000183B0B6D0
-		public static void setCatchMultiSignal(bool enable); // 0x0000000189D35C8C-0x0000000189D35E2C
-		public static void enableDetailedPageTracing(bool enable); // 0x0000000189D35634-0x0000000189D357D4
-		public static void useSavedUserId(bool enable); // 0x0000000189D35FCC-0x0000000189D36178
-		public static void SetCustomAttachDir(string path); // 0x0000000189D328F4-0x0000000189D32940
-		public static bool IsLastSessionCrash(); // 0x0000000189D30C70-0x0000000189D30DC4
-		public static string GetLastSessionUserId(); // 0x0000000189D3043C-0x0000000189D305B8
-		public static bool CheckFdCount(int limit, int dumpType, bool upload); // 0x0000000189D2F810-0x0000000189D2FA78
-		public static void SetOomLogPath(string logPath); // 0x0000000189D339D4-0x0000000189D33B50
-		public static void ReportJank(int type, string exceptionName, string exceptionMsg, string exceptionStack, string paramsJson, int reportInfoOption, string jankAttachmentPath); // 0x0000000189D31D8C-0x0000000189D320A4
-		public static void ProcessEngineAnr(int type); // 0x0000000189D3155C-0x0000000189D316E4
-		public static void SetEngineMainThread(); // 0x0000000189D330D0-0x0000000189D33238
-		public static void ReportStuck(int threadId, int maxChecks, long checkInterval, string name, string message, Dictionary<string, string> extInfo, int dumpNativeType, string attachPath); // 0x0000000189D3220C-0x0000000189D325CC
+		private static extern void CS_InitContext(string id, string version, string key); // 0x000000018C175224-0x000000018C1752F4
+		private static extern void CS_ReportExceptionW(int type, string name, string message, string stack_trace, string extras, bool is_async, string attachmentPath = "" /* Metadata: 0x026494C5 */); // 0x00000001854C0F90-0x00000001854C1090
+		private static extern void CS_SetUserValue(string key, string value); // 0x00000001854BF6D0-0x00000001854BF750
+		private static extern void CS_SetVehEnable(bool enable); // 0x000000018C1758D0-0x000000018C175948
+		private static extern void CS_SetExtraHandler(bool extra_handle_enable); // 0x000000018C17589C-0x000000018C1758D0
+		private static extern void CS_SetCustomLogDirW(string log_path); // 0x000000018C17568C-0x000000018C17570C
+		private static extern void CS_SetUserId(string user_id); // 0x00000001850CDD50-0x00000001850CDDA0
+		private static extern void CS_MonitorEnable(bool enable); // 0x000000018C1752F4-0x000000018C17536C
+		private static extern void CS_PrintLog(int level, string tag, string format, string arg); // 0x00000001854C1090-0x00000001854C1140
+		private static extern void CS_UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x000000018C175ABC-0x000000018C175B50
+		private static extern void CS_ReportCrash(); // 0x000000018C17536C-0x000000018C1753D4
+		private static extern void CS_ReportDump(string dump_dir, bool is_async); // 0x000000018C1753D4-0x000000018C175468
+		private static extern void CS_SetEnvironmentName(string name); // 0x000000018C175810-0x000000018C17589C
+		private static extern void CS_InitWithAppId(string app_id); // 0x0000000186ACF140-0x0000000186ACF1A0
+		private static extern void CS_SetAppVersion(string app_version); // 0x0000000186EB7730-0x0000000186EB7790
+		private static extern void CS_ConfigCrashServerUrl(string crash_server_url); // 0x0000000185AFD500-0x0000000185AFD5A0
+		private static extern void CS_ConfigDebugMode(bool enable); // 0x0000000185AFDD00-0x0000000185AFDD40
+		private static extern void CS_SetDeviceId(string device_id); // 0x000000018C17570C-0x000000018C175798
+		private static extern void CS_ConfigCrashReporter(int log_level); // 0x000000018C1751AC-0x000000018C175224
+		private static extern void CS_TestNativeCrash(); // 0x000000018C1759C8-0x000000018C175A30
+		private static extern void CS_SetDumpType(int dump_type); // 0x000000018C175798-0x000000018C175810
+		private static extern void CS_AddValidExpCode(ulong exp_code); // 0x000000018C175134-0x000000018C1751AC
+		private static extern void CS_UploadCrashWithGuid(string guid); // 0x000000018C175A30-0x000000018C175ABC
+		private static extern void CS_SetCrashUploadEnable(bool enable); // 0x000000018C175594-0x000000018C17560C
+		private static extern void CS_SetWorkSpaceW(string workspace); // 0x000000018C175948-0x000000018C1759C8
+		private static extern void CS_SetEngineInfo(string version, string buildConfig, string language, string locale); // 0x0000000185AFD240-0x0000000185AFD350
+		private static extern void CS_SetCustomAttachDirW(string log_path); // 0x000000018C17560C-0x000000018C17568C
+		private static extern void CS_UseSavedUserId(bool enable); // 0x000000018C175B50-0x000000018C175BC8
+		private static extern void CS_ReportStuck(int threadId, int maxChecks, int checkInterval, string name, string message, string extraInfo, int dumpNativeType, string attachPath); // 0x000000018C175468-0x000000018C175594
+		private static void LoadCrashSightCoreSo(); // 0x0000000186805BA0-0x0000000186805BB0
+		public static void ConfigCallbackType(int callbackType); // 0x000000018C176138-0x000000018C1762C4
+		public static void ConfigGameType(int gameType); // 0x0000000186ACF1A0-0x0000000186ACF270
+		public static void ConfigAutoReportLogLevel(int level); // 0x000000018C175FA0-0x000000018C176138
+		public static void ConfigCrashServerUrl(string serverUrl); // 0x0000000186F8B520-0x0000000186F8B5D0
+		public static void ConfigDebugMode(bool enable); // 0x0000000185AFE280-0x0000000185AFE370
+		public static void ConfigDefault(string channel, string version, string user, long delay); // 0x000000018C1762C4-0x000000018C176538
+		public static void InitWithAppId(string appId, bool forceOnUiThread); // 0x0000000186ACF050-0x0000000186ACF140
+		public static void InitContext(string userId, string version, string key); // 0x000000018C176C90-0x000000018C176E3C
+		public static void LogRecord(int level, string message); // 0x00000001854C1350-0x00000001854C1410
+		public static void AddSceneData(string k, string v); // 0x00000001854BE9A0-0x00000001854BEA40
+		public static void ReportException(int type, string name, string message, string stackTrace, string extras, bool quitProgram); // 0x00000001854BCE40-0x00000001854BCFB0
+		public static void ReportException(int type, string exceptionName, string exceptionMsg, string exceptionStack, Dictionary<string, string> extInfo, int dumpNativeType = 0 /* Metadata: 0x026494C6 */, string errorAttachmentPath = "" /* Metadata: 0x026494C7 */); // 0x000000018C177F94-0x000000018C1781A0
+		public static void SetUserId(string userId); // 0x00000001850CDC90-0x00000001850CDD50
+		public static void SetScene(string sceneId, bool upload); // 0x000000018C17A100-0x000000018C17A2C4
+		public static void ReRegistAllMonitors(); // 0x000000018C177AE4-0x000000018C177C50
+		public static void CloseAllMonitors(); // 0x000000018C175E34-0x000000018C175FA0
+		public static void ReportLogInfo(string msgType, string msg); // 0x000000018C1784BC-0x000000018C178628
+		public static void SetAppVersion(string appVersion); // 0x0000000186EB7680-0x0000000186EB7730
+		public static void SetDeviceId(string deviceId); // 0x000000018C179064-0x000000018C1791EC
+		public static void SetCustomizedDeviceID(string deviceId); // 0x000000018C178D64-0x000000018C178EE4
+		public static string GetSDKDefinedDeviceID(); // 0x000000018C176990-0x000000018C176B10
+		public static void SetCustomizedMatchID(string matchId); // 0x000000018C178EE4-0x000000018C179064
+		public static string GetSDKSessionID(); // 0x000000018C176B10-0x000000018C176C90
+		public static string GetCrashUuid(); // 0x000000018C176690-0x000000018C176810
+		public static void SetDeviceModel(string deviceModel); // 0x000000018C1791EC-0x000000018C17936C
+		public static void SetLogPath(string logPath); // 0x000000018C179B1C-0x000000018C179CA4
+		public static void SetCrashCallback(); // 0x0000000186ACFBC0-0x0000000186ACFC30
+		public static void UnsetCrashCallback(); // 0x000000018C17B604-0x000000018C17B758
+		public static void SetCrashLogCallback(); // 0x0000000186ACFB50-0x0000000186ACFBC0
+		internal static string OnCrashCallbackMessage(int methodId, int crashType); // 0x00000001854BC3E0-0x00000001854BC560
+		internal static string OnCrashCallbackData(int methodId, int crashType); // 0x000000018C1771AC-0x000000018C177390
+		internal static string OnCrashSetLogPathMessage(int methodId, int crashType); // 0x000000018C177774-0x000000018C177958
+		internal static string OnCrashLogUploadMessage(int methodId, int crashType, int result); // 0x000000018C177574-0x000000018C177774
+		internal static string OnCrashCallbackNoRet(int methodId, int crashType); // 0x000000018C177390-0x000000018C177574
+		public static void ConfigCallBack(); // 0x0000000186ACF850-0x0000000186ACF8B0
+		public static void UnregisterCallBack(); // 0x000000018C17B5B0-0x000000018C17B604
+		public static void ConfigLogCallBack(); // 0x0000000186ACF8B0-0x0000000186ACF910
+		public static void TestOomCrash(); // 0x000000018C17B2D8-0x000000018C17B444
+		public static void TestJavaCrash(); // 0x000000018C17AE8C-0x000000018C17AFF8
+		public static void TestOcCrash(); // 0x000000018C17B16C-0x000000018C17B2D8
+		public static void TestNativeCrash(); // 0x000000018C17AFF8-0x000000018C17B16C
+		public static void TestANR(); // 0x000000018C17AD20-0x000000018C17AE8C
+		public static long GetCrashThreadId(); // 0x000000018C176538-0x000000018C176690
+		public static void SetLogcatBufferSize(int size); // 0x000000018C179CA4-0x000000018C179E18
+		public static void SetCallbackMsg(string data); // 0x000000018C1789EC-0x000000018C178B6C
+		public static void StartDumpRoutine(int dumpMode, int startTimeMode, long startTime, long dumpInterval, int dumpTimes, bool saveLocal, string savePath); // 0x000000018C17A780-0x000000018C17AADC
+		public static void StartMonitorFdCount(int interval, int limit, int dumpType); // 0x000000018C17AADC-0x000000018C17AD20
+		public static int getExceptionType(string name); // 0x000000018C17BC54-0x000000018C17BDD4
+		public static void TestUseAfterFree(); // 0x000000018C17B444-0x000000018C17B5B0
+		public static void SetServerEnv(string serverEnv); // 0x000000018C17A2C4-0x000000018C17A44C
+		public static void SetVehEnable(bool enable); // 0x000000018C17A44C-0x000000018C17A5F8
+		public static void ReportCrash(); // 0x000000018C177C50-0x000000018C177DC4
+		public static void ReportDump(string dump_path, bool is_async); // 0x000000018C177DC4-0x000000018C177F94
+		public static void SetExtraHandler(bool extra_handle_enable); // 0x000000018C179970-0x000000018C179B1C
+		public static void UploadGivenPathDump(string dump_dir, bool is_extra_check); // 0x000000018C17B8E0-0x000000018C17BAB0
+		public static void SetErrorUploadInterval(int interval); // 0x000000018C1797FC-0x000000018C179970
+		public static void SetErrorUploadEnable(bool enable); // 0x000000018C179670-0x000000018C1797FC
+		public static void SetRecordFileDir(string record_dir); // 0x000000018C179F98-0x000000018C17A100
+		public static void Init(string app_id, string app_key, string app_version); // 0x000000018C176E3C-0x000000018C177058
+		public static void setEnableGetPackageInfo(bool enable); // 0x000000018C17C2B0-0x000000018C17C454
+		public static void SetDumpType(int dump_type); // 0x000000018C17936C-0x000000018C179504
+		public static void AddValidExpCode(ulong exp_code); // 0x000000018C174F98-0x000000018C175134
+		public static void UploadCrashWithGuid(string guid); // 0x000000018C17B758-0x000000018C17B8E0
+		public static void SetCrashUploadEnable(bool enable); // 0x000000018C178B6C-0x000000018C178D18
+		public static void SetWorkSpace(string workspace); // 0x000000018C17A5F8-0x000000018C17A780
+		public static void SetEngineInfo(string version, string buildConfig, string language, string locale); // 0x0000000186DFBD90-0x0000000186DFBF50
+		public static void setCatchMultiSignal(bool enable); // 0x000000018C17C10C-0x000000018C17C2B0
+		public static void enableDetailedPageTracing(bool enable); // 0x000000018C17BAB0-0x000000018C17BC54
+		public static void useSavedUserId(bool enable); // 0x000000018C17C454-0x000000018C17C600
+		public static void SetCustomAttachDir(string path); // 0x000000018C178D18-0x000000018C178D64
+		public static bool IsLastSessionCrash(); // 0x000000018C177058-0x000000018C1771AC
+		public static string GetLastSessionUserId(); // 0x000000018C176810-0x000000018C176990
+		public static bool CheckFdCount(int limit, int dumpType, bool upload); // 0x000000018C175BC8-0x000000018C175E34
+		public static void SetOomLogPath(string logPath); // 0x000000018C179E18-0x000000018C179F98
+		public static void ReportJank(int type, string exceptionName, string exceptionMsg, string exceptionStack, string paramsJson, int reportInfoOption, string jankAttachmentPath); // 0x000000018C1781A0-0x000000018C1784BC
+		public static void ProcessEngineAnr(int type); // 0x000000018C177958-0x000000018C177AE4
+		public static void SetEngineMainThread(); // 0x000000018C179504-0x000000018C179670
+		public static void ReportStuck(int threadId, int maxChecks, long checkInterval, string name, string message, Dictionary<string, string> extInfo, int dumpNativeType, string attachPath); // 0x000000018C178628-0x000000018C1789EC
 	}
 
-	public enum UQMMethodNameID // TypeDefIndex: 62294
+	public enum UQMMethodNameID // TypeDefIndex: 89586
 	{
 		UQM_CRASH_CALLBACK_EXTRA_DATA = 1011,
 		UQM_CRASH_CALLBACK_EXTRA_MESSAGE = 1012,
@@ -576,14 +582,14 @@ namespace GCloud.UQM
 		UQM_CRASH_CALLBACK_LOG_UPLOAD_RESULT = 1014
 	}
 
-	internal class UQMLog // TypeDefIndex: 62296
+	internal class UQMLog // TypeDefIndex: 89588
 	{
 		// Fields
 		private static Level level; // 0x00
-		private const string header = "[CrashSightPlugin-Unity]"; // Metadata: 0x02350B8C
+		private const string header = "[CrashSightPlugin-Unity]"; // Metadata: 0x026494D0
 	
 		// Nested types
-		public enum Level // TypeDefIndex: 62295
+		public enum Level // TypeDefIndex: 89587
 		{
 			None = 0,
 			Log = 1,
@@ -592,18 +598,18 @@ namespace GCloud.UQM
 		}
 	
 		// Constructors
-		public UQMLog(); // 0x00000001841E1670-0x00000001841E1680
-		static UQMLog(); // 0x0000000184D79810-0x0000000184D79850
+		public UQMLog(); // 0x0000000186805BA0-0x0000000186805BB0
+		static UQMLog(); // 0x000000018721F730-0x000000018721F770
 	
 		// Methods
-		public static void SetLevel(Level l); // 0x0000000189D36414-0x0000000189D36468
-		public static void Log(string message); // 0x0000000183608BB0-0x0000000183608BF0
-		public static void LogWarning(string message); // 0x0000000189D36384-0x0000000189D36414
-		public static void LogError(string message); // 0x0000000189D362F4-0x0000000189D36384
-		public static void FullLog(string message); // 0x0000000189D36178-0x0000000189D362F4
+		public static void SetLevel(Level l); // 0x000000018C17C898-0x000000018C17C8EC
+		public static void Log(string message); // 0x00000001854BEB50-0x00000001854BEB90
+		public static void LogWarning(string message); // 0x000000018C17C808-0x000000018C17C898
+		public static void LogError(string message); // 0x000000018C17C778-0x000000018C17C808
+		public static void FullLog(string message); // 0x000000018C17C600-0x000000018C17C778
 	}
 
-	public class RetArgsWrapper // TypeDefIndex: 62297
+	public class RetArgsWrapper // TypeDefIndex: 89589
 	{
 		// Fields
 		private readonly int methodId; // 0x10
@@ -611,58 +617,58 @@ namespace GCloud.UQM
 		private readonly int logUploadResult; // 0x18
 	
 		// Properties
-		public int MethodId { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
-		public int CrashType { get; } // 0x0000000184D882A0-0x0000000184D882B0 
-		public int LogUploadResult { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
+		public int MethodId { get; } // 0x00000001828BC2B0-0x00000001828BC2C0 
+		public int CrashType { get; } // 0x0000000182971EE0-0x0000000182971EF0 
+		public int LogUploadResult { get; } // 0x00000001844AF510-0x00000001844AF520 
 	
 		// Constructors
-		public RetArgsWrapper(int _methodId, int _crashType, int _logUploadResult); // 0x0000000184D88580-0x0000000184D88590
+		public RetArgsWrapper(int _methodId, int _crashType, int _logUploadResult); // 0x0000000187235470-0x0000000187235480
 	}
 
-	public class UQMMessageCenter : MonoBehaviour // TypeDefIndex: 62299
+	public class UQMMessageCenter : MonoBehaviour // TypeDefIndex: 89591
 	{
 		// Fields
 		private static bool initialzed; // 0x00
 		private static UQMMessageCenter instance; // 0x08
 	
 		// Properties
-		public static UQMMessageCenter Instance { get; } // 0x0000000183B11740-0x0000000183B11980 
+		public static UQMMessageCenter Instance { get; } // 0x0000000186ACF910-0x0000000186ACFB50 
 	
 		// Nested types
-		private delegate string UQMRetJsonEventHandler(int methodId, int callType, int logUploadResult); // TypeDefIndex: 62298; 0x00000001814F3120-0x00000001814F3140
+		private delegate string UQMRetJsonEventHandler(int methodId, int callType, int logUploadResult); // TypeDefIndex: 89590; 0x00000001811DF7F0-0x00000001811DF810
 	
 		// Constructors
-		public UQMMessageCenter(); // 0x0000000185393520-0x0000000185393538
+		public UQMMessageCenter(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
 		[AOT.MonoPInvokeCallback(typeof(UQMRetJsonEventHandler))]
-		public static string OnUQMRet(int methodId, int crashType, int logUploadResult); // 0x0000000183F043E0-0x0000000183F04AA0
-		private static extern void cs_setUnityCallback(UQMRetJsonEventHandler eventHandler); // 0x00000001838270A0-0x0000000183827130
-		public void Init(); // 0x0000000183B12210-0x0000000183B12300
-		public void Uninit(); // 0x0000000189D36468-0x0000000189D364BC
-		private static string SynchronousDelegate(object arg); // 0x0000000183F04AA0-0x0000000183F04C00
+		public static string OnUQMRet(int methodId, int crashType, int logUploadResult); // 0x00000001854BC560-0x00000001854BCC20
+		private static extern void cs_setUnityCallback(UQMRetJsonEventHandler eventHandler); // 0x0000000185AFBB60-0x0000000185AFBBF0
+		public void Init(); // 0x0000000186ACF270-0x0000000186ACF360
+		public void Uninit(); // 0x000000018C17C8EC-0x000000018C17C940
+		private static string SynchronousDelegate(object arg); // 0x00000001854BCC20-0x00000001854BCD80
 	}
 }
 
 namespace GCloud.UQM.MiniJSON
 {
-	public static class Json // TypeDefIndex: 62303
+	public static class Json // TypeDefIndex: 89595
 	{
 		// Nested types
-		private sealed class Parser : IDisposable // TypeDefIndex: 62301
+		private sealed class Parser : IDisposable // TypeDefIndex: 89593
 		{
 			// Fields
-			private const string WORD_BREAK = "{}[],:\""; // Metadata: 0x02350BA9
+			private const string WORD_BREAK = "{}[],:\""; // Metadata: 0x026494ED
 			private StringReader json; // 0x10
 	
 			// Properties
-			private char PeekChar { get; } // 0x0000000189D2DA30-0x0000000189D2DA8C 
-			private char NextChar { get; } // 0x0000000189D2D700-0x0000000189D2D75C 
-			private string NextWord { get; } // 0x0000000189D2D980-0x0000000189D2DA30 
-			private TOKEN NextToken { get; } // 0x0000000189D2D75C-0x0000000189D2D980 
+			private char PeekChar { get; } // 0x000000018C173DD8-0x000000018C173E34 
+			private char NextChar { get; } // 0x000000018C173A98-0x000000018C173AF4 
+			private string NextWord { get; } // 0x000000018C173D28-0x000000018C173DD8 
+			private TOKEN NextToken { get; } // 0x000000018C173AF4-0x000000018C173D28 
 	
 			// Nested types
-			private enum TOKEN // TypeDefIndex: 62300
+			private enum TOKEN // TypeDefIndex: 89592
 			{
 				NONE = 0,
 				CURLY_OPEN = 1,
@@ -679,40 +685,40 @@ namespace GCloud.UQM.MiniJSON
 			}
 	
 			// Constructors
-			private Parser(string jsonString); // 0x0000000189D2D688-0x0000000189D2D700
+			private Parser(string jsonString); // 0x000000018C173A20-0x000000018C173A98
 	
 			// Methods
-			public static bool IsWordBreak(char c); // 0x0000000189D2CF7C-0x0000000189D2CFF4
-			public static object Parse(string jsonString); // 0x0000000189D2D590-0x0000000189D2D688
-			public void Dispose(); // 0x0000000189D2CEB4-0x0000000189D2CEEC
-			private Dictionary<string, object> ParseObject(); // 0x0000000189D2D234-0x0000000189D2D340
-			private List<object> ParseArray(); // 0x0000000189D2CFF4-0x0000000189D2D0BC
-			private object ParseValue(); // 0x0000000189D2D56C-0x0000000189D2D590
-			private object ParseByToken(TOKEN token); // 0x0000000189D2D0BC-0x0000000189D2D170
-			private string ParseString(); // 0x0000000189D2D340-0x0000000189D2D56C
-			private object ParseNumber(); // 0x0000000189D2D170-0x0000000189D2D234
-			private void EatWhitespace(); // 0x0000000189D2CEEC-0x0000000189D2CF7C
+			public static bool IsWordBreak(char c); // 0x000000018C1732E4-0x000000018C17335C
+			public static object Parse(string jsonString); // 0x000000018C173918-0x000000018C173A20
+			public void Dispose(); // 0x000000018C17321C-0x000000018C173254
+			private Dictionary<string, object> ParseObject(); // 0x000000018C1735A8-0x000000018C1736B4
+			private List<object> ParseArray(); // 0x000000018C17335C-0x000000018C173424
+			private object ParseValue(); // 0x000000018C1738F4-0x000000018C173918
+			private object ParseByToken(TOKEN token); // 0x000000018C173424-0x000000018C1734E0
+			private string ParseString(); // 0x000000018C1736B4-0x000000018C1738F4
+			private object ParseNumber(); // 0x000000018C1734E0-0x000000018C1735A8
+			private void EatWhitespace(); // 0x000000018C173254-0x000000018C1732E4
 		}
 	
-		private sealed class Serializer // TypeDefIndex: 62302
+		private sealed class Serializer // TypeDefIndex: 89594
 		{
 			// Fields
 			private StringBuilder builder; // 0x10
 	
 			// Constructors
-			private Serializer(); // 0x0000000189D2E8B4-0x0000000189D2E918
+			private Serializer(); // 0x000000018C174C5C-0x000000018C174CC0
 	
 			// Methods
-			public static string Serialize(object obj); // 0x0000000189D2E83C-0x0000000189D2E8B4
-			private void SerializeValue(object value); // 0x0000000189D2E6B8-0x0000000189D2E83C
-			private void SerializeObject(IDictionary obj); // 0x0000000189D2DE10-0x0000000189D2E218
-			private void SerializeArray(IList anArray); // 0x0000000189D2DA8C-0x0000000189D2DE10
-			private void SerializeString(string str); // 0x0000000189D2E440-0x0000000189D2E6B8
-			private void SerializeOther(object value); // 0x0000000189D2E218-0x0000000189D2E440
+			public static string Serialize(object obj); // 0x000000018C174BE4-0x000000018C174C5C
+			private void SerializeValue(object value); // 0x000000018C174A60-0x000000018C174BE4
+			private void SerializeObject(IDictionary obj); // 0x000000018C1741B0-0x000000018C1745AC
+			private void SerializeArray(IList anArray); // 0x000000018C173E34-0x000000018C1741B0
+			private void SerializeString(string str); // 0x000000018C1747D4-0x000000018C174A60
+			private void SerializeOther(object value); // 0x000000018C1745AC-0x000000018C1747D4
 		}
 	
 		// Methods
-		public static object Deserialize(string json); // 0x0000000189D2CD80-0x0000000189D2CD9C
-		public static string Serialize(object obj); // 0x0000000189D2CD9C-0x0000000189D2CDA4
+		public static object Deserialize(string json); // 0x000000018C173020-0x000000018C17303C
+		public static string Serialize(object obj); // 0x000000018C17303C-0x000000018C173044
 	}
 }

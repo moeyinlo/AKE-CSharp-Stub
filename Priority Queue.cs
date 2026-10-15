@@ -8,14 +8,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 107: Priority Queue.dll - Assembly: PriorityQueue, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63322-63336
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 107: Priority Queue.dll - Assembly: PriorityQueue, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 90756-90770
 
 namespace Priority_Queue
 {
-	public sealed class FastPriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 63324
+	public sealed class FastPriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 90758
 		where T : FastPriorityQueueNode
 	{
 		// Fields
@@ -29,7 +26,7 @@ namespace Priority_Queue
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 63323
+		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 90757
 		{
 			// Fields
 			private int __1__state;
@@ -76,7 +73,7 @@ namespace Priority_Queue
 		public bool IsValidQueue();
 	}
 
-	public class FastPriorityQueueNode // TypeDefIndex: 63325
+	public class FastPriorityQueueNode // TypeDefIndex: 90759
 	{
 		// Fields
 		[CompilerGenerated]
@@ -85,14 +82,14 @@ namespace Priority_Queue
 		private int _QueueIndex_k__BackingField; // 0x14
 	
 		// Properties
-		public float Priority { [CompilerGenerated] get; [CompilerGenerated] protected internal set; } // 0x0000000184D85F70-0x0000000184D85F80 0x0000000184D88280-0x0000000184D88290
-		public int QueueIndex { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public float Priority { [CompilerGenerated] get; [CompilerGenerated] protected internal set; } // 0x0000000187232D00-0x0000000187232D10 0x0000000187235230-0x0000000187235240
+		public int QueueIndex { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 	
 		// Constructors
-		public FastPriorityQueueNode(); // 0x00000001841E1670-0x00000001841E1680
+		public FastPriorityQueueNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public sealed class GenericPriorityQueue<TItem, TPriority> : IFixedSizePriorityQueue<TItem, TPriority> // TypeDefIndex: 63327
+	public sealed class GenericPriorityQueue<TItem, TPriority> : IFixedSizePriorityQueue<TItem, TPriority> // TypeDefIndex: 90761
 		where TItem : GenericPriorityQueueNode<TPriority>
 	{
 		// Fields
@@ -108,7 +105,7 @@ namespace Priority_Queue
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _GetEnumerator_d__25 : IEnumerator<TItem> // TypeDefIndex: 63326
+		private sealed class _GetEnumerator_d__25 : IEnumerator<TItem> // TypeDefIndex: 90760
 		{
 			// Fields
 			private int __1__state;
@@ -156,7 +153,7 @@ namespace Priority_Queue
 		public bool IsValidQueue();
 	}
 
-	public class GenericPriorityQueueNode<TPriority> // TypeDefIndex: 63328
+	public class GenericPriorityQueueNode<TPriority> // TypeDefIndex: 90762
 	{
 		// Fields
 		[CompilerGenerated]
@@ -175,7 +172,7 @@ namespace Priority_Queue
 		public GenericPriorityQueueNode();
 	}
 
-	internal interface IFixedSizePriorityQueue<TItem, in TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 63329
+	internal interface IFixedSizePriorityQueue<TItem, in TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 90763
 	{
 		// Properties
 		int MaxSize { get; }
@@ -185,7 +182,7 @@ namespace Priority_Queue
 		void ResetNode(TItem node);
 	}
 
-	public interface IPriorityQueue<TItem, in TPriority> : IEnumerable<TItem> // TypeDefIndex: 63330
+	public interface IPriorityQueue<TItem, in TPriority> : IEnumerable<TItem> // TypeDefIndex: 90764
 	{
 		// Properties
 		TItem First { get; }
@@ -200,10 +197,10 @@ namespace Priority_Queue
 		void UpdatePriority(TItem node, TPriority priority);
 	}
 
-	public class SimplePriorityQueue<TItem, TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 63332
+	public class SimplePriorityQueue<TItem, TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 90766
 	{
 		// Fields
-		private const int INITIAL_QUEUE_SIZE = 10; // Metadata: 0x023527A6
+		private const int INITIAL_QUEUE_SIZE = 10; // Metadata: 0x0264B12C
 		private readonly GenericPriorityQueue<SimpleNode, TPriority> _queue;
 		private readonly Dictionary<TItem, IList<SimpleNode>> _itemToNodesCache;
 		private readonly IList<SimpleNode> _nullNodesCache;
@@ -213,7 +210,7 @@ namespace Priority_Queue
 		public TItem First { get; }
 	
 		// Nested types
-		private class SimpleNode : GenericPriorityQueueNode<TPriority> // TypeDefIndex: 63331
+		private class SimpleNode : GenericPriorityQueueNode<TPriority> // TypeDefIndex: 90765
 		{
 			// Fields
 			[CompilerGenerated]
@@ -257,7 +254,7 @@ namespace Priority_Queue
 		public bool IsValidQueue();
 	}
 
-	public class SimplePriorityQueue<TItem> : SimplePriorityQueue<TItem, float> // TypeDefIndex: 63333
+	public class SimplePriorityQueue<TItem> : SimplePriorityQueue<TItem, float> // TypeDefIndex: 90767
 	{
 		// Constructors
 		public SimplePriorityQueue();
@@ -265,7 +262,7 @@ namespace Priority_Queue
 		public SimplePriorityQueue(Comparison<float> comparer);
 	}
 
-	public sealed class StablePriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 63335
+	public sealed class StablePriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 90769
 		where T : StablePriorityQueueNode
 	{
 		// Fields
@@ -280,7 +277,7 @@ namespace Priority_Queue
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 63334
+		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 90768
 		{
 			// Fields
 			private int __1__state;
@@ -326,16 +323,16 @@ namespace Priority_Queue
 		public bool IsValidQueue();
 	}
 
-	public class StablePriorityQueueNode : FastPriorityQueueNode // TypeDefIndex: 63336
+	public class StablePriorityQueueNode : FastPriorityQueueNode // TypeDefIndex: 90770
 	{
 		// Fields
 		[CompilerGenerated]
 		private long _InsertionIndex_k__BackingField; // 0x18
 	
 		// Properties
-		public long InsertionIndex { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x000000018385B100-0x000000018385B110 0x00000001811EC9D0-0x00000001811EC9E0
+		public long InsertionIndex { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000182234E30-0x0000000182234E40 0x000000018561CBD0-0x000000018561CBE0
 	
 		// Constructors
-		public StablePriorityQueueNode(); // 0x00000001841E1670-0x00000001841E1680
+		public StablePriorityQueueNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }

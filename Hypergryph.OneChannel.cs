@@ -18,44 +18,41 @@ using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.Scripting;
 
-// Image 63: Hypergryph.OneChannel.dll - Assembly: Hypergryph.OneChannel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61602-61744
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 60: Hypergryph.OneChannel.dll - Assembly: Hypergryph.OneChannel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 88681-88824
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 61744
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 88824
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_72 C8939CFEA086350CA0F084D5A8FFA18BE802D605B6111130EB5143B5882250C4; // 0x00 // Static value (base64): YQBiAGMAZABlAGYAZwBoAGkAZwBrAGwAbQBuAG8AcABxAHIAcwB0AHUAdgB3AHgAeQB6ADEAMgAzADQANQA2ADcAOAA5ADAA - Metadata: 0x0234FE44
-	internal static readonly __StaticArrayInitTypeSize_24 C9A1311D05AB372579F6B92A220603EAB8191E15071784A11774A076DC45320B; // 0x48 // Static value (base64): AgAAAAMAAAAFAAAACgAAAA8AAAAPAAAA - Metadata: 0x0234FE94
+	internal static readonly __StaticArrayInitTypeSize_72 C8939CFEA086350CA0F084D5A8FFA18BE802D605B6111130EB5143B5882250C4; // 0x00 // Static value (base64): YQBiAGMAZABlAGYAZwBoAGkAZwBrAGwAbQBuAG8AcABxAHIAcwB0AHUAdgB3AHgAeQB6ADEAMgAzADQANQA2ADcAOAA5ADAA - Metadata: 0x02648720
+	internal static readonly __StaticArrayInitTypeSize_24 C9A1311D05AB372579F6B92A220603EAB8191E15071784A11774A076DC45320B; // 0x48 // Static value (base64): AgAAAAMAAAAFAAAACgAAAA8AAAAPAAAA - Metadata: 0x02648770
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_24 // TypeDefIndex: 61742
+	private struct __StaticArrayInitTypeSize_24 // TypeDefIndex: 88822
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_72 // TypeDefIndex: 61743
+	private struct __StaticArrayInitTypeSize_72 // TypeDefIndex: 88823
 	{
 	}
 }
 
 namespace Hypergryph.PlatformFacade
 {
-	public class PlatformFacade // TypeDefIndex: 61740
+	public class PlatformFacade // TypeDefIndex: 88820
 	{
 		// Methods
-		public static void SetupPlatformFont(IPlatformFont iFont); // 0x00000001841E1670-0x00000001841E1680
+		public static void SetupPlatformFont(IPlatformFont iFont); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public interface IPlatformFont // TypeDefIndex: 61741
+	public interface IPlatformFont // TypeDefIndex: 88821
 	{
 	}
 }
 
 namespace U8.SDK
 {
-	public struct ExternalPluginLoginParams // TypeDefIndex: 61603
+	public struct ExternalPluginLoginParams // TypeDefIndex: 88682
 	{
 		// Fields
 		public Action nativeLogin; // 0x00
@@ -65,7 +62,7 @@ namespace U8.SDK
 		public Action<U8MockLogin> markMockLogin; // 0x20
 	}
 
-	public struct ExternalPluginLogoutParams // TypeDefIndex: 61604
+	public struct ExternalPluginLogoutParams // TypeDefIndex: 88683
 	{
 		// Fields
 		public Action nativeLogout; // 0x00
@@ -73,7 +70,7 @@ namespace U8.SDK
 		public Action nativeOnLogoutFail; // 0x10
 	}
 
-	public struct ExternalPluginPayParams // TypeDefIndex: 61605
+	public struct ExternalPluginPayParams // TypeDefIndex: 88684
 	{
 		// Fields
 		public U8PayParams payParams; // 0x00
@@ -82,7 +79,7 @@ namespace U8.SDK
 		public Action<object> onPayFail; // 0x18
 	}
 
-	public interface IExternalPlugin // TypeDefIndex: 61606
+	public interface IExternalPlugin // TypeDefIndex: 88685
 	{
 		// Methods
 		void Init();
@@ -93,12 +90,15 @@ namespace U8.SDK
 		bool TryLoadSDKMeta(Func<SDKMeta> loadMetaNative, out SDKMeta meta);
 		void OnProductListChanged(List<U8ProductInfo> productList);
 		string GetPayAddition();
+		bool TrySetData(int type, string paramJson); // 0x00000001843FFFF0-0x0000000184400000
+		bool TryGetData(int type, string paramJson, out string data); // 0x0000000187099E40-0x0000000187099E70
+		bool TrySubmitGameData(U8ExtraGameData data); // 0x00000001843FFFF0-0x0000000184400000
 	}
 
-	public abstract class SDKCaptchaHandler // TypeDefIndex: 61609
+	public abstract class SDKCaptchaHandler // TypeDefIndex: 88688
 	{
 		// Nested types
-		public enum Status // TypeDefIndex: 61607
+		public enum Status // TypeDefIndex: 88686
 		{
 			SUC = 0,
 			SYS_BUSY = 1,
@@ -108,7 +108,7 @@ namespace U8.SDK
 			UNKNOWN = 99
 		}
 	
-		public class Result // TypeDefIndex: 61608
+		public class Result // TypeDefIndex: 88687
 		{
 			// Fields
 			[CompilerGenerated]
@@ -119,28 +119,28 @@ namespace U8.SDK
 			private string _captcha_k__BackingField; // 0x18
 	
 			// Properties
-			public Status status { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-			private int errorCode { [CompilerGenerated] set; } // 0x0000000184D8F540-0x0000000184D8F550
-			public string captcha { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public Status status { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+			private int errorCode { [CompilerGenerated] set; } // 0x000000018275FD70-0x000000018275FD80
+			public string captcha { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
 	
 			// Constructors
-			private Result(); // 0x00000001841E1670-0x00000001841E1680
+			private Result(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public static Result CreateForOutput(); // 0x0000000189DE6E20-0x0000000189DE6E64
-			public void MarkSucceed(string captcha); // 0x0000000189DE6EB8-0x0000000189DE6ED8
-			public void MarkFailed(Status status, int errorCode); // 0x0000000189DE6E8C-0x0000000189DE6EB8
-			public void MarkFailed(Status status); // 0x0000000189DE6E64-0x0000000189DE6E8C
+			public static Result CreateForOutput(); // 0x000000018C22DF9C-0x000000018C22DFE0
+			public void MarkSucceed(string captcha); // 0x000000018C22E034-0x000000018C22E054
+			public void MarkFailed(Status status, int errorCode); // 0x000000018C22E008-0x000000018C22E034
+			public void MarkFailed(Status status); // 0x000000018C22DFE0-0x000000018C22E008
 		}
 	
 		// Constructors
-		protected SDKCaptchaHandler(); // 0x00000001841E1670-0x00000001841E1680
+		protected SDKCaptchaHandler(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
 		public abstract IEnumerator FetchCaptchaCoroutine(string captchaParams, Result outResult);
 	}
 
-	public abstract class SDKExternalTools // TypeDefIndex: 61643
+	public abstract class SDKExternalTools // TypeDefIndex: 88722
 	{
 		// Fields
 		private static readonly char[] RANDOM_CHAR_MAP; // 0x00
@@ -156,19 +156,19 @@ namespace U8.SDK
 		private static int U8_SDK_SET_DATA_SET_SERVER; // 0x20
 	
 		// Properties
-		protected bool inited { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
-		protected IExternalPlugin plugin { get; } // 0x0000000189DE9390-0x0000000189DE93E0 
-		protected CaptchaMgr captchaMgr { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		protected string subChannel { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
+		protected bool inited { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829D0800-0x00000001829D0810 0x0000000182A819C0-0x0000000182A819D0
+		protected IExternalPlugin plugin { get; } // 0x000000018C22FC08-0x000000018C22FC58 
+		protected CaptchaMgr captchaMgr { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		protected string subChannel { [CompilerGenerated] set; } // 0x0000000187835950-0x0000000187835960
 	
 		// Nested types
-		protected interface IFromJSON // TypeDefIndex: 61610
+		protected interface IFromJSON // TypeDefIndex: 88689
 		{
 			// Methods
 			bool LoadFromJSON(string json);
 		}
 	
-		protected enum POSTStatus // TypeDefIndex: 61611
+		protected enum POSTStatus // TypeDefIndex: 88690
 		{
 			NONE = 0,
 			SUC = 1,
@@ -176,7 +176,7 @@ namespace U8.SDK
 			ERROR = 3
 		}
 	
-		protected enum BusType // TypeDefIndex: 61612
+		protected enum BusType // TypeDefIndex: 88691
 		{
 			NONE = 0,
 			GET_TOKEN = 1,
@@ -192,7 +192,7 @@ namespace U8.SDK
 			CONFIRM_SERVER = 11
 		}
 	
-		protected enum ErrorType // TypeDefIndex: 61613
+		protected enum ErrorType // TypeDefIndex: 88692
 		{
 			NONE = 0,
 			TIMEOUT = 1,
@@ -201,7 +201,7 @@ namespace U8.SDK
 			BUSINESS_ERROR = 4
 		}
 	
-		protected struct POSTRequest // TypeDefIndex: 61614
+		protected struct POSTRequest // TypeDefIndex: 88693
 		{
 			// Fields
 			public string url; // 0x00
@@ -210,7 +210,7 @@ namespace U8.SDK
 			public Dictionary<string, string> nullableHeaders; // 0x18
 		}
 	
-		protected struct POSTResult // TypeDefIndex: 61615
+		protected struct POSTResult // TypeDefIndex: 88694
 		{
 			// Fields
 			public POSTStatus status; // 0x00
@@ -219,10 +219,10 @@ namespace U8.SDK
 			public string error; // 0x10
 	
 			// Methods
-			public bool ServiceFailed(); // 0x0000000189DE6CF4-0x0000000189DE6CFC
+			public bool ServiceFailed(); // 0x0000000186DBC8F0-0x0000000186DBC900
 		}
 	
-		protected struct ErrMsgMeta // TypeDefIndex: 61616
+		protected struct ErrMsgMeta // TypeDefIndex: 88695
 		{
 			// Fields
 			public static readonly ErrMsgMeta EMPTY; // 0x00
@@ -233,11 +233,11 @@ namespace U8.SDK
 			public object meta; // 0x18
 	
 			// Methods
-			public bool IsEmpty(); // 0x000000018426F6A0-0x000000018426F6B0
-			public static ErrMsgMeta FromPOSTResult(BusType busType, POSTResult postRet); // 0x0000000189DE4E74-0x0000000189DE4EB4
+			public bool IsEmpty(); // 0x0000000186DBC900-0x0000000186DBC910
+			public static ErrMsgMeta FromPOSTResult(BusType busType, POSTResult postRet); // 0x000000018C22C388-0x000000018C22C3C8
 		}
 	
-		protected class CaptchaMgr // TypeDefIndex: 61618
+		protected class CaptchaMgr // TypeDefIndex: 88697
 		{
 			// Fields
 			private SDKExternalTools m_host; // 0x10
@@ -245,11 +245,11 @@ namespace U8.SDK
 			private SDKCaptchaHandler _activeHandler_k__BackingField; // 0x18
 	
 			// Properties
-			public SDKCaptchaHandler activeHandler { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public SDKCaptchaHandler activeHandler { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class _FetchCaptchaCoroutine_d__6 : IEnumerator<object> // TypeDefIndex: 61617
+			private sealed class _FetchCaptchaCoroutine_d__6 : IEnumerator<object> // TypeDefIndex: 88696
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -259,31 +259,31 @@ namespace U8.SDK
 				public Dictionary<string, object> captchaParams; // 0x30
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _FetchCaptchaCoroutine_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _FetchCaptchaCoroutine_d__6(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x0000000189DEEEE4-0x0000000189DEEF5C
-				private bool MoveNext(); // 0x0000000189DEEAFC-0x0000000189DEEE98
-				private void __m__Finally1(); // 0x0000000189DEEF5C-0x0000000189DEEF8C
+				void IDisposable.Dispose(); // 0x000000018C23561C-0x000000018C235694
+				private bool MoveNext(); // 0x000000018C235240-0x000000018C2355D0
+				private void __m__Finally1(); // 0x000000018C235694-0x000000018C2356C4
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x0000000189DEEE98-0x0000000189DEEEE4
+				void IEnumerator.Reset(); // 0x000000018C2355D0-0x000000018C23561C
 			}
 	
 			// Constructors
-			public CaptchaMgr(SDKExternalTools host); // 0x00000001853908C0-0x00000001853908D0
+			public CaptchaMgr(SDKExternalTools host); // 0x0000000184FD2410-0x0000000184FD2420
 	
 			// Methods
 			[IteratorStateMachine(typeof(_FetchCaptchaCoroutine_d__6))]
-			public IEnumerator FetchCaptchaCoroutine(Dictionary<string, object> captchaParams, SDKCaptchaHandler.Result outResult); // 0x0000000189DE4778-0x0000000189DE4804
+			public IEnumerator FetchCaptchaCoroutine(Dictionary<string, object> captchaParams, SDKCaptchaHandler.Result outResult); // 0x000000018C22BC88-0x000000018C22BD18
 		}
 	
-		protected class POSTProcedure // TypeDefIndex: 61621
+		protected class POSTProcedure // TypeDefIndex: 88700
 		{
 			// Fields
 			[CompilerGenerated]
@@ -296,26 +296,26 @@ namespace U8.SDK
 			private string _rawResponse_k__BackingField; // 0x60
 	
 			// Properties
-			protected Builder builder { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2D2D0-0x0000000182B2D2F0 0x0000000189DC5750-0x0000000189DC5774
-			public bool isServiceFinished { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
-			public ErrMsgMeta serviceError { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184DA2E80-0x0000000184DA2EA0 0x0000000189DE6CDC-0x0000000189DE6CF4
-			private string rawResponse { [CompilerGenerated] set; } // 0x00000001863CC164-0x00000001863CC174
+			protected Builder builder { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184434430-0x0000000184434450 0x000000018C20D198-0x000000018C20D1BC
+			public bool isServiceFinished { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E070-0x000000018225E080 0x000000018225E080-0x000000018225E090
+			public ErrMsgMeta serviceError { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000187250AA0-0x0000000187250AC0 0x000000018C22DF84-0x000000018C22DF9C
+			private string rawResponse { [CompilerGenerated] set; } // 0x0000000188800CB0-0x0000000188800CC0
 	
 			// Nested types
-			public struct Builder // TypeDefIndex: 61619
+			public struct Builder // TypeDefIndex: 88698
 			{
 				// Fields
 				public POSTRequest request; // 0x00
 				public BusType busType; // 0x20
 	
 				// Methods
-				public POSTProcedure Build(); // 0x0000000189DE4704-0x0000000189DE4778
+				public POSTProcedure Build(); // 0x000000018C22BC14-0x000000018C22BC88
 				public POSTProcedure<TResp> TypedBuild<TResp>()
 					where TResp : class, IFromJSON, new();
 			}
 	
 			[CompilerGenerated]
-			private sealed class _POST_d__18 : IEnumerator<object> // TypeDefIndex: 61620
+			private sealed class _POST_d__18 : IEnumerator<object> // TypeDefIndex: 88699
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -324,33 +324,33 @@ namespace U8.SDK
 				public POSTProcedure __4__this; // 0x28
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _POST_d__18(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _POST_d__18(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000189DEEF8C-0x0000000189DEF0B0
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x000000018C2356C4-0x000000018C2357F0
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x0000000189DEF0B0-0x0000000189DEF0FC
+				void IEnumerator.Reset(); // 0x000000018C2357F0-0x000000018C23583C
 			}
 	
 			// Constructors
-			public POSTProcedure(); // 0x00000001841E1670-0x00000001841E1680
+			public POSTProcedure(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public ErrMsgMeta MakeBusinessError(int errorCode); // 0x0000000184DA2E40-0x0000000184DA2E80
+			public ErrMsgMeta MakeBusinessError(int errorCode); // 0x0000000187250A60-0x0000000187250AA0
 			[IteratorStateMachine(typeof(_POST_d__18))]
-			public IEnumerator POST(SDKExternalTools host); // 0x0000000189DE6B58-0x0000000189DE6BCC
-			private void _OnServiceFinished(POSTResult postRet); // 0x0000000189DE6BCC-0x0000000189DE6CDC
-			protected virtual void HandleServiceResponse(POSTResult postRet); // 0x00000001841E1670-0x00000001841E1680
+			public IEnumerator POST(SDKExternalTools host); // 0x000000018C22DDF8-0x000000018C22DE70
+			private void _OnServiceFinished(POSTResult postRet); // 0x000000018C22DE70-0x000000018C22DF84
+			protected virtual void HandleServiceResponse(POSTResult postRet); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		protected class POSTProcedure<TResp> : POSTProcedure // TypeDefIndex: 61622
+		protected class POSTProcedure<TResp> : POSTProcedure // TypeDefIndex: 88701
 			where TResp : class, IFromJSON, new()
 		{
 			// Fields
@@ -367,7 +367,7 @@ namespace U8.SDK
 			protected override void HandleServiceResponse(POSTResult postRet);
 		}
 	
-		protected class AuthV2SessionTokenResp : IFromJSON // TypeDefIndex: 61623
+		protected class AuthV2SessionTokenResp : IFromJSON // TypeDefIndex: 88702
 		{
 			// Fields
 			public int status; // 0x10
@@ -378,27 +378,27 @@ namespace U8.SDK
 			public bool isNew; // 0x38
 	
 			// Constructors
-			public AuthV2SessionTokenResp(); // 0x00000001841E1670-0x00000001841E1680
+			public AuthV2SessionTokenResp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DE4510-0x0000000189DE4704
+			public bool LoadFromJSON(string json); // 0x000000018C22BA20-0x000000018C22BC14
 		}
 	
-		public class GetProductLsitResp : IFromJSON // TypeDefIndex: 61624
+		public class GetProductLsitResp : IFromJSON // TypeDefIndex: 88703
 		{
 			// Fields
 			public int flag; // 0x10
 			public Dictionary<string, object> desc; // 0x18
 	
 			// Constructors
-			public GetProductLsitResp(); // 0x00000001841E1670-0x00000001841E1680
+			public GetProductLsitResp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromDictionary(Dictionary<string, object> dict); // 0x0000000189DE4EB4-0x0000000189DE5118
-			public bool LoadFromJSON(string json); // 0x0000000189DE5118-0x0000000189DE51F8
+			public bool LoadFromDictionary(Dictionary<string, object> dict); // 0x0000000186145230-0x00000001861455D0
+			public bool LoadFromJSON(string json); // 0x000000018C22C3C8-0x000000018C22C4A8
 		}
 	
-		protected class AuthV2GrantResp : IFromJSON // TypeDefIndex: 61625
+		protected class AuthV2GrantResp : IFromJSON // TypeDefIndex: 88704
 		{
 			// Fields
 			public int status; // 0x10
@@ -414,13 +414,13 @@ namespace U8.SDK
 			public Dictionary<string, object> captcha; // 0x60
 	
 			// Constructors
-			public AuthV2GrantResp(); // 0x00000001841E1670-0x00000001841E1680
+			public AuthV2GrantResp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DE4244-0x0000000189DE4510
+			public bool LoadFromJSON(string json); // 0x000000018C22B754-0x000000018C22BA20
 		}
 	
-		protected class ServerListResp : IFromJSON // TypeDefIndex: 61627
+		protected class ServerListResp : IFromJSON // TypeDefIndex: 88706
 		{
 			// Fields
 			public int status; // 0x10
@@ -428,7 +428,7 @@ namespace U8.SDK
 			public List<ServerData> data; // 0x20
 	
 			// Nested types
-			public struct ServerData // TypeDefIndex: 61626
+			public struct ServerData // TypeDefIndex: 88705
 			{
 				// Fields
 				public string serverId; // 0x00
@@ -442,39 +442,39 @@ namespace U8.SDK
 			}
 	
 			// Constructors
-			public ServerListResp(); // 0x00000001841E1670-0x00000001841E1680
+			public ServerListResp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DEE38C-0x0000000189DEE884
-			public List<U8ServerInfo> ToServerInfo(); // 0x0000000189DEE884-0x0000000189DEEAFC
+			public bool LoadFromJSON(string json); // 0x000000018C234AD0-0x000000018C234FC8
+			public List<U8ServerInfo> ToServerInfo(); // 0x000000018C234FC8-0x000000018C235240
 		}
 	
-		protected class ConfirmServerResp : IFromJSON // TypeDefIndex: 61628
+		protected class ConfirmServerResp : IFromJSON // TypeDefIndex: 88707
 		{
 			// Fields
 			public int status; // 0x10
 			public string msg; // 0x18
 	
 			// Constructors
-			public ConfirmServerResp(); // 0x00000001841E1670-0x00000001841E1680
+			public ConfirmServerResp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DE49F4-0x0000000189DE4AD0
+			public bool LoadFromJSON(string json); // 0x000000018C22BF08-0x000000018C22BFE4
 		}
 	
-		protected class ConfirmOrderU1Resp : IFromJSON // TypeDefIndex: 61629
+		protected class ConfirmOrderU1Resp : IFromJSON // TypeDefIndex: 88708
 		{
 			// Fields
 			public int status; // 0x10
 	
 			// Constructors
-			public ConfirmOrderU1Resp(); // 0x00000001841E1670-0x00000001841E1680
+			public ConfirmOrderU1Resp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DE4958-0x0000000189DE49F4
+			public bool LoadFromJSON(string json); // 0x000000018C22BE6C-0x000000018C22BF08
 		}
 	
-		protected class CreateOrderU1Resp : IFromJSON // TypeDefIndex: 61631
+		protected class CreateOrderU1Resp : IFromJSON // TypeDefIndex: 88710
 		{
 			// Fields
 			public int status; // 0x10
@@ -483,7 +483,7 @@ namespace U8.SDK
 			public Data data; // 0x28
 	
 			// Nested types
-			public struct Data // TypeDefIndex: 61630
+			public struct Data // TypeDefIndex: 88709
 			{
 				// Fields
 				public string orderId; // 0x00
@@ -495,37 +495,37 @@ namespace U8.SDK
 			}
 	
 			// Constructors
-			public CreateOrderU1Resp(); // 0x00000001841E1670-0x00000001841E1680
+			public CreateOrderU1Resp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DE4AD0-0x0000000189DE4D5C
-			public U8OrderInfo ToOrderInfo(); // 0x0000000189DE4D5C-0x0000000189DE4E74
+			public bool LoadFromJSON(string json); // 0x000000018C22BFE4-0x000000018C22C270
+			public U8OrderInfo ToOrderInfo(); // 0x000000018C22C270-0x000000018C22C388
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 61632
+		private sealed class __c // TypeDefIndex: 88711
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Action<string> __9__43_0; // 0x08
-			public static Action<string> __9__43_1; // 0x10
-			public static Action __9__44_0; // 0x18
-			public static Action __9__44_1; // 0x20
+			public static Action<string> __9__46_0; // 0x08
+			public static Action<string> __9__46_1; // 0x10
+			public static Action __9__47_0; // 0x18
+			public static Action __9__47_1; // 0x20
 	
 			// Constructors
-			static __c(); // 0x0000000184D40390-0x0000000184D403F0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E4BE0-0x00000001871E4C40
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LoginWithPlugin_b__43_0(string extension); // 0x0000000184D26E00-0x0000000184D26E80
-			internal void _LoginWithPlugin_b__43_1(string message); // 0x0000000189DF02D4-0x0000000189DF0340
-			internal void _LogoutWithPlugin_b__44_0(); // 0x0000000189DF0340-0x0000000189DF03C0
-			internal void _LogoutWithPlugin_b__44_1(); // 0x0000000189DF03C0-0x0000000189DF0440
+			internal void _LoginWithPlugin_b__46_0(string extension); // 0x0000000187187450-0x00000001871874D0
+			internal void _LoginWithPlugin_b__46_1(string message); // 0x000000018C2370B4-0x000000018C237120
+			internal void _LogoutWithPlugin_b__47_0(); // 0x000000018C237120-0x000000018C2371A0
+			internal void _LogoutWithPlugin_b__47_1(); // 0x000000018C2371A0-0x000000018C237220
 		}
 	
 		[CompilerGenerated]
-		private sealed class __NextFrameCoroutine_d__61 : IEnumerator<object> // TypeDefIndex: 61633
+		private sealed class __NextFrameCoroutine_d__64 : IEnumerator<object> // TypeDefIndex: 88712
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -533,23 +533,23 @@ namespace U8.SDK
 			public Action action; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __NextFrameCoroutine_d__61(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __NextFrameCoroutine_d__64(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF2EAC-0x0000000189DF2EFC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000187066840-0x00000001870668A0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2EFC-0x0000000189DF2F48
+			void IEnumerator.Reset(); // 0x000000018C238830-0x000000018C23887C
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SDKInterfaceAuthV2SessionToken_d__114 : IEnumerator<object> // TypeDefIndex: 61634
+		private sealed class _SDKInterfaceAuthV2SessionToken_d__117 : IEnumerator<object> // TypeDefIndex: 88713
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -561,23 +561,23 @@ namespace U8.SDK
 			private POSTProcedure<AuthV2SessionTokenResp> _postImpl_5__2; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SDKInterfaceAuthV2SessionToken_d__114(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _SDKInterfaceAuthV2SessionToken_d__117(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DEF1AC-0x0000000189DEF650
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C2358F4-0x000000018C235DAC
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DEF650-0x0000000189DEF69C
+			void IEnumerator.Reset(); // 0x000000018C235DAC-0x000000018C235DF8
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SDKInterfaceAuthV2OAuth2Code_d__115 : IEnumerator<object> // TypeDefIndex: 61635
+		private sealed class _SDKInterfaceAuthV2OAuth2Code_d__118 : IEnumerator<object> // TypeDefIndex: 88714
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -588,23 +588,23 @@ namespace U8.SDK
 			public Action onSessionInvalid; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SDKInterfaceAuthV2OAuth2Code_d__115(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _SDKInterfaceAuthV2OAuth2Code_d__118(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DEF0FC-0x0000000189DEF160
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C23583C-0x000000018C2358A8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DEF160-0x0000000189DEF1AC
+			void IEnumerator.Reset(); // 0x000000018C2358A8-0x000000018C2358F4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __AuthV2GrantImpl_d__121 : IEnumerator<object> // TypeDefIndex: 61636
+		private sealed class __AuthV2GrantImpl_d__124 : IEnumerator<object> // TypeDefIndex: 88715
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -619,23 +619,23 @@ namespace U8.SDK
 			private SDKCaptchaHandler.Result _captchaRet_5__5; // 0x58
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __AuthV2GrantImpl_d__121(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __AuthV2GrantImpl_d__124(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF1D28-0x0000000189DF2484
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C2376E4-0x000000018C237E74
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2484-0x0000000189DF24D0
+			void IEnumerator.Reset(); // 0x000000018C237E74-0x000000018C237EC0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ConfirmOrderU1Coroutine_d__124 : IEnumerator<object> // TypeDefIndex: 61637
+		private sealed class __ConfirmOrderU1Coroutine_d__127 : IEnumerator<object> // TypeDefIndex: 88716
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -646,23 +646,23 @@ namespace U8.SDK
 			public SDKPromise<U8ConfirmOrderResult> promise; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __ConfirmOrderU1Coroutine_d__124(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __ConfirmOrderU1Coroutine_d__127(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF24D0-0x0000000189DF26D4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C237EC0-0x000000018C2380D0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF26D4-0x0000000189DF2720
+			void IEnumerator.Reset(); // 0x000000018C2380D0-0x000000018C23811C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __PollOrderStatusCoroutine_d__125 : IEnumerator<object> // TypeDefIndex: 61638
+		private sealed class __PollOrderStatusCoroutine_d__128 : IEnumerator<object> // TypeDefIndex: 88717
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -676,23 +676,23 @@ namespace U8.SDK
 			private POSTProcedure<ConfirmOrderU1Resp> _postImpl_5__5; // 0x68
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __PollOrderStatusCoroutine_d__125(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __PollOrderStatusCoroutine_d__128(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF2F48-0x0000000189DF340C
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C23887C-0x000000018C238D54
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF340C-0x0000000189DF3458
+			void IEnumerator.Reset(); // 0x000000018C238D54-0x000000018C238DA0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetServerListCoroutine_d__126 : IEnumerator<object> // TypeDefIndex: 61639
+		private sealed class __GetServerListCoroutine_d__129 : IEnumerator<object> // TypeDefIndex: 88718
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -703,23 +703,23 @@ namespace U8.SDK
 			private POSTProcedure<ServerListResp> _postImpl_5__2; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetServerListCoroutine_d__126(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GetServerListCoroutine_d__129(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF2B20-0x0000000189DF2DC8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C23852C-0x000000018C2387E4
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2DC8-0x0000000189DF2E14
+			void IEnumerator.Reset(); // 0x000000018C2387E4-0x000000018C238830
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ConfirmServerListCoroutine_d__128 : IEnumerator<object> // TypeDefIndex: 61640
+		private sealed class __ConfirmServerListCoroutine_d__131 : IEnumerator<object> // TypeDefIndex: 88719
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -731,23 +731,23 @@ namespace U8.SDK
 			private POSTProcedure<ConfirmServerResp> _postImpl_5__2; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __ConfirmServerListCoroutine_d__128(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __ConfirmServerListCoroutine_d__131(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF2720-0x0000000189DF2AD4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C23811C-0x000000018C2384E0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2AD4-0x0000000189DF2B20
+			void IEnumerator.Reset(); // 0x000000018C2384E0-0x000000018C23852C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __SendCreateOrderU1Coroutine_d__129 : IEnumerator<object> // TypeDefIndex: 61641
+		private sealed class __SendCreateOrderU1Coroutine_d__132 : IEnumerator<object> // TypeDefIndex: 88720
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -758,23 +758,23 @@ namespace U8.SDK
 			private POSTProcedure<CreateOrderU1Resp> _postImpl_5__2; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __SendCreateOrderU1Coroutine_d__129(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __SendCreateOrderU1Coroutine_d__132(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF3514-0x0000000189DF37AC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C238E64-0x000000018C23910C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF37AC-0x0000000189DF37F8
+			void IEnumerator.Reset(); // 0x000000018C23910C-0x000000018C239158
 		}
 	
 		[CompilerGenerated]
-		private sealed class __SendCreateOrderFailCoroutine_d__130 : IEnumerator<object> // TypeDefIndex: 61642
+		private sealed class __SendCreateOrderFailCoroutine_d__133 : IEnumerator<object> // TypeDefIndex: 88721
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -782,62 +782,65 @@ namespace U8.SDK
 			public SDKPromise<U8OrderInfo> promise; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __SendCreateOrderFailCoroutine_d__130(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __SendCreateOrderFailCoroutine_d__133(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF3458-0x0000000189DF34C8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C238DA0-0x000000018C238E18
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF34C8-0x0000000189DF3514
+			void IEnumerator.Reset(); // 0x000000018C238E18-0x000000018C238E64
 		}
 	
 		// Constructors
-		protected SDKExternalTools(); // 0x00000001841E1670-0x00000001841E1680
-		static SDKExternalTools(); // 0x0000000184B47280-0x0000000184B473C0
+		protected SDKExternalTools(); // 0x0000000186805BA0-0x0000000186805BB0
+		static SDKExternalTools(); // 0x0000000186FC0D90-0x0000000186FC0ED0
 	
 		// Methods
 		public static bool SDKInterfaceInitExternalTools<ConcreteType>()
 			where ConcreteType : SDKExternalTools;
-		public static SDKExternalTools GetInstance(); // 0x00000001835A5050-0x00000001835A50D0
-		public static bool HasInstance(); // 0x0000000189DE76D4-0x0000000189DE771C
-		public string PublicServiceSignKey(); // 0x0000000189DE7BB4-0x0000000189DE7C00
-		public SDKPromise<List<U8ProductInfo>> SDKInterfaceProductListV2(); // 0x0000000189DE8580-0x0000000189DE8628
-		public void NotifyProductListUpdated(List<U8ProductInfo> productList); // 0x0000000189DE7B5C-0x0000000189DE7BB4
-		public string SDKInterfaceSDKToken(); // 0x0000000189DE8628-0x0000000189DE86B0
-		public static string MakeHttpPostParam(Dictionary<string, object> param); // 0x0000000185395194-0x000000018539519C
-		public void LoginWithPlugin(Action nativeLogin, Action<string> nativeLoginCustom, Action<U8MockLogin> markMockLogin); // 0x0000000183AFA240-0x0000000183AFA500
-		public void LogoutWithPlugin(Action nativeLogout); // 0x0000000189DE7908-0x0000000189DE7B5C
-		public void SDKInterfacePayWithPlugin(U8PayParams payParams, Func<U8PayParams, SDKPromise<U8PayResult>> nativePay, Action<U8PayResult> onSuc, Action<object> onFail); // 0x0000000189DE8458-0x0000000189DE8580
-		public string SDKInterfaceGetPayAddition(); // 0x0000000189DE83A4-0x0000000189DE8458
-		public static void StaticLog(string content); // 0x0000000189DE87E0-0x0000000189DE8878
-		public static void StaticLogWarning(string content); // 0x0000000189DE8748-0x0000000189DE87E0
-		public static void StaticLogError(string content); // 0x0000000189DE86B0-0x0000000189DE8748
-		public static void RegisterPlugin(IExternalPlugin plugin); // 0x00000001835A1FB0-0x00000001835A20D0
+		public static SDKExternalTools GetInstance(); // 0x00000001859C1B80-0x00000001859C1C00
+		public static bool HasInstance(); // 0x00000001859C2770-0x00000001859C27D0
+		public string PublicServiceSignKey(); // 0x000000018C22E764-0x000000018C22E7B0
+		public SDKPromise<List<U8ProductInfo>> SDKInterfaceProductListV2(); // 0x00000001859BD110-0x00000001859BD1B0
+		public void NotifyProductListUpdated(List<U8ProductInfo> productList); // 0x0000000186ECFAF0-0x0000000186ECFBA0
+		public string SDKInterfaceSDKToken(); // 0x000000018C22F14C-0x000000018C22F1D4
+		public static string MakeHttpPostParam(Dictionary<string, object> param); // 0x0000000187838CDC-0x0000000187838CE4
+		public bool TrySetDataWithPlugin(int type, string paramJson); // 0x00000001859C14D0-0x00000001859C1580
+		public bool TryGetDataWithPlugin(int type, string paramJson, out string data); // 0x0000000187099D60-0x0000000187099E40
+		public bool TrySubmitGameDataWithPlugin(U8ExtraGameData data); // 0x00000001859BF920-0x00000001859BF9D0
+		public void LoginWithPlugin(Action nativeLogin, Action<string> nativeLoginCustom, Action<U8MockLogin> markMockLogin); // 0x00000001859BDDF0-0x00000001859BE0C0
+		public void LogoutWithPlugin(Action nativeLogout); // 0x000000018C22E504-0x000000018C22E764
+		public void SDKInterfacePayWithPlugin(U8PayParams payParams, Func<U8PayParams, SDKPromise<U8PayResult>> nativePay, Action<U8PayResult> onSuc, Action<object> onFail); // 0x000000018C22F018-0x000000018C22F14C
+		public string SDKInterfaceGetPayAddition(); // 0x000000018C22EF64-0x000000018C22F018
+		public static void StaticLog(string content); // 0x000000018C22F304-0x000000018C22F39C
+		public static void StaticLogWarning(string content); // 0x000000018C22F26C-0x000000018C22F304
+		public static void StaticLogError(string content); // 0x000000018C22F1D4-0x000000018C22F26C
+		public static void RegisterPlugin(IExternalPlugin plugin); // 0x0000000186E61A20-0x0000000186E61B40
 		protected static T GetValueSafe<T>(Dictionary<string, object> dict, string key, T defVal = default);
-		protected string U8Url(string routeUrl); // 0x0000000189DE8878-0x0000000189DE891C
-		protected string U8urlWithoutU8(string routeUrl); // 0x0000000189DE891C-0x0000000189DE8A14
+		protected string U8Url(string routeUrl); // 0x00000001850CE2C0-0x00000001850CE370
+		protected string U8urlWithoutU8(string routeUrl); // 0x000000018C22F39C-0x000000018C22F490
 		protected static ErrMsgMeta HandleResponseFromU8<TResp>(BusType busType, POSTResult postRet, out ref TResp resp)
 			where TResp : IFromJSON, new();
-		protected static Dictionary<string, object> FromMiniJSON(string json); // 0x0000000189DE7610-0x0000000189DE76D4
-		protected static void InternalInvokeCoroutine(IEnumerator coroutine); // 0x0000000189DE771C-0x0000000189DE7778
-		protected static void InternalInvokeNextFrame(Action action); // 0x0000000189DE7778-0x0000000189DE7804
-		[IteratorStateMachine(typeof(__NextFrameCoroutine_d__61))]
-		private static IEnumerator _NextFrameCoroutine(Action action); // 0x0000000189DE91C0-0x0000000189DE921C
-		public void InitIfNot(); // 0x00000001835A2100-0x00000001835A21B0
-		protected virtual void Init(); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void SwitchAccount(); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void OnSDKError(SDKError error); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void OnInvalidProduct(int storeId); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void OnSDKExtraInfo(string jsonData); // 0x00000001841E1670-0x00000001841E1680
-		public virtual SDKMeta LoadSDKMetaFromPlugin(Func<SDKMeta> nativeLoadMeta); // 0x0000000189DE7804-0x0000000189DE7908
+		protected static Dictionary<string, object> FromMiniJSON(string json); // 0x0000000185BEBCD0-0x0000000185BEBD30
+		protected static void InternalInvokeCoroutine(IEnumerator coroutine); // 0x000000018C22E4A8-0x000000018C22E504
+		protected static void InternalInvokeNextFrame(Action action); // 0x00000001850CEC80-0x00000001850CED20
+		[IteratorStateMachine(typeof(__NextFrameCoroutine_d__64))]
+		private static IEnumerator _NextFrameCoroutine(Action action); // 0x00000001850CED20-0x00000001850CED80
+		public void InitIfNot(); // 0x00000001870F18A0-0x00000001870F1950
+		protected virtual void Init(); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void SwitchAccount(); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void OnSDKError(SDKError error); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void OnInvalidProduct(int storeId); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void OnSDKExtraInfo(string jsonData); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual SDKMeta LoadSDKMetaFromPlugin(Func<SDKMeta> nativeLoadMeta); // 0x00000001859BD280-0x00000001859BD340
 		protected abstract SDKCaptchaHandler CreateCaptchaHandler();
-		protected virtual string GetSignKey(); // 0x00000001811EC580-0x00000001811EC590
+		protected virtual string GetSignKey(); // 0x0000000185829EC0-0x0000000185829ED0
 		public abstract Dictionary<string, string> GetDeviceIDs();
 		protected abstract SDKPromise<List<U8ProductInfo>> SendGetProductListRequestV2(string paramStr);
 		protected abstract int GetPlatformKey();
@@ -847,37 +850,37 @@ namespace U8.SDK
 		protected abstract void Log(string content);
 		protected abstract void LogWarning(string content);
 		protected abstract void LogError(string content);
-		private bool _ValidatePlugin(); // 0x0000000184D36530-0x0000000184D365A0
-		private static void _AddAppIdOrAppCode(Dictionary<string, object> paramDict, SDKMeta meta); // 0x0000000189DE8A14-0x0000000189DE8AAC
-		private static string _MakeGetProductListV2Param(SDKMeta meta); // 0x0000000189DE8EE4-0x0000000189DE900C
-		[IteratorStateMachine(typeof(_SDKInterfaceAuthV2SessionToken_d__114))]
-		public IEnumerator SDKInterfaceAuthV2SessionToken(SDKMeta meta, string channelToken, SDKPromiseWithResult<U8LoginV2Result> promise); // 0x0000000189DE7F18-0x0000000189DE7FC0
-		[IteratorStateMachine(typeof(_SDKInterfaceAuthV2OAuth2Code_d__115))]
-		public IEnumerator SDKInterfaceAuthV2OAuth2Code(string sessionToken, SDKPromiseWithResult<U8GrantResult> promise, Action onSessionInvalid); // 0x0000000189DE7E70-0x0000000189DE7F18
-		public SDKPromise<U8ConfirmOrderResult> SDKInterfaceConfirmOrderU1(string orderId, string extension); // 0x0000000189DE7FC0-0x0000000189DE8074
-		public SDKPromise<List<U8ServerInfo>> SDKInterFaceGetServerList(string sessionToken); // 0x0000000189DE7D54-0x0000000189DE7E70
-		public SDKPromise<U8ConfirmServerResult> SDKInterFaceConfirmServer(string sessionToken, string serverId); // 0x0000000189DE7C00-0x0000000189DE7D54
-		public SDKPromise<U8OrderInfo> SDKInterfaceCreateOrderU1(string sessionToken, string productId, string signParams); // 0x0000000189DE8074-0x0000000189DE83A4
-		private static string _MakeGrantParam(string sessionToken, int type, string captcha); // 0x0000000189DE900C-0x0000000189DE91C0
-		[IteratorStateMachine(typeof(__AuthV2GrantImpl_d__121))]
-		private IEnumerator _AuthV2GrantImpl(string sessionToken, SDKPromiseWithResult<U8GrantResult> promise, Action onSessionInvalid); // 0x0000000189DE8AAC-0x0000000189DE8B54
-		private static string _MakeCheckOrderV1Param(string orderId, string extension); // 0x0000000189DE8D30-0x0000000189DE8E28
-		private static string _MakeConfirmOrderV1Param(string orderId); // 0x0000000189DE8E28-0x0000000189DE8EE4
-		[IteratorStateMachine(typeof(__ConfirmOrderU1Coroutine_d__124))]
-		private IEnumerator _ConfirmOrderU1Coroutine(string orderId, string extension, SDKPromise<U8ConfirmOrderResult> promise); // 0x0000000189DE8B54-0x0000000189DE8BFC
-		[IteratorStateMachine(typeof(__PollOrderStatusCoroutine_d__125))]
-		private IEnumerator _PollOrderStatusCoroutine(string orderId, string extension, SDKPromise<U8ConfirmOrderResult> promise); // 0x0000000189DE921C-0x0000000189DE92A8
-		[IteratorStateMachine(typeof(__GetServerListCoroutine_d__126))]
-		private IEnumerator _GetServerListCoroutine(string paramStr, SDKPromise<List<U8ServerInfo>> promise); // 0x0000000189DE8CA4-0x0000000189DE8D30
-		[IteratorStateMachine(typeof(__ConfirmServerListCoroutine_d__128))]
-		private IEnumerator _ConfirmServerListCoroutine(string paramStr, string serverId, SDKPromise<U8ConfirmServerResult> promise); // 0x0000000189DE8BFC-0x0000000189DE8CA4
-		[IteratorStateMachine(typeof(__SendCreateOrderU1Coroutine_d__129))]
-		private IEnumerator _SendCreateOrderU1Coroutine(string paramStr, SDKPromise<U8OrderInfo> promise); // 0x0000000189DE9304-0x0000000189DE9390
-		[IteratorStateMachine(typeof(__SendCreateOrderFailCoroutine_d__130))]
-		private IEnumerator _SendCreateOrderFailCoroutine(SDKPromise<U8OrderInfo> promise); // 0x0000000189DE92A8-0x0000000189DE9304
+		private bool _ValidatePlugin(); // 0x00000001859BD480-0x00000001859BD4F0
+		private static void _AddAppIdOrAppCode(Dictionary<string, object> paramDict, SDKMeta meta); // 0x00000001859BED10-0x00000001859BEDA0
+		private static string _MakeGetProductListV2Param(SDKMeta meta); // 0x00000001859BD340-0x00000001859BD480
+		[IteratorStateMachine(typeof(_SDKInterfaceAuthV2SessionToken_d__117))]
+		public IEnumerator SDKInterfaceAuthV2SessionToken(SDKMeta meta, string channelToken, SDKPromiseWithResult<U8LoginV2Result> promise); // 0x000000018C22EAD0-0x000000018C22EB7C
+		[IteratorStateMachine(typeof(_SDKInterfaceAuthV2OAuth2Code_d__118))]
+		public IEnumerator SDKInterfaceAuthV2OAuth2Code(string sessionToken, SDKPromiseWithResult<U8GrantResult> promise, Action onSessionInvalid); // 0x000000018C22EA24-0x000000018C22EAD0
+		public SDKPromise<U8ConfirmOrderResult> SDKInterfaceConfirmOrderU1(string orderId, string extension); // 0x000000018C22EB7C-0x000000018C22EC34
+		public SDKPromise<List<U8ServerInfo>> SDKInterFaceGetServerList(string sessionToken); // 0x000000018C22E908-0x000000018C22EA24
+		public SDKPromise<U8ConfirmServerResult> SDKInterFaceConfirmServer(string sessionToken, string serverId); // 0x000000018C22E7B0-0x000000018C22E908
+		public SDKPromise<U8OrderInfo> SDKInterfaceCreateOrderU1(string sessionToken, string productId, string signParams); // 0x000000018C22EC34-0x000000018C22EF64
+		private static string _MakeGrantParam(string sessionToken, int type, string captcha); // 0x000000018C22F8D8-0x000000018C22FA8C
+		[IteratorStateMachine(typeof(__AuthV2GrantImpl_d__124))]
+		private IEnumerator _AuthV2GrantImpl(string sessionToken, SDKPromiseWithResult<U8GrantResult> promise, Action onSessionInvalid); // 0x000000018C22F490-0x000000018C22F53C
+		private static string _MakeCheckOrderV1Param(string orderId, string extension); // 0x000000018C22F724-0x000000018C22F81C
+		private static string _MakeConfirmOrderV1Param(string orderId); // 0x000000018C22F81C-0x000000018C22F8D8
+		[IteratorStateMachine(typeof(__ConfirmOrderU1Coroutine_d__127))]
+		private IEnumerator _ConfirmOrderU1Coroutine(string orderId, string extension, SDKPromise<U8ConfirmOrderResult> promise); // 0x000000018C22F53C-0x000000018C22F5E8
+		[IteratorStateMachine(typeof(__PollOrderStatusCoroutine_d__128))]
+		private IEnumerator _PollOrderStatusCoroutine(string orderId, string extension, SDKPromise<U8ConfirmOrderResult> promise); // 0x000000018C22FA8C-0x000000018C22FB1C
+		[IteratorStateMachine(typeof(__GetServerListCoroutine_d__129))]
+		private IEnumerator _GetServerListCoroutine(string paramStr, SDKPromise<List<U8ServerInfo>> promise); // 0x000000018C22F694-0x000000018C22F724
+		[IteratorStateMachine(typeof(__ConfirmServerListCoroutine_d__131))]
+		private IEnumerator _ConfirmServerListCoroutine(string paramStr, string serverId, SDKPromise<U8ConfirmServerResult> promise); // 0x000000018C22F5E8-0x000000018C22F694
+		[IteratorStateMachine(typeof(__SendCreateOrderU1Coroutine_d__132))]
+		private IEnumerator _SendCreateOrderU1Coroutine(string paramStr, SDKPromise<U8OrderInfo> promise); // 0x000000018C22FB78-0x000000018C22FC08
+		[IteratorStateMachine(typeof(__SendCreateOrderFailCoroutine_d__133))]
+		private IEnumerator _SendCreateOrderFailCoroutine(SDKPromise<U8OrderInfo> promise); // 0x000000018C22FB1C-0x000000018C22FB78
 	}
 
-	public struct SDKExtraData // TypeDefIndex: 61644
+	public struct SDKExtraData // TypeDefIndex: 88723
 	{
 		// Fields
 		public static readonly SDKExtraData EMPTY; // 0x00
@@ -885,39 +888,39 @@ namespace U8.SDK
 		public Dictionary<string, object> msg; // 0x08
 	
 		// Constructors
-		static SDKExtraData(); // 0x0000000184D4E810-0x0000000184D4E860
+		static SDKExtraData(); // 0x00000001871E8550-0x00000001871E85A0
 	
 		// Methods
-		public static SDKExtraData FromJson(string jsonStr); // 0x0000000184441A40-0x0000000184441BC0
+		public static SDKExtraData FromJson(string jsonStr); // 0x00000001859BF1F0-0x00000001859BF370
 	}
 
-	public abstract class SDKExternalToolsShortcut : SDKExternalTools // TypeDefIndex: 61649
+	public abstract class SDKExternalToolsShortcut : SDKExternalTools // TypeDefIndex: 88728
 	{
 		// Nested types
-		protected struct U8ProductListDataV2 : SDKExternalTools.IFromJSON // TypeDefIndex: 61645
+		protected struct U8ProductListDataV2 : SDKExternalTools.IFromJSON // TypeDefIndex: 88724
 		{
 			// Fields
 			public List<U8ProductInfo> productList; // 0x00
 	
 			// Methods
-			public bool LoadFromJSON(string json); // 0x0000000189DF4498-0x0000000189DF4740
-			private static bool _BuildProductInfo(U8ProductInfo outInfo, Dictionary<string, object> dict); // 0x0000000189DF4740-0x0000000189DF4908
+			public bool LoadFromJSON(string json); // 0x0000000185BEC1F0-0x0000000185BEC4B0
+			private static bool _BuildProductInfo(U8ProductInfo outInfo, Dictionary<string, object> dict); // 0x0000000185BEC000-0x0000000185BEC1F0
 		}
 	
-		public enum RequestConnPolicy // TypeDefIndex: 61646
+		public enum RequestConnPolicy // TypeDefIndex: 88725
 		{
 			DEFAULT = 0,
 			CLOSE_EACH_CON = 1
 		}
 	
-		public struct RequestHeaderInjectOptions // TypeDefIndex: 61647
+		public struct RequestHeaderInjectOptions // TypeDefIndex: 88726
 		{
 			// Fields
 			public RequestConnPolicy policy; // 0x00
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 61648
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 88727
 		{
 			// Fields
 			public SDKPromise<List<U8ProductInfo>> promise; // 0x10
@@ -926,25 +929,25 @@ namespace U8.SDK
 			public Action<SDKExternalTools.POSTResult> callback; // 0x40
 	
 			// Constructors
-			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass10_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _SendGetProductListRequestV2_b__0(SDKExternalTools.POSTResult postRet); // 0x0000000189DF0518-0x0000000189DF065C
-			internal void _SendGetProductListRequestV2_b__1(); // 0x0000000189DF065C-0x0000000189DF0694
+			internal void _SendGetProductListRequestV2_b__0(SDKExternalTools.POSTResult postRet); // 0x0000000186DBC800-0x0000000186DBC8F0
+			internal void _SendGetProductListRequestV2_b__1(); // 0x00000001856B7B20-0x00000001856B7B60
 		}
 	
 		// Constructors
-		protected SDKExternalToolsShortcut(); // 0x0000000184D778E0-0x0000000184D77920
+		protected SDKExternalToolsShortcut(); // 0x000000018721F320-0x000000018721F360
 	
 		// Methods
-		protected sealed override SDKPromise<List<U8ProductInfo>> SendGetProductListRequestV2(string paramStr); // 0x0000000189DE7404-0x0000000189DE75D4
-		public override Dictionary<string, string> GetDeviceIDs(); // 0x0000000189DE7100-0x0000000189DE720C
-		public static string GetU8DeviceID(); // 0x0000000189DE720C-0x0000000189DE732C
-		public static void InjectRequestHeaders(ref Dictionary<string, string> headers, RequestHeaderInjectOptions policy); // 0x0000000189DE732C-0x0000000189DE7404
-		private string _GetProductListV1Url(); // 0x0000000189DE75D4-0x0000000189DE7610
+		protected sealed override SDKPromise<List<U8ProductInfo>> SendGetProductListRequestV2(string paramStr); // 0x00000001850CE090-0x00000001850CE280
+		public override Dictionary<string, string> GetDeviceIDs(); // 0x000000018C22E27C-0x000000018C22E388
+		public static string GetU8DeviceID(); // 0x000000018C22E388-0x000000018C22E4A8
+		public static void InjectRequestHeaders(ref Dictionary<string, string> headers, RequestHeaderInjectOptions policy); // 0x00000001856B7B60-0x00000001856B7C40
+		private string _GetProductListV1Url(); // 0x00000001850CE280-0x00000001850CE2C0
 	}
 
-	public abstract class U8SDKInterface // TypeDefIndex: 61665
+	public abstract class U8SDKInterface // TypeDefIndex: 88744
 	{
 		// Fields
 		private static U8SDKInterface m_instance; // 0x00
@@ -956,34 +959,35 @@ namespace U8.SDK
 		private AuthStatus m_authStatus; // 0x68
 		private string m_loginExtV1; // 0x88
 		private U8MockLogin m_mockLogin; // 0x90
-		private List<U8ProductInfo> m_productList; // 0xA0
-		private bool? m_isNativePlugin; // 0xA8
-		private V2LoginStatus m_loginStatusV2; // 0xB0
+		private U8UserInfo? m_cachedUserInfo; // 0xA0
+		private List<U8ProductInfo> m_productList; // 0xB0
+		private bool? m_isNativePlugin; // 0xB8
+		private V2LoginStatus m_loginStatusV2; // 0xC0
 		private static int U8_SDK_SET_DATA_SET_SESSION_TOKEN; // 0x08
 		private static int U8_SDK_SET_DATA_GET_PRODUCT_LIST; // 0x0C
 		[CompilerGenerated]
 		private static ReceiverProductListResult onReceiverProductlist; // 0x10
-		private GameServerTimeCache m_gameServerTimeCache; // 0xB8
+		private GameServerTimeCache m_gameServerTimeCache; // 0xC8
 	
 		// Properties
-		public static U8SDKInterface Instance { get; } // 0x0000000183A72EC0-0x0000000183A73090 
-		public bool isNativePlugin { get; } // 0x0000000183AF78D0-0x0000000183AF7950 
-		public string uid { get; } // 0x0000000184D86230-0x0000000184D86240 
-		public string cachedUid { get; set; } // 0x0000000183811920-0x0000000183811960 0x0000000183F4BAD0-0x0000000183F4BB30
-		public string oauth2token { get; } // 0x0000000184D862A0-0x0000000184D862B0 
-		public string oauth2code { get; } // 0x0000000184D862B0-0x0000000184D862C0 
-		public static bool isInterfaceDisabled { get; } // 0x00000001812081B0-0x0000000181208610 
-		public string sessionToken { get; } // 0x0000000184D86250-0x0000000184D86260 
-		public GameServerTimeCache serverCacheTime { get; set; } // 0x0000000184DA2EA0-0x0000000184DA2EC0 0x0000000184DA2EC0-0x0000000184DA2EE0
+		public static U8SDKInterface Instance { get; } // 0x0000000185BC5B00-0x0000000185BC5CD0 
+		public bool isNativePlugin { get; } // 0x00000001859C27D0-0x00000001859C2860 
+		public string uid { get; } // 0x0000000187232F80-0x0000000187232F90 
+		public string cachedUid { get; set; } // 0x0000000185753250-0x0000000185753290 0x000000018611EBF0-0x000000018611EC50
+		public string oauth2token { get; } // 0x00000001829CD170-0x00000001829CD180 
+		public string oauth2code { get; } // 0x0000000187232FC0-0x0000000187232FD0 
+		public static bool isInterfaceDisabled { get; } // 0x00000001843FFFF0-0x0000000184400000 
+		public string sessionToken { get; } // 0x0000000187236200-0x0000000187236210 
+		public GameServerTimeCache serverCacheTime { get; set; } // 0x0000000187250AC0-0x0000000187250AE0 0x0000000187250AE0-0x0000000187250B00
 	
 		// Events
 		private static event ReceiverProductListResult onReceiverProductlist {
-			add; // 0x0000000189DF5E9C-0x0000000189DF5F70
-			remove; // 0x0000000189DF5FC0-0x0000000189DF6094
+			add; // 0x0000000186DF8F20-0x0000000186DF9010
+			remove; // 0x0000000186DF9010-0x0000000186DF9100
 		}
 	
 		// Nested types
-		public struct AuthStatus // TypeDefIndex: 61650
+		public struct AuthStatus // TypeDefIndex: 88729
 		{
 			// Fields
 			public static readonly AuthStatus EMPTY; // 0x00
@@ -993,15 +997,15 @@ namespace U8.SDK
 			public string sessionToken; // 0x18
 		}
 	
-		private struct V2LoginStatus // TypeDefIndex: 61651
+		private struct V2LoginStatus // TypeDefIndex: 88730
 		{
 			// Fields
 			public string sessionToken; // 0x00
 		}
 	
-		public delegate void ReceiverProductListResult(Dictionary<string, object> msg); // TypeDefIndex: 61652; 0x0000000182B46B90-0x0000000182B46BA0
+		public delegate void ReceiverProductListResult(Dictionary<string, object> msg); // TypeDefIndex: 88731; 0x0000000185B78EA0-0x0000000185B78EB0
 	
-		public struct GameServerTimeCache // TypeDefIndex: 61653
+		public struct GameServerTimeCache // TypeDefIndex: 88732
 		{
 			// Fields
 			public long cacheTime; // 0x00
@@ -1010,7 +1014,7 @@ namespace U8.SDK
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0<ToolType> // TypeDefIndex: 61654
+		private sealed class __c__DisplayClass52_0<ToolType> // TypeDefIndex: 88733
 			where ToolType : SDKExternalTools
 		{
 			// Fields
@@ -1020,7 +1024,7 @@ namespace U8.SDK
 			public Action __9__3;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _V2PublicInit_b__0(string obj);
@@ -1030,7 +1034,7 @@ namespace U8.SDK
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0 // TypeDefIndex: 61655
+		private sealed class __c__DisplayClass56_0 // TypeDefIndex: 88734
 		{
 			// Fields
 			public U8SDKInterface __4__this; // 0x10
@@ -1038,14 +1042,14 @@ namespace U8.SDK
 			public bool isNew; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass55_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass56_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __onLoginSuc_b__0(); // 0x0000000184CE3A40-0x0000000184CE3AD0
+			internal void __onLoginSuc_b__0(); // 0x000000018491D520-0x000000018491D890
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0 // TypeDefIndex: 61656
+		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 88735
 		{
 			// Fields
 			public SDKExternalTools externalTools; // 0x10
@@ -1055,31 +1059,31 @@ namespace U8.SDK
 			public Action<object> __9__2; // 0x30
 	
 			// Constructors
-			public __c__DisplayClass57_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass58_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _PublicGetProductListV2_b__0(); // 0x0000000189DF08C8-0x0000000189DF09E8
-			internal void _PublicGetProductListV2_b__1(List<U8ProductInfo> productList); // 0x0000000189DF09E8-0x0000000189DF0CBC
-			internal void _PublicGetProductListV2_b__2(object rejectObj); // 0x0000000189DF0CBC-0x0000000189DF0CE0
+			internal void _PublicGetProductListV2_b__0(); // 0x000000018491D890-0x000000018491F9A0
+			internal void _PublicGetProductListV2_b__1(List<U8ProductInfo> productList); // 0x000000018491F9A0-0x0000000184921C00
+			internal void _PublicGetProductListV2_b__2(object rejectObj); // 0x0000000184921C00-0x0000000184921C30
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_1 // TypeDefIndex: 61657
+		private sealed class __c__DisplayClass58_1 // TypeDefIndex: 88736
 		{
 			// Fields
 			public List<U8ProductInfo> productList; // 0x10
 			public ReceiverProductListResult receiver; // 0x18
-			public __c__DisplayClass57_0 CS___8__locals1; // 0x20
+			public __c__DisplayClass58_0 CS___8__locals1; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass57_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass58_1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _PublicGetProductListV2_b__3(Dictionary<string, object> msg); // 0x0000000189DF0CE0-0x0000000189DF1620
+			internal void _PublicGetProductListV2_b__3(Dictionary<string, object> msg); // 0x0000000184921C30-0x00000001849249E0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass69_0 // TypeDefIndex: 61658
+		private sealed class __c__DisplayClass73_0 // TypeDefIndex: 88737
 		{
 			// Fields
 			public U8PayParams payParams; // 0x10
@@ -1090,46 +1094,46 @@ namespace U8.SDK
 			public Action<object> __9__2; // 0x38
 	
 			// Constructors
-			public __c__DisplayClass69_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass73_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _PublicPay_b__0(); // 0x0000000189DF1620-0x0000000189DF17AC
-			internal void _PublicPay_b__1(U8PayResult payResult); // 0x0000000189DF17AC-0x0000000189DF1850
-			internal void _PublicPay_b__2(object payFailMsg); // 0x0000000189DF0CBC-0x0000000189DF0CE0
-			internal void _PublicPay_b__3(U8PayResult payResult); // 0x0000000189DF1850-0x0000000189DF18F4
-			internal void _PublicPay_b__4(object payFailMsg); // 0x0000000189DF0CBC-0x0000000189DF0CE0
+			internal void _PublicPay_b__0(); // 0x00000001849249E0-0x0000000184925E60
+			internal void _PublicPay_b__1(U8PayResult payResult); // 0x0000000184925E60-0x00000001849261C0
+			internal void _PublicPay_b__2(object payFailMsg); // 0x0000000184921C00-0x0000000184921C30
+			internal void _PublicPay_b__3(U8PayResult payResult); // 0x00000001849261C0-0x0000000184926520
+			internal void _PublicPay_b__4(object payFailMsg); // 0x0000000184921C00-0x0000000184921C30
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass70_0 // TypeDefIndex: 61659
+		private sealed class __c__DisplayClass74_0 // TypeDefIndex: 88738
 		{
 			// Fields
 			public U8SDKInterface __4__this; // 0x10
 			public long revenue; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass70_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass74_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __OnNativePayFulfilled_b__0(); // 0x0000000189DF18F4-0x0000000189DF1964
+			internal void __OnNativePayFulfilled_b__0(); // 0x0000000184926520-0x0000000184926840
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0 // TypeDefIndex: 61660
+		private sealed class __c__DisplayClass82_0 // TypeDefIndex: 88739
 		{
 			// Fields
 			public U8SDKInterface __4__this; // 0x10
 			public U8PayParams payParams; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass78_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass82_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __NativePay_b__0(); // 0x0000000189DF1964-0x0000000189DF19AC
+			internal void __NativePay_b__0(); // 0x0000000184926840-0x0000000184926890
 		}
 	
 		[CompilerGenerated]
-		private sealed class __NextFrameCoroutine_d__105 : IEnumerator<object> // TypeDefIndex: 61661
+		private sealed class __NextFrameCoroutine_d__112 : IEnumerator<object> // TypeDefIndex: 88740
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1137,37 +1141,37 @@ namespace U8.SDK
 			public Action call; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __NextFrameCoroutine_d__105(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __NextFrameCoroutine_d__112(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184991450-0x00000001849914B0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018492B7C0-0x000000018492B860
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2E60-0x0000000189DF2EAC
+			void IEnumerator.Reset(); // 0x000000018492B860-0x000000018492B8B0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass131_0 // TypeDefIndex: 61662
+		private sealed class __c__DisplayClass138_0 // TypeDefIndex: 88741
 		{
 			// Fields
 			public U8SDKInterface __4__this; // 0x10
 			public SDKPromise<U8AuthV2Result> promise; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass131_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass138_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __DoMockAuthV2_b__0(); // 0x0000000183F4B8E0-0x0000000183F4BA90
+			internal void __DoMockAuthV2_b__0(); // 0x000000018491C640-0x000000018491D520
 		}
 	
 		[CompilerGenerated]
-		private sealed class __LoginV2Coroutine_d__132 : IEnumerator<object> // TypeDefIndex: 61663
+		private sealed class __LoginV2Coroutine_d__139 : IEnumerator<object> // TypeDefIndex: 88742
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1178,23 +1182,23 @@ namespace U8.SDK
 			private SDKPromiseWithResult<U8LoginV2Result> _sessionTokenPromise_5__3; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoginV2Coroutine_d__132(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoginV2Coroutine_d__139(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183AF94D0-0x0000000183AF9950
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001849286D0-0x000000018492B770
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF2E14-0x0000000189DF2E60
+			void IEnumerator.Reset(); // 0x000000018492B770-0x000000018492B7C0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __AuthV2Coroutine_d__134 : IEnumerator<object> // TypeDefIndex: 61664
+		private sealed class __AuthV2Coroutine_d__141 : IEnumerator<object> // TypeDefIndex: 88743
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1204,95 +1208,101 @@ namespace U8.SDK
 			private SDKPromiseWithResult<U8GrantResult> _oauth2codePromise_5__2; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __AuthV2Coroutine_d__134(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __AuthV2Coroutine_d__141(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF1A10-0x0000000189DF1CDC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000184926890-0x0000000184928680
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF1CDC-0x0000000189DF1D28
+			void IEnumerator.Reset(); // 0x0000000184928680-0x00000001849286D0
 		}
 	
 		// Constructors
-		protected U8SDKInterface(); // 0x00000001847564D0-0x0000000184756620
-		static U8SDKInterface(); // 0x0000000184D5D230-0x0000000184D5D280
+		protected U8SDKInterface(); // 0x0000000186ABBD00-0x0000000186ABBE50
+		static U8SDKInterface(); // 0x00000001871FB8F0-0x00000001871FB940
 	
 		// Methods
-		public void CallbackInitSuc(string extConfigs); // 0x00000001849DAA10-0x00000001849DAA30
-		public void CallbackInitFail(string info); // 0x0000000189DF4BB4-0x0000000189DF4BD4
-		public void CallbackLoginSuc(string extension); // 0x00000001849DAA90-0x00000001849DAAB0
-		public void CallbackLoginFail(string info); // 0x0000000189DF4BD4-0x0000000189DF4BF4
-		public void CallbackLogout(); // 0x0000000189DF4BF4-0x0000000189DF4C18
-		public void CallbackSwitchAccount(); // 0x0000000189DF4D40-0x0000000189DF4D8C
-		public void CallbackPaySuc(string jsonData); // 0x0000000189DF4CAC-0x0000000189DF4D40
-		public void CallbackPayFail(string failMsg); // 0x0000000189DF4C18-0x0000000189DF4CAC
-		public string PublicLoadExtraConfig(); // 0x0000000185395664-0x0000000185395674
-		public void PublicSetGameVersion(string version); // 0x00000001853981E0-0x00000001853981F4
-		public ReceiverProductListResult getOnReceiverProductlist(); // 0x0000000189DF5F70-0x0000000189DF5FC0
+		public void CallbackInitSuc(string extConfigs); // 0x0000000186E54320-0x0000000186E54340
+		public void CallbackInitFail(string info); // 0x000000018C23A0B4-0x000000018C23A0D4
+		public void CallbackLoginSuc(string extension); // 0x0000000186E543A0-0x0000000186E543C0
+		public void CallbackLoginFail(string info); // 0x000000018C23A0D4-0x000000018C23A0F4
+		public void CallbackLogout(); // 0x000000018C23A0F4-0x000000018C23A118
+		public void CallbackSwitchAccount(); // 0x000000018C23A240-0x000000018C23A28C
+		public void CallbackPaySuc(string jsonData); // 0x000000018C23A1AC-0x000000018C23A240
+		public void CallbackPayFail(string failMsg); // 0x000000018C23A118-0x000000018C23A1AC
+		public string PublicLoadExtraConfig(); // 0x000000018783B1B4-0x000000018783B1C4
+		public void PublicSetGameVersion(string version); // 0x0000000187835AE0-0x0000000187835AF4
+		public ReceiverProductListResult getOnReceiverProductlist(); // 0x000000018C23B074-0x000000018C23B0C4
 		public SDKPromise<string> V2PublicInit<ToolType>(string env)
 			where ToolType : SDKExternalTools;
-		private void _MarkMockLogin(U8MockLogin mockLogin); // 0x0000000184D84E50-0x0000000184D84E70
-		private void _onLoginSuc(string uid, bool isNew); // 0x0000000184CA4650-0x0000000184CA4730
-		public SDKPromise<U8ProductsResult> PublicGetProductListV2(); // 0x0000000189DF51D0-0x0000000189DF52F0
-		public void ClearAuthStatus(); // 0x0000000189DF4D8C-0x0000000189DF4DE8
-		public void ClearLoginStatus(); // 0x0000000189DF4DE8-0x0000000189DF4E14
-		private void _ConfirmAuthResult(AuthStatus result); // 0x0000000183F4BA90-0x0000000183F4BAD0
-		public SDKPromise<object> PublicLogout(); // 0x0000000189DF53D4-0x0000000189DF5474
-		public SDKPromise<List<U8ServerInfo>> PublicGetServerList(); // 0x0000000189DF52F0-0x0000000189DF52F8
-		public SDKPromise<U8ConfirmServerResult> PubliceConfirmServer(string serverId); // 0x0000000189DF56BC-0x0000000189DF56C4
-		public SDKPromise<U8PayResult> PublicPay(int storeId, U8OrderInfo orderInfo); // 0x0000000189DF5474-0x0000000189DF56BC
-		private void _OnNativePayFulfilled(long revenue); // 0x0000000189DF5CF0-0x0000000189DF5DAC
-		private bool _TryGetProduct(int storeId, out U8ProductInfo productInfo); // 0x0000000189DF5DCC-0x0000000189DF5E9C
-		private U8PayParams _GeneratePayParams(U8ProductInfo productInfo, U8OrderInfo orderInfo); // 0x0000000189DF5A70-0x0000000189DF5C0C
-		private SDKPromise<U8PayResult> _NativePay(U8PayParams payParams); // 0x0000000189DF5C0C-0x0000000189DF5CF0
+		private void _MarkMockLogin(U8MockLogin mockLogin); // 0x00000001872313C0-0x00000001872313E0
+		private void _onLoginSuc(string uid, bool isNew); // 0x0000000187080370-0x0000000187080D10
+		public SDKPromise<U8ProductsResult> PublicGetProductListV2(); // 0x00000001850CEA00-0x00000001850CEB30
+		public void ClearAuthStatus(); // 0x000000018C23A28C-0x000000018C23A2F0
+		public void ClearLoginStatus(); // 0x000000018C23A2F0-0x000000018C23A368
+		private void _ConfirmAuthResult(AuthStatus result); // 0x000000018611EA60-0x000000018611EAA0
+		public U8UserInfo? PublicGetUserInfo(); // 0x000000018492B8B0-0x000000018492B8F0
+		private void _CacheUserInfo(); // 0x000000018492CC00-0x000000018492CC70
+		private U8UserInfo? _ReadUserInfoFromNative(); // 0x000000018492CC70-0x000000018492DDA0
+		public SDKPromise<object> PublicLogout(); // 0x000000018C23A72C-0x000000018C23A7CC
+		public SDKPromise<List<U8ServerInfo>> PublicGetServerList(); // 0x000000018C23A724-0x000000018C23A72C
+		public SDKPromise<U8ConfirmServerResult> PubliceConfirmServer(string serverId); // 0x000000018C23AA18-0x000000018C23AA20
+		public SDKPromise<U8PayResult> PublicPay(int storeId, U8OrderInfo orderInfo); // 0x000000018C23A7CC-0x000000018C23AA18
+		private void _OnNativePayFulfilled(long revenue); // 0x000000018C23AEC8-0x000000018C23AF84
+		private bool _TryGetProduct(int storeId, out U8ProductInfo productInfo); // 0x000000018C23AFA4-0x000000018C23B074
+		private U8PayParams _GeneratePayParams(U8ProductInfo productInfo, U8OrderInfo orderInfo); // 0x000000018C23AC48-0x000000018C23ADE4
+		private SDKPromise<U8PayResult> _NativePay(U8PayParams payParams); // 0x000000018C23ADE4-0x000000018C23AEC8
 		private static T GetValueSafe<T>(Dictionary<string, object> dict, string key, T defVal = default);
-		public SDKMeta PublicLoadSDKMeta(); // 0x0000000189DF52F8-0x0000000189DF53D4
+		public SDKMeta PublicLoadSDKMeta(); // 0x00000001859BD1B0-0x00000001859BD280
 		protected abstract string LoadExtraConfig();
 		protected abstract void V2Init(string env);
 		protected abstract void Login();
 		protected abstract void LoginCustom(string customData);
 		protected abstract bool Logout();
 		public abstract bool ShowAccountCenter();
-		public abstract void SubmitGameData(U8ExtraGameData data);
+		public void SubmitGameData(U8ExtraGameData data); // 0x00000001859C0D10-0x00000001859C0DE0
+		public abstract void SubmitGameDataNative(U8ExtraGameData data);
 		protected abstract void Pay(U8PayParams data);
-		public abstract void SetData(int type, string paramJson);
-		public abstract string GetData(int type, string paramJson);
+		public void SetData(int type, string paramJson); // 0x00000001859C26A0-0x00000001859C2770
+		public abstract void SetDataNative(int type, string paramJson);
+		public string GetData(int type, string paramJson); // 0x00000001859C0C30-0x00000001859C0D10
+		public abstract string GetDataNative(int type, string paramJson);
 		protected abstract SDKMeta LoadSDKMeta();
 		protected abstract bool IsNativePlugin();
 		public abstract void SetGameVersion(string version);
-		[IteratorStateMachine(typeof(__NextFrameCoroutine_d__105))]
-		private IEnumerator _NextFrameCoroutine(Action call); // 0x0000000183A84D40-0x0000000183A84DA0
-		protected void InvokeNextFrame(Action action); // 0x0000000183A84CB0-0x0000000183A84D40
-		protected void InvokeCoroutine(IEnumerator coroutine); // 0x00000001840EB180-0x00000001840EB1E0
-		protected string EncodeGameData(U8ExtraGameData data); // 0x0000000183AF99C0-0x0000000183AF9CD0
-		protected string EncodePayParams(U8PayParams data); // 0x0000000189DF4E14-0x0000000189DF51D0
-		public SDKPromise<string> V2PublicLogin(); // 0x00000001840EB080-0x00000001840EB100
-		public SDKPromise<U8AuthV2Result> V2PublicAuth(); // 0x0000000183A84850-0x0000000183A848B0
-		public SDKPromise<U8OrderInfo> U1PublicCreateOrder(string productId, string signParams); // 0x0000000189DF5798-0x0000000189DF5818
-		public SDKPromise<List<U8ServerInfo>> U1PublicGetServerList(); // 0x0000000189DF5818-0x0000000189DF5874
-		public SDKPromise<U8ConfirmServerResult> U1PublicConfirmServer(string serverId); // 0x0000000189DF572C-0x0000000189DF5798
-		public SDKPromise<U8ConfirmOrderResult> U1PublicConfirmOrder(string orderId, string extension); // 0x0000000189DF56C4-0x0000000189DF572C
-		private SDKPromise<U8AuthV2Result> _DoMockAuthV2(); // 0x0000000183A848B0-0x0000000183A849A0
-		[IteratorStateMachine(typeof(__LoginV2Coroutine_d__132))]
-		private IEnumerator _LoginV2Coroutine(SDKPromise<string> promise); // 0x00000001840EB100-0x00000001840EB180
-		private void _OnSessionTokenInvalid(); // 0x0000000189DF5DAC-0x0000000189DF5DCC
-		[IteratorStateMachine(typeof(__AuthV2Coroutine_d__134))]
-		private IEnumerator _AuthV2Coroutine(SDKPromise<U8AuthV2Result> promise); // 0x0000000189DF59FC-0x0000000189DF5A70
+		[IteratorStateMachine(typeof(__NextFrameCoroutine_d__112))]
+		private IEnumerator _NextFrameCoroutine(Action call); // 0x00000001850CF1E0-0x00000001850CF240
+		protected void InvokeNextFrame(Action action); // 0x00000001850CF150-0x00000001850CF1E0
+		protected void InvokeCoroutine(IEnumerator coroutine); // 0x00000001859BC390-0x00000001859BC3F0
+		protected string EncodeGameData(U8ExtraGameData data); // 0x00000001859C08C0-0x00000001859C0BD0
+		protected string EncodePayParams(U8PayParams data); // 0x000000018C23A368-0x000000018C23A724
+		public SDKPromise<string> V2PublicLogin(); // 0x00000001859BC290-0x00000001859BC310
+		public SDKPromise<U8AuthV2Result> V2PublicAuth(); // 0x00000001850CEB30-0x00000001850CEB90
+		public SDKPromise<U8OrderInfo> U1PublicCreateOrder(string productId, string signParams); // 0x000000018C23AAF4-0x000000018C23AB74
+		public SDKPromise<List<U8ServerInfo>> U1PublicGetServerList(); // 0x000000018C23AB74-0x000000018C23ABD0
+		public SDKPromise<U8ConfirmServerResult> U1PublicConfirmServer(string serverId); // 0x000000018C23AA88-0x000000018C23AAF4
+		public SDKPromise<U8ConfirmOrderResult> U1PublicConfirmOrder(string orderId, string extension); // 0x000000018C23AA20-0x000000018C23AA88
+		private SDKPromise<U8AuthV2Result> _DoMockAuthV2(); // 0x00000001850CEB90-0x00000001850CEC80
+		[IteratorStateMachine(typeof(__LoginV2Coroutine_d__139))]
+		private IEnumerator _LoginV2Coroutine(SDKPromise<string> promise); // 0x00000001859BC310-0x00000001859BC390
+		private void _OnSessionTokenInvalid(); // 0x000000018C23AF84-0x000000018C23AFA4
+		[IteratorStateMachine(typeof(__AuthV2Coroutine_d__141))]
+		private IEnumerator _AuthV2Coroutine(SDKPromise<U8AuthV2Result> promise); // 0x000000018C23ABD0-0x000000018C23AC48
 		[CompilerGenerated]
-		private void _PublicLogout_b__65_0(); // 0x0000000189DF5874-0x0000000189DF5998
+		private void _PublicLogout_b__69_0(); // 0x000000018492B8F0-0x000000018492C8E0
 		[CompilerGenerated]
-		private void _PublicLogout_b__65_1(); // 0x0000000189DF5998-0x0000000189DF59A8
+		private void _PublicLogout_b__69_1(); // 0x000000018492C8E0-0x000000018492C8F0
 		[CompilerGenerated]
-		private void _PublicLogout_b__65_2(); // 0x0000000189DF59A8-0x0000000189DF59FC
+		private void _PublicLogout_b__69_2(); // 0x000000018492C8F0-0x000000018492CC00
 	}
 
-	public struct SDKError // TypeDefIndex: 61666
+	public struct SDKError // TypeDefIndex: 88745
 	{
 		// Fields
 		[CompilerGenerated]
@@ -1301,14 +1311,14 @@ namespace U8.SDK
 		private string _msg_k__BackingField; // 0x08
 	
 		// Properties
-		private string code { [CompilerGenerated] set; } // 0x0000000185392320-0x0000000185392328
-		private string msg { [CompilerGenerated] set; } // 0x00000001867D5E9C-0x00000001867D5EAC
+		private string code { [CompilerGenerated] set; } // 0x00000001878380EC-0x00000001878380F4
+		private string msg { [CompilerGenerated] set; } // 0x0000000188AC06FC-0x0000000188AC070C
 	
 		// Constructors
-		public SDKError(string content); // 0x0000000189DE6ED8-0x0000000189DE7100
+		public SDKError(string content); // 0x000000018C22E054-0x000000018C22E27C
 	}
 
-	public struct U8MockLogin // TypeDefIndex: 61667
+	public struct U8MockLogin // TypeDefIndex: 88746
 	{
 		// Fields
 		public static readonly U8MockLogin EMPTY; // 0x00
@@ -1316,11 +1326,11 @@ namespace U8.SDK
 		public string token; // 0x08
 	
 		// Methods
-		public bool IsEmpty(); // 0x0000000185394A74-0x0000000185394A8C
+		public bool IsEmpty(); // 0x0000000187834AF8-0x0000000187834B10
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ProductInfo // TypeDefIndex: 61668
+	public class U8ProductInfo // TypeDefIndex: 88747
 	{
 		// Fields
 		[JsonProperty("store_id")]
@@ -1339,11 +1349,11 @@ namespace U8.SDK
 		public string display_price; // 0x40
 	
 		// Constructors
-		public U8ProductInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ProductInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ProductsResult // TypeDefIndex: 61669
+	public class U8ProductsResult // TypeDefIndex: 88748
 	{
 		// Fields
 		[JsonProperty("status")]
@@ -1352,11 +1362,11 @@ namespace U8.SDK
 		public List<U8ProductInfo> u8Products; // 0x18
 	
 		// Constructors
-		public U8ProductsResult(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ProductsResult(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ServerInfo // TypeDefIndex: 61670
+	public class U8ServerInfo // TypeDefIndex: 88749
 	{
 		// Fields
 		[JsonProperty("serverId")]
@@ -1377,11 +1387,11 @@ namespace U8.SDK
 		public string extension; // 0x48
 	
 		// Constructors
-		public U8ServerInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ServerInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ServerErrorInfo // TypeDefIndex: 61671
+	public class U8ServerErrorInfo // TypeDefIndex: 88750
 	{
 		// Fields
 		[JsonProperty("status")]
@@ -1390,11 +1400,11 @@ namespace U8.SDK
 		public int errorCode; // 0x14
 	
 		// Constructors
-		public U8ServerErrorInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ServerErrorInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8OrderInfo // TypeDefIndex: 61672
+	public class U8OrderInfo // TypeDefIndex: 88751
 	{
 		// Fields
 		[JsonProperty("orderId")]
@@ -1411,11 +1421,11 @@ namespace U8.SDK
 		public string extension; // 0x38
 	
 		// Constructors
-		public U8OrderInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public U8OrderInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8PayParams // TypeDefIndex: 61673
+	public class U8PayParams // TypeDefIndex: 88752
 	{
 		// Fields
 		[JsonProperty("productId")]
@@ -1456,11 +1466,11 @@ namespace U8.SDK
 		public string addition; // 0x90
 	
 		// Constructors
-		public U8PayParams(); // 0x00000001841E1670-0x00000001841E1680
+		public U8PayParams(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ExtraGameData // TypeDefIndex: 61674
+	public class U8ExtraGameData // TypeDefIndex: 88753
 	{
 		// Fields
 		[JsonProperty("dataType")]
@@ -1491,10 +1501,10 @@ namespace U8.SDK
 		public string customEventParams; // 0x70
 	
 		// Constructors
-		public U8ExtraGameData(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ExtraGameData(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public struct U8LoginResult // TypeDefIndex: 61675
+	public struct U8LoginResult // TypeDefIndex: 88754
 	{
 		// Fields
 		public static readonly U8LoginResult EMPTY; // 0x00
@@ -1508,23 +1518,29 @@ namespace U8.SDK
 		public string error; // 0x30
 	
 		// Methods
-		public override string ToString(); // 0x0000000189DF391C-0x0000000189DF3AF0
+		public override string ToString(); // 0x000000018C239288-0x000000018C23945C
 	}
 
-	public struct U8ProductError // TypeDefIndex: 61676
+	public struct U8UserInfo // TypeDefIndex: 88755
+	{
+		// Fields
+		public string account; // 0x00
+	}
+
+	public struct U8ProductError // TypeDefIndex: 88756
 	{
 		// Fields
 		public int status; // 0x00
 		public int errorCode; // 0x04
 	}
 
-	public enum PayResultStatus // TypeDefIndex: 61677
+	public enum PayResultStatus // TypeDefIndex: 88757
 	{
 		SUCCEED = 0,
 		PENDING = 1
 	}
 
-	public enum PayFailStatus // TypeDefIndex: 61678
+	public enum PayFailStatus // TypeDefIndex: 88758
 	{
 		UNKNOWN = 0,
 		CANCELED = 1,
@@ -1533,7 +1549,7 @@ namespace U8.SDK
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ConfirmServerResult // TypeDefIndex: 61679
+	public class U8ConfirmServerResult // TypeDefIndex: 88759
 	{
 		// Fields
 		[JsonProperty("status")]
@@ -1542,10 +1558,10 @@ namespace U8.SDK
 		public string message; // 0x18
 	
 		// Constructors
-		public U8ConfirmServerResult(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ConfirmServerResult(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public enum U8ConfirmOrderStatus // TypeDefIndex: 61680
+	public enum U8ConfirmOrderStatus // TypeDefIndex: 88760
 	{
 		NONE = 0,
 		INTERNAL_ERROR = 1,
@@ -1555,7 +1571,7 @@ namespace U8.SDK
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8ConfirmOrderResult // TypeDefIndex: 61681
+	public class U8ConfirmOrderResult // TypeDefIndex: 88761
 	{
 		// Fields
 		[JsonProperty("status")]
@@ -1564,10 +1580,10 @@ namespace U8.SDK
 		public string message; // 0x18
 	
 		// Constructors
-		public U8ConfirmOrderResult(); // 0x00000001841E1670-0x00000001841E1680
+		public U8ConfirmOrderResult(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public struct U8PayFailMsg // TypeDefIndex: 61682
+	public struct U8PayFailMsg // TypeDefIndex: 88762
 	{
 		// Fields
 		public static U8PayFailMsg EMPTY; // 0x00
@@ -1576,13 +1592,13 @@ namespace U8.SDK
 		public string extension; // 0x10
 	
 		// Constructors
-		static U8PayFailMsg(); // 0x0000000189DF3F54-0x0000000189DF3FB8
+		static U8PayFailMsg(); // 0x000000018C2398C0-0x000000018C239924
 	
 		// Methods
-		public static U8PayFailMsg FromJson(string jsonStr); // 0x0000000189DF3B64-0x0000000189DF3F54
+		public static U8PayFailMsg FromJson(string jsonStr); // 0x000000018C2394D0-0x000000018C2398C0
 	}
 
-	public struct U8PayResult // TypeDefIndex: 61683
+	public struct U8PayResult // TypeDefIndex: 88763
 	{
 		// Fields
 		public static readonly U8PayResult EMPTY; // 0x00
@@ -1591,27 +1607,27 @@ namespace U8.SDK
 		public string extension; // 0x10
 	
 		// Constructors
-		static U8PayResult(); // 0x0000000189DF4424-0x0000000189DF4498
+		static U8PayResult(); // 0x000000018C239D94-0x000000018C239E08
 	
 		// Methods
-		public static U8PayResult FromJson(string jsonData); // 0x0000000189DF3FB8-0x0000000189DF4338
-		public override string ToString(); // 0x0000000189DF4338-0x0000000189DF4424
+		public static U8PayResult FromJson(string jsonData); // 0x000000018C239924-0x000000018C239CA8
+		public override string ToString(); // 0x000000018C239CA8-0x000000018C239D94
 	}
 
-	public class SDKInterfaceCloud : U8SDKInterface // TypeDefIndex: 61698
+	public class SDKInterfaceCloud : U8SDKInterface // TypeDefIndex: 88778
 	{
 		// Fields
-		private int actionIndex; // 0xD0
+		private int actionIndex; // 0xE0
 		private static Dictionary<int, Action<string>> dictAction; // 0x00
-		private string languageParam; // 0xD8
+		private string languageParam; // 0xE8
 	
 		// Nested types
-		public delegate void DataCallback(int index, string paramValue); // TypeDefIndex: 61684; 0x00000001838E1420-0x00000001838E1430
+		public delegate void DataCallback(int index, string paramValue); // TypeDefIndex: 88764; 0x00000001859B7730-0x00000001859B7740
 	
-		public delegate void U8SDKSendMessageCallback(string methodName, string paramValue); // TypeDefIndex: 61685; 0x00000001838E1420-0x00000001838E1430
+		public delegate void U8SDKSendMessageCallback(string methodName, string paramValue); // TypeDefIndex: 88765; 0x00000001859B7730-0x00000001859B7740
 	
 		[UnityEngine.Scripting.Preserve]
-		public class LoginResult // TypeDefIndex: 61686
+		public class LoginResult // TypeDefIndex: 88766
 		{
 			// Fields
 			[JsonProperty("code")]
@@ -1620,10 +1636,10 @@ namespace U8.SDK
 			public JToken msg; // 0x18
 	
 			// Constructors
-			public LoginResult(); // 0x00000001841E1670-0x00000001841E1680
+			public LoginResult(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public enum LoginResultCode // TypeDefIndex: 61687
+		public enum LoginResultCode // TypeDefIndex: 88767
 		{
 			Success = 0,
 			Canceled = 1,
@@ -1631,7 +1647,7 @@ namespace U8.SDK
 		}
 	
 		[UnityEngine.Scripting.Preserve]
-		public class PaymentResult // TypeDefIndex: 61688
+		public class PaymentResult // TypeDefIndex: 88768
 		{
 			// Fields
 			[JsonProperty("code")]
@@ -1640,16 +1656,16 @@ namespace U8.SDK
 			public JToken msg; // 0x18
 	
 			// Constructors
-			public PaymentResult(); // 0x00000001841E1670-0x00000001841E1680
+			public PaymentResult(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public enum PaymentResultCode // TypeDefIndex: 61689
+		public enum PaymentResultCode // TypeDefIndex: 88769
 		{
 			Success = 0,
 			Failed = 1
 		}
 	
-		private enum SetDataCode // TypeDefIndex: 61690
+		private enum SetDataCode // TypeDefIndex: 88770
 		{
 			CustomerServiceCenter = 6,
 			QueryProductList = 17,
@@ -1663,54 +1679,54 @@ namespace U8.SDK
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0 // TypeDefIndex: 61691
+		private sealed class __c__DisplayClass35_0 // TypeDefIndex: 88771
 		{
 			// Fields
 			public string defaultValue; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass35_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass35_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LoadExtraConfig_b__0(string data); // 0x0000000182D40530-0x0000000182D40590
+			internal void _LoadExtraConfig_b__0(string data); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 61692
+		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 88772
 		{
 			// Fields
 			public string defaultValue; // 0x10
 			public int type; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass45_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass45_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _GetData_b__0(string data); // 0x0000000182D40590-0x0000000182D40940
+			internal void _GetDataNative_b__0(string data); // 0x000000018C237510-0x000000018C237570
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0 // TypeDefIndex: 61693
+		private sealed class __c__DisplayClass55_0 // TypeDefIndex: 88773
 		{
 			// Fields
 			public string json; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass55_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass55_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LoadSDKMeta_b__0(string data); // 0x0000000182D40530-0x0000000182D40590
+			internal void _LoadSDKMeta_b__0(string data); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass74_0 // TypeDefIndex: 61695
+		private sealed class __c__DisplayClass74_0 // TypeDefIndex: 88775
 		{
 			// Fields
 			public SDKInterfaceCloud __4__this; // 0x10
 			public string jsonData; // 0x18
 	
 			// Nested types
-			private struct __HandleCloudShareEvent_b__0_d : IAsyncStateMachine // TypeDefIndex: 61694
+			private struct __HandleCloudShareEvent_b__0_d : IAsyncStateMachine // TypeDefIndex: 88774
 			{
 				// Fields
 				public int __1__state; // 0x00
@@ -1719,20 +1735,20 @@ namespace U8.SDK
 				private TaskAwaiter __u__1; // 0x28
 	
 				// Methods
-				private void MoveNext(); // 0x0000000182D3EC60-0x0000000182D40110
+				private void MoveNext(); // 0x000000018C236D7C-0x000000018C237058
 				[DebuggerHidden]
-				private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000182D40110-0x0000000182D40530
+				private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C237058-0x000000018C2370B4
 			}
 	
 			// Constructors
-			public __c__DisplayClass74_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass74_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal async System.Threading.Tasks.Task _HandleCloudShareEvent_b__0(); // 0x0000000182D40940-0x0000000182D41100
+			internal async System.Threading.Tasks.Task _HandleCloudShareEvent_b__0(); // 0x000000018C237570-0x000000018C237624
 		}
 	
 		[CompilerGenerated]
-		private struct _SaveImageToTargetFolder_d__75 : IAsyncStateMachine // TypeDefIndex: 61696
+		private struct _SaveImageToTargetFolder_d__75 : IAsyncStateMachine // TypeDefIndex: 88776
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -1742,198 +1758,198 @@ namespace U8.SDK
 			private TaskAwaiter<bool> __u__1; // 0x30
 	
 			// Methods
-			private void MoveNext(); // 0x0000000182D3C490-0x0000000182D3E840
+			private void MoveNext(); // 0x000000018C2365B4-0x000000018C2368A4
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000182D3E840-0x0000000182D3EC60
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C2368A4-0x000000018C236900
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_0 // TypeDefIndex: 61697
+		private sealed class __c__DisplayClass77_0 // TypeDefIndex: 88777
 		{
 			// Fields
 			public string methodName; // 0x10
 			public string paramValue; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass77_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass77_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _SendMessageInMain_b__0(); // 0x0000000182D41100-0x0000000182D41A30
+			internal void _SendMessageInMain_b__0(); // 0x000000018C237624-0x000000018C237680
 		}
 	
 		// Constructors
-		public SDKInterfaceCloud(); // 0x0000000189DED060-0x0000000189DED240
-		static SDKInterfaceCloud(); // 0x0000000189DECFD4-0x0000000189DED060
+		public SDKInterfaceCloud(); // 0x000000018C233C48-0x000000018C233DF4
+		static SDKInterfaceCloud(); // 0x000000018C233BBC-0x000000018C233C48
 	
 		// Methods
-		~SDKInterfaceCloud(); // 0x0000000189DEA138-0x0000000189DEA298
-		public int AddAction(Action<string> action); // 0x0000000189DE95CC-0x0000000189DE9724
+		~SDKInterfaceCloud(); // 0x000000018C2309CC-0x000000018C230B2C
+		public int AddAction(Action<string> action); // 0x000000018C22FE48-0x000000018C22FFA0
 		[AOT.MonoPInvokeCallback(typeof(DataCallback))]
-		public static void DataActionCallback(int index, string paramValue); // 0x0000000189DE9F4C-0x0000000189DEA138
+		public static void DataActionCallback(int index, string paramValue); // 0x000000018C2307DC-0x000000018C2309CC
 		[AOT.MonoPInvokeCallback(typeof(DataCallback))]
-		public static void ASyncDataActionCallback(int index, string paramValue); // 0x0000000189DE93E0-0x0000000189DE95CC
+		public static void ASyncDataActionCallback(int index, string paramValue); // 0x000000018C22FC58-0x000000018C22FE48
 		[AOT.MonoPInvokeCallback(typeof(U8SDKSendMessageCallback))]
-		public static void U8SDKSendMessage(string methodName, string paramValue); // 0x0000000189DECE5C-0x0000000189DECEC4
-		public static extern void HGU8SDKInitLibrary(string windowText, long windowHandle); // 0x0000000189DEA790-0x0000000189DEA7E0
-		public static extern int HGU8SDKSetUserDataPath(string path); // 0x0000000189DEA8EC-0x0000000189DEA940
-		public static extern void HGU8SDKUnInitLibrary(); // 0x0000000189DEA940-0x0000000189DEA964
-		public static extern void HGU8SDKInitDatacallback(DataCallback Callback, DataCallback asyncCallback); // 0x0000000189DEA740-0x0000000189DEA790
-		public static extern void HGU8SDKInitSendMessage(U8SDKSendMessageCallback callback); // 0x0000000189DEA7E0-0x0000000189DEA828
-		public static extern void HGU8SDKV2Init(string env); // 0x0000000189DEA964-0x0000000189DEA9A4
-		public static extern void HGU8SDKGetSDKMeta(int index); // 0x0000000189DEA714-0x0000000189DEA740
-		public static extern void HGU8SDKSetData(int code, string paramJson); // 0x0000000189DEA854-0x0000000189DEA8A4
-		public static extern void HGU8SDKGetData(int code, string paramJson, int index); // 0x0000000189DEA6B4-0x0000000189DEA714
-		public static extern void HGU8SDKLoadExtraConfig(int index); // 0x0000000189DEA828-0x0000000189DEA854
-		public static extern void HGU8SDKSetGameVersion(string version); // 0x0000000189DEA8A4-0x0000000189DEA8EC
-		protected override string LoadExtraConfig(); // 0x0000000189DEB5A4-0x0000000189DEB6A0
-		protected override void V2Init(string env); // 0x0000000189DECEC4-0x0000000189DECFD4
-		protected override void Login(); // 0x0000000189DEBAFC-0x0000000189DEBC1C
-		private void LoginCallback(CloudCallResult result); // 0x0000000189DEB7D0-0x0000000189DEBAEC
-		protected override bool Logout(); // 0x0000000189DEBC1C-0x0000000189DEBC6C
-		protected override void LoginCustom(string customData); // 0x0000000189DEBAEC-0x0000000189DEBAFC
-		public override void SubmitGameData(U8ExtraGameData data); // 0x0000000189DECD8C-0x0000000189DECE5C
-		public override void SetData(int type, string paramJson); // 0x0000000189DEC530-0x0000000189DEC6FC
-		public override string GetData(int type, string paramJson); // 0x0000000189DEA298-0x0000000189DEA3BC
-		public override bool ShowAccountCenter(); // 0x0000000189DECA34-0x0000000189DECB30
-		private void ShowAccountCenterCallback(CloudCallResult result); // 0x0000000189DEC7CC-0x0000000189DECA34
-		protected override void Pay(U8PayParams data); // 0x0000000189DEC15C-0x0000000189DEC274
-		private void PayCallback(CloudCallResult result); // 0x0000000189DEBE40-0x0000000189DEC15C
-		protected override SDKMeta LoadSDKMeta(); // 0x0000000189DEB6A0-0x0000000189DEB7D0
-		protected override bool IsNativePlugin(); // 0x0000000182FFF600-0x0000000182FFF610
-		public override void SetGameVersion(string version); // 0x0000000189DEC6FC-0x0000000189DEC7CC
-		private void HandleSplashProtocol(string paramJson); // 0x0000000189DEB550-0x0000000189DEB5A4
-		private void HandleGameAgreement(string paramJson); // 0x0000000182D39980-0x0000000182D3B430
-		private void HandleSetLanguage(string paramJson); // 0x0000000182D3B430-0x0000000182D3C490
-		private void HandleSetU8Token(string paramJson); // 0x0000000189DEB304-0x0000000189DEB410
-		private void HandleShowGameProtocol(string paramJson); // 0x0000000189DEB410-0x0000000189DEB550
-		private void ShowGameProtocolCallback(CloudCallResult result); // 0x0000000189DECB30-0x0000000189DECD8C
-		private void HandleQueryProductList(string paramJson); // 0x0000000189DEB0A8-0x0000000189DEB304
-		private void HandleCustomerServiceCenter(string paramJson); // 0x0000000189DEAE28-0x0000000189DEAF68
-		private void CustomerServiceCenterCallback(CloudCallResult result); // 0x0000000189DE9A0C-0x0000000189DE9C68
-		private void HandleCustomerUnreadMsgCount(string paramJson); // 0x0000000189DEAF68-0x0000000189DEB0A8
-		private void CustomerUnreadMsgCountCallback(CloudCallResult result); // 0x0000000189DE9C68-0x0000000189DE9F4C
-		private void HandleCloudShareEvent(string paramJson, string fileNamePrefix = null); // 0x0000000189DEA9A4-0x0000000189DEAE28
-		private async System.Threading.Tasks.Task SaveImageToTargetFolder(string jsonData); // 0x0000000189DEC388-0x0000000189DEC458
-		private void CloudShareEventCallback(CloudCallResult result); // 0x0000000189DE9724-0x0000000189DE9A0C
-		private void SendMessageInMain(string methodName, string paramValue); // 0x0000000189DEC458-0x0000000189DEC530
-		private static void OnPipelineConnected(CloudCallResult result); // 0x0000000189DEBC6C-0x0000000189DEBE40
-		private static void RequestLaunchInfoCallback(CloudCallResult result); // 0x0000000189DEC274-0x0000000189DEC388
-		private static void GetThinClientDeviceInfo(string jsonData); // 0x0000000189DEA3BC-0x0000000189DEA6B4
+		public static void U8SDKSendMessage(string methodName, string paramValue); // 0x000000018C233A44-0x000000018C233AAC
+		public static extern void HGU8SDKInitLibrary(string windowText, long windowHandle); // 0x000000018C231024-0x000000018C231074
+		public static extern int HGU8SDKSetUserDataPath(string path); // 0x000000018C231180-0x000000018C2311D4
+		public static extern void HGU8SDKUnInitLibrary(); // 0x000000018C2311D4-0x000000018C2311F8
+		public static extern void HGU8SDKInitDatacallback(DataCallback Callback, DataCallback asyncCallback); // 0x000000018C230FD4-0x000000018C231024
+		public static extern void HGU8SDKInitSendMessage(U8SDKSendMessageCallback callback); // 0x000000018C231074-0x000000018C2310BC
+		public static extern void HGU8SDKV2Init(string env); // 0x000000018C2311F8-0x000000018C231238
+		public static extern void HGU8SDKGetSDKMeta(int index); // 0x000000018C230FA8-0x000000018C230FD4
+		public static extern void HGU8SDKSetData(int code, string paramJson); // 0x000000018C2310E8-0x000000018C231138
+		public static extern void HGU8SDKGetData(int code, string paramJson, int index); // 0x000000018C230F48-0x000000018C230FA8
+		public static extern void HGU8SDKLoadExtraConfig(int index); // 0x000000018C2310BC-0x000000018C2310E8
+		public static extern void HGU8SDKSetGameVersion(string version); // 0x000000018C231138-0x000000018C231180
+		protected override string LoadExtraConfig(); // 0x000000018C232158-0x000000018C232254
+		protected override void V2Init(string env); // 0x000000018C233AAC-0x000000018C233BBC
+		protected override void Login(); // 0x000000018C2326B0-0x000000018C2327D4
+		private void LoginCallback(CloudCallResult result); // 0x000000018C232384-0x000000018C2326A0
+		protected override bool Logout(); // 0x000000018C2327D4-0x000000018C232824
+		protected override void LoginCustom(string customData); // 0x000000018C2326A0-0x000000018C2326B0
+		public override void SubmitGameDataNative(U8ExtraGameData data); // 0x000000018C233970-0x000000018C233A44
+		public override void SetDataNative(int type, string paramJson); // 0x000000018C233100-0x000000018C2332CC
+		public override string GetDataNative(int type, string paramJson); // 0x000000018C230B2C-0x000000018C230C50
+		public override bool ShowAccountCenter(); // 0x000000018C23360C-0x000000018C23370C
+		private void ShowAccountCenterCallback(CloudCallResult result); // 0x000000018C23339C-0x000000018C23360C
+		protected override void Pay(U8PayParams data); // 0x000000018C232D1C-0x000000018C232E38
+		private void PayCallback(CloudCallResult result); // 0x000000018C232A00-0x000000018C232D1C
+		protected override SDKMeta LoadSDKMeta(); // 0x000000018C232254-0x000000018C232384
+		protected override bool IsNativePlugin(); // 0x00000001851A4410-0x00000001851A4420
+		public override void SetGameVersion(string version); // 0x000000018C2332CC-0x000000018C23339C
+		private void HandleSplashProtocol(string paramJson); // 0x000000018C232104-0x000000018C232158
+		private void HandleGameAgreement(string paramJson); // 0x000000018C231944-0x000000018C231B1C
+		private void HandleSetLanguage(string paramJson); // 0x000000018C231D78-0x000000018C231EB0
+		private void HandleSetU8Token(string paramJson); // 0x000000018C231EB0-0x000000018C231FC0
+		private void HandleShowGameProtocol(string paramJson); // 0x000000018C231FC0-0x000000018C232104
+		private void ShowGameProtocolCallback(CloudCallResult result); // 0x000000018C23370C-0x000000018C233970
+		private void HandleQueryProductList(string paramJson); // 0x000000018C231B1C-0x000000018C231D78
+		private void HandleCustomerServiceCenter(string paramJson); // 0x000000018C2316BC-0x000000018C231800
+		private void CustomerServiceCenterCallback(CloudCallResult result); // 0x000000018C23028C-0x000000018C2304F0
+		private void HandleCustomerUnreadMsgCount(string paramJson); // 0x000000018C231800-0x000000018C231944
+		private void CustomerUnreadMsgCountCallback(CloudCallResult result); // 0x000000018C2304F0-0x000000018C2307DC
+		private void HandleCloudShareEvent(string paramJson, string fileNamePrefix = null); // 0x000000018C231238-0x000000018C2316BC
+		private async System.Threading.Tasks.Task SaveImageToTargetFolder(string jsonData); // 0x000000018C232F54-0x000000018C233028
+		private void CloudShareEventCallback(CloudCallResult result); // 0x000000018C22FFA0-0x000000018C23028C
+		private void SendMessageInMain(string methodName, string paramValue); // 0x000000018C233028-0x000000018C233100
+		private static void OnPipelineConnected(CloudCallResult result); // 0x000000018C232824-0x000000018C232A00
+		private static void RequestLaunchInfoCallback(CloudCallResult result); // 0x000000018C232E38-0x000000018C232F54
+		private static void GetThinClientDeviceInfo(string jsonData); // 0x000000018C230C50-0x000000018C230F48
 	}
 
-	public class SDKInterfaceWIN : U8SDKInterface // TypeDefIndex: 61705
+	public class SDKInterfaceWIN : U8SDKInterface // TypeDefIndex: 88785
 	{
 		// Fields
-		private int actionIndex; // 0xD0
+		private int actionIndex; // 0xE0
 		private static Dictionary<int, Action<string>> dictAction; // 0x00
 	
 		// Nested types
-		public delegate void DataCallback(int index, string paramValue); // TypeDefIndex: 61699; 0x00000001838E1420-0x00000001838E1430
+		public delegate void DataCallback(int index, string paramValue); // TypeDefIndex: 88779; 0x00000001859B7730-0x00000001859B7740
 	
-		public delegate void U8SDKSendMessageCallback(string methodName, string paramValue); // TypeDefIndex: 61700; 0x00000001838E1420-0x00000001838E1430
+		public delegate void U8SDKSendMessageCallback(string methodName, string paramValue); // TypeDefIndex: 88780; 0x00000001859B7730-0x00000001859B7740
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass34_0 // TypeDefIndex: 61701
+		private sealed class __c__DisplayClass34_0 // TypeDefIndex: 88781
 		{
 			// Fields
 			public string defaultValue; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass34_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass34_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LoadExtraConfig_b__0(string data); // 0x00000001853908C0-0x00000001853908D0
+			internal void _LoadExtraConfig_b__0(string data); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 61702
+		private sealed class __c // TypeDefIndex: 88782
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Action<System.Threading.Tasks.Task> __9__42_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189DF19AC-0x0000000189DF1A10
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C237680-0x000000018C2376E4
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _SetData_b__42_0(System.Threading.Tasks.Task task); // 0x0000000189DF0440-0x0000000189DF0518
+			internal void _SetDataNative_b__42_0(System.Threading.Tasks.Task task); // 0x000000018C237220-0x000000018C2372DC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_0 // TypeDefIndex: 61703
+		private sealed class __c__DisplayClass43_0 // TypeDefIndex: 88783
 		{
 			// Fields
 			public string defaultValue; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass43_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass43_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _GetData_b__0(string data); // 0x00000001853908C0-0x00000001853908D0
+			internal void _GetDataNative_b__0(string data); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0 // TypeDefIndex: 61704
+		private sealed class __c__DisplayClass51_0 // TypeDefIndex: 88784
 		{
 			// Fields
 			public string json; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass51_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass51_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LoadSDKMeta_b__0(string data); // 0x00000001853908C0-0x00000001853908D0
+			internal void _LoadSDKMeta_b__0(string data); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		// Constructors
-		public SDKInterfaceWIN(); // 0x0000000184756120-0x00000001847562C0
-		static SDKInterfaceWIN(); // 0x0000000184D16E60-0x0000000184D16EF0
+		public SDKInterfaceWIN(); // 0x0000000186ABB420-0x0000000186ABB5C0
+		static SDKInterfaceWIN(); // 0x0000000187176DF0-0x0000000187176E80
 	
 		// Methods
-		~SDKInterfaceWIN(); // 0x0000000189DED42C-0x0000000189DED4F8
-		public int AddAction(Action<string> action); // 0x0000000183AFA8E0-0x0000000183AFAAF0
+		~SDKInterfaceWIN(); // 0x000000018C233FE4-0x000000018C2340B0
+		public int AddAction(Action<string> action); // 0x00000001859BE310-0x00000001859BE4E0
 		[AOT.MonoPInvokeCallback(typeof(DataCallback))]
-		public static void DataActionCallback(int index, string paramValue); // 0x0000000183A849A0-0x0000000183A84C50
+		public static void DataActionCallback(int index, string paramValue); // 0x00000001850CEE50-0x00000001850CF0D0
 		[AOT.MonoPInvokeCallback(typeof(DataCallback))]
-		public static void ASyncDataActionCallback(int index, string paramValue); // 0x0000000189DED240-0x0000000189DED42C
+		public static void ASyncDataActionCallback(int index, string paramValue); // 0x000000018C233DF4-0x000000018C233FE4
 		[AOT.MonoPInvokeCallback(typeof(U8SDKSendMessageCallback))]
-		public static void U8SDKSendMessage(string methodName, string paramValue); // 0x0000000183A84DA0-0x0000000183A84E20
-		public static extern void HGU8SDKInitLibrary(string windowText, long windowHandle); // 0x00000001847563F0-0x0000000184756450
-		public static extern int HGU8SDKSetUserDataPath(string path); // 0x0000000184756390-0x00000001847563F0
-		public static extern void HGU8SDKUnInitLibrary(); // 0x0000000189DED76C-0x0000000189DED790
-		public static extern void HGU8SDKInitDatacallback(DataCallback Callback, DataCallback asyncCallback); // 0x0000000183826E60-0x0000000183826EB0
-		public static extern void HGU8SDKInitSendMessage(U8SDKSendMessageCallback callback); // 0x0000000183826BA0-0x0000000183826C30
-		public static extern void HGU8SDKV2Init(string env); // 0x000000018488EC70-0x000000018488ECC0
-		public static extern void HGU8SDKLogin(); // 0x0000000189DED5AC-0x0000000189DED614
-		public static extern void HGU8SDKLoginCustom(string json); // 0x0000000189DED524-0x0000000189DED5AC
-		public static extern int HGU8SDKLogout(); // 0x0000000189DED614-0x0000000189DED67C
-		public static extern int HGU8SDKShowAccountCenter(); // 0x0000000189DED704-0x0000000189DED76C
-		public static extern void HGU8SDKPay(string json); // 0x0000000189DED67C-0x0000000189DED704
-		public static extern void HGU8SDKSubmitGameData(string json); // 0x0000000183AF9CD0-0x0000000183AF9D30
-		public static extern void HGU8SDKGetSDKMeta(int index); // 0x0000000189DED4F8-0x0000000189DED524
-		public static extern void HGU8SDKSetData(int code, string paramJson); // 0x0000000183A86A60-0x0000000183A86AC0
-		public static extern void HGU8SDKGetData(int code, string paramJson, int index); // 0x0000000183AFAE80-0x0000000183AFAEF0
-		public static extern int HGU8SDKIsNativePlugin(); // 0x0000000183826C30-0x0000000183826CA0
-		public static extern void HGU8SDKLoadExtraConfig(int index); // 0x0000000183AFAEF0-0x0000000183AFAF20
-		public static extern void HGU8SDKSetGameVersion(string version); // 0x0000000184CC88A0-0x0000000184CC8900
-		protected override string LoadExtraConfig(); // 0x0000000183AFA690-0x0000000183AFA7A0
-		protected override void V2Init(string env); // 0x000000018488EB00-0x000000018488EB90
-		protected override void Login(); // 0x0000000189DED90C-0x0000000189DED94C
-		protected override bool Logout(); // 0x0000000189DED94C-0x0000000189DED994
-		protected override void LoginCustom(string customData); // 0x0000000189DED8C0-0x0000000189DED90C
-		public override void SubmitGameData(U8ExtraGameData data); // 0x0000000183AF9950-0x0000000183AF99C0
-		public override void SetData(int type, string paramJson); // 0x0000000183A869B0-0x0000000183A86A60
-		public override string GetData(int type, string paramJson); // 0x0000000183AFA7A0-0x0000000183AFA8E0
-		public override bool ShowAccountCenter(); // 0x0000000189DED9F4-0x0000000189DEDA3C
-		protected override void Pay(U8PayParams data); // 0x0000000189DED994-0x0000000189DED9F4
-		protected override SDKMeta LoadSDKMeta(); // 0x0000000189DED790-0x0000000189DED8C0
-		protected override bool IsNativePlugin(); // 0x0000000184D59840-0x0000000184D59890
-		public override void SetGameVersion(string version); // 0x0000000184CC8850-0x0000000184CC88A0
+		public static void U8SDKSendMessage(string methodName, string paramValue); // 0x00000001850CF0D0-0x00000001850CF150
+		public static extern void HGU8SDKInitLibrary(string windowText, long windowHandle); // 0x0000000186ABB6F0-0x0000000186ABB750
+		public static extern int HGU8SDKSetUserDataPath(string path); // 0x0000000186ABB690-0x0000000186ABB6F0
+		public static extern void HGU8SDKUnInitLibrary(); // 0x000000018C234324-0x000000018C234348
+		public static extern void HGU8SDKInitDatacallback(DataCallback Callback, DataCallback asyncCallback); // 0x0000000185AFC7A0-0x0000000185AFC7F0
+		public static extern void HGU8SDKInitSendMessage(U8SDKSendMessageCallback callback); // 0x0000000185AFCD40-0x0000000185AFCDD0
+		public static extern void HGU8SDKV2Init(string env); // 0x0000000186D12190-0x0000000186D121E0
+		public static extern void HGU8SDKLogin(); // 0x000000018C234164-0x000000018C2341CC
+		public static extern void HGU8SDKLoginCustom(string json); // 0x000000018C2340DC-0x000000018C234164
+		public static extern int HGU8SDKLogout(); // 0x000000018C2341CC-0x000000018C234234
+		public static extern int HGU8SDKShowAccountCenter(); // 0x000000018C2342BC-0x000000018C234324
+		public static extern void HGU8SDKPay(string json); // 0x000000018C234234-0x000000018C2342BC
+		public static extern void HGU8SDKSubmitGameData(string json); // 0x00000001859C0BD0-0x00000001859C0C30
+		public static extern void HGU8SDKGetSDKMeta(int index); // 0x000000018C2340B0-0x000000018C2340DC
+		public static extern void HGU8SDKSetData(int code, string paramJson); // 0x00000001859C2910-0x00000001859C2970
+		public static extern void HGU8SDKGetData(int code, string paramJson, int index); // 0x00000001859BE790-0x00000001859BE800
+		public static extern int HGU8SDKIsNativePlugin(); // 0x0000000185AFCDD0-0x0000000185AFCE40
+		public static extern void HGU8SDKLoadExtraConfig(int index); // 0x00000001859BE800-0x00000001859BE830
+		public static extern void HGU8SDKSetGameVersion(string version); // 0x00000001870C00F0-0x00000001870C0150
+		protected override string LoadExtraConfig(); // 0x00000001859BE0C0-0x00000001859BE1D0
+		protected override void V2Init(string env); // 0x0000000186D12020-0x0000000186D120B0
+		protected override void Login(); // 0x000000018C2344C4-0x000000018C234504
+		protected override bool Logout(); // 0x000000018C234504-0x000000018C23454C
+		protected override void LoginCustom(string customData); // 0x000000018C234478-0x000000018C2344C4
+		public override void SubmitGameDataNative(U8ExtraGameData data); // 0x00000001859C0850-0x00000001859C08C0
+		public override void SetDataNative(int type, string paramJson); // 0x00000001859C2860-0x00000001859C2910
+		public override string GetDataNative(int type, string paramJson); // 0x00000001859BE1D0-0x00000001859BE310
+		public override bool ShowAccountCenter(); // 0x000000018C2345AC-0x000000018C2345F4
+		protected override void Pay(U8PayParams data); // 0x000000018C23454C-0x000000018C2345AC
+		protected override SDKMeta LoadSDKMeta(); // 0x000000018C234348-0x000000018C234478
+		protected override bool IsNativePlugin(); // 0x00000001871F9D40-0x00000001871F9D90
+		public override void SetGameVersion(string version); // 0x00000001870C00A0-0x00000001870C00F0
 	}
 
-	public class SDKMeta // TypeDefIndex: 61706
+	public class SDKMeta // TypeDefIndex: 88786
 	{
 		// Fields
 		public string appID; // 0x10
@@ -1944,21 +1960,21 @@ namespace U8.SDK
 		public string appCode; // 0x38
 	
 		// Constructors
-		public SDKMeta(); // 0x00000001841E1670-0x00000001841E1680
-		public SDKMeta(string jsonData); // 0x0000000189DEDBA0-0x0000000189DEDECC
+		public SDKMeta(); // 0x0000000186805BA0-0x0000000186805BB0
+		public SDKMeta(string jsonData); // 0x000000018C234758-0x000000018C234A88
 	
 		// Methods
-		public override string ToString(); // 0x0000000189DEDA3C-0x0000000189DEDBA0
+		public override string ToString(); // 0x000000018C2345F4-0x000000018C234758
 	}
 
-	public interface ISDKPromise // TypeDefIndex: 61707
+	public interface ISDKPromise // TypeDefIndex: 88787
 	{
 		// Methods
 		void Fulfill(object param);
 		void Reject(object reason);
 	}
 
-	public class SDKPromise<Param> : ISDKPromise // TypeDefIndex: 61708
+	public class SDKPromise<Param> : ISDKPromise // TypeDefIndex: 88788
 	{
 		// Fields
 		public Action<Param> onFulfilled;
@@ -1972,7 +1988,7 @@ namespace U8.SDK
 		public virtual void Reject(object reason);
 	}
 
-	public class SDKPromiseWithResult<Param> : SDKPromise<Param> // TypeDefIndex: 61709
+	public class SDKPromiseWithResult<Param> : SDKPromise<Param> // TypeDefIndex: 88789
 		where Param : class
 	{
 		// Fields
@@ -1993,7 +2009,7 @@ namespace U8.SDK
 		public override void Reject(object reason);
 	}
 
-	public class SDKPromiseEnumerator<T> // TypeDefIndex: 61712
+	public class SDKPromiseEnumerator<T> // TypeDefIndex: 88792
 	{
 		// Fields
 		private State m_state;
@@ -2008,7 +2024,7 @@ namespace U8.SDK
 		public object reject { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		private enum State // TypeDefIndex: 61710
+		private enum State // TypeDefIndex: 88790
 		{
 			NONE = 0,
 			FULFILL = 1,
@@ -2016,7 +2032,7 @@ namespace U8.SDK
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Yield_d__12 : IEnumerator<object> // TypeDefIndex: 61711
+		private sealed class _Yield_d__12 : IEnumerator<object> // TypeDefIndex: 88791
 		{
 			// Fields
 			private int __1__state;
@@ -2049,41 +2065,41 @@ namespace U8.SDK
 		private void _OnRejected(object rejectInfo);
 	}
 
-	public class SDKPromiseWrapper // TypeDefIndex: 61713
+	public class SDKPromiseWrapper // TypeDefIndex: 88793
 	{
 		// Fields
 		private ISDKPromise m_promise; // 0x10
 	
 		// Constructors
-		public SDKPromiseWrapper(); // 0x00000001841E1670-0x00000001841E1680
+		public SDKPromiseWrapper(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
 		public T EnsurePromise<T>()
 			where T : ISDKPromise, new();
-		public void Fulfill(object param); // 0x00000001849DAAB0-0x00000001849DAB40
-		public void Reject(object reason); // 0x0000000189DEDEE4-0x0000000189DEDF14
-		private void _Clear(); // 0x00000001840E20A0-0x00000001840E20C0
+		public void Fulfill(object param); // 0x0000000186E543C0-0x0000000186E54450
+		public void Reject(object reason); // 0x000000018C234AA0-0x000000018C234AD0
+		private void _Clear(); // 0x00000001863017D0-0x00000001863017F0
 	}
 
-	public static class SDKPromiseExtensions // TypeDefIndex: 61714
+	public static class SDKPromiseExtensions // TypeDefIndex: 88794
 	{
 		// Extension methods
-		public static void RejectWithString(this ISDKPromise promise, string errorInfo); // 0x0000000189DEDECC-0x0000000189DEDEE4
+		public static void RejectWithString(this ISDKPromise promise, string errorInfo); // 0x000000018C234A88-0x000000018C234AA0
 		public static void FulfillWithType<T>(this SDKPromise<T> promise, T param)
 			where T : class;
 	}
 
-	public class U8SDKTickEvent : MonoBehaviour // TypeDefIndex: 61715
+	public class U8SDKTickEvent : MonoBehaviour // TypeDefIndex: 88795
 	{
 		// Constructors
-		public U8SDKTickEvent(); // 0x0000000185393520-0x0000000185393538
+		public U8SDKTickEvent(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Update(); // 0x0000000183F31120-0x0000000183F31150
-		public static extern void HGU8SDKTickEvent(); // 0x0000000183F31120-0x0000000183F31150
+		private void Update(); // 0x0000000186245BF0-0x0000000186245C20
+		public static extern void HGU8SDKTickEvent(); // 0x0000000186245BF0-0x0000000186245C20
 	}
 
-	public class U8TickEventManager // TypeDefIndex: 61716
+	public class U8TickEventManager // TypeDefIndex: 88796
 	{
 		// Fields
 		private GameObject tickGameObject; // 0x10
@@ -2092,19 +2108,19 @@ namespace U8.SDK
 		private static readonly object lockObject; // 0x08
 	
 		// Properties
-		public static U8TickEventManager InstanceManager { get; } // 0x000000018488EB90-0x000000018488EC70 
+		public static U8TickEventManager InstanceManager { get; } // 0x0000000186D120B0-0x0000000186D12190 
 	
 		// Constructors
-		public U8TickEventManager(); // 0x00000001841E1670-0x00000001841E1680
-		static U8TickEventManager(); // 0x0000000184D30310-0x0000000184D30380
+		public U8TickEventManager(); // 0x0000000186805BA0-0x0000000186805BB0
+		static U8TickEventManager(); // 0x00000001871C5650-0x00000001871C56C0
 	
 		// Methods
-		public void InitTickEvent(); // 0x000000018488ECC0-0x000000018488F060
-		public void UnInitTickEvent(); // 0x0000000189DF6094-0x0000000189DF625C
+		public void InitTickEvent(); // 0x0000000186D121E0-0x0000000186D12550
+		public void UnInitTickEvent(); // 0x000000018C23B0C4-0x000000018C23B298
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8LoginV2Result // TypeDefIndex: 61717
+	public class U8LoginV2Result // TypeDefIndex: 88797
 	{
 		// Fields
 		[JsonProperty("token")]
@@ -2115,11 +2131,11 @@ namespace U8.SDK
 		public bool isNew; // 0x20
 	
 		// Constructors
-		public U8LoginV2Result(); // 0x00000001841E1670-0x00000001841E1680
+		public U8LoginV2Result(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8AuthV2Result // TypeDefIndex: 61718
+	public class U8AuthV2Result // TypeDefIndex: 88798
 	{
 		// Fields
 		[JsonProperty("uid")]
@@ -2130,11 +2146,11 @@ namespace U8.SDK
 		public string oauth2Token; // 0x20
 	
 		// Constructors
-		public U8AuthV2Result(); // 0x00000001841E1670-0x00000001841E1680
+		public U8AuthV2Result(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[UnityEngine.Scripting.Preserve]
-	public class U8GrantResult // TypeDefIndex: 61719
+	public class U8GrantResult // TypeDefIndex: 88799
 	{
 		// Fields
 		[JsonProperty("uid")]
@@ -2145,10 +2161,10 @@ namespace U8.SDK
 		public string token; // 0x20
 	
 		// Constructors
-		public U8GrantResult(); // 0x00000001841E1670-0x00000001841E1680
+		public U8GrantResult(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class U8SDKCallback : MonoBehaviour // TypeDefIndex: 61721
+	public class U8SDKCallback : MonoBehaviour // TypeDefIndex: 88801
 	{
 		// Fields
 		private static U8SDKCallback m_instance; // 0x00
@@ -2156,91 +2172,91 @@ namespace U8.SDK
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __onLogoutNextFrameCoroutine_d__13 : IEnumerator<object> // TypeDefIndex: 61720
+		private sealed class __onLogoutNextFrameCoroutine_d__13 : IEnumerator<object> // TypeDefIndex: 88800
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __onLogoutNextFrameCoroutine_d__13(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __onLogoutNextFrameCoroutine_d__13(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189DF37F8-0x0000000189DF38D0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C239158-0x000000018C23923C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189DF38D0-0x0000000189DF391C
+			void IEnumerator.Reset(); // 0x000000018C23923C-0x000000018C239288
 		}
 	
 		// Constructors
-		public U8SDKCallback(); // 0x0000000185393520-0x0000000185393538
-		static U8SDKCallback(); // 0x0000000184D30380-0x0000000184D303F0
+		public U8SDKCallback(); // 0x00000001878364A0-0x00000001878364B8
+		static U8SDKCallback(); // 0x00000001871C56C0-0x00000001871C5730
 	
 		// Methods
-		public static U8SDKCallback InitCallback(); // 0x0000000183A84E20-0x0000000183A85230
-		public void OnInitSuc(string extConfigs); // 0x00000001849DA9B0-0x00000001849DAA10
-		public void OnInitFail(string info); // 0x0000000189DF4908-0x0000000189DF4960
-		public void OnLoginSuc(string extension); // 0x00000001849DAA30-0x00000001849DAA90
-		public void OnLoginFail(string info); // 0x0000000189DF4960-0x0000000189DF49B8
-		public void OnLogout(string info); // 0x0000000189DF49B8-0x0000000189DF4A04
-		public void OnSwitchAccount(); // 0x0000000189DF4B24-0x0000000189DF4B70
-		public void OnPaySuc(string jsonData); // 0x0000000189DF4A5C-0x0000000189DF4AB4
-		public void OnPayFail(string failMsg); // 0x0000000189DF4A04-0x0000000189DF4A5C
-		public void OnSDKError(string jsonData); // 0x0000000189DF4AB4-0x0000000189DF4B24
-		public void OnExtraInfo(string jsonData); // 0x00000001835A5E80-0x00000001835A6000
+		public static U8SDKCallback InitCallback(); // 0x00000001850CF240-0x00000001850CF620
+		public void OnInitSuc(string extConfigs); // 0x0000000186E542C0-0x0000000186E54320
+		public void OnInitFail(string info); // 0x000000018C239E08-0x000000018C239E60
+		public void OnLoginSuc(string extension); // 0x0000000186E54340-0x0000000186E543A0
+		public void OnLoginFail(string info); // 0x000000018C239E60-0x000000018C239EB8
+		public void OnLogout(string info); // 0x000000018C239EB8-0x000000018C239F04
+		public void OnSwitchAccount(); // 0x000000018C23A024-0x000000018C23A070
+		public void OnPaySuc(string jsonData); // 0x000000018C239F5C-0x000000018C239FB4
+		public void OnPayFail(string failMsg); // 0x000000018C239F04-0x000000018C239F5C
+		public void OnSDKError(string jsonData); // 0x000000018C239FB4-0x000000018C23A024
+		public void OnExtraInfo(string jsonData); // 0x0000000185784D30-0x0000000185784F70
 		[IteratorStateMachine(typeof(__onLogoutNextFrameCoroutine_d__13))]
-		private IEnumerator _onLogoutNextFrameCoroutine(); // 0x0000000189DF4B70-0x0000000189DF4BB4
+		private IEnumerator _onLogoutNextFrameCoroutine(); // 0x000000018C23A070-0x000000018C23A0B4
 		protected static T GetValueSafe<T>(Dictionary<string, object> dict, string key, T defVal = default);
 	}
 
-	public static class OneChannelSDKVersion // TypeDefIndex: 61722
+	public static class OneChannelSDKVersion // TypeDefIndex: 88802
 	{
 		// Fields
 		public static readonly string VERSION; // 0x00
 	
 		// Constructors
-		static OneChannelSDKVersion(); // 0x0000000184D4FF60-0x0000000184D4FFC0
+		static OneChannelSDKVersion(); // 0x00000001871E9A10-0x00000001871E9A70
 	}
 
-	public enum GameType // TypeDefIndex: 61723
+	public enum GameType // TypeDefIndex: 88803
 	{
 		Local = 0,
 		Cloud = 1
 	}
 
-	public class CloudGameUtil // TypeDefIndex: 61724
+	public class CloudGameUtil // TypeDefIndex: 88804
 	{
 		// Fields
 		private static int m_thinClientPlatform; // 0x00
 		private static string m_thinClientDeviceProperties; // 0x08
 	
 		// Properties
-		public static int ThinClientPlatform { get; set; } // 0x0000000189DE4854-0x0000000189DE48A4 0x0000000189DE4904-0x0000000189DE4958
-		public static string ThinClientDeviceProperties { get; set; } // 0x0000000189DE4804-0x0000000189DE4854 0x0000000189DE48A4-0x0000000189DE4904
+		public static int ThinClientPlatform { get; set; } // 0x000000018C22BD68-0x000000018C22BDB8 0x000000018C22BE18-0x000000018C22BE6C
+		public static string ThinClientDeviceProperties { get; set; } // 0x000000018C22BD18-0x000000018C22BD68 0x000000018C22BDB8-0x000000018C22BE18
 	
 		// Constructors
-		static CloudGameUtil(); // 0x0000000184D4FB30-0x0000000184D4FBA0
+		static CloudGameUtil(); // 0x00000001871E9330-0x00000001871E93A0
 	
 		// Methods
-		public static bool IsCloudGame(); // 0x00000001840BC9E0-0x00000001840BCB50
+		public static bool IsCloudGame(); // 0x0000000186144370-0x00000001861444E0
 	}
 
-	public class ImageSaver // TypeDefIndex: 61734
+	public class ImageSaver // TypeDefIndex: 88814
 	{
 		// Nested types
-		private enum FolderType // TypeDefIndex: 61725
+		private enum FolderType // TypeDefIndex: 88805
 		{
 			UserPicturesFolder = 0,
 			GameInstalledFolder = 1
 		}
 	
-		private enum ErrorCode // TypeDefIndex: 61726
+		private enum ErrorCode // TypeDefIndex: 88806
 		{
 			UnknowError = -1,
 			NotInited = 0,
@@ -2250,7 +2266,7 @@ namespace U8.SDK
 			SaveFailed = 8
 		}
 	
-		private enum CallbackResult : byte // TypeDefIndex: 61727
+		private enum CallbackResult : byte // TypeDefIndex: 88807
 		{
 			Success = 0,
 			Cancelled = 1,
@@ -2258,7 +2274,7 @@ namespace U8.SDK
 		}
 	
 		[UnityEngine.Scripting.Preserve]
-		public class ImageShareInfo // TypeDefIndex: 61728
+		public class ImageShareInfo // TypeDefIndex: 88808
 		{
 			// Fields
 			[JsonProperty("shareChannel")]
@@ -2277,11 +2293,11 @@ namespace U8.SDK
 			public string desc; // 0x40
 	
 			// Constructors
-			public ImageShareInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public ImageShareInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private struct _SaveImage_d__5 : IAsyncStateMachine // TypeDefIndex: 61729
+		private struct _SaveImage_d__5 : IAsyncStateMachine // TypeDefIndex: 88809
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -2292,13 +2308,13 @@ namespace U8.SDK
 			private TaskAwaiter<bool> __u__1; // 0x38
 	
 			// Methods
-			private void MoveNext(); // 0x0000000189DEFE58-0x0000000189DF0278
+			private void MoveNext(); // 0x000000018C236900-0x000000018C236D20
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DF0278-0x0000000189DF02D4
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C236D20-0x000000018C236D7C
 		}
 	
 		[CompilerGenerated]
-		private struct _SaveCloudGameImage_d__6 : IAsyncStateMachine // TypeDefIndex: 61730
+		private struct _SaveCloudGameImage_d__6 : IAsyncStateMachine // TypeDefIndex: 88810
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -2308,13 +2324,13 @@ namespace U8.SDK
 			private TaskAwaiter<bool> __u__1; // 0x30
 	
 			// Methods
-			private void MoveNext(); // 0x0000000189DEF69C-0x0000000189DEFAD0
+			private void MoveNext(); // 0x000000018C235DF8-0x000000018C23622C
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DEFAD0-0x0000000189DEFB30
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C23622C-0x000000018C23628C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 61731
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 88811
 		{
 			// Fields
 			public ImageSaver __4__this; // 0x10
@@ -2323,14 +2339,14 @@ namespace U8.SDK
 			public string imgFolder; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass13_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass13_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _SaveImageToPathAsync_b__0(); // 0x0000000189DF0694-0x0000000189DF086C
+			internal bool _SaveImageToPathAsync_b__0(); // 0x000000018C2372DC-0x000000018C2374B4
 		}
 	
 		[CompilerGenerated]
-		private struct _SaveImageToPathAsync_d__13 : IAsyncStateMachine // TypeDefIndex: 61732
+		private struct _SaveImageToPathAsync_d__13 : IAsyncStateMachine // TypeDefIndex: 88812
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -2342,52 +2358,52 @@ namespace U8.SDK
 			private TaskAwaiter<bool> __u__1; // 0x40
 	
 			// Methods
-			private void MoveNext(); // 0x0000000189DEFB30-0x0000000189DEFDF8
+			private void MoveNext(); // 0x000000018C23628C-0x000000018C236554
 			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x0000000189DEFDF8-0x0000000189DEFE58
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018C236554-0x000000018C2365B4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 61733
+		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 88813
 		{
 			// Fields
 			public string methodName; // 0x10
 			public string paramValue; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass24_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass24_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _SendMessageInMain_b__0(); // 0x0000000189DF086C-0x0000000189DF08C8
+			internal void _SendMessageInMain_b__0(); // 0x000000018C2374B4-0x000000018C237510
 		}
 	
 		// Constructors
-		public ImageSaver(); // 0x00000001841E1670-0x00000001841E1680
+		public ImageSaver(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public async System.Threading.Tasks.Task SaveImage(string paramJson); // 0x0000000189DE6094-0x0000000189DE6164
-		public async Task<bool> SaveCloudGameImage(string paramJson); // 0x0000000189DE5E88-0x0000000189DE5F74
-		private bool ValidateInput(string paramJson, out ImageShareInfo shareInfo); // 0x0000000189DE687C-0x0000000189DE6980
-		private string NormalizeSourcePath(string imgPath); // 0x0000000189DE5C58-0x0000000189DE5DCC
-		private FolderType ParseFolderType(int folderType); // 0x0000000189DE5DCC-0x0000000189DE5E88
-		private string BuildTargetPath(string sourcePath, string relativePath, string baseFolder); // 0x0000000189DE5324-0x0000000189DE5450
-		private bool IsDirectoryPath(string path); // 0x0000000189DE5878-0x0000000189DE592C
-		private string BuildPathForDirectory(string sourcePath, string relativeDirPath, string baseFolder); // 0x0000000189DE51F8-0x0000000189DE5324
-		private async Task<bool> SaveImageToPathAsync(string sourcePath, string targetPath, string imgFolder); // 0x0000000189DE5F74-0x0000000189DE6094
-		private bool IsSamePath(string sourcePath, string targetPath); // 0x0000000189DE592C-0x0000000189DE5A00
-		private bool ValidateMove(string sourcePath, string targetPath, string rootDir, out string error); // 0x0000000189DE6980-0x0000000189DE6B58
-		private void EnsureDirectoryExists(string filePath); // 0x0000000189DE5450-0x0000000189DE54B8
-		private bool MoveFile(string sourcePath, string targetPath); // 0x0000000189DE5A00-0x0000000189DE5C58
-		private string GetImageSaveFolder(FolderType folderType); // 0x0000000189DE5664-0x0000000189DE5718
-		private string GetWindowsPicturePath(); // 0x0000000189DE5718-0x0000000189DE5878
-		private string GetGameInstalledFolder(); // 0x0000000189DE54B8-0x0000000189DE5664
-		private void SendSuccessResponse(string targetPath); // 0x0000000189DE6788-0x0000000189DE687C
-		private void SendErrorResponse(ErrorCode errorCode); // 0x0000000189DE6164-0x0000000189DE623C
-		private void SendResponse(CallbackResult code, Dictionary<string, object> extraMsg = null); // 0x0000000189DE6314-0x0000000189DE6788
-		private void SendMessageInMain(string methodName, string paramValue); // 0x0000000189DE623C-0x0000000189DE6314
+		public async System.Threading.Tasks.Task SaveImage(string paramJson); // 0x000000018C22D350-0x000000018C22D424
+		public async Task<bool> SaveCloudGameImage(string paramJson); // 0x000000018C22D13C-0x000000018C22D22C
+		private bool ValidateInput(string paramJson, out ImageShareInfo shareInfo); // 0x000000018C22DB08-0x000000018C22DC20
+		private string NormalizeSourcePath(string imgPath); // 0x000000018C22CF0C-0x000000018C22D080
+		private FolderType ParseFolderType(int folderType); // 0x000000018C22D080-0x000000018C22D13C
+		private string BuildTargetPath(string sourcePath, string relativePath, string baseFolder); // 0x000000018C22C5D4-0x000000018C22C704
+		private bool IsDirectoryPath(string path); // 0x000000018C22CB2C-0x000000018C22CBE0
+		private string BuildPathForDirectory(string sourcePath, string relativeDirPath, string baseFolder); // 0x000000018C22C4A8-0x000000018C22C5D4
+		private async Task<bool> SaveImageToPathAsync(string sourcePath, string targetPath, string imgFolder); // 0x000000018C22D22C-0x000000018C22D350
+		private bool IsSamePath(string sourcePath, string targetPath); // 0x000000018C22CBE0-0x000000018C22CCB4
+		private bool ValidateMove(string sourcePath, string targetPath, string rootDir, out string error); // 0x000000018C22DC20-0x000000018C22DDF8
+		private void EnsureDirectoryExists(string filePath); // 0x000000018C22C704-0x000000018C22C76C
+		private bool MoveFile(string sourcePath, string targetPath); // 0x000000018C22CCB4-0x000000018C22CF0C
+		private string GetImageSaveFolder(FolderType folderType); // 0x000000018C22C918-0x000000018C22C9CC
+		private string GetWindowsPicturePath(); // 0x000000018C22C9CC-0x000000018C22CB2C
+		private string GetGameInstalledFolder(); // 0x000000018C22C76C-0x000000018C22C918
+		private void SendSuccessResponse(string targetPath); // 0x000000018C22DA14-0x000000018C22DB08
+		private void SendErrorResponse(ErrorCode errorCode); // 0x000000018C22D424-0x000000018C22D4FC
+		private void SendResponse(CallbackResult code, Dictionary<string, object> extraMsg = null); // 0x000000018C22D5D4-0x000000018C22DA14
+		private void SendMessageInMain(string methodName, string paramValue); // 0x000000018C22D4FC-0x000000018C22D5D4
 	}
 
-	public class U8MainThreadDispatcher : MonoBehaviour // TypeDefIndex: 61735
+	public class U8MainThreadDispatcher : MonoBehaviour // TypeDefIndex: 88815
 	{
 		// Fields
 		private static readonly ConcurrentQueue<Action> _queue; // 0x00
@@ -2395,35 +2411,35 @@ namespace U8.SDK
 		private static int _initialized; // 0x10
 	
 		// Constructors
-		public U8MainThreadDispatcher(); // 0x0000000185393520-0x0000000185393538
-		static U8MainThreadDispatcher(); // 0x0000000184A1D370-0x0000000184A1D420
+		public U8MainThreadDispatcher(); // 0x00000001878364A0-0x00000001878364B8
+		static U8MainThreadDispatcher(); // 0x0000000186EA9870-0x0000000186EA9920
 	
 		// Methods
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-		private static void Initialize(); // 0x0000000184B46C10-0x0000000184B46E20
-		public static void RunOnMainThread(Action action); // 0x0000000189DF3AF0-0x0000000189DF3B64
-		private void Update(); // 0x0000000183B643C0-0x0000000183B644D0
+		private static void Initialize(); // 0x0000000186FC0720-0x0000000186FC0930
+		public static void RunOnMainThread(Action action); // 0x000000018C23945C-0x000000018C2394D0
+		private void Update(); // 0x000000018508D580-0x000000018508D690
 	}
 }
 
 namespace U8.SDK.MiniJSON
 {
-	public static class Json // TypeDefIndex: 61739
+	public static class Json // TypeDefIndex: 88819
 	{
 		// Nested types
-		private sealed class Parser : IDisposable // TypeDefIndex: 61737
+		private sealed class Parser : IDisposable // TypeDefIndex: 88817
 		{
 			// Fields
 			private StringReader json; // 0x10
 	
 			// Properties
-			private char PeekChar { get; } // 0x0000000183140ED0-0x0000000183140F30 
-			private char NextChar { get; } // 0x0000000183141060-0x00000001831410C0 
-			private string NextWord { get; } // 0x0000000183140AF0-0x0000000183140BB0 
-			private TOKEN NextToken { get; } // 0x0000000183140D50-0x0000000183140ED0 
+			private char PeekChar { get; } // 0x00000001857C2740-0x00000001857C27A0 
+			private char NextChar { get; } // 0x00000001857C2970-0x00000001857C29D0 
+			private string NextWord { get; } // 0x00000001857C21A0-0x00000001857C2260 
+			private TOKEN NextToken { get; } // 0x00000001857C2510-0x00000001857C2740 
 	
 			// Nested types
-			private enum TOKEN // TypeDefIndex: 61736
+			private enum TOKEN // TypeDefIndex: 88816
 			{
 				NONE = 0,
 				CURLY_OPEN = 1,
@@ -2440,40 +2456,40 @@ namespace U8.SDK.MiniJSON
 			}
 	
 			// Constructors
-			private Parser(string jsonString); // 0x00000001835A6570-0x00000001835A65F0
+			private Parser(string jsonString); // 0x0000000185786BC0-0x0000000185786C40
 	
 			// Methods
-			public static bool IsWordBreak(char c); // 0x00000001831410E0-0x0000000183141150
-			public static object Parse(string jsonString); // 0x00000001835A6470-0x00000001835A6570
-			public void Dispose(); // 0x0000000184702E20-0x0000000184702E60
-			private Dictionary<string, object> ParseObject(); // 0x0000000183140BB0-0x0000000183140CE0
-			private List<object> ParseArray(); // 0x0000000189DE6CFC-0x0000000189DE6E20
-			private object ParseValue(); // 0x0000000183141150-0x0000000183141180
-			private object ParseByToken(TOKEN token); // 0x0000000183141180-0x0000000183141220
-			private string ParseString(); // 0x0000000183140F30-0x0000000183141060
-			private object ParseNumber(); // 0x000000018321A290-0x000000018321A340
-			private void EatWhitespace(); // 0x0000000183140CE0-0x0000000183140D50
+			public static bool IsWordBreak(char c); // 0x00000001857C2A30-0x00000001857C2AA0
+			public static object Parse(string jsonString); // 0x0000000185786AB0-0x0000000185786BC0
+			public void Dispose(); // 0x0000000186B80740-0x0000000186B80780
+			private Dictionary<string, object> ParseObject(); // 0x00000001857C2340-0x00000001857C2470
+			private List<object> ParseArray(); // 0x00000001857C19E0-0x00000001857C1B10
+			private object ParseValue(); // 0x00000001857C2260-0x00000001857C2290
+			private object ParseByToken(TOKEN token); // 0x00000001857C2290-0x00000001857C2340
+			private string ParseString(); // 0x00000001857C27A0-0x00000001857C2970
+			private object ParseNumber(); // 0x00000001857C2DA0-0x00000001857C2E50
+			private void EatWhitespace(); // 0x00000001857C2470-0x00000001857C2510
 		}
 	
-		private sealed class Serializer // TypeDefIndex: 61738
+		private sealed class Serializer // TypeDefIndex: 88818
 		{
 			// Fields
 			private StringBuilder builder; // 0x10
 	
 			// Constructors
-			private Serializer(); // 0x000000018403C9D0-0x000000018403CA40
+			private Serializer(); // 0x0000000186BB4F80-0x0000000186BB4FF0
 	
 			// Methods
-			public static string Serialize(object obj); // 0x000000018403C950-0x000000018403C9D0
-			private void SerializeValue(object value); // 0x000000018403CBE0-0x000000018403CDA0
-			private void SerializeObject(IDictionary obj); // 0x000000018403CFB0-0x0000000184044580
-			private void SerializeArray(IList anArray); // 0x0000000189DEDF14-0x0000000189DEE38C
-			private void SerializeString(string str); // 0x000000018403CDA0-0x000000018403CF50
-			private void SerializeOther(object value); // 0x000000018403CA40-0x000000018403CBA0
+			public static string Serialize(object obj); // 0x0000000186BB4F00-0x0000000186BB4F80
+			private void SerializeValue(object value); // 0x00000001861768A0-0x0000000186176A60
+			private void SerializeObject(IDictionary obj); // 0x0000000186176C70-0x000000018617FAD0
+			private void SerializeArray(IList anArray); // 0x000000018C23B298-0x000000018C23B70C
+			private void SerializeString(string str); // 0x0000000186176A60-0x0000000186176C10
+			private void SerializeOther(object value); // 0x0000000186174950-0x0000000186174AB0
 		}
 	
 		// Methods
-		public static object Deserialize(string json); // 0x00000001835A6450-0x00000001835A6470
-		public static string Serialize(object obj); // 0x0000000185395194-0x000000018539519C
+		public static object Deserialize(string json); // 0x0000000185786A90-0x0000000185786AB0
+		public static string Serialize(object obj); // 0x0000000187838CDC-0x0000000187838CE4
 	}
 }

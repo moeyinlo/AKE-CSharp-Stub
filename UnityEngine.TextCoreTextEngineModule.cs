@@ -12,196 +12,27 @@ using UnityEngine.Serialization;
 using UnityEngine.TextCore;
 using UnityEngine.TextCore.LowLevel;
 
-// Image 43: UnityEngine.TextCoreTextEngineModule.dll - Assembly: UnityEngine.TextCoreTextEngineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59503-59561
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Tests")]
-[assembly: InternalsVisibleTo("Unity.FontEngine.Tests")]
-[assembly: InternalsVisibleTo("Unity.TextCore.Tests")]
-[assembly: InternalsVisibleTo("Unity.TextMeshPro.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCore.Tools")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreModule")]
-[assembly: InternalsVisibleTo("Unity.TextCore.FontEngine")]
-[assembly: InternalsVisibleTo("Unity.FontEngine")]
-[assembly: InternalsVisibleTo("Unity.TextMeshPro")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("Unity.TextCore.FontEngine.Tools")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Text")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 43: UnityEngine.TextCoreTextEngineModule.dll - Assembly: UnityEngine.TextCoreTextEngineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 86570-86628
 
 namespace UnityEngine.TextCore.Text
 {
 	[Serializable]
-	public class Character : TextElement // TypeDefIndex: 59504
+	public class Character : TextElement // TypeDefIndex: 86571
 	{
 		// Constructors
-		public Character(); // 0x0000000184DB9B40-0x0000000184DB9B50
-		public Character(uint unicode, FontAsset fontAsset, Glyph glyph); // 0x000000018B448900-0x000000018B448958
-		internal Character(uint unicode, uint glyphIndex); // 0x000000018B30C9E4-0x000000018B30CA24
+		public Character(); // 0x000000018725F0A0-0x000000018725F0B0
+		public Character(uint unicode, FontAsset fontAsset, Glyph glyph); // 0x000000018D57287C-0x000000018D5728D4
+		internal Character(uint unicode, uint glyphIndex); // 0x000000018D41D96C-0x000000018D41D9AC
 	}
 
-	internal static class ColorUtilities // TypeDefIndex: 59505
+	internal static class ColorUtilities // TypeDefIndex: 86572
 	{
 		// Methods
-		internal static bool CompareColors(Color32 a, Color32 b); // 0x000000018B448958-0x000000018B448990
-		internal static Color32 MultiplyColors(Color32 c1, Color32 c2); // 0x000000018B448990-0x000000018B448A6C
+		internal static bool CompareColors(Color32 a, Color32 b); // 0x000000018D5728D4-0x000000018D57290C
+		internal static Color32 MultiplyColors(Color32 c1, Color32 c2); // 0x000000018D57290C-0x000000018D5729E8
 	}
 
-	public enum TextFontWeight // TypeDefIndex: 59506
+	public enum TextFontWeight // TypeDefIndex: 86573
 	{
 		Thin = 100,
 		ExtraLight = 200,
@@ -215,7 +46,7 @@ namespace UnityEngine.TextCore.Text
 	}
 
 	[Serializable]
-	public struct FontWeightPair // TypeDefIndex: 59507
+	public struct FontWeightPair // TypeDefIndex: 86574
 	{
 		// Fields
 		public FontAsset regularTypeface; // 0x00
@@ -223,7 +54,7 @@ namespace UnityEngine.TextCore.Text
 	}
 
 	[Serializable]
-	public struct FontAssetCreationEditorSettings // TypeDefIndex: 59508
+	public struct FontAssetCreationEditorSettings // TypeDefIndex: 86575
 	{
 		// Fields
 		public string sourceFontFileGUID; // 0x00
@@ -244,7 +75,7 @@ namespace UnityEngine.TextCore.Text
 		public bool includeFontFeatures; // 0x4C
 	}
 
-	public enum AtlasPopulationMode // TypeDefIndex: 59509
+	public enum AtlasPopulationMode // TypeDefIndex: 86576
 	{
 		Static = 0,
 		Dynamic = 1,
@@ -253,7 +84,7 @@ namespace UnityEngine.TextCore.Text
 
 	[Serializable]
 	[ExcludeFromPreset]
-	public class FontAsset : TextAsset // TypeDefIndex: 59511
+	public class FontAsset : TextAsset // TypeDefIndex: 86578
 	{
 		// Fields
 		[SerializeField]
@@ -348,41 +179,41 @@ namespace UnityEngine.TextCore.Text
 		internal static uint[] k_GlyphIndexArray; // 0x68
 	
 		// Properties
-		public Font sourceFontFile { get; internal set; } // 0x0000000184DBCF90-0x0000000184DBCFA0 0x00000001842B4AE0-0x00000001842B4AF0
-		public AtlasPopulationMode atlasPopulationMode { get; set; } // 0x0000000184DBC0F0-0x0000000184DBC100 0x0000000184D86450-0x0000000184D86460
-		public FaceInfo faceInfo { get; set; } // 0x0000000184DBD500-0x0000000184DBD540 0x000000018B44FECC-0x000000018B44FF10
-		internal int familyNameHashCode { get; set; } // 0x000000018B44FE34-0x000000018B44FE68 0x0000000184D8F8F0-0x0000000184D8F900
-		internal int styleNameHashCode { get; set; } // 0x000000018B44FE98-0x000000018B44FECC 0x0000000184D89330-0x0000000184D89340
-		public FontWeightPair[] fontWeightTable { get; internal set; } // 0x0000000184DBD0A0-0x0000000184DBD0B0 0x0000000186AC5AF4-0x0000000186AC5B08
-		public List<Glyph> glyphTable { get; internal set; } // 0x0000000184DBD0B0-0x0000000184DBD0C0 0x0000000186AC5ACC-0x0000000186AC5AE0
-		public Dictionary<uint, Glyph> glyphLookupTable { get; } // 0x000000018B44FE68-0x000000018B44FE98 
-		public List<Character> characterTable { get; internal set; } // 0x0000000184DBD050-0x0000000184DBD060 0x000000018678D7BC-0x000000018678D7D0
-		public Dictionary<uint, Character> characterLookupTable { get; } // 0x000000018B44FE04-0x000000018B44FE34 
-		public Texture2D atlasTexture { get; } // 0x000000018B44FD64-0x000000018B44FDF8 
-		public Texture2D[] atlasTextures { get; set; } // 0x000000018B44FDF8-0x000000018B44FE04 0x0000000186AC5B1C-0x0000000186AC5B30
-		public int atlasTextureCount { get; } // 0x0000000184DBD4B0-0x0000000184DBD4C0 
-		public bool isMultiAtlasTexturesEnabled { get; set; } // 0x0000000184DBD5B0-0x0000000184DBD5C0 0x0000000184DA7530-0x0000000184DA7540
-		internal bool clearDynamicDataOnBuild { get; set; } // 0x0000000184DBD4F0-0x0000000184DBD500 0x0000000184DA7550-0x0000000184DA7560
-		public int atlasWidth { get; internal set; } // 0x0000000184DBD4C0-0x0000000184DBD4D0 0x0000000184DA6220-0x0000000184DA6230
-		public int atlasHeight { get; internal set; } // 0x0000000184DBD480-0x0000000184DBD490 0x0000000184D8F9D0-0x0000000184D8F9E0
-		public int atlasPadding { get; internal set; } // 0x0000000184DBD490-0x0000000184DBD4A0 0x0000000184D927A0-0x0000000184D927B0
-		public GlyphRenderMode atlasRenderMode { get; internal set; } // 0x0000000184DBD4A0-0x0000000184DBD4B0 0x0000000184DBD610-0x0000000184DBD620
-		internal List<GlyphRect> usedGlyphRects { get; set; } // 0x0000000184DBD600-0x0000000184DBD610 0x00000001868C2E50-0x00000001868C2E64
-		internal List<GlyphRect> freeGlyphRects { get; set; } // 0x0000000184DBD5A0-0x0000000184DBD5B0 0x0000000185397170-0x0000000185397184
-		public FontFeatureTable fontFeatureTable { get; internal set; } // 0x0000000184DBD590-0x0000000184DBD5A0 0x000000018539715C-0x0000000185397170
-		public List<FontAsset> fallbackFontAssetTable { get; set; } // 0x0000000184DBD540-0x0000000184DBD550 0x00000001853971C0-0x00000001853971D4
-		public FontAssetCreationEditorSettings fontAssetCreationEditorSettings { get; set; } // 0x0000000184DBD550-0x0000000184DBD590 0x000000018B44FF10-0x000000018B44FF54
-		public float regularStyleWeight { get; set; } // 0x0000000184DBD5E0-0x0000000184DBD5F0 0x0000000184D90320-0x0000000184D90330
-		public float regularStyleSpacing { get; set; } // 0x0000000184DBD5D0-0x0000000184DBD5E0 0x0000000184D90400-0x0000000184D90410
-		public float boldStyleWeight { get; set; } // 0x0000000184DBD4E0-0x0000000184DBD4F0 0x0000000184DBD620-0x0000000184DBD630
-		public float boldStyleSpacing { get; set; } // 0x0000000184DBD4D0-0x0000000184DBD4E0 0x0000000184D8EE30-0x0000000184D8EE40
-		public byte italicStyleSlant { get; set; } // 0x0000000184DBD5C0-0x0000000184DBD5D0 0x0000000184D90100-0x0000000184D90110
-		public byte tabMultiple { get; set; } // 0x0000000184DBD5F0-0x0000000184DBD600 0x0000000184DBD630-0x0000000184DBD640
+		public Font sourceFontFile { get; internal set; } // 0x0000000187261E60-0x0000000187261E70 0x00000001870EAAD0-0x00000001870EAAE0
+		public AtlasPopulationMode atlasPopulationMode { get; set; } // 0x00000001872615F0-0x0000000187261600 0x0000000185E120B0-0x0000000185E120C0
+		public FaceInfo faceInfo { get; set; } // 0x00000001872623A0-0x00000001872623E0 0x000000018D579D7C-0x000000018D579DC0
+		internal int familyNameHashCode { get; set; } // 0x000000018D579CE4-0x000000018D579D18 0x000000018723DB00-0x000000018723DB10
+		internal int styleNameHashCode { get; set; } // 0x000000018D579D48-0x000000018D579D7C 0x0000000185B8EB10-0x0000000185B8EB20
+		public FontWeightPair[] fontWeightTable { get; internal set; } // 0x0000000187261F70-0x0000000187261F80 0x0000000188D80C28-0x0000000188D80C3C
+		public List<Glyph> glyphTable { get; internal set; } // 0x0000000187261F80-0x0000000187261F90 0x0000000188D95540-0x0000000188D95554
+		public Dictionary<uint, Glyph> glyphLookupTable { get; } // 0x000000018D579D18-0x000000018D579D48 
+		public List<Character> characterTable { get; internal set; } // 0x0000000187261F20-0x0000000187261F30 0x0000000188A79A0C-0x0000000188A79A20
+		public Dictionary<uint, Character> characterLookupTable { get; } // 0x000000018D579CB4-0x000000018D579CE4 
+		public Texture2D atlasTexture { get; } // 0x000000018D579C14-0x000000018D579CA8 
+		public Texture2D[] atlasTextures { get; set; } // 0x000000018D579CA8-0x000000018D579CB4 0x0000000188D62F7C-0x0000000188D62F90
+		public int atlasTextureCount { get; } // 0x0000000187262350-0x0000000187262360 
+		public bool isMultiAtlasTexturesEnabled { get; set; } // 0x0000000187262450-0x0000000187262460 0x0000000187255590-0x00000001872555A0
+		internal bool clearDynamicDataOnBuild { get; set; } // 0x0000000187262390-0x00000001872623A0 0x00000001872555B0-0x00000001872555C0
+		public int atlasWidth { get; internal set; } // 0x0000000187262360-0x0000000187262370 0x00000001828A9D50-0x00000001828A9D60
+		public int atlasHeight { get; internal set; } // 0x0000000187262320-0x0000000187262330 0x000000018723D600-0x000000018723D610
+		public int atlasPadding { get; internal set; } // 0x0000000187262330-0x0000000187262340 0x0000000187240770-0x0000000187240780
+		public GlyphRenderMode atlasRenderMode { get; internal set; } // 0x0000000187262340-0x0000000187262350 0x00000001872624B0-0x00000001872624C0
+		internal List<GlyphRect> usedGlyphRects { get; set; } // 0x00000001872624A0-0x00000001872624B0 0x0000000188BD49B4-0x0000000188BD49C8
+		internal List<GlyphRect> freeGlyphRects { get; set; } // 0x0000000187262440-0x0000000187262450 0x000000018783BFB4-0x000000018783BFC8
+		public FontFeatureTable fontFeatureTable { get; internal set; } // 0x0000000187262430-0x0000000187262440 0x000000018783BFA0-0x000000018783BFB4
+		public List<FontAsset> fallbackFontAssetTable { get; set; } // 0x00000001872623E0-0x00000001872623F0 0x000000018783BF50-0x000000018783BF64
+		public FontAssetCreationEditorSettings fontAssetCreationEditorSettings { get; set; } // 0x00000001872623F0-0x0000000187262430 0x000000018D579DC0-0x000000018D579E04
+		public float regularStyleWeight { get; set; } // 0x0000000187262480-0x0000000187262490 0x000000018723E230-0x000000018723E240
+		public float regularStyleSpacing { get; set; } // 0x0000000187262470-0x0000000187262480 0x000000018723E380-0x000000018723E390
+		public float boldStyleWeight { get; set; } // 0x0000000187262380-0x0000000187262390 0x00000001872624D0-0x00000001872624E0
+		public float boldStyleSpacing { get; set; } // 0x0000000187262370-0x0000000187262380 0x00000001872624C0-0x00000001872624D0
+		public byte italicStyleSlant { get; set; } // 0x0000000187262460-0x0000000187262470 0x000000018723C650-0x000000018723C660
+		public byte tabMultiple { get; set; } // 0x0000000187262490-0x00000001872624A0 0x0000000187240AC0-0x0000000187240AD0
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 59510
+		private sealed class __c // TypeDefIndex: 86577
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -390,92 +221,92 @@ namespace UnityEngine.TextCore.Text
 			public static Func<Glyph, uint> __9__145_0; // 0x10
 	
 			// Constructors
-			static __c(); // 0x000000018B459278-0x000000018B4592DC
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018D58327C-0x000000018D5832E0
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal uint _SortCharacterTable_b__144_0(Character c); // 0x000000018B319DF0-0x000000018B319E08
-			internal uint _SortGlyphTable_b__145_0(Glyph c); // 0x000000018AA421AC-0x000000018AA421C4
+			internal uint _SortCharacterTable_b__144_0(Character c); // 0x000000018D42B2E8-0x000000018D42B300
+			internal uint _SortGlyphTable_b__145_0(Glyph c); // 0x000000018CC33418-0x000000018CC33430
 		}
 	
 		// Constructors
-		public FontAsset(); // 0x000000018B44F980-0x000000018B44FD64
-		static FontAsset(); // 0x000000018B44F600-0x000000018B44F980
+		public FontAsset(); // 0x000000018D579834-0x000000018D579C14
+		static FontAsset(); // 0x000000018D5794A0-0x000000018D579834
 	
 		// Methods
-		public static FontAsset CreateFontAsset(string familyName, string styleName, int pointSize = 90 /* Metadata: 0x0234CD7A */); // 0x000000018B44A4CC-0x000000018B44A6B0
-		private static FontAsset CreateFontAsset(string fontFilePath, int faceIndex, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.DynamicOS /* Metadata: 0x0234CD7C */, bool enableMultiAtlasSupport = true /* Metadata: 0x0234CD7D */); // 0x000000018B44A32C-0x000000018B44A45C
-		public static FontAsset CreateFontAsset(Font font); // 0x000000018B44A45C-0x000000018B44A4CC
-		public static FontAsset CreateFontAsset(Font font, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x0234CD7E */, bool enableMultiAtlasSupport = true /* Metadata: 0x0234CD7F */); // 0x000000018B44A6B0-0x000000018B44A754
-		private static FontAsset CreateFontAsset(Font font, int faceIndex, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x0234CD80 */, bool enableMultiAtlasSupport = true /* Metadata: 0x0234CD81 */); // 0x000000018B44A754-0x000000018B44A900
-		private static FontAsset CreateFontAssetInstance(Font font, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode, bool enableMultiAtlasSupport); // 0x000000018B449E84-0x000000018B44A32C
-		private void Awake(); // 0x00000001841E1670-0x00000001841E1680
-		private void OnDestroy(); // 0x000000018B44BEE8-0x000000018B44BF38
-		public void ReadFontAssetDefinition(); // 0x000000018B44BF38-0x000000018B44C250
-		internal void InitializeDictionaryLookupTables(); // 0x000000018B44B9E8-0x000000018B44BA14
-		internal void InitializeGlyphLookupDictionary(); // 0x000000018B44BA14-0x000000018B44BC8C
-		internal void InitializeCharacterLookupDictionary(); // 0x000000018B44B828-0x000000018B44B9E8
-		internal void InitializeGlyphPaidAdjustmentRecordsLookupDictionary(); // 0x000000018B44BC8C-0x000000018B44BE58
-		internal void AddSynthesizedCharactersAndFaceMetrics(); // 0x000000018B4498F8-0x000000018B449AE0
-		private void AddSynthesizedCharacter(uint unicode, bool isFontFaceLoaded, bool addImmediately = false /* Metadata: 0x0234CD82 */); // 0x000000018B4496DC-0x000000018B4498F8
-		internal void AddCharacterToLookupCache(uint unicode, Character character); // 0x000000018B449674-0x000000018B4496DC
-		private FontEngineError LoadFontFace(); // 0x000000018B44BE58-0x000000018B44BEE8
-		internal void SortCharacterTable(); // 0x000000018B44C5F8-0x000000018B44C764
-		internal void SortGlyphTable(); // 0x000000018B44C788-0x000000018B44C8F4
-		internal void SortFontFeatureTable(); // 0x000000018B44C764-0x000000018B44C788
-		internal void SortAllTables(); // 0x000000018B44C5CC-0x000000018B44C5F8
-		public bool HasCharacter(int character); // 0x000000018B44AE50-0x000000018B44AEB4
-		public bool HasCharacter(char character, bool searchFallbacks = false /* Metadata: 0x0234CD83 */, bool tryAddCharacter = false /* Metadata: 0x0234CD84 */); // 0x000000018B44AEB4-0x000000018B44B1F8
-		private bool HasCharacter_Internal(uint character, bool searchFallbacks = false /* Metadata: 0x0234CD85 */, bool tryAddCharacter = false /* Metadata: 0x0234CD86 */); // 0x000000018B44AC20-0x000000018B44AE50
-		public bool HasCharacters(string text, out List<char> missingCharacters); // 0x000000018B44B6D4-0x000000018B44B828
-		public bool HasCharacters(string text, out uint[] missingCharacters, bool searchFallbacks = false /* Metadata: 0x0234CD87 */, bool tryAddCharacter = false /* Metadata: 0x0234CD88 */); // 0x000000018B44B2A4-0x000000018B44B6D4
-		public bool HasCharacters(string text); // 0x000000018B44B1F8-0x000000018B44B2A4
-		public static string GetCharacters(FontAsset fontAsset); // 0x000000018B44AA78-0x000000018B44AB58
-		public static int[] GetCharactersArray(FontAsset fontAsset); // 0x000000018B44A9AC-0x000000018B44AA78
-		internal uint GetGlyphIndex(uint unicode); // 0x000000018B44AB58-0x000000018B44AC20
-		internal static void RegisterFontAssetForFontFeatureUpdate(FontAsset fontAsset); // 0x000000018B44C31C-0x000000018B44C3E8
-		internal static void UpdateFontFeaturesForFontAssetsInQueue(); // 0x000000018B44F064-0x000000018B44F194
-		internal static void RegisterAtlasTextureForApply(Texture2D texture); // 0x000000018B44C250-0x000000018B44C31C
-		internal static void UpdateAtlasTexturesInQueue(); // 0x000000018B44EDE0-0x000000018B44EF14
-		internal static void UpdateFontAssetInUpdateQueue(); // 0x000000018B44F01C-0x000000018B44F064
-		public bool TryAddCharacters(uint[] unicodes, bool includeFontFeatures = false /* Metadata: 0x0234CD89 */); // 0x000000018B44D20C-0x000000018B44D230
-		public bool TryAddCharacters(uint[] unicodes, out uint[] missingUnicodes, bool includeFontFeatures = false /* Metadata: 0x0234CD8A */); // 0x000000018B44D230-0x000000018B44DBAC
-		public bool TryAddCharacters(string characters, bool includeFontFeatures = false /* Metadata: 0x0234CD8B */); // 0x000000018B44D1E8-0x000000018B44D20C
-		public bool TryAddCharacters(string characters, out string missingCharacters, bool includeFontFeatures = false /* Metadata: 0x0234CD8C */); // 0x000000018B44DBAC-0x000000018B44E504
-		internal bool TryAddCharacterInternal(uint unicode, out Character character, bool shouldGetFontFeatures = false /* Metadata: 0x0234CD8D */); // 0x000000018B44C8F4-0x000000018B44D1E8
-		internal bool TryGetCharacter_and_QueueRenderToTexture(uint unicode, out Character character, bool shouldGetFontFeatures = false /* Metadata: 0x0234CD8E */); // 0x000000018B44E864-0x000000018B44EC54
-		internal void TryAddGlyphsToAtlasTextures(); // 0x00000001841E1670-0x00000001841E1680
-		private bool TryAddGlyphsToNewAtlasTexture(); // 0x000000018B44E504-0x000000018B44E864
-		private void SetupNewAtlasTexture(); // 0x000000018B44C3E8-0x000000018B44C5CC
-		internal void UpdateAtlasTexture(); // 0x000000018B44EC54-0x000000018B44EDE0
-		internal void UpdateGlyphAdjustmentRecords(); // 0x000000018B44F3B0-0x000000018B44F600
-		internal void UpdateGlyphAdjustmentRecords(uint[] glyphIndexes); // 0x000000018B44F194-0x000000018B44F3B0
-		internal void UpdateGlyphAdjustmentRecords(List<uint> glyphIndexes); // 0x00000001841E1670-0x00000001841E1680
-		internal void UpdateGlyphAdjustmentRecords(List<uint> newGlyphIndexes, List<uint> allGlyphIndexes); // 0x00000001841E1670-0x00000001841E1680
+		public static FontAsset CreateFontAsset(string familyName, string styleName, int pointSize = 90 /* Metadata: 0x026458AF */); // 0x000000018D574448-0x000000018D57462C
+		private static FontAsset CreateFontAsset(string fontFilePath, int faceIndex, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.DynamicOS /* Metadata: 0x026458B1 */, bool enableMultiAtlasSupport = true /* Metadata: 0x026458B2 */); // 0x000000018D5742A4-0x000000018D5743D4
+		public static FontAsset CreateFontAsset(Font font); // 0x000000018D5743D4-0x000000018D574448
+		public static FontAsset CreateFontAsset(Font font, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x026458B3 */, bool enableMultiAtlasSupport = true /* Metadata: 0x026458B4 */); // 0x000000018D57462C-0x000000018D5746D4
+		private static FontAsset CreateFontAsset(Font font, int faceIndex, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x026458B5 */, bool enableMultiAtlasSupport = true /* Metadata: 0x026458B6 */); // 0x000000018D5746D4-0x000000018D574880
+		private static FontAsset CreateFontAssetInstance(Font font, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode, bool enableMultiAtlasSupport); // 0x000000018D573E00-0x000000018D5742A4
+		private void Awake(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void OnDestroy(); // 0x000000018D575E60-0x000000018D575EB0
+		public void ReadFontAssetDefinition(); // 0x000000018D575EB0-0x000000018D5761C8
+		internal void InitializeDictionaryLookupTables(); // 0x000000018D57595C-0x000000018D575988
+		internal void InitializeGlyphLookupDictionary(); // 0x000000018D575988-0x000000018D575C04
+		internal void InitializeCharacterLookupDictionary(); // 0x000000018D57579C-0x000000018D57595C
+		internal void InitializeGlyphPaidAdjustmentRecordsLookupDictionary(); // 0x000000018D575C04-0x000000018D575DD0
+		internal void AddSynthesizedCharactersAndFaceMetrics(); // 0x000000018D573860-0x000000018D573A48
+		private void AddSynthesizedCharacter(uint unicode, bool isFontFaceLoaded, bool addImmediately = false /* Metadata: 0x026458B7 */); // 0x000000018D57363C-0x000000018D573860
+		internal void AddCharacterToLookupCache(uint unicode, Character character); // 0x000000018D5735D4-0x000000018D57363C
+		private FontEngineError LoadFontFace(); // 0x000000018D575DD0-0x000000018D575E60
+		internal void SortCharacterTable(); // 0x000000018D57657C-0x000000018D5766E8
+		internal void SortGlyphTable(); // 0x000000018D57670C-0x000000018D576878
+		internal void SortFontFeatureTable(); // 0x000000018D5766E8-0x000000018D57670C
+		internal void SortAllTables(); // 0x000000018D576550-0x000000018D57657C
+		public bool HasCharacter(int character); // 0x000000018D574DE0-0x000000018D574E44
+		public bool HasCharacter(char character, bool searchFallbacks = false /* Metadata: 0x026458B8 */, bool tryAddCharacter = false /* Metadata: 0x026458B9 */); // 0x000000018D574E44-0x000000018D575178
+		private bool HasCharacter_Internal(uint character, bool searchFallbacks = false /* Metadata: 0x026458BA */, bool tryAddCharacter = false /* Metadata: 0x026458BB */); // 0x000000018D574BC0-0x000000018D574DE0
+		public bool HasCharacters(string text, out List<char> missingCharacters); // 0x000000018D575648-0x000000018D57579C
+		public bool HasCharacters(string text, out uint[] missingCharacters, bool searchFallbacks = false /* Metadata: 0x026458BC */, bool tryAddCharacter = false /* Metadata: 0x026458BD */); // 0x000000018D575224-0x000000018D575648
+		public bool HasCharacters(string text); // 0x000000018D575178-0x000000018D575224
+		public static string GetCharacters(FontAsset fontAsset); // 0x000000018D574A18-0x000000018D574AF8
+		public static int[] GetCharactersArray(FontAsset fontAsset); // 0x000000018D574938-0x000000018D574A18
+		internal uint GetGlyphIndex(uint unicode); // 0x000000018D574AF8-0x000000018D574BC0
+		internal static void RegisterFontAssetForFontFeatureUpdate(FontAsset fontAsset); // 0x000000018D576294-0x000000018D576360
+		internal static void UpdateFontFeaturesForFontAssetsInQueue(); // 0x000000018D578F00-0x000000018D579030
+		internal static void RegisterAtlasTextureForApply(Texture2D texture); // 0x000000018D5761C8-0x000000018D576294
+		internal static void UpdateAtlasTexturesInQueue(); // 0x000000018D578C6C-0x000000018D578DA0
+		internal static void UpdateFontAssetInUpdateQueue(); // 0x000000018D578EB8-0x000000018D578F00
+		public bool TryAddCharacters(uint[] unicodes, bool includeFontFeatures = false /* Metadata: 0x026458BE */); // 0x000000018D577050-0x000000018D577074
+		public bool TryAddCharacters(uint[] unicodes, out uint[] missingUnicodes, bool includeFontFeatures = false /* Metadata: 0x026458BF */); // 0x000000018D577074-0x000000018D577A18
+		public bool TryAddCharacters(string characters, bool includeFontFeatures = false /* Metadata: 0x026458C0 */); // 0x000000018D57702C-0x000000018D577050
+		public bool TryAddCharacters(string characters, out string missingCharacters, bool includeFontFeatures = false /* Metadata: 0x026458C1 */); // 0x000000018D577A18-0x000000018D57837C
+		internal bool TryAddCharacterInternal(uint unicode, out Character character, bool shouldGetFontFeatures = false /* Metadata: 0x026458C2 */); // 0x000000018D576878-0x000000018D57702C
+		internal bool TryGetCharacter_and_QueueRenderToTexture(uint unicode, out Character character, bool shouldGetFontFeatures = false /* Metadata: 0x026458C3 */); // 0x000000018D5786E8-0x000000018D578AE0
+		internal void TryAddGlyphsToAtlasTextures(); // 0x0000000186805BA0-0x0000000186805BB0
+		private bool TryAddGlyphsToNewAtlasTexture(); // 0x000000018D57837C-0x000000018D5786E8
+		private void SetupNewAtlasTexture(); // 0x000000018D576360-0x000000018D576550
+		internal void UpdateAtlasTexture(); // 0x000000018D578AE0-0x000000018D578C6C
+		internal void UpdateGlyphAdjustmentRecords(); // 0x000000018D57924C-0x000000018D5794A0
+		internal void UpdateGlyphAdjustmentRecords(uint[] glyphIndexes); // 0x000000018D579030-0x000000018D57924C
+		internal void UpdateGlyphAdjustmentRecords(List<uint> glyphIndexes); // 0x0000000186805BA0-0x0000000186805BB0
+		internal void UpdateGlyphAdjustmentRecords(List<uint> newGlyphIndexes, List<uint> allGlyphIndexes); // 0x0000000186805BA0-0x0000000186805BB0
 		private void CopyListDataToArray<T>(List<T> srcList, ref ref T[] dstArray);
-		public void ClearFontAssetData(bool setAtlasSizeToZero = false /* Metadata: 0x0234CD8F */); // 0x000000018B449CCC-0x000000018B449D08
-		internal void ClearFontAssetDataInternal(); // 0x000000018B449CA8-0x000000018B449CCC
-		internal void UpdateFontAssetData(); // 0x000000018B44EF14-0x000000018B44F01C
-		internal void ClearFontAssetTables(); // 0x000000018B449D08-0x000000018B449E84
-		internal void ClearAtlasTextures(bool setAtlasSizeToZero = false /* Metadata: 0x0234CD90 */); // 0x000000018B449AE0-0x000000018B449CA8
-		private void DestroyAtlasTextures(); // 0x000000018B44A900-0x000000018B44A9AC
+		public void ClearFontAssetData(bool setAtlasSizeToZero = false /* Metadata: 0x026458C4 */); // 0x000000018D573C48-0x000000018D573C84
+		internal void ClearFontAssetDataInternal(); // 0x000000018D573C24-0x000000018D573C48
+		internal void UpdateFontAssetData(); // 0x000000018D578DA0-0x000000018D578EB8
+		internal void ClearFontAssetTables(); // 0x000000018D573C84-0x000000018D573E00
+		internal void ClearAtlasTextures(bool setAtlasSizeToZero = false /* Metadata: 0x026458C5 */); // 0x000000018D573A48-0x000000018D573C24
+		private void DestroyAtlasTextures(); // 0x000000018D574880-0x000000018D574938
 	}
 
-	internal static class FontAssetUtilities // TypeDefIndex: 59512
+	internal static class FontAssetUtilities // TypeDefIndex: 86579
 	{
 		// Fields
 		private static HashSet<int> k_SearchedAssets; // 0x00
 	
 		// Methods
-		internal static Character GetCharacterFromFontAsset(uint unicode, FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018B448F8C-0x000000018B4490AC
-		private static Character GetCharacterFromFontAsset_Internal(uint unicode, FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018B448BF0-0x000000018B448F8C
-		public static Character GetCharacterFromFontAssets(uint unicode, FontAsset sourceFontAsset, List<FontAsset> fontAssets, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018B4490AC-0x000000018B449268
-		public static SpriteCharacter GetSpriteCharacterFromSpriteAsset(uint unicode, SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018B4493F8-0x000000018B449674
-		private static SpriteCharacter GetSpriteCharacterFromSpriteAsset_Internal(uint unicode, SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018B449268-0x000000018B4493F8
+		internal static Character GetCharacterFromFontAsset(uint unicode, FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018D572EF8-0x000000018D57300C
+		private static Character GetCharacterFromFontAsset_Internal(uint unicode, FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018D572B6C-0x000000018D572EF8
+		public static Character GetCharacterFromFontAssets(uint unicode, FontAsset sourceFontAsset, List<FontAsset> fontAssets, bool includeFallbacks, FontStyles fontStyle, TextFontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018D57300C-0x000000018D5731C0
+		public static SpriteCharacter GetSpriteCharacterFromSpriteAsset(uint unicode, SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018D573354-0x000000018D5735D4
+		private static SpriteCharacter GetSpriteCharacterFromSpriteAsset_Internal(uint unicode, SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018D5731C0-0x000000018D573354
 	}
 
 	[Serializable]
-	public class FontFeatureTable // TypeDefIndex: 59514
+	public class FontFeatureTable // TypeDefIndex: 86581
 	{
 		// Fields
 		[SerializeField]
@@ -483,12 +314,12 @@ namespace UnityEngine.TextCore.Text
 		internal Dictionary<uint, GlyphPairAdjustmentRecord> m_GlyphPairAdjustmentRecordLookup; // 0x18
 	
 		// Properties
-		internal List<GlyphPairAdjustmentRecord> glyphPairAdjustmentRecords { get; } // 0x0000000184D9B600-0x0000000184D9B610 
+		internal List<GlyphPairAdjustmentRecord> glyphPairAdjustmentRecords { get; } // 0x0000000187249840-0x0000000187249850 
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 59513
+		private sealed class __c // TypeDefIndex: 86580
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -496,32 +327,32 @@ namespace UnityEngine.TextCore.Text
 			public static Func<GlyphPairAdjustmentRecord, uint> __9__6_1; // 0x10
 	
 			// Constructors
-			static __c(); // 0x000000018B4591B0-0x000000018B459214
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018D5831B4-0x000000018D583218
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal uint _SortGlyphPairAdjustmentRecords_b__6_0(GlyphPairAdjustmentRecord s); // 0x0000000184DBD6C0-0x0000000184DBD6D0
-			internal uint _SortGlyphPairAdjustmentRecords_b__6_1(GlyphPairAdjustmentRecord s); // 0x0000000184DBD6D0-0x0000000184DBD6E0
+			internal uint _SortGlyphPairAdjustmentRecords_b__6_0(GlyphPairAdjustmentRecord s); // 0x0000000187262560-0x0000000187262570
+			internal uint _SortGlyphPairAdjustmentRecords_b__6_1(GlyphPairAdjustmentRecord s); // 0x0000000187262570-0x0000000187262580
 		}
 	
 		// Constructors
-		public FontFeatureTable(); // 0x000000018B450174-0x000000018B450234
+		public FontFeatureTable(); // 0x000000018D57A024-0x000000018D57A0E4
 	
 		// Methods
-		public void SortGlyphPairAdjustmentRecords(); // 0x000000018B44FF54-0x000000018B450174
+		public void SortGlyphPairAdjustmentRecords(); // 0x000000018D579E04-0x000000018D57A024
 	}
 
-	internal struct Extents // TypeDefIndex: 59515
+	internal struct Extents // TypeDefIndex: 86582
 	{
 		// Fields
 		public Vector2 min; // 0x00
 		public Vector2 max; // 0x08
 	
 		// Methods
-		public override string ToString(); // 0x000000018B448A6C-0x000000018B448BF0
+		public override string ToString(); // 0x000000018D5729E8-0x000000018D572B6C
 	}
 
-	internal struct LineInfo // TypeDefIndex: 59516
+	internal struct LineInfo // TypeDefIndex: 86583
 	{
 		// Fields
 		internal int controlCharacterCount; // 0x00
@@ -547,7 +378,7 @@ namespace UnityEngine.TextCore.Text
 		public Extents lineExtents; // 0x50
 	}
 
-	internal struct LinkInfo // TypeDefIndex: 59517
+	internal struct LinkInfo // TypeDefIndex: 86584
 	{
 		// Fields
 		public int hashCode; // 0x00
@@ -558,23 +389,23 @@ namespace UnityEngine.TextCore.Text
 		internal char[] linkId; // 0x18
 	
 		// Methods
-		internal void SetLinkId(char[] text, int startIndex, int length); // 0x000000018B450234-0x000000018B4502F8
+		internal void SetLinkId(char[] text, int startIndex, int length); // 0x000000018D57A0E4-0x000000018D57A1B0
 	}
 
-	internal static class MaterialManager // TypeDefIndex: 59518
+	internal static class MaterialManager // TypeDefIndex: 86585
 	{
 		// Fields
 		private static Dictionary<long, Material> s_FallbackMaterials; // 0x00
 	
 		// Constructors
-		static MaterialManager(); // 0x000000018B45084C-0x000000018B4508D8
+		static MaterialManager(); // 0x000000018D57A70C-0x000000018D57A798
 	
 		// Methods
-		public static Material GetFallbackMaterial(Material sourceMaterial, Material targetMaterial); // 0x000000018B4502F8-0x000000018B450688
-		public static Material GetFallbackMaterial(FontAsset fontAsset, Material sourceMaterial, int atlasIndex); // 0x000000018B450688-0x000000018B45084C
+		public static Material GetFallbackMaterial(Material sourceMaterial, Material targetMaterial); // 0x000000018D57A1B0-0x000000018D57A544
+		public static Material GetFallbackMaterial(FontAsset fontAsset, Material sourceMaterial, int atlasIndex); // 0x000000018D57A544-0x000000018D57A70C
 	}
 
-	internal struct MaterialReference // TypeDefIndex: 59519
+	internal struct MaterialReference // TypeDefIndex: 86586
 	{
 		// Fields
 		public int index; // 0x00
@@ -588,14 +419,14 @@ namespace UnityEngine.TextCore.Text
 		public int referenceCount; // 0x34
 	
 		// Constructors
-		public MaterialReference(int index, FontAsset fontAsset, SpriteAsset spriteAsset, Material material, float padding); // 0x000000018B4514C8-0x000000018B451570
+		public MaterialReference(int index, FontAsset fontAsset, SpriteAsset spriteAsset, Material material, float padding); // 0x000000018D57B3A4-0x000000018D57B454
 	
 		// Methods
-		public static int AddMaterialReference(Material material, FontAsset fontAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018B4510DC-0x000000018B4512DC
-		public static int AddMaterialReference(Material material, SpriteAsset spriteAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018B4512DC-0x000000018B4514C8
+		public static int AddMaterialReference(Material material, FontAsset fontAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018D57AFAC-0x000000018D57B1B4
+		public static int AddMaterialReference(Material material, SpriteAsset spriteAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018D57B1B4-0x000000018D57B3A4
 	}
 
-	internal class MaterialReferenceManager // TypeDefIndex: 59520
+	internal class MaterialReferenceManager // TypeDefIndex: 86587
 	{
 		// Fields
 		private static MaterialReferenceManager s_Instance; // 0x00
@@ -605,37 +436,37 @@ namespace UnityEngine.TextCore.Text
 		private Dictionary<int, TextColorGradient> m_ColorGradientReferenceLookup; // 0x28
 	
 		// Properties
-		public static MaterialReferenceManager instance { get; } // 0x000000018B45104C-0x000000018B4510DC 
+		public static MaterialReferenceManager instance { get; } // 0x000000018D57AF1C-0x000000018D57AFAC 
 	
 		// Constructors
-		public MaterialReferenceManager(); // 0x000000018B450EF4-0x000000018B45104C
+		public MaterialReferenceManager(); // 0x000000018D57ADC4-0x000000018D57AF1C
 	
 		// Methods
-		public static void AddFontAsset(FontAsset fontAsset); // 0x000000018B450A80-0x000000018B450AB0
-		private void AddFontAssetInternal(FontAsset fontAsset); // 0x000000018B4509A0-0x000000018B450A80
-		public static void AddSpriteAsset(int hashCode, SpriteAsset spriteAsset); // 0x000000018B450C08-0x000000018B450C44
-		private void AddSpriteAssetInternal(int hashCode, SpriteAsset spriteAsset); // 0x000000018B450B50-0x000000018B450C08
-		public static void AddFontMaterial(int hashCode, Material material); // 0x000000018B450B14-0x000000018B450B50
-		private void AddFontMaterialInternal(int hashCode, Material material); // 0x000000018B450AB0-0x000000018B450B14
-		public static void AddColorGradientPreset(int hashCode, TextColorGradient spriteAsset); // 0x000000018B450964-0x000000018B4509A0
-		private void AddColorGradientPreset_Internal(int hashCode, TextColorGradient spriteAsset); // 0x000000018B4508D8-0x000000018B450964
-		public static bool TryGetFontAsset(int hashCode, out FontAsset fontAsset); // 0x000000018B450D60-0x000000018B450D9C
-		private bool TryGetFontAssetInternal(int hashCode, out FontAsset fontAsset); // 0x000000018B450CF0-0x000000018B450D60
-		public static bool TryGetSpriteAsset(int hashCode, out SpriteAsset spriteAsset); // 0x000000018B450EB8-0x000000018B450EF4
-		private bool TryGetSpriteAssetInternal(int hashCode, out SpriteAsset spriteAsset); // 0x000000018B450E48-0x000000018B450EB8
-		public static bool TryGetColorGradientPreset(int hashCode, out TextColorGradient gradientPreset); // 0x000000018B450CB4-0x000000018B450CF0
-		private bool TryGetColorGradientPresetInternal(int hashCode, out TextColorGradient gradientPreset); // 0x000000018B450C44-0x000000018B450CB4
-		public static bool TryGetMaterial(int hashCode, out Material material); // 0x000000018B450E0C-0x000000018B450E48
-		private bool TryGetMaterialInternal(int hashCode, out Material material); // 0x000000018B450D9C-0x000000018B450E0C
+		public static void AddFontAsset(FontAsset fontAsset); // 0x000000018D57A940-0x000000018D57A970
+		private void AddFontAssetInternal(FontAsset fontAsset); // 0x000000018D57A860-0x000000018D57A940
+		public static void AddSpriteAsset(int hashCode, SpriteAsset spriteAsset); // 0x000000018D57AAC8-0x000000018D57AB04
+		private void AddSpriteAssetInternal(int hashCode, SpriteAsset spriteAsset); // 0x000000018D57AA10-0x000000018D57AAC8
+		public static void AddFontMaterial(int hashCode, Material material); // 0x000000018D57A9D4-0x000000018D57AA10
+		private void AddFontMaterialInternal(int hashCode, Material material); // 0x000000018D57A970-0x000000018D57A9D4
+		public static void AddColorGradientPreset(int hashCode, TextColorGradient spriteAsset); // 0x000000018D57A824-0x000000018D57A860
+		private void AddColorGradientPreset_Internal(int hashCode, TextColorGradient spriteAsset); // 0x000000018D57A798-0x000000018D57A824
+		public static bool TryGetFontAsset(int hashCode, out FontAsset fontAsset); // 0x000000018D57AC28-0x000000018D57AC64
+		private bool TryGetFontAssetInternal(int hashCode, out FontAsset fontAsset); // 0x000000018D57ABB4-0x000000018D57AC28
+		public static bool TryGetSpriteAsset(int hashCode, out SpriteAsset spriteAsset); // 0x000000018D57AD88-0x000000018D57ADC4
+		private bool TryGetSpriteAssetInternal(int hashCode, out SpriteAsset spriteAsset); // 0x000000018D57AD14-0x000000018D57AD88
+		public static bool TryGetColorGradientPreset(int hashCode, out TextColorGradient gradientPreset); // 0x000000018D57AB78-0x000000018D57ABB4
+		private bool TryGetColorGradientPresetInternal(int hashCode, out TextColorGradient gradientPreset); // 0x000000018D57AB04-0x000000018D57AB78
+		public static bool TryGetMaterial(int hashCode, out Material material); // 0x000000018D57ACD8-0x000000018D57AD14
+		private bool TryGetMaterialInternal(int hashCode, out Material material); // 0x000000018D57AC64-0x000000018D57ACD8
 	}
 
-	internal enum VertexSortingOrder // TypeDefIndex: 59521
+	internal enum VertexSortingOrder // TypeDefIndex: 86588
 	{
 		Normal = 0,
 		Reverse = 1
 	}
 
-	internal struct MeshInfo // TypeDefIndex: 59522
+	internal struct MeshInfo // TypeDefIndex: 86589
 	{
 		// Fields
 		private static readonly Color32 k_DefaultColor; // 0x00
@@ -648,19 +479,19 @@ namespace UnityEngine.TextCore.Text
 		public Material material; // 0x30
 	
 		// Constructors
-		public MeshInfo(int size); // 0x000000018B4520EC-0x000000018B4523E0
-		static MeshInfo(); // 0x000000018B4520AC-0x000000018B4520EC
+		public MeshInfo(int size); // 0x000000018D57BFD8-0x000000018D57C328
+		static MeshInfo(); // 0x000000018D57BF94-0x000000018D57BFD8
 	
 		// Methods
-		internal void ResizeMeshInfo(int size); // 0x000000018B4515D4-0x000000018B4517C0
-		internal void Clear(bool uploadChanges); // 0x000000018B4515A4-0x000000018B4515D4
-		internal void ClearUnusedVertices(); // 0x000000018B451570-0x000000018B4515A4
-		internal void SortGeometry(VertexSortingOrder order); // 0x000000018B4517C0-0x000000018B45185C
-		internal void SwapVertexData(int src, int dst); // 0x000000018B45185C-0x000000018B4520AC
+		internal void ResizeMeshInfo(int size); // 0x000000018D57B4BC-0x000000018D57B6A8
+		internal void Clear(bool uploadChanges); // 0x000000018D57B488-0x000000018D57B4BC
+		internal void ClearUnusedVertices(); // 0x000000018D57B454-0x000000018D57B488
+		internal void SortGeometry(VertexSortingOrder order); // 0x000000018D57B6A8-0x000000018D57B744
+		internal void SwapVertexData(int src, int dst); // 0x000000018D57B744-0x000000018D57BF94
 	}
 
 	[ExcludeFromPreset]
-	public class SpriteAsset : TextAsset // TypeDefIndex: 59524
+	public class SpriteAsset : TextAsset // TypeDefIndex: 86591
 	{
 		// Fields
 		internal Dictionary<int, int> m_NameLookup; // 0x38
@@ -682,16 +513,16 @@ namespace UnityEngine.TextCore.Text
 		private static HashSet<int> k_searchedSpriteAssets; // 0x00
 	
 		// Properties
-		public FaceInfo faceInfo { get; internal set; } // 0x0000000184DBD640-0x0000000184DBD680 0x000000018B330F50-0x000000018B330F90
-		public Texture spriteSheet { get; internal set; } // 0x0000000184DBCFF0-0x0000000184DBD000 0x0000000184D84CC0-0x0000000184D84CE0
-		public List<SpriteCharacter> spriteCharacterTable { get; internal set; } // 0x000000018B453848-0x000000018B453878 0x0000000184D84CE0-0x0000000184D84D00
-		public Dictionary<uint, SpriteCharacter> spriteCharacterLookupTable { get; internal set; } // 0x000000018B453818-0x000000018B453848 0x0000000186AC5AF4-0x0000000186AC5B08
-		public List<SpriteGlyph> spriteGlyphTable { get; internal set; } // 0x0000000184DBD0B0-0x0000000184DBD0C0 0x0000000186AC5ACC-0x0000000186AC5AE0
+		public FaceInfo faceInfo { get; internal set; } // 0x00000001872624E0-0x0000000187262520 0x000000018D43F758-0x000000018D43F798
+		public Texture spriteSheet { get; internal set; } // 0x0000000187261EC0-0x0000000187261ED0 0x0000000185017110-0x0000000185017130
+		public List<SpriteCharacter> spriteCharacterTable { get; internal set; } // 0x000000018D57D7AC-0x000000018D57D7DC 0x0000000185017130-0x0000000185017150
+		public Dictionary<uint, SpriteCharacter> spriteCharacterLookupTable { get; internal set; } // 0x000000018D57D77C-0x000000018D57D7AC 0x0000000188D80C28-0x0000000188D80C3C
+		public List<SpriteGlyph> spriteGlyphTable { get; internal set; } // 0x0000000187261F80-0x0000000187261F90 0x0000000188D95540-0x0000000188D95554
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 59523
+		private sealed class __c // TypeDefIndex: 86590
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -699,36 +530,36 @@ namespace UnityEngine.TextCore.Text
 			public static Func<SpriteCharacter, uint> __9__38_0; // 0x10
 	
 			// Constructors
-			static __c(); // 0x000000018B459214-0x000000018B459278
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018D583218-0x000000018D58327C
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal uint _SortGlyphTable_b__37_0(SpriteGlyph item); // 0x000000018AA421AC-0x000000018AA421C4
-			internal uint _SortCharacterTable_b__38_0(SpriteCharacter c); // 0x000000018B319DF0-0x000000018B319E08
+			internal uint _SortGlyphTable_b__37_0(SpriteGlyph item); // 0x000000018CC33418-0x000000018CC33430
+			internal uint _SortCharacterTable_b__38_0(SpriteCharacter c); // 0x000000018D42B2E8-0x000000018D42B300
 		}
 	
 		// Constructors
-		public SpriteAsset(); // 0x000000018B45373C-0x000000018B453818
+		public SpriteAsset(); // 0x000000018D57D6A0-0x000000018D57D77C
 	
 		// Methods
-		private void Awake(); // 0x00000001841E1670-0x00000001841E1680
-		public void UpdateLookupTables(); // 0x000000018B45323C-0x000000018B45373C
-		public int GetSpriteIndexFromHashcode(int hashCode); // 0x000000018B4524C4-0x000000018B452540
-		public int GetSpriteIndexFromUnicode(uint unicode); // 0x000000018B452580-0x000000018B45260C
-		public int GetSpriteIndexFromName(string name); // 0x000000018B452540-0x000000018B452580
-		public static SpriteAsset SearchForSpriteByUnicode(SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B452D7C-0x000000018B452F44
-		private static SpriteAsset SearchForSpriteByUnicodeInternal(List<SpriteAsset> spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B452B64-0x000000018B452CBC
-		private static SpriteAsset SearchForSpriteByUnicodeInternal(SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B452CBC-0x000000018B452D7C
-		public static SpriteAsset SearchForSpriteByHashCode(SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex, TextSettings textSettings = null); // 0x000000018B452824-0x000000018B452B64
-		private static SpriteAsset SearchForSpriteByHashCodeInternal(List<SpriteAsset> spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018B45260C-0x000000018B452764
-		private static SpriteAsset SearchForSpriteByHashCodeInternal(SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018B452764-0x000000018B452824
-		public void SortGlyphTable(); // 0x000000018B4530D0-0x000000018B45323C
-		internal void SortCharacterTable(); // 0x000000018B452F44-0x000000018B4530B0
-		internal void SortGlyphAndCharacterTables(); // 0x000000018B4530B0-0x000000018B4530D0
+		private void Awake(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void UpdateLookupTables(); // 0x000000018D57D1A0-0x000000018D57D6A0
+		public int GetSpriteIndexFromHashcode(int hashCode); // 0x000000018D57C40C-0x000000018D57C48C
+		public int GetSpriteIndexFromUnicode(uint unicode); // 0x000000018D57C4CC-0x000000018D57C55C
+		public int GetSpriteIndexFromName(string name); // 0x000000018D57C48C-0x000000018D57C4CC
+		public static SpriteAsset SearchForSpriteByUnicode(SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018D57CCDC-0x000000018D57CEA8
+		private static SpriteAsset SearchForSpriteByUnicodeInternal(List<SpriteAsset> spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018D57CAC0-0x000000018D57CC1C
+		private static SpriteAsset SearchForSpriteByUnicodeInternal(SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018D57CC1C-0x000000018D57CCDC
+		public static SpriteAsset SearchForSpriteByHashCode(SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex, TextSettings textSettings = null); // 0x000000018D57C778-0x000000018D57CAC0
+		private static SpriteAsset SearchForSpriteByHashCodeInternal(List<SpriteAsset> spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018D57C55C-0x000000018D57C6B8
+		private static SpriteAsset SearchForSpriteByHashCodeInternal(SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018D57C6B8-0x000000018D57C778
+		public void SortGlyphTable(); // 0x000000018D57D034-0x000000018D57D1A0
+		internal void SortCharacterTable(); // 0x000000018D57CEA8-0x000000018D57D014
+		internal void SortGlyphAndCharacterTables(); // 0x000000018D57D014-0x000000018D57D034
 	}
 
 	[Serializable]
-	public class SpriteCharacter : TextElement // TypeDefIndex: 59525
+	public class SpriteCharacter : TextElement // TypeDefIndex: 86592
 	{
 		// Fields
 		[SerializeField]
@@ -737,25 +568,25 @@ namespace UnityEngine.TextCore.Text
 		private int m_HashCode; // 0x38
 	
 		// Properties
-		public string name { get; } // 0x0000000184DBBEB0-0x0000000184DBBEC0 
+		public string name { get; } // 0x00000001872613B0-0x00000001872613C0 
 	
 		// Constructors
-		public SpriteCharacter(); // 0x0000000184DBA3A0-0x0000000184DBA3B0
+		public SpriteCharacter(); // 0x000000018725F920-0x000000018725F930
 	}
 
 	[Serializable]
-	public class SpriteGlyph : Glyph // TypeDefIndex: 59526
+	public class SpriteGlyph : Glyph // TypeDefIndex: 86593
 	{
 		// Fields
 		public Sprite sprite; // 0x48
 	
 		// Constructors
-		public SpriteGlyph(); // 0x000000018B3311A8-0x000000018B3311B0
+		public SpriteGlyph(); // 0x000000018D43F9B0-0x000000018D43F9B8
 	}
 
 	[Serializable]
 	[ExcludeFromObjectFactory]
-	public abstract class TextAsset : ScriptableObject // TypeDefIndex: 59527
+	public abstract class TextAsset : ScriptableObject // TypeDefIndex: 86594
 	{
 		// Fields
 		[SerializeField]
@@ -768,17 +599,17 @@ namespace UnityEngine.TextCore.Text
 		internal int m_MaterialHashCode; // 0x30
 	
 		// Properties
-		public string version { get; internal set; } // 0x0000000184D96330-0x0000000184D96340 0x0000000185392C40-0x0000000185392C50
-		public int instanceID { get; } // 0x000000018B4538A4-0x000000018B4538C8 
-		public int hashCode { get; set; } // 0x000000018B453878-0x000000018B4538A4 0x00000001811F0030-0x00000001811F0040
-		public Material material { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public int materialHashCode { get; set; } // 0x000000018B4538C8-0x000000018B453958 0x0000000184D86740-0x0000000184D86750
+		public string version { get; internal set; } // 0x0000000187244530-0x0000000187244540 0x0000000187835500-0x0000000187835510
+		public int instanceID { get; } // 0x000000018D57D808-0x000000018D57D82C 
+		public int hashCode { get; set; } // 0x000000018D57D7DC-0x000000018D57D808 0x0000000182A819D0-0x0000000182A819E0
+		public Material material { get; set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public int materialHashCode { get; set; } // 0x000000018D57D82C-0x000000018D57D8BC 0x0000000186033510-0x0000000186033520
 	
 		// Constructors
-		protected TextAsset(); // 0x0000000183573370-0x0000000183573380
+		protected TextAsset(); // 0x0000000185DD6260-0x0000000185DD6270
 	}
 
-	public enum ColorGradientMode // TypeDefIndex: 59528
+	public enum ColorGradientMode // TypeDefIndex: 86595
 	{
 		Single = 0,
 		HorizontalGradient = 1,
@@ -789,7 +620,7 @@ namespace UnityEngine.TextCore.Text
 	[Serializable]
 	[ExcludeFromObjectFactory]
 	[ExcludeFromPreset]
-	public class TextColorGradient : ScriptableObject // TypeDefIndex: 59529
+	public class TextColorGradient : ScriptableObject // TypeDefIndex: 86596
 	{
 		// Fields
 		public ColorGradientMode colorMode; // 0x18
@@ -797,24 +628,24 @@ namespace UnityEngine.TextCore.Text
 		public UnityEngine.Color topRight; // 0x2C
 		public UnityEngine.Color bottomLeft; // 0x3C
 		public UnityEngine.Color bottomRight; // 0x4C
-		private const ColorGradientMode k_DefaultColorMode = ColorGradientMode.FourCornersGradient; // Metadata: 0x0234CD97
+		private const ColorGradientMode k_DefaultColorMode = ColorGradientMode.FourCornersGradient; // Metadata: 0x026458CC
 		private static readonly UnityEngine.Color k_DefaultColor; // 0x00
 	
 		// Constructors
-		public TextColorGradient(); // 0x000000018B45399C-0x000000018B453A48
-		public TextColorGradient(UnityEngine.Color color); // 0x000000018B30CB60-0x000000018B30CBA4
-		public TextColorGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3); // 0x000000018B30CBA4-0x000000018B30CC14
-		static TextColorGradient(); // 0x000000018B453958-0x000000018B45399C
+		public TextColorGradient(); // 0x000000018D57D900-0x000000018D57D9AC
+		public TextColorGradient(UnityEngine.Color color); // 0x000000018D41DAEC-0x000000018D41DB30
+		public TextColorGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3); // 0x000000018D41DB30-0x000000018D41DBA0
+		static TextColorGradient(); // 0x000000018D57D8BC-0x000000018D57D900
 	}
 
-	public enum TextElementType : byte // TypeDefIndex: 59530
+	public enum TextElementType : byte // TypeDefIndex: 86597
 	{
 		Character = 1,
 		Sprite = 2
 	}
 
 	[Serializable]
-	public abstract class TextElement // TypeDefIndex: 59531
+	public abstract class TextElement // TypeDefIndex: 86598
 	{
 		// Fields
 		[SerializeField]
@@ -829,18 +660,18 @@ namespace UnityEngine.TextCore.Text
 		internal float m_Scale; // 0x2C
 	
 		// Properties
-		public TextElementType elementType { get; } // 0x0000000184DBCFA0-0x0000000184DBCFB0 
-		public uint unicode { get; set; } // 0x0000000184D872D0-0x0000000184D872E0 0x0000000184D8F540-0x0000000184D8F550
-		public TextAsset textAsset { get; set; } // 0x0000000184D96330-0x0000000184D96340 0x0000000185392C40-0x0000000185392C50
-		public Glyph glyph { get; set; } // 0x0000000184DBA910-0x0000000184DBA920 0x0000000185390F40-0x0000000185390F50
-		public uint glyphIndex { get; set; } // 0x0000000184DBBEC0-0x0000000184DBBED0 0x00000001811F2AA0-0x00000001811F2AB0
-		public float scale { get; set; } // 0x0000000184DBD1B0-0x0000000184DBD1C0 0x0000000184D86B00-0x0000000184D86B10
+		public TextElementType elementType { get; } // 0x0000000187261E70-0x0000000187261E80 
+		public uint unicode { get; set; } // 0x0000000187233B60-0x0000000187233B70 0x000000018275FD70-0x000000018275FD80
+		public TextAsset textAsset { get; set; } // 0x0000000187244530-0x0000000187244540 0x0000000187835500-0x0000000187835510
+		public Glyph glyph { get; set; } // 0x000000018725FED0-0x000000018725FEE0 0x0000000187835950-0x0000000187835960
+		public uint glyphIndex { get; set; } // 0x00000001872613C0-0x00000001872613D0 0x0000000182271A90-0x0000000182271AA0
+		public float scale { get; set; } // 0x0000000187262080-0x0000000187262090 0x0000000187233340-0x0000000187233350
 	
 		// Constructors
-		protected TextElement(); // 0x00000001841E1670-0x00000001841E1680
+		protected TextElement(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal struct TextVertex // TypeDefIndex: 59532
+	internal struct TextVertex // TypeDefIndex: 86599
 	{
 		// Fields
 		public Vector3 position; // 0x00
@@ -850,7 +681,7 @@ namespace UnityEngine.TextCore.Text
 		public Color32 color; // 0x24
 	}
 
-	internal struct TextElementInfo // TypeDefIndex: 59533
+	internal struct TextElementInfo // TypeDefIndex: 86600
 	{
 		// Fields
 		public char character; // 0x00
@@ -890,7 +721,7 @@ namespace UnityEngine.TextCore.Text
 		public bool isVisible; // 0x150
 	}
 
-	internal enum TextOverflowMode // TypeDefIndex: 59534
+	internal enum TextOverflowMode // TypeDefIndex: 86601
 	{
 		Overflow = 0,
 		Ellipsis = 1,
@@ -901,7 +732,7 @@ namespace UnityEngine.TextCore.Text
 		Linked = 6
 	}
 
-	internal enum TextureMapping // TypeDefIndex: 59535
+	internal enum TextureMapping // TypeDefIndex: 86602
 	{
 		Character = 0,
 		Line = 1,
@@ -909,7 +740,7 @@ namespace UnityEngine.TextCore.Text
 		MatchAspect = 3
 	}
 
-	internal class TextGenerationSettings : IEquatable<TextGenerationSettings> // TypeDefIndex: 59536
+	internal class TextGenerationSettings : IEquatable<TextGenerationSettings> // TypeDefIndex: 86603
 	{
 		// Fields
 		public string text; // 0x10
@@ -959,16 +790,16 @@ namespace UnityEngine.TextCore.Text
 		public float charWidthMaxAdj; // 0xF8
 	
 		// Constructors
-		public TextGenerationSettings(); // 0x000000018B4556A0-0x000000018B455730
+		public TextGenerationSettings(); // 0x000000018D57F60C-0x000000018D57F69C
 	
 		// Methods
-		public bool Equals(TextGenerationSettings other); // 0x000000018B453A48-0x000000018B453E74
-		public override bool Equals(object obj); // 0x000000018B453E74-0x000000018B453F10
-		public override int GetHashCode(); // 0x000000018B453F10-0x000000018B45441C
-		public override string ToString(); // 0x000000018B45441C-0x000000018B4556A0
+		public bool Equals(TextGenerationSettings other); // 0x000000018D57D9AC-0x000000018D57DDD8
+		public override bool Equals(object obj); // 0x000000018D57DDD8-0x000000018D57DE74
+		public override int GetHashCode(); // 0x000000018D57DE74-0x000000018D57E388
+		public override string ToString(); // 0x000000018D57E388-0x000000018D57F60C
 	}
 
-	internal class TextGenerator // TypeDefIndex: 59538
+	internal class TextGenerator // TypeDefIndex: 86605
 	{
 		// Fields
 		private static TextGenerator s_TextGenerator; // 0x00
@@ -1076,7 +907,7 @@ namespace UnityEngine.TextCore.Text
 		private int m_RecursiveCount; // 0xA50
 	
 		// Nested types
-		protected struct SpecialCharacter // TypeDefIndex: 59537
+		protected struct SpecialCharacter // TypeDefIndex: 86604
 		{
 			// Fields
 			public Character character; // 0x00
@@ -1085,41 +916,41 @@ namespace UnityEngine.TextCore.Text
 			public int materialIndex; // 0x18
 	
 			// Constructors
-			public SpecialCharacter(Character character, int materialIndex); // 0x000000018B4523E0-0x000000018B4524C4
+			public SpecialCharacter(Character character, int materialIndex); // 0x000000018D57C328-0x000000018D57C40C
 		}
 	
 		// Constructors
-		public TextGenerator(); // 0x000000018B448238-0x000000018B448900
+		public TextGenerator(); // 0x000000018D5721B0-0x000000018D57287C
 	
 		// Methods
-		private static TextGenerator GetTextGenerator(); // 0x000000018B4410F8-0x000000018B441188
-		public static void GenerateText(TextGenerationSettings settings, TextInfo textInfo); // 0x000000018B4405A0-0x000000018B4406E0
-		public static Vector2 GetCursorPosition(TextInfo textInfo, Rect screenRect, int index, bool inverseYAxis = true /* Metadata: 0x0234CDA5 */); // 0x000000018B4406E0-0x000000018B440878
-		public static Vector2 GetPreferredValues(TextGenerationSettings settings, TextInfo textInfo); // 0x000000018B440C90-0x000000018B440D94
-		private void Prepare(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B4412D0-0x000000018B441420
-		private void GenerateTextMesh(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B432DF0-0x000000018B43CC48
-		private void SaveWordWrappingState(ref WordWrapState state, int index, int count, TextInfo textInfo); // 0x000000018B4429B0-0x000000018B442E44
-		protected int RestoreWordWrappingState(ref WordWrapState state, TextInfo textInfo); // 0x000000018B441420-0x000000018B441918
-		protected bool ValidateHtmlTag(int[] chars, int startIndex, out int endIndex, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B443F20-0x000000018B448238
-		private void SaveGlyphVertexInfo(float padding, float stylePadding, Color32 vertexColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B441918-0x000000018B442218
-		private void SaveSpriteVertexInfo(Color32 vertexColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B442218-0x000000018B4429B0
-		private void DrawUnderlineMesh(Vector3 start, Vector3 end, ref int index, float startScale, float endScale, float maxScale, float sdfScale, Color32 underlineColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B43F334-0x000000018B4405A0
-		private void DrawTextHighlight(Vector3 start, Vector3 end, ref int index, Color32 highlightColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B43ECE8-0x000000018B43F334
-		private static void ClearMesh(bool updateMesh, TextInfo textInfo); // 0x000000018B43EBAC-0x000000018B43EBD0
-		private void EnableMasking(); // 0x0000000184DBD470-0x0000000184DBD480
-		private void DisableMasking(); // 0x0000000184DBD460-0x0000000184DBD470
-		private void SetArraySizes(int[] chars, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B442E44-0x000000018B443F20
-		internal TextElement GetTextElement(TextGenerationSettings generationSettings, uint unicode, FontAsset fontAsset, FontStyles fontStyle, TextFontWeight fontWeight, out bool isUsingAlternativeTypeface); // 0x000000018B440DC4-0x000000018B4410F8
-		private void ComputeMarginSize(Rect rect, Vector4 margins); // 0x000000018B43EBD0-0x000000018B43ECE8
-		protected void GetSpecialCharacters(TextGenerationSettings generationSettings); // 0x000000018B440D94-0x000000018B440DC4
-		protected void GetEllipsisSpecialCharacter(TextGenerationSettings generationSettings); // 0x000000018B440878-0x000000018B440A74
-		protected void GetUnderlineSpecialCharacter(TextGenerationSettings generationSettings); // 0x000000018B441188-0x000000018B4412D0
-		private float GetPaddingForMaterial(Material material, bool extraPadding); // 0x000000018B440A74-0x000000018B440B74
-		private Vector2 GetPreferredValuesInternal(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B440B74-0x000000018B440C90
-		protected virtual Vector2 CalculatePreferredValues(float defaultFontSize, Vector2 marginSize, bool ignoreTextAutoSizing, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B43CC48-0x000000018B43EBAC
+		private static TextGenerator GetTextGenerator(); // 0x000000018D56AFEC-0x000000018D56B07C
+		public static void GenerateText(TextGenerationSettings settings, TextInfo textInfo); // 0x000000018D56A484-0x000000018D56A5C4
+		public static Vector2 GetCursorPosition(TextInfo textInfo, Rect screenRect, int index, bool inverseYAxis = true /* Metadata: 0x026458DA */); // 0x000000018D56A5C4-0x000000018D56A750
+		public static Vector2 GetPreferredValues(TextGenerationSettings settings, TextInfo textInfo); // 0x000000018D56AB80-0x000000018D56AC84
+		private void Prepare(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56B1C8-0x000000018D56B324
+		private void GenerateTextMesh(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D55CB70-0x000000018D566B88
+		private void SaveWordWrappingState(ref WordWrapState state, int index, int count, TextInfo textInfo); // 0x000000018D56C8B8-0x000000018D56CD4C
+		protected int RestoreWordWrappingState(ref WordWrapState state, TextInfo textInfo); // 0x000000018D56B324-0x000000018D56B81C
+		protected bool ValidateHtmlTag(int[] chars, int startIndex, out int endIndex, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56DE1C-0x000000018D5721B0
+		private void SaveGlyphVertexInfo(float padding, float stylePadding, Color32 vertexColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56B81C-0x000000018D56C11C
+		private void SaveSpriteVertexInfo(Color32 vertexColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56C11C-0x000000018D56C8B8
+		private void DrawUnderlineMesh(Vector3 start, Vector3 end, ref int index, float startScale, float endScale, float maxScale, float sdfScale, Color32 underlineColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D569248-0x000000018D56A484
+		private void DrawTextHighlight(Vector3 start, Vector3 end, ref int index, Color32 highlightColor, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D568C04-0x000000018D569248
+		private static void ClearMesh(bool updateMesh, TextInfo textInfo); // 0x000000018D568ABC-0x000000018D568AE0
+		private void EnableMasking(); // 0x0000000187262310-0x0000000187262320
+		private void DisableMasking(); // 0x0000000187262300-0x0000000187262310
+		private void SetArraySizes(int[] chars, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56CD4C-0x000000018D56DE1C
+		internal TextElement GetTextElement(TextGenerationSettings generationSettings, uint unicode, FontAsset fontAsset, FontStyles fontStyle, TextFontWeight fontWeight, out bool isUsingAlternativeTypeface); // 0x000000018D56ACB4-0x000000018D56AFEC
+		private void ComputeMarginSize(Rect rect, Vector4 margins); // 0x000000018D568AE0-0x000000018D568C04
+		protected void GetSpecialCharacters(TextGenerationSettings generationSettings); // 0x000000018D56AC84-0x000000018D56ACB4
+		protected void GetEllipsisSpecialCharacter(TextGenerationSettings generationSettings); // 0x000000018D56A750-0x000000018D56A958
+		protected void GetUnderlineSpecialCharacter(TextGenerationSettings generationSettings); // 0x000000018D56B07C-0x000000018D56B1C8
+		private float GetPaddingForMaterial(Material material, bool extraPadding); // 0x000000018D56A958-0x000000018D56AA58
+		private Vector2 GetPreferredValuesInternal(TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D56AA58-0x000000018D56AB80
+		protected virtual Vector2 CalculatePreferredValues(float defaultFontSize, Vector2 marginSize, bool ignoreTextAutoSizing, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D566B88-0x000000018D568ABC
 	}
 
-	internal enum TextAlignment // TypeDefIndex: 59539
+	internal enum TextAlignment // TypeDefIndex: 86606
 	{
 		TopLeft = 257,
 		TopCenter = 258,
@@ -1160,7 +991,7 @@ namespace UnityEngine.TextCore.Text
 	}
 
 	[Flags]
-	public enum FontStyles // TypeDefIndex: 59540
+	public enum FontStyles // TypeDefIndex: 86607
 	{
 		Normal = 0,
 		Bold = 1,
@@ -1175,7 +1006,7 @@ namespace UnityEngine.TextCore.Text
 		Highlight = 512
 	}
 
-	internal struct XmlTagAttribute // TypeDefIndex: 59541
+	internal struct XmlTagAttribute // TypeDefIndex: 86608
 	{
 		// Fields
 		public int nameHashCode; // 0x00
@@ -1185,7 +1016,7 @@ namespace UnityEngine.TextCore.Text
 		public int valueHashCode; // 0x10
 	}
 
-	internal struct RichTextTagAttribute // TypeDefIndex: 59542
+	internal struct RichTextTagAttribute // TypeDefIndex: 86609
 	{
 		// Fields
 		public int nameHashCode; // 0x00
@@ -1195,7 +1026,7 @@ namespace UnityEngine.TextCore.Text
 		public int valueLength; // 0x10
 	}
 
-	internal struct WordWrapState // TypeDefIndex: 59543
+	internal struct WordWrapState // TypeDefIndex: 86610
 	{
 		// Fields
 		public int previousWordBreak; // 0x00
@@ -1255,44 +1086,44 @@ namespace UnityEngine.TextCore.Text
 		public bool isNonBreakingSpace; // 0x30D
 	}
 
-	internal static class TextGeneratorUtilities // TypeDefIndex: 59544
+	internal static class TextGeneratorUtilities // TypeDefIndex: 86611
 	{
 		// Fields
 		public static readonly Vector2 largePositiveVector2; // 0x00
 		public static readonly Vector2 largeNegativeVector2; // 0x08
 	
 		// Constructors
-		static TextGeneratorUtilities(); // 0x000000018B459154-0x000000018B4591B0
+		static TextGeneratorUtilities(); // 0x000000018D583158-0x000000018D5831B4
 	
 		// Methods
-		public static bool Approximately(float a, float b); // 0x000000018B318C88-0x000000018B318CAC
-		public static Color32 HexCharsToColor(char[] hexChars, int tagCount); // 0x000000018B4572C0-0x000000018B457920
-		public static Color32 HexCharsToColor(char[] hexChars, int startIndex, int length); // 0x000000018B457920-0x000000018B457B88
-		public static int HexToInt(char hex); // 0x000000018B457B88-0x000000018B457CC0
-		public static float ConvertToFloat(char[] chars, int startIndex, int length); // 0x000000018B455CA4-0x000000018B455D10
-		public static float ConvertToFloat(char[] chars, int startIndex, int length, out int lastIndex); // 0x000000018B455B54-0x000000018B455CA4
-		public static Vector2 PackUV(float x, float y, float scale); // 0x0000000184DBD680-0x0000000184DBD6C0
-		public static void StringToCharArray(string sourceText, ref int[] charBuffer, ref TextProcessingStack<int> styleStack, TextGenerationSettings generationSettings); // 0x000000018B458938-0x000000018B459154
+		public static bool Approximately(float a, float b); // 0x000000018D57FAC8-0x000000018D57FAEC
+		public static Color32 HexCharsToColor(char[] hexChars, int tagCount); // 0x000000018D581280-0x000000018D5818E0
+		public static Color32 HexCharsToColor(char[] hexChars, int startIndex, int length); // 0x000000018D5818E0-0x000000018D581B4C
+		public static int HexToInt(char hex); // 0x000000018D581B4C-0x000000018D581CA0
+		public static float ConvertToFloat(char[] chars, int startIndex, int length); // 0x000000018D57FC5C-0x000000018D57FCD0
+		public static float ConvertToFloat(char[] chars, int startIndex, int length, out int lastIndex); // 0x000000018D57FAEC-0x000000018D57FC5C
+		public static Vector2 PackUV(float x, float y, float scale); // 0x0000000187262520-0x0000000187262560
+		public static void StringToCharArray(string sourceText, ref int[] charBuffer, ref TextProcessingStack<int> styleStack, TextGenerationSettings generationSettings); // 0x000000018D582948-0x000000018D583158
 		private static void ResizeInternalArray<T>(ref ref T[] array);
-		private static bool IsTagName(ref string text, string tag, int index); // 0x000000018B457CC0-0x000000018B457D64
-		private static bool IsTagName(ref int[] text, string tag, int index); // 0x000000018B457D64-0x000000018B457E14
-		private static bool ReplaceOpeningStyleTag(ref int[] sourceText, int srcIndex, out int srcOffset, ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018B45816C-0x000000018B458464
-		private static bool ReplaceOpeningStyleTag(ref string sourceText, int srcIndex, out int srcOffset, ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018B458464-0x000000018B458760
-		private static void ReplaceClosingStyleTag(ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018B457E9C-0x000000018B45816C
-		private static TextStyle GetStyle(TextGenerationSettings generationSetting, int hashCode); // 0x000000018B456E94-0x000000018B456F6C
-		private static int GetUtf32(string text, int i); // 0x000000018B45716C-0x000000018B4572C0
-		private static int GetUtf16(string text, int i); // 0x000000018B457094-0x000000018B45716C
-		private static int GetTagHashCode(ref int[] text, int index, out int closeIndex); // 0x000000018B45700C-0x000000018B457094
-		private static int GetTagHashCode(ref string text, int index, out int closeIndex); // 0x000000018B456F6C-0x000000018B45700C
-		public static void FillCharacterVertexBuffers(int i, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B455D10-0x000000018B456618
-		public static void FillSpriteVertexBuffers(int i, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018B456618-0x000000018B456E94
-		public static void AdjustLineOffset(int startIndex, int endIndex, float offset, TextInfo textInfo); // 0x000000018B455730-0x000000018B455B54
-		public static void ResizeLineExtents(int size, TextInfo textInfo); // 0x000000018B458760-0x000000018B458938
-		public static FontStyles LegacyStyleToNewStyle(FontStyle fontStyle); // 0x000000018B457E78-0x000000018B457E9C
-		public static TextAlignment LegacyAlignmentToNewAlignment(TextAnchor anchor); // 0x000000018B457E14-0x000000018B457E78
+		private static bool IsTagName(ref string text, string tag, int index); // 0x000000018D581CA0-0x000000018D581D44
+		private static bool IsTagName(ref int[] text, string tag, int index); // 0x000000018D581D44-0x000000018D581E0C
+		private static bool ReplaceOpeningStyleTag(ref int[] sourceText, int srcIndex, out int srcOffset, ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018D582170-0x000000018D582478
+		private static bool ReplaceOpeningStyleTag(ref string sourceText, int srcIndex, out int srcOffset, ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018D582478-0x000000018D582778
+		private static void ReplaceClosingStyleTag(ref int[] charBuffer, ref int writeIndex, ref TextProcessingStack<int> styleStack, ref TextGenerationSettings generationSettings); // 0x000000018D581E94-0x000000018D582170
+		private static TextStyle GetStyle(TextGenerationSettings generationSetting, int hashCode); // 0x000000018D580E54-0x000000018D580F2C
+		private static int GetUtf32(string text, int i); // 0x000000018D581134-0x000000018D581280
+		private static int GetUtf16(string text, int i); // 0x000000018D58105C-0x000000018D581134
+		private static int GetTagHashCode(ref int[] text, int index, out int closeIndex); // 0x000000018D580FCC-0x000000018D58105C
+		private static int GetTagHashCode(ref string text, int index, out int closeIndex); // 0x000000018D580F2C-0x000000018D580FCC
+		public static void FillCharacterVertexBuffers(int i, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D57FCD0-0x000000018D5805D8
+		public static void FillSpriteVertexBuffers(int i, TextGenerationSettings generationSettings, TextInfo textInfo); // 0x000000018D5805D8-0x000000018D580E54
+		public static void AdjustLineOffset(int startIndex, int endIndex, float offset, TextInfo textInfo); // 0x000000018D57F69C-0x000000018D57FAC8
+		public static void ResizeLineExtents(int size, TextInfo textInfo); // 0x000000018D582778-0x000000018D582948
+		public static FontStyles LegacyStyleToNewStyle(FontStyle fontStyle); // 0x000000018D581E70-0x000000018D581E94
+		public static TextAlignment LegacyAlignmentToNewAlignment(TextAnchor anchor); // 0x000000018D581E0C-0x000000018D581E70
 	}
 
-	internal struct PageInfo // TypeDefIndex: 59545
+	internal struct PageInfo // TypeDefIndex: 86612
 	{
 		// Fields
 		public int firstCharacterIndex; // 0x00
@@ -1302,7 +1133,7 @@ namespace UnityEngine.TextCore.Text
 		public float descender; // 0x10
 	}
 
-	internal struct WordInfo // TypeDefIndex: 59546
+	internal struct WordInfo // TypeDefIndex: 86613
 	{
 		// Fields
 		public int firstCharacterIndex; // 0x00
@@ -1310,7 +1141,7 @@ namespace UnityEngine.TextCore.Text
 		public int characterCount; // 0x08
 	}
 
-	internal class TextInfo // TypeDefIndex: 59547
+	internal class TextInfo // TypeDefIndex: 86614
 	{
 		// Fields
 		private static Vector2 s_InfinityVectorPositive; // 0x00
@@ -1332,18 +1163,18 @@ namespace UnityEngine.TextCore.Text
 		public bool isDirty; // 0x60
 	
 		// Constructors
-		public TextInfo(); // 0x000000018B459884-0x000000018B4599AC
-		static TextInfo(); // 0x000000018B459828-0x000000018B459884
+		public TextInfo(); // 0x000000018D5838A0-0x000000018D5839CC
+		static TextInfo(); // 0x000000018D583844-0x000000018D5838A0
 	
 		// Methods
-		internal void Clear(); // 0x000000018B4597CC-0x000000018B459828
-		internal void ClearMeshInfo(bool updateMesh); // 0x000000018B45973C-0x000000018B4597CC
-		internal void ClearLineInfo(); // 0x000000018B4594FC-0x000000018B45973C
+		internal void Clear(); // 0x000000018D5837E0-0x000000018D583844
+		internal void ClearMeshInfo(bool updateMesh); // 0x000000018D583750-0x000000018D5837E0
+		internal void ClearLineInfo(); // 0x000000018D583500-0x000000018D583750
 		internal static void Resize<T>(ref ref T[] array, int size);
 		internal static void Resize<T>(ref ref T[] array, int size, bool isBlockAllocated);
 	}
 
-	internal enum MarkupTag // TypeDefIndex: 59548
+	internal enum MarkupTag // TypeDefIndex: 86615
 	{
 		GRADIENT = -1999759898,
 		FONT_WEIGHT = -1889896162,
@@ -1473,7 +1304,7 @@ namespace UnityEngine.TextCore.Text
 		VERTICAL_OFFSET = 1952379995
 	}
 
-	internal enum TagValueType // TypeDefIndex: 59549
+	internal enum TagValueType // TypeDefIndex: 86616
 	{
 		None = 0,
 		NumericalValue = 1,
@@ -1481,14 +1312,14 @@ namespace UnityEngine.TextCore.Text
 		ColorValue = 4
 	}
 
-	internal enum TagUnitType // TypeDefIndex: 59550
+	internal enum TagUnitType // TypeDefIndex: 86617
 	{
 		Pixels = 0,
 		FontUnits = 1,
 		Percentage = 2
 	}
 
-	internal struct FontStyleStack // TypeDefIndex: 59551
+	internal struct FontStyleStack // TypeDefIndex: 86618
 	{
 		// Fields
 		public byte bold; // 0x00
@@ -1503,13 +1334,13 @@ namespace UnityEngine.TextCore.Text
 		public byte smallcaps; // 0x09
 	
 		// Methods
-		public void Clear(); // 0x000000018333C3A0-0x000000018333C3B0
-		public byte Add(FontStyles style); // 0x000000018B45930C-0x000000018B4593D8
-		public byte Remove(FontStyles style); // 0x000000018B4593D8-0x000000018B4594FC
+		public void Clear(); // 0x00000001861A9720-0x00000001861A9730
+		public byte Add(FontStyles style); // 0x000000018D583310-0x000000018D5833DC
+		public byte Remove(FontStyles style); // 0x000000018D5833DC-0x000000018D583500
 	}
 
 	[DebuggerDisplay("Item count = {m_Count}")]
-	internal struct TextProcessingStack<T> // TypeDefIndex: 59552
+	internal struct TextProcessingStack<T> // TypeDefIndex: 86619
 	{
 		// Fields
 		public T[] itemStack;
@@ -1534,7 +1365,7 @@ namespace UnityEngine.TextCore.Text
 		public T CurrentItem();
 	}
 
-	internal class TextResourceManager // TypeDefIndex: 59554
+	internal class TextResourceManager // TypeDefIndex: 86621
 	{
 		// Fields
 		private static readonly Dictionary<int, FontAssetRef> s_FontAssetReferences; // 0x00
@@ -1544,7 +1375,7 @@ namespace UnityEngine.TextCore.Text
 		private static readonly int k_RegularStyleHashCode; // 0x20
 	
 		// Nested types
-		private struct FontAssetRef // TypeDefIndex: 59553
+		private struct FontAssetRef // TypeDefIndex: 86620
 		{
 			// Fields
 			public int nameHashCode; // 0x00
@@ -1554,20 +1385,20 @@ namespace UnityEngine.TextCore.Text
 			public readonly FontAsset fontAsset; // 0x18
 	
 			// Constructors
-			public FontAssetRef(int nameHashCode, int familyNameHashCode, int styleNameHashCode, FontAsset fontAsset); // 0x000000018B4592DC-0x000000018B45930C
+			public FontAssetRef(int nameHashCode, int familyNameHashCode, int styleNameHashCode, FontAsset fontAsset); // 0x000000018D5832E0-0x000000018D583310
 		}
 	
 		// Constructors
-		static TextResourceManager(); // 0x000000018B459F1C-0x000000018B45A114
+		static TextResourceManager(); // 0x000000018D583F40-0x000000018D584138
 	
 		// Methods
-		internal static void AddFontAsset(FontAsset fontAsset); // 0x000000018B4599AC-0x000000018B459F1C
+		internal static void AddFontAsset(FontAsset fontAsset); // 0x000000018D5839CC-0x000000018D583F40
 	}
 
 	[Serializable]
 	[ExcludeFromObjectFactory]
 	[ExcludeFromPreset]
-	public class TextSettings : ScriptableObject // TypeDefIndex: 59556
+	public class TextSettings : ScriptableObject // TypeDefIndex: 86623
 	{
 		// Fields
 		[SerializeField]
@@ -1616,44 +1447,44 @@ namespace UnityEngine.TextCore.Text
 		private List<FontReferenceMap> m_FontReferences; // 0x98
 	
 		// Properties
-		public string version { get; internal set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		public FontAsset defaultFontAsset { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		public string defaultFontAssetPath { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public List<FontAsset> fallbackFontAssets { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-		public bool matchMaterialPreset { get; set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
-		public int missingCharacterUnicode { get; set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
-		public bool clearDynamicDataOnBuild { get; set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000182D480B0-0x0000000182D480C0
-		public SpriteAsset defaultSpriteAsset { get; set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
-		public string defaultSpriteAssetPath { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
-		public List<SpriteAsset> fallbackSpriteAssets { get; set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
-		public uint missingSpriteCharacterUnicode { get; set; } // 0x0000000184D86790-0x0000000184D867A0 0x0000000184D86D50-0x0000000184D86D60
-		public TextStyleSheet defaultStyleSheet { get; set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
-		public string styleSheetsResourcePath { get; set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
-		public string defaultColorGradientPresetsPath { get; set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
-		public UnicodeLineBreakingRules lineBreakingRules { get; set; } // 0x000000018B45A71C-0x000000018B45A798 0x0000000184CD9970-0x0000000184CD9980
-		public bool displayWarnings { get; set; } // 0x00000001811F2750-0x00000001811F2760 0x00000001811F2760-0x00000001811F2770
+		public string version { get; internal set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		public FontAsset defaultFontAsset { get; set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		public string defaultFontAssetPath { get; set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public List<FontAsset> fallbackFontAssets { get; set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+		public bool matchMaterialPreset { get; set; } // 0x000000018225E070-0x000000018225E080 0x000000018225E080-0x000000018225E090
+		public int missingCharacterUnicode { get; set; } // 0x000000018226F000-0x000000018226F010 0x000000018226F010-0x000000018226F020
+		public bool clearDynamicDataOnBuild { get; set; } // 0x000000018225DFB0-0x000000018225DFC0 0x000000018225DFC0-0x000000018225DFD0
+		public SpriteAsset defaultSpriteAsset { get; set; } // 0x000000018226EE80-0x000000018226EE90 0x0000000185B68F50-0x0000000185B68F60
+		public string defaultSpriteAssetPath { get; set; } // 0x000000018226EBD0-0x000000018226EBE0 0x00000001869E1E00-0x00000001869E1E10
+		public List<SpriteAsset> fallbackSpriteAssets { get; set; } // 0x0000000187232F70-0x0000000187232F80 0x00000001856B9750-0x00000001856B9760
+		public uint missingSpriteCharacterUnicode { get; set; } // 0x00000001872332A0-0x00000001872332B0 0x0000000185FF5E70-0x0000000185FF5F30
+		public TextStyleSheet defaultStyleSheet { get; set; } // 0x0000000187232F80-0x0000000187232F90 0x0000000186B19440-0x0000000186B19450
+		public string styleSheetsResourcePath { get; set; } // 0x0000000187232FC0-0x0000000187232FD0 0x0000000188800CD0-0x0000000188800CE0
+		public string defaultColorGradientPresetsPath { get; set; } // 0x00000001829CD170-0x00000001829CD180 0x0000000188800CC0-0x0000000188800CD0
+		public UnicodeLineBreakingRules lineBreakingRules { get; set; } // 0x000000018D584744-0x000000018D5847C0 0x00000001870EAAE0-0x00000001870EAAF0
+		public bool displayWarnings { get; set; } // 0x000000018236FC60-0x000000018236FC70 0x000000018236FC70-0x000000018236FC80
 	
 		// Nested types
 		[Serializable]
-		private struct FontReferenceMap // TypeDefIndex: 59555
+		private struct FontReferenceMap // TypeDefIndex: 86622
 		{
 			// Fields
 			public Font font; // 0x00
 			public FontAsset fontAsset; // 0x08
 	
 			// Constructors
-			public FontReferenceMap(Font font, FontAsset fontAsset); // 0x00000001839CF630-0x00000001839CF660
+			public FontReferenceMap(Font font, FontAsset fontAsset); // 0x0000000185B2C340-0x0000000185B2C370
 		}
 	
 		// Constructors
-		public TextSettings(); // 0x000000018B45A60C-0x000000018B45A71C
+		public TextSettings(); // 0x000000018D584634-0x000000018D584744
 	
 		// Methods
-		protected void InitializeFontReferenceLookup(); // 0x000000018B45A414-0x000000018B45A60C
-		protected FontAsset GetCachedFontAssetInternal(Font font); // 0x000000018B45A114-0x000000018B45A414
+		protected void InitializeFontReferenceLookup(); // 0x000000018D58443C-0x000000018D584634
+		protected FontAsset GetCachedFontAssetInternal(Font font); // 0x000000018D584138-0x000000018D58443C
 	}
 
-	public static class TextShaderUtilities // TypeDefIndex: 59557
+	public static class TextShaderUtilities // TypeDefIndex: 86624
 	{
 		// Fields
 		public static int ID_MainTex; // 0x00
@@ -1724,21 +1555,21 @@ namespace UnityEngine.TextCore.Text
 		private static Shader k_ShaderRef_MobileBitmap; // 0x130
 	
 		// Properties
-		internal static Shader ShaderRef_MobileSDF { get; } // 0x000000018B45C3C8-0x000000018B45C544 
-		internal static Shader ShaderRef_MobileBitmap { get; } // 0x000000018B45C24C-0x000000018B45C3C8 
+		internal static Shader ShaderRef_MobileSDF { get; } // 0x000000018D5863EC-0x000000018D586568 
+		internal static Shader ShaderRef_MobileBitmap { get; } // 0x000000018D586270-0x000000018D5863EC 
 	
 		// Constructors
-		static TextShaderUtilities(); // 0x000000018B45BF5C-0x000000018B45C24C
+		static TextShaderUtilities(); // 0x000000018D585F80-0x000000018D586270
 	
 		// Methods
-		internal static void GetShaderPropertyIDs(); // 0x000000018B45AF50-0x000000018B45B8B4
-		private static void UpdateShaderRatios(Material mat); // 0x000000018B45BA3C-0x000000018B45BF5C
-		internal static bool IsMaskingEnabled(Material material); // 0x000000018B45B8B4-0x000000018B45BA3C
-		internal static float GetPadding(Material material, bool enableExtraPadding, bool isBold); // 0x000000018B45A798-0x000000018B45AF50
+		internal static void GetShaderPropertyIDs(); // 0x000000018D584F78-0x000000018D5858DC
+		private static void UpdateShaderRatios(Material mat); // 0x000000018D585A60-0x000000018D585F80
+		internal static bool IsMaskingEnabled(Material material); // 0x000000018D5858DC-0x000000018D585A60
+		internal static float GetPadding(Material material, bool enableExtraPadding, bool isBold); // 0x000000018D5847C0-0x000000018D584F78
 	}
 
 	[Serializable]
-	public class TextStyle // TypeDefIndex: 59558
+	public class TextStyle // TypeDefIndex: 86625
 	{
 		// Fields
 		internal static TextStyle k_NormalStyle; // 0x00
@@ -1760,18 +1591,18 @@ namespace UnityEngine.TextCore.Text
 		internal uint[] m_ClosingTagUnicodeArray; // 0x48
 	
 		// Properties
-		public int hashCode { get; } // 0x0000000184D9D860-0x0000000184D9D870 
-		public int[] styleOpeningTagArray { get; } // 0x0000000184DBBEB0-0x0000000184DBBEC0 
-		public int[] styleClosingTagArray { get; } // 0x0000000184DBC0B0-0x0000000184DBC0C0 
+		public int hashCode { get; } // 0x000000018724B960-0x000000018724B970 
+		public int[] styleOpeningTagArray { get; } // 0x00000001872613B0-0x00000001872613C0 
+		public int[] styleClosingTagArray { get; } // 0x00000001872615B0-0x00000001872615C0 
 	
 		// Methods
-		public void RefreshStyle(); // 0x000000018B45C888-0x000000018B45CA74
+		public void RefreshStyle(); // 0x000000018D5868B0-0x000000018D586AB4
 	}
 
 	[Serializable]
 	[ExcludeFromObjectFactory]
 	[ExcludeFromPreset]
-	public class TextStyleSheet : ScriptableObject // TypeDefIndex: 59559
+	public class TextStyleSheet : ScriptableObject // TypeDefIndex: 86626
 	{
 		// Fields
 		[SerializeField]
@@ -1779,31 +1610,31 @@ namespace UnityEngine.TextCore.Text
 		private Dictionary<int, TextStyle> m_StyleLookupDictionary; // 0x20
 	
 		// Properties
-		internal List<TextStyle> styles { get; } // 0x0000000184D96330-0x0000000184D96340 
+		internal List<TextStyle> styles { get; } // 0x0000000187244530-0x0000000187244540 
 	
 		// Constructors
-		public TextStyleSheet(); // 0x000000018B45C804-0x000000018B45C888
+		public TextStyleSheet(); // 0x000000018D58682C-0x000000018D5868B0
 	
 		// Methods
-		public TextStyle GetStyle(int hashCode); // 0x000000018B45C544-0x000000018B45C5C0
-		public TextStyle GetStyle(string name); // 0x000000018B45C5C0-0x000000018B45C644
-		public void RefreshStyles(); // 0x000000018B45C7FC-0x000000018B45C804
-		private void LoadStyleDictionaryInternal(); // 0x000000018B45C644-0x000000018B45C7FC
+		public TextStyle GetStyle(int hashCode); // 0x000000018D586568-0x000000018D5865E4
+		public TextStyle GetStyle(string name); // 0x000000018D5865E4-0x000000018D58666C
+		public void RefreshStyles(); // 0x000000018D586824-0x000000018D58682C
+		private void LoadStyleDictionaryInternal(); // 0x000000018D58666C-0x000000018D586824
 	}
 
-	internal static class TextUtilities // TypeDefIndex: 59560
+	internal static class TextUtilities // TypeDefIndex: 86627
 	{
 		// Methods
-		internal static char ToUpperFast(char c); // 0x000000018B45CB28-0x000000018B45CB80
-		internal static uint ToUpperASCIIFast(uint c); // 0x000000018B45CAD0-0x000000018B45CB28
-		public static int GetHashCodeCaseInSensitive(string s); // 0x000000018B45CA74-0x000000018B45CAD0
+		internal static char ToUpperFast(char c); // 0x000000018D586B68-0x000000018D586BC0
+		internal static uint ToUpperASCIIFast(uint c); // 0x000000018D586B10-0x000000018D586B68
+		public static int GetHashCodeCaseInSensitive(string s); // 0x000000018D586AB4-0x000000018D586B10
 	
 		// Extension methods
-		internal static string UintToString(this List<uint> unicodes); // 0x000000018B45CB80-0x000000018B45CC30
+		internal static string UintToString(this List<uint> unicodes); // 0x000000018D586BC0-0x000000018D586C80
 	}
 
 	[Serializable]
-	public class UnicodeLineBreakingRules // TypeDefIndex: 59561
+	public class UnicodeLineBreakingRules // TypeDefIndex: 86628
 	{
 		// Fields
 		private static UnicodeLineBreakingRules s_Instance; // 0x00
@@ -1819,15 +1650,15 @@ namespace UnityEngine.TextCore.Text
 		private static HashSet<uint> s_FollowingCharactersLookup; // 0x10
 	
 		// Properties
-		internal HashSet<uint> leadingCharactersLookup { get; } // 0x000000018B45D114-0x000000018B45D184 
-		internal HashSet<uint> followingCharactersLookup { get; } // 0x000000018B45D0A4-0x000000018B45D114 
+		internal HashSet<uint> leadingCharactersLookup { get; } // 0x000000018D587164-0x000000018D5871D4 
+		internal HashSet<uint> followingCharactersLookup { get; } // 0x000000018D5870F4-0x000000018D587164 
 	
 		// Constructors
-		public UnicodeLineBreakingRules(); // 0x00000001841E1670-0x00000001841E1680
-		static UnicodeLineBreakingRules(); // 0x000000018B45D040-0x000000018B45D0A4
+		public UnicodeLineBreakingRules(); // 0x0000000186805BA0-0x0000000186805BB0
+		static UnicodeLineBreakingRules(); // 0x000000018D587090-0x000000018D5870F4
 	
 		// Methods
-		internal static void LoadLineBreakingRules(); // 0x000000018B45CCF4-0x000000018B45D040
-		private static HashSet<uint> GetCharacters(TextAsset file); // 0x000000018B45CC30-0x000000018B45CCF4
+		internal static void LoadLineBreakingRules(); // 0x000000018D586D44-0x000000018D587090
+		private static HashSet<uint> GetCharacters(TextAsset file); // 0x000000018D586C80-0x000000018D586D44
 	}
 }

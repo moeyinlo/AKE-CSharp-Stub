@@ -37,12 +37,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 28: Entry.Beyond.dll - Assembly: Entry.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 56294-56579
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 23: Entry.Beyond.dll - Assembly: Entry.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 80826-81319
 
-public class RenderSilhouetteRT : MonoBehaviour // TypeDefIndex: 56295
+public class RenderSilhouetteRT : MonoBehaviour // TypeDefIndex: 80827
 {
 	// Fields
 	public Camera cameraRT; // 0x18
@@ -52,28 +49,28 @@ public class RenderSilhouetteRT : MonoBehaviour // TypeDefIndex: 56295
 	private static RenderTexture s_mSilhouetteRth; // 0x08
 
 	// Constructors
-	public RenderSilhouetteRT(); // 0x0000000185393520-0x0000000185393538
+	public RenderSilhouetteRT(); // 0x00000001878364A0-0x00000001878364B8
 
 	// Methods
-	private void Update(); // 0x0000000183D76B40-0x0000000183D76EA0
-	private void OnDestroy(); // 0x000000018484FD10-0x000000018484FEE0
+	private void Update(); // 0x0000000185E3A130-0x0000000185E3A4D0
+	private void OnDestroy(); // 0x00000001852DC550-0x00000001852DC720
 }
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 56575
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 81136
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_52 DF6EA5B59F0E6C03F390AD5FEA0BBC199EC3524C0A682913148FD071AF1898EC; // 0x00 // Static value (base64): AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA== - Metadata: 0x0234863C
+	internal static readonly __StaticArrayInitTypeSize_56 DC2861C12B6449A074313F8A9D82F1C8C2F12AE967A20D4E854EC35783F0EB3D; // 0x00 // Static value (base64): AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAA= - Metadata: 0x0263E148
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_52 // TypeDefIndex: 56574
+	private struct __StaticArrayInitTypeSize_56 // TypeDefIndex: 81135
 	{
 	}
 }
 
 namespace Beyond
 {
-	public class GameApp : MonoBehaviour, ILuaCallCSharp // TypeDefIndex: 56306
+	public class GameApp : MonoBehaviour, ILuaCallCSharp // TypeDefIndex: 80838
 	{
 		// Fields
 		private GameStateMachine m_stateMachine; // 0x18
@@ -83,33 +80,33 @@ namespace Beyond
 		private bool m_needCallLuaFocus; // 0x21
 		private bool m_pauseStatus; // 0x22
 		private bool m_needCallLuaPause; // 0x23
-		private const uint FILE_ATTRIBUTE_DIRECTORY = 16; // Metadata: 0x02347985
-		private const uint FILE_ATTRIBUTE_READONLY = 1; // Metadata: 0x02347986
-		private const uint FILE_ATTRIBUTE_NORMAL = 128; // Metadata: 0x02347987
-		private const uint FILE_ATTRIBUTE_REPARSE_POINT = 1024; // Metadata: 0x02347989
+		private const uint FILE_ATTRIBUTE_DIRECTORY = 16; // Metadata: 0x0263D1AA
+		private const uint FILE_ATTRIBUTE_READONLY = 1; // Metadata: 0x0263D1AB
+		private const uint FILE_ATTRIBUTE_NORMAL = 128; // Metadata: 0x0263D1AC
+		private const uint FILE_ATTRIBUTE_REPARSE_POINT = 1024; // Metadata: 0x0263D1AE
 		private static readonly IntPtr INVALID_HANDLE_VALUE; // 0x08
-		private const uint GENERIC_READ = 2147483648; // Metadata: 0x0234798B
-		private const uint GENERIC_WRITE = 1073741824; // Metadata: 0x02347990
-		private const uint FILE_SHARE_READ = 1; // Metadata: 0x02347995
-		private const uint FILE_SHARE_WRITE = 2; // Metadata: 0x02347996
-		private const uint FILE_SHARE_DELETE = 4; // Metadata: 0x02347997
-		private const uint OPEN_EXISTING = 3; // Metadata: 0x02347998
-		private const uint FILE_FLAG_SEQUENTIAL_SCAN = 134217728; // Metadata: 0x02347999
-		private const int ERROR_FILE_NOT_FOUND = 2; // Metadata: 0x0234799D
-		private const int ERROR_PATH_NOT_FOUND = 3; // Metadata: 0x0234799E
-		private const int ERROR_NO_MORE_FILES = 18; // Metadata: 0x0234799F
+		private const uint GENERIC_READ = 2147483648; // Metadata: 0x0263D1B0
+		private const uint GENERIC_WRITE = 1073741824; // Metadata: 0x0263D1B5
+		private const uint FILE_SHARE_READ = 1; // Metadata: 0x0263D1BA
+		private const uint FILE_SHARE_WRITE = 2; // Metadata: 0x0263D1BB
+		private const uint FILE_SHARE_DELETE = 4; // Metadata: 0x0263D1BC
+		private const uint OPEN_EXISTING = 3; // Metadata: 0x0263D1BD
+		private const uint FILE_FLAG_SEQUENTIAL_SCAN = 134217728; // Metadata: 0x0263D1BE
+		private const int ERROR_FILE_NOT_FOUND = 2; // Metadata: 0x0263D1C2
+		private const int ERROR_PATH_NOT_FOUND = 3; // Metadata: 0x0263D1C3
+		private const int ERROR_NO_MORE_FILES = 18; // Metadata: 0x0263D1C4
 		[ThreadStatic]
 		private static byte[] s_md5Buffer; // 0x80000000
 		private static int s_scanRunning; // 0x10
 		private static string s_pendingScanOutput; // 0x18
 	
 		// Properties
-		public static GameApp instance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000186991E18-0x0000000186991E68 0x0000000186991E68-0x0000000186991EC4
-		public GameState currentState { get; } // 0x00000001836A6260-0x00000001836A62B0 
-		public static bool IsScanRunning { get; } // 0x0000000186991D98-0x0000000186991E18 
+		public static GameApp instance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000188CB1368-0x0000000188CB13B8 0x0000000188CB13B8-0x0000000188CB1414
+		public Beyond.GameState currentState { get; } // 0x000000018521DBB0-0x000000018521DC20 
+		public static bool IsScanRunning { get; } // 0x0000000188CB12E4-0x0000000188CB1368 
 	
 		// Nested types
-		private struct WIN32_FIND_DATA // TypeDefIndex: 56297
+		private struct WIN32_FIND_DATA // TypeDefIndex: 80829
 		{
 			// Fields
 			public uint dwFileAttributes; // 0x00
@@ -124,7 +121,7 @@ namespace Beyond
 			public string cAlternateFileName; // 0x38
 		}
 	
-		private class FileEntry // TypeDefIndex: 56298
+		private class FileEntry // TypeDefIndex: 80830
 		{
 			// Fields
 			public string name; // 0x10
@@ -137,10 +134,10 @@ namespace Beyond
 			public bool readOnly; // 0x36
 	
 			// Constructors
-			public FileEntry(); // 0x00000001841E1670-0x00000001841E1680
+			public FileEntry(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private struct PendingFile // TypeDefIndex: 56299
+		private struct PendingFile // TypeDefIndex: 80831
 		{
 			// Fields
 			public string fullPath; // 0x00
@@ -148,7 +145,7 @@ namespace Beyond
 			public bool readOnlyAttr; // 0x10
 		}
 	
-		private class ScanContext // TypeDefIndex: 56300
+		private class ScanContext // TypeDefIndex: 80832
 		{
 			// Fields
 			public readonly ConcurrentQueue<string> dirQueue; // 0x10
@@ -158,10 +155,10 @@ namespace Beyond
 			public int pendingFiles; // 0x2C
 	
 			// Constructors
-			public ScanContext(); // 0x0000000186993CD0-0x0000000186993DDC
+			public ScanContext(); // 0x0000000188CB38B4-0x0000000188CB39C0
 		}
 	
-		private class TreeNode // TypeDefIndex: 56301
+		private class TreeNode // TypeDefIndex: 80833
 		{
 			// Fields
 			public string name; // 0x10
@@ -169,11 +166,36 @@ namespace Beyond
 			public Dictionary<string, TreeNode> children; // 0x20
 	
 			// Constructors
-			public TreeNode(); // 0x00000001841E1670-0x00000001841E1680
+			public TreeNode(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __DelayInit_d__14 : IEnumerator<object> // TypeDefIndex: 56302
+		private sealed class __DelayInit_d__14 : IEnumerator<object> // TypeDefIndex: 80834
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public bool needDeepProfilerMode; // 0x20
+			public GameApp __4__this; // 0x28
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __DelayInit_d__14(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB4E94-0x0000000188CB5034
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CB5034-0x0000000188CB5080
+		}
+	
+		[CompilerGenerated]
+		private sealed class __InitSecuritySDK_d__35 : IEnumerator<object> // TypeDefIndex: 80835
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -181,72 +203,52 @@ namespace Beyond
 			public GameApp __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DelayInit_d__14(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __InitSecuritySDK_d__35(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000186994B48-0x0000000186994BF8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018679F350-0x00000001867A1240
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994BF8-0x0000000186994C44
+			void IEnumerator.Reset(); // 0x0000000188CB51FC-0x0000000188CB5248
 		}
 	
 		[CompilerGenerated]
-		private sealed class __InitSecuritySDK_d__35 : IEnumerator<object> // TypeDefIndex: 56303
+		private sealed class _FetchRemoteNetworkCfg_d__37 : IEnumerator<object> // TypeDefIndex: 80836
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
-			public GameApp __4__this; // 0x20
+			public float timeoutSeconds; // 0x20
+			private Beyond.Misc.ObjectRef _resultRef_5__2; // 0x28
+			private RemoteNetworkCfg _config_5__3; // 0x30
+			private IEnumerator _send_5__4; // 0x38
+			private HttpSender.Cancellation _cancellation_5__5; // 0x40
+			private float _start_5__6; // 0x48
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __InitSecuritySDK_d__35(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _FetchRemoteNetworkCfg_d__37(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018340BDA0-0x000000018340C0E0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182758E70-0x000000018275AF50
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994E0C-0x0000000186994E58
+			void IEnumerator.Reset(); // 0x000000018275AF50-0x000000018275AFA0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __FetchRemoteConfigUtilSuc_d__37 : IEnumerator<object> // TypeDefIndex: 56304
-		{
-			// Fields
-			private int __1__state; // 0x10
-			private object __2__current; // 0x18
-			private RemoteNetworkCfg _config_5__2; // 0x20
-			private Beyond.Misc.ObjectRef _resultRef_5__3; // 0x28
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-	
-			// Constructors
-			[DebuggerHidden]
-			public __FetchRemoteConfigUtilSuc_d__37(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C09CD0-0x0000000183C0A020
-			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994D28-0x0000000186994D74
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0 // TypeDefIndex: 56305
+		private sealed class __c__DisplayClass71_0 // TypeDefIndex: 80837
 		{
 			// Fields
 			public string capturedRoot; // 0x10
@@ -255,99 +257,99 @@ namespace Beyond
 			public string capturedSysInfo; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass71_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass71_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _LaunchScanCoordinator_b__0(); // 0x00000001869943B4-0x00000001869946D0
+			internal void _LaunchScanCoordinator_b__0(); // 0x0000000188CB4690-0x0000000188CB49B0
 		}
 	
 		// Constructors
-		public GameApp(); // 0x0000000184D84C40-0x0000000184D84C60
-		static GameApp(); // 0x0000000184D7A710-0x0000000184D7A750
+		public GameApp(); // 0x00000001872301B0-0x00000001872301D0
+		static GameApp(); // 0x0000000187220670-0x00000001872206B0
 	
 		// Methods
-		public void SwitchState(GameState state); // 0x0000000183C11BB0-0x0000000183C11C20
-		private void Awake(); // 0x000000018380F1F0-0x000000018380F460
-		private bool _NeedDeepProfilerMode(); // 0x00000001841A5BF0-0x00000001841A5CA0
+		public void SwitchState(Beyond.GameState state); // 0x00000001862B30D0-0x00000001862B3150
+		private void Awake(); // 0x0000000186BDBA60-0x0000000186BDE9F0
+		private bool _NeedDeepProfilerMode(); // 0x0000000186612630-0x00000001866126F0
 		[IteratorStateMachine(typeof(__DelayInit_d__14))]
-		private IEnumerator _DelayInit(); // 0x000000018698FB68-0x000000018698FBF4
-		private void _RegisterLuaAfterGCEvent(); // 0x000000018488B500-0x000000018488B620
-		private void _InitNotificationCenter(); // 0x000000018464E170-0x000000018464E1A0
-		private void Update(); // 0x00000001832E1800-0x00000001832E1A70
-		private void LateUpdate(); // 0x0000000182F5C730-0x0000000182F5C7A0
-		private void OnApplicationQuit(); // 0x000000018698D850-0x000000018698DA78
-		private void OnApplicationFocus(bool hasFocus); // 0x0000000183A73FA0-0x0000000183A740D0
-		private void _OnApplicationFocusForLua(); // 0x0000000183820560-0x0000000183820620
-		private void OnApplicationPause(bool pauseStatus); // 0x0000000183F26470-0x0000000183F266A0
-		private void _OnApplicationPauseForLua(); // 0x0000000183F26780-0x0000000183F267E0
-		private void OnDestroy(); // 0x000000018698DA78-0x000000018698DC9C
-		private void _PreInitGameSetting(); // 0x00000001835C2290-0x00000001835C23E0
-		private void _Init(); // 0x000000018464DC20-0x000000018464DE50
-		private void _UnInit(); // 0x0000000186990FE4-0x0000000186991074
-		private void _InitGameStateMachine(); // 0x000000018464E1A0-0x000000018464E240
-		private void _UnInitGameStateMachine(); // 0x0000000186990F60-0x0000000186990FE4
+		private IEnumerator _DelayInit(bool needDeepProfilerMode); // 0x00000001827541A0-0x0000000182754550
+		private void _RegisterLuaAfterGCEvent(); // 0x0000000186D2E080-0x0000000186D2E1A0
+		private void _InitNotificationCenter(); // 0x000000018722CC20-0x000000018722CC50
+		private void Update(); // 0x00000001856FA0C0-0x00000001856FA240
+		private void LateUpdate(); // 0x0000000185E6B1D0-0x0000000185E6B260
+		private void OnApplicationQuit(); // 0x0000000188CACD84-0x0000000188CACFAC
+		private void OnApplicationFocus(bool hasFocus); // 0x0000000185A840A0-0x0000000185A84240
+		private void _OnApplicationFocusForLua(); // 0x0000000186230810-0x00000001862308A0
+		private void OnApplicationPause(bool pauseStatus); // 0x000000018628A1F0-0x000000018628A430
+		private void _OnApplicationPauseForLua(); // 0x000000018628A510-0x000000018628A540
+		private void OnDestroy(); // 0x0000000188CACFAC-0x0000000188CAD1D4
+		private void _PreInitGameSetting(); // 0x00000001858D7220-0x00000001858D7370
+		private void _Init(bool needDeepProfilerMode); // 0x0000000182754550-0x0000000182756870
+		private void _UnInit(); // 0x0000000188CB0524-0x0000000188CB05BC
+		private void _InitGameStateMachine(); // 0x0000000186CEB020-0x0000000186CEB0D0
+		private void _UnInitGameStateMachine(); // 0x0000000188CB0490-0x0000000188CB0524
 		[IDTag(1)]
-		public static void QuitGame(GameAppExitCode exitCode); // 0x000000018698DD34-0x000000018698DDA8
+		public static void QuitGame(GameAppExitCode exitCode); // 0x0000000188CAD278-0x0000000188CAD2F4
 		[IDTag(0)]
-		public static void QuitGame(int exitCode); // 0x000000018698DDA8-0x000000018698DE64
-		public static void RefreshScreenResolution(); // 0x000000018698DE64-0x000000018698DF64
-		private static void _OnSystemDisplaySizeChanged(); // 0x0000000186990210-0x000000018699029C
-		private static void _OnSystemScreenSizeChanged([IsReadOnly] in EventData<bool, bool> data); // 0x000000018699029C-0x0000000186990358
+		public static void QuitGame(int exitCode); // 0x0000000188CAD2F4-0x0000000188CAD3B8
+		public static void RefreshScreenResolution(); // 0x0000000188CAD3B8-0x0000000188CAD4B8
+		private static void _OnSystemDisplaySizeChanged(); // 0x0000000188CAF70C-0x0000000188CAF7A0
+		private static void _OnSystemScreenSizeChanged([IsReadOnly] in EventData<bool, bool> data); // 0x0000000188CAF7A0-0x0000000188CAF86C
 		[IteratorStateMachine(typeof(__InitSecuritySDK_d__35))]
-		private IEnumerator _InitSecuritySDK(); // 0x000000018464DE50-0x000000018464DEC0
-		private void _OnApplicationPauseForSecurity(bool pauseStatus); // 0x000000018340DAF0-0x000000018340DB80
-		[IteratorStateMachine(typeof(__FetchRemoteConfigUtilSuc_d__37))]
-		private IEnumerator _FetchRemoteConfigUtilSuc(); // 0x0000000184D32D40-0x0000000184D32DA0
-		private static extern IntPtr _FindFirstFileW(string lpFileName, out WIN32_FIND_DATA lpFindFileData); // 0x000000018698FC74-0x000000018698FD8C
-		private static extern bool _FindNextFileW(IntPtr hFindFile, out WIN32_FIND_DATA lpFindFileData); // 0x000000018698FD8C-0x000000018698FE9C
-		private static extern bool _FindClose(IntPtr hFindFile); // 0x000000018698FBF4-0x000000018698FC74
-		private static extern IntPtr _CreateFileW(string lpFileName, uint dwDesiredAccess, uint dwShareMode, IntPtr lpSecurityAttributes, uint dwCreationDisposition, uint dwFlagsAndAttributes, IntPtr hTemplateFile); // 0x000000018698FA90-0x000000018698FB68
-		private static extern bool _ReadFile(IntPtr hFile, byte[] lpBuffer, uint nNumberOfBytesToRead, out uint lpNumberOfBytesRead, IntPtr lpOverlapped); // 0x0000000186990760-0x0000000186990824
-		private static extern bool _CloseHandle(IntPtr hObject); // 0x000000018698E99C-0x000000018698E9EC
-		public static bool PollScanResult(out string gzOutputPath); // 0x000000018698DC9C-0x000000018698DD34
-		public static void ScanLocalFiles(string rootDir = null, string outputPath = null, int threadCount = 0 /* Metadata: 0x02347984 */); // 0x000000018698DF64-0x000000018698E160
-		internal static void LaunchScanCoordinator(string rootDir, string outputPath, int threadCount, string systemInfo = null); // 0x000000018698D4A0-0x000000018698D850
-		private static List<FileEntry> _ScanParallel(string root, int threadCount); // 0x0000000186990C04-0x0000000186990EB4
-		private static void _WorkerLoop(object state); // 0x0000000186991074-0x0000000186991268
-		private static void _ScanDirectory(ScanContext ctx, string dir); // 0x0000000186990824-0x0000000186990C04
-		private static string _MakeLongPath(string path); // 0x0000000186990060-0x0000000186990210
-		private static FileEntry _BuildEntry(PendingFile pf); // 0x000000018698E160-0x000000018698E3F0
-		private static bool _CanAccess(string path, uint desiredAccess); // 0x000000018698E8C0-0x000000018698E99C
-		private static string _CalculateMd5(string path); // 0x000000018698E3F0-0x000000018698E8C0
-		private static string _CollectSystemInfo(); // 0x000000018698E9EC-0x000000018698FA90
-		private static void _WriteTreeReport(List<FileEntry> entries, string root, System.DateTime scanStart, string outputPath, string systemInfo = null); // 0x0000000186991268-0x0000000186991D98
-		private static void _PrintTreeNode(StringBuilder sb, TreeNode node, string prefix); // 0x0000000186990358-0x0000000186990760
-		private static int _TreeNodeCompare(TreeNode a, TreeNode b); // 0x0000000186990EB4-0x0000000186990F60
-		private static string _FormatSize(long bytes); // 0x000000018698FE9C-0x0000000186990060
+		private IEnumerator _InitSecuritySDK(); // 0x0000000187181290-0x0000000187181310
+		private void _OnApplicationPauseForSecurity(bool pauseStatus); // 0x000000018628A540-0x000000018628A5E0
+		[IteratorStateMachine(typeof(_FetchRemoteNetworkCfg_d__37))]
+		internal IEnumerator FetchRemoteNetworkCfg(float timeoutSeconds = 0f /* Metadata: 0x0263D1A5 */); // 0x0000000182753E40-0x00000001827541A0
+		private static extern IntPtr _FindFirstFileW(string lpFileName, out WIN32_FIND_DATA lpFindFileData); // 0x0000000188CAF164-0x0000000188CAF27C
+		private static extern bool _FindNextFileW(IntPtr hFindFile, out WIN32_FIND_DATA lpFindFileData); // 0x0000000188CAF27C-0x0000000188CAF38C
+		private static extern bool _FindClose(IntPtr hFindFile); // 0x0000000188CAF0E0-0x0000000188CAF164
+		private static extern IntPtr _CreateFileW(string lpFileName, uint dwDesiredAccess, uint dwShareMode, IntPtr lpSecurityAttributes, uint dwCreationDisposition, uint dwFlagsAndAttributes, IntPtr hTemplateFile); // 0x0000000188CAF004-0x0000000188CAF0E0
+		private static extern bool _ReadFile(IntPtr hFile, byte[] lpBuffer, uint nNumberOfBytesToRead, out uint lpNumberOfBytesRead, IntPtr lpOverlapped); // 0x0000000188CAFC6C-0x0000000188CAFD34
+		private static extern bool _CloseHandle(IntPtr hObject); // 0x0000000188CADF0C-0x0000000188CADF5C
+		public static bool PollScanResult(out string gzOutputPath); // 0x0000000188CAD1D4-0x0000000188CAD278
+		public static void ScanLocalFiles(string rootDir = null, string outputPath = null, int threadCount = 0 /* Metadata: 0x0263D1A9 */); // 0x0000000188CAD4B8-0x0000000188CAD6B4
+		internal static void LaunchScanCoordinator(string rootDir, string outputPath, int threadCount, string systemInfo = null); // 0x0000000188CACAAC-0x0000000188CACD84
+		private static List<FileEntry> _ScanParallel(string root, int threadCount); // 0x0000000188CB0128-0x0000000188CB03E4
+		private static void _WorkerLoop(object state); // 0x0000000188CB05BC-0x0000000188CB07BC
+		private static void _ScanDirectory(ScanContext ctx, string dir); // 0x0000000188CAFD34-0x0000000188CB0128
+		private static string _MakeLongPath(string path); // 0x0000000188CAF554-0x0000000188CAF70C
+		private static FileEntry _BuildEntry(PendingFile pf); // 0x0000000188CAD6B4-0x0000000188CAD94C
+		private static bool _CanAccess(string path, uint desiredAccess); // 0x0000000188CADE20-0x0000000188CADF0C
+		private static string _CalculateMd5(string path); // 0x0000000188CAD94C-0x0000000188CADE20
+		private static string _CollectSystemInfo(); // 0x0000000188CADF5C-0x0000000188CAF004
+		private static void _WriteTreeReport(List<FileEntry> entries, string root, System.DateTime scanStart, string outputPath, string systemInfo = null); // 0x0000000188CB07BC-0x0000000188CB12E4
+		private static void _PrintTreeNode(StringBuilder sb, TreeNode node, string prefix); // 0x0000000188CAF86C-0x0000000188CAFC6C
+		private static int _TreeNodeCompare(TreeNode a, TreeNode b); // 0x0000000188CB03E4-0x0000000188CB0490
+		private static string _FormatSize(long bytes); // 0x0000000188CAF38C-0x0000000188CAF554
 	}
 
-	public interface IMemoryPackProxy // TypeDefIndex: 56307
+	public interface IMemoryPackProxy // TypeDefIndex: 80839
 	{
 		// Methods
 		void Init();
 	}
 
-	public class MemoryPackProxyModule // TypeDefIndex: 56308
+	public class MemoryPackProxyModule // TypeDefIndex: 80840
 	{
 		// Fields
 		private static IMemoryPackProxy s_memoryPackProxy; // 0x00
 	
 		// Constructors
-		public MemoryPackProxyModule(); // 0x00000001841E1670-0x00000001841E1680
+		public MemoryPackProxyModule(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static void RegisterProxy(IMemoryPackProxy memoryPackProxy); // 0x0000000186993C80-0x0000000186993CD0
-		public static IMemoryPackProxy GetMemoryPackProxy(); // 0x0000000186993C48-0x0000000186993C80
+		public static void RegisterProxy(IMemoryPackProxy memoryPackProxy); // 0x0000000188CB35E0-0x0000000188CB3630
+		public static IMemoryPackProxy GetMemoryPackProxy(); // 0x0000000188CB35A8-0x0000000188CB35E0
 	}
 
-	public class GameInitState : GameStateBase // TypeDefIndex: 56310
+	public class GameInitState : GameStateBase // TypeDefIndex: 80842
 	{
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D261C0-0x0000000184D261F0 
+		public override Beyond.GameState stateId { get; } // 0x00000001871DE5A0-0x00000001871DE5D0 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __DoInit_d__5 : IEnumerator<object> // TypeDefIndex: 56309
+		private sealed class __DoInit_d__5 : IEnumerator<object> // TypeDefIndex: 80841
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -355,84 +357,84 @@ namespace Beyond
 			public GameInitState __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DoInit_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __DoInit_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C11C20-0x0000000183C12270
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001863F9290-0x00000001863FCEF0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994C90-0x0000000186994CDC
+			void IEnumerator.Reset(); // 0x0000000188CB50CC-0x0000000188CB5118
 		}
 	
 		// Constructors
-		public GameInitState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GameInitState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x000000018380EA50-0x000000018380EB40
-		public override void OnLeave(GameState toStateId); // 0x00000001841E4230-0x00000001841E42D0
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x0000000186BD9B80-0x0000000186BDA7E0
+		public override void OnLeave(Beyond.GameState toStateId); // 0x0000000185319DA0-0x0000000185319E50
 		[IteratorStateMachine(typeof(__DoInit_d__5))]
-		private IEnumerator _DoInit(); // 0x000000018380EB40-0x000000018380EBB0
-		private void _InitInitialResourceManager(out VirtualFileSystem.BlockValidator blockValidator); // 0x0000000183DA3770-0x0000000183DA38E0
-		private bool _CheckIfLocalInitialAssetsValid(out LocalResPref outputLocalResPref, out VirtualFileSystem.BlockValidator blockValidator); // 0x000000018332A050-0x000000018332A190
-		private void _InitAPPDefaultCulture(); // 0x0000000183BA9CF0-0x0000000183BA9E80
-		private void _InitGameSetting(); // 0x0000000183C91F20-0x0000000183C92000
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		private IEnumerator _DoInit(); // 0x0000000186BDA7E0-0x0000000186BDA860
+		private void _InitInitialResourceManager(out VirtualFileSystem.BlockValidator blockValidator); // 0x00000001869C0890-0x00000001869C0A10
+		private bool _CheckIfLocalInitialAssetsValid(out LocalResPref outputLocalResPref, out VirtualFileSystem.BlockValidator blockValidator); // 0x00000001858D8810-0x00000001858D8950
+		private void _InitAPPDefaultCulture(); // 0x00000001869BEAD0-0x00000001869BEC60
+		private void _InitGameSetting(); // 0x0000000185750E30-0x0000000185750F90
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public class GameLoginState : GameStateBase // TypeDefIndex: 56311
+	public class GameLoginState : GameStateBase // TypeDefIndex: 80843
 	{
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51FE0-0x0000000184D52010 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDDA0-0x00000001871FDDD0 
 	
 		// Constructors
-		public GameLoginState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GameLoginState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x000000018380EBB0-0x000000018380ECC0
-		public override void OnLeave(GameState toStateId); // 0x00000001841E4770-0x00000001841E47F0
-		private static void _TryStartLoginWorkflow(); // 0x0000000184A20820-0x0000000184A20900
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x0000000186BDA860-0x0000000186BDB8B0
+		public override void OnLeave(Beyond.GameState toStateId); // 0x000000018614AE80-0x000000018614AF10
+		private static void _TryStartLoginWorkflow(); // 0x00000001867A2E60-0x00000001867A3DB0
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public class GameMainState : GameStateBase // TypeDefIndex: 56312
+	public class GameMainState : GameStateBase // TypeDefIndex: 80844
 	{
 		// Fields
 		private bool m_isFirstEnter; // 0x18
 	
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51FB0-0x0000000184D51FE0 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDD70-0x00000001871FDDA0 
 	
 		// Constructors
-		public GameMainState(GameStateMachine stateMachine); // 0x0000000185397B28-0x0000000185397B3C
+		public GameMainState(GameStateMachine stateMachine); // 0x000000018783D4EC-0x000000018783D500
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x000000018380E4E0-0x000000018380E5E0
-		public override void OnLeave(GameState toStateId); // 0x00000001841E4830-0x00000001841E4880
-		public static void ReleaseMainGame(GameState toStateId); // 0x0000000184816600-0x0000000184819810
-		private static void _ClearUtils(); // 0x0000000186991ED4-0x0000000186991FBC
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x00000001867A3FA0-0x00000001867A40B0
+		public override void OnLeave(Beyond.GameState toStateId); // 0x0000000188CB1424-0x0000000188CB1480
+		public static void ReleaseMainGame(Beyond.GameState toStateId); // 0x0000000188CB1480-0x0000000188CB16F4
+		private static void _ClearUtils(); // 0x0000000188CB16F4-0x0000000188CB17E0
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public class GamePreloadState : GameStateBase // TypeDefIndex: 56314
+	public class GamePreloadState : GameStateBase // TypeDefIndex: 80846
 	{
 		// Fields
-		private Beyond.Cfg.Tables.AsyncLoadTask m_asyncTask; // 0x18
+		private Tables.AsyncLoadTask m_asyncTask; // 0x18
 	
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51F50-0x0000000184D51F80 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDD10-0x00000001871FDD40 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __DoPreload_d__6 : IEnumerator<object> // TypeDefIndex: 56313
+		private sealed class __DoPreload_d__6 : IEnumerator<object> // TypeDefIndex: 80845
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -440,61 +442,61 @@ namespace Beyond
 			public GamePreloadState __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DoPreload_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __DoPreload_d__6(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018340DD90-0x00000001834110D0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001862B3750-0x00000001862B6A60
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994CDC-0x0000000186994D28
+			void IEnumerator.Reset(); // 0x0000000188CB5118-0x0000000188CB5164
 		}
 	
 		// Constructors
-		public GamePreloadState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GamePreloadState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x000000018380E620-0x000000018380E6C0
-		public override void OnLeave(GameState toStateId); // 0x00000001841E4880-0x00000001841E48F0
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x000000018614AF10-0x000000018614B850
+		public override void OnLeave(Beyond.GameState toStateId); // 0x000000018614B8D0-0x000000018614B940
 		[IteratorStateMachine(typeof(__DoPreload_d__6))]
-		private IEnumerator _DoPreload(); // 0x000000018380E6C0-0x000000018380E730
-		private void _InitGameSettingStateInPreload(); // 0x0000000184151FC0-0x0000000184152BD0
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		private IEnumerator _DoPreload(); // 0x000000018614B850-0x000000018614B8D0
+		private void _InitGameSettingStateInPreload(); // 0x00000001862D34E0-0x00000001862D3D40
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public class GameQuitState : GameStateBase // TypeDefIndex: 56315
+	public class GameQuitState : GameStateBase // TypeDefIndex: 80847
 	{
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51F20-0x0000000184D51F50 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDCE0-0x00000001871FDD10 
 	
 		// Constructors
-		public GameQuitState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GameQuitState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x0000000186992410-0x0000000186992478
-		public override void OnLeave(GameState toStateId); // 0x0000000186992478-0x00000001869924DC
-		public static void DoQuit(); // 0x0000000186991FBC-0x0000000186992410
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x0000000188CB1C38-0x0000000188CB1C8C
+		public override void OnLeave(Beyond.GameState toStateId); // 0x0000000188CB1C8C-0x0000000188CB1CCC
+		public static void DoQuit(); // 0x0000000188CB17E0-0x0000000188CB1C38
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public class GameSoftRestartState : GameStateBase // TypeDefIndex: 56317
+	public class GameSoftRestartState : GameStateBase // TypeDefIndex: 80849
 	{
 		// Fields
-		private const string CLEAR_SCENE_PATH = "Assets/Beyond/Scenes/BuildScenes/Clear.unity"; // Metadata: 0x023479A0
+		private const string CLEAR_SCENE_PATH = "Assets/Beyond/Scenes/BuildScenes/Clear.unity"; // Metadata: 0x0263D1C5
 	
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51EF0-0x0000000184D51F20 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDCB0-0x00000001871FDCE0 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __SoftRestart_d__5 : IEnumerator<object> // TypeDefIndex: 56316
+		private sealed class __SoftRestart_d__5 : IEnumerator<object> // TypeDefIndex: 80848
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -503,79 +505,79 @@ namespace Beyond
 			private AsyncOperation _clearSceneOp_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __SoftRestart_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __SoftRestart_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000186994EF0-0x00000001869957DC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB532C-0x0000000188CB5C4C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869957DC-0x0000000186995828
+			void IEnumerator.Reset(); // 0x0000000188CB5C4C-0x0000000188CB5C98
 		}
 	
 		// Constructors
-		public GameSoftRestartState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GameSoftRestartState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x00000001869924DC-0x0000000186992594
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x0000000188CB1CCC-0x0000000188CB1DB8
 		[IteratorStateMachine(typeof(__SoftRestart_d__5))]
-		private IEnumerator _SoftRestart(); // 0x0000000186992594-0x0000000186992624
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
+		private IEnumerator _SoftRestart(); // 0x0000000188CB1DB8-0x0000000188CB1E50
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
 	}
 
-	public class GameStartState : GameStateBase // TypeDefIndex: 56318
+	public class GameStartState : GameStateBase // TypeDefIndex: 80850
 	{
 		// Properties
-		public override GameState stateId { get; } // 0x0000000184D51EC0-0x0000000184D51EF0 
+		public override Beyond.GameState stateId { get; } // 0x00000001871FDC80-0x00000001871FDCB0 
 	
 		// Constructors
-		public GameStartState(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		public GameStartState(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void OnEnter(GameState fromStateId); // 0x000000018380E730-0x000000018380E880
-		public override void OnLeave(GameState toStateId); // 0x00000001841E48F0-0x00000001841E49F0
-		private void _OnEnterMainGame(); // 0x0000000184B52310-0x0000000184B523D0
+		public override void OnEnter(Beyond.GameState fromStateId); // 0x000000018614B940-0x000000018614BA90
+		public override void OnLeave(Beyond.GameState toStateId); // 0x000000018614BA90-0x000000018614BBA0
+		private void _OnEnterMainGame(); // 0x00000001867A3ED0-0x00000001867A3FA0
 		[CompilerGenerated]
-		private void __OnEnterMainGame_b__5_0(); // 0x0000000183C123C0-0x0000000183C12410
-		public void __iFixBaseProxy_OnEnter(GameState P0); // 0x0000000186991EC4-0x0000000186991ECC
-		public void __iFixBaseProxy_OnLeave(GameState P0); // 0x0000000186991ECC-0x0000000186991ED4
+		private void __OnEnterMainGame_b__5_0(); // 0x00000001862B3160-0x00000001862B31B0
+		public void __iFixBaseProxy_OnEnter(Beyond.GameState P0); // 0x0000000188CB1414-0x0000000188CB141C
+		public void __iFixBaseProxy_OnLeave(Beyond.GameState P0); // 0x0000000188CB141C-0x0000000188CB1424
 	}
 
-	public abstract class GameStateBase : ISimpleStateNode<GameState>, ILuaCallCSharp // TypeDefIndex: 56319
+	public abstract class GameStateBase : ISimpleStateNode<Beyond.GameState>, ILuaCallCSharp // TypeDefIndex: 80851
 	{
 		// Fields
 		protected readonly GameStateMachine m_stateMachine; // 0x10
 	
 		// Properties
-		public abstract GameState stateId { get; }
+		public abstract Beyond.GameState stateId { get; }
 	
 		// Constructors
-		protected GameStateBase(GameStateMachine stateMachine); // 0x00000001853908C0-0x00000001853908D0
+		protected GameStateBase(GameStateMachine stateMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public virtual void OnEnter(GameState fromStateId); // 0x000000018380E880-0x000000018380E980
-		public virtual void OnLeave(GameState toStateId); // 0x00000001841E49F0-0x00000001841E4A80
-		public virtual void OnTick(float deltaTime); // 0x0000000186992624-0x0000000186992678
+		public virtual void OnEnter(Beyond.GameState fromStateId); // 0x000000018614CBB0-0x000000018614CC50
+		public virtual void OnLeave(Beyond.GameState toStateId); // 0x000000018614CB10-0x000000018614CBB0
+		public virtual void OnTick(float deltaTime); // 0x0000000188CB1E50-0x0000000188CB1E84
 	}
 
-	public class GameStateMachine : SimpleEnumStateMachine<GameState>, IGameStateMachine, ILuaCallCSharp // TypeDefIndex: 56321
+	public class GameStateMachine : SimpleEnumStateMachine<Beyond.GameState>, IGameStateMachine, ILuaCallCSharp // TypeDefIndex: 80853
 	{
 		// Fields
 		[CompilerGenerated]
 		private readonly GameApp _app_k__BackingField; // 0x30
 	
 		// Properties
-		public GameApp app { [CompilerGenerated] get; } // 0x00000001811F36E0-0x00000001811F36F0 
-		public GameState curState { get; } // 0x000000018332C370-0x000000018332C3A0 
+		public GameApp app { [CompilerGenerated] get; } // 0x00000001829600D0-0x00000001829600E0 
+		public Beyond.GameState curState { get; } // 0x0000000185EAF320-0x0000000185EAF350 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _ReturnToLoginState_d__8 : IEnumerator<object> // TypeDefIndex: 56320
+		private sealed class _ReturnToLoginState_d__8 : IEnumerator<object> // TypeDefIndex: 80852
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -583,43 +585,43 @@ namespace Beyond
 			public GameStateMachine __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ReturnToLoginState_d__8(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _ReturnToLoginState_d__8(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C12470-0x0000000183C14660
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB4080-0x0000000188CB435C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699428C-0x00000001869942D8
+			void IEnumerator.Reset(); // 0x0000000188CB435C-0x0000000188CB43A8
 		}
 	
 		// Constructors
-		public GameStateMachine(GameApp gameApp); // 0x000000018464E240-0x000000018464E2A0
+		public GameStateMachine(GameApp gameApp); // 0x0000000186CEB0D0-0x0000000186CEB130
 	
 		// Methods
-		private void _RegisterStates(); // 0x000000018464E2A0-0x000000018464E4D0
-		public bool CheckCanReturnToLoginState(); // 0x0000000183C119D0-0x0000000183C11A30
+		private void _RegisterStates(); // 0x0000000186CEB130-0x0000000186CEB370
+		public bool CheckCanReturnToLoginState(); // 0x0000000188CB1E84-0x0000000188CB1EFC
 		[IteratorStateMachine(typeof(_ReturnToLoginState_d__8))]
-		public IEnumerator ReturnToLoginState(); // 0x0000000183C11960-0x0000000183C119D0
+		public IEnumerator ReturnToLoginState(); // 0x0000000188CB1EFC-0x0000000188CB1F94
 	}
 
-	public static class GlobalInitializer // TypeDefIndex: 56322
+	public static class GlobalInitializer // TypeDefIndex: 80854
 	{
 		// Methods
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-		public static void InitGlobalConfig(); // 0x0000000184D83BE0-0x0000000184D83C00
+		public static void InitGlobalConfig(); // 0x000000018722B7A0-0x000000018722BCE0
 	}
 
-	public interface IHotFixCommon // TypeDefIndex: 56323
+	public interface IHotFixCommon // TypeDefIndex: 80855
 	{
 	}
 
-	public interface IHotFixPatchManagerProxy : IHotFixCommon // TypeDefIndex: 56324
+	public interface IHotFixPatchManagerProxy : IHotFixCommon // TypeDefIndex: 80856
 	{
 		// Methods
 		void InitManager();
@@ -635,14 +637,14 @@ namespace Beyond
 		void PatchRemoteMainAssemble();
 	}
 
-	public class HotFixPatchModules // TypeDefIndex: 56325
+	public class HotFixPatchModules // TypeDefIndex: 80857
 	{
 		// Fields
 		private static Dictionary<System.Type, IHotFixCommon> s_hotFixModules; // 0x00
 	
 		// Constructors
-		public HotFixPatchModules(); // 0x00000001841E1670-0x00000001841E1680
-		static HotFixPatchModules(); // 0x0000000184D17E20-0x0000000184D17EB0
+		public HotFixPatchModules(); // 0x0000000186805BA0-0x0000000186805BB0
+		static HotFixPatchModules(); // 0x0000000187178080-0x0000000187178110
 	
 		// Methods
 		public static void Register<T>(T module)
@@ -655,22 +657,22 @@ namespace Beyond
 			where T : class, IHotFixCommon;
 	}
 
-	public static class InitialPathDef // TypeDefIndex: 56326
+	public static class InitialPathDef // TypeDefIndex: 80858
 	{
 		// Fields
-		public const string LOGIN_SCENE_PATH = "Assets/Beyond/InitialAssets/Scenes/Login.unity"; // Metadata: 0x023479CD
-		public const string LOGIN_SK_ACTOR_M = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_male.prefab"; // Metadata: 0x023479FC
-		public const string LOGIN_SK_ACTOR_F = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_female.prefab"; // Metadata: 0x02347A3A
-		public const string LOGIN_SK_ACTOR_NO_GENDER = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_no_gender.prefab"; // Metadata: 0x02347A7A
-		public const string LOGIN_MOCK_UID_PANEL = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginMockUIDPanel.prefab"; // Metadata: 0x02347ABE
-		public const string LOGIN_CONTROLLER_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginController.prefab"; // Metadata: 0x02347B02
-		public const string LOGIN_ROOT_PANEL_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginRootPanel.prefab"; // Metadata: 0x02347B44
-		public const string LOGIN_ALERT_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginAlertDialog.prefab"; // Metadata: 0x02347B84
-		public const string LOGIN_JUDGE_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginJudgeDialog.prefab"; // Metadata: 0x02347BC7
-		public const string LOGIN_VOC_RES_SELECT_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginVocResSelDialog.prefab"; // Metadata: 0x02347C0A
+		public const string LOGIN_SCENE_PATH = "Assets/Beyond/InitialAssets/Scenes/Login.unity"; // Metadata: 0x0263D1F2
+		public const string LOGIN_SK_ACTOR_M = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_male.prefab"; // Metadata: 0x0263D221
+		public const string LOGIN_SK_ACTOR_F = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_female.prefab"; // Metadata: 0x0263D25F
+		public const string LOGIN_SK_ACTOR_NO_GENDER = "Assets/Beyond/InitialAssets/Intro/Prefab/SK_actor_no_gender.prefab"; // Metadata: 0x0263D29F
+		public const string LOGIN_MOCK_UID_PANEL = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginMockUIDPanel.prefab"; // Metadata: 0x0263D2E3
+		public const string LOGIN_CONTROLLER_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginController.prefab"; // Metadata: 0x0263D327
+		public const string LOGIN_ROOT_PANEL_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginRootPanel.prefab"; // Metadata: 0x0263D369
+		public const string LOGIN_ALERT_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginAlertDialog.prefab"; // Metadata: 0x0263D3A9
+		public const string LOGIN_JUDGE_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginJudgeDialog.prefab"; // Metadata: 0x0263D3EC
+		public const string LOGIN_VOC_RES_SELECT_DIALOG_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/LoginVocResSelDialog.prefab"; // Metadata: 0x0263D42F
 	}
 
-	public class LoginController : MonoBehaviour, ILoginBinder<LoginViewModel> // TypeDefIndex: 56342
+	public class LoginController : MonoBehaviour, ILoginBinder<LoginViewModel> // TypeDefIndex: 80874
 	{
 		// Fields
 		[SerializeField]
@@ -709,23 +711,23 @@ namespace Beyond
 		private Action<string> m_onMockLogin; // 0xB8
 	
 		// Properties
-		public MaskCtrl maskCtrl { get; } // 0x00000001841E6130-0x00000001841E61D0 
-		public LoginRootPanel rootPanel { get; } // 0x00000001841E7A20-0x00000001841E7A50 
+		public MaskCtrl maskCtrl { get; } // 0x00000001863F7D20-0x00000001863F7DC0 
+		public LoginRootPanel rootPanel { get; } // 0x0000000188CB2230-0x0000000188CB2274 
 	
 		// Events
 		private event Action<string> m_onMockLogin {
-			add; // 0x0000000183AF7400-0x0000000183AF7490
-			remove; // 0x0000000183AF7490-0x0000000183AF7520
+			add; // 0x00000001869497B0-0x0000000186949840
+			remove; // 0x0000000186949840-0x00000001869498D0
 		}
 	
 		// Nested types
-		public struct FOptions // TypeDefIndex: 56327
+		public struct FOptions // TypeDefIndex: 80859
 		{
 			// Fields
 			public LoginContext context; // 0x00
 		}
 	
-		public abstract class Dialog : MonoBehaviour // TypeDefIndex: 56330
+		public abstract class Dialog : MonoBehaviour // TypeDefIndex: 80862
 		{
 			// Fields
 			private UISwitchTween m_switchTween; // 0x18
@@ -737,7 +739,7 @@ namespace Beyond
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __CloseCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 56328
+			private sealed class __CloseCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 80860
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -746,23 +748,23 @@ namespace Beyond
 				public Action callback; // 0x28
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __CloseCoroutine_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __CloseCoroutine_d__4(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000186994A30-0x0000000186994AFC
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CB4D78-0x0000000188CB4E48
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x0000000186994AFC-0x0000000186994B48
+				void IEnumerator.Reset(); // 0x0000000188CB4E48-0x0000000188CB4E94
 			}
 	
 			[CompilerGenerated]
-			private sealed class _Create_d__8<TDialog> : IEnumerator<object> // TypeDefIndex: 56329
+			private sealed class _Create_d__8<TDialog> : IEnumerator<object> // TypeDefIndex: 80861
 				where TDialog : Dialog
 			{
 				// Fields
@@ -789,31 +791,31 @@ namespace Beyond
 			}
 	
 			// Constructors
-			protected Dialog(); // 0x0000000185393520-0x0000000185393538
+			protected Dialog(); // 0x00000001878364A0-0x00000001878364B8
 	
 			// Methods
 			[IteratorStateMachine(typeof(__CloseCoroutine_d__4))]
-			private IEnumerator _CloseCoroutine(Action callback); // 0x000000018698D340-0x000000018698D3E8
-			public bool TryCloseWithCallback(Action callback); // 0x000000018698D1E4-0x000000018698D340
-			public void Show(); // 0x000000018698D0F4-0x000000018698D1E4
-			protected virtual void OnInit(); // 0x000000018698D0B0-0x000000018698D0F4
+			private IEnumerator _CloseCoroutine(Action callback); // 0x0000000188CAC9F4-0x0000000188CACAAC
+			public bool TryCloseWithCallback(Action callback); // 0x0000000188CAC8AC-0x0000000188CAC9F4
+			public void Show(); // 0x0000000188CAC7BC-0x0000000188CAC8AC
+			protected virtual void OnInit(); // 0x0000000188CAC788-0x0000000188CAC7BC
 			[IteratorStateMachine(typeof(_Create_d__8<TDialog>))]
 			public static IEnumerator Create<TDialog>(string resPath, LoginController controller, Beyond.Misc.ObjectRef outRef)
 				where TDialog : Dialog;
 		}
 	
-		public static class MaskConsts // TypeDefIndex: 56331
+		public static class MaskConsts // TypeDefIndex: 80863
 		{
 			// Fields
-			public const float DELAY_WAIT_NODE = 0.2f; // Metadata: 0x02347C51
-			public const string INIT = "init"; // Metadata: 0x02347C55
-			public const string U8_LOGIN = "u8_login"; // Metadata: 0x02347C5A
-			public const string FROM_GS_LOGIN = "from_gs_login"; // Metadata: 0x02347C63
-			public const string FROM_CREATE_ROLE = "from_create_role"; // Metadata: 0x02347C71
-			public const string NET_AGE_TIPS = "age_tips"; // Metadata: 0x02347C82
+			public const float DELAY_WAIT_NODE = 0.2f; // Metadata: 0x0263D476
+			public const string INIT = "init"; // Metadata: 0x0263D47A
+			public const string U8_LOGIN = "u8_login"; // Metadata: 0x0263D47F
+			public const string FROM_GS_LOGIN = "from_gs_login"; // Metadata: 0x0263D488
+			public const string FROM_CREATE_ROLE = "from_create_role"; // Metadata: 0x0263D496
+			public const string NET_AGE_TIPS = "age_tips"; // Metadata: 0x0263D4A7
 		}
 	
-		public enum EMaskType // TypeDefIndex: 56332
+		public enum EMaskType // TypeDefIndex: 80864
 		{
 			None = 0,
 			Black = 1,
@@ -822,7 +824,7 @@ namespace Beyond
 		}
 	
 		[Serializable]
-		private class MaskCfg // TypeDefIndex: 56333
+		private class MaskCfg // TypeDefIndex: 80865
 		{
 			// Fields
 			public CanvasGroup target; // 0x10
@@ -830,13 +832,13 @@ namespace Beyond
 			public float hideDuration; // 0x1C
 	
 			// Constructors
-			public MaskCfg(); // 0x0000000184D8CC90-0x0000000184D8CCA0
+			public MaskCfg(); // 0x0000000187239990-0x00000001872399A0
 	
 			// Methods
-			public UISwitchTween CreateTweenAndHide(); // 0x0000000183F0F380-0x0000000183F0F420
+			public UISwitchTween CreateTweenAndHide(); // 0x00000001863F6800-0x00000001863F68C0
 		}
 	
-		public class MaskCtrl : IDisposable // TypeDefIndex: 56336
+		public class MaskCtrl : IDisposable // TypeDefIndex: 80868
 		{
 			// Fields
 			private static readonly int[] CROSS_SCENE_MASKS; // 0x00
@@ -845,7 +847,7 @@ namespace Beyond
 			private ListDict<string, NetMaskRef> m_netMasks; // 0x20
 	
 			// Nested types
-			private class NetMaskRef // TypeDefIndex: 56334
+			private class NetMaskRef // TypeDefIndex: 80866
 			{
 				// Fields
 				[CompilerGenerated]
@@ -854,14 +856,14 @@ namespace Beyond
 				public bool isEnabled; // 0x1C
 	
 				// Properties
-				public string key { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+				public string key { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
 	
 				// Constructors
-				public NetMaskRef(string key); // 0x00000001853908C0-0x00000001853908D0
+				public NetMaskRef(string key); // 0x0000000184FD2410-0x0000000184FD2420
 			}
 	
 			[CompilerGenerated]
-			private sealed class _WaitForCrossSceneMasks_d__10 : IEnumerator<object> // TypeDefIndex: 56335
+			private sealed class _WaitForCrossSceneMasks_d__10 : IEnumerator<object> // TypeDefIndex: 80867
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -872,39 +874,39 @@ namespace Beyond
 				private UISwitchTween _mask_5__4; // 0x38
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _WaitForCrossSceneMasks_d__10(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _WaitForCrossSceneMasks_d__10(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x00000001869948BC-0x00000001869949E4
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CB4BA4-0x0000000188CB4CE0
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x00000001869949E4-0x0000000186994A30
+				void IEnumerator.Reset(); // 0x0000000188CB4CE0-0x0000000188CB4D2C
 			}
 	
 			// Constructors
-			public MaskCtrl(LoginController controller); // 0x0000000183F0F180-0x0000000183F0F380
-			static MaskCtrl(); // 0x0000000184CE79C0-0x0000000184CE7A50
+			public MaskCtrl(LoginController controller); // 0x00000001863F6600-0x00000001863F6800
+			static MaskCtrl(); // 0x0000000187109680-0x0000000187109710
 	
 			// Methods
-			public void Dispose(); // 0x0000000183F0F600-0x0000000183F0FEA0
-			public void EnableMask(string key, EMaskType type, bool enable, bool reset = false /* Metadata: 0x02347C8F */); // 0x00000001841E77B0-0x00000001841E7990
-			public bool IsMaskTweening(EMaskType type); // 0x00000001841E7690-0x00000001841E76E0
-			public bool IsCrossSceneMaskTweening(); // 0x00000001841E76E0-0x00000001841E77B0
+			public void Dispose(); // 0x00000001863F6EC0-0x00000001863F76E0
+			public void EnableMask(string key, EMaskType type, bool enable, bool reset = false /* Metadata: 0x0263D4B4 */); // 0x00000001861526F0-0x00000001861528E0
+			public bool IsMaskTweening(EMaskType type); // 0x00000001863F7AC0-0x00000001863F7B00
+			public bool IsCrossSceneMaskTweening(); // 0x00000001863F6DD0-0x00000001863F6EC0
 			[IteratorStateMachine(typeof(_WaitForCrossSceneMasks_d__10))]
-			public IEnumerator WaitForCrossSceneMasks(); // 0x0000000186993BB8-0x0000000186993C48
-			public void EnableNetMask(string key, float timeoutSecs); // 0x00000001869939E0-0x0000000186993BB8
-			public void DisableNetMask(string key); // 0x00000001869938F4-0x00000001869939E0
-			private UISwitchTween _GetMaskByType(int type); // 0x00000001841E7990-0x00000001841E7A20
+			public IEnumerator WaitForCrossSceneMasks(); // 0x0000000188CB3510-0x0000000188CB35A8
+			public void EnableNetMask(string key, float timeoutSecs); // 0x0000000188CB333C-0x0000000188CB3510
+			public void DisableNetMask(string key); // 0x0000000188CB323C-0x0000000188CB333C
+			private UISwitchTween _GetMaskByType(int type); // 0x00000001861528E0-0x0000000186152980
 		}
 	
 		[CompilerGenerated]
-		private sealed class _BeforeDestroy_d__35 : IEnumerator<object> // TypeDefIndex: 56337
+		private sealed class _BeforeDestroy_d__35 : IEnumerator<object> // TypeDefIndex: 80869
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -912,23 +914,23 @@ namespace Beyond
 			public LoginController __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _BeforeDestroy_d__35(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _BeforeDestroy_d__35(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001841E5D70-0x00000001841E5E00
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001863F7BE0-0x00000001863F7C70
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869941A8-0x00000001869941F4
+			void IEnumerator.Reset(); // 0x0000000188CB3E08-0x0000000188CB3E54
 		}
 	
 		[CompilerGenerated]
-		private sealed class __InstantiateUIFromRes_d__36<T> : IEnumerator<object> // TypeDefIndex: 56338
+		private sealed class __InstantiateUIFromRes_d__36<T> : IEnumerator<object> // TypeDefIndex: 80870
 			where T : Component
 		{
 			// Fields
@@ -957,7 +959,7 @@ namespace Beyond
 		}
 	
 		[CompilerGenerated]
-		private sealed class __InitCoroutine_d__38 : IEnumerator<object> // TypeDefIndex: 56339
+		private sealed class __InitCoroutine_d__38 : IEnumerator<object> // TypeDefIndex: 80871
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -967,36 +969,36 @@ namespace Beyond
 			private Beyond.Misc.ObjectRef _panelRef_5__3; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __InitCoroutine_d__38(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __InitCoroutine_d__38(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001841E5520-0x00000001841E5760
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001863F7DC0-0x00000001863F8000
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994DC0-0x0000000186994E0C
+			void IEnumerator.Reset(); // 0x0000000188CB51B0-0x0000000188CB51FC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 56340
+		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 80872
 		{
 			// Fields
 			public Beyond.Misc.ObjectRef objRef; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass45_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass45_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __MockLoginCoroutine_b__0(string pUID); // 0x0000000183C8D270-0x0000000183C8D330
+			internal void __MockLoginCoroutine_b__0(string pUID); // 0x0000000185BA6CD0-0x0000000185BA6D00
 		}
 	
 		[CompilerGenerated]
-		private sealed class __MockLoginCoroutine_d__45 : IEnumerator<object> // TypeDefIndex: 56341
+		private sealed class __MockLoginCoroutine_d__45 : IEnumerator<object> // TypeDefIndex: 80873
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1007,48 +1009,48 @@ namespace Beyond
 			private LoginMockUIDPanel _nullablePanel_5__2; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __MockLoginCoroutine_d__45(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __MockLoginCoroutine_d__45(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183F0E1B0-0x0000000183F0E5A0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186B3B1A0-0x0000000186B3B590
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994EA4-0x0000000186994EF0
+			void IEnumerator.Reset(); // 0x0000000188CB5294-0x0000000188CB52E0
 		}
 	
 		// Constructors
-		public LoginController(); // 0x00000001849C1650-0x00000001849C1790
+		public LoginController(); // 0x0000000186E1BF30-0x0000000186E1C070
 	
 		// Methods
-		protected void Awake(); // 0x0000000184D2A8F0-0x0000000184D2A960
-		protected void Start(); // 0x0000000184D59930-0x0000000184D59980
-		public float GetEnterGamePanelPredelay(); // 0x00000001841E7A50-0x00000001841E7A80
-		public void OnValueChanged(LoginViewModel viewModel); // 0x00000001834089F0-0x0000000183408A70
-		public void InitUI(FOptions options); // 0x00000001841E51F0-0x00000001841E53A0
-		public void InvokeWhenStart(Action callback); // 0x000000018380AB70-0x000000018380ABC0
+		protected void Awake(); // 0x00000001871C33F0-0x00000001871C3470
+		protected void Start(); // 0x0000000187206E20-0x0000000187206E60
+		public float GetEnterGamePanelPredelay(); // 0x0000000188CB21EC-0x0000000188CB2230
+		public void OnValueChanged(LoginViewModel viewModel); // 0x0000000186C5B9F0-0x0000000186C5BA80
+		public void InitUI(FOptions options); // 0x00000001863F6AA0-0x00000001863F6C50
+		public void InvokeWhenStart(Action callback); // 0x00000001867A4580-0x00000001867A45C0
 		[IteratorStateMachine(typeof(_BeforeDestroy_d__35))]
-		public IEnumerator BeforeDestroy(); // 0x0000000184A22370-0x0000000184A223E0
+		public IEnumerator BeforeDestroy(); // 0x0000000186EB9570-0x0000000186EB95F0
 		[IteratorStateMachine(typeof(__InstantiateUIFromRes_d__36<T>))]
 		private IEnumerator _InstantiateUIFromRes<T>(string resPath, Transform parent, Beyond.Misc.ObjectRef objRef)
 			where T : Component;
-		private void _InitImpl(); // 0x0000000184CB24C0-0x0000000184CB2510
+		private void _InitImpl(); // 0x00000001870C01A0-0x00000001870C01F0
 		[IteratorStateMachine(typeof(__InitCoroutine_d__38))]
-		private IEnumerator _InitCoroutine(); // 0x0000000184CB2510-0x0000000184CB2580
-		private void _InitVersionBtn(); // 0x00000001841E4A80-0x00000001841E4B40
-		public void MockLoginWithCallback(string fixedUID, Action<string> callback); // 0x0000000183AF7270-0x0000000183AF7370
+		private IEnumerator _InitCoroutine(); // 0x00000001870C01F0-0x00000001870C0270
+		private void _InitVersionBtn(); // 0x000000018710E970-0x000000018710EA40
+		public void MockLoginWithCallback(string fixedUID, Action<string> callback); // 0x00000001867A43D0-0x00000001867A44E0
 		[IteratorStateMachine(typeof(__MockLoginCoroutine_d__45))]
-		private IEnumerator _MockLoginCoroutine(string fixedUID); // 0x0000000183AF7370-0x0000000183AF7400
+		private IEnumerator _MockLoginCoroutine(string fixedUID); // 0x00000001867A44E0-0x00000001867A4580
 		[CompilerGenerated]
-		private void _MockLoginWithCallback_b__44_0(); // 0x0000000184D84E00-0x0000000184D84E10
+		private void _MockLoginWithCallback_b__44_0(); // 0x0000000187231390-0x00000001872313A0
 	}
 
-	public class LoginContext : IDisposable // TypeDefIndex: 56344
+	public class LoginContext : IDisposable // TypeDefIndex: 80876
 	{
 		// Fields
 		private LoginController m_controller; // 0x10
@@ -1073,19 +1075,19 @@ namespace Beyond
 		private bool _startConnectServer_k__BackingField; // 0x50
 	
 		// Properties
-		public bool quickStart { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D866A0-0x0000000184D866B0 0x0000000184D866C0-0x0000000184D866D0
-		public bool firstLogin { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815AF940-0x00000001815AF950 0x0000000184D866E0-0x0000000184D866F0
-		public LoginWorkFlow workflow { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		public LoginViewProperty viewProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public LoginManager.AssetLoader loader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-		public LoginManager.FlowWithMaskMgr flowWithMask { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
-		public NetUsagePolicy netUsagePolicy { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
-		public LoginGameUpdater gameUpdater { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
-		public bool startConnectServer { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86800-0x0000000184D86810 0x0000000184D86840-0x0000000184D86850
+		public bool quickStart { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E010-0x000000018225E020 0x000000018225E020-0x000000018225E030
+		public bool firstLogin { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018226EDC0-0x000000018226EDD0 0x000000018226EDD0-0x000000018226EDE0
+		public LoginWorkFlow workflow { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		public LoginViewProperty viewProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public LoginManager.AssetLoader loader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+		public LoginManager.FlowWithMaskMgr flowWithMask { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182986470-0x0000000182986480 0x0000000186AB5C00-0x0000000186AB5C10
+		public NetUsagePolicy netUsagePolicy { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EEA0-0x000000018226EEB0 0x00000001870EAAD0-0x00000001870EAAE0
+		public LoginGameUpdater gameUpdater { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EE80-0x000000018226EE90 0x0000000185B68F50-0x0000000185B68F60
+		public bool startConnectServer { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018225DFF0-0x000000018225E000 0x000000018225E000-0x000000018225E010
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __DisposeCoroutine_d__48 : IEnumerator<object> // TypeDefIndex: 56343
+		private sealed class __DisposeCoroutine_d__48 : IEnumerator<object> // TypeDefIndex: 80875
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1094,127 +1096,149 @@ namespace Beyond
 			public Action disposeAction; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DisposeCoroutine_d__48(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __DisposeCoroutine_d__48(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184A22250-0x0000000184A22370
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186EB9450-0x0000000186EB9570
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994C44-0x0000000186994C90
+			void IEnumerator.Reset(); // 0x0000000188CB5080-0x0000000188CB50CC
 		}
 	
 		// Constructors
-		public LoginContext(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginContext(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public LoginController ViewOnlyController(); // 0x00000001841E6090-0x00000001841E60C0
-		public void Init(bool quickStart, LoginController controller, LoginWorkFlow workflow, LoginViewProperty viewProp, LoginManager.AssetLoader loader, LoginManager.FlowWithMaskMgr flowWithMask, NetUsagePolicy netUsagePolicy, LoginGameUpdater gameUpdater); // 0x000000018380A3F0-0x000000018380A4D0
-		public void StartCoroutine(IEnumerator routine); // 0x0000000183A82B00-0x0000000183A82B80
-		public void StopCoroutine(IEnumerator routine); // 0x000000018699286C-0x00000001869928E8
-		public void SendEvent(ELoginEvent evt, object param = null); // 0x0000000186992718-0x0000000186992798
-		public void Dispose(); // 0x00000001841E3F20-0x00000001841E4070
-		public void ShutDown(); // 0x0000000186992798-0x000000018699286C
-		public bool IsWorkflowDisposed(); // 0x00000001869926C4-0x0000000186992718
-		public bool IsDisposed(); // 0x0000000186992678-0x00000001869926C4
-		private void _DisposeImpl(); // 0x000000018380A4D0-0x000000018380A530
+		public LoginController ViewOnlyController(); // 0x0000000188CB21AC-0x0000000188CB21EC
+		public void Init(bool quickStart, LoginController controller, LoginWorkFlow workflow, LoginViewProperty viewProp, LoginManager.AssetLoader loader, LoginManager.FlowWithMaskMgr flowWithMask, NetUsagePolicy netUsagePolicy, LoginGameUpdater gameUpdater); // 0x0000000186CBD120-0x0000000186CBD1D0
+		public void StartCoroutine(IEnumerator routine); // 0x00000001862AFF00-0x00000001862B0600
+		public void StopCoroutine(IEnumerator routine); // 0x0000000188CB2144-0x0000000188CB21AC
+		public void SendEvent(ELoginEvent evt, object param = null); // 0x0000000188CB2014-0x0000000188CB206C
+		public void Dispose(); // 0x0000000186EBB340-0x0000000186EBB4A0
+		public void ShutDown(); // 0x0000000188CB206C-0x0000000188CB2144
+		public bool IsWorkflowDisposed(); // 0x0000000188CB1FD8-0x0000000188CB2014
+		public bool IsDisposed(); // 0x0000000188CB1F94-0x0000000188CB1FD8
+		private void _DisposeImpl(); // 0x0000000186CBD1D0-0x0000000186CBD230
 		[IteratorStateMachine(typeof(__DisposeCoroutine_d__48))]
-		private static IEnumerator _DisposeCoroutine(LoginController legacyController, Action disposeAction); // 0x00000001841E4070-0x00000001841E4100
+		private static IEnumerator _DisposeCoroutine(LoginController legacyController, Action disposeAction); // 0x0000000186EBB4A0-0x0000000186EBB540
 	}
 
-	public enum ELoginEvent // TypeDefIndex: 56345
+	public enum ELoginEvent // TypeDefIndex: 80877
 	{
 		None = 0,
 		V2C_U8Login = 1,
 		V2C_EnterGame = 2,
 		V2C_Logout = 3,
 		V2C_ResourceRepair = 4,
-		V2C_OpenAgeTips = 5,
-		V2C_CloseAgeTips = 6,
-		V2C_OpenServerSelect = 7,
-		V2C_CloseServerSelect = 8,
-		V2C_SelectServer = 9,
-		V2C_ConfirmServer = 10,
-		V2C_Relogin = 11,
-		V2C_ReplayGsLogin = 12,
-		C2V_PrepareGsLogin = 13
+		V2C_PreDownload = 5,
+		V2C_OpenAgeTips = 6,
+		V2C_CloseAgeTips = 7,
+		V2C_OpenServerSelect = 8,
+		V2C_CloseServerSelect = 9,
+		V2C_SelectServer = 10,
+		V2C_ConfirmServer = 11,
+		V2C_Relogin = 12,
+		V2C_ReplayGsLogin = 13,
+		C2V_PrepareGsLogin = 14
 	}
 
-	public static class LoginTextDefines // TypeDefIndex: 56346
+	public static class LoginTextDefines // TypeDefIndex: 80878
 	{
 		// Fields
-		public const string CS_LOGIN_CONN_FAIL = "CS_LOGIN_CONN_FAIL"; // Metadata: 0x02347C9E
-		public const string HOTUPDATE_INDEX_FAILED = "HOTUPDATE_INDEX_FAILED"; // Metadata: 0x02347CB1
-		public const string HOTUPDATE_IO_FAILED = "HOTUPDATE_IO_FAILED"; // Metadata: 0x02347CC8
-		public const string HOTUPDATE_CHECK_VERSION = "HOTUPDATE_CHECK_VERSION"; // Metadata: 0x02347CDC
-		public const string HOTUPDATE_DOWNLOADING = "HOTUPDATE_DOWNLOADING"; // Metadata: 0x02347CF4
-		public const string HOTUPDATE_DECOMPRESSING = "HOTUPDATE_DECOMPRESSING"; // Metadata: 0x02347D0A
-		public const string HOTUPDATE_DOWNLOAD_ERROR = "HOTUPDATE_DOWNLOAD_ERROR"; // Metadata: 0x02347D22
-		public const string HOTUPDATE_DOWNLOAD_DISKFULL = "HOTUPDATE_DOWNLOAD_DISKFULL"; // Metadata: 0x02347D3B
-		public const string HOTUPDATE_LOCAL_RES_CHECK = "HOTUPDATE_LOCAL_RES_CHECK"; // Metadata: 0x02347D57
-		public const string HOTUPDATE_PRELOAD_RES = "HOTUPDATE_PRELOAD_RES"; // Metadata: 0x02347D71
-		public const string HOTUPDATE_INVALID_LOCAL_FILES = "HOTUPDATE_INVALID_LOCAL_FILES"; // Metadata: 0x02347D87
-		public const string HOTUPDATE_INIT_RES_CHANGED = "HOTUPDATE_INIT_RES_CHANGED"; // Metadata: 0x02347DA5
-		public const string HOTUPDATE_DOWNLOAD_IO_ERROR = "HOTUPDATE_DOWNLOAD_IO_ERROR"; // Metadata: 0x02347DC0
-		public const string HOTUPDATE_DOWNLOAD_DATA_CHECK_ERROR = "HOTUPDATE_DOWNLOAD_DATA_CHECK_ERROR"; // Metadata: 0x02347DDC
-		public const string HOTUPDATE_DOWNLOAD_START_DOWNLOAD_ERROR = "HOTUPDATE_DOWNLOAD_START_DOWNLOAD_ERROR"; // Metadata: 0x02347E00
-		public const string HOTUPDATE_DECOMPRESS_ERROR = "HOTUPDATE_DECOMPRESS_ERROR"; // Metadata: 0x02347E28
-		public const string REMOTE_CFG_GAME_CFG_ERROR = "REMOTE_CFG_GAME_CFG_ERROR"; // Metadata: 0x02347E43
-		public const string REMOTE_CFG_GAME_CFG_TIMEOUT = "REMOTE_CFG_GAME_CFG_TIMEOUT"; // Metadata: 0x02347E5D
-		public const string REMOTE_CFG_NETWORK_CFG_ERROR = "REMOTE_CFG_NETWORK_CFG_ERROR"; // Metadata: 0x02347E79
-		public const string REMOTE_CFG_NETWORK_CFG_TIMEOUT = "REMOTE_CFG_NETWORK_CFG_TIMEOUT"; // Metadata: 0x02347E96
-		public const string REMOTE_CFG_RES_VERSION_ERROR = "REMOTE_CFG_RES_VERSION_ERROR"; // Metadata: 0x02347EB5
-		public const string REMOTE_CFG_RES_VERSION_TIMEOUT = "REMOTE_CFG_RES_VERSION_TIMEOUT"; // Metadata: 0x02347ED2
-		public const string REMOTE_CFG_GAME_VERSION_ERROR = "REMOTE_CFG_GAME_VERSION_ERROR"; // Metadata: 0x02347EF1
-		public const string REMOTE_CFG_GAME_VERSION_TIMEOUT = "REMOTE_CFG_GAME_VERSION_TIMEOUT"; // Metadata: 0x02347F0F
-		public const string LOGIN_JUDGE_EXIT_GAME = "LOGIN_JUDGE_EXIT_GAME"; // Metadata: 0x02347F2F
-		public const string LOGIN_JUDGE_LOGOUT = "LOGIN_JUDGE_LOGOUT"; // Metadata: 0x02347F45
-		public const string LOGIN_JUDGE_RES_REPAIR = "LOGIN_JUDGE_RES_REPAIR"; // Metadata: 0x02347F58
-		public const string LOGIN_AGE_TIPS_FAILED = "LOGIN_AGE_TIPS_FAILED"; // Metadata: 0x02347F6F
-		public const string LOGIN_TXT_DIALOG_CONFIRM = "LOGIN_TXT_DIALOG_CONFIRM"; // Metadata: 0x02347F85
-		public const string LOGIN_TXT_DIALOG_CANCEL = "LOGIN_TXT_DIALOG_CANCEL"; // Metadata: 0x02347F9E
-		public const string LOGIN_AUDIO_LANG_CN = "UI_LOGIN_ROOT_VOICE_CN"; // Metadata: 0x02347FB6
-		public const string LOGIN_AUDIO_LANG_JP = "UI_LOGIN_ROOT_VOICE_JP"; // Metadata: 0x02347FCD
-		public const string LOGIN_AUDIO_LANG_EN = "UI_LOGIN_ROOT_VOICE_EN"; // Metadata: 0x02347FE4
-		public const string LOGIN_AUDIO_LANG_KR = "UI_LOGIN_ROOT_VOICE_KR"; // Metadata: 0x02347FFB
-		public const string LOGIN_TXT_NETWORK_ERROR = "LOGIN_TXT_NETWORK_ERROR"; // Metadata: 0x02348012
-		public const string LOGIN_GAME_UPGRADED = "LOGIN_GAME_UPGRADED"; // Metadata: 0x0234802A
-		public const string LOGIN_TXT_SERVER_CLOSED = "LOGIN_TXT_SERVER_CLOSED"; // Metadata: 0x0234803E
-		public const string LOGIN_TXT_SERVER_CLOSED_DATETIME = "LOGIN_TXT_SERVER_CLOSED_DATETIME"; // Metadata: 0x02348056
-		public const string LOGIN_TXT_USR_BAN_DATETIME = "LOGIN_TXT_USR_BAN_DATETIME"; // Metadata: 0x02348077
-		public const string LOGIN_TXT_HOTUPDATE_CLEAR_DOWNLOAD_FOLDER = "LOGIN_TXT_HOTUPDATE_CLEAR_DOWNLOAD_FOLDER"; // Metadata: 0x02348092
-		public const string LOGIN_GET_SERVER_LIST_FAILED = "LOGIN_GET_SERVER_LIST_FAILED"; // Metadata: 0x023480BC
-		public const string LOGIN_TEXT_SERVER_ZONE_FAILED = "LOGIN_TEXT_SERVER_ZONE_FAILED"; // Metadata: 0x023480D9
-		public const string LOGIN_TEXT_GET_APP_VERSION_FAILED = "LOGIN_TEXT_GET_APP_VERSION_FAILED"; // Metadata: 0x023480F7
-		public const string LOGIN_TEXT_ALERT_CARRIER_NETWORK = "LOGIN_TEXT_ALERT_CARRIER_NETWORK"; // Metadata: 0x02348119
-		public const string LOGIN_TEXT_ERROR_DOWNLOAD_HOTUPDATE_RES_FAILED = "LOGIN_TEXT_ERROR_DOWNLOAD_HOTUPDATE_RES_FAILED"; // Metadata: 0x0234813A
-		public const string LOGIN_SHADER_WARM_UP_PRELOAD_RES = "LOGIN_SHADER_WARM_UP_PRELOAD_RES"; // Metadata: 0x02348169
-		public const string LOGIN_GAME_UPDATE_TIPS_DOWNLOADING = "LOGIN_GAME_UPDATE_TIPS_DOWNLOADING"; // Metadata: 0x0234818A
-		public const string LOGIN_GAME_UPDATE_TIPS_PAUSE = "LOGIN_GAME_UPDATE_TIPS_PAUSE"; // Metadata: 0x023481AD
-		public const string LOGIN_GAME_UPDATE_ALERT_NEWER = "LOGIN_GAME_UPDATE_ALERT_NEWER"; // Metadata: 0x023481CA
-		public const string LOGIN_GAME_UPDATE_ERROR_DISK_FULL = "LOGIN_GAME_UPDATE_ERROR_DISK_FULL"; // Metadata: 0x023481E8
-		public const string LOGIN_GAME_UPDATE_ALERT_SUC = "LOGIN_GAME_UPDATE_ALERT_SUC"; // Metadata: 0x0234820A
-		public const string LOGIN_GAME_UPDATE_ERROR_CHECK_FOR_UPDATE_COMMON = "LOGIN_GAME_UPDATE_ERROR_CHECK_FOR_UPDATE_COMMON"; // Metadata: 0x02348226
-		public const string LOGIN_GAME_UPDATE_ERROR_COMMON = "LOGIN_GAME_UPDATE_ERROR_COMMON"; // Metadata: 0x02348256
-		public const string LOGIN_GAME_UPDATE_TITLE = "LOGIN_GAME_UPDATE_TITLE"; // Metadata: 0x02348275
-		public const string LOGIN_GOTO_SHOP_FOR_GAME_UPDATE = "LOGIN_GOTO_SHOP_FOR_GAME_UPDATE"; // Metadata: 0x0234828D
-		public const string LOGIN_SDK_INIT_FAILED = "LOGIN_SDK_INIT_FAILED"; // Metadata: 0x023482AD
-		public const string LOGIN_DOWNLOADING_SPEED_HINT = "LOGIN_DOWNLOADING_SPEED_HINT"; // Metadata: 0x023482C3
-		public const string LOGIN_SDK_INIT_FAILED_NEED_QUIT_GAME = "LOGIN_SDK_INIT_FAILED_NEED_QUIT_GAME"; // Metadata: 0x023482E0
-		public const string LOGIN_NETWORK_CONGESTION_TITLE = "LOGIN_NETWORK_CONGESTION_TITLE"; // Metadata: 0x02348305
-		public const string LOGIN_LOW_SCORE_DEVICE_TIP = "LOGIN_LOW_SCORE_DEVICE_TIP"; // Metadata: 0x02348324
-		public const string LOGIN_REGISTRY_WRITE_FAILED = "LOGIN_REGISTRY_WRITE_FAILED"; // Metadata: 0x0234833F
+		public const string CS_LOGIN_CONN_FAIL = "CS_LOGIN_CONN_FAIL"; // Metadata: 0x0263D4C4
+		public const string HOTUPDATE_INDEX_FAILED = "HOTUPDATE_INDEX_FAILED"; // Metadata: 0x0263D4D7
+		public const string HOTUPDATE_IO_FAILED = "HOTUPDATE_IO_FAILED"; // Metadata: 0x0263D4EE
+		public const string HOTUPDATE_CHECK_VERSION = "HOTUPDATE_CHECK_VERSION"; // Metadata: 0x0263D502
+		public const string HOTUPDATE_DOWNLOADING = "HOTUPDATE_DOWNLOADING"; // Metadata: 0x0263D51A
+		public const string HOTUPDATE_DECOMPRESSING = "HOTUPDATE_DECOMPRESSING"; // Metadata: 0x0263D530
+		public const string LOGIN_HOTUPDATE_CHECKING_LOCAL_RES = "LOGIN_HOTUPDATE_CHECKING_LOCAL_RES"; // Metadata: 0x0263D548
+		public const string HOTUPDATE_DOWNLOAD_ERROR = "HOTUPDATE_DOWNLOAD_ERROR"; // Metadata: 0x0263D56B
+		public const string HOTUPDATE_DOWNLOAD_DISKFULL = "HOTUPDATE_DOWNLOAD_DISKFULL"; // Metadata: 0x0263D584
+		public const string HOTUPDATE_LOCAL_RES_CHECK = "HOTUPDATE_LOCAL_RES_CHECK"; // Metadata: 0x0263D5A0
+		public const string HOTUPDATE_PRELOAD_RES = "HOTUPDATE_PRELOAD_RES"; // Metadata: 0x0263D5BA
+		public const string HOTUPDATE_INVALID_LOCAL_FILES = "HOTUPDATE_INVALID_LOCAL_FILES"; // Metadata: 0x0263D5D0
+		public const string HOTUPDATE_INIT_RES_CHANGED = "HOTUPDATE_INIT_RES_CHANGED"; // Metadata: 0x0263D5EE
+		public const string HOTUPDATE_DOWNLOAD_IO_ERROR = "HOTUPDATE_DOWNLOAD_IO_ERROR"; // Metadata: 0x0263D609
+		public const string HOTUPDATE_DOWNLOAD_DATA_CHECK_ERROR = "HOTUPDATE_DOWNLOAD_DATA_CHECK_ERROR"; // Metadata: 0x0263D625
+		public const string HOTUPDATE_DOWNLOAD_START_DOWNLOAD_ERROR = "HOTUPDATE_DOWNLOAD_START_DOWNLOAD_ERROR"; // Metadata: 0x0263D649
+		public const string HOTUPDATE_DECOMPRESS_ERROR = "HOTUPDATE_DECOMPRESS_ERROR"; // Metadata: 0x0263D671
+		public const string REMOTE_CFG_GAME_CFG_ERROR = "REMOTE_CFG_GAME_CFG_ERROR"; // Metadata: 0x0263D68C
+		public const string REMOTE_CFG_GAME_CFG_TIMEOUT = "REMOTE_CFG_GAME_CFG_TIMEOUT"; // Metadata: 0x0263D6A6
+		public const string REMOTE_CFG_NETWORK_CFG_ERROR = "REMOTE_CFG_NETWORK_CFG_ERROR"; // Metadata: 0x0263D6C2
+		public const string REMOTE_CFG_NETWORK_CFG_TIMEOUT = "REMOTE_CFG_NETWORK_CFG_TIMEOUT"; // Metadata: 0x0263D6DF
+		public const string REMOTE_CFG_RES_VERSION_ERROR = "REMOTE_CFG_RES_VERSION_ERROR"; // Metadata: 0x0263D6FE
+		public const string REMOTE_CFG_RES_VERSION_TIMEOUT = "REMOTE_CFG_RES_VERSION_TIMEOUT"; // Metadata: 0x0263D71B
+		public const string REMOTE_CFG_GAME_VERSION_ERROR = "REMOTE_CFG_GAME_VERSION_ERROR"; // Metadata: 0x0263D73A
+		public const string REMOTE_CFG_GAME_VERSION_TIMEOUT = "REMOTE_CFG_GAME_VERSION_TIMEOUT"; // Metadata: 0x0263D758
+		public const string LOGIN_JUDGE_EXIT_GAME = "LOGIN_JUDGE_EXIT_GAME"; // Metadata: 0x0263D778
+		public const string LOGIN_JUDGE_LOGOUT = "LOGIN_JUDGE_LOGOUT"; // Metadata: 0x0263D78E
+		public const string LOGIN_JUDGE_RES_REPAIR = "LOGIN_JUDGE_RES_REPAIR"; // Metadata: 0x0263D7A1
+		public const string LOGIN_AGE_TIPS_FAILED = "LOGIN_AGE_TIPS_FAILED"; // Metadata: 0x0263D7B8
+		public const string LOGIN_TXT_DIALOG_CONFIRM = "LOGIN_TXT_DIALOG_CONFIRM"; // Metadata: 0x0263D7CE
+		public const string LOGIN_TXT_DIALOG_CANCEL = "LOGIN_TXT_DIALOG_CANCEL"; // Metadata: 0x0263D7E7
+		public const string LOGIN_AUDIO_LANG_CN = "UI_LOGIN_ROOT_VOICE_CN"; // Metadata: 0x0263D7FF
+		public const string LOGIN_AUDIO_LANG_JP = "UI_LOGIN_ROOT_VOICE_JP"; // Metadata: 0x0263D816
+		public const string LOGIN_AUDIO_LANG_EN = "UI_LOGIN_ROOT_VOICE_EN"; // Metadata: 0x0263D82D
+		public const string LOGIN_AUDIO_LANG_KR = "UI_LOGIN_ROOT_VOICE_KR"; // Metadata: 0x0263D844
+		public const string LOGIN_TXT_NETWORK_ERROR = "LOGIN_TXT_NETWORK_ERROR"; // Metadata: 0x0263D85B
+		public const string LOGIN_GAME_UPGRADED = "LOGIN_GAME_UPGRADED"; // Metadata: 0x0263D873
+		public const string LOGIN_TXT_SERVER_CLOSED = "LOGIN_TXT_SERVER_CLOSED"; // Metadata: 0x0263D887
+		public const string LOGIN_TXT_SERVER_CLOSED_DATETIME = "LOGIN_TXT_SERVER_CLOSED_DATETIME"; // Metadata: 0x0263D89F
+		public const string LOGIN_TXT_USR_BAN_DATETIME = "LOGIN_TXT_USR_BAN_DATETIME"; // Metadata: 0x0263D8C0
+		public const string LOGIN_TXT_HOTUPDATE_CLEAR_DOWNLOAD_FOLDER = "LOGIN_TXT_HOTUPDATE_CLEAR_DOWNLOAD_FOLDER"; // Metadata: 0x0263D8DB
+		public const string LOGIN_GET_SERVER_LIST_FAILED = "LOGIN_GET_SERVER_LIST_FAILED"; // Metadata: 0x0263D905
+		public const string LOGIN_TEXT_SERVER_ZONE_FAILED = "LOGIN_TEXT_SERVER_ZONE_FAILED"; // Metadata: 0x0263D922
+		public const string LOGIN_TEXT_GET_APP_VERSION_FAILED = "LOGIN_TEXT_GET_APP_VERSION_FAILED"; // Metadata: 0x0263D940
+		public const string LOGIN_TEXT_ALERT_CARRIER_NETWORK = "LOGIN_TEXT_ALERT_CARRIER_NETWORK"; // Metadata: 0x0263D962
+		public const string LOGIN_TEXT_ERROR_DOWNLOAD_HOTUPDATE_RES_FAILED = "LOGIN_TEXT_ERROR_DOWNLOAD_HOTUPDATE_RES_FAILED"; // Metadata: 0x0263D983
+		public const string LOGIN_SHADER_WARM_UP_PRELOAD_RES = "LOGIN_SHADER_WARM_UP_PRELOAD_RES"; // Metadata: 0x0263D9B2
+		public const string LOGIN_GAME_UPDATE_TIPS_DOWNLOADING = "LOGIN_GAME_UPDATE_TIPS_DOWNLOADING"; // Metadata: 0x0263D9D3
+		public const string LOGIN_GAME_UPDATE_TIPS_PAUSE = "LOGIN_GAME_UPDATE_TIPS_PAUSE"; // Metadata: 0x0263D9F6
+		public const string LOGIN_GAME_UPDATE_ALERT_NEWER = "LOGIN_GAME_UPDATE_ALERT_NEWER"; // Metadata: 0x0263DA13
+		public const string LOGIN_GAME_UPDATE_ERROR_DISK_FULL = "LOGIN_GAME_UPDATE_ERROR_DISK_FULL"; // Metadata: 0x0263DA31
+		public const string LOGIN_GAME_UPDATE_ALERT_SUC = "LOGIN_GAME_UPDATE_ALERT_SUC"; // Metadata: 0x0263DA53
+		public const string LOGIN_GAME_UPDATE_ERROR_CHECK_FOR_UPDATE_COMMON = "LOGIN_GAME_UPDATE_ERROR_CHECK_FOR_UPDATE_COMMON"; // Metadata: 0x0263DA6F
+		public const string LOGIN_GAME_UPDATE_ERROR_COMMON = "LOGIN_GAME_UPDATE_ERROR_COMMON"; // Metadata: 0x0263DA9F
+		public const string LOGIN_GAME_UPDATE_TITLE = "LOGIN_GAME_UPDATE_TITLE"; // Metadata: 0x0263DABE
+		public const string LOGIN_GOTO_SHOP_FOR_GAME_UPDATE = "LOGIN_GOTO_SHOP_FOR_GAME_UPDATE"; // Metadata: 0x0263DAD6
+		public const string LOGIN_SDK_INIT_FAILED = "LOGIN_SDK_INIT_FAILED"; // Metadata: 0x0263DAF6
+		public const string LOGIN_DOWNLOADING_SPEED_HINT = "LOGIN_DOWNLOADING_SPEED_HINT"; // Metadata: 0x0263DB0C
+		public const string LOGIN_SDK_INIT_FAILED_NEED_QUIT_GAME = "LOGIN_SDK_INIT_FAILED_NEED_QUIT_GAME"; // Metadata: 0x0263DB29
+		public const string LOGIN_NETWORK_CONGESTION_TITLE = "LOGIN_NETWORK_CONGESTION_TITLE"; // Metadata: 0x0263DB4E
+		public const string LOGIN_LOW_SCORE_DEVICE_TIP = "LOGIN_LOW_SCORE_DEVICE_TIP"; // Metadata: 0x0263DB6D
+		public const string LOGIN_LOW_SCORE_DEVICE_CLOUD_GAME_TIP = "LOGIN_LOW_SCORE_DEVICE_CLOUD_GAME_TIP"; // Metadata: 0x0263DB88
+		public const string LOGIN_STARTUP_GPU_DRIVER_NEEDS_UPDATE = "LOGIN_STARTUP_GPU_DRIVER_NEEDS_UPDATE"; // Metadata: 0x0263DBAE
+		public const string LOGIN_STARTUP_BIOS_NEEDS_UPDATE = "LOGIN_STARTUP_BIOS_NEEDS_UPDATE"; // Metadata: 0x0263DBD4
+		public const string LOGIN_STARTUP_INSTALL_ON_HDD = "LOGIN_STARTUP_INSTALL_ON_HDD"; // Metadata: 0x0263DBF4
+		public const string LOGIN_REGISTRY_WRITE_FAILED = "LOGIN_REGISTRY_WRITE_FAILED"; // Metadata: 0x0263DC11
+		public const string LOGIN_PRE_DOWNLOAD_AVAILABLE = "LOGIN_PRE_DOWNLOAD_AVAILABLE"; // Metadata: 0x0263DC2D
+		public const string LOGIN_PRE_DOWNLOAD_CONTINUE = "LOGIN_PRE_DOWNLOAD_CONTINUE"; // Metadata: 0x0263DC4A
+		public const string LOGIN_PRE_DOWNLOAD_COMPLETED = "LOGIN_PRE_DOWNLOAD_COMPLETED"; // Metadata: 0x0263DC66
+		public const string LOGIN_PRE_DOWNLOAD_PAUSE = "LOGIN_PRE_DOWNLOAD_PAUSE"; // Metadata: 0x0263DC83
+		public const string LOGIN_PRE_DOWNLOAD_DOWNLOADING = "LOGIN_PRE_DOWNLOAD_DOWNLOADING"; // Metadata: 0x0263DC9C
+		public const string LOGIN_PRE_DOWNLOAD_APPLYING = "LOGIN_PRE_DOWNLOAD_APPLYING"; // Metadata: 0x0263DCBB
+		public const string LOGIN_PRE_DOWNLOAD_ERROR_COMMON = "LOGIN_PRE_DOWNLOAD_ERROR_COMMON"; // Metadata: 0x0263DCD7
+		public const string LOGIN_PRE_DOWNLOAD_DISK_ERROR = "LOGIN_PRE_DOWNLOAD_DISK_ERROR"; // Metadata: 0x0263DCF7
+		public const string LOGIN_PRE_DOWNLOAD_APPLY_ERROR_COMMON = "LOGIN_PRE_DOWNLOAD_APPLY_ERROR_COMMON"; // Metadata: 0x0263DD15
+		public const string LOGIN_PRE_DOWNLOAD_CONFIRM_AVAILABLE = "LOGIN_PRE_DOWNLOAD_CONFIRM_AVAILABLE"; // Metadata: 0x0263DD3B
+		public const string LOGIN_PRE_DOWNLOAD_CONFIRM_CONTINUE = "LOGIN_PRE_DOWNLOAD_CONFIRM_CONTINUE"; // Metadata: 0x0263DD60
+		public const string LOGIN_PRE_DOWNLOAD_CONFIRM_PAUSE = "LOGIN_PRE_DOWNLOAD_CONFIRM_PAUSE"; // Metadata: 0x0263DD84
+		public const string LOGIN_PRE_DOWNLOAD_TOAST_COMPLETED = "LOGIN_PRE_DOWNLOAD_TOAST_COMPLETED"; // Metadata: 0x0263DDA5
+		public const string LOGIN_SUCCESS_TOAST = "LOGIN_SUCCESS_TOAST"; // Metadata: 0x0263DDC8
+		public const string LOGIN_PRE_DOWNLOAD_RETRY = "LOGIN_PRE_DOWNLOAD_RETRY"; // Metadata: 0x0263DDDC
+		public const string LOGIN_PRE_DOWNLOAD_GIVE_UP = "LOGIN_PRE_DOWNLOAD_GIVE_UP"; // Metadata: 0x0263DDF5
 	}
 
-	public class LoginManager : ExplicitSingleton<LoginManager> // TypeDefIndex: 56365
+	public class LoginManager : ExplicitSingleton<LoginManager> // TypeDefIndex: 80897
 	{
 		// Fields
-		public const long MIN_BYTES_SIZE_TO_NOTIFY_IF_NOT_WIFI = 104857600; // Metadata: 0x0234835B
+		public const long MIN_BYTES_SIZE_TO_NOTIFY_IF_NOT_WIFI = 104857600; // Metadata: 0x0263DE10
 		private ISceneHandle m_sceneHandle; // 0x10
 		private LoginContext m_context; // 0x18
 		private LatchUtils.InvokeWhenUnlock m_workflowFinishLatch; // 0x20
@@ -1226,28 +1250,28 @@ namespace Beyond
 		private object m_dialogBlocker; // 0x48
 	
 		// Properties
-		public bool quickStart { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000182D480B0-0x0000000182D480C0
-		public bool firstLogin { get; } // 0x0000000186993898-0x00000001869938F4 
+		public bool quickStart { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DFB0-0x000000018225DFC0 0x000000018225DFC0-0x000000018225DFD0
+		public bool firstLogin { get; } // 0x0000000188CB31FC-0x0000000188CB323C 
 	
 		// Nested types
-		public class AssetLoader : IDisposable // TypeDefIndex: 56347
+		public class AssetLoader : IDisposable // TypeDefIndex: 80879
 		{
 			// Fields
 			private Dictionary<string, FAssetProxyHandle> m_assetHandles; // 0x10
 	
 			// Constructors
-			public AssetLoader(); // 0x000000018380AA10-0x000000018380AA90
+			public AssetLoader(); // 0x00000001871C5270-0x00000001871C52F0
 	
 			// Methods
 			public FAssetProxyHandle CachedLoad<T>(string path)
 				where T : UnityEngine.Object;
 			public FAssetProxyHandle CachedLoadAsync<T>(string path)
 				where T : UnityEngine.Object;
-			private bool _CheckDisposedBeforeLoad(string path); // 0x0000000184701C90-0x0000000184701D00
-			public void Dispose(); // 0x00000001848E3130-0x00000001848E34D0
+			private bool _CheckDisposedBeforeLoad(string path); // 0x0000000186BAB460-0x0000000186BAB4F0
+			public void Dispose(); // 0x0000000186CBD230-0x0000000186CBD4A0
 		}
 	
-		public class FlowWithMaskMgr // TypeDefIndex: 56349
+		public class FlowWithMaskMgr // TypeDefIndex: 80881
 		{
 			// Fields
 			private LoginContext m_context; // 0x10
@@ -1255,7 +1279,7 @@ namespace Beyond
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __FlowCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 56348
+			private sealed class __FlowCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 80880
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -1266,32 +1290,32 @@ namespace Beyond
 				private bool _isFlowSuc_5__3; // 0x58
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __FlowCoroutine_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __FlowCoroutine_d__4(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x00000001841E61D0-0x00000001841E7630
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x00000001863F7810-0x00000001863F7AC0
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x0000000186994D74-0x0000000186994DC0
+				void IEnumerator.Reset(); // 0x0000000188CB5164-0x0000000188CB51B0
 			}
 	
 			// Constructors
-			public FlowWithMaskMgr(LoginContext context); // 0x000000018380A5D0-0x000000018380A660
+			public FlowWithMaskMgr(LoginContext context); // 0x000000018717CC00-0x000000018717CC90
 	
 			// Methods
-			public void StartFlow(FFlowWithMask flow); // 0x0000000183A80DD0-0x0000000183A80F10
+			public void StartFlow(FFlowWithMask flow); // 0x00000001862AFA50-0x00000001862AFB90
 			[IteratorStateMachine(typeof(__FlowCoroutine_d__4))]
-			private IEnumerator _FlowCoroutine(FFlowWithMask flow); // 0x0000000183A80F10-0x0000000183A80FC0
-			private void _OnFlowFinished(FFlowWithMask flow); // 0x000000018698D3E8-0x000000018698D4A0
+			private IEnumerator _FlowCoroutine(FFlowWithMask flow); // 0x00000001862AFB90-0x00000001862AFC50
+			private void _OnFlowFinished(FFlowWithMask flow); // 0x00000001863F6570-0x00000001863F6600
 		}
 	
-		public struct FFlowWithMask // TypeDefIndex: 56350
+		public struct FFlowWithMask // TypeDefIndex: 80882
 		{
 			// Fields
 			public string key; // 0x00
@@ -1301,7 +1325,7 @@ namespace Beyond
 			public float disableDelay; // 0x20
 		}
 	
-		public struct FFlowCondition // TypeDefIndex: 56351
+		public struct FFlowCondition // TypeDefIndex: 80883
 		{
 			// Fields
 			[CompilerGenerated]
@@ -1310,19 +1334,19 @@ namespace Beyond
 			private LoginWorkFlow.ENode _secTarget_k__BackingField; // 0x04
 	
 			// Properties
-			public LoginWorkFlow.ENode priTarget { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B77620-0x0000000182B77630 0x0000000184D86140-0x0000000184D86150
-			public LoginWorkFlow.ENode secTarget { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88B20-0x0000000184D88B30 0x0000000184D88B50-0x0000000184D88B60
+			public LoginWorkFlow.ENode priTarget { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001844AD290-0x00000001844AD2A0 0x0000000184547F40-0x0000000184547F50
+			public LoginWorkFlow.ENode secTarget { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872342E0-0x00000001872342F0 0x0000000187235AB0-0x0000000187235AC0
 	
 			// Constructors
-			public FFlowCondition(LoginWorkFlow.ENode target); // 0x0000000184D8CC80-0x0000000184D8CC90
-			public FFlowCondition(LoginWorkFlow.ENode first, LoginWorkFlow.ENode second); // 0x0000000184D85C40-0x0000000184D85C50
+			public FFlowCondition(LoginWorkFlow.ENode target); // 0x0000000187239980-0x0000000187239990
+			public FFlowCondition(LoginWorkFlow.ENode first, LoginWorkFlow.ENode second); // 0x00000001827241A0-0x00000001827241B0
 	
 			// Methods
-			public bool IsTargetMatch(LoginWorkFlow.ENode node); // 0x00000001841E7630-0x00000001841E7690
+			public bool IsTargetMatch(LoginWorkFlow.ENode node); // 0x00000001863F7BA0-0x00000001863F7BE0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InitCoroutine_d__17 : IEnumerator<object> // TypeDefIndex: 56352
+		private sealed class _InitCoroutine_d__17 : IEnumerator<object> // TypeDefIndex: 80884
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1331,24 +1355,24 @@ namespace Beyond
 			public bool quickStart; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _InitCoroutine_d__17(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _InitCoroutine_d__17(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184D30A10-0x0000000184D30A70
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001871C70F0-0x00000001871C7150
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994240-0x000000018699428C
+			void IEnumerator.Reset(); // 0x0000000188CB4034-0x0000000188CB4080
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56353
+		private sealed class __c // TypeDefIndex: 80885
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1357,30 +1381,30 @@ namespace Beyond
 			public static Action<LoginJudgeDialog, LoginJudgeDialog.FParams> __9__36_0; // 0x18
 	
 			// Constructors
-			static __c(); // 0x00000001869946D0-0x0000000186994734
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x0000000188CB49B0-0x0000000188CB4A14
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _AlertDialog_b__29_0(LoginAlertDialog param1, LoginAlertDialog.FParams param2); // 0x00000001869942D8-0x0000000186994308
-			internal void _VocResSelDialog_b__30_0(LoginVocResSelDialog param1, LoginVocResSelDialog.FParams param2); // 0x0000000186994308-0x0000000186994330
-			internal void __StartShowJudgeDialogCoroutine_b__36_0(LoginJudgeDialog param1, LoginJudgeDialog.FParams param2); // 0x0000000186994330-0x0000000186994374
+			internal void _AlertDialog_b__29_0(LoginAlertDialog param1, LoginAlertDialog.FParams param2); // 0x0000000188CB43A8-0x0000000188CB43D8
+			internal void _VocResSelDialog_b__30_0(LoginVocResSelDialog param1, LoginVocResSelDialog.FParams param2); // 0x0000000188CB4580-0x0000000188CB45A0
+			internal void __StartShowJudgeDialogCoroutine_b__36_0(LoginJudgeDialog param1, LoginJudgeDialog.FParams param2); // 0x0000000188CB4608-0x0000000188CB464C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 56354
+		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 80886
 		{
 			// Fields
 			public object wait; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass31_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass31_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _VocResSelDialogWithConfirm_b__0(); // 0x00000001840E20A0-0x00000001840E20C0
+			internal void _VocResSelDialogWithConfirm_b__0(); // 0x00000001863017D0-0x00000001863017F0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _VocResSelDialogWithConfirm_d__31 : IEnumerator<object> // TypeDefIndex: 56355
+		private sealed class _VocResSelDialogWithConfirm_d__31 : IEnumerator<object> // TypeDefIndex: 80887
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1389,37 +1413,37 @@ namespace Beyond
 			private __c__DisplayClass31_0 __8__1; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _VocResSelDialogWithConfirm_d__31(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _VocResSelDialogWithConfirm_d__31(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000186994734-0x0000000186994870
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB4A14-0x0000000188CB4B58
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994870-0x00000001869948BC
+			void IEnumerator.Reset(); // 0x0000000188CB4B58-0x0000000188CB4BA4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 56356
+		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 80888
 		{
 			// Fields
 			public Beyond.Misc.ObjectRef outRef; // 0x10
 			public Action<Beyond.Misc.ObjectRef> callback; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass32_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass32_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _AlertDialogWithResult_b__0(); // 0x0000000186994374-0x00000001869943B4
+			internal void _AlertDialogWithResult_b__0(); // 0x0000000188CB464C-0x0000000188CB4690
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AlertDialogWithResult_d__32 : IEnumerator<object> // TypeDefIndex: 56357
+		private sealed class _AlertDialogWithResult_d__32 : IEnumerator<object> // TypeDefIndex: 80889
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1430,36 +1454,36 @@ namespace Beyond
 			public string desc; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AlertDialogWithResult_d__32(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _AlertDialogWithResult_d__32(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000186994004-0x000000018699415C
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB3C5C-0x0000000188CB3DBC
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699415C-0x00000001869941A8
+			void IEnumerator.Reset(); // 0x0000000188CB3DBC-0x0000000188CB3E08
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 56358
+		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 80890
 		{
 			// Fields
 			public object wait; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass33_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass33_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _AlertDialogWithConfirm_b__0(); // 0x00000001840E20A0-0x00000001840E20C0
+			internal void _AlertDialogWithConfirm_b__0(); // 0x00000001863017D0-0x00000001863017F0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AlertDialogWithConfirm_d__33 : IEnumerator<object> // TypeDefIndex: 56359
+		private sealed class _AlertDialogWithConfirm_d__33 : IEnumerator<object> // TypeDefIndex: 80891
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1469,23 +1493,23 @@ namespace Beyond
 			private __c__DisplayClass33_0 __8__1; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AlertDialogWithConfirm_d__33(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _AlertDialogWithConfirm_d__33(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000186993E68-0x0000000186993FB8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CB3AB8-0x0000000188CB3C10
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186993FB8-0x0000000186994004
+			void IEnumerator.Reset(); // 0x0000000188CB3C10-0x0000000188CB3C5C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ShowDialogCoroutine_d__37<TDialog, TParam> : IEnumerator<object> // TypeDefIndex: 56360
+		private sealed class __ShowDialogCoroutine_d__37<TDialog, TParam> : IEnumerator<object> // TypeDefIndex: 80892
 			where TDialog : LoginController.Dialog
 		{
 			// Fields
@@ -1514,34 +1538,34 @@ namespace Beyond
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0 // TypeDefIndex: 56361
+		private sealed class __c__DisplayClass39_0 // TypeDefIndex: 80893
 		{
 			// Fields
 			public Action callback; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass39_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass39_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _MockManualSelectServer_b__0(string _); // 0x0000000182A729E0-0x0000000182A729F0
+			internal void _MockManualSelectServer_b__0(string _); // 0x0000000184221010-0x0000000184221020
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0 // TypeDefIndex: 56362
+		private sealed class __c__DisplayClass40_0 // TypeDefIndex: 80894
 		{
 			// Fields
 			public LoginController controller; // 0x10
 			public LoginManager __4__this; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass40_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass40_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __Init_b__0(); // 0x0000000184CA7390-0x0000000184CA73D0
+			internal void __Init_b__0(); // 0x0000000187090820-0x0000000187090860
 		}
 	
 		[CompilerGenerated]
-		private sealed class __LoginWorkFlowCoroutine_d__43 : IEnumerator<object> // TypeDefIndex: 56363
+		private sealed class __LoginWorkFlowCoroutine_d__43 : IEnumerator<object> // TypeDefIndex: 80895
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1550,23 +1574,23 @@ namespace Beyond
 			public LoginController nullableCtrl; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoginWorkFlowCoroutine_d__43(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoginWorkFlowCoroutine_d__43(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001841E4CB0-0x00000001841E4DE0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000185319960-0x0000000185319AA0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000186994E58-0x0000000186994EA4
+			void IEnumerator.Reset(); // 0x0000000188CB5248-0x0000000188CB5294
 		}
 	
 		[CompilerGenerated]
-		private sealed class _FetchRemoteConfigUtilSuc_d__45 : IEnumerator<object> // TypeDefIndex: 56364
+		private sealed class _FetchRemoteConfigUtilSuc_d__45 : IEnumerator<object> // TypeDefIndex: 80896
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1576,93 +1600,93 @@ namespace Beyond
 			public string keyErrorWithCode; // 0x30
 			public string keyTimeout; // 0x38
 			private FRemoteConfigRequest _request_5__2; // 0x40
-			private bool _isServiceSuc_5__3; // 0x80
-			private Beyond.Misc.ObjectRef _resultRef_5__4; // 0x88
+			private bool _isServiceSuc_5__3; // 0x88
+			private Beyond.Misc.ObjectRef _resultRef_5__4; // 0x90
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _FetchRemoteConfigUtilSuc_d__45(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _FetchRemoteConfigUtilSuc_d__45(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C0A020-0x0000000183C0A3F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186A4A910-0x0000000186A4CA80
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869941F4-0x0000000186994240
+			void IEnumerator.Reset(); // 0x0000000188CB3FE8-0x0000000188CB4034
 		}
 	
 		// Constructors
-		public LoginManager(); // 0x0000000184A7D450-0x0000000184A7D590
+		public LoginManager(); // 0x0000000186F818D0-0x0000000186F81A10
 	
 		// Methods
 		[IteratorStateMachine(typeof(_InitCoroutine_d__17))]
-		public IEnumerator InitCoroutine(bool quickStart); // 0x0000000184A20900-0x0000000184A20980
-		public bool IsReLoginInProgress(); // 0x0000000186992F48-0x0000000186993060
-		public static void OnReleaseMainGame(); // 0x000000018699334C-0x00000001869933D8
-		public bool IsWorkflowInProgress(); // 0x0000000184A20980-0x0000000184A209B0
-		public void ClearSync(); // 0x0000000186992C60-0x0000000186992CC0
-		public void Clear(); // 0x000000018380E5E0-0x000000018380E620
-		private void _ReleaseLoginScene(); // 0x000000018380E1E0-0x000000018380E2C0
-		public void InvokeWhenWorkFlowFinished(Action callback); // 0x0000000184B523D0-0x0000000184B52420
-		public void SceneComponentOnly_Bind(LoginSceneComponent comp); // 0x000000018340BA80-0x000000018340BBB0
-		private void _BindPendingComponents(); // 0x00000001841E5EA0-0x00000001841E6090
-		public void ToggleLoginBindingGroup(bool enable); // 0x00000001869933D8-0x00000001869934A0
-		public void AlertDialog(string desc, Action callback = null); // 0x0000000186992A78-0x0000000186992C60
-		public void VocResSelDialog(Action callback = null); // 0x0000000186993530-0x00000001869936D0
+		public IEnumerator InitCoroutine(bool quickStart); // 0x00000001867A4190-0x00000001867A4220
+		public bool IsReLoginInProgress(); // 0x0000000188CB28DC-0x0000000188CB29F8
+		public static void OnReleaseMainGame(); // 0x0000000188CB2CAC-0x0000000188CB2D38
+		public bool IsWorkflowInProgress(); // 0x00000001867A4360-0x00000001867A4390
+		public void ClearSync(); // 0x0000000188CB2600-0x0000000188CB265C
+		public void Clear(); // 0x00000001853195F0-0x0000000185319640
+		private void _ReleaseLoginScene(); // 0x0000000185319300-0x00000001853193E0
+		public void InvokeWhenWorkFlowFinished(Action callback); // 0x00000001867A4390-0x00000001867A43D0
+		public void SceneComponentOnly_Bind(LoginSceneComponent comp); // 0x00000001867A2A60-0x00000001867A2B90
+		private void _BindPendingComponents(); // 0x0000000185319720-0x0000000185319900
+		public void ToggleLoginBindingGroup(bool enable); // 0x0000000188CB2D38-0x0000000188CB2DFC
+		public void AlertDialog(string desc, Action callback = null); // 0x0000000188CB2418-0x0000000188CB2600
+		public void VocResSelDialog(Action callback = null); // 0x0000000188CB2E94-0x0000000188CB3034
 		[IteratorStateMachine(typeof(_VocResSelDialogWithConfirm_d__31))]
-		public IEnumerator VocResSelDialogWithConfirm(); // 0x00000001869934A0-0x0000000186993530
+		public IEnumerator VocResSelDialogWithConfirm(); // 0x0000000188CB2DFC-0x0000000188CB2E94
 		[IteratorStateMachine(typeof(_AlertDialogWithResult_d__32))]
-		public IEnumerator AlertDialogWithResult(string desc, Beyond.Misc.ObjectRef outRef, Action<Beyond.Misc.ObjectRef> callback = null); // 0x0000000186992990-0x0000000186992A78
+		public IEnumerator AlertDialogWithResult(string desc, Beyond.Misc.ObjectRef outRef, Action<Beyond.Misc.ObjectRef> callback = null); // 0x0000000188CB232C-0x0000000188CB2418
 		[IteratorStateMachine(typeof(_AlertDialogWithConfirm_d__33))]
-		public IEnumerator AlertDialogWithConfirm(string desc); // 0x00000001869928E8-0x0000000186992990
+		public IEnumerator AlertDialogWithConfirm(string desc); // 0x0000000188CB2274-0x0000000188CB232C
 		[IDTag(0)]
-		public void JudgeDialog(string desc, Action onPositive, Action onNegative); // 0x00000001869930FC-0x00000001869931EC
+		public void JudgeDialog(string desc, Action onPositive, Action onNegative); // 0x0000000188CB2A80-0x0000000188CB2B50
 		[IDTag(1)]
-		public void JudgeDialog(LoginJudgeDialog.FParams param); // 0x0000000186993060-0x00000001869930FC
-		private void _StartShowJudgeDialogCoroutine(LoginJudgeDialog.FParams param); // 0x00000001869936D0-0x0000000186993898
+		public void JudgeDialog(LoginJudgeDialog.FParams param); // 0x0000000188CB29F8-0x0000000188CB2A80
+		private void _StartShowJudgeDialogCoroutine(LoginJudgeDialog.FParams param); // 0x0000000188CB3034-0x0000000188CB31FC
 		[IteratorStateMachine(typeof(__ShowDialogCoroutine_d__37<TDialog, TParam>))]
 		private IEnumerator _ShowDialogCoroutine<TDialog, TParam>(string resPath, TParam param, Action<TDialog, TParam> setParamFunc)
 			where TDialog : LoginController.Dialog;
-		public void MockLoginWithCallback(Action<string> callback); // 0x00000001841E5AD0-0x00000001841E5BC0
-		public void MockManualSelectServer(string uid, Action callback); // 0x00000001869931EC-0x000000018699334C
-		private void _Init(); // 0x000000018380AC70-0x000000018380B290
-		public bool IsLoginSceneLoading(); // 0x000000018340B9B0-0x000000018340BA10
-		private void _PrepareBeforeLoginProcess(); // 0x000000018380A660-0x000000018380A6E0
+		public void MockLoginWithCallback(Action<string> callback); // 0x000000018709E160-0x000000018709E250
+		public void MockManualSelectServer(string uid, Action callback); // 0x0000000188CB2B50-0x0000000188CB2CAC
+		private void _Init(); // 0x00000001867A4920-0x00000001867A7CA0
+		public bool IsLoginSceneLoading(); // 0x00000001867A2C70-0x00000001867A2CD0
+		private void _PrepareBeforeLoginProcess(); // 0x00000001863E34F0-0x00000001863E3580
 		[IteratorStateMachine(typeof(__LoginWorkFlowCoroutine_d__43))]
-		private IEnumerator _LoginWorkFlowCoroutine(LoginController nullableCtrl); // 0x0000000184CA73D0-0x0000000184CA7460
-		private void _ClearWorkflowAndContext(bool isShutDownMode); // 0x00000001841E5120-0x00000001841E51F0
+		private IEnumerator _LoginWorkFlowCoroutine(LoginController nullableCtrl); // 0x0000000187090860-0x0000000187090900
+		private void _ClearWorkflowAndContext(bool isShutDownMode); // 0x0000000185319640-0x0000000185319720
 		[IteratorStateMachine(typeof(_FetchRemoteConfigUtilSuc_d__45))]
-		public static IEnumerator FetchRemoteConfigUtilSuc(IRemoteConfig config, string configEnv, string keyErrorWithCode, string keyTimeout); // 0x0000000184CAF5B0-0x0000000184CAF670
-		private static string _ExtractErrorInfo(HttpSender.Result result, string keyErrorWithCode, string keyTimeout); // 0x0000000183C0A3F0-0x0000000183C0A480
+		public static IEnumerator FetchRemoteConfigUtilSuc(IRemoteConfig config, string configEnv, string keyErrorWithCode, string keyTimeout); // 0x00000001869C07D0-0x00000001869C0890
+		private static string _ExtractErrorInfo(HttpSender.Result result, string keyErrorWithCode, string keyTimeout); // 0x0000000186A4A870-0x0000000186A4A910
 		[Conditional("DEVELOPMENT_BUILD")]
-		public static void DevOnlyCheckEnableLocalResMode(ref bool enable); // 0x0000000186992CC0-0x0000000186992D40
+		public static void DevOnlyCheckEnableLocalResMode(ref bool enable); // 0x0000000188CB265C-0x0000000188CB26DC
 		[Conditional("DEVELOPMENT_BUILD")]
-		public static void DevOnlyUseLocalResVersion(ResVersionDevCfg config, ref bool useLocalResVersion); // 0x0000000186992D40-0x0000000186992F48
+		public static void DevOnlyUseLocalResVersion(ResVersionDevCfg config, ref bool useLocalResVersion); // 0x0000000188CB26DC-0x0000000188CB28DC
 	}
 
-	public class VietnamLoginAgePanel : MonoBehaviour // TypeDefIndex: 56366
+	public class VietnamLoginAgePanel : MonoBehaviour // TypeDefIndex: 80898
 	{
 		// Fields
-		private const string PREFAB_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/AgeTipsPanel.prefab"; // Metadata: 0x02348363
+		private const string PREFAB_PATH = "Assets/Beyond/InitialAssets/Prefabs/Login/AgeTipsPanel.prefab"; // Metadata: 0x0263DE18
 		private static FAssetProxyHandle s_prefabAssetHandle; // 0x00
 		public static GameObject instance; // 0x18
 	
 		// Constructors
-		public VietnamLoginAgePanel(); // 0x0000000185393520-0x0000000185393538
+		public VietnamLoginAgePanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public static void Init(); // 0x00000001841E4E90-0x00000001841E4EF0
-		public static void UnInit(); // 0x0000000186995914-0x000000018699598C
-		private static void _Init(); // 0x000000018699598C-0x0000000186995C14
-		private static void _UnInit(); // 0x0000000186995C14-0x0000000186995DB4
-		private void OnApplicationQuit(); // 0x0000000186995828-0x0000000186995914
+		public static void Init(); // 0x00000001863F9090-0x00000001863F9100
+		public static void UnInit(); // 0x0000000188CB6E40-0x0000000188CB6EBC
+		private static void _Init(); // 0x0000000188CB6EBC-0x0000000188CB7144
+		private static void _UnInit(); // 0x0000000188CB7144-0x0000000188CB7230
+		private void OnApplicationQuit(); // 0x0000000188CB6D4C-0x0000000188CB6E40
 	}
 
-	public class VietnamLoginAgeTipsPanelCtrl : MonoBehaviour // TypeDefIndex: 56367
+	public class VietnamLoginAgeTipsPanelCtrl : MonoBehaviour // TypeDefIndex: 80899
 	{
 		// Fields
 		[SerializeField]
@@ -1675,67 +1699,67 @@ namespace Beyond
 		private UIStateController _stateController; // 0x30
 	
 		// Constructors
-		public VietnamLoginAgeTipsPanelCtrl(); // 0x0000000185393520-0x0000000185393538
+		public VietnamLoginAgeTipsPanelCtrl(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public void Awake(); // 0x0000000186995DB4-0x0000000186995FF0
-		private void _SetStateTips(PointerEventData eventData); // 0x000000018699608C-0x0000000186996128
-		private void _SetStateCircle(PointerEventData eventData); // 0x0000000186995FF0-0x000000018699608C
+		public void Awake(); // 0x0000000188CB7230-0x0000000188CB7464
+		private void _SetStateTips(PointerEventData eventData); // 0x0000000188CB750C-0x0000000188CB7E2C
+		private void _SetStateCircle(PointerEventData eventData); // 0x0000000188CB7464-0x0000000188CB750C
 	}
 
-	public static class RenderPipelineDataLoader // TypeDefIndex: 56368
+	public static class RenderPipelineDataLoader // TypeDefIndex: 80900
 	{
 		// Fields
 		public static FAssetProxyHandle s_globalSettings; // 0x00
 		public static FAssetProxyHandle s_pipelineAsset; // 0x14
 	
 		// Methods
-		public static void LoadSimpleRpData(); // 0x00000001841E42D0-0x00000001841E43F0
-		public static void PreloadFullRpResources(); // 0x000000018380ECC0-0x000000018380EE70
-		public static bool IsPreLoadFinished(); // 0x0000000183C12270-0x0000000183C12330
-		public static void LoadFullRpResources(); // 0x00000001841E44D0-0x00000001841E4640
+		public static void LoadSimpleRpData(); // 0x0000000185319E50-0x0000000185319F70
+		public static void PreloadFullRpResources(); // 0x0000000186BDB8B0-0x0000000186BDBA60
+		public static bool IsPreLoadFinished(); // 0x00000001863F91D0-0x00000001863F9290
+		public static void LoadFullRpResources(); // 0x0000000185319F70-0x000000018531A0E0
 	}
 
 	[DefaultExecutionOrder(22000)]
-	public class TailGameLoop : MonoBehaviour // TypeDefIndex: 56369
+	public class TailGameLoop : MonoBehaviour // TypeDefIndex: 80901
 	{
 		// Constructors
-		public TailGameLoop(); // 0x0000000185393520-0x0000000185393538
+		public TailGameLoop(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Update(); // 0x0000000182F5C450-0x0000000182F5C4C0
-		private void LateUpdate(); // 0x0000000182F5C8C0-0x0000000182F5C930
+		private void Update(); // 0x0000000185F5C9F0-0x0000000185F5CA80
+		private void LateUpdate(); // 0x00000001858FDC30-0x00000001858FDCC0
 	}
 }
 
 namespace Beyond.Login
 {
-	public class LoginCheckForUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 56412
+	public class LoginCheckForUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 80949
 	{
 		// Fields
 		private LoginGameUpdater m_sdk; // 0x20
 		private bool m_checkSuccess; // 0x28
-		private const string REQUEST_API = "/api/game/get_latest"; // Metadata: 0x023484EB
-		private const string REQUEST_PARAM_FORMAT = "appcode={0}&channel={1}&version={2}&platform={3}&sub_channel={4}&source={5}"; // Metadata: 0x02348500
-		private const string REQUEST_URL_FORMAT = "{0}{1}?{2}"; // Metadata: 0x0234854D
-		private const string PRAM_SOURCE = "game"; // Metadata: 0x02348558
+		private const string REQUEST_API = "/api/game/get_latest"; // Metadata: 0x0263DFAC
+		private const string REQUEST_PARAM_FORMAT = "appcode={0}&channel={1}&version={2}&platform={3}&sub_channel={4}&source={5}"; // Metadata: 0x0263DFC1
+		private const string REQUEST_URL_FORMAT = "{0}{1}?{2}"; // Metadata: 0x0263E00E
+		private const string PRAM_SOURCE = "game"; // Metadata: 0x0263E019
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1850-0x00000001849B1880 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65FE0-0x0000000186E66010 
 	
 		// Nested types
-		private class AppVersionRespone // TypeDefIndex: 56404
+		private class AppVersionRespone // TypeDefIndex: 80940
 		{
 			// Fields
 			public int action; // 0x10
 			public int state; // 0x14
 	
 			// Constructors
-			public AppVersionRespone(); // 0x00000001841E1670-0x00000001841E1680
+			public AppVersionRespone(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckForUpdateCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 56405
+		private sealed class __CheckForUpdateCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 80941
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1743,69 +1767,93 @@ namespace Beyond.Login
 			public LoginCheckForUpdateNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckForUpdateCoroutine_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckForUpdateCoroutine_d__4(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018340A370-0x000000018340B960
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001867A1400-0x00000001867A29F0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699C998-0x000000018699C9E4
+			void IEnumerator.Reset(); // 0x0000000188CBD5E0-0x0000000188CBD62C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __AlertAndQuitForExtraConfigFatalError_d__5 : IEnumerator<object> // TypeDefIndex: 56406
+		private sealed class __AlertAndQuitForExtraConfigFatalError_d__5 : IEnumerator<object> // TypeDefIndex: 80942
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __AlertAndQuitForExtraConfigFatalError_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __AlertAndQuitForExtraConfigFatalError_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814F7CD0-0x00000001814F90C0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBD3BC-0x0000000188CBD548
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814F90C0-0x00000001814F9110
+			void IEnumerator.Reset(); // 0x0000000188CBD548-0x0000000188CBD594
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AlertNoMatchDeviceBeforeLogin_d__6 : IEnumerator<object> // TypeDefIndex: 56407
+		private sealed class __AlertStartupHardwareCheckIfNeeded_d__6 : IEnumerator<object> // TypeDefIndex: 80943
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			private HGStartupHardwareCheckResult _result_5__2; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __AlertStartupHardwareCheckIfNeeded_d__6(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001870BF220-0x00000001870BF2C0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CBD594-0x0000000188CBD5E0
+		}
+	
+		[CompilerGenerated]
+		private sealed class _AlertNoMatchDeviceBeforeLogin_d__7 : IEnumerator<object> // TypeDefIndex: 80944
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AlertNoMatchDeviceBeforeLogin_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _AlertNoMatchDeviceBeforeLogin_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814F60E0-0x00000001814F7C80
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186C9B580-0x0000000186C9D110
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814F7C80-0x00000001814F7CD0
+			void IEnumerator.Reset(); // 0x0000000188CBC1D4-0x0000000188CBC220
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckForUpdateCoroutineMobile_d__7 : IEnumerator<object> // TypeDefIndex: 56408
+		private sealed class __CheckForUpdateCoroutineMobile_d__9 : IEnumerator<object> // TypeDefIndex: 80945
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1814,23 +1862,23 @@ namespace Beyond.Login
 			private LoginGameUpdater.Result _result_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckForUpdateCoroutineMobile_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckForUpdateCoroutineMobile_d__9(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814F9110-0x00000001814FA7A0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001827669E0-0x0000000182767F30
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814FA7A0-0x00000001814FA7F0
+			void IEnumerator.Reset(); // 0x0000000182767F30-0x0000000182767F80
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckForUpdateCoroutinePC_d__9 : IEnumerator<object> // TypeDefIndex: 56409
+		private sealed class __CheckForUpdateCoroutinePC_d__11 : IEnumerator<object> // TypeDefIndex: 80946
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1838,23 +1886,23 @@ namespace Beyond.Login
 			public LoginCheckForUpdateNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckForUpdateCoroutinePC_d__9(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckForUpdateCoroutinePC_d__11(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814FA7F0-0x00000001814FAF80
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182767F80-0x00000001827683B0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814FAF80-0x00000001814FAFD0
+			void IEnumerator.Reset(); // 0x00000001827683B0-0x0000000182768400
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckForUpdatePC_d__10 : IEnumerator<object> // TypeDefIndex: 56410
+		private sealed class __CheckForUpdatePC_d__12 : IEnumerator<object> // TypeDefIndex: 80947
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1864,23 +1912,23 @@ namespace Beyond.Login
 			private string _errorInfo_5__3; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckForUpdatePC_d__10(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckForUpdatePC_d__12(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814FAFD0-0x00000001814FD090
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182768400-0x000000018276A320
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814FD090-0x00000001814FD0E0
+			void IEnumerator.Reset(); // 0x000000018276A320-0x000000018276A370
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetOnlineAppVersion_d__12 : IEnumerator<object> // TypeDefIndex: 56411
+		private sealed class __GetOnlineAppVersion_d__14 : IEnumerator<object> // TypeDefIndex: 80948
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1891,81 +1939,84 @@ namespace Beyond.Login
 			private WaitForAsyncTask<HttpSender.Result<AppVersionRespone>> _httpResIndex_5__3; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetOnlineAppVersion_d__12(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GetOnlineAppVersion_d__14(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001814FD0E0-0x00000001814FF2C0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182773C00-0x0000000182775CA0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001814FF2C0-0x00000001814FF310
+			void IEnumerator.Reset(); // 0x0000000182775CA0-0x0000000182775CF0
 		}
 	
 		// Constructors
-		public LoginCheckForUpdateNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginCheckForUpdateNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001845E8660-0x00000001845E8760
+		public override CustomYieldInstruction Work(); // 0x0000000186AEC970-0x0000000186AECA80
 		[IteratorStateMachine(typeof(__CheckForUpdateCoroutine_d__4))]
-		private IEnumerator _CheckForUpdateCoroutine(); // 0x00000001845E8760-0x00000001845E87D0
+		private IEnumerator _CheckForUpdateCoroutine(); // 0x0000000186AECA80-0x0000000186AECB00
 		[IteratorStateMachine(typeof(__AlertAndQuitForExtraConfigFatalError_d__5))]
-		private IEnumerator _AlertAndQuitForExtraConfigFatalError(); // 0x00000001814F5A60-0x00000001814F60E0
-		[IteratorStateMachine(typeof(_AlertNoMatchDeviceBeforeLogin_d__6))]
-		public static IEnumerator AlertNoMatchDeviceBeforeLogin(); // 0x0000000184D351D0-0x0000000184D35230
-		[IteratorStateMachine(typeof(__CheckForUpdateCoroutineMobile_d__7))]
-		private IEnumerator _CheckForUpdateCoroutineMobile(); // 0x0000000186996F20-0x0000000186996FB0
-		[IteratorStateMachine(typeof(__CheckForUpdateCoroutinePC_d__9))]
-		private IEnumerator _CheckForUpdateCoroutinePC(); // 0x0000000184D1F080-0x0000000184D1F0F0
-		[IteratorStateMachine(typeof(__CheckForUpdatePC_d__10))]
-		private IEnumerator _CheckForUpdatePC(); // 0x0000000184D1F010-0x0000000184D1F080
-		[IteratorStateMachine(typeof(__GetOnlineAppVersion_d__12))]
-		private IEnumerator _GetOnlineAppVersion(Beyond.Misc.ObjectRef outRef); // 0x0000000184CE7A50-0x0000000184CE7AE0
-		private string _GetRequestPram(); // 0x00000001838128E0-0x0000000183812B00
+		private IEnumerator _AlertAndQuitForExtraConfigFatalError(); // 0x0000000188CB8320-0x0000000188CB83A8
+		[IteratorStateMachine(typeof(__AlertStartupHardwareCheckIfNeeded_d__6))]
+		private IEnumerator _AlertStartupHardwareCheckIfNeeded(); // 0x00000001871D4100-0x00000001871D4170
+		[IteratorStateMachine(typeof(_AlertNoMatchDeviceBeforeLogin_d__7))]
+		public static IEnumerator AlertNoMatchDeviceBeforeLogin(); // 0x00000001871DD010-0x00000001871DD070
+		private static bool _ShouldUseCloudGameLowScoreTip(); // 0x000000018275F060-0x000000018275F090
+		[IteratorStateMachine(typeof(__CheckForUpdateCoroutineMobile_d__9))]
+		private IEnumerator _CheckForUpdateCoroutineMobile(); // 0x0000000188CB83A8-0x0000000188CB8440
+		[IteratorStateMachine(typeof(__CheckForUpdateCoroutinePC_d__11))]
+		private IEnumerator _CheckForUpdateCoroutinePC(); // 0x0000000187180F10-0x0000000187180F90
+		[IteratorStateMachine(typeof(__CheckForUpdatePC_d__12))]
+		private IEnumerator _CheckForUpdatePC(); // 0x0000000187180E90-0x0000000187180F10
+		[IteratorStateMachine(typeof(__GetOnlineAppVersion_d__14))]
+		private IEnumerator _GetOnlineAppVersion(Beyond.Misc.ObjectRef outRef); // 0x0000000187110080-0x0000000187110120
+		private string _GetRequestPram(); // 0x00000001861449C0-0x0000000186144BD0
 	}
 
-	public class LoginCreateRoleNode : LoginWorkFlow.Node // TypeDefIndex: 56414
+	public class LoginCreateRoleNode : LoginWorkFlow.Node // TypeDefIndex: 80951
 	{
 		// Fields
-		public const string LUA_SYS_NAME = "LeadingCharacter"; // Metadata: 0x0234855D
+		public const string LUA_SYS_NAME = "LeadingCharacter"; // Metadata: 0x0263E01E
 		private WorkProcess m_activeProcess; // 0x20
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1820-0x00000001849B1850 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65FB0-0x0000000186E65FE0 
 	
 		// Nested types
-		private class WorkProcess : CustomYieldInstruction, IDisposable // TypeDefIndex: 56413
+		private class WorkProcess : CustomYieldInstruction, IDisposable // TypeDefIndex: 80950
 		{
 			// Fields
 			private LoginCreateRoleNode m_closure; // 0x10
 			private bool m_isFinished; // 0x18
 	
 			// Properties
-			public override bool keepWaiting { get; } // 0x00000001869A00CC-0x00000001869A011C 
+			public override bool keepWaiting { get; } // 0x0000000188CBE458-0x0000000188CBE494 
 	
 			// Constructors
-			public WorkProcess(LoginCreateRoleNode closure); // 0x00000001853908C0-0x00000001853908D0
+			public WorkProcess(LoginCreateRoleNode closure); // 0x0000000184FD2410-0x0000000184FD2420
 	
 			// Methods
-			public void Dispose(); // 0x00000001869A0058-0x00000001869A00CC
+			public void Dispose(); // 0x0000000188CBE3EC-0x0000000188CBE458
 		}
 	
 		// Constructors
-		public LoginCreateRoleNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginCreateRoleNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void OnDispose(); // 0x00000001846DD050-0x00000001846DD0A0
-		public override bool CanCancel(); // 0x0000000186996FB0-0x0000000186996FFC
-		public override CustomYieldInstruction Work(); // 0x0000000184CCA6C0-0x0000000184CCA760
-		public void __iFixBaseProxy_OnDispose(); // 0x0000000186997004-0x000000018699700C
-		public bool __iFixBaseProxy_CanCancel(); // 0x0000000186996FFC-0x0000000186997004
+		public override void OnDispose(); // 0x0000000186BBC660-0x0000000186BBC6C0
+		public override bool CanCancel(); // 0x0000000188CB8440-0x0000000188CB8480
+		public override CustomYieldInstruction Work(); // 0x00000001870DB2B0-0x00000001870DB360
+		public void __iFixBaseProxy_OnDispose(); // 0x0000000188CB8488-0x0000000188CB8490
+		public bool __iFixBaseProxy_CanCancel(); // 0x0000000188CB8480-0x0000000188CB8488
 	}
 
-	public class LoginDownloadTask : IDisposable // TypeDefIndex: 56417
+	public class LoginDownloadTask : IDisposable // TypeDefIndex: 80956
 	{
 		// Fields
 		private bool m_isDownloadFinished; // 0x10
@@ -1975,115 +2026,125 @@ namespace Beyond.Login
 		private string m_patchInfo; // 0x68
 		private IEnumerator m_mockCoroutine; // 0x70
 		private bool m_isInitial; // 0x78
+		private bool m_resRepairMode; // 0x79
 		[CompilerGenerated]
 		private string _vitalError_k__BackingField; // 0x80
 		private NetUsagePolicy m_netUsagePolicy; // 0x88
 	
 		// Properties
-		public string vitalError { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
+		public string vitalError { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828D49D0-0x00000001828D49E0 0x00000001870EAAE0-0x00000001870EAAF0
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 56415
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 80952
+		{
+			// Fields
+			public long totalDownloadSize; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass20_0(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __StartDownload_b__0(bool accepted); // 0x0000000188CBD14C-0x0000000188CBD1BC
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass26_0 // TypeDefIndex: 80953
 		{
 			// Fields
 			public LoginDownloadTask __4__this; // 0x10
 			public HGDownloader.PauseReason reason; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass24_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass26_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __OnDownloadPaused_b__1(); // 0x000000018699C798-0x000000018699C7C0
+			internal void __OnDownloadPaused_b__1(); // 0x0000000188CBD1BC-0x0000000188CBD1E4
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass26_1 // TypeDefIndex: 80954
+		{
+			// Fields
+			public long remainDownloadSize; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass26_1(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __OnDownloadPaused_b__2(bool accepted); // 0x0000000188CBD1E4-0x0000000188CBD254
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56416
+		private sealed class __c // TypeDefIndex: 80955
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Action __9__24_0; // 0x08
+			public static Action __9__26_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x000000018699C89C-0x000000018699C900
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x0000000188CBD30C-0x0000000188CBD370
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __OnDownloadPaused_b__24_0(); // 0x000000018699C6E8-0x000000018699C70C
+			internal void __OnDownloadPaused_b__26_0(); // 0x0000000188CBD104-0x0000000188CBD128
 		}
 	
 		// Constructors
-		public LoginDownloadTask(FResourceDiff resDiff, LocalResPref localResPref, string patchInfo, bool isInitial, NetUsagePolicy netUsagePolicy); // 0x00000001869984DC-0x0000000186998558
+		public LoginDownloadTask(FResourceDiff resDiff, LocalResPref localResPref, string patchInfo, bool isInitial, NetUsagePolicy netUsagePolicy, bool resRepairMode = false /* Metadata: 0x0263E02F */); // 0x000000018275F0E0-0x000000018275F270
 	
 		// Methods
-		public HGDownloader.DownloadProgress GetDownloadProgress(); // 0x00000001869970FC-0x0000000186997194
-		public float GetDecompressProgress(); // 0x0000000186997098-0x00000001869970FC
-		public HGDownloader.WorkState GetWorkState(); // 0x0000000186997194-0x00000001869971F4
-		public bool Tick(); // 0x00000001869971F4-0x0000000186997260
-		public void Dispose(); // 0x000000018699700C-0x0000000186997098
-		private void _StartDownload(); // 0x00000001869981DC-0x00000001869984DC
-		private void _StartDownloadImpl(); // 0x0000000186997E4C-0x00000001869981DC
-		private List<HGFolder> _GetAllFileList(LocalResPref localResPref); // 0x0000000186997260-0x000000018699773C
-		private List<HGFileInfo> _GetFileList(string rootUrl); // 0x000000018699773C-0x000000018699797C
-		private void _OnDownloadFinish(); // 0x0000000186997B98-0x0000000186997BE8
-		private bool _OnDownloadError(HGRetCodeType codeType, int errorCode); // 0x000000018699797C-0x0000000186997B98
-		private void _OnDownloadPaused(HGDownloader.PauseReason reason); // 0x0000000186997BE8-0x0000000186997E4C
+		public HGDownloader.DownloadProgress GetDownloadProgress(); // 0x00000001868E30C0-0x00000001868E3110
+		public float GetDecompressProgress(); // 0x0000000186C7BA90-0x0000000186C7BAD0
+		public float GetCheckProgress(); // 0x000000018275F090-0x000000018275F0E0
+		public HGDownloader.WorkState GetWorkState(); // 0x0000000186220CF0-0x0000000186220D40
+		public bool Tick(); // 0x0000000186222B90-0x0000000186222BE0
+		public void Dispose(); // 0x0000000186FCECE0-0x0000000186FCEE70
+		private void _StartDownload(); // 0x000000018614CE70-0x000000018614D1F0
+		private void _StartDownloadImpl(); // 0x0000000186C57810-0x0000000186C596A0
+		private List<HGFolder> _GetAllFileList(LocalResPref localResPref); // 0x000000018614D380-0x000000018614D9A0
+		private List<HGFileInfo> _GetFileList(string rootUrl); // 0x000000018614CC50-0x000000018614CE70
+		private void _OnDownloadFinish(); // 0x0000000187226010-0x0000000187226040
+		private bool _OnDownloadError(HGRetCodeType codeType, int errorCode); // 0x0000000188CB8490-0x0000000188CB86B0
+		private void _OnDownloadPaused(HGDownloader.PauseReason reason); // 0x0000000188CB86B0-0x0000000188CB8994
 	}
 
-	public class LoginGameSettingInitializer : MonoBehaviour // TypeDefIndex: 56418
-	{
-		// Fields
-		private static bool s_isInitialized; // 0x00
-		private RectTransform m_rectTransform; // 0x18
-		private UICanvasScaleHelper m_canvasScaleHelper; // 0x20
-	
-		// Constructors
-		public LoginGameSettingInitializer(); // 0x0000000185393520-0x0000000185393538
-	
-		// Methods
-		private void Awake(); // 0x0000000183BFCCE0-0x0000000183BFCD40
-		private void OnEnable(); // 0x0000000183BFCD40-0x0000000183BFCDC0
-		private void _TryInitializeComponents(); // 0x0000000183BFCE00-0x0000000183BFCEF0
-		private void _InitGameSettingStateInLogin(); // 0x0000000183BFCDC0-0x0000000183BFCE00
-		private void _InitGameSettingNotchPadding(); // 0x0000000183BFD130-0x0000000183BFD310
-	}
-
-	public class LoginGameUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 56421
+	public class LoginGameUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 80959
 	{
 		// Fields
 		private LoginGameUpdater m_sdk; // 0x20
 		private NetUsagePolicy m_netUsagePolicy; // 0x28
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B17C0-0x00000001849B17F0 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65F50-0x0000000186E65F80 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __GameUpdateCoroutine_d__5 : IEnumerator<object> // TypeDefIndex: 56419
+		private sealed class __GameUpdateCoroutine_d__5 : IEnumerator<object> // TypeDefIndex: 80957
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GameUpdateCoroutine_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GameUpdateCoroutine_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184D83CA0-0x0000000184D83CB0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001870F8D80-0x00000001870F8D90
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699D2E4-0x000000018699D330
+			void IEnumerator.Reset(); // 0x0000000188CBD944-0x0000000188CBD990
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GameUpdateCoroutineMobileImpl_d__6 : IEnumerator<object> // TypeDefIndex: 56420
+		private sealed class __GameUpdateCoroutineMobileImpl_d__6 : IEnumerator<object> // TypeDefIndex: 80958
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2092,54 +2153,61 @@ namespace Beyond.Login
 			private LoginGameUpdater.Result _result_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GameUpdateCoroutineMobileImpl_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GameUpdateCoroutineMobileImpl_d__6(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699D0BC-0x000000018699D298
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBD710-0x0000000188CBD8F8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699D298-0x000000018699D2E4
+			void IEnumerator.Reset(); // 0x0000000188CBD8F8-0x0000000188CBD944
 		}
 	
 		// Constructors
-		public LoginGameUpdateNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginGameUpdateNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001845E87D0-0x00000001845E88E0
+		public override CustomYieldInstruction Work(); // 0x0000000186AECB00-0x0000000186AECC10
 		[IteratorStateMachine(typeof(__GameUpdateCoroutine_d__5))]
-		private IEnumerator _GameUpdateCoroutine(); // 0x00000001845E88E0-0x00000001845E8940
+		private IEnumerator _GameUpdateCoroutine(); // 0x0000000186AECC10-0x0000000186AECC80
 		[IteratorStateMachine(typeof(__GameUpdateCoroutineMobileImpl_d__6))]
-		private IEnumerator _GameUpdateCoroutineMobileImpl(); // 0x0000000186998CC0-0x0000000186998D50
+		private IEnumerator _GameUpdateCoroutineMobileImpl(); // 0x0000000188CB9370-0x0000000188CB9408
 	}
 
-	public class LoginGameUpdater // TypeDefIndex: 56443
+	public class LoginGameUpdater // TypeDefIndex: 81000
 	{
 		// Fields
-		private const float COOLDOWN_INSTALL = 1f; // Metadata: 0x0234856E
-		private const int ERROR_CODE_NETWORK = 1103; // Metadata: 0x02348572
-		private const int ERROR_INIT_FAILED = -11101; // Metadata: 0x02348574
-		private const int ERROR_DESERIALIZE_FAILED = -10001; // Metadata: 0x02348578
-		public const int ERROR_ACTION = -20000; // Metadata: 0x0234857C
-		private const int WAIT_TIME_SECONDS_MIN = 5; // Metadata: 0x02348580
-		private const int WAIT_TIME_SECONDS_MAX = 9; // Metadata: 0x02348581
+		private const float COOLDOWN_INSTALL = 1f; // Metadata: 0x0263E030
+		private const int ERROR_CODE_NETWORK = 1103; // Metadata: 0x0263E034
+		private const int ERROR_INIT_FAILED = -11101; // Metadata: 0x0263E036
+		private const int ERROR_DESERIALIZE_FAILED = -10001; // Metadata: 0x0263E03A
+		public const int ERROR_ACTION = -20000; // Metadata: 0x0263E03E
+		private const int WAIT_TIME_SECONDS_MIN = 5; // Metadata: 0x0263E042
+		private const int WAIT_TIME_SECONDS_MAX = 9; // Metadata: 0x0263E043
+		private const int APPLY_PRELOAD_PROGRESS_MAX = 10000; // Metadata: 0x0263E044
 		private Options m_options; // 0x10
 		private IGameUpdateInterface m_sdkImpl; // 0x28
 		private bool m_hasUpdateAlerted; // 0x30
-		private Context m_context; // 0x38
-		private LoginProgress m_progress; // 0x40
-		private LoginHotUpdateProp m_hotUpdateProp; // 0x48
+		private HGLatestGameInfo m_latestGameInfo; // 0x38
+		private long m_cachedEstimatedPreDownloadSize; // 0x40
+		private LoginProgress m_progress; // 0x48
+		private LoginHotUpdateProp m_hotUpdateProp; // 0x50
 	
 		// Nested types
-		public enum CodeType // TypeDefIndex: 56422
+		public enum CodeType // TypeDefIndex: 80960
 		{
+			CODE_2100 = 2100,
+			CODE_2102 = 2102,
 			CODE_2103 = 2103,
 			CODE_2105 = 2105,
+			CODE_2109 = 2109,
+			CODE_2117 = 2117,
+			CODE_2118 = 2118,
 			CODE_2200 = 2200,
 			CODE_2201 = 2201,
 			CODE_2202 = 2202,
@@ -2149,10 +2217,12 @@ namespace Beyond.Login
 			CODE_2206 = 2206,
 			CODE_2207 = 2207,
 			CODE_2208 = 2208,
-			CODE_2209 = 2209
+			CODE_2209 = 2209,
+			CODE_2211 = 2211,
+			CODE_2212 = 2212
 		}
 	
-		public enum UpdateType // TypeDefIndex: 56423
+		public enum UpdateType // TypeDefIndex: 80961
 		{
 			FullUpdate = 0,
 			IncrementalUpdate = 1,
@@ -2164,12 +2234,12 @@ namespace Beyond.Login
 			GoToRustore = 8
 		}
 	
-		public enum UpdateCode // TypeDefIndex: 56424
+		public enum UpdateCode // TypeDefIndex: 80962
 		{
 			Success = 0
 		}
 	
-		public enum UpdateAction // TypeDefIndex: 56425
+		public enum UpdateAction // TypeDefIndex: 80963
 		{
 			Invalid = -1,
 			Latest = 0,
@@ -2179,7 +2249,22 @@ namespace Beyond.Login
 			Congestion = 200
 		}
 	
-		public class HGLatestGameInfo // TypeDefIndex: 56426
+		public enum ResAction // TypeDefIndex: 80964
+		{
+			None = 0,
+			Available = 1,
+			CompletedOnOldPackage = 2,
+			Applicable = 3,
+			CreatedNotCompleted = 4
+		}
+	
+		private enum PreDownloadErrorChoice // TypeDefIndex: 80965
+		{
+			Retry = 0,
+			GiveUp = 1
+		}
+	
+		public class HGLatestGameInfo // TypeDefIndex: 80966
 		{
 			// Fields
 			public int code; // 0x10
@@ -2188,31 +2273,32 @@ namespace Beyond.Login
 			public int updateType; // 0x24
 			public string updateInfo; // 0x28
 			public int state; // 0x30
+			public int resAction; // 0x34
 	
 			// Constructors
-			public HGLatestGameInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public HGLatestGameInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public class NotificationTitleConfig // TypeDefIndex: 56427
+		public class NotificationTitleConfig // TypeDefIndex: 80967
 		{
 			// Fields
 			public string downloading; // 0x10
 			public string pause; // 0x18
 	
 			// Constructors
-			public NotificationTitleConfig(); // 0x00000001841E1670-0x00000001841E1680
+			public NotificationTitleConfig(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public class HGUpdateConfig // TypeDefIndex: 56428
+		public class HGUpdateConfig // TypeDefIndex: 80968
 		{
 			// Fields
 			public string downloadPath; // 0x10
 	
 			// Constructors
-			public HGUpdateConfig(); // 0x00000001841E1670-0x00000001841E1680
+			public HGUpdateConfig(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public struct Options // TypeDefIndex: 56429
+		public struct Options // TypeDefIndex: 80969
 		{
 			// Fields
 			public NetUsagePolicy netUsagePolicy; // 0x00
@@ -2220,7 +2306,7 @@ namespace Beyond.Login
 			public LoginContext loginContext; // 0x10
 		}
 	
-		public class Result // TypeDefIndex: 56430
+		public class Result // TypeDefIndex: 80970
 		{
 			// Fields
 			public bool needRetry; // 0x10
@@ -2229,145 +2315,248 @@ namespace Beyond.Login
 			public bool auditing; // 0x24
 	
 			// Constructors
-			public Result(); // 0x00000001841E1670-0x00000001841E1680
+			public Result(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private class Context // TypeDefIndex: 56431
+		public class PreDownloadResult // TypeDefIndex: 80971
+		{
+			// Fields
+			public string errorInfo; // 0x10
+	
+			// Constructors
+			public PreDownloadResult(); // 0x0000000186805BA0-0x0000000186805BB0
+		}
+	
+		private class OperationContext // TypeDefIndex: 80972
 		{
 			// Fields
 			public long taskId; // 0x10
 			public string errorInfo; // 0x18
 			public string logError; // 0x20
 			public bool needClear; // 0x28
-			public HGLatestGameInfo gameInfo; // 0x30
 			[CompilerGenerated]
-			private bool _complete_k__BackingField; // 0x38
+			private bool _complete_k__BackingField; // 0x29
 			[CompilerGenerated]
-			private int _code_k__BackingField; // 0x3C
+			private int _code_k__BackingField; // 0x2C
 	
 			// Properties
-			public bool complete { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
-			public int code { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
+			public bool complete { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E0D0-0x000000018225E0E0 0x000000018225E0E0-0x000000018225E0F0
+			public int code { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271A80-0x0000000182271A90 0x0000000182271AB0-0x0000000182271AC0
 	
 			// Constructors
-			public Context(); // 0x0000000186996808-0x0000000186996870
+			public OperationContext(); // 0x0000000188CBC0BC-0x0000000188CBC124
 	
 			// Methods
-			public void CompleteWithCode(int pCode); // 0x0000000186996750-0x00000001869967AC
-			public void UncompleteWithCode(int pCode); // 0x00000001869967AC-0x0000000186996808
+			public void CompleteWithCode(int pCode); // 0x0000000188CBC044-0x0000000188CBC080
+			public void UncompleteWithCode(int pCode); // 0x0000000188CBC080-0x0000000188CBC0BC
+		}
+	
+		private class PreDownloadDownloadContext : OperationContext // TypeDefIndex: 80973
+		{
+			// Fields
+			public int lastStatus; // 0x30
+			public int lastProgressStep; // 0x34
+			public int observedCancelCode; // 0x38
+			public int lastPauseStatus; // 0x3C
+			public long lastDownloadedSize; // 0x40
+			public long lastTotalSize; // 0x48
+			public bool eventLogProgress5; // 0x50
+			public bool eventLogProgress25; // 0x51
+			public bool eventLogProgress50; // 0x52
+			public bool eventLogProgress75; // 0x53
+			public bool eventLogProgress90; // 0x54
+	
+			// Constructors
+			public PreDownloadDownloadContext(); // 0x0000000188CBC178-0x0000000188CBC190
+	
+			// Methods
+			public void ResetTaskTrackState(int realProgress, long curSize, long totalSize); // 0x000000018275F270-0x000000018275F660
+			public void UpdateSizeTrackState(long curSize, long totalSize); // 0x000000018275F660-0x000000018275F6C0
+		}
+	
+		private class PreDownloadApplyContext : OperationContext // TypeDefIndex: 80974
+		{
+			// Fields
+			public int lastStatus; // 0x30
+			public int lastProgressStep; // 0x34
+			public bool eventLogProgress5; // 0x38
+			public bool eventLogProgress25; // 0x39
+			public bool eventLogProgress50; // 0x3A
+			public bool eventLogProgress75; // 0x3B
+			public bool eventLogProgress90; // 0x3C
+	
+			// Constructors
+			public PreDownloadApplyContext(); // 0x0000000188CBC168-0x0000000188CBC178
+	
+			// Methods
+			public void ResetTaskTrackState(); // 0x0000000188CBC124-0x0000000188CBC168
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckLastGameInfo_d__23 : IEnumerator<object> // TypeDefIndex: 56432
+		private sealed class _CheckLastGameInfo_d__30 : IEnumerator<object> // TypeDefIndex: 80975
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
 			public Result result; // 0x28
+			private OperationContext _context_5__2; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckLastGameInfo_d__23(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _CheckLastGameInfo_d__30(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699BB30-0x000000018699BD74
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBC5B0-0x0000000188CBC814
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699BD74-0x000000018699BDC0
+			void IEnumerator.Reset(); // 0x0000000188CBC814-0x0000000188CBC860
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoUpdate_d__24 : IEnumerator<object> // TypeDefIndex: 56433
+		private sealed class _DoUpdate_d__36 : IEnumerator<object> // TypeDefIndex: 80976
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
 			public Result result; // 0x28
+			private OperationContext _context_5__2; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoUpdate_d__24(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _DoUpdate_d__36(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699C0A8-0x000000018699C3B4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBC860-0x0000000188CBCC70
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699C3B4-0x000000018699C400
+			void IEnumerator.Reset(); // 0x0000000188CBCC70-0x0000000188CBCCBC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetLastGameInfo_d__25 : IEnumerator<object> // TypeDefIndex: 56434
+		private sealed class _ApplyPreDownload_d__37 : IEnumerator<object> // TypeDefIndex: 80977
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
-			public Context context; // 0x28
+			public PreDownloadResult result; // 0x28
+			private PreDownloadApplyContext _context_5__2; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetLastGameInfo_d__25(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _ApplyPreDownload_d__37(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699D330-0x000000018699D9A8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBC220-0x0000000188CBC564
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699D9A8-0x000000018699D9F4
+			void IEnumerator.Reset(); // 0x0000000188CBC564-0x0000000188CBC5B0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __UpdateGame_d__26 : IEnumerator<object> // TypeDefIndex: 56435
+		private sealed class _DownloadPreDownload_d__38 : IEnumerator<object> // TypeDefIndex: 80978
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
-			public Context context; // 0x28
+			public PreDownloadResult result; // 0x28
+			private PreDownloadDownloadContext _context_5__2; // 0x30
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public _DownloadPreDownload_d__38(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBCCBC-0x0000000188CBD0B8
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CBD0B8-0x0000000188CBD104
+		}
+	
+		[CompilerGenerated]
+		private sealed class __GetLastGameInfo_d__39 : IEnumerator<object> // TypeDefIndex: 80979
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginGameUpdater __4__this; // 0x20
+			public OperationContext context; // 0x28
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __GetLastGameInfo_d__39(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001827712E0-0x0000000182773BB0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182773BB0-0x0000000182773C00
+		}
+	
+		[CompilerGenerated]
+		private sealed class __UpdateGame_d__41 : IEnumerator<object> // TypeDefIndex: 80980
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginGameUpdater __4__this; // 0x20
+			public OperationContext context; // 0x28
 			private HGLatestGameInfo _gameInfo_5__2; // 0x30
 			private long _size_5__3; // 0x38
 			private bool _enableMobileData_5__4; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __UpdateGame_d__26(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __UpdateGame_d__41(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699DDD4-0x000000018699E4A4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182778CB0-0x000000018277BE00
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699E4A4-0x000000018699E4F0
+			void IEnumerator.Reset(); // 0x000000018277BE00-0x000000018277BE50
 		}
 	
 		[CompilerGenerated]
-		private sealed class __DoTaskUpdating_d__27 : IEnumerator<object> // TypeDefIndex: 56436
+		private sealed class __DoTaskUpdating_d__42 : IEnumerator<object> // TypeDefIndex: 80981
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
-			public Context context; // 0x28
+			public OperationContext context; // 0x28
 			private long _taskId_5__2; // 0x30
 			private int _status_5__3; // 0x38
 			private long _curSize_5__4; // 0x40
@@ -2375,183 +2564,507 @@ namespace Beyond.Login
 			private long _speed_5__6; // 0x50
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DoTaskUpdating_d__27(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __DoTaskUpdating_d__42(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699CA30-0x000000018699D024
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018276A370-0x000000018276D130
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699D024-0x000000018699D070
+			void IEnumerator.Reset(); // 0x000000018276D130-0x000000018276D180
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 56437
+		private sealed class __c__DisplayClass43_0 // TypeDefIndex: 80982
+		{
+			// Fields
+			public bool shouldRetryCreate; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass43_0(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __DownloadPreDownload_b__1(PreDownloadErrorChoice outChoice); // 0x000000018275FD60-0x000000018275FD70
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass43_1 // TypeDefIndex: 80983
+		{
+			// Fields
+			public int cancelResult; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass43_1(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __DownloadPreDownload_b__2(int outResult); // 0x0000000182234E90-0x0000000182234EA0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass43_2 // TypeDefIndex: 80984
+		{
+			// Fields
+			public bool shouldRetry; // 0x10
+			public int cancelResult; // 0x14
+	
+			// Constructors
+			public __c__DisplayClass43_2(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __DownloadPreDownload_b__4(PreDownloadErrorChoice outChoice); // 0x000000018275FD60-0x000000018275FD70
+			internal void __DownloadPreDownload_b__5(int outResult); // 0x000000018275FD70-0x000000018275FD80
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 80985
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Action<bool> __9__43_0; // 0x08
+			public static Action<bool> __9__43_3; // 0x10
+	
+			// Constructors
+			static __c(); // 0x0000000188CBD2A8-0x0000000188CBD30C
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __DownloadPreDownload_b__43_0(bool accepted); // 0x000000018275F6C0-0x000000018275FA10
+			internal void __DownloadPreDownload_b__43_3(bool accepted); // 0x000000018275FA10-0x000000018275FD60
+		}
+	
+		[CompilerGenerated]
+		private sealed class __DownloadPreDownload_d__43 : IEnumerator<object> // TypeDefIndex: 80986
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public PreDownloadDownloadContext context; // 0x20
+			public LoginGameUpdater __4__this; // 0x28
+			private __c__DisplayClass43_0 __8__1; // 0x30
+			private __c__DisplayClass43_1 __8__2; // 0x38
+			private __c__DisplayClass43_2 __8__3; // 0x40
+			private long _size_5__2; // 0x48
+			private bool _enableMobileData_5__3; // 0x50
+			private long _taskId_5__4; // 0x58
+			private bool _shouldRecreateTask_5__5; // 0x60
+			private int _status_5__6; // 0x64
+			private long _curSize_5__7; // 0x68
+			private long _totalSize_5__8; // 0x70
+			private bool _shouldClear_5__9; // 0x78
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __DownloadPreDownload_d__43(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018276D180-0x0000000182771290
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182771290-0x00000001827712E0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __ApplyPreDownload_d__44 : IEnumerator<object> // TypeDefIndex: 80987
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginGameUpdater __4__this; // 0x20
+			public PreDownloadApplyContext context; // 0x28
+			private string _rootPath_5__2; // 0x30
+			private string _basePath_5__3; // 0x38
+			private long _taskId_5__4; // 0x40
+			private bool _shouldRecreateTask_5__5; // 0x48
+			private int _status_5__6; // 0x4C
+			private int _progress_5__7; // 0x50
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __ApplyPreDownload_d__44(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182760DD0-0x0000000182764990
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182764990-0x00000001827649E0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass52_0 // TypeDefIndex: 80988
 		{
 			// Fields
 			public bool wait; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass32_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass52_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __YieldErrorAlert_b__0(); // 0x0000000184D8CCB0-0x0000000184D8CCC0
+			internal void __YieldErrorAlert_b__0(); // 0x000000018275FD80-0x000000018275FD90
 		}
 	
 		[CompilerGenerated]
-		private sealed class __YieldErrorAlert_d__32 : IEnumerator<object> // TypeDefIndex: 56438
+		private sealed class __YieldErrorAlert_d__52 : IEnumerator<object> // TypeDefIndex: 80989
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
 			public string desc; // 0x28
-			private __c__DisplayClass32_0 __8__1; // 0x30
+			private __c__DisplayClass52_0 __8__1; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __YieldErrorAlert_d__32(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __YieldErrorAlert_d__52(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699E99C-0x000000018699EAD8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018277E7A0-0x000000018277F100
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699EAD8-0x000000018699EB24
+			void IEnumerator.Reset(); // 0x000000018277F100-0x000000018277F150
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 56439
+		private sealed class __c__DisplayClass53_0 // TypeDefIndex: 80990
 		{
 			// Fields
-			public bool rejected; // 0x10
+			public int errorCode; // 0x10
+			public Action<PreDownloadErrorChoice> onChoice; // 0x18
+			public bool wait; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass33_0(); // 0x00000001841E1670-0x00000001841E1680
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_1 // TypeDefIndex: 56440
-		{
-			// Fields
-			public bool complete; // 0x10
-			public __c__DisplayClass33_0 CS___8__locals1; // 0x18
-	
-			// Constructors
-			public __c__DisplayClass33_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass53_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __YieldCheckNetUsagePolicy_b__0(); // 0x00000001815EFCD0-0x00000001815EFCE0
-			internal void __YieldCheckNetUsagePolicy_b__1(); // 0x000000018699C824-0x000000018699C844
-			internal void __YieldCheckNetUsagePolicy_b__2(); // 0x00000001815EFCD0-0x00000001815EFCE0
+			internal void __YieldPreDownloadErrorDialog_b__0(); // 0x000000018275FD90-0x0000000182760360
+			internal void __YieldPreDownloadErrorDialog_b__1(); // 0x0000000182760360-0x0000000182760930
 		}
 	
 		[CompilerGenerated]
-		private sealed class __YieldCheckNetUsagePolicy_d__33 : IEnumerator<object> // TypeDefIndex: 56441
+		private sealed class __YieldPreDownloadErrorDialog_d__53 : IEnumerator<object> // TypeDefIndex: 80991
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
-			private __c__DisplayClass33_0 __8__1; // 0x20
-			public LoginGameUpdater __4__this; // 0x28
-			public long downloadSize; // 0x30
-			private __c__DisplayClass33_1 __8__2; // 0x38
+			public int errorCode; // 0x20
+			public Action<PreDownloadErrorChoice> onChoice; // 0x28
+			private __c__DisplayClass53_0 __8__1; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __YieldCheckNetUsagePolicy_d__33(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __YieldPreDownloadErrorDialog_d__53(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699E6E4-0x000000018699E950
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018277FAA0-0x0000000182781C50
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699E950-0x000000018699E99C
+			void IEnumerator.Reset(); // 0x0000000182781C50-0x0000000182781FA0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __WaitForTaskCancel_d__34 : IEnumerator<object> // TypeDefIndex: 56442
+		private sealed class __c__DisplayClass67_0 // TypeDefIndex: 80992
+		{
+			// Fields
+			public long downloadSize; // 0x10
+			public Action<bool> onCheckResult; // 0x18
+			public bool rejected; // 0x20
+			public Action<bool> onCarrierDecision; // 0x28
+	
+			// Constructors
+			public __c__DisplayClass67_0(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __YieldCheckNetUsagePolicy_b__0(bool accepted); // 0x0000000182760930-0x0000000182760C60
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass67_1 // TypeDefIndex: 80993
+		{
+			// Fields
+			public bool checkResultReported; // 0x10
+			public bool complete; // 0x11
+			public __c__DisplayClass67_0 CS___8__locals1; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass67_1(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+			// Methods
+			internal void __YieldCheckNetUsagePolicy_g__ReportCheckResult_1(bool accepted); // 0x0000000182760D80-0x0000000182760DD0
+			internal void __YieldCheckNetUsagePolicy_b__2(); // 0x0000000182760C60-0x0000000182760CC0
+			internal void __YieldCheckNetUsagePolicy_b__3(); // 0x0000000182760CC0-0x0000000182760D20
+			internal void __YieldCheckNetUsagePolicy_b__4(); // 0x0000000182760C60-0x0000000182760CC0
+			internal void __YieldCheckNetUsagePolicy_b__5(bool accepted); // 0x0000000182760D20-0x0000000182760D80
+		}
+	
+		[CompilerGenerated]
+		private sealed class __YieldCheckNetUsagePolicy_d__67 : IEnumerator<object> // TypeDefIndex: 80994
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public long downloadSize; // 0x20
+			public Action<bool> onCheckResult; // 0x28
+			private __c__DisplayClass67_0 __8__1; // 0x30
+			public LoginGameUpdater __4__this; // 0x38
+			private __c__DisplayClass67_1 __8__2; // 0x40
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __YieldCheckNetUsagePolicy_d__67(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018277CF20-0x000000018277E750
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018277E750-0x000000018277E7A0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __WaitForTaskCancel_d__68 : IEnumerator<object> // TypeDefIndex: 80995
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public long taskId; // 0x20
+			public LoginGameUpdater __4__this; // 0x28
+			private int _status_5__2; // 0x30
+			private bool _isCanceled_5__3; // 0x34
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __WaitForTaskCancel_d__68(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018277BE50-0x000000018277CED0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018277CED0-0x000000018277CF20
+		}
+	
+		[CompilerGenerated]
+		private sealed class __CancelAndClearTask_d__69 : IEnumerator<object> // TypeDefIndex: 80996
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public long taskId; // 0x20
+			public LoginGameUpdater __4__this; // 0x28
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __CancelAndClearTask_d__69(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001827649E0-0x0000000182765A60
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182765A60-0x0000000182765AB0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __CancelPreDownloadTask_d__70 : IEnumerator<object> // TypeDefIndex: 80997
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public long taskId; // 0x20
+			public bool shouldClear; // 0x28
+			public LoginGameUpdater __4__this; // 0x30
+			public Action<int> onResult; // 0x38
+			private int _cancelResult_5__2; // 0x40
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __CancelPreDownloadTask_d__70(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182765AB0-0x0000000182766990
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182766990-0x00000001827669E0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __RefreshPreDownloadResAction_d__71 : IEnumerator<object> // TypeDefIndex: 80998
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 			public LoginGameUpdater __4__this; // 0x20
-			public long taskId; // 0x28
-			private bool _isCanceled_5__2; // 0x30
+			public OperationContext context; // 0x28
+			private HGLatestGameInfo _oldGameInfo_5__2; // 0x30
+			private int _oldResAction_5__3; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __WaitForTaskCancel_d__34(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __RefreshPreDownloadResAction_d__71(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018699E4F0-0x000000018699E570
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000182775CF0-0x0000000182778C60
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699E570-0x000000018699E5BC
+			void IEnumerator.Reset(); // 0x0000000182778C60-0x0000000182778CB0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __YieldGameUpdateInfoChangedAndQuit_d__73 : IEnumerator<object> // TypeDefIndex: 80999
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginGameUpdater __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __YieldGameUpdateInfoChangedAndQuit_d__73(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018277F150-0x000000018277FA50
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018277FA50-0x000000018277FAA0
 		}
 	
 		// Constructors
-		public LoginGameUpdater(Options options); // 0x000000018380A530-0x000000018380A5D0
+		public LoginGameUpdater(Options options); // 0x000000018710FFE0-0x0000000187110080
 	
 		// Methods
-		public void Clear(); // 0x00000001845E8E10-0x00000001845E8E80
-		[IteratorStateMachine(typeof(_CheckLastGameInfo_d__23))]
-		public IEnumerator CheckLastGameInfo(Result result); // 0x0000000186998D50-0x0000000186998DF8
-		[IteratorStateMachine(typeof(_DoUpdate_d__24))]
-		public IEnumerator DoUpdate(Result result); // 0x0000000186998DF8-0x0000000186998EA0
-		[IteratorStateMachine(typeof(__GetLastGameInfo_d__25))]
-		private IEnumerator _GetLastGameInfo(Context context); // 0x000000018699929C-0x0000000186999344
-		[IteratorStateMachine(typeof(__UpdateGame_d__26))]
-		private IEnumerator _UpdateGame(Context context); // 0x000000018699958C-0x0000000186999634
-		[IteratorStateMachine(typeof(__DoTaskUpdating_d__27))]
-		private IEnumerator _DoTaskUpdating(Context context); // 0x00000001869991F4-0x000000018699929C
-		private void _OnDownloadStart(); // 0x0000000186999444-0x000000018699958C
-		private void _OnDownloadProgress(long curSize, long totalSize, long speed); // 0x0000000186999344-0x0000000186999444
-		[IteratorStateMachine(typeof(__YieldErrorAlert_d__32))]
-		private IEnumerator _YieldErrorAlert(string desc); // 0x0000000186999774-0x000000018699981C
-		[IteratorStateMachine(typeof(__YieldCheckNetUsagePolicy_d__33))]
-		private IEnumerator _YieldCheckNetUsagePolicy(long downloadSize); // 0x00000001869996D4-0x0000000186999774
-		[IteratorStateMachine(typeof(__WaitForTaskCancel_d__34))]
-		private IEnumerator _WaitForTaskCancel(long taskId); // 0x0000000186999634-0x00000001869996D4
-		private static void _CreateDirectoryIfNotExists(string folderPath); // 0x0000000186999188-0x00000001869991F4
-		public void ClearWaitProgress(); // 0x0000000183A80A00-0x0000000183A80AD0
-		public void ShowWaitProgress(); // 0x0000000186999044-0x0000000186999188
-		public int GetNoAlertCode(); // 0x0000000186998EA0-0x0000000186998EF0
-		public float GetWaitTime(); // 0x0000000186998EF0-0x0000000186999044
+		public void Clear(); // 0x0000000186AED190-0x0000000186AED840
+		[IteratorStateMachine(typeof(_CheckLastGameInfo_d__30))]
+		public IEnumerator CheckLastGameInfo(Result result); // 0x0000000188CB94C0-0x0000000188CB9578
+		public ResAction GetResAction(); // 0x000000018614E810-0x000000018614E8A0
+		public void RefreshEstimatedPreDownloadSize(ResAction resAction); // 0x0000000188CB9910-0x0000000188CB9A7C
+		public long GetCachedEstimatedPreDownloadSize(); // 0x0000000188CB96E8-0x0000000188CB9778
+		public static bool IsPreDownloadEnabled(); // 0x000000018614E770-0x000000018614E7E0
+		public static bool IsPreDownloadSupportedOnCurrentPlatform(); // 0x000000018614E7E0-0x000000018614E810
+		[IteratorStateMachine(typeof(_DoUpdate_d__36))]
+		public IEnumerator DoUpdate(Result result); // 0x0000000188CB9578-0x0000000188CB9630
+		[IteratorStateMachine(typeof(_ApplyPreDownload_d__37))]
+		public IEnumerator ApplyPreDownload(PreDownloadResult result); // 0x0000000188CB9408-0x0000000188CB94C0
+		[IteratorStateMachine(typeof(_DownloadPreDownload_d__38))]
+		public IEnumerator DownloadPreDownload(PreDownloadResult result); // 0x0000000188CB9630-0x0000000188CB96E8
+		[IteratorStateMachine(typeof(__GetLastGameInfo_d__39))]
+		private IEnumerator _GetLastGameInfo(OperationContext context); // 0x0000000188CBA730-0x0000000188CBA7E8
+		private bool _TryGetLatestGameInfo(OperationContext context, out HGLatestGameInfo gameInfo); // 0x0000000188CBB6B4-0x0000000188CBB788
+		[IteratorStateMachine(typeof(__UpdateGame_d__41))]
+		private IEnumerator _UpdateGame(OperationContext context); // 0x0000000188CBB788-0x0000000188CBB840
+		[IteratorStateMachine(typeof(__DoTaskUpdating_d__42))]
+		private IEnumerator _DoTaskUpdating(OperationContext context); // 0x0000000188CB9FC0-0x0000000188CBA078
+		[IteratorStateMachine(typeof(__DownloadPreDownload_d__43))]
+		private IEnumerator _DownloadPreDownload(PreDownloadDownloadContext context); // 0x0000000188CBA078-0x0000000188CBA130
+		[IteratorStateMachine(typeof(__ApplyPreDownload_d__44))]
+		private IEnumerator _ApplyPreDownload(PreDownloadApplyContext context); // 0x0000000188CB9BBC-0x0000000188CB9C74
+		private void _OnDownloadStart(); // 0x0000000188CBB2B4-0x0000000188CBB3FC
+		private void _OnDownloadProgress(long curSize, long totalSize, long speed); // 0x0000000188CBB1B0-0x0000000188CBB2B4
+		private void _OnPreDownloadDownloadStart(); // 0x0000000188CBB3FC-0x0000000188CBB594
+		private void _OnApplyPreDownloadStart(); // 0x0000000188CBB010-0x0000000188CBB1B0
+		private void _OnApplyPreDownloadProgress(int progress); // 0x0000000188CBAF18-0x0000000188CBB010
+		[IteratorStateMachine(typeof(__YieldErrorAlert_d__52))]
+		private IEnumerator _YieldErrorAlert(string desc); // 0x0000000188CBB9B8-0x0000000188CBBA70
+		[IteratorStateMachine(typeof(__YieldPreDownloadErrorDialog_d__53))]
+		private IEnumerator _YieldPreDownloadErrorDialog(int errorCode, Action<PreDownloadErrorChoice> onChoice); // 0x0000000188CBBB08-0x0000000188CBBBC4
+		private static string _GetPreDownloadErrorInfo(int errorCode); // 0x0000000188CBA7E8-0x0000000188CBA924
+		private static bool _ShouldClearPreDownloadTask(int errorCode); // 0x0000000188CBB64C-0x0000000188CBB6B4
+		private static void _LogPreDownloadStatusChanged(string phase, long taskId, int status, ref int lastStatus); // 0x0000000188CBAE18-0x0000000188CBAF18
+		private void _EventLogPreDownloadStart(PreDownloadDownloadContext context, long taskId, long fallbackTotalSize); // 0x0000000188CBA588-0x0000000188CBA6D8
+		private static void _EventLogPreDownloadProgress(ref bool sent, long curSize, long totalSize, int target); // 0x0000000188CBA4A0-0x0000000188CBA588
+		private static void _EventLogPreDownloadPause(PreDownloadDownloadContext context, long curSize, long totalSize, int statusCode); // 0x0000000188CBA2A8-0x0000000188CBA4A0
+		private static void _EventLogPreDownloadFinish(long downloadedSize); // 0x0000000188CBA210-0x0000000188CBA2A8
+		private static void _EventLogPreApplyProgress(ref bool sent, int progress, int target); // 0x0000000188CBA130-0x0000000188CBA210
+		private static int _GetEventLogProgress(long curSize, long totalSize); // 0x0000000188CBA6D8-0x0000000188CBA730
+		private static int _BytesToMB(long bytes); // 0x0000000188CB9C74-0x0000000188CB9CB4
+		private static void _LogPreDownloadSizeProgress(long taskId, long curSize, long totalSize, long speed, ref int lastStep); // 0x0000000188CBAC64-0x0000000188CBAE18
+		private static void _LogPreDownloadApplyProgress(long taskId, int progress, ref int lastStep); // 0x0000000188CBAAB0-0x0000000188CBAC64
+		private bool _ConsumePreDownloadCancelRequest(PreDownloadDownloadContext context); // 0x0000000188CB9E3C-0x0000000188CB9F58
+		[IteratorStateMachine(typeof(__YieldCheckNetUsagePolicy_d__67))]
+		private IEnumerator _YieldCheckNetUsagePolicy(long downloadSize, Action<bool> onCheckResult = null); // 0x0000000188CBB8EC-0x0000000188CBB9B8
+		[IteratorStateMachine(typeof(__WaitForTaskCancel_d__68))]
+		private IEnumerator _WaitForTaskCancel(long taskId); // 0x0000000188CBB840-0x0000000188CBB8EC
+		[IteratorStateMachine(typeof(__CancelAndClearTask_d__69))]
+		private IEnumerator _CancelAndClearTask(long taskId); // 0x0000000188CB9CB4-0x0000000188CB9D60
+		[IteratorStateMachine(typeof(__CancelPreDownloadTask_d__70))]
+		private IEnumerator _CancelPreDownloadTask(long taskId, bool shouldClear, Action<int> onResult); // 0x0000000188CB9D60-0x0000000188CB9E3C
+		[IteratorStateMachine(typeof(__RefreshPreDownloadResAction_d__71))]
+		private IEnumerator _RefreshPreDownloadResAction(OperationContext context); // 0x0000000188CBB594-0x0000000188CBB64C
+		private static bool _IsSameGameUpdateInfo(HGLatestGameInfo oldGameInfo, HGLatestGameInfo newGameInfo, out string changedField); // 0x0000000188CBA924-0x0000000188CBAAB0
+		[IteratorStateMachine(typeof(__YieldGameUpdateInfoChangedAndQuit_d__73))]
+		private IEnumerator _YieldGameUpdateInfoChangedAndQuit(); // 0x0000000188CBBA70-0x0000000188CBBB08
+		private static void _CreateDirectoryIfNotExists(string folderPath); // 0x0000000188CB9F58-0x0000000188CB9FC0
+		public void ClearWaitProgress(); // 0x000000018614C2A0-0x000000018614C370
+		public void ShowWaitProgress(); // 0x0000000188CB9A7C-0x0000000188CB9BBC
+		public int GetNoAlertCode(); // 0x0000000188CB9778-0x0000000188CB97BC
+		public float GetWaitTime(); // 0x0000000188CB97BC-0x0000000188CB9910
 	}
 
-	public class LoginGSNode : LoginWorkFlow.Node // TypeDefIndex: 56453
+	public class LoginGSNode : LoginWorkFlow.Node // TypeDefIndex: 81010
 	{
 		// Fields
-		private const int FLOW_NONE = 0; // Metadata: 0x023485AA
-		private const int FLOW_WORKING = 1; // Metadata: 0x023485AB
-		private const int FLOW_FINISH = 2; // Metadata: 0x023485AC
-		private const int FLOW_ABORTING = 3; // Metadata: 0x023485AD
+		private const int FLOW_NONE = 0; // Metadata: 0x0263E085
+		private const int FLOW_WORKING = 1; // Metadata: 0x0263E086
+		private const int FLOW_FINISH = 2; // Metadata: 0x0263E087
+		private const int FLOW_ABORTING = 3; // Metadata: 0x0263E088
 		private EnterGameServiceFlow m_flow; // 0x20
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B17F0-0x00000001849B1820 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65F80-0x0000000186E65FB0 
 	
 		// Nested types
-		private class EnterGameServiceFlow : CustomYieldInstruction // TypeDefIndex: 56451
+		private class EnterGameServiceFlow : CustomYieldInstruction // TypeDefIndex: 81008
 		{
 			// Fields
 			private LoginContext m_context; // 0x10
@@ -2560,11 +3073,11 @@ namespace Beyond.Login
 			private int m_state; // 0x28
 	
 			// Properties
-			public override bool keepWaiting { get; } // 0x000000018404E110-0x000000018404E170 
+			public override bool keepWaiting { get; } // 0x0000000186600E50-0x0000000186600E80 
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __EnterGameCoroutine_d__11 : IEnumerator<object> // TypeDefIndex: 56444
+			private sealed class __EnterGameCoroutine_d__11 : IEnumerator<object> // TypeDefIndex: 81001
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2576,23 +3089,23 @@ namespace Beyond.Login
 				private Beyond.Misc.ObjectRef _loginRespRef_5__5; // 0x40
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __EnterGameCoroutine_d__11(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __EnterGameCoroutine_d__11(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000183A853B0-0x0000000183A85DE0
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x00000001850CCF50-0x00000001850CD960
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699D070-0x000000018699D0BC
+				void IEnumerator.Reset(); // 0x0000000188CBD6C4-0x0000000188CBD710
 			}
 	
 			[CompilerGenerated]
-			private sealed class __NetConnectAndGSLogin_d__12 : IEnumerator<object> // TypeDefIndex: 56445
+			private sealed class __NetConnectAndGSLogin_d__12 : IEnumerator<object> // TypeDefIndex: 81002
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2607,23 +3120,23 @@ namespace Beyond.Login
 				private HGNetSessionLoginYield _loginHandler_5__5; // 0x50
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __NetConnectAndGSLogin_d__12(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __NetConnectAndGSLogin_d__12(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000183A4B510-0x0000000183A4B840
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x00000001867D5B70-0x00000001867D7A50
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699DB98-0x000000018699DBE4
+				void IEnumerator.Reset(); // 0x0000000188CBDDB0-0x0000000188CBDDFC
 			}
 	
 			[CompilerGenerated]
-			private sealed class __YieldAlertError_d__14 : IEnumerator<object> // TypeDefIndex: 56446
+			private sealed class __YieldAlertError_d__14 : IEnumerator<object> // TypeDefIndex: 81003
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2631,23 +3144,23 @@ namespace Beyond.Login
 				public string errorInfo; // 0x20
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __YieldAlertError_d__14(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __YieldAlertError_d__14(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x000000018699E608-0x000000018699E698
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CBDFA4-0x0000000188CBE038
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699E698-0x000000018699E6E4
+				void IEnumerator.Reset(); // 0x0000000188CBE038-0x0000000188CBE084
 			}
 	
 			[CompilerGenerated]
-			private sealed class __SaveCurrentUserToServerConfig_d__15 : IEnumerator<object> // TypeDefIndex: 56447
+			private sealed class __SaveCurrentUserToServerConfig_d__15 : IEnumerator<object> // TypeDefIndex: 81004
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2656,36 +3169,36 @@ namespace Beyond.Login
 				public string uid; // 0x28
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __SaveCurrentUserToServerConfig_d__15(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __SaveCurrentUserToServerConfig_d__15(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000183DA3230-0x0000000183DA3310
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x000000018611E380-0x000000018611E460
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699DD3C-0x000000018699DD88
+				void IEnumerator.Reset(); // 0x0000000188CBDF0C-0x0000000188CBDF58
 			}
 	
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass16_0 // TypeDefIndex: 56448
+			private sealed class __c__DisplayClass16_0 // TypeDefIndex: 81005
 			{
 				// Fields
 				public Beyond.Misc.ObjectRef waitForCallback; // 0x10
 	
 				// Constructors
-				public __c__DisplayClass16_0(); // 0x00000001841E1670-0x00000001841E1680
+				public __c__DisplayClass16_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal void __MockManualSelectServer_b__0(); // 0x000000018699C774-0x000000018699C798
+				internal void __MockManualSelectServer_b__0(); // 0x0000000188CBD128-0x0000000188CBD14C
 			}
 	
 			[CompilerGenerated]
-			private sealed class __MockManualSelectServer_d__16 : IEnumerator<object> // TypeDefIndex: 56449
+			private sealed class __MockManualSelectServer_d__16 : IEnumerator<object> // TypeDefIndex: 81006
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2693,23 +3206,23 @@ namespace Beyond.Login
 				public string uid; // 0x20
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __MockManualSelectServer_d__16(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __MockManualSelectServer_d__16(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x000000018699D9F4-0x000000018699DB4C
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CBDC04-0x0000000188CBDD64
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699DB4C-0x000000018699DB98
+				void IEnumerator.Reset(); // 0x0000000188CBDD64-0x0000000188CBDDB0
 			}
 	
 			[CompilerGenerated]
-			private sealed class __OnAuthError_d__17 : IEnumerator<object> // TypeDefIndex: 56450
+			private sealed class __OnAuthError_d__17 : IEnumerator<object> // TypeDefIndex: 81007
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -2718,50 +3231,50 @@ namespace Beyond.Login
 				public EnterGameServiceFlow __4__this; // 0x28
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public __OnAuthError_d__17(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public __OnAuthError_d__17(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x000000018699DBE4-0x000000018699DCA4
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CBDDFC-0x0000000188CBDEC0
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699DCA4-0x000000018699DCF0
+				void IEnumerator.Reset(); // 0x0000000188CBDEC0-0x0000000188CBDF0C
 			}
 	
 			// Constructors
-			public EnterGameServiceFlow(LoginGSNode node); // 0x00000001849D6330-0x00000001849D63B0
+			public EnterGameServiceFlow(LoginGSNode node); // 0x0000000186E4B1E0-0x0000000186E4B260
 	
 			// Methods
-			public void MarkAborting(); // 0x00000001869968D0-0x0000000186996928
-			public void EnterGame(); // 0x0000000183A84270-0x0000000183A84390
-			public bool IsInterruptable(); // 0x0000000186996870-0x00000001869968D0
-			public bool TryInterrupt(); // 0x0000000186996928-0x0000000186996990
+			public void MarkAborting(); // 0x0000000188CB7E70-0x0000000188CB7EB0
+			public void EnterGame(); // 0x00000001850CC870-0x00000001850CC990
+			public bool IsInterruptable(); // 0x0000000188CB7E2C-0x0000000188CB7E70
+			public bool TryInterrupt(); // 0x0000000188CB7EB0-0x0000000188CB7F10
 			[IteratorStateMachine(typeof(__EnterGameCoroutine_d__11))]
-			private IEnumerator _EnterGameCoroutine(); // 0x0000000183A84390-0x0000000183A84400
+			private IEnumerator _EnterGameCoroutine(); // 0x00000001850CC990-0x00000001850CCA10
 			[IteratorStateMachine(typeof(__NetConnectAndGSLogin_d__12))]
-			private IEnumerator _NetConnectAndGSLogin(string uid, string token, Beyond.Misc.ObjectRef loginRespRef); // 0x0000000183A84400-0x0000000183A844C0
-			private static string _ExtractErrorInfo(HttpSender.Result result, string keyErrorWithCode, string keyTimeout); // 0x0000000186996990-0x0000000186996A8C
+			private IEnumerator _NetConnectAndGSLogin(string uid, string token, Beyond.Misc.ObjectRef loginRespRef); // 0x00000001850CC7B0-0x00000001850CC870
+			private static string _ExtractErrorInfo(HttpSender.Result result, string keyErrorWithCode, string keyTimeout); // 0x0000000188CB7F10-0x0000000188CB8010
 			[IteratorStateMachine(typeof(__YieldAlertError_d__14))]
-			private IEnumerator _YieldAlertError(string errorInfo); // 0x0000000186996C34-0x0000000186996CD0
+			private IEnumerator _YieldAlertError(string errorInfo); // 0x0000000188CB81CC-0x0000000188CB8274
 			[IteratorStateMachine(typeof(__SaveCurrentUserToServerConfig_d__15))]
-			private IEnumerator _SaveCurrentUserToServerConfig(string uid); // 0x0000000183A4B930-0x0000000183A4B9C0
+			private IEnumerator _SaveCurrentUserToServerConfig(string uid); // 0x00000001867D7B10-0x00000001867D7BB0
 			[IteratorStateMachine(typeof(__MockManualSelectServer_d__16))]
-			private IEnumerator _MockManualSelectServer(string uid); // 0x0000000186996A8C-0x0000000186996B28
+			private IEnumerator _MockManualSelectServer(string uid); // 0x0000000188CB8010-0x0000000188CB80B8
 			[IteratorStateMachine(typeof(__OnAuthError_d__17))]
-			private IEnumerator _OnAuthError(object rejectInfo); // 0x0000000186996B28-0x0000000186996BD0
-			private void _ReLoginWhenErrorEncountered(); // 0x0000000186996BD0-0x0000000186996C34
-			private static void _GlobalLoginSucBusiness(MSG_B1 msg); // 0x00000001840EB370-0x00000001840EB430
+			private IEnumerator _OnAuthError(object rejectInfo); // 0x0000000188CB80B8-0x0000000188CB8170
+			private void _ReLoginWhenErrorEncountered(); // 0x0000000188CB8170-0x0000000188CB81CC
+			private static void _GlobalLoginSucBusiness(MSG_B1 msg); // 0x00000001850CB320-0x00000001850CB3F0
 			[CompilerGenerated]
-			private bool __EnterGameCoroutine_b__11_0(); // 0x0000000184D84FC0-0x0000000184D84FD0
+			private bool __EnterGameCoroutine_b__11_0(); // 0x00000001872314F0-0x0000000187231500
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ConfirmServer_d__10 : IEnumerator<object> // TypeDefIndex: 56452
+		private sealed class __ConfirmServer_d__10 : IEnumerator<object> // TypeDefIndex: 81009
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2769,49 +3282,51 @@ namespace Beyond.Login
 			private SDKPromiseEnumerator<U8ConfirmServerResult> _confirmPromise_5__2; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __ConfirmServer_d__10(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __ConfirmServer_d__10(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001840E9A00-0x00000001840EA1F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001859BB160-0x00000001859BB8A0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699C9E4-0x000000018699CA30
+			void IEnumerator.Reset(); // 0x0000000188CBD62C-0x0000000188CBD678
 		}
 	
 		// Constructors
-		public LoginGSNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginGSNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001849D61A0-0x00000001849D62E0
-		public override bool OnEvent(ELoginEvent evt, object param); // 0x000000018470B2D0-0x000000018470B370
+		public override CustomYieldInstruction Work(); // 0x0000000186E4B040-0x0000000186E4B180
+		public override bool OnEvent(ELoginEvent evt, object param); // 0x00000001850CAD50-0x00000001850CADE0
 		[IteratorStateMachine(typeof(__ConfirmServer_d__10))]
-		private static IEnumerator _ConfirmServer(); // 0x0000000183A847F0-0x0000000183A84850
-		private void _FallbackToInitWithMask(bool bLogoutAccount); // 0x0000000186998718-0x000000018699889C
-		private void _OnEventLogout(); // 0x0000000186998A38-0x0000000186998B7C
-		private void _OnEventResourceRepair(); // 0x0000000186998B7C-0x0000000186998CC0
-		private bool _LogoutToInitNode(); // 0x000000018699897C-0x0000000186998A38
-		private bool _FallbackToInitNodeImpl(); // 0x0000000186998698-0x0000000186998718
-		private bool _FallbackToResRepairImpl(); // 0x000000018699889C-0x000000018699897C
+		private static IEnumerator _ConfirmServer(); // 0x00000001850CCE00-0x00000001850CCE60
+		private void _FallbackToInitWithMask(bool bLogoutAccount); // 0x0000000188CB8B50-0x0000000188CB8CD0
+		private void _OnEventLogout(); // 0x0000000188CB8F5C-0x0000000188CB909C
+		private void _OnEventResourceRepair(); // 0x0000000188CB9230-0x0000000188CB9370
+		private void _OnEventPreDownload(); // 0x0000000188CB909C-0x0000000188CB9230
+		private bool _LogoutToInitNode(); // 0x0000000188CB8E98-0x0000000188CB8F5C
+		private bool _FallbackToInitNodeImpl(); // 0x0000000188CB8AD0-0x0000000188CB8B50
+		private bool _FallbackToResRepairImpl(); // 0x0000000188CB8DB4-0x0000000188CB8E98
+		private bool _FallbackToPreDownloadImpl(); // 0x0000000188CB8CD0-0x0000000188CB8DB4
 		[CompilerGenerated]
-		private void __OnEventLogout_b__12_0(); // 0x0000000186998560-0x000000018699856C
+		private void __OnEventLogout_b__12_0(); // 0x0000000188CB899C-0x0000000188CB89A8
 		[CompilerGenerated]
-		private void __OnEventResourceRepair_b__13_0(); // 0x000000018699856C-0x0000000186998698
-		public bool __iFixBaseProxy_OnEvent(ELoginEvent P0, object P1); // 0x0000000186998558-0x0000000186998560
+		private void __OnEventResourceRepair_b__13_0(); // 0x0000000188CB89A8-0x0000000188CB8AD0
+		public bool __iFixBaseProxy_OnEvent(ELoginEvent P0, object P1); // 0x0000000188CB8994-0x0000000188CB899C
 	}
 
-	public class LoginHotUpdateProp : LoginProperty<LoginHotUpdateModel> // TypeDefIndex: 56454
+	public class LoginHotUpdateProp : LoginProperty<LoginHotUpdateModel> // TypeDefIndex: 81011
 	{
 		// Constructors
-		public LoginHotUpdateProp(LoginWorkFlow workflow); // 0x0000000183A80AD0-0x0000000183A80B70
+		public LoginHotUpdateProp(LoginWorkFlow workflow); // 0x000000018614C370-0x000000018614C410
 	}
 
-	public class LoginHotUpdateModel // TypeDefIndex: 56457
+	public class LoginHotUpdateModel // TypeDefIndex: 81014
 	{
 		// Fields
 		public string title; // 0x10
@@ -2819,7 +3334,7 @@ namespace Beyond.Login
 		public IProgress progress; // 0x20
 	
 		// Nested types
-		public interface IProgress // TypeDefIndex: 56455
+		public interface IProgress // TypeDefIndex: 81012
 		{
 			// Methods
 			double GetTotal();
@@ -2827,30 +3342,30 @@ namespace Beyond.Login
 			string GetInfo();
 		}
 	
-		public class SimpleProgress : Beyond.Login.LoginHotUpdateModel.IProgress // TypeDefIndex: 56456
+		public class SimpleProgress : Beyond.Login.LoginHotUpdateModel.IProgress // TypeDefIndex: 81013
 		{
 			// Fields
 			public double current; // 0x10
 	
 			// Constructors
-			public SimpleProgress(); // 0x00000001841E1670-0x00000001841E1680
+			public SimpleProgress(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public double GetCurrent(); // 0x00000001839367C0-0x00000001839367F0
-			public double GetTotal(); // 0x00000001839369B0-0x00000001839369E0
-			public string GetInfo(); // 0x00000001839369E0-0x0000000183936A10
+			public double GetCurrent(); // 0x0000000188CBC190-0x0000000188CBC1D4
+			public double GetTotal(); // 0x000000018539A2E0-0x000000018539A310
+			public string GetInfo(); // 0x0000000186B8C7E0-0x0000000186B8C810
 		}
 	
 		// Constructors
-		public LoginHotUpdateModel(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginHotUpdateModel(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class LoginHotUpdater : CustomYieldInstruction, IDisposable // TypeDefIndex: 56483
+	public class LoginHotUpdater : CustomYieldInstruction, IDisposable // TypeDefIndex: 81040
 	{
 		// Fields
-		private const int MODE_SKIP = 0; // Metadata: 0x023485AE
-		private const int MODE_DOWNLOAD = 1; // Metadata: 0x023485AF
-		private const int MODE_LOCAL = 2; // Metadata: 0x023485B0
+		private const int MODE_SKIP = 0; // Metadata: 0x0263E089
+		private const int MODE_DOWNLOAD = 1; // Metadata: 0x0263E08A
+		private const int MODE_LOCAL = 2; // Metadata: 0x0263E08B
 		private static bool s_hasInitialAssetChanged; // 0x00
 		private static bool s_isNeedSoftRestart; // 0x01
 		private LoginContext m_loginCxt; // 0x10
@@ -2861,28 +3376,28 @@ namespace Beyond.Login
 		private LoginLocalResTask m_localResTask; // 0x38
 		private IEnumerator m_downloadingShaderWarmupRoutine; // 0x40
 		private bool m_resRepairMode; // 0x48
-		public const string URL_GET_SPLIT = "/"; // Metadata: 0x023485B1
+		public const string URL_GET_SPLIT = "/"; // Metadata: 0x0263E08C
 	
 		// Properties
-		public override bool keepWaiting { get; } // 0x0000000184CEB9B0-0x0000000184CEB9E0 
+		public override bool keepWaiting { get; } // 0x000000018688BF30-0x000000018688BF60 
 	
 		// Nested types
-		public class HotUpdateInfo // TypeDefIndex: 56458
+		public class HotUpdateInfo // TypeDefIndex: 81015
 		{
 			// Fields
 			public FResourceDiff resDiff; // 0x10
 			public LocalResPref localResPref; // 0x50
 	
 			// Constructors
-			public HotUpdateInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public HotUpdateInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool CheckIfNeedReload(); // 0x0000000186996CD0-0x0000000186996E7C
-			public bool HasChangedByType(EVFSBlockType type); // 0x0000000183DA4D90-0x0000000183DA4DF0
-			public bool HasAssetsChanged(); // 0x0000000186996E7C-0x0000000186996F20
+			public bool CheckIfNeedReload(); // 0x00000001870F0A90-0x00000001870F0C20
+			public bool HasChangedByType(EVFSBlockType type); // 0x000000018578DB20-0x000000018578DBA0
+			public bool HasAssetsChanged(); // 0x0000000188CB8274-0x0000000188CB8320
 		}
 	
-		public class WorkContext // TypeDefIndex: 56459
+		public class WorkContext // TypeDefIndex: 81016
 		{
 			// Fields
 			public HotUpdateInfo updateInitial; // 0x10
@@ -2895,19 +3410,19 @@ namespace Beyond.Login
 			private bool _illegalItemsInLocalRes_k__BackingField; // 0x40
 	
 			// Properties
-			public bool illegalItemsInLocalRes { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000182D480B0-0x0000000182D480C0
+			public bool illegalItemsInLocalRes { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DFB0-0x000000018225DFC0 0x000000018225DFC0-0x000000018225DFD0
 	
 			// Constructors
-			public WorkContext(); // 0x0000000183C075E0-0x0000000183C07650
+			public WorkContext(); // 0x0000000186C75730-0x0000000186C757A0
 	
 			// Methods
-			public void MarkIllegalItemsInLocalRes(); // 0x00000001869A0008-0x00000001869A0058
-			public HotUpdateInfo GetHotUpdateInfo(bool isInitial); // 0x000000018699FFA4-0x00000001869A0008
-			public bool HasChangedByType(EVFSBlockType type); // 0x0000000183DA4D20-0x0000000183DA4D90
+			public void MarkIllegalItemsInLocalRes(); // 0x0000000188CBE3AC-0x0000000188CBE3EC
+			public HotUpdateInfo GetHotUpdateInfo(bool isInitial); // 0x0000000185F56330-0x0000000185F563D0
+			public bool HasChangedByType(EVFSBlockType type); // 0x000000018578DAB0-0x000000018578DB20
 		}
 	
 		[CompilerGenerated]
-		private sealed class __Work_d__28 : IEnumerator<object> // TypeDefIndex: 56460
+		private sealed class __Work_d__28 : IEnumerator<object> // TypeDefIndex: 81017
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2916,23 +3431,23 @@ namespace Beyond.Login
 			private WorkContext _workContext_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __Work_d__28(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __Work_d__28(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C07330-0x0000000183C074C0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186C75460-0x0000000186C755F0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699E5BC-0x000000018699E608
+			void IEnumerator.Reset(); // 0x0000000188CBDF58-0x0000000188CBDFA4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CreateMainCoroutine_d__29 : IEnumerator<object> // TypeDefIndex: 56461
+		private sealed class __CreateMainCoroutine_d__29 : IEnumerator<object> // TypeDefIndex: 81018
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2941,23 +3456,23 @@ namespace Beyond.Login
 			public WorkContext workContext; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CreateMainCoroutine_d__29(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CreateMainCoroutine_d__29(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018455F6A0-0x000000018455F7A0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001862B0600-0x00000001862B0700
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A6914-0x00000001869A6960
+			void IEnumerator.Reset(); // 0x0000000188CBD678-0x0000000188CBD6C4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __MainCoroutineModeSkip_d__30 : IEnumerator<object> // TypeDefIndex: 56462
+		private sealed class __MainCoroutineModeSkip_d__30 : IEnumerator<object> // TypeDefIndex: 81019
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2966,23 +3481,23 @@ namespace Beyond.Login
 			public WorkContext context; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __MainCoroutineModeSkip_d__30(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __MainCoroutineModeSkip_d__30(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184B21A80-0x0000000184B21B20
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBDB24-0x0000000188CBDBB8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA11C-0x00000001869AA168
+			void IEnumerator.Reset(); // 0x0000000188CBDBB8-0x0000000188CBDC04
 		}
 	
 		[CompilerGenerated]
-		private sealed class __MainCoroutineModeLocal_d__31 : IEnumerator<object> // TypeDefIndex: 56463
+		private sealed class __MainCoroutineModeLocal_d__31 : IEnumerator<object> // TypeDefIndex: 81020
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2991,23 +3506,23 @@ namespace Beyond.Login
 			public WorkContext context; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __MainCoroutineModeLocal_d__31(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __MainCoroutineModeLocal_d__31(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A9F90-0x00000001869AA0D0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CBD990-0x0000000188CBDAD8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA0D0-0x00000001869AA11C
+			void IEnumerator.Reset(); // 0x0000000188CBDAD8-0x0000000188CBDB24
 		}
 	
 		[CompilerGenerated]
-		private sealed class __UpdateResVersion_d__32 : IEnumerator<object> // TypeDefIndex: 56464
+		private sealed class __UpdateResVersion_d__32 : IEnumerator<object> // TypeDefIndex: 81021
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3016,23 +3531,23 @@ namespace Beyond.Login
 			public WorkContext workContext; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __UpdateResVersion_d__32(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __UpdateResVersion_d__32(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184B45BC0-0x0000000184B45C40
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186FC2A90-0x0000000186FC2B10
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA388-0x00000001869AA3D4
+			void IEnumerator.Reset(); // 0x0000000188CC3BA4-0x0000000188CC3BF0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __UpdateResVersionDev_d__36 : IEnumerator<object> // TypeDefIndex: 56465
+		private sealed class __UpdateResVersionDev_d__36 : IEnumerator<object> // TypeDefIndex: 81022
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3040,23 +3555,23 @@ namespace Beyond.Login
 			private ResVersionDevCfg _config_5__2; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __UpdateResVersionDev_d__36(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __UpdateResVersionDev_d__36(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869AA200-0x00000001869AA2F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC3988-0x0000000188CC3B0C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA2F0-0x00000001869AA33C
+			void IEnumerator.Reset(); // 0x0000000188CC3B0C-0x0000000188CC3B58
 		}
 	
 		[CompilerGenerated]
-		private sealed class __UpdateResVersionProd_d__38 : IEnumerator<object> // TypeDefIndex: 56466
+		private sealed class __UpdateResVersionProd_d__38 : IEnumerator<object> // TypeDefIndex: 81023
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3067,52 +3582,52 @@ namespace Beyond.Login
 			private string _url_5__4; // 0x38
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __UpdateResVersionProd_d__38(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __UpdateResVersionProd_d__38(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C07B40-0x0000000183C07E30
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186A4A2A0-0x0000000186A4A590
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA33C-0x00000001869AA388
+			void IEnumerator.Reset(); // 0x0000000188CC3B58-0x0000000188CC3BA4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_0 // TypeDefIndex: 56467
+		private sealed class __c__DisplayClass43_0 // TypeDefIndex: 81024
 		{
 			// Fields
 			public bool isInitial; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass43_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass43_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal LocalResPref __MainCoroutineModeDownload_b__0(); // 0x00000001869A2ACC-0x00000001869A2B40
+			internal LocalResPref __MainCoroutineModeDownload_b__1(); // 0x0000000182783B50-0x0000000182783E80
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56468
+		private sealed class __c // TypeDefIndex: 81025
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Action __9__43_1; // 0x08
+			public static Action __9__43_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x00000001869A2C00-0x00000001869A2C64
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x0000000188CC0C68-0x0000000188CC0CCC
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __MainCoroutineModeDownload_b__43_1(); // 0x00000001869A2640-0x00000001869A2698
+			internal void __MainCoroutineModeDownload_b__43_0(); // 0x0000000182783280-0x0000000182783B50
 		}
 	
 		[CompilerGenerated]
-		private sealed class __MainCoroutineModeDownload_d__43 : IEnumerator<object> // TypeDefIndex: 56469
+		private sealed class __MainCoroutineModeDownload_d__43 : IEnumerator<object> // TypeDefIndex: 81026
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3126,27 +3641,27 @@ namespace Beyond.Login
 			private bool _neewDeleteMain_5__5; // 0x3B
 			private int _initialOrMain_5__6; // 0x3C
 			private string _onlineResVersion_5__7; // 0x40
-			private WaitForAsyncTask<LocalResPref> _waitForResPref_5__8; // 0x48
-			private HotUpdateInfo _info_5__9; // 0x50
+			private HotUpdateInfo _info_5__8; // 0x48
+			private WaitForAsyncTask<LocalResPref> _waitForResPref_5__9; // 0x50
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __MainCoroutineModeDownload_d__43(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __MainCoroutineModeDownload_d__43(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A89CC-0x00000001869A9F44
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018578DBA0-0x0000000185791C40
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A9F44-0x00000001869A9F90
+			void IEnumerator.Reset(); // 0x0000000188CC3638-0x0000000188CC3684
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ReloadResourceIndexes_d__46 : IEnumerator<object> // TypeDefIndex: 56470
+		private sealed class __ReloadResourceIndexes_d__46 : IEnumerator<object> // TypeDefIndex: 81027
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3154,23 +3669,23 @@ namespace Beyond.Login
 			public WorkContext workContext; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __ReloadResourceIndexes_d__46(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __ReloadResourceIndexes_d__46(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183DA6720-0x0000000183DA6AC0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000185F56F30-0x0000000185F5A0C0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA168-0x00000001869AA1B4
+			void IEnumerator.Reset(); // 0x0000000188CC38F0-0x0000000188CC393C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0 // TypeDefIndex: 56471
+		private sealed class __c__DisplayClass47_0 // TypeDefIndex: 81028
 		{
 			// Fields
 			public string filePath; // 0x10
@@ -3178,15 +3693,15 @@ namespace Beyond.Login
 			public Func<ResourceIndex> __9__1; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass47_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass47_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal ResourceIndex __LoadOrDownloadResIndex_b__1(); // 0x00000001869A2B7C-0x00000001869A2BDC
-			internal object __LoadOrDownloadResIndex_b__0(); // 0x00000001869A2B40-0x00000001869A2B7C
+			internal ResourceIndex __LoadOrDownloadResIndex_b__1(); // 0x00000001858D90E0-0x00000001858D9130
+			internal object __LoadOrDownloadResIndex_b__0(); // 0x00000001858D92B0-0x00000001858D92F0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __LoadOrDownloadResIndex_d__47 : IEnumerator<object> // TypeDefIndex: 56472
+		private sealed class __LoadOrDownloadResIndex_d__47 : IEnumerator<object> // TypeDefIndex: 81029
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3201,23 +3716,23 @@ namespace Beyond.Login
 			private WaitForAsyncTask<ResourceIndex> _loadTask_5__4; // 0x58
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoadOrDownloadResIndex_d__47(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoadOrDownloadResIndex_d__47(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A7E48-0x00000001869A848C
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001858D9780-0x00000001858D9DA0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A848C-0x00000001869A84D8
+			void IEnumerator.Reset(); // 0x0000000188CC3508-0x0000000188CC3554
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GenResIndex_d__48 : IEnumerator<object> // TypeDefIndex: 56473
+		private sealed class __GenResIndex_d__48 : IEnumerator<object> // TypeDefIndex: 81030
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3229,23 +3744,23 @@ namespace Beyond.Login
 			private Beyond.Misc.ObjectRef _resIndexRef_5__2; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GenResIndex_d__48(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GenResIndex_d__48(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A715C-0x00000001869A7298
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001865AA360-0x00000001865AA4A0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7298-0x00000001869A72E4
+			void IEnumerator.Reset(); // 0x0000000188CC2D54-0x0000000188CC2DA0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GenRiff_d__49 : IEnumerator<object> // TypeDefIndex: 56474
+		private sealed class __GenRiff_d__49 : IEnumerator<object> // TypeDefIndex: 81031
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3263,23 +3778,23 @@ namespace Beyond.Login
 			private Beyond.Misc.ObjectRef _streamingIndexRef_5__8; // 0x70
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GenRiff_d__49(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GenRiff_d__49(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A72E4-0x00000001869A7698
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000185F565C0-0x0000000185F569E0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7698-0x00000001869A76E4
+			void IEnumerator.Reset(); // 0x0000000188CC2DA0-0x0000000188CC2DEC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GenLocalRef_d__51 : IEnumerator<object> // TypeDefIndex: 56475
+		private sealed class __GenLocalRef_d__51 : IEnumerator<object> // TypeDefIndex: 81032
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3289,23 +3804,23 @@ namespace Beyond.Login
 			public string onlineVer; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GenLocalRef_d__51(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GenLocalRef_d__51(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A6FB0-0x00000001869A7110
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000185F561A0-0x0000000185F56330
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7110-0x00000001869A715C
+			void IEnumerator.Reset(); // 0x0000000188CC2D08-0x0000000188CC2D54
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckAndDownloadResource_d__52 : IEnumerator<object> // TypeDefIndex: 56476
+		private sealed class __CheckAndDownloadResource_d__52 : IEnumerator<object> // TypeDefIndex: 81033
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3328,23 +3843,23 @@ namespace Beyond.Login
 			private Beyond.Misc.ObjectRef _patchInfoRef_5__13; // 0x70
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckAndDownloadResource_d__52(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckAndDownloadResource_d__52(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A3C84-0x00000001869A50E4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186223930-0x0000000186227780
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A50E4-0x00000001869A5130
+			void IEnumerator.Reset(); // 0x0000000188CC25C8-0x0000000188CC2614
 		}
 	
 		[CompilerGenerated]
-		private sealed class __DownloadPatchInfo_d__54 : IEnumerator<object> // TypeDefIndex: 56477
+		private sealed class __DownloadPatchInfo_d__54 : IEnumerator<object> // TypeDefIndex: 81034
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3357,23 +3872,23 @@ namespace Beyond.Login
 			private WaitForAsyncTask<HttpSender.Result<PatchInfo>> _httpResIndex_5__3; // 0x48
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __DownloadPatchInfo_d__54(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __DownloadPatchInfo_d__54(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A6960-0x00000001869A6C38
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001858D8950-0x00000001858D8BA0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A6C38-0x00000001869A6C84
+			void IEnumerator.Reset(); // 0x0000000188CC26AC-0x0000000188CC26F8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __ClearDownloadFolder_d__55 : IEnumerator<object> // TypeDefIndex: 56478
+		private sealed class __ClearDownloadFolder_d__55 : IEnumerator<object> // TypeDefIndex: 81035
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3389,23 +3904,23 @@ namespace Beyond.Login
 			private HotUpdateInfo _info_5__6; // 0x50
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __ClearDownloadFolder_d__55(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __ClearDownloadFolder_d__55(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A5C38-0x00000001869A68C8
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018614D9A0-0x000000018614E770
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A68C8-0x00000001869A6914
+			void IEnumerator.Reset(); // 0x0000000188CC2660-0x0000000188CC26AC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __CheckLocalResConsistency_d__56 : IEnumerator<object> // TypeDefIndex: 56479
+		private sealed class __CheckLocalResConsistency_d__56 : IEnumerator<object> // TypeDefIndex: 81036
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3421,23 +3936,23 @@ namespace Beyond.Login
 			private LocalResChecker.CheckOutput _checkOutput_5__6; // 0x60
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __CheckLocalResConsistency_d__56(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __CheckLocalResConsistency_d__56(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A5130-0x00000001869A5BEC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001865AAD10-0x00000001865AE4E0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A5BEC-0x00000001869A5C38
+			void IEnumerator.Reset(); // 0x0000000188CC2614-0x0000000188CC2660
 		}
 	
 		[CompilerGenerated]
-		private sealed class __VitalError_d__57 : IEnumerator<object> // TypeDefIndex: 56480
+		private sealed class __VitalError_d__57 : IEnumerator<object> // TypeDefIndex: 81037
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3446,36 +3961,36 @@ namespace Beyond.Login
 			public string error; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __VitalError_d__57(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __VitalError_d__57(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869AA3D4-0x00000001869AA528
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC3BF0-0x0000000188CC3D48
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA528-0x00000001869AA574
+			void IEnumerator.Reset(); // 0x0000000188CC3D48-0x0000000188CC3D94
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 56481
+		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 81038
 		{
 			// Fields
 			public RuntimeFileUtils.StreamingResult indexRet; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass58_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass58_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal ResourceIndex __LoadStreamingIndex_b__0(); // 0x00000001869A2BDC-0x00000001869A2C00
+			internal ResourceIndex __LoadStreamingIndex_b__0(); // 0x00000001858DA990-0x00000001858DA9C0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __LoadStreamingIndex_d__58 : IEnumerator<object> // TypeDefIndex: 56482
+		private sealed class __LoadStreamingIndex_d__58 : IEnumerator<object> // TypeDefIndex: 81039
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3488,94 +4003,94 @@ namespace Beyond.Login
 			private WaitForAsyncTask<ResourceIndex> _waitForIndex_5__3; // 0x48
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoadStreamingIndex_d__58(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoadStreamingIndex_d__58(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A84D8-0x00000001869A8934
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001858D9460-0x00000001858D9780
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A8934-0x00000001869A8980
+			void IEnumerator.Reset(); // 0x0000000188CC3554-0x0000000188CC35A0
 		}
 	
 		// Constructors
-		private LoginHotUpdater(LoginContext context, bool resRepairMode); // 0x0000000183A80D30-0x0000000183A80DD0
+		private LoginHotUpdater(LoginContext context, bool resRepairMode); // 0x00000001862AFE60-0x00000001862AFF00
 	
 		// Methods
-		protected static void MarkInitialAssetChanged(); // 0x000000018699997C-0x00000001869999E8
-		protected static bool CheckInitialAssetChanged(); // 0x000000018699981C-0x0000000186999888
-		protected static void MarkNeedClearFolder(bool isInitial); // 0x00000001869999E8-0x0000000186999A70
-		protected static bool NeedClearFolder(bool isInitial); // 0x0000000186999ADC-0x0000000186999B60
-		protected static void MarkClearSuccessed(bool isInitial); // 0x00000001869998F4-0x000000018699997C
-		public static void MarkSoftRestart(); // 0x0000000186999A70-0x0000000186999ADC
-		public static void ClearSoftRestartFlag(); // 0x0000000186999888-0x00000001869998F4
-		public static bool IsNeedSoftRestart(); // 0x0000000183406070-0x00000001834060C0
-		public void Dispose(); // 0x00000001846DD1E0-0x00000001846DD340
-		public static LoginHotUpdater StartHotUpdate(LoginContext context, bool resRepairMode); // 0x0000000183A81090-0x0000000183A81140
+		protected static void MarkInitialAssetChanged(); // 0x0000000188CBBCA4-0x0000000188CBBD14
+		protected static bool CheckInitialAssetChanged(); // 0x000000018578D2B0-0x000000018578D5E0
+		protected static void MarkNeedClearFolder(bool isInitial); // 0x000000018611D060-0x000000018611D0F0
+		protected static bool NeedClearFolder(bool isInitial); // 0x0000000186EB79F0-0x0000000186EB7A80
+		protected static void MarkClearSuccessed(bool isInitial); // 0x000000018611D0F0-0x000000018611D170
+		public static void MarkSoftRestart(); // 0x0000000188CBBD14-0x0000000188CBBD84
+		public static void ClearSoftRestartFlag(); // 0x0000000188CBBBC4-0x0000000188CBBC34
+		public static bool IsNeedSoftRestart(); // 0x0000000188CBBC34-0x0000000188CBBCA4
+		public void Dispose(); // 0x0000000186BBC800-0x0000000186BBC950
+		public static LoginHotUpdater StartHotUpdate(LoginContext context, bool resRepairMode); // 0x00000001862AFD20-0x00000001862AFDE0
 		[IteratorStateMachine(typeof(__Work_d__28))]
-		private IEnumerator _Work(); // 0x0000000183A81140-0x0000000183A811B0
+		private IEnumerator _Work(); // 0x00000001862AFDE0-0x00000001862AFE60
 		[IteratorStateMachine(typeof(__CreateMainCoroutine_d__29))]
-		private IEnumerator _CreateMainCoroutine(WorkContext workContext); // 0x0000000183C07550-0x0000000183C075E0
+		private IEnumerator _CreateMainCoroutine(WorkContext workContext); // 0x0000000186C75690-0x0000000186C75730
 		[IteratorStateMachine(typeof(__MainCoroutineModeSkip_d__30))]
-		private IEnumerator _MainCoroutineModeSkip(WorkContext context); // 0x000000018455F7A0-0x000000018455F830
+		private IEnumerator _MainCoroutineModeSkip(WorkContext context); // 0x0000000188CBBE3C-0x0000000188CBBEF4
 		[IteratorStateMachine(typeof(__MainCoroutineModeLocal_d__31))]
-		private IEnumerator _MainCoroutineModeLocal(WorkContext context); // 0x000000018699AEC0-0x000000018699AF68
+		private IEnumerator _MainCoroutineModeLocal(WorkContext context); // 0x0000000188CBBD84-0x0000000188CBBE3C
 		[IteratorStateMachine(typeof(__UpdateResVersion_d__32))]
-		private IEnumerator _UpdateResVersion(WorkContext workContext); // 0x0000000183C074C0-0x0000000183C07550
-		private static void _SetResVersionForLog(); // 0x0000000183C079C0-0x0000000183C07A90
-		private string _GetOnlineResVersion(bool isInitial); // 0x000000018699ABA8-0x000000018699AC7C
-		public string ResourceRootUrl(string version, bool isInitial); // 0x0000000186999B60-0x0000000186999C1C
+		private IEnumerator _UpdateResVersion(WorkContext workContext); // 0x0000000186C755F0-0x0000000186C75690
+		private static void _SetResVersionForLog(); // 0x0000000186C757A0-0x0000000186C75870
+		private string _GetOnlineResVersion(bool isInitial); // 0x000000018614C140-0x000000018614C1F0
+		public string ResourceRootUrl(string version, bool isInitial); // 0x000000018578D000-0x000000018578D0A0
 		[IteratorStateMachine(typeof(__UpdateResVersionDev_d__36))]
-		private IEnumerator _UpdateResVersionDev(WorkContext workContext); // 0x000000018699B5B4-0x000000018699B63C
+		private IEnumerator _UpdateResVersionDev(WorkContext workContext); // 0x0000000188CBBEF4-0x0000000188CBBF8C
 		[IteratorStateMachine(typeof(__UpdateResVersionProd_d__38))]
-		private IEnumerator _UpdateResVersionProd(WorkContext workContext); // 0x0000000184B45C40-0x0000000184B45CC0
-		private string _ResourcePatchUrl(string version, bool isInitial); // 0x000000018699B1AC-0x000000018699B264
-		private string _ResourceFileUrl(string version, bool isInitial); // 0x000000018699AF68-0x000000018699B020
-		private string _ResourcePatchRootUrl(string version, bool isInitial); // 0x000000018699B0E8-0x000000018699B1AC
-		private string _ResourceIndexUrl(string version, bool isInitial); // 0x000000018699B020-0x000000018699B0E8
+		private IEnumerator _UpdateResVersionProd(WorkContext workContext); // 0x0000000186FC2B10-0x0000000186FC2BA0
+		private string _ResourcePatchUrl(string version, bool isInitial); // 0x0000000185F56060-0x0000000185F56100
+		private string _ResourceFileUrl(string version, bool isInitial); // 0x0000000185F56100-0x0000000185F561A0
+		private string _ResourcePatchRootUrl(string version, bool isInitial); // 0x00000001858D8BA0-0x00000001858D8C50
+		private string _ResourceIndexUrl(string version, bool isInitial); // 0x00000001858D9200-0x00000001858D92B0
 		[IteratorStateMachine(typeof(__MainCoroutineModeDownload_d__43))]
-		private IEnumerator _MainCoroutineModeDownload(WorkContext workContext); // 0x000000018699AE18-0x000000018699AEC0
-		private void _StartDownloadingShaderWarmupIfNeeded(); // 0x000000018699B264-0x000000018699B524
-		private void _StopDownloadingShaderWarmupIfNeeded(); // 0x000000018699B524-0x000000018699B5B4
+		private IEnumerator _MainCoroutineModeDownload(WorkContext workContext); // 0x00000001862B0700-0x00000001862B07A0
+		private void _StartDownloadingShaderWarmupIfNeeded(); // 0x00000001862B18D0-0x00000001862B2F00
+		private void _StopDownloadingShaderWarmupIfNeeded(); // 0x00000001871F4200-0x00000001871F4260
 		[IteratorStateMachine(typeof(__ReloadResourceIndexes_d__46))]
-		private IEnumerator _ReloadResourceIndexes(WorkContext workContext); // 0x0000000184B21B20-0x0000000184B21BA0
+		private IEnumerator _ReloadResourceIndexes(WorkContext workContext); // 0x000000018717C8A0-0x000000018717C930
 		[IteratorStateMachine(typeof(__LoadOrDownloadResIndex_d__47))]
-		private IEnumerator _LoadOrDownloadResIndex(string onlineVer, bool isInitial, Beyond.Misc.ObjectRef resIndexRef); // 0x000000018699AC7C-0x000000018699AD58
+		private IEnumerator _LoadOrDownloadResIndex(string onlineVer, bool isInitial, Beyond.Misc.ObjectRef resIndexRef); // 0x00000001865AA4A0-0x00000001865AA560
 		[IteratorStateMachine(typeof(__GenResIndex_d__48))]
-		private IEnumerator _GenResIndex(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018699A9F0-0x000000018699AACC
+		private IEnumerator _GenResIndex(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018614BF10-0x000000018614BFD0
 		[IteratorStateMachine(typeof(__GenRiff_d__49))]
-		private IEnumerator _GenRiff(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018699AACC-0x000000018699ABA8
-		private static LocalResPref _CreateUpdatedLocalResPref(string onlineVer, bool isInitial, LocalResPref oldLocalResPref, FResourceDiff resDiff, out int removedFileCount); // 0x000000018699A004-0x000000018699A72C
+		private IEnumerator _GenRiff(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018614BFD0-0x000000018614C090
+		private static LocalResPref _CreateUpdatedLocalResPref(string onlineVer, bool isInitial, LocalResPref oldLocalResPref, FResourceDiff resDiff, out int removedFileCount); // 0x0000000185F54650-0x0000000185F54ED0
 		[IteratorStateMachine(typeof(__GenLocalRef_d__51))]
-		private IEnumerator _GenLocalRef(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018699A920-0x000000018699A9F0
+		private IEnumerator _GenLocalRef(string onlineVer, bool isInitial, WorkContext workContext); // 0x000000018614C1F0-0x000000018614C2A0
 		[IteratorStateMachine(typeof(__CheckAndDownloadResource_d__52))]
-		private IEnumerator _CheckAndDownloadResource(string onlineVer, bool isInitial, WorkContext workContext); // 0x0000000186999D78-0x0000000186999E54
-		private void _EventLogDownloadProgress(ref bool first, double current, double total, int target, bool isInitial); // 0x000000018699A808-0x000000018699A920
+		private IEnumerator _CheckAndDownloadResource(string onlineVer, bool isInitial, WorkContext workContext); // 0x0000000186EDFF40-0x0000000186EE0000
+		private void _EventLogDownloadProgress(ref bool first, double current, double total, int target, bool isInitial); // 0x0000000186222BE0-0x0000000186223930
 		[IteratorStateMachine(typeof(__DownloadPatchInfo_d__54))]
-		private IEnumerator _DownloadPatchInfo(string onlineVer, bool isInitial, Beyond.Misc.ObjectRef patchInfoRef); // 0x000000018699A72C-0x000000018699A808
+		private IEnumerator _DownloadPatchInfo(string onlineVer, bool isInitial, Beyond.Misc.ObjectRef patchInfoRef); // 0x0000000186EDFDC0-0x0000000186EDFE80
 		[IteratorStateMachine(typeof(__ClearDownloadFolder_d__55))]
-		private IEnumerator _ClearDownloadFolder(WorkContext workContext, bool needDeleteInitial, bool needDeleteMain); // 0x0000000186999F30-0x000000018699A004
+		private IEnumerator _ClearDownloadFolder(WorkContext workContext, bool needDeleteInitial, bool needDeleteMain); // 0x00000001870DB200-0x00000001870DB2B0
 		[IteratorStateMachine(typeof(__CheckLocalResConsistency_d__56))]
-		private IEnumerator _CheckLocalResConsistency(string onlineVer, bool isInitial, WorkContext context); // 0x0000000186999E54-0x0000000186999F30
+		private IEnumerator _CheckLocalResConsistency(string onlineVer, bool isInitial, WorkContext context); // 0x0000000186EDFE80-0x0000000186EDFF40
 		[IteratorStateMachine(typeof(__VitalError_d__57))]
-		private IEnumerator _VitalError(string error); // 0x000000018699B63C-0x000000018699B6E4
+		private IEnumerator _VitalError(string error); // 0x0000000188CBBF8C-0x0000000188CBC044
 		[IteratorStateMachine(typeof(__LoadStreamingIndex_d__58))]
-		private static IEnumerator _LoadStreamingIndex(bool isInitial, WorkContext workContext, Beyond.Misc.ObjectRef resultRef); // 0x000000018699AD58-0x000000018699AE18
-		public static void WriteLocalResPrefToFile(LocalResPref localResPref, WorkContext workContext); // 0x0000000186999C1C-0x0000000186999D78
-		private static int _CurrentWorkMode(LoginContext context); // 0x000000018455F830-0x000000018455F8F0
+		private static IEnumerator _LoadStreamingIndex(bool isInitial, WorkContext workContext, Beyond.Misc.ObjectRef resultRef); // 0x0000000185F55FB0-0x0000000185F56060
+		public static void WriteLocalResPrefToFile(LocalResPref localResPref, WorkContext workContext); // 0x00000001858D92F0-0x00000001858D93E0
+		private static int _CurrentWorkMode(LoginContext context); // 0x00000001862B07A0-0x00000001862B1310
 	}
 
-	public class LoginProgress : LoginHotUpdateModel.IProgress // TypeDefIndex: 56486
+	public class LoginProgress : LoginHotUpdateModel.IProgress // TypeDefIndex: 81043
 	{
 		// Fields
-		public const int MODE_PROG = 0; // Metadata: 0x023485B3
-		public const int MODE_SIZE = 1; // Metadata: 0x023485B4
-		public const int MODE_IDEL = 2; // Metadata: 0x023485B5
+		public const int MODE_PROG = 0; // Metadata: 0x0263E08E
+		public const int MODE_SIZE = 1; // Metadata: 0x0263E08F
+		public const int MODE_IDEL = 2; // Metadata: 0x0263E090
 		public int mode; // 0x10
 		public double current; // 0x18
 		public double total; // 0x20
@@ -3583,11 +4098,11 @@ namespace Beyond.Login
 		private FDownloadSize m_downloadSize; // 0x30
 	
 		// Nested types
-		private struct FDownloadSize // TypeDefIndex: 56485
+		private struct FDownloadSize // TypeDefIndex: 81042
 		{
 			// Fields
-			private const double MB = 1048576; // Metadata: 0x023485B6
-			private const double KB = 1024; // Metadata: 0x023485BE
+			private const double MB = 1048576; // Metadata: 0x0263E091
+			private const double KB = 1024; // Metadata: 0x0263E099
 			private EUnit m_unit; // 0x00
 			private float m_displayCurrent; // 0x04
 			private float m_displayTotal; // 0x08
@@ -3597,7 +4112,7 @@ namespace Beyond.Login
 			private float m_total; // 0x1C
 	
 			// Nested types
-			private enum EUnit // TypeDefIndex: 56484
+			private enum EUnit // TypeDefIndex: 81041
 			{
 				NONE = 0,
 				B = 1,
@@ -3606,36 +4121,36 @@ namespace Beyond.Login
 			}
 	
 			// Methods
-			public void SetProgress(double current, double total); // 0x00000001869A08D4-0x00000001869A0A60
-			public void SetIdle(); // 0x00000001869A0790-0x00000001869A08D4
-			public void SetSize(double current, double total, double speed); // 0x00000001869A0A60-0x00000001869A0CF0
-			private static EUnit _PickUnit(double number); // 0x00000001869A1094-0x00000001869A1118
-			private static float _DisplayWithUnit(double number, EUnit unit); // 0x00000001869A0CF0-0x00000001869A0DC0
-			private static string _FormatDisplayInfo(float current, float total, EUnit unit); // 0x00000001869A0DC0-0x00000001869A0EF4
-			private static string _FormatSpeedInfo(float speed, EUnit unit); // 0x00000001869A0FA4-0x00000001869A1094
-			private static string _FormatProgressInfo(float current, float total); // 0x00000001869A0EF4-0x00000001869A0FA4
+			public void SetProgress(double current, double total); // 0x000000018539A310-0x000000018539A4A0
+			public void SetIdle(); // 0x0000000188CBE494-0x0000000188CBE5C4
+			public void SetSize(double current, double total, double speed); // 0x000000018539A4A0-0x000000018539A790
+			private static EUnit _PickUnit(double number); // 0x000000018539AD50-0x000000018539ADB0
+			private static float _DisplayWithUnit(double number, EUnit unit); // 0x000000018539A790-0x000000018539A850
+			private static string _FormatDisplayInfo(float current, float total, EUnit unit); // 0x0000000186430B60-0x0000000186430C70
+			private static string _FormatSpeedInfo(float speed, EUnit unit); // 0x000000018539CAE0-0x000000018539CBB0
+			private static string _FormatProgressInfo(float current, float total); // 0x000000018539ADB0-0x000000018539AE50
 		}
 	
 		// Constructors
-		public LoginProgress(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginProgress(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public double GetCurrent(); // 0x00000001869A1480-0x00000001869A14D0
-		public double GetTotal(); // 0x00000001869A157C-0x00000001869A15CC
-		public string GetInfo(); // 0x00000001869A14D0-0x00000001869A157C
+		public double GetCurrent(); // 0x0000000188CBF504-0x0000000188CBF548
+		public double GetTotal(); // 0x0000000188CBF548-0x0000000188CBF58C
+		public string GetInfo(); // 0x000000018539A260-0x000000018539A2E0
 	}
 
-	public class LoginInitNode : LoginWorkFlow.Node // TypeDefIndex: 56490
+	public class LoginInitNode : LoginWorkFlow.Node // TypeDefIndex: 81047
 	{
 		// Fields
 		private bool m_isSDKInited; // 0x20
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1790-0x00000001849B17C0 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65F20-0x0000000186E65F50 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __InitCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 56487
+		private sealed class __InitCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 81044
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3643,23 +4158,23 @@ namespace Beyond.Login
 			public LoginInitNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __InitCoroutine_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __InitCoroutine_d__4(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018484D630-0x000000018484D6F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186644CE0-0x0000000186644DA0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7D64-0x00000001869A7DB0
+			void IEnumerator.Reset(); // 0x0000000188CC3470-0x0000000188CC34BC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __InitRemoteConfigs_d__5 : IEnumerator<object> // TypeDefIndex: 56488
+		private sealed class __InitRemoteConfigs_d__5 : IEnumerator<object> // TypeDefIndex: 81045
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3668,23 +4183,23 @@ namespace Beyond.Login
 			private NetConfigInterface.InitYiedInstruction _initNetConfig_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __InitRemoteConfigs_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __InitRemoteConfigs_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183DA38E0-0x0000000183DA3B90
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001869C0A10-0x00000001869C27F0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7DB0-0x00000001869A7DFC
+			void IEnumerator.Reset(); // 0x0000000188CC34BC-0x0000000188CC3508
 		}
 	
 		[CompilerGenerated]
-		private sealed class __YieldAlertError_d__6 : IEnumerator<object> // TypeDefIndex: 56489
+		private sealed class __YieldAlertError_d__6 : IEnumerator<object> // TypeDefIndex: 81046
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3692,35 +4207,35 @@ namespace Beyond.Login
 			public string errorInfo; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __YieldAlertError_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __YieldAlertError_d__6(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869AA60C-0x00000001869AA69C
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC3E2C-0x0000000188CC3EC0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA69C-0x00000001869AA6E8
+			void IEnumerator.Reset(); // 0x0000000188CC3EC0-0x0000000188CC3F0C
 		}
 	
 		// Constructors
-		public LoginInitNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginInitNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001845E8940-0x00000001845E8A20
+		public override CustomYieldInstruction Work(); // 0x0000000186AECC80-0x0000000186AECD60
 		[IteratorStateMachine(typeof(__InitCoroutine_d__4))]
-		private IEnumerator _InitCoroutine(); // 0x00000001845E8A20-0x00000001845E8A90
+		private IEnumerator _InitCoroutine(); // 0x0000000186AECD60-0x0000000186AECDE0
 		[IteratorStateMachine(typeof(__InitRemoteConfigs_d__5))]
-		private IEnumerator _InitRemoteConfigs(); // 0x000000018484D6F0-0x000000018484D760
+		private IEnumerator _InitRemoteConfigs(); // 0x0000000186644DA0-0x0000000186644E20
 		[IteratorStateMachine(typeof(__YieldAlertError_d__6))]
-		private IEnumerator _YieldAlertError(string errorInfo); // 0x00000001869A1310-0x00000001869A13AC
+		private IEnumerator _YieldAlertError(string errorInfo); // 0x0000000188CBEF30-0x0000000188CBEFD8
 	}
 
-	public class LoginLocalResTask : IDisposable // TypeDefIndex: 56493
+	public class LoginLocalResTask : IDisposable // TypeDefIndex: 81050
 	{
 		// Fields
 		private LoginContext m_loginCxt; // 0x10
@@ -3728,22 +4243,22 @@ namespace Beyond.Login
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 56491
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 81048
 		{
 			// Fields
 			public string indexPath; // 0x10
 			public string prefPath; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass3_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal ResourceIndex _Work_b__0(); // 0x00000001869A2A4C-0x00000001869A2A9C
-			internal LocalResPref _Work_b__1(); // 0x00000001869A2A9C-0x00000001869A2ACC
+			internal ResourceIndex _Work_b__0(); // 0x0000000188CC0B70-0x0000000188CC0BC4
+			internal LocalResPref _Work_b__1(); // 0x0000000188CC0BC4-0x0000000188CC0BF4
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Work_d__3 : IEnumerator<object> // TypeDefIndex: 56492
+		private sealed class _Work_d__3 : IEnumerator<object> // TypeDefIndex: 81049
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3757,37 +4272,138 @@ namespace Beyond.Login
 			private int _initialOrMain_5__6; // 0x50
 			private bool _isInitial_5__7; // 0x54
 			private WaitForAsyncTask<ResourceIndex> _waitForResIndex_5__8; // 0x58
-			private RootCategory _rootCategory_5__9; // 0x60
-			private LoginHotUpdateModel.SimpleProgress _progress_5__10; // 0x68
-			private WaitForAsyncTask<object> _checkTask_5__11; // 0x70
-			private LocalResChecker.CheckOutput _checkOutput_5__12; // 0x78
+			private ResourceIndex _resIndex_5__9; // 0x60
+			private WaitForAsyncTask<LocalResPref> _waitForResPref_5__10; // 0x68
+			private RootCategory _rootCategory_5__11; // 0x70
+			private LoginHotUpdateModel.SimpleProgress _progress_5__12; // 0x78
+			private WaitForAsyncTask<object> _checkTask_5__13; // 0x80
+			private LocalResChecker.CheckOutput _checkOutput_5__14; // 0x88
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Work_d__3(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _Work_d__3(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A2CB0-0x00000001869A3BEC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC0D18-0x0000000188CC2380
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A3BEC-0x00000001869A3C38
+			void IEnumerator.Reset(); // 0x0000000188CC2380-0x0000000188CC23CC
 		}
 	
 		// Constructors
-		public LoginLocalResTask(LoginContext loginContext, LoginHotUpdater.WorkContext workContext); // 0x00000001832AF420-0x00000001832AF450
+		public LoginLocalResTask(LoginContext loginContext, LoginHotUpdater.WorkContext workContext); // 0x0000000185381AC0-0x0000000185381AF0
 	
 		// Methods
 		[IteratorStateMachine(typeof(_Work_d__3))]
-		public IEnumerator Work(); // 0x00000001869A13F0-0x00000001869A1480
-		public void Dispose(); // 0x00000001869A13AC-0x00000001869A13F0
+		public IEnumerator Work(); // 0x0000000188CBF00C-0x0000000188CBF0A4
+		public void Dispose(); // 0x0000000188CBEFD8-0x0000000188CBF00C
 	}
 
-	public class PreloadNode : LoginWorkFlow.Node // TypeDefIndex: 56501
+	public class LoginPreDownloadNode : LoginWorkFlow.Node // TypeDefIndex: 81054
+	{
+		// Fields
+		private int m_cachedPreDownloadCode; // 0x20
+	
+		// Properties
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65EF0-0x0000000186E65F20 
+	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __PreDownloadCoroutine_d__5 : IEnumerator<object> // TypeDefIndex: 81051
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginPreDownloadNode __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __PreDownloadCoroutine_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC3684-0x0000000188CC38A4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CC38A4-0x0000000188CC38F0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __ApplyPreDownloadCoroutine_d__7 : IEnumerator<object> // TypeDefIndex: 81052
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginPreDownloadNode __4__this; // 0x20
+			private LoginGameUpdater.PreDownloadResult _result_5__2; // 0x28
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __ApplyPreDownloadCoroutine_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC2418-0x0000000188CC257C
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CC257C-0x0000000188CC25C8
+		}
+	
+		[CompilerGenerated]
+		private sealed class __DownloadPreDownloadCoroutine_d__8 : IEnumerator<object> // TypeDefIndex: 81053
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginPreDownloadNode __4__this; // 0x20
+			private LoginGameUpdater.PreDownloadResult _result_5__2; // 0x28
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __DownloadPreDownloadCoroutine_d__8(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC26F8-0x0000000188CC2940
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000188CC2940-0x0000000188CC298C
+		}
+	
+		// Constructors
+		public LoginPreDownloadNode(); // 0x0000000186805BA0-0x0000000186805BB0
+	
+		// Methods
+		public override bool OnEvent(ELoginEvent evt, object param); // 0x0000000188CBF0A4-0x0000000188CBF1E0
+		public override CustomYieldInstruction Work(); // 0x000000018722CB00-0x000000018722CB30
+		[IteratorStateMachine(typeof(__PreDownloadCoroutine_d__5))]
+		private IEnumerator _PreDownloadCoroutine(); // 0x0000000188CBF46C-0x0000000188CBF504
+		private bool _ConsumePreDownloadRequest(); // 0x0000000188CBF278-0x0000000188CBF3D4
+		[IteratorStateMachine(typeof(__ApplyPreDownloadCoroutine_d__7))]
+		private IEnumerator _ApplyPreDownloadCoroutine(); // 0x0000000188CBF1E0-0x0000000188CBF278
+		[IteratorStateMachine(typeof(__DownloadPreDownloadCoroutine_d__8))]
+		private IEnumerator _DownloadPreDownloadCoroutine(); // 0x0000000188CBF3D4-0x0000000188CBF46C
+		public bool __iFixBaseProxy_OnEvent(ELoginEvent P0, object P1); // 0x0000000188CB8994-0x0000000188CB899C
+	}
+
+	public class PreloadNode : LoginWorkFlow.Node // TypeDefIndex: 81062
 	{
 		// Fields
 		private LoginHotUpdateModel.SimpleProgress m_progress; // 0x20
@@ -3795,27 +4411,27 @@ namespace Beyond.Login
 		private string m_errorMsg; // 0x30
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B16A0-0x00000001849B16D0 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65DD0-0x0000000186E65E00 
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56494
+		private sealed class __c // TypeDefIndex: 81055
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<bool> __9__5_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000184D4D2F0-0x0000000184D4D350
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E78E0-0x00000001871E7940
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _Work_b__5_0(); // 0x00000001836A61A0-0x00000001836A6260
+			internal bool _Work_b__5_0(); // 0x000000018521DAF0-0x000000018521DBB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __LoginPreLoad_d__7 : IEnumerator<object> // TypeDefIndex: 56495
+		private sealed class __LoginPreLoad_d__7 : IEnumerator<object> // TypeDefIndex: 81056
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3823,23 +4439,23 @@ namespace Beyond.Login
 			public PreloadNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoginPreLoad_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoginPreLoad_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018455F3A0-0x000000018455F4F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001862B1310-0x00000001862B1460
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A8980-0x00000001869A89CC
+			void IEnumerator.Reset(); // 0x0000000188CC35EC-0x0000000188CC3638
 		}
 	
 		[CompilerGenerated]
-		private sealed class __WarmUp_d__9 : IEnumerator<object> // TypeDefIndex: 56496
+		private sealed class __WarmUp_d__9 : IEnumerator<object> // TypeDefIndex: 81057
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3847,23 +4463,23 @@ namespace Beyond.Login
 			public PreloadNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __WarmUp_d__9(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __WarmUp_d__9(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C8F5F0-0x0000000183C8F770
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001860FF8E0-0x00000001861018A0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA5C0-0x00000001869AA60C
+			void IEnumerator.Reset(); // 0x0000000188CC3DE0-0x0000000188CC3E2C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetServerList_d__10 : IEnumerator<object> // TypeDefIndex: 56497
+		private sealed class __GetServerList_d__10 : IEnumerator<object> // TypeDefIndex: 81058
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3871,23 +4487,23 @@ namespace Beyond.Login
 			public PreloadNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetServerList_d__10(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GetServerList_d__10(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001840EACC0-0x00000001840EADB0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001859BBEC0-0x00000001859BBFB0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7D18-0x00000001869A7D64
+			void IEnumerator.Reset(); // 0x0000000188CC3424-0x0000000188CC3470
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetServerListInfoMock_d__12 : IEnumerator<object> // TypeDefIndex: 56498
+		private sealed class __GetServerListInfoMock_d__12 : IEnumerator<object> // TypeDefIndex: 81059
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3895,23 +4511,23 @@ namespace Beyond.Login
 			public PreloadNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetServerListInfoMock_d__12(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GetServerListInfoMock_d__12(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001840E9740-0x00000001840E9810
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001859BAD40-0x00000001859BAE10
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A76E4-0x00000001869A7730
+			void IEnumerator.Reset(); // 0x0000000188CC2DEC-0x0000000188CC2E38
 		}
 	
 		[CompilerGenerated]
-		private sealed class __GetServerListInfo_d__13 : IEnumerator<object> // TypeDefIndex: 56499
+		private sealed class __GetServerListInfo_d__13 : IEnumerator<object> // TypeDefIndex: 81060
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3920,23 +4536,23 @@ namespace Beyond.Login
 			private SDKPromiseEnumerator<List<U8ServerInfo>> _getServerListPromise_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __GetServerListInfo_d__13(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __GetServerListInfo_d__13(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A7730-0x00000001869A7CCC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC2E38-0x0000000188CC33D8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7CCC-0x00000001869A7D18
+			void IEnumerator.Reset(); // 0x0000000188CC33D8-0x0000000188CC3424
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 56500
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 81061
 		{
 			// Fields
 			public List<ServerZoneManager.ServerZoneData> serverZoneDataList; // 0x10
@@ -3944,46 +4560,46 @@ namespace Beyond.Login
 			public Action<SpeedTestResult> callback; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass14_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass14_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __OnGetServerListSuc_b__0(SpeedTestResult result); // 0x00000001869A2698-0x00000001869A29E4
-			internal Task<Hypergryph.SpeedTest.TaskResult> __OnGetServerListSuc_b__1(); // 0x00000001869A29E4-0x00000001869A2A4C
+			internal void __OnGetServerListSuc_b__0(SpeedTestResult result); // 0x0000000188CC07D0-0x0000000188CC0B00
+			internal Task<Hypergryph.SpeedTest.TaskResult> __OnGetServerListSuc_b__1(); // 0x0000000188CC0B00-0x0000000188CC0B70
 		}
 	
 		// Constructors
-		public PreloadNode(); // 0x00000001847318D0-0x0000000184731950
+		public PreloadNode(); // 0x0000000186BCADE0-0x0000000186BCAE60
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x0000000183A811B0-0x0000000183A81370
-		private void _ShowPreloadResourcePanel(); // 0x0000000183A80B70-0x0000000183A80C70
+		public override CustomYieldInstruction Work(); // 0x000000018614A8F0-0x000000018614AAB0
+		private void _ShowPreloadResourcePanel(); // 0x000000018614C410-0x000000018614C520
 		[IteratorStateMachine(typeof(__LoginPreLoad_d__7))]
-		private IEnumerator _LoginPreLoad(); // 0x0000000183A81370-0x0000000183A813E0
-		private void _QuitGame(GameAppExitCode exitCode); // 0x00000001869A2564-0x00000001869A25EC
+		private IEnumerator _LoginPreLoad(); // 0x000000018614AAB0-0x000000018614AB30
+		private void _QuitGame(GameAppExitCode exitCode); // 0x0000000188CC06F0-0x0000000188CC077C
 		[IteratorStateMachine(typeof(__WarmUp_d__9))]
-		private IEnumerator _WarmUp(); // 0x000000018455F560-0x000000018455F5D0
+		private IEnumerator _WarmUp(); // 0x00000001862B14E0-0x00000001862B1560
 		[IteratorStateMachine(typeof(__GetServerList_d__10))]
-		private IEnumerator _GetServerList(); // 0x000000018455F4F0-0x000000018455F560
-		private void _EnterPreLoad(); // 0x0000000183C11630-0x0000000183C116B0
+		private IEnumerator _GetServerList(); // 0x00000001862B1460-0x00000001862B14E0
+		private void _EnterPreLoad(); // 0x00000001862B2F80-0x00000001862B3010
 		[IteratorStateMachine(typeof(__GetServerListInfoMock_d__12))]
-		private IEnumerator _GetServerListInfoMock(); // 0x00000001840EADB0-0x00000001840EAE20
+		private IEnumerator _GetServerListInfoMock(); // 0x00000001859BBFB0-0x00000001859BC030
 		[IteratorStateMachine(typeof(__GetServerListInfo_d__13))]
-		private IEnumerator _GetServerListInfo(); // 0x00000001869A2418-0x00000001869A24A8
-		private void _OnGetServerListSuc(); // 0x00000001840EA1F0-0x00000001840EACC0
-		private void _OnGetServerListFail(string errorInfo); // 0x00000001869A24A8-0x00000001869A2564
+		private IEnumerator _GetServerListInfo(); // 0x0000000188CC0594-0x0000000188CC062C
+		private void _OnGetServerListSuc(); // 0x00000001859BB8A0-0x00000001859BBEC0
+		private void _OnGetServerListFail(string errorInfo); // 0x0000000188CC062C-0x0000000188CC06F0
 	}
 
-	public class LoginSDKInitNode : LoginWorkFlow.Node // TypeDefIndex: 56505
+	public class LoginSDKInitNode : LoginWorkFlow.Node // TypeDefIndex: 81065
 	{
 		// Fields
 		private bool m_isSDKInited; // 0x20
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1760-0x00000001849B1790 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65EC0-0x0000000186E65EF0 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __SDKInitCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 56502
+		private sealed class __SDKInitCoroutine_d__4 : IEnumerator<object> // TypeDefIndex: 81063
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3992,82 +4608,57 @@ namespace Beyond.Login
 			private string _env_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __SDKInitCoroutine_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __SDKInitCoroutine_d__4(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183C8FD10-0x0000000183C90130
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001857533A0-0x0000000185756090
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA1B4-0x00000001869AA200
+			void IEnumerator.Reset(); // 0x0000000188CC393C-0x0000000188CC3988
 		}
 	
 		[CompilerGenerated]
-		private sealed class __WaitForSDKInited_d__5 : IEnumerator<object> // TypeDefIndex: 56503
+		private sealed class __WaitForSDKInited_d__5 : IEnumerator<object> // TypeDefIndex: 81064
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __WaitForSDKInited_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __WaitForSDKInited_d__5(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184A426B0-0x0000000184A42760
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186F94370-0x0000000186F94440
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869AA574-0x00000001869AA5C0
-		}
-	
-		[CompilerGenerated]
-		private sealed class __InitSubSDKs_d__6 : IEnumerator<object> // TypeDefIndex: 56504
-		{
-			// Fields
-			private int __1__state; // 0x10
-			private object __2__current; // 0x18
-			public string env; // 0x20
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-	
-			// Constructors
-			[DebuggerHidden]
-			public __InitSubSDKs_d__6(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018332A190-0x000000018332A350
-			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A7DFC-0x00000001869A7E48
+			void IEnumerator.Reset(); // 0x0000000188CC3D94-0x0000000188CC3DE0
 		}
 	
 		// Constructors
-		public LoginSDKInitNode(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginSDKInitNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001845E8A90-0x00000001845E8B70
+		public override CustomYieldInstruction Work(); // 0x0000000186AECDE0-0x0000000186AECEC0
 		[IteratorStateMachine(typeof(__SDKInitCoroutine_d__4))]
-		private IEnumerator _SDKInitCoroutine(); // 0x00000001845E8B70-0x00000001845E8BE0
+		private IEnumerator _SDKInitCoroutine(); // 0x0000000186AECEC0-0x0000000186AECF40
 		[IteratorStateMachine(typeof(__WaitForSDKInited_d__5))]
-		private IEnumerator _WaitForSDKInited(); // 0x0000000183C90130-0x0000000183C90190
-		[IteratorStateMachine(typeof(__InitSubSDKs_d__6))]
-		private IEnumerator _InitSubSDKs(string env); // 0x0000000183C90200-0x0000000183C90280
+		private IEnumerator _WaitForSDKInited(); // 0x0000000185753330-0x00000001857533A0
+		private void _InitSubSDKs(); // 0x0000000182781FA0-0x0000000182783280
 	}
 
-	public class U8LoginNode : LoginWorkFlow.Node // TypeDefIndex: 56508
+	public class U8LoginNode : LoginWorkFlow.Node // TypeDefIndex: 81068
 	{
 		// Fields
 		private bool m_loginSuc; // 0x20
@@ -4076,11 +4667,11 @@ namespace Beyond.Login
 		private int m_rqstSkipLoginCache; // 0x24
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1610-0x00000001849B1640 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65D10-0x0000000186E65D40 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __LoginCoroutine_d__7 : IEnumerator<object> // TypeDefIndex: 56506
+		private sealed class __LoginCoroutine_d__7 : IEnumerator<object> // TypeDefIndex: 81066
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -4088,23 +4679,23 @@ namespace Beyond.Login
 			public U8LoginNode __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __LoginCoroutine_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __LoginCoroutine_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001815043A0-0x0000000181505930
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001862B1560-0x00000001862B1780
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000181505930-0x0000000181505980
+			void IEnumerator.Reset(); // 0x0000000188CC35A0-0x0000000188CC35EC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __FinishLogin_d__8 : IEnumerator<object> // TypeDefIndex: 56507
+		private sealed class __FinishLogin_d__8 : IEnumerator<object> // TypeDefIndex: 81067
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -4113,53 +4704,53 @@ namespace Beyond.Login
 			private SDKPromiseEnumerator<U8AuthV2Result> _authPromise_5__3; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __FinishLogin_d__8(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __FinishLogin_d__8(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000181502380-0x0000000181504350
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001850CDDA0-0x00000001850CE090
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000181504350-0x00000001815043A0
+			void IEnumerator.Reset(); // 0x0000000188CC2CBC-0x0000000188CC2D08
 		}
 	
 		// Constructors
-		public U8LoginNode(); // 0x00000001841E1670-0x00000001841E1680
+		public U8LoginNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x00000001845E8BE0-0x00000001845E8CC0
+		public override CustomYieldInstruction Work(); // 0x0000000186AECF40-0x0000000186AED020
 		[IteratorStateMachine(typeof(__LoginCoroutine_d__7))]
-		private IEnumerator _LoginCoroutine(); // 0x00000001845E8CC0-0x00000001845E8D30
+		private IEnumerator _LoginCoroutine(); // 0x0000000186AED020-0x0000000186AED0A0
 		[IteratorStateMachine(typeof(__FinishLogin_d__8))]
-		private IEnumerator _FinishLogin(); // 0x0000000184D32A40-0x0000000184D32AA0
-		public override bool OnEvent(ELoginEvent evt, object param); // 0x00000001869AA6E8-0x00000001869AA76C
-		private void _StartSDKLogin(); // 0x00000001840EAE20-0x00000001840EB080
-		private void _SetCursorOnLoginStart(); // 0x00000001840EB1E0-0x00000001840EB260
-		private void _SetCursorOnLoginFinish(); // 0x00000001840EB260-0x00000001840EB2E0
-		private void _SkipSDKLogin(); // 0x00000001869AA940-0x00000001869AAA0C
-		private void _ClearLoginCaches(); // 0x0000000183A7F950-0x0000000183A80950
-		private void _StartGameProtocolUpdateCheck(); // 0x0000000181509B20-0x000000018150B3A0
-		private void _OnGameProtocolUpdateCheckSucceeded(); // 0x0000000181509160-0x0000000181509B20
-		private void _OnGameProtocolUpdateCheckFailed(); // 0x0000000181508230-0x0000000181509160
-		private void _ClearGameProtocolUpdateCheckEvents(); // 0x0000000181507380-0x0000000181508230
-		private void _OnLoginSuc(); // 0x00000001841E5BC0-0x00000001841E5CA0
-		private void _OnLoginFail(object rawInfo); // 0x00000001869AA818-0x00000001869AA940
-		private void _OnSDKViewDisabled(); // 0x00000001841E7AC0-0x00000001841E7B00
-		private void _OnLoginCanceled(); // 0x00000001869AA76C-0x00000001869AA818
-		private void _EnableBlurMask(bool enable); // 0x00000001841E5E00-0x00000001841E5EA0
+		private IEnumerator _FinishLogin(); // 0x00000001862B1780-0x00000001862B17F0
+		public override bool OnEvent(ELoginEvent evt, object param); // 0x0000000188CC3F0C-0x0000000188CC3F68
+		private void _StartSDKLogin(); // 0x00000001859BC030-0x00000001859BC290
+		private void _SetCursorOnLoginStart(); // 0x00000001859BC3F0-0x00000001859BC480
+		private void _SetCursorOnLoginFinish(); // 0x00000001859BC570-0x00000001859BC600
+		private void _SkipSDKLogin(); // 0x0000000188CC439C-0x0000000188CC446C
+		private void _ClearLoginCaches(); // 0x000000018614BD00-0x000000018614BDD0
+		private void _StartGameProtocolUpdateCheck(); // 0x00000001859BC600-0x00000001859BC710
+		private void _OnGameProtocolUpdateCheckSucceeded(); // 0x0000000188CC4128-0x0000000188CC41B8
+		private void _OnGameProtocolUpdateCheckFailed(); // 0x0000000188CC4040-0x0000000188CC4128
+		private void _ClearGameProtocolUpdateCheckEvents(); // 0x0000000186149F70-0x000000018614A0C0
+		private void _OnLoginSuc(); // 0x00000001863F4580-0x00000001863F6500
+		private void _OnLoginFail(object rawInfo); // 0x0000000188CC426C-0x0000000188CC439C
+		private void _OnSDKViewDisabled(); // 0x00000001863F6500-0x00000001863F6530
+		private void _OnLoginCanceled(); // 0x0000000188CC41B8-0x0000000188CC426C
+		private void _EnableBlurMask(bool enable); // 0x00000001863F7C70-0x00000001863F7D20
 		[CompilerGenerated]
-		private void __StartSDKLogin_b__10_0(string sessionToken); // 0x0000000181505980-0x0000000181506540
+		private void __StartSDKLogin_b__10_0(string sessionToken); // 0x00000001859BC480-0x00000001859BC530
 		[CompilerGenerated]
-		private void __StartSDKLogin_b__10_1(object pram); // 0x0000000181506540-0x0000000181507380
-		public bool __iFixBaseProxy_OnEvent(ELoginEvent P0, object P1); // 0x0000000186998558-0x0000000186998560
+		private void __StartSDKLogin_b__10_1(object pram); // 0x0000000188CC3F68-0x0000000188CC4040
+		public bool __iFixBaseProxy_OnEvent(ELoginEvent P0, object P1); // 0x0000000188CB8994-0x0000000188CB899C
 	}
 
-	public class LoginProperty<T> : LoginWorkFlow.IWorkerUpdateOnce // TypeDefIndex: 56509
+	public class LoginProperty<T> : LoginWorkFlow.IWorkerUpdateOnce // TypeDefIndex: 81069
 		where T : class, new()
 	{
 		// Fields
@@ -4182,19 +4773,19 @@ namespace Beyond.Login
 		public void Worker_UpdateOnce();
 	}
 
-	public interface ILoginBinder<T> // TypeDefIndex: 56510
+	public interface ILoginBinder<T> // TypeDefIndex: 81070
 	{
 		// Methods
 		void OnValueChanged(T value);
 	}
 
-	public interface ILoginContextReceiver // TypeDefIndex: 56511
+	public interface ILoginContextReceiver // TypeDefIndex: 81071
 	{
 		// Methods
 		void OnLoginContext(LoginContext context);
 	}
 
-	public class LoginViewModel // TypeDefIndex: 56513
+	public class LoginViewModel // TypeDefIndex: 81073
 	{
 		// Fields
 		public LoginWorkFlow.ENode workCachedCurNode; // 0x10
@@ -4205,14 +4796,23 @@ namespace Beyond.Login
 		public bool isU8LoginCancelled; // 0x20
 		[CompilerGenerated]
 		private int _rqstResRepairCode_k__BackingField; // 0x24
-		public FAgeTipsPolicy ageTipsPolicy; // 0x28
+		[CompilerGenerated]
+		private int _rqstPreDownloadCode_k__BackingField; // 0x28
+		[CompilerGenerated]
+		private bool _isPreDownloadDownloading_k__BackingField; // 0x2C
+		[CompilerGenerated]
+		private int _rqstCancelPreDownloadCode_k__BackingField; // 0x30
+		public FAgeTipsPolicy ageTipsPolicy; // 0x34
 	
 		// Properties
-		public int rqstSkipU8Login { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86310-0x0000000184D86320 0x0000000184D86320-0x0000000184D86330
-		public int rqstResRepairCode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F0020-0x00000001811F0030 0x00000001811F0030-0x00000001811F0040
+		public int rqstSkipU8Login { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233000-0x0000000187233010 0x0000000187233010-0x0000000187233020
+		public int rqstResRepairCode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182A819B0-0x0000000182A819C0 0x0000000182A819D0-0x0000000182A819E0
+		public int rqstPreDownloadCode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271A60-0x0000000182271A70 0x0000000182271A90-0x0000000182271AA0
+		public bool isPreDownloadDownloading { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018224A5F0-0x000000018224A600 0x000000018224A600-0x000000018224A610
+		public int rqstCancelPreDownloadCode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBA0-0x000000018226EBB0 0x0000000186033510-0x0000000186033520
 	
 		// Nested types
-		public struct FAgeTipsPolicy // TypeDefIndex: 56512
+		public struct FAgeTipsPolicy // TypeDefIndex: 81072
 		{
 			// Fields
 			public bool canOpenDetail; // 0x00
@@ -4220,22 +4820,25 @@ namespace Beyond.Login
 			public bool displayKR; // 0x02
 	
 			// Properties
-			public bool display { get; } // 0x0000000183408B80-0x0000000183408BB0 
+			public bool display { get; } // 0x000000018614FBC0-0x000000018614FBF0 
 		}
 	
 		// Constructors
-		public LoginViewModel(); // 0x0000000184CD95A0-0x0000000184CD95D0
+		public LoginViewModel(); // 0x00000001870EA530-0x00000001870EA560
 	
 		// Methods
-		public bool IsAgeTipsVisible(); // 0x0000000183408B00-0x0000000183408B80
-		public bool IsGovTipsVisible(); // 0x00000001834089C0-0x00000001834089F0
-		public bool IsMenuVisible(); // 0x0000000183407160-0x0000000183407230
-		public void RequestResourceRepair(); // 0x00000001869A15CC-0x00000001869A1618
-		public void RequestSkipU8Login(); // 0x00000001869A1618-0x00000001869A1664
-		private static FAgeTipsPolicy _LoadAgeTipsPolicy(); // 0x0000000184CD95D0-0x0000000184CD9640
+		public bool IsAgeTipsVisible(); // 0x000000018614FB30-0x000000018614FBC0
+		public bool IsGovTipsVisible(); // 0x0000000186BB4580-0x0000000186BB45B0
+		public bool IsMenuVisible(); // 0x0000000186151500-0x00000001861515D0
+		public void RequestResourceRepair(); // 0x0000000188CBF694-0x0000000188CBF6D0
+		public void RequestPreDownload(); // 0x0000000188CBF658-0x0000000188CBF694
+		public void RequestCancelPreDownload(); // 0x0000000188CBF61C-0x0000000188CBF658
+		public void SetPreDownloadDownloading(bool value); // 0x0000000188CBF70C-0x0000000188CBF744
+		public void RequestSkipU8Login(); // 0x0000000188CBF6D0-0x0000000188CBF70C
+		private static FAgeTipsPolicy _LoadAgeTipsPolicy(); // 0x00000001870EA560-0x00000001870EA5E0
 	}
 
-	public class LoginViewProperty : LoginProperty<LoginViewModel> // TypeDefIndex: 56514
+	public class LoginViewProperty : LoginProperty<LoginViewModel> // TypeDefIndex: 81074
 	{
 		// Fields
 		[CompilerGenerated]
@@ -4246,15 +4849,15 @@ namespace Beyond.Login
 		private LoginServerSelectProp _serverSelectProp_k__BackingField; // 0x40
 	
 		// Properties
-		public LoginHotUpdateProp hotUpdateProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-		public LoginAgeTipsProp ageTipsProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
-		public LoginServerSelectProp serverSelectProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public LoginHotUpdateProp hotUpdateProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+		public LoginAgeTipsProp ageTipsProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182986470-0x0000000182986480 0x0000000186AB5C00-0x0000000186AB5C10
+		public LoginServerSelectProp serverSelectProp { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EEA0-0x000000018226EEB0 0x00000001870EAAD0-0x00000001870EAAE0
 	
 		// Constructors
-		public LoginViewProperty(LoginWorkFlow workflow); // 0x0000000183A7F7F0-0x0000000183A7F900
+		public LoginViewProperty(LoginWorkFlow workflow); // 0x000000018614BBA0-0x000000018614BCB0
 	}
 
-	public class LoginAgeTipsModel // TypeDefIndex: 56515
+	public class LoginAgeTipsModel // TypeDefIndex: 81075
 	{
 		// Fields
 		public string contentCache; // 0x10
@@ -4262,30 +4865,30 @@ namespace Beyond.Login
 		public bool isFetchingContent; // 0x19
 	
 		// Constructors
-		public LoginAgeTipsModel(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginAgeTipsModel(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public bool IsContentEmpty(); // 0x0000000183A809C0-0x0000000183A80A00
-		public bool CanDisplay(); // 0x0000000184B480F0-0x0000000184B48120
+		public bool IsContentEmpty(); // 0x000000018614BED0-0x000000018614BF10
+		public bool CanDisplay(); // 0x000000018708F900-0x000000018708F930
 	}
 
-	public class LoginAgeTipsProp : LoginProperty<LoginAgeTipsModel> // TypeDefIndex: 56516
+	public class LoginAgeTipsProp : LoginProperty<LoginAgeTipsModel> // TypeDefIndex: 81076
 	{
 		// Constructors
-		public LoginAgeTipsProp(LoginWorkFlow workflow); // 0x0000000183A80950-0x0000000183A809C0
+		public LoginAgeTipsProp(LoginWorkFlow workflow); // 0x000000018614BDD0-0x000000018614BE40
 	
 		// Methods
-		public void ClearContentCache(); // 0x00000001869A119C-0x00000001869A1260
-		public void UpdateContent(string content); // 0x00000001869A1260-0x00000001869A1310
+		public void ClearContentCache(); // 0x000000018614BE40-0x000000018614BED0
+		public void UpdateContent(string content); // 0x0000000188CBECA8-0x0000000188CBED64
 	}
 
-	public class LoginWorkFlow : IDisposable // TypeDefIndex: 56527
+	public class LoginWorkFlow : IDisposable // TypeDefIndex: 81087
 	{
 		// Fields
-		public const string CURSOR_KEY_LOGIN = "login"; // Metadata: 0x023485CC
+		public const string CURSOR_KEY_LOGIN = "login"; // Metadata: 0x0263E0A7
 		private static bool s_hasEnteredPreloadThisSession; // 0x00
 		private static readonly ENode[] NODE_ORDER; // 0x08
-		private const ENode NEED_GAME_LOGIN_STATE_BEFORE_NODE = ENode.Preload; // Metadata: 0x023485D2
+		private const ENode NEED_GAME_LOGIN_STATE_BEFORE_NODE = ENode.Preload; // Metadata: 0x0263E0AD
 		private readonly Node[] m_nodes; // 0x10
 		private readonly LoginContext m_context; // 0x18
 		private FWork m_work; // 0x20
@@ -4296,10 +4899,10 @@ namespace Beyond.Login
 		private bool _isDisposed_k__BackingField; // 0x48
 	
 		// Properties
-		public bool isDisposed { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public bool isDisposed { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018223CB60-0x000000018223CB70 0x000000018223CB70-0x000000018223CB80
 	
 		// Nested types
-		public abstract class Node // TypeDefIndex: 56517
+		public abstract class Node // TypeDefIndex: 81077
 		{
 			// Fields
 			[CompilerGenerated]
@@ -4308,25 +4911,25 @@ namespace Beyond.Login
 			private LoginWorkFlow _workflow_k__BackingField; // 0x18
 	
 			// Properties
-			protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-			protected LoginWorkFlow workflow { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+			protected LoginWorkFlow workflow { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
 			public abstract ENode type { get; }
 	
 			// Constructors
-			protected Node(); // 0x00000001841E1670-0x00000001841E1680
+			protected Node(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Init(LoginContext context, LoginWorkFlow workflow); // 0x0000000183405FE0-0x0000000183406040
-			public void Dispose(); // 0x00000001834060C0-0x0000000183406100
+			public void Init(LoginContext context, LoginWorkFlow workflow); // 0x000000018614EB50-0x000000018614EBA0
+			public void Dispose(); // 0x000000018614EBD0-0x000000018614EC10
 			public abstract CustomYieldInstruction Work();
-			public virtual bool CanCancel(); // 0x00000001869A2380-0x00000001869A23CC
-			public virtual CustomYieldInstruction Cancel(); // 0x00000001869A23CC-0x00000001869A2418
-			protected virtual void OnInit(); // 0x0000000183406040-0x0000000183406070
-			public virtual void OnDispose(); // 0x00000001846DD140-0x00000001846DD170
-			public virtual bool OnEvent(ELoginEvent evt, object param); // 0x000000018470B370-0x000000018470B450
+			public virtual bool CanCancel(); // 0x0000000188CC0514-0x0000000188CC0554
+			public virtual CustomYieldInstruction Cancel(); // 0x0000000188CC0554-0x0000000188CC0594
+			protected virtual void OnInit(); // 0x000000018614EBA0-0x000000018614EBD0
+			public virtual void OnDispose(); // 0x0000000186BBC760-0x0000000186BBC790
+			public virtual bool OnEvent(ELoginEvent evt, object param); // 0x00000001850CADE0-0x00000001850CAE10
 		}
 	
-		public enum ENode // TypeDefIndex: 56518
+		public enum ENode // TypeDefIndex: 81078
 		{
 			None = 0,
 			CheckForUpdate = 1,
@@ -4334,29 +4937,30 @@ namespace Beyond.Login
 			GameUpdate = 3,
 			Init = 4,
 			U8Login = 5,
-			HotUpdate = 6,
-			ResCheck = 7,
-			Preload = 8,
-			PreloadPostDelay = 9,
-			Trans2GsLogin = 10,
-			GsLogin = 11,
-			CreateRole = 12,
-			Finish = 13
+			PreDownload = 6,
+			HotUpdate = 7,
+			ResCheck = 8,
+			Preload = 9,
+			PreloadPostDelay = 10,
+			Trans2GsLogin = 11,
+			GsLogin = 12,
+			CreateRole = 13,
+			Finish = 14
 		}
 	
-		public interface IWorkerUpdateOnce // TypeDefIndex: 56519
+		public interface IWorkerUpdateOnce // TypeDefIndex: 81079
 		{
 			// Methods
 			void Worker_UpdateOnce();
 		}
 	
-		public interface IEventReceiver // TypeDefIndex: 56520
+		public interface IEventReceiver // TypeDefIndex: 81080
 		{
 			// Methods
 			void OnEvent(ELoginEvent evt, object param);
 		}
 	
-		private class Worker : IDisposable // TypeDefIndex: 56522
+		private class Worker : IDisposable // TypeDefIndex: 81082
 		{
 			// Fields
 			private HashSet<IWorkerUpdateOnce> m_updateOnce; // 0x10
@@ -4370,13 +4974,13 @@ namespace Beyond.Login
 			private Node _curNode_k__BackingField; // 0x30
 	
 			// Properties
-			public bool isCancelled { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F33C0-0x00000001811F33D0 0x00000001811F33D0-0x00000001811F33E0
-			public bool isDisposed { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D867B0-0x0000000184D867C0 0x0000000184D867C0-0x0000000184D867D0
-			public Node curNode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+			public bool isCancelled { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DF70-0x000000018225DF80 0x000000018225DF80-0x000000018225DF90
+			public bool isDisposed { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E0D0-0x000000018225E0E0 0x000000018225E0E0-0x000000018225E0F0
+			public Node curNode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class _Work_d__20 : IEnumerator<object> // TypeDefIndex: 56521
+			private sealed class _Work_d__20 : IEnumerator<object> // TypeDefIndex: 81081
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -4386,36 +4990,36 @@ namespace Beyond.Login
 				private CustomYieldInstruction _cancelTask_5__2; // 0x30
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _Work_d__20(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _Work_d__20(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x0000000183D4ECE0-0x0000000183D4EE00
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000186163420-0x0000000186163540
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x00000001869A2C64-0x00000001869A2CB0
+				void IEnumerator.Reset(); // 0x0000000188CC0CCC-0x0000000188CC0D18
 			}
 	
 			// Constructors
-			public Worker(); // 0x0000000184CC9AF0-0x0000000184CC9BB0
+			public Worker(); // 0x00000001870D1690-0x00000001870D1750
 	
 			// Methods
-			public bool Cancel(); // 0x00000001869AAA0C-0x00000001869AAF5C
-			public void Dispose(); // 0x0000000184D26A80-0x0000000184D26B00
-			public void SetCurNode(Node node); // 0x0000000183405DE0-0x0000000183405E90
-			public bool UpdateOnce(IWorkerUpdateOnce inst); // 0x000000018450CB50-0x000000018450CBD0
-			public void TickInEmptyFrame(); // 0x0000000183D4ECA0-0x0000000183D4ECE0
+			public bool Cancel(); // 0x0000000188CC446C-0x0000000188CC49C0
+			public void Dispose(); // 0x000000018718E110-0x000000018718E190
+			public void SetCurNode(Node node); // 0x000000018614E8A0-0x000000018614E960
+			public bool UpdateOnce(IWorkerUpdateOnce inst); // 0x0000000186942AE0-0x0000000186942B70
+			public void TickInEmptyFrame(); // 0x00000001861633F0-0x0000000186163420
 			[IteratorStateMachine(typeof(_Work_d__20))]
-			public IEnumerator Work(CustomYieldInstruction work); // 0x0000000183406100-0x0000000183406190
-			private void _InternalTick(); // 0x0000000183D4EE00-0x0000000183D4F0D0
+			public IEnumerator Work(CustomYieldInstruction work); // 0x000000018614EC10-0x000000018614ECB0
+			private void _InternalTick(); // 0x0000000186163540-0x0000000186163840
 		}
 	
-		private struct FWork // TypeDefIndex: 56523
+		private struct FWork // TypeDefIndex: 81083
 		{
 			// Fields
 			public static readonly FWork IDLE; // 0x00
@@ -4427,24 +5031,24 @@ namespace Beyond.Login
 			private bool _isWorking_k__BackingField; // 0x08
 	
 			// Properties
-			public bool didFallback { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D883E0-0x0000000184D883F0 0x0000000184D87180-0x0000000184D87190
-			public int nodeIndex { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88B20-0x0000000184D88B30 0x0000000184D88B50-0x0000000184D88B60
-			public bool isWorking { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8CCC0-0x0000000184D8CCD0 0x0000000184D8CCD0-0x0000000184D8CCE0
-			public ENode curNode { get; } // 0x0000000183406B00-0x0000000183406BD0 
+			public bool didFallback { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001844AD2A0-0x00000001844AD2B0 0x0000000187233BE0-0x0000000187233BF0
+			public int nodeIndex { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872342E0-0x00000001872342F0 0x0000000187235AB0-0x0000000187235AC0
+			public bool isWorking { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001844AD2B0-0x00000001844AD2C0 0x00000001872399A0-0x00000001872399B0
+			public ENode curNode { get; } // 0x000000018614F670-0x000000018614F740 
 	
 			// Constructors
-			static FWork(); // 0x00000001841E1670-0x00000001841E1680
+			static FWork(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void MarkFallback(int newIndex); // 0x00000001869A1118-0x00000001869A119C
-			public bool ConsumeFallback(); // 0x0000000183406C30-0x0000000183406C90
-			public void MoveNextIndex(); // 0x0000000183406BD0-0x0000000183406C30
-			public static FWork Start(); // 0x0000000184D18180-0x0000000184D18210
-			public bool WorkEnd(); // 0x0000000183406C90-0x0000000183406D40
+			public void MarkFallback(int newIndex); // 0x0000000188CBE5C4-0x0000000188CBE64C
+			public bool ConsumeFallback(); // 0x000000018614F7B0-0x000000018614F820
+			public void MoveNextIndex(); // 0x000000018614F740-0x000000018614F7B0
+			public static FWork Start(); // 0x00000001871C3AF0-0x00000001871C3B70
+			public bool WorkEnd(); // 0x000000018614F820-0x000000018614F8E0
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoWorkFlow_d__25 : IEnumerator<object> // TypeDefIndex: 56524
+		private sealed class _DoWorkFlow_d__25 : IEnumerator<object> // TypeDefIndex: 81084
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -4459,23 +5063,23 @@ namespace Beyond.Login
 			private int __7__wrap7; // 0x48
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoWorkFlow_d__25(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _DoWorkFlow_d__25(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001834064C0-0x0000000183406B00
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018614F000-0x000000018614F670
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A25F4-0x00000001869A2640
+			void IEnumerator.Reset(); // 0x0000000188CC0784-0x0000000188CC07D0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __FetchAgeTipsCoroutine_d__45 : IEnumerator<object> // TypeDefIndex: 56525
+		private sealed class __FetchAgeTipsCoroutine_d__45 : IEnumerator<object> // TypeDefIndex: 81085
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -4487,23 +5091,23 @@ namespace Beyond.Login
 			private Beyond.Misc.ObjectRef _httpRetRef_5__4; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __FetchAgeTipsCoroutine_d__45(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __FetchAgeTipsCoroutine_d__45(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869A6C84-0x00000001869A6F64
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CC298C-0x0000000188CC2C70
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A6F64-0x00000001869A6FB0
+			void IEnumerator.Reset(); // 0x0000000188CC2C70-0x0000000188CC2CBC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __AdjustCurrentGameState_d__47 : IEnumerator<object> // TypeDefIndex: 56526
+		private sealed class __AdjustCurrentGameState_d__47 : IEnumerator<object> // TypeDefIndex: 81086
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -4511,136 +5115,136 @@ namespace Beyond.Login
 			public ENode curNode; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __AdjustCurrentGameState_d__47(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __AdjustCurrentGameState_d__47(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001836A6080-0x00000001836A6140
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186152630-0x00000001861526F0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869A3C38-0x00000001869A3C84
+			void IEnumerator.Reset(); // 0x0000000188CC23CC-0x0000000188CC2418
 		}
 	
 		// Constructors
-		public LoginWorkFlow(LoginContext context); // 0x0000000183406190-0x0000000183406310
-		static LoginWorkFlow(); // 0x0000000184CE9E50-0x0000000184CE9EF0
+		public LoginWorkFlow(LoginContext context); // 0x000000018614ECB0-0x000000018614EE40
+		static LoginWorkFlow(); // 0x000000018710FF40-0x000000018710FFE0
 	
 		// Methods
-		public static void MarkEnteredPreloadThisSession(); // 0x0000000183A82A90-0x0000000183A82B00
-		public static void ClearEnteredPreloadThisSession(); // 0x00000001869A1788-0x00000001869A1800
-		public static bool HasEnteredPreloadThisSession(); // 0x00000001869A1A5C-0x00000001869A1AD4
-		private Node[] _RegisterNodes(); // 0x0000000184731570-0x00000001847318D0
+		public static void MarkEnteredPreloadThisSession(); // 0x000000018614AE10-0x000000018614AE80
+		public static void ClearEnteredPreloadThisSession(); // 0x0000000188CBF850-0x0000000188CBF8CC
+		public static bool HasEnteredPreloadThisSession(); // 0x0000000188CBFB3C-0x0000000188CBFBB4
+		private Node[] _RegisterNodes(); // 0x0000000186BCAA30-0x0000000186BCADE0
 		[IteratorStateMachine(typeof(_DoWorkFlow_d__25))]
-		public IEnumerator DoWorkFlow(); // 0x00000001841E4DE0-0x00000001841E4E50
-		public void Dispose(); // 0x0000000183406310-0x00000001834064C0
-		public bool PeekFallbackStatus(out ENode fallbackNode); // 0x00000001846DD390-0x00000001846DD440
-		public bool Fallback(ENode target, bool validCheck = true /* Metadata: 0x023485CA */); // 0x00000001869A1800-0x00000001869A1A5C
-		public bool CancelAndFallback(ENode target, bool validCheck = true /* Metadata: 0x023485CB */); // 0x00000001869A16F4-0x00000001869A1788
-		public void SendEvent(ELoginEvent evt, object param = null); // 0x000000018470AF20-0x000000018470B260
-		public void AddEventReceiver(IEventReceiver receiver); // 0x00000001869A1664-0x00000001869A16F4
-		public bool UpdateOnce(IWorkerUpdateOnce inst); // 0x000000018450CAF0-0x000000018450CB50
-		public static bool IsBeforeWork(ENode curNode, ENode check); // 0x00000001834077A0-0x0000000183407810
-		public static bool IsOnOrAfterWork(ENode curNode, ENode check); // 0x00000001834088B0-0x0000000183408960
-		public static bool IsAfterWork(ENode target, ENode check); // 0x00000001869A1AD4-0x00000001869A1B98
-		private bool _HandleGlobalEvent(ELoginEvent evt, object param); // 0x000000018470B260-0x000000018470B2D0
-		private void _EventOnOpenAgeTips(); // 0x00000001869A1E60-0x00000001869A1FE0
-		private void _EventOnCloseAgeTips(); // 0x00000001869A1B98-0x00000001869A1CC4
-		private void _EventOnOpenServerSelect(bool isOpen); // 0x00000001869A1FE0-0x00000001869A20B0
-		private void _EventOnSelectServer(ServerZoneManager.ServerZoneData serverZoneData); // 0x00000001869A20B0-0x00000001869A2190
-		private void _EventOnConfirmServer(); // 0x00000001869A1CC4-0x00000001869A1E60
-		private void _EnableCursor(bool enabled); // 0x0000000184B2C680-0x0000000184B2C740
-		private void _UpdateCursor([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x00000001869A2238-0x00000001869A2380
-		private void _EnbaleToggleGroup(); // 0x00000001849D6BB0-0x00000001849D6C20
+		public IEnumerator DoWorkFlow(); // 0x0000000185319AA0-0x0000000185319B20
+		public void Dispose(); // 0x000000018614EE40-0x000000018614F000
+		public bool PeekFallbackStatus(out ENode fallbackNode); // 0x0000000186BBC9A0-0x0000000186BBCA60
+		public bool Fallback(ENode target, bool validCheck = true /* Metadata: 0x0263E0A5 */); // 0x0000000188CBF8CC-0x0000000188CBFB3C
+		public bool CancelAndFallback(ENode target, bool validCheck = true /* Metadata: 0x0263E0A6 */); // 0x0000000188CBF7E0-0x0000000188CBF850
+		public void SendEvent(ELoginEvent evt, object param = null); // 0x00000001850CA940-0x00000001850CACD0
+		public void AddEventReceiver(IEventReceiver receiver); // 0x0000000188CBF744-0x0000000188CBF7E0
+		public bool UpdateOnce(IWorkerUpdateOnce inst); // 0x0000000186942AA0-0x0000000186942AE0
+		public static bool IsBeforeWork(ENode curNode, ENode check); // 0x00000001861512A0-0x0000000186151320
+		public static bool IsOnOrAfterWork(ENode curNode, ENode check); // 0x0000000186151450-0x0000000186151500
+		public static bool IsAfterWork(ENode target, ENode check); // 0x0000000188CBFBB4-0x0000000188CBFC84
+		private bool _HandleGlobalEvent(ELoginEvent evt, object param); // 0x00000001850CACD0-0x00000001850CAD50
+		private void _EventOnOpenAgeTips(); // 0x0000000188CBFF38-0x0000000188CC00AC
+		private void _EventOnCloseAgeTips(); // 0x0000000188CBFC84-0x0000000188CBFDA4
+		private void _EventOnOpenServerSelect(bool isOpen); // 0x0000000188CC00AC-0x0000000188CC0188
+		private void _EventOnSelectServer(ServerZoneManager.ServerZoneData serverZoneData); // 0x0000000188CC0188-0x0000000188CC0270
+		private void _EventOnConfirmServer(); // 0x0000000188CBFDA4-0x0000000188CBFF38
+		private void _EnableCursor(bool enabled); // 0x0000000185B0E5F0-0x0000000185B0E6C0
+		private void _UpdateCursor([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x0000000188CC0328-0x0000000188CC046C
+		private void _EnbaleToggleGroup(); // 0x00000001859BE8A0-0x00000001859BE920
 		[IteratorStateMachine(typeof(__FetchAgeTipsCoroutine_d__45))]
-		private IEnumerator _FetchAgeTipsCoroutine(LoginAgeTipsProp prop); // 0x00000001869A2190-0x00000001869A2238
-		private static bool _CheckIfGameStateNotMatch(ENode curNode); // 0x0000000183406D40-0x0000000183406E00
+		private IEnumerator _FetchAgeTipsCoroutine(LoginAgeTipsProp prop); // 0x0000000188CC0270-0x0000000188CC0328
+		private static bool _CheckIfGameStateNotMatch(ENode curNode); // 0x000000018614F8E0-0x000000018614F9B0
 		[IteratorStateMachine(typeof(__AdjustCurrentGameState_d__47))]
-		private static IEnumerator _AdjustCurrentGameState(ENode curNode); // 0x00000001849B82F0-0x00000001849B8360
+		private static IEnumerator _AdjustCurrentGameState(ENode curNode); // 0x0000000186E24E00-0x0000000186E24E70
 	}
 
-	public class HotUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 56528
+	public class HotUpdateNode : LoginWorkFlow.Node // TypeDefIndex: 81088
 	{
 		// Fields
 		private LoginHotUpdater m_updater; // 0x20
 		private int m_cachedResRepairCode; // 0x28
 	
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B18E0-0x00000001849B1910 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E66010-0x0000000186E66040 
 	
 		// Constructors
-		public HotUpdateNode(); // 0x00000001841E1670-0x00000001841E1680
+		public HotUpdateNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x0000000183A80FC0-0x0000000183A81090
-		public override void OnDispose(); // 0x00000001846DD0A0-0x00000001846DD100
-		public void __iFixBaseProxy_OnDispose(); // 0x0000000186997004-0x000000018699700C
+		public override CustomYieldInstruction Work(); // 0x00000001862AFC50-0x00000001862AFD20
+		public override void OnDispose(); // 0x0000000186BBC6C0-0x0000000186BBC720
+		public void __iFixBaseProxy_OnDispose(); // 0x0000000188CB8488-0x0000000188CB8490
 	}
 
-	public abstract class WaitForSecondsNode : LoginWorkFlow.Node // TypeDefIndex: 56529
+	public abstract class WaitForSecondsNode : LoginWorkFlow.Node // TypeDefIndex: 81089
 	{
 		// Fields
 		private int? m_timerId; // 0x20
 	
 		// Constructors
-		protected WaitForSecondsNode(); // 0x00000001841E1670-0x00000001841E1680
+		protected WaitForSecondsNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x0000000183A81490-0x0000000183A82A50
-		private bool _IsTimeout(); // 0x00000001836A6140-0x00000001836A6190
-		private void _NotifyTimeout(); // 0x0000000184D39810-0x0000000184D39840
-		private void _DisposeTimer(); // 0x00000001846DD170-0x00000001846DD1E0
+		public override CustomYieldInstruction Work(); // 0x000000018614ABF0-0x000000018614ADD0
+		private bool _IsTimeout(); // 0x000000018521CD90-0x000000018521CDF0
+		private void _NotifyTimeout(); // 0x00000001871F5A60-0x00000001871F5A90
+		private void _DisposeTimer(); // 0x0000000186BBC790-0x0000000186BBC800
 		protected abstract float WaitForSeconds(out bool unscaled);
-		public override void OnDispose(); // 0x00000001846DD100-0x00000001846DD140
-		public void __iFixBaseProxy_OnDispose(); // 0x0000000186997004-0x000000018699700C
+		public override void OnDispose(); // 0x0000000186BBC720-0x0000000186BBC760
+		public void __iFixBaseProxy_OnDispose(); // 0x0000000188CB8488-0x0000000188CB8490
 	}
 
-	public class PreloadPostDelayNode : WaitForSecondsNode // TypeDefIndex: 56530
+	public class PreloadPostDelayNode : WaitForSecondsNode // TypeDefIndex: 81090
 	{
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1670-0x00000001849B16A0 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65DA0-0x0000000186E65DD0 
 	
 		// Constructors
-		public PreloadPostDelayNode(); // 0x00000001841E1670-0x00000001841E1680
+		public PreloadPostDelayNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override float WaitForSeconds(out bool unscaled); // 0x0000000184D79D50-0x0000000184D79D90
-		public override CustomYieldInstruction Work(); // 0x0000000183A813E0-0x0000000183A81420
-		private void _DisableLoadingPanel(); // 0x0000000183A80C70-0x0000000183A80D30
-		public CustomYieldInstruction __iFixBaseProxy_Work(); // 0x00000001869A25EC-0x00000001869A25F4
+		protected override float WaitForSeconds(out bool unscaled); // 0x0000000187225980-0x00000001872259B0
+		public override CustomYieldInstruction Work(); // 0x000000018614AB30-0x000000018614AB70
+		private void _DisableLoadingPanel(); // 0x000000018614C520-0x000000018614C5E0
+		public CustomYieldInstruction __iFixBaseProxy_Work(); // 0x0000000188CC077C-0x0000000188CC0784
 	}
 
-	public class Trans2GsLoginNode : WaitForSecondsNode // TypeDefIndex: 56531
+	public class Trans2GsLoginNode : WaitForSecondsNode // TypeDefIndex: 81091
 	{
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1640-0x00000001849B1670 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E65D40-0x0000000186E65D70 
 	
 		// Constructors
-		public Trans2GsLoginNode(); // 0x00000001841E1670-0x00000001841E1680
+		public Trans2GsLoginNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected override float WaitForSeconds(out bool unscaled); // 0x00000001841E5CA0-0x00000001841E5D70
-		public override CustomYieldInstruction Work(); // 0x0000000183A81420-0x0000000183A81490
-		public CustomYieldInstruction __iFixBaseProxy_Work(); // 0x00000001869A25EC-0x00000001869A25F4
+		protected override float WaitForSeconds(out bool unscaled); // 0x000000018714D3D0-0x000000018714D4A0
+		public override CustomYieldInstruction Work(); // 0x000000018614AB70-0x000000018614ABF0
+		public CustomYieldInstruction __iFixBaseProxy_Work(); // 0x0000000188CC077C-0x0000000188CC0784
 	}
 
-	public class FinishNode : LoginWorkFlow.Node // TypeDefIndex: 56532
+	public class FinishNode : LoginWorkFlow.Node // TypeDefIndex: 81092
 	{
 		// Properties
-		public override LoginWorkFlow.ENode type { get; } // 0x00000001849B1940-0x00000001849B1970 
+		public override LoginWorkFlow.ENode type { get; } // 0x0000000186E66070-0x0000000186E660A0 
 	
 		// Constructors
-		public FinishNode(); // 0x00000001841E1670-0x00000001841E1680
+		public FinishNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override CustomYieldInstruction Work(); // 0x0000000184A31020-0x0000000184A310A0
+		public override CustomYieldInstruction Work(); // 0x0000000186ECF680-0x0000000186ECF710
 	}
 
-	public struct CarrierDownloadCache // TypeDefIndex: 56533
+	public struct CarrierDownloadCache // TypeDefIndex: 81093
 	{
 		// Fields
 		public static readonly CarrierDownloadCache EMPTY; // 0x00
@@ -4648,54 +5252,54 @@ namespace Beyond.Login
 		public bool isAllowed; // 0x08
 	
 		// Constructors
-		static CarrierDownloadCache(); // 0x0000000184D56A10-0x0000000184D56A70
+		static CarrierDownloadCache(); // 0x00000001871F4860-0x00000001871F48C0
 	}
 
-	public class NetUsagePolicy // TypeDefIndex: 56536
+	public class NetUsagePolicy // TypeDefIndex: 81096
 	{
 		// Fields
-		private const int NOT_REACHABLE_ERROR_CODE = 30000; // Metadata: 0x023485E1
+		private const int NOT_REACHABLE_ERROR_CODE = 30000; // Metadata: 0x0263E0BD
 		private CarrierDownloadCache m_mobileDataCache; // 0x10
 		private NetworkReachability m_lastNetworkState; // 0x20
 		private Options m_options; // 0x28
 	
 		// Nested types
-		public struct Options // TypeDefIndex: 56534
+		public struct Options // TypeDefIndex: 81094
 		{
 			// Fields
 			public long minBytesToNotifyCarrier; // 0x00
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass6_0 // TypeDefIndex: 56535
+		private sealed class __c__DisplayClass6_0 // TypeDefIndex: 81095
 		{
 			// Fields
-			public long downloadSize; // 0x10
+			public Action<bool> onCarrierDecision; // 0x10
 			public NetUsagePolicy __4__this; // 0x18
 			public Action onAllowed; // 0x20
 			public Action onRejected; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass6_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass6_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _CheckIfAllowDownload_b__0(); // 0x00000001869B4C50-0x00000001869B4CD0
-			internal void _CheckIfAllowDownload_b__1(); // 0x00000001869B4CD0-0x00000001869B4D40
+			internal void _CheckIfAllowDownload_b__0(); // 0x0000000188CC0BF4-0x0000000188CC0C38
+			internal void _CheckIfAllowDownload_b__1(); // 0x0000000188CC0C38-0x0000000188CC0C68
 		}
 	
 		// Constructors
-		public NetUsagePolicy(Options options); // 0x000000018380AB00-0x000000018380AB70
+		public NetUsagePolicy(Options options); // 0x00000001871ED1C0-0x00000001871ED230
 	
 		// Methods
-		public void CheckIfAllowDownload(long downloadSize, Action onAllowed, Action onRejected, Action onReachable = null); // 0x00000001869B43E4-0x00000001869B4734
-		public bool AllowMobileDataInLastCheck(); // 0x00000001869B438C-0x00000001869B43E4
-		private static string _GetPrettySizeStringUpToMB(double number); // 0x00000001869B4734-0x00000001869B47E4
+		public void CheckIfAllowDownload(long downloadSize, Action onAllowed, Action onRejected, Action onReachable = null, Action<bool> onCarrierDecision = null); // 0x000000018614C5E0-0x000000018614C7C0
+		public bool AllowMobileDataInLastCheck(); // 0x0000000186C596A0-0x0000000186C596D0
+		private static string _GetPrettySizeStringUpToMB(double number); // 0x0000000188CC046C-0x0000000188CC0514
 	}
 
-	public class LoginSceneAnimCtrl : LoginSceneComponent, ILoginBinder<LoginViewModel>, IAnimationClipSource // TypeDefIndex: 56538
+	public class LoginSceneAnimCtrl : LoginSceneComponent, ILoginBinder<LoginViewModel>, IAnimationClipSource // TypeDefIndex: 81098
 	{
 		// Fields
-		private const float COUNT_DOWN_EMPTY = -1f; // Metadata: 0x023485E5
+		private const float COUNT_DOWN_EMPTY = -1f; // Metadata: 0x0263E0C1
 		[SerializeField]
 		private Animator _target; // 0x78
 		[SerializeField]
@@ -4738,10 +5342,10 @@ namespace Beyond.Login
 		private float m_countDownA1A2; // 0xD0
 	
 		// Properties
-		protected override TickType tickOption { get; } // 0x00000001847333E0-0x0000000184733410 
+		protected override TickType tickOption { get; } // 0x0000000186C6BF90-0x0000000186C6BFC0 
 	
 		// Nested types
-		private enum EState // TypeDefIndex: 56537
+		private enum EState // TypeDefIndex: 81097
 		{
 			NONE = 0,
 			A1 = 1,
@@ -4749,30 +5353,30 @@ namespace Beyond.Login
 		}
 	
 		// Constructors
-		public LoginSceneAnimCtrl(); // 0x0000000184B6CD40-0x0000000184B6CDA0
+		public LoginSceneAnimCtrl(); // 0x000000018702CDB0-0x000000018702CE10
 	
 		// Methods
-		protected override void OnBindToManager(); // 0x00000001841E5760-0x00000001841E57E0
-		private UIAnimationMixPlayer _EnsurePlayer(); // 0x0000000183D4FF30-0x0000000183D50000
-		private void _ChangeToState(EState target); // 0x0000000183408830-0x00000001834088B0
-		private void _ResetToA1(); // 0x0000000183D4F930-0x0000000183D4FB60
-		private void _TransitionToA2(); // 0x00000001849B8B60-0x00000001849B9AB0
-		private void _PlayA1sAndTriggerNext(); // 0x0000000183D4FD90-0x0000000183D4FF30
-		private float _RandomIntervalA1s(); // 0x0000000183D50000-0x0000000183D50170
-		private void _PlayA1A2Impl(); // 0x0000000183D4FB60-0x0000000183D4FD90
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183408790-0x0000000183408830
-		protected override void Start(); // 0x000000018340A1D0-0x000000018340A280
-		public override void Tick(float deltaTime); // 0x0000000182F446B0-0x0000000182F44780
-		protected override void OnRelease(); // 0x0000000184994870-0x00000001849948F0
-		public void GetAnimationClips(List<AnimationClip> results); // 0x00000001869B1654-0x00000001869B16A8
-		public TickType __iFixBaseProxy_get_tickOption(); // 0x00000001869B16B8-0x00000001869B16C0
-		public void __iFixBaseProxy_OnBindToManager(); // 0x00000001869B16A8-0x00000001869B16B0
-		public void __iFixBaseProxy_Start(); // 0x00000001869B16B0-0x00000001869B16B8
-		public void __iFixBaseProxy_Tick(float P0); // 0x0000000181538B50-0x0000000181538B60
-		public void __iFixBaseProxy_OnRelease(); // 0x00000001869AFD04-0x00000001869AFD0C
+		protected override void OnBindToManager(); // 0x00000001863F8000-0x00000001863F8090
+		private UIAnimationMixPlayer _EnsurePlayer(); // 0x00000001867C7D40-0x00000001867C7E10
+		private void _ChangeToState(EState target); // 0x00000001861513D0-0x0000000186151450
+		private void _ResetToA1(); // 0x00000001867C7740-0x00000001867C7970
+		private void _TransitionToA2(); // 0x0000000186DD7670-0x0000000186DD77D0
+		private void _PlayA1sAndTriggerNext(); // 0x00000001867C7BA0-0x00000001867C7D40
+		private float _RandomIntervalA1s(); // 0x00000001867C7E10-0x00000001867C7F90
+		private void _PlayA1A2Impl(); // 0x00000001867C7970-0x00000001867C7BA0
+		public void OnValueChanged(LoginViewModel value); // 0x0000000186151320-0x00000001861513D0
+		protected override void Start(); // 0x00000001867A12D0-0x00000001867A1390
+		public override void Tick(float deltaTime); // 0x000000018575CDF0-0x000000018575D030
+		protected override void OnRelease(); // 0x0000000186E108D0-0x0000000186E10960
+		public void GetAnimationClips(List<AnimationClip> results); // 0x0000000188CBF58C-0x0000000188CBF5C4
+		public TickType __iFixBaseProxy_get_tickOption(); // 0x0000000188CBF5D4-0x0000000188CBF5DC
+		public void __iFixBaseProxy_OnBindToManager(); // 0x0000000188CBF5C4-0x0000000188CBF5CC
+		public void __iFixBaseProxy_Start(); // 0x0000000188CBF5CC-0x0000000188CBF5D4
+		public void __iFixBaseProxy_Tick(float P0); // 0x0000000188CBEF20-0x0000000188CBEF28
+		public void __iFixBaseProxy_OnRelease(); // 0x0000000188CBEF18-0x0000000188CBEF20
 	}
 
-	public abstract class LoginSceneComponent : TickableMono // TypeDefIndex: 56539
+	public abstract class LoginSceneComponent : TickableMono // TypeDefIndex: 81099
 	{
 		// Fields
 		[CompilerGenerated]
@@ -4781,35 +5385,35 @@ namespace Beyond.Login
 		private LoginController _controller_k__BackingField; // 0x70
 	
 		// Properties
-		protected override TickType tickOption { get; } // 0x00000001869B16C0-0x00000001869B170C 
-		protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
-		protected LoginController controller { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
+		protected override TickType tickOption { get; } // 0x0000000188CBF5DC-0x0000000188CBF61C 
+		protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F80-0x0000000187232F90 0x0000000186B19440-0x0000000186B19450
+		protected LoginController controller { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232FC0-0x0000000187232FD0 0x0000000188800CD0-0x0000000188800CE0
 	
 		// Constructors
-		protected LoginSceneComponent(); // 0x00000001839C2B00-0x00000001839C2B10
+		protected LoginSceneComponent(); // 0x000000018503EE80-0x000000018503EE90
 	
 		// Methods
-		protected virtual void Start(); // 0x000000018340A300-0x000000018340A370
-		public void Bind(LoginContext context, LoginController controller); // 0x00000001841E60C0-0x00000001841E6130
-		protected virtual void OnBindToManager(); // 0x00000001841E5AA0-0x00000001841E5AD0
-		public TickType __iFixBaseProxy_get_tickOption(); // 0x00000001869AFD0C-0x00000001869AFD14
+		protected virtual void Start(); // 0x00000001867A29F0-0x00000001867A2A60
+		public void Bind(LoginContext context, LoginController controller); // 0x0000000185319900-0x0000000185319960
+		protected virtual void OnBindToManager(); // 0x00000001863F8E10-0x00000001863F8E40
+		public TickType __iFixBaseProxy_get_tickOption(); // 0x0000000188CBEF28-0x0000000188CBEF30
 	}
 
-	public class LoginSceneRoot : LoginSceneComponent // TypeDefIndex: 56540
+	public class LoginSceneRoot : LoginSceneComponent // TypeDefIndex: 81100
 	{
 		// Properties
-		protected override TickType tickOption { get; } // 0x0000000184D51C40-0x0000000184D51C70 
+		protected override TickType tickOption { get; } // 0x00000001871FD9E0-0x00000001871FDA10 
 	
 		// Constructors
-		public LoginSceneRoot(); // 0x00000001839C2B00-0x00000001839C2B10
+		public LoginSceneRoot(); // 0x000000018503EE80-0x000000018503EE90
 	
 		// Methods
-		protected override void OnBindToManager(); // 0x000000018380F010-0x000000018380F1F0
-		public TickType __iFixBaseProxy_get_tickOption(); // 0x00000001869B16B8-0x00000001869B16C0
-		public void __iFixBaseProxy_OnBindToManager(); // 0x00000001869B16A8-0x00000001869B16B0
+		protected override void OnBindToManager(); // 0x0000000185752DC0-0x0000000185752FB0
+		public TickType __iFixBaseProxy_get_tickOption(); // 0x0000000188CBF5D4-0x0000000188CBF5DC
+		public void __iFixBaseProxy_OnBindToManager(); // 0x0000000188CBF5C4-0x0000000188CBF5CC
 	}
 
-	public class LoginAgeTipsDetailPanel : MonoBehaviour, ILoginBinder<LoginAgeTipsModel> // TypeDefIndex: 56541
+	public class LoginAgeTipsDetailPanel : MonoBehaviour, ILoginBinder<LoginAgeTipsModel> // TypeDefIndex: 81101
 	{
 		// Fields
 		[SerializeField]
@@ -4829,23 +5433,23 @@ namespace Beyond.Login
 		private LoginContext m_context; // 0x50
 		private UISwitchTween m_switchTween; // 0x58
 		private DG.Tweening.Tween m_displayDelayTween; // 0x60
-		private const int MAX_TEXT_STRLEN = 10000; // Metadata: 0x023485EC
-		private const int MIN_TEXT_STRLEN = 1000; // Metadata: 0x023485F0
+		private const int MAX_TEXT_STRLEN = 10000; // Metadata: 0x0263E0C8
+		private const int MIN_TEXT_STRLEN = 1000; // Metadata: 0x0263E0CC
 	
 		// Constructors
-		public LoginAgeTipsDetailPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginAgeTipsDetailPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public void Init(LoginContext context); // 0x00000001842B6AA0-0x00000001842B6C40
-		public void OnValueChanged(LoginAgeTipsModel value); // 0x0000000184B48030-0x0000000184B480F0
-		private void _RenderContent(string contentStr); // 0x00000001869AF530-0x00000001869AF6A0
-		private void _ShowContent(); // 0x00000001869AF6A0-0x00000001869AF6FC
-		private void _EventOnCloseClicked(PointerEventData _); // 0x00000001869AF4B8-0x00000001869AF530
-		private static List<string> _SplitLicenseToSegments(string content); // 0x00000001869AF6FC-0x00000001869AF9E0
-		private static void _SplitLongString(string longStr, List<string> outputList); // 0x00000001869AF9E0-0x00000001869AFAAC
+		public void Init(LoginContext context); // 0x000000018663A560-0x000000018663A710
+		public void OnValueChanged(LoginAgeTipsModel value); // 0x000000018708F840-0x000000018708F900
+		private void _RenderContent(string contentStr); // 0x0000000188CBE6B4-0x0000000188CBE828
+		private void _ShowContent(); // 0x0000000188CBE828-0x0000000188CBE878
+		private void _EventOnCloseClicked(PointerEventData _); // 0x0000000188CBE64C-0x0000000188CBE6B4
+		private static List<string> _SplitLicenseToSegments(string content); // 0x0000000188CBE878-0x0000000188CBEB70
+		private static void _SplitLongString(string longStr, List<string> outputList); // 0x0000000188CBEB70-0x0000000188CBEC3C
 	}
 
-	public class LoginAgeTipsPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 56542
+	public class LoginAgeTipsPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 81102
 	{
 		// Fields
 		[SerializeField]
@@ -4858,17 +5462,17 @@ namespace Beyond.Login
 		private CanvasGroup _canvasVersionTop; // 0x40
 	
 		// Constructors
-		public LoginAgeTipsPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginAgeTipsPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001842B61D0-0x00000001842B62F0
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183408A70-0x0000000183408B00
-		private void _UpdateAgeTipsPolicy(LoginViewModel.FAgeTipsPolicy policy); // 0x0000000183409910-0x0000000183409990
-		private void _EventOnOpenAgeTipsClicked(PointerEventData _); // 0x00000001869AFAB4-0x00000001869AFB2C
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFAAC-0x00000001869AFAB4
+		protected override void OnInit(); // 0x000000018663AD20-0x000000018663AE40
+		public void OnValueChanged(LoginViewModel value); // 0x000000018614FAA0-0x000000018614FB30
+		private void _UpdateAgeTipsPolicy(LoginViewModel.FAgeTipsPolicy policy); // 0x0000000186151960-0x00000001861519E0
+		private void _EventOnOpenAgeTipsClicked(PointerEventData _); // 0x0000000188CBEC44-0x0000000188CBECA8
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEC3C-0x0000000188CBEC44
 	}
 
-	public class LoginAlertDialog : LoginController.Dialog // TypeDefIndex: 56544
+	public class LoginAlertDialog : LoginController.Dialog // TypeDefIndex: 81104
 	{
 		// Fields
 		[SerializeField]
@@ -4878,7 +5482,7 @@ namespace Beyond.Login
 		private FParams m_params; // 0x48
 	
 		// Nested types
-		public struct FParams // TypeDefIndex: 56543
+		public struct FParams // TypeDefIndex: 81103
 		{
 			// Fields
 			public string text; // 0x00
@@ -4886,16 +5490,16 @@ namespace Beyond.Login
 		}
 	
 		// Constructors
-		public LoginAlertDialog(); // 0x0000000185393520-0x0000000185393538
+		public LoginAlertDialog(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001869AFB2C-0x00000001869AFC10
-		public void SetParams(FParams param); // 0x00000001869AFC10-0x00000001869AFC98
-		private void _OnConfirmClicked(PointerEventData evt); // 0x00000001869AFCA0-0x00000001869AFD04
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFC98-0x00000001869AFCA0
+		protected override void OnInit(); // 0x0000000188CBED64-0x0000000188CBEE50
+		public void SetParams(FParams param); // 0x0000000188CBEE50-0x0000000188CBEED0
+		private void _OnConfirmClicked(PointerEventData evt); // 0x0000000188CBEED8-0x0000000188CBEF18
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEED0-0x0000000188CBEED8
 	}
 
-	public class LoginDecorateUI : TickableUIMono, ILoginBinder<LoginViewModel>, ILoginContextReceiver // TypeDefIndex: 56545
+	public class LoginDecorateUI : TickableUIMono, ILoginBinder<LoginViewModel>, ILoginContextReceiver // TypeDefIndex: 81105
 	{
 		// Fields
 		[SerializeField]
@@ -4919,26 +5523,26 @@ namespace Beyond.Login
 		private float m_countDownDisableGlow; // 0xD8
 	
 		// Properties
-		protected override TickType tickOption { get; } // 0x0000000184A357C0-0x0000000184A357F0 
+		protected override TickType tickOption { get; } // 0x0000000186FB8790-0x0000000186FB87C0 
 	
 		// Constructors
-		public LoginDecorateUI(); // 0x0000000184CB1AE0-0x0000000184CB1B80
+		public LoginDecorateUI(); // 0x00000001870A3230-0x00000001870A32D0
 	
 		// Methods
-		public void OnLoginContext(LoginContext context); // 0x00000001841E4C00-0x00000001841E4CB0
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183408BB0-0x0000000183409910
-		private void _TriggerTrans2GSLoginImpl(); // 0x0000000183D4F5A0-0x0000000183D4F720
-		private void _ToggleGlow(bool enable); // 0x0000000183409D20-0x0000000183409E30
-		private UIAnimationLayerMixPlayer _EnsureGlowPlayer(); // 0x0000000183D4F720-0x0000000183D4F830
-		public override void Tick(float deltaTime); // 0x0000000183D4F360-0x0000000183D4F3D0
-		protected override void OnRelease(); // 0x00000001849947F0-0x0000000184994870
-		private void _TimeManagerTick(float timeDelta); // 0x0000000183D4F3D0-0x0000000183D4F5A0
-		public TickType __iFixBaseProxy_get_tickOption(); // 0x00000001869AFD0C-0x00000001869AFD14
-		public void __iFixBaseProxy_Tick(float P0); // 0x0000000181538B50-0x0000000181538B60
-		public void __iFixBaseProxy_OnRelease(); // 0x00000001869AFD04-0x00000001869AFD0C
+		public void OnLoginContext(LoginContext context); // 0x00000001867C71B0-0x00000001867C7270
+		public void OnValueChanged(LoginViewModel value); // 0x000000018614FBF0-0x000000018614FDE0
+		private void _TriggerTrans2GSLoginImpl(); // 0x00000001867C7380-0x00000001867C7510
+		private void _ToggleGlow(bool enable); // 0x00000001867C7510-0x00000001867C7620
+		private UIAnimationLayerMixPlayer _EnsureGlowPlayer(); // 0x00000001867C7620-0x00000001867C7740
+		public override void Tick(float deltaTime); // 0x000000018575A790-0x000000018575A7C0
+		protected override void OnRelease(); // 0x0000000186E10840-0x0000000186E108D0
+		private void _TimeManagerTick(float timeDelta); // 0x000000018575C310-0x000000018575C4B0
+		public TickType __iFixBaseProxy_get_tickOption(); // 0x0000000188CBEF28-0x0000000188CBEF30
+		public void __iFixBaseProxy_Tick(float P0); // 0x0000000188CBEF20-0x0000000188CBEF28
+		public void __iFixBaseProxy_OnRelease(); // 0x0000000188CBEF18-0x0000000188CBEF20
 	}
 
-	public class LoginEnterGamePanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 56546
+	public class LoginEnterGamePanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 81106
 	{
 		// Fields
 		[SerializeField]
@@ -4954,31 +5558,31 @@ namespace Beyond.Login
 		private bool m_isInited; // 0x50
 	
 		// Constructors
-		public LoginEnterGamePanel(); // 0x0000000184D11A70-0x0000000184D11A90
+		public LoginEnterGamePanel(); // 0x0000000187066D90-0x0000000187066DB0
 	
 		// Methods
-		private void _InitIfNot(); // 0x0000000184B6B370-0x0000000184B6B440
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183406E00-0x0000000183406EF0
-		private void _OnEnterGameClicked(PointerEventData evt); // 0x000000018470AE70-0x000000018470AF20
+		private void _InitIfNot(); // 0x0000000187030250-0x0000000187030320
+		public void OnValueChanged(LoginViewModel value); // 0x000000018614F9B0-0x000000018614FAA0
+		private void _OnEnterGameClicked(PointerEventData evt); // 0x00000001870AB7B0-0x00000001870AB870
 	}
 
-	public class LoginGovTipsPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 56547
+	public class LoginGovTipsPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 81107
 	{
 		// Fields
 		[SerializeField]
 		private UIButton _btnOpen; // 0x28
 	
 		// Constructors
-		public LoginGovTipsPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginGovTipsPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001842B6100-0x00000001842B61D0
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183408960-0x00000001834089C0
-		private void _EventOnOpenAgeTipsClicked(PointerEventData _); // 0x00000001869AFD14-0x00000001869AFD7C
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFAAC-0x00000001869AFAB4
+		protected override void OnInit(); // 0x000000018663AE40-0x000000018663AF10
+		public void OnValueChanged(LoginViewModel value); // 0x0000000186BB4520-0x0000000186BB4580
+		private void _EventOnOpenAgeTipsClicked(PointerEventData _); // 0x0000000188CC5AC4-0x0000000188CC5B18
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEC3C-0x0000000188CBEC44
 	}
 
-	public class LoginJudgeDialog : LoginController.Dialog // TypeDefIndex: 56550
+	public class LoginJudgeDialog : LoginController.Dialog // TypeDefIndex: 81110
 	{
 		// Fields
 		[SerializeField]
@@ -4996,13 +5600,13 @@ namespace Beyond.Login
 		private FParams m_params; // 0x68
 	
 		// Nested types
-		public enum Style // TypeDefIndex: 56548
+		public enum Style // TypeDefIndex: 81108
 		{
 			Center = 0,
 			Left = 1
 		}
 	
-		public struct FParams // TypeDefIndex: 56549
+		public struct FParams // TypeDefIndex: 81109
 		{
 			// Fields
 			public string text; // 0x00
@@ -5014,21 +5618,27 @@ namespace Beyond.Login
 		}
 	
 		// Constructors
-		public LoginJudgeDialog(); // 0x0000000185393520-0x0000000185393538
+		public LoginJudgeDialog(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001869AFD7C-0x00000001869AFEC8
-		public void SetParams(FParams param); // 0x00000001869AFEC8-0x00000001869B010C
-		private void _OnPositiveClicked(PointerEventData evt); // 0x00000001869B0170-0x00000001869B01D4
-		private void _OnNegativeClicked(PointerEventData evt); // 0x00000001869B010C-0x00000001869B0170
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFC98-0x00000001869AFCA0
+		protected override void OnInit(); // 0x0000000188CC5B18-0x0000000188CC5C68
+		public void SetParams(FParams param); // 0x0000000188CC5C68-0x0000000188CC5EB4
+		private void _OnPositiveClicked(PointerEventData evt); // 0x0000000188CC5EF4-0x0000000188CC5F34
+		private void _OnNegativeClicked(PointerEventData evt); // 0x0000000188CC5EB4-0x0000000188CC5EF4
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEED0-0x0000000188CBEED8
 	}
 
-	public class LoginMenuPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 56552
+	public class LoginMenuPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginViewModel> // TypeDefIndex: 81113
 	{
 		// Fields
-		public const string CONTROLLER_STATE_NORMAL = "Normal"; // Metadata: 0x023485F4
-		public const string CONTROLLER_STATE_SELECT = "Select"; // Metadata: 0x023485FB
+		public const string CONTROLLER_STATE_NORMAL = "Normal"; // Metadata: 0x0263E0D0
+		public const string CONTROLLER_STATE_SELECT = "Select"; // Metadata: 0x0263E0D7
+		public const string PRE_DOWNLOAD_STATE_AVAILABLE = "Available"; // Metadata: 0x0263E0DE
+		public const string PRE_DOWNLOAD_STATE_CONTINUE = "Continue"; // Metadata: 0x0263E0E8
+		public const string PRE_DOWNLOAD_STATE_COMPLETED = "Completed"; // Metadata: 0x0263E0F1
+		public const string PRE_DOWNLOAD_STATE_PAUSE = "Pause"; // Metadata: 0x0263E0FB
+		private const double BYTES_PER_MB = 1048576; // Metadata: 0x0263E101
+		private const float LOGIN_SUCCESS_TOAST_HIDE_DELAY = 2f; // Metadata: 0x0263E109
 		[SerializeField]
 		private UIButton _btnAnnounce; // 0x28
 		[SerializeField]
@@ -5036,119 +5646,168 @@ namespace Beyond.Login
 		[SerializeField]
 		private UIButton _btnResCheck; // 0x38
 		[SerializeField]
-		private UIButton _btnLogout; // 0x40
+		private UIButton _btnPreDownload; // 0x40
 		[SerializeField]
-		private UIButton _btnQuitGame; // 0x48
+		private UIButton _btnLogout; // 0x48
 		[SerializeField]
-		private UIButton _btnLogin; // 0x50
+		private UIButton _btnQuitGame; // 0x50
 		[SerializeField]
-		private UIButton _btnQR; // 0x58
+		private UIButton _btnLogin; // 0x58
 		[SerializeField]
-		private UIStateController _ctrlAnnounce; // 0x60
+		private UIButton _btnQR; // 0x60
 		[SerializeField]
-		private UIStateController _ctrlSetting; // 0x68
+		private UIStateController _ctrlAnnounce; // 0x68
 		[SerializeField]
-		private UIStateController _ctrlResCheck; // 0x70
+		private UIStateController _ctrlSetting; // 0x70
 		[SerializeField]
-		private UIStateController _ctrlLogout; // 0x78
+		private UIStateController _ctrlResCheck; // 0x78
 		[SerializeField]
-		private UIStateController _ctrlQR; // 0x80
+		private UIStateController _ctrlPreDownload; // 0x80
 		[SerializeField]
-		private UISimpleStateController _ctrlRight; // 0x88
+		private UIStateController _ctrlLogout; // 0x88
 		[SerializeField]
-		private UISelectableNaviGroup _naviGroupRight; // 0x90
+		private UIStateController _ctrlQR; // 0x90
 		[SerializeField]
-		private InputBindingGroupMonoTarget _bindingGroupForKeyboard; // 0x98
+		private UISimpleStateController _ctrlRight; // 0x98
 		[SerializeField]
-		private InputBindingGroupMonoTarget _rootPanelBindingGroup; // 0xA0
+		private UISelectableNaviGroup _naviGroupRight; // 0xA0
 		[SerializeField]
-		private CanvasGroup _alphaHandler; // 0xA8
+		private InputBindingGroupMonoTarget _bindingGroupForKeyboard; // 0xA8
 		[SerializeField]
-		private GameObject _redDotAnnounce; // 0xB0
+		private InputBindingGroupMonoTarget _rootPanelBindingGroup; // 0xB0
 		[SerializeField]
-		private UIAnimationWrapper _transAnim; // 0xB8
+		private CanvasGroup _alphaHandler; // 0xB8
 		[SerializeField]
-		private UIButton _serverZoneBtn; // 0xC0
+		private GameObject _redDotAnnounce; // 0xC0
 		[SerializeField]
-		private UIText _serverZoneName; // 0xC8
+		private UIAnimationWrapper _transAnim; // 0xC8
 		[SerializeField]
-		private GameObject _serverZonePS5; // 0xD0
+		private UIButton _serverZoneBtn; // 0xD0
 		[SerializeField]
-		private UIText _serverZoneNamePS5; // 0xD8
-		private UIStateController m_curRightBtnCtrl; // 0xE0
-		private bool m_hasRedDot; // 0xE8
-		private int m_rootParentGroupId; // 0xEC
+		private UIText _serverZoneName; // 0xD8
+		[SerializeField]
+		private GameObject _serverZonePS5; // 0xE0
+		[SerializeField]
+		private UIText _serverZoneNamePS5; // 0xE8
+		[SerializeField]
+		private GameObject _toastCell; // 0xF0
+		[SerializeField]
+		private UIText _toastTipsTxt; // 0xF8
+		private UIStateController m_curRightBtnCtrl; // 0x100
+		private bool m_hasRedDot; // 0x108
+		private int m_rootParentGroupId; // 0x10C
+		private IEnumerator m_toastHideRoutine; // 0x110
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56551
+		private sealed class __c // TypeDefIndex: 81111
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Action __9__43_0; // 0x08
+			public static Action __9__56_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x00000001869B4D40-0x00000001869B4DA4
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x0000000188CCA564-0x0000000188CCA5C8
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __OnQuitGameClicked_b__43_0(); // 0x00000001869B4830-0x00000001869B4874
+			internal void __OnQuitGameClicked_b__56_0(); // 0x00000001827C6400-0x00000001827C6700
+		}
+	
+		[CompilerGenerated]
+		private sealed class __HideLoginSuccessToastCoroutine_d__65 : IEnumerator<object> // TypeDefIndex: 81112
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public LoginMenuPanel __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public __HideLoginSuccessToastCoroutine_d__65(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001827C6700-0x00000001827C6B00
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x00000001827C6B00-0x00000001827C6B50
 		}
 	
 		// Constructors
-		public LoginMenuPanel(); // 0x0000000184D11A90-0x0000000184D11AB0
+		public LoginMenuPanel(); // 0x0000000187066DB0-0x0000000187066DD0
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001839D2890-0x00000001839D2F90
-		public void OnValueChanged(LoginViewModel value); // 0x0000000183407440-0x00000001834077A0
-		public void InitBulletinAndRedAfterLoginSuc(); // 0x00000001841E7B00-0x00000001841E8990
-		private static void _OnBulletinOpen(); // 0x00000001869B08EC-0x00000001869B096C
-		private static void _OnBulletinClose(); // 0x00000001869B0854-0x00000001869B08EC
-		private void Awake(); // 0x0000000184CAA620-0x0000000184CAA800
-		private void OnEnable(); // 0x00000001840101A0-0x00000001840103A0
-		private void OnDisable(); // 0x00000001840103A0-0x0000000184010590
-		protected override void OnDestroy(); // 0x00000001848AB5F0-0x00000001848AB6E0
-		private void _OnAnnounceClicked(PointerEventData _); // 0x00000001869B0604-0x00000001869B07B4
-		private void _OnSettingClicked(PointerEventData _); // 0x00000001869B1168-0x00000001869B1254
-		private void _OnResCheckClicked(PointerEventData _); // 0x00000001869B1034-0x00000001869B10FC
-		private void _OnCustomServiceClicked(PointerEventData _); // 0x00000001869B096C-0x00000001869B0A1C
-		private void _OnAccountCenterClicked(PointerEventData _); // 0x00000001869B053C-0x00000001869B0604
-		private void _OnLogoutClicked(PointerEventData _); // 0x00000001869B0CB0-0x00000001869B0D78
-		private void _OnQuitGameClicked(PointerEventData _); // 0x00000001869B0E28-0x00000001869B0FC8
-		private void _OnLoginClicked(PointerEventData _); // 0x00000001869B0C38-0x00000001869B0CB0
-		private void _OnQRClicked(PointerEventData _); // 0x00000001869B0D78-0x00000001869B0E28
-		private void _OnRequestRelogin(); // 0x00000001869B0FC8-0x00000001869B1034
-		private bool _CanQRLogin(); // 0x0000000184D576D0-0x0000000184D57700
-		private void _UpdateAnnounceRedDot(); // 0x00000001841E9090-0x00000001841E99E0
-		private void _UpdateServerZone(); // 0x0000000183A85290-0x0000000183A85380
-		private void _OnServerZoneBtnClicked(); // 0x00000001869B10FC-0x00000001869B1168
-		private void _OnFocusMenuGroup(bool isFocused); // 0x00000001869B0A1C-0x00000001869B0B0C
-		private void _OnAnnounceClosed(); // 0x00000001869B07B4-0x00000001869B0854
-		private void _OnReceiveRedDotAndPopup(bool showRedDot); // 0x00000001841E99E0-0x00000001841E9A90
-		private void _OnUpdateRedDotForSDKListener([IsReadOnly] in EventData<bool> show); // 0x00000001869B1254-0x00000001869B12B8
-		private void _OnInputChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x00000001869B0B0C-0x00000001869B0C38
+		protected override void OnInit(); // 0x0000000185B308F0-0x0000000185B34000
+		public void OnValueChanged(LoginViewModel value); // 0x000000018614FDE0-0x00000001861512A0
+		public void InitBulletinAndRedAfterLoginSuc(); // 0x0000000186817090-0x00000001868171B0
+		public void ShowLoginSuccessToast(); // 0x00000001827C0450-0x00000001827C1150
+		private static void _OnBulletinOpen(); // 0x00000001850D0900-0x00000001850D0980
+		private static void _OnBulletinClose(); // 0x00000001850D0870-0x00000001850D0900
+		private void Awake(); // 0x00000001870996E0-0x00000001870997D0
+		private void OnEnable(); // 0x0000000186979090-0x00000001869792A0
+		private void OnDisable(); // 0x00000001869792A0-0x0000000186979490
+		protected override void OnDestroy(); // 0x0000000186D43540-0x0000000186D43640
+		private void _OnAnnounceClicked(PointerEventData _); // 0x0000000188CC60F0-0x0000000188CC62A8
+		private void _OnSettingClicked(PointerEventData _); // 0x0000000188CC6D44-0x0000000188CC6E3C
+		private void _OnResCheckClicked(PointerEventData _); // 0x0000000188CC6C10-0x0000000188CC6CE4
+		private void _OnPreDownloadClicked(PointerEventData _); // 0x0000000188CC676C-0x0000000188CC6948
+		private void _OnCustomServiceClicked(PointerEventData _); // 0x0000000188CC634C-0x0000000188CC6408
+		private void _OnAccountCenterClicked(PointerEventData _); // 0x0000000188CC601C-0x0000000188CC60F0
+		private void _OnLogoutClicked(PointerEventData _); // 0x0000000188CC6698-0x0000000188CC676C
+		private void _OnQuitGameClicked(PointerEventData _); // 0x0000000188CC6A04-0x0000000188CC6BA8
+		private void _OnLoginClicked(PointerEventData _); // 0x0000000188CC6630-0x0000000188CC6698
+		private void _OnQRClicked(PointerEventData _); // 0x0000000188CC6948-0x0000000188CC6A04
+		private void _OnRequestRelogin(); // 0x0000000188CC6BA8-0x0000000188CC6C10
+		private void _HideLoginSuccessToastIfFallback(LoginViewModel value); // 0x00000001827C46E0-0x00000001827C4DB0
+		private void _HideLoginSuccessToast(); // 0x00000001827C4DB0-0x00000001827C5190
+		private bool _TryGetLoginSuccessAccount(out string account); // 0x00000001827C53A0-0x00000001827C63B0
+		private void _RestartToastHideRoutine(); // 0x00000001827C5190-0x00000001827C5270
+		private void _StopToastHideRoutine(); // 0x00000001827C5270-0x00000001827C53A0
+		[IteratorStateMachine(typeof(__HideLoginSuccessToastCoroutine_d__65))]
+		private IEnumerator _HideLoginSuccessToastCoroutine(); // 0x00000001827C4330-0x00000001827C46E0
+		private bool _CanQRLogin(); // 0x00000001871FDA10-0x00000001871FDA40
+		private void _ShowPreDownloadConfirm(string textKey); // 0x0000000188CC70A0-0x0000000188CC71FC
+		private void _ShowPausePreDownloadConfirm(); // 0x0000000188CC6F78-0x0000000188CC70A0
+		private void _SendPreDownloadEvent(); // 0x0000000188CC6F10-0x0000000188CC6F78
+		private void _SendCancelPreDownloadEventIfNeeded(); // 0x0000000188CC6E3C-0x0000000188CC6F10
+		private static string _FormatPreDownloadSize(long bytes); // 0x0000000188CC5F3C-0x0000000188CC601C
+		private void _UpdatePreDownloadButtonState(LoginViewModel value); // 0x000000018614D1F0-0x000000018614D310
+		private bool _ShouldShowPreDownloadButton(); // 0x000000018614C930-0x000000018614C990
+		private void _UpdateAnnounceRedDot(); // 0x00000001868171B0-0x0000000186817260
+		private void _UpdateServerZone(); // 0x00000001850CCE60-0x00000001850CCF50
+		private void _OnServerZoneBtnClicked(); // 0x0000000188CC6CE4-0x0000000188CC6D44
+		private void _OnFocusMenuGroup(bool isFocused); // 0x0000000188CC6408-0x0000000188CC64FC
+		private void _OnAnnounceClosed(); // 0x0000000188CC62A8-0x0000000188CC634C
+		private void _OnReceiveRedDotAndPopup(bool showRedDot); // 0x0000000186817260-0x0000000186817330
+		private void _OnUpdateRedDotForSDKListener([IsReadOnly] in EventData<bool> show); // 0x00000001868175C0-0x00000001868175F0
+		private void _OnInputChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x0000000188CC64FC-0x0000000188CC6630
 		[CompilerGenerated]
-		private void _OnInit_b__28_0(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001869B01D4-0x00000001869B0260
+		private void _OnInit_b__39_0(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001827C1150-0x00000001827C1790
 		[CompilerGenerated]
-		private void _OnInit_b__28_1(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001869B0260-0x00000001869B02EC
+		private void _OnInit_b__39_1(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001827C1790-0x00000001827C1DD0
 		[CompilerGenerated]
-		private void _OnInit_b__28_2(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001869B02EC-0x00000001869B0378
+		private void _OnInit_b__39_2(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001827C1DD0-0x00000001827C2410
 		[CompilerGenerated]
-		private void _OnInit_b__28_3(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001869B0378-0x00000001869B0404
+		private void _OnInit_b__39_3(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001827C2410-0x00000001827C2A50
 		[CompilerGenerated]
-		private void _OnInit_b__28_4(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001869B0404-0x00000001869B0498
+		private void _OnInit_b__39_4(bool isTarget, bool isGroupChanged, bool isOnNaviTargetEnabledAgain); // 0x00000001827C2A50-0x00000001827C3090
 		[CompilerGenerated]
-		private void _OnInit_b__28_5(PointerEventData _); // 0x00000001869B0498-0x00000001869B04A0
+		private void _OnInit_b__39_5(PointerEventData _); // 0x00000001827C3090-0x00000001827C30F0
 		[CompilerGenerated]
-		private void _OnInit_b__28_6(bool isFocused); // 0x00000001869B04A0-0x00000001869B04A8
+		private void _OnInit_b__39_6(bool isFocused); // 0x00000001827C30F0-0x00000001827C3A00
 		[CompilerGenerated]
-		private void __OnAnnounceClicked_b__37_0(string s); // 0x00000001869B04B0-0x00000001869B053C
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFAAC-0x00000001869AFAB4
-		public void __iFixBaseProxy_OnDestroy(); // 0x00000001869B04A8-0x00000001869B04B0
+		private void __OnAnnounceClicked_b__49_0(string s); // 0x00000001827C3A00-0x00000001827C4330
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEC3C-0x0000000188CBEC44
+		public void __iFixBaseProxy_OnDestroy(); // 0x0000000188CC5F34-0x0000000188CC5F3C
 	}
 
-	public class LoginMockUIDPanel : MonoBehaviour // TypeDefIndex: 56555
+	public class LoginMockUIDPanel : MonoBehaviour // TypeDefIndex: 81116
 	{
 		// Fields
 		[SerializeField]
@@ -5174,25 +5833,25 @@ namespace Beyond.Login
 		private ServerConfig m_serverConfig; // 0x78
 		private Action<string> m_callback; // 0x80
 		private FOptions m_options; // 0x88
-		private const string LAST_SELECTED_SERVER_PREF_KEY = "LoginMockUIDPanel.LastSelectedServer"; // Metadata: 0x02348602
+		private const string LAST_SELECTED_SERVER_PREF_KEY = "LoginMockUIDPanel.LastSelectedServer"; // Metadata: 0x0263E10D
 		private static LoginMockUIDPanel s_instance; // 0x00
 	
 		// Properties
-		public static LoginMockUIDPanel instance { get; } // 0x00000001869B14B0-0x00000001869B151C 
+		public static LoginMockUIDPanel instance { get; } // 0x0000000188CC73CC-0x0000000188CC743C 
 	
 		// Nested types
-		public struct FOptions // TypeDefIndex: 56553
+		public struct FOptions // TypeDefIndex: 81114
 		{
 			// Fields
 			public string fixedUID; // 0x00
 			public LoginContext context; // 0x08
 	
 			// Methods
-			public bool IsUIDFixed(); // 0x0000000183F10080-0x0000000183F100C0
+			public bool IsUIDFixed(); // 0x0000000186B3D6F0-0x0000000186B3D730
 		}
 	
 		[CompilerGenerated]
-		private sealed class _HideAndDestroy_d__22 : IEnumerator<object> // TypeDefIndex: 56554
+		private sealed class _HideAndDestroy_d__22 : IEnumerator<object> // TypeDefIndex: 81115
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -5200,55 +5859,55 @@ namespace Beyond.Login
 			public LoginMockUIDPanel __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _HideAndDestroy_d__22(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _HideAndDestroy_d__22(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001849D1390-0x00000001849D14D0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001863F76E0-0x00000001863F7810
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869B47E4-0x00000001869B4830
+			void IEnumerator.Reset(); // 0x0000000188CCA150-0x0000000188CCA19C
 		}
 	
 		// Constructors
-		public LoginMockUIDPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginMockUIDPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public void LoginWithCallback(FOptions options, Action<string> callback); // 0x0000000183F0EF20-0x0000000183F0F070
-		public void Refresh(); // 0x00000001869B12B8-0x00000001869B1308
+		public void LoginWithCallback(FOptions options, Action<string> callback); // 0x0000000186B3B690-0x0000000186B3C210
+		public void Refresh(); // 0x0000000188CC71FC-0x0000000188CC7234
 		[IteratorStateMachine(typeof(_HideAndDestroy_d__22))]
-		public IEnumerator HideAndDestroy(); // 0x0000000183F0E5A0-0x0000000183F0E610
-		private void _UpdateStatus(); // 0x0000000183F0FEA0-0x0000000183F10080
-		private void _InitLoginInfo(); // 0x0000000183DA3B90-0x0000000183DA3EB0
-		private void _MovePreferredServerToFront(ref int curServerIndex); // 0x0000000183F4A940-0x0000000183F4AB20
-		private int _IndexOfServer(string serverName); // 0x0000000183DA4A40-0x0000000183DA4B40
-		private void _SaveLastSelectedServer(string serverName); // 0x0000000183F4B630-0x0000000183F4B6C0
-		private void _SaveConfig(); // 0x0000000183DA4240-0x0000000183DA42B0
-		private void _OnBtnEnterGame(); // 0x0000000184CE84A0-0x0000000184CE8520
-		private void _SmokeEnterGame(string serverName, string uid); // 0x00000001869B135C-0x00000001869B1414
-		private void _OnBtnDelLocalFile(); // 0x00000001869B1318-0x00000001869B135C
-		private void _TryClosePanel(); // 0x00000001869B1414-0x00000001869B14B0
-		private void _OnSelectServer(int index); // 0x0000000183F4AB20-0x0000000183F4ABC0
-		private void OnDestroy(); // 0x0000000184D51270-0x0000000184D512B0
+		public IEnumerator HideAndDestroy(); // 0x0000000186B3B590-0x0000000186B3B610
+		private void _UpdateStatus(); // 0x0000000186B3C210-0x0000000186B3D6F0
+		private void _InitLoginInfo(); // 0x00000001861207D0-0x0000000186122FF0
+		private void _MovePreferredServerToFront(ref int curServerIndex); // 0x0000000186DDF7C0-0x0000000186DDF9A0
+		private int _IndexOfServer(string serverName); // 0x0000000186120560-0x0000000186120670
+		private void _SaveLastSelectedServer(string serverName); // 0x000000018611EB50-0x000000018611EBF0
+		private void _SaveConfig(); // 0x000000018611FC30-0x000000018611FCB0
+		private void _OnBtnEnterGame(); // 0x0000000187121E70-0x0000000187121EF0
+		private void _SmokeEnterGame(string serverName, string uid); // 0x0000000188CC7280-0x0000000188CC732C
+		private void _OnBtnDelLocalFile(); // 0x0000000188CC7244-0x0000000188CC7280
+		private void _TryClosePanel(); // 0x0000000188CC732C-0x0000000188CC73CC
+		private void _OnSelectServer(int index); // 0x000000018611EC90-0x000000018611FBC0
+		private void OnDestroy(); // 0x00000001871F56A0-0x00000001871F56E0
 		[CompilerGenerated]
-		private void __UpdateStatus_b__23_0(PointerEventData _); // 0x0000000184CE8490-0x0000000184CE84A0
+		private void __UpdateStatus_b__23_0(PointerEventData _); // 0x0000000187121E60-0x0000000187121E70
 		[CompilerGenerated]
-		private void __UpdateStatus_b__23_1(PointerEventData _); // 0x00000001869B1308-0x00000001869B1310
+		private void __UpdateStatus_b__23_1(PointerEventData _); // 0x0000000188CC7234-0x0000000188CC723C
 		[CompilerGenerated]
-		private void __UpdateStatus_b__23_2(PointerEventData _); // 0x00000001869B1310-0x00000001869B1318
+		private void __UpdateStatus_b__23_2(PointerEventData _); // 0x0000000188CC723C-0x0000000188CC7244
 		[CompilerGenerated]
-		private void __InitLoginInfo_b__24_0(int index, UIDropdownOption options, bool isSelected); // 0x0000000183F4ABC0-0x0000000183F4AC10
+		private void __InitLoginInfo_b__24_0(int index, UIDropdownOption options, bool isSelected); // 0x0000000185395140-0x0000000185395190
 	}
 
-	public class LoginResourcePanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginHotUpdateModel> // TypeDefIndex: 56556
+	public class LoginResourcePanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginHotUpdateModel> // TypeDefIndex: 81117
 	{
 		// Fields
-		private const float PROGRESS_LERP_DURATION = 0.2f; // Metadata: 0x02348627
+		private const float PROGRESS_LERP_DURATION = 0.2f; // Metadata: 0x0263E132
 		[SerializeField]
 		private CanvasGroup _alphaHandler; // 0x28
 		[SerializeField]
@@ -5262,15 +5921,15 @@ namespace Beyond.Login
 		private string m_resInfoCache; // 0x80
 	
 		// Constructors
-		public LoginResourcePanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginResourcePanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public void OnValueChanged(LoginHotUpdateModel value); // 0x00000001849C89F0-0x00000001849C8AA0
-		private void _UpdateResourceInfo(); // 0x00000001839367F0-0x00000001839369B0
-		private void Update(); // 0x0000000183935650-0x00000001839367C0
+		public void OnValueChanged(LoginHotUpdateModel value); // 0x0000000186151BC0-0x0000000186151C70
+		private void _UpdateResourceInfo(); // 0x000000018539A070-0x000000018539A260
+		private void Update(); // 0x00000001853998C0-0x0000000185399AA0
 	}
 
-	public class LoginRootPanel : MonoBehaviour // TypeDefIndex: 56558
+	public class LoginRootPanel : MonoBehaviour // TypeDefIndex: 81119
 	{
 		// Fields
 		[SerializeField]
@@ -5289,10 +5948,18 @@ namespace Beyond.Login
 		private LoginServerSelectPanel _serverSelectPanel; // 0x48
 		[SerializeField]
 		private InputBindingGroupMonoTarget _bindingGroup; // 0x50
-		private int m_loginRootBindingGroupId; // 0x58
+		[SerializeField]
+		private GameObject _debugPanel; // 0x58
+		[SerializeField]
+		private UIText _debugNodeNameText; // 0x60
+		[SerializeField]
+		private UIText _debugTaskIdText; // 0x68
+		[SerializeField]
+		private UIText _debugTaskStateText; // 0x70
+		private int m_loginRootBindingGroupId; // 0x78
 	
 		// Nested types
-		public abstract class ChildPanel : MonoBehaviour, ILoginContextReceiver // TypeDefIndex: 56557
+		public abstract class ChildPanel : MonoBehaviour, ILoginContextReceiver // TypeDefIndex: 81118
 		{
 			// Fields
 			[CompilerGenerated]
@@ -5301,35 +5968,37 @@ namespace Beyond.Login
 			private LoginContext _context_k__BackingField; // 0x20
 	
 			// Properties
-			protected UISwitchTween switchTween { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-			protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+			protected UISwitchTween switchTween { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+			protected LoginContext context { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
 	
 			// Constructors
-			protected ChildPanel(); // 0x0000000185393520-0x0000000185393538
+			protected ChildPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 			// Methods
-			public void OnLoginContext(LoginContext context); // 0x00000001841E5A50-0x00000001841E5AA0
-			protected virtual void OnInit(); // 0x00000001842B60D0-0x00000001842B6100
-			protected virtual void OnDestroy(); // 0x00000001848AB6E0-0x00000001848AB730
-			protected void SetPanelVisibleByAnimSwitchTween(UIAnimationWrapper anim, bool isVisible, bool forceReset = false /* Metadata: 0x0234862B */); // 0x00000001869AAF5C-0x00000001869AB054
-			protected void SetPanelVisibleByFadeSwitchTween(CanvasGroup canvasGroup, bool isVisible, bool forceReset = false /* Metadata: 0x0234862C */); // 0x0000000183406EF0-0x0000000183406FE0
+			public void OnLoginContext(LoginContext context); // 0x00000001863F8DC0-0x00000001863F8E10
+			protected virtual void OnInit(); // 0x000000018663AF10-0x000000018663AF40
+			protected virtual void OnDestroy(); // 0x0000000186D43640-0x0000000186D43690
+			protected void SetPanelVisibleByAnimSwitchTween(UIAnimationWrapper anim, bool isVisible, bool forceReset = false /* Metadata: 0x0263E136 */); // 0x0000000188CC49C0-0x0000000188CC4ABC
+			protected void SetPanelVisibleByFadeSwitchTween(CanvasGroup canvasGroup, bool isVisible, bool forceReset = false /* Metadata: 0x0263E137 */); // 0x00000001861515D0-0x00000001861516C0
 		}
 	
 		// Constructors
-		public LoginRootPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginRootPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Awake(); // 0x0000000183CD3860-0x0000000183CD3960
-		private void OnDestroy(); // 0x0000000183CD3960-0x0000000183CD3A50
-		public void Init(LoginContext context); // 0x00000001841E57E0-0x00000001841E58D0
-		private void _OnNotchPaddingChanged([IsReadOnly] in EventData<float> data); // 0x00000001869B15B0-0x00000001869B1654
-		private void _InitController(); // 0x00000001841E4B40-0x00000001841E4C00
-		public void ToggleLoginBindingGroup(bool enable); // 0x00000001869B151C-0x00000001869B15B0
-		public void InitBulletinAndRedAfterLoginSuc(); // 0x00000001841E7A80-0x00000001841E7AC0
-		private static void _InitChildPanel(ChildPanel childPanel, LoginContext context); // 0x00000001841E58D0-0x00000001841E5A50
+		private void Awake(); // 0x0000000185C42540-0x0000000185C42640
+		private void OnDestroy(); // 0x0000000185C42640-0x0000000185C43790
+		public void Init(LoginContext context); // 0x00000001863F8090-0x00000001863F8C30
+		private void _OnNotchPaddingChanged([IsReadOnly] in EventData<float> data); // 0x0000000188CC74DC-0x0000000188CC758C
+		private void _InitController(); // 0x000000018663A7A0-0x000000018663A860
+		public void ToggleLoginBindingGroup(bool enable); // 0x0000000188CC743C-0x0000000188CC74DC
+		public void InitBulletinAndRedAfterLoginSuc(); // 0x00000001863F6530-0x00000001863F6570
+		public void ShowLoginSuccessToast(); // 0x00000001827C63B0-0x00000001827C6400
+		private void _SetDebugPanelActive(bool active); // 0x0000000186B7BDA0-0x0000000186B7BE70
+		private static void _InitChildPanel(ChildPanel childPanel, LoginContext context); // 0x00000001863F8C30-0x00000001863F8DC0
 	}
 
-	public class LoginServerSelectItemView : MonoBehaviour // TypeDefIndex: 56560
+	public class LoginServerSelectItemView : MonoBehaviour // TypeDefIndex: 81121
 	{
 		// Fields
 		[SerializeField]
@@ -5347,14 +6016,14 @@ namespace Beyond.Login
 		[SerializeField]
 		private UIStateController _stateController; // 0x48
 		private static readonly UnityEngine.Color DEFAULT_COLOR; // 0x00
-		private const string DEFAULT_TEXT = "--"; // Metadata: 0x0234862D
+		private const string DEFAULT_TEXT = "--"; // Metadata: 0x0263E138
 		private static readonly DelayInfo DEFAULT_SPEED_INFO; // 0x10
 		private ServerZoneManager.ServerZoneData m_serverItem; // 0x50
 		private LoginContext m_context; // 0x58
 		private List<DelayInfo> m_speedInfos; // 0x60
 	
 		// Nested types
-		private struct DelayInfo // TypeDefIndex: 56559
+		private struct DelayInfo // TypeDefIndex: 81120
 		{
 			// Fields
 			public UnityEngine.Color color; // 0x00
@@ -5364,51 +6033,51 @@ namespace Beyond.Login
 		}
 	
 		// Constructors
-		public LoginServerSelectItemView(); // 0x00000001846093D0-0x00000001846096E0
-		static LoginServerSelectItemView(); // 0x0000000184CB5D40-0x0000000184CB5E10
+		public LoginServerSelectItemView(); // 0x0000000186B063B0-0x0000000186B06760
+		static LoginServerSelectItemView(); // 0x00000001870A8FE0-0x00000001870A90C0
 	
 		// Methods
-		public void RefreshView(LoginContext context, ServerZoneManager.ServerZoneData serverItem, bool isSelected); // 0x00000001869B179C-0x00000001869B1CC4
-		public void NaviToBtnTarget(); // 0x00000001869B170C-0x00000001869B179C
-		public void SetSelected(bool isSelected); // 0x00000001869B1CC4-0x00000001869B1D68
-		private void _OnClicked(PointerEventData _); // 0x00000001869B1D68-0x00000001869B1DE0
+		public void RefreshView(LoginContext context, ServerZoneManager.ServerZoneData serverItem, bool isSelected); // 0x0000000188CC7624-0x0000000188CC7B18
+		public void NaviToBtnTarget(); // 0x0000000188CC758C-0x0000000188CC7624
+		public void SetSelected(bool isSelected); // 0x0000000188CC7B18-0x0000000188CC7BC8
+		private void _OnClicked(PointerEventData _); // 0x0000000188CC7BC8-0x0000000188CC7C2C
 	}
 
-	public class LoginServerSelectProp : LoginProperty<LoginServerSelectModel> // TypeDefIndex: 56561
+	public class LoginServerSelectProp : LoginProperty<LoginServerSelectModel> // TypeDefIndex: 81122
 	{
 		// Constructors
-		public LoginServerSelectProp(LoginWorkFlow workflow); // 0x0000000183A7F900-0x0000000183A7F950
+		public LoginServerSelectProp(LoginWorkFlow workflow); // 0x000000018614BCB0-0x000000018614BD00
 	}
 
-	public class LoginServerItem // TypeDefIndex: 56562
+	public class LoginServerItem // TypeDefIndex: 81123
 	{
 		// Fields
 		public ServerZoneManager.ServerZoneData serverZoneData; // 0x10
 	
 		// Constructors
-		public LoginServerItem(); // 0x00000001841E1670-0x00000001841E1680
+		public LoginServerItem(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class LoginServerSelectModel // TypeDefIndex: 56563
+	public class LoginServerSelectModel // TypeDefIndex: 81124
 	{
 		// Fields
 		public bool showPanel; // 0x10
 		public int selectedIndex; // 0x14
 	
 		// Properties
-		public List<ServerZoneManager.ServerZoneData> serverList { get; } // 0x00000001869B2050-0x00000001869B20E4 
-		public ServerZoneManager.ServerZoneData curServerZoneData { get; } // 0x00000001869B1FBC-0x00000001869B2050 
+		public List<ServerZoneManager.ServerZoneData> serverList { get; } // 0x0000000188CC7EB4-0x0000000188CC7F4C 
+		public ServerZoneManager.ServerZoneData curServerZoneData { get; } // 0x0000000188CC7E18-0x0000000188CC7EB4 
 	
 		// Constructors
-		public LoginServerSelectModel(); // 0x0000000184D8CCE0-0x0000000184D8CCF0
+		public LoginServerSelectModel(); // 0x00000001872399B0-0x00000001872399C0
 	
 		// Methods
-		public void InitData(); // 0x00000001869B1E64-0x00000001869B1ECC
-		public ServerZoneManager.ServerZoneData GetSelectedServer(); // 0x00000001869B1DE0-0x00000001869B1E64
-		public bool UpdateSelectedServer(ServerZoneManager.ServerZoneData selectedServer); // 0x00000001869B1ECC-0x00000001869B1FBC
+		public void InitData(); // 0x0000000188CC7CBC-0x0000000188CC7D20
+		public ServerZoneManager.ServerZoneData GetSelectedServer(); // 0x0000000188CC7C2C-0x0000000188CC7CBC
+		public bool UpdateSelectedServer(ServerZoneManager.ServerZoneData selectedServer); // 0x0000000188CC7D20-0x0000000188CC7E18
 	}
 
-	public class LoginServerSelectPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginServerSelectModel> // TypeDefIndex: 56566
+	public class LoginServerSelectPanel : LoginRootPanel.ChildPanel, ILoginBinder<LoginServerSelectModel> // TypeDefIndex: 81127
 	{
 		// Fields
 		[SerializeField]
@@ -5429,7 +6098,7 @@ namespace Beyond.Login
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 56564
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 81125
 		{
 			// Fields
 			public LoginServerSelectPanel __4__this; // 0x10
@@ -5438,15 +6107,15 @@ namespace Beyond.Login
 			public Action<SpeedTestResult> callback; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass10_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _OnEnable_b__0(SpeedTestResult result); // 0x00000001869B4874-0x00000001869B4BE8
-			internal Task<Hypergryph.SpeedTest.TaskResult> _OnEnable_b__1(); // 0x00000001869B4BE8-0x00000001869B4C50
+			internal void _OnEnable_b__0(SpeedTestResult result); // 0x0000000188CCA19C-0x0000000188CCA4F4
+			internal Task<Hypergryph.SpeedTest.TaskResult> _OnEnable_b__1(); // 0x0000000188CCA4F4-0x0000000188CCA564
 		}
 	
 		[CompilerGenerated]
-		private sealed class __WaitingForShowListAwake_d__11 : IEnumerator<object> // TypeDefIndex: 56565
+		private sealed class __WaitingForShowListAwake_d__11 : IEnumerator<object> // TypeDefIndex: 81126
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -5454,62 +6123,62 @@ namespace Beyond.Login
 			public LoginServerSelectPanel __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __WaitingForShowListAwake_d__11(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __WaitingForShowListAwake_d__11(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x00000001869B4DA4-0x00000001869B4E94
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000188CCA5C8-0x0000000188CCA6BC
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x00000001869B4E94-0x00000001869B4EE0
+			void IEnumerator.Reset(); // 0x0000000188CCA6BC-0x0000000188CCA708
 		}
 	
 		// Constructors
-		public LoginServerSelectPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginServerSelectPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001842B4AF0-0x00000001842B4D70
-		private void OnDisable(); // 0x00000001869B20E4-0x00000001869B21E8
-		private void OnEnable(); // 0x00000001869B21E8-0x00000001869B28F4
+		protected override void OnInit(); // 0x000000018663C0B0-0x000000018663C330
+		private void OnDisable(); // 0x0000000188CC7F4C-0x0000000188CC8050
+		private void OnEnable(); // 0x0000000188CC8050-0x0000000188CC872C
 		[IteratorStateMachine(typeof(__WaitingForShowListAwake_d__11))]
-		private IEnumerator _WaitingForShowListAwake(); // 0x00000001869B2EB4-0x00000001869B2F44
-		private void _UpdateServerCell(GameObject cell, int index); // 0x00000001869B2CE8-0x00000001869B2DF4
-		private void _UpdateServerSelected(int index, GameObject cell); // 0x00000001869B2DF4-0x00000001869B2EB4
-		public void OnValueChanged(LoginServerSelectModel value); // 0x00000001869B28F4-0x00000001869B2A4C
-		private void _NaviToSelectedItem(); // 0x00000001869B2A4C-0x00000001869B2B94
-		private void _OnInputChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x00000001869B2C84-0x00000001869B2CE8
-		private void _OnCloseClicked(PointerEventData _); // 0x00000001869B2B94-0x00000001869B2C0C
-		private void _OnConfirmClicked(PointerEventData _); // 0x00000001869B2C0C-0x00000001869B2C84
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFAAC-0x00000001869AFAB4
+		private IEnumerator _WaitingForShowListAwake(); // 0x0000000188CC8CD4-0x0000000188CC8D6C
+		private void _UpdateServerCell(GameObject cell, int index); // 0x0000000188CC8AFC-0x0000000188CC8C0C
+		private void _UpdateServerSelected(int index, GameObject cell); // 0x0000000188CC8C0C-0x0000000188CC8CD4
+		public void OnValueChanged(LoginServerSelectModel value); // 0x0000000188CC872C-0x0000000188CC8888
+		private void _NaviToSelectedItem(); // 0x0000000188CC8888-0x0000000188CC89E0
+		private void _OnInputChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> input); // 0x0000000188CC8AB0-0x0000000188CC8AFC
+		private void _OnCloseClicked(PointerEventData _); // 0x0000000188CC89E0-0x0000000188CC8A48
+		private void _OnConfirmClicked(PointerEventData _); // 0x0000000188CC8A48-0x0000000188CC8AB0
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEC3C-0x0000000188CBEC44
 	}
 
-	public class LoginVersionPanel : MonoBehaviour // TypeDefIndex: 56567
+	public class LoginVersionPanel : MonoBehaviour // TypeDefIndex: 81128
 	{
 		// Fields
 		[SerializeField]
 		private UIText _textVersion; // 0x18
 	
 		// Properties
-		public string displayGameVersion { get; } // 0x000000018368CED0-0x000000018368D070 
-		private string versionZoneType { get; } // 0x000000018368CD50-0x000000018368CDC0 
-		private string versionPlatform { get; } // 0x000000018368CE30-0x000000018368CE80 
-		private string versionAppType { get; } // 0x000000018368CE80-0x000000018368CED0 
-		private string versionVersionNum { get; } // 0x00000001838118B0-0x0000000183811920 
-		private string versionProjectCL { get; } // 0x000000018368CDC0-0x000000018368CE30 
+		public string displayGameVersion { get; } // 0x0000000186C4BA30-0x0000000186C4BBD0 
+		private string versionZoneType { get; } // 0x0000000186C4BDB0-0x0000000186C4BE30 
+		private string versionPlatform { get; } // 0x0000000186C4BC70-0x0000000186C4BCD0 
+		private string versionAppType { get; } // 0x0000000186C4BC10-0x0000000186C4BC70 
+		private string versionVersionNum { get; } // 0x0000000186C4BD40-0x0000000186C4BDB0 
+		private string versionProjectCL { get; } // 0x0000000186C4BCD0-0x0000000186C4BD40 
 	
 		// Constructors
-		public LoginVersionPanel(); // 0x0000000185393520-0x0000000185393538
+		public LoginVersionPanel(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Start(); // 0x000000018368CC80-0x000000018368CD50
+		private void Start(); // 0x0000000186C4B960-0x0000000186C4BA30
 	}
 
-	public class LoginVocResSelDialog : LoginController.Dialog // TypeDefIndex: 56570
+	public class LoginVocResSelDialog : LoginController.Dialog // TypeDefIndex: 81131
 	{
 		// Fields
 		private FParams m_params; // 0x38
@@ -5525,46 +6194,46 @@ namespace Beyond.Login
 		private int m_selectedIndex; // 0x68
 	
 		// Nested types
-		public struct FParams // TypeDefIndex: 56568
+		public struct FParams // TypeDefIndex: 81129
 		{
 			// Fields
 			public Action onConfirm; // 0x00
 		}
 	
-		public class VocResInfo // TypeDefIndex: 56569
+		public class VocResInfo // TypeDefIndex: 81130
 		{
 			// Fields
 			public string nameTextId; // 0x10
 			public EVFSBlockType type; // 0x18
 	
 			// Constructors
-			public VocResInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public VocResInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		public LoginVocResSelDialog(); // 0x0000000185393520-0x0000000185393538
+		public LoginVocResSelDialog(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		protected override void OnInit(); // 0x00000001869B3150-0x00000001869B34E4
-		private int _ResolveInitialSelectedIndex(); // 0x00000001869B3AC8-0x00000001869B3C0C
-		private void _RefreshConfirmInteractable(); // 0x00000001869B3A64-0x00000001869B3AC8
-		private void OnEnable(); // 0x00000001869B3048-0x00000001869B3150
-		private void OnDisable(); // 0x00000001869B2F44-0x00000001869B3048
-		public void SetParams(FParams param); // 0x00000001869B34E4-0x00000001869B3548
-		public void UpdateSelected(EVFSBlockType type); // 0x00000001869B3548-0x00000001869B3644
-		private void _UpdateList(); // 0x00000001869B3CEC-0x00000001869B3DAC
-		private void _UpdateSelected(int index, GameObject cell); // 0x00000001869B3DAC-0x00000001869B3E5C
-		private void _UpdateCell(GameObject cell, int index); // 0x00000001869B3C0C-0x00000001869B3CEC
+		protected override void OnInit(); // 0x0000000188CC8F7C-0x0000000188CC9318
+		private int _ResolveInitialSelectedIndex(); // 0x0000000188CC98EC-0x0000000188CC9A30
+		private void _RefreshConfirmInteractable(); // 0x0000000188CC988C-0x0000000188CC98EC
+		private void OnEnable(); // 0x0000000188CC8E70-0x0000000188CC8F7C
+		private void OnDisable(); // 0x0000000188CC8D6C-0x0000000188CC8E70
+		public void SetParams(FParams param); // 0x0000000188CC9318-0x0000000188CC9358
+		public void UpdateSelected(EVFSBlockType type); // 0x0000000188CC9358-0x0000000188CC9460
+		private void _UpdateList(); // 0x0000000188CC9B1C-0x0000000188CC9BE0
+		private void _UpdateSelected(int index, GameObject cell); // 0x0000000188CC9BE0-0x0000000188CC9C98
+		private void _UpdateCell(GameObject cell, int index); // 0x0000000188CC9A30-0x0000000188CC9B1C
 		[IDTag(1)]
-		private void _OnConfirmClicked(PointerEventData evt); // 0x00000001869B394C-0x00000001869B3A00
+		private void _OnConfirmClicked(PointerEventData evt); // 0x0000000188CC9780-0x0000000188CC9840
 		[IDTag(0)]
-		private void _OnConfirmClicked(); // 0x00000001869B3788-0x00000001869B394C
-		private void _OnInputTypeChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> data); // 0x00000001869B3A00-0x00000001869B3A64
-		private void _NaviToSelectedItem(); // 0x00000001869B3644-0x00000001869B3788
-		public void __iFixBaseProxy_OnInit(); // 0x00000001869AFC98-0x00000001869AFCA0
+		private void _OnConfirmClicked(); // 0x0000000188CC95A8-0x0000000188CC9780
+		private void _OnInputTypeChanged([IsReadOnly] in EventData<Beyond.DeviceInfo.InputType> data); // 0x0000000188CC9840-0x0000000188CC988C
+		private void _NaviToSelectedItem(); // 0x0000000188CC9460-0x0000000188CC95A8
+		public void __iFixBaseProxy_OnInit(); // 0x0000000188CBEED0-0x0000000188CBEED8
 	}
 
-	public class LoginVocResSelItemView : MonoBehaviour // TypeDefIndex: 56571
+	public class LoginVocResSelItemView : MonoBehaviour // TypeDefIndex: 81132
 	{
 		// Fields
 		[SerializeField]
@@ -5577,84 +6246,134 @@ namespace Beyond.Login
 		private UIStateController _stateController; // 0x30
 		private LoginVocResSelDialog.VocResInfo m_info; // 0x38
 		private LoginVocResSelDialog m_context; // 0x40
-		private const double MB = 1048576; // Metadata: 0x02348630
+		private const double MB = 1048576; // Metadata: 0x0263E13B
 	
 		// Constructors
-		public LoginVocResSelItemView(); // 0x0000000185393520-0x0000000185393538
+		public LoginVocResSelItemView(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		public void RefreshView(LoginVocResSelDialog context, LoginVocResSelDialog.VocResInfo info, bool isSelected); // 0x00000001869B3EEC-0x00000001869B4274
-		public void NaviToBtnTarget(); // 0x00000001869B3E5C-0x00000001869B3EEC
-		public void SetSelected(bool isSelected); // 0x00000001869B4274-0x00000001869B4318
-		private void _OnClicked(PointerEventData _); // 0x00000001869B4318-0x00000001869B438C
+		public void RefreshView(LoginVocResSelDialog context, LoginVocResSelDialog.VocResInfo info, bool isSelected); // 0x0000000188CC9D30-0x0000000188CCA03C
+		public void NaviToBtnTarget(); // 0x0000000188CC9C98-0x0000000188CC9D30
+		public void SetSelected(bool isSelected); // 0x0000000188CCA03C-0x0000000188CCA0EC
+		private void _OnClicked(PointerEventData _); // 0x0000000188CCA0EC-0x0000000188CCA150
 	}
 }
 
 namespace Beyond.Scripts.Entry
 {
-	public static class GameSettingSetter // TypeDefIndex: 56572
+	public static class GameSettingSetter // TypeDefIndex: 81133
 	{
 		// Methods
-		public static void RegisterSettingCallbacks(); // 0x000000018366F370-0x000000018366FC60
-		private static void _OnAudioGlobalVolumeChange(float volume); // 0x00000001843F3130-0x00000001843F31A0
-		private static void _OnAudioMusicVolumeChange(float volume); // 0x0000000184D38130-0x0000000184D381A0
-		private static void _OnAudioVoiceVolumeChange(float volume); // 0x0000000184D380C0-0x0000000184D38130
-		private static void _OnAudioSfxVolumeChange(float volume); // 0x00000001843F30C0-0x00000001843F3130
-		private static void _OnAudioSuspendUnfocusedChange(bool suspendUnfocused); // 0x0000000184CE1800-0x0000000184CE1890
-		private static void _OnAudioBackgroundMusicChange(bool enable); // 0x00000001869AB054-0x00000001869AB0A4
-		private static void _OnAudioSuiteModeChange(GameSetting.GameSettingAudioSuiteMode mode); // 0x0000000183F92AF0-0x0000000183F92B80
-		private static void _OnAudioControllerChange(bool enable); // 0x0000000184D27280-0x0000000184D27300
-		private static void _OnAudioSpatialAudioChange(bool enable); // 0x0000000184007320-0x0000000184007390
-		private static void _OnCameraDistanceLevelChange(float distance); // 0x00000001843F3290-0x00000001843F3320
-		private static void _OnControllerMotionChange(bool valid); // 0x0000000184D27200-0x0000000184D27280
-		private static void _OnKeyboardTypeChange(GameSetting.KeyboardLayoutType value); // 0x0000000183F92A00-0x0000000183F92A70
-		private static void _OnLanguageTextChange(EnvLang language); // 0x000000018332ADD0-0x000000018332AF90
-		private static void _OnLanguageAudioChange(GameSetting.GameSettingLanguageAudio language); // 0x000000018366EE20-0x000000018366EF40
-		private static void _OnVideoQualityChange(GameSetting.GameSettingVideoQuality quality); // 0x0000000184B89C60-0x0000000184B89CD0
-		private static void _OnVideoFullScreenChange(bool fullScreen); // 0x00000001836A4280-0x00000001836A4300
-		private static void _OnVideoResolutionChange(GameSetting.ScreenResolution newResolution); // 0x000000018366D880-0x000000018366DB90
-		private static void _SetResolution(int width, int height, bool fullScreen); // 0x00000001836A4300-0x00000001836A44E0
-		private static void _OnVideoNotchPaddingChange(float notchPadding); // 0x00000001869AB0A4-0x00000001869AB15C
-		private static void _OnTeammateSkillEffectStrengthChange(GameSetting.TeammateSkillEffectStrength strength); // 0x0000000183F92820-0x0000000183F928C0
-		private static void _OnTeammateSkillEffectOpacityChange(float opacity); // 0x00000001843F31A0-0x00000001843F3230
+		public static void RegisterSettingCallbacks(); // 0x00000001861E9E70-0x00000001861EA710
+		private static void _OnAudioGlobalVolumeChange(float volume); // 0x00000001861E7F20-0x00000001861E7FA0
+		private static void _OnAudioMusicVolumeChange(float volume); // 0x00000001861E7EA0-0x00000001861E7F20
+		private static void _OnAudioVoiceVolumeChange(float volume); // 0x00000001861E8080-0x00000001861E8100
+		private static void _OnAudioSfxVolumeChange(float volume); // 0x00000001861E8100-0x00000001861E8180
+		private static void _OnAudioSuspendUnfocusedChange(bool suspendUnfocused); // 0x00000001861E85E0-0x00000001861E8670
+		private static void _OnAudioBackgroundMusicChange(bool enable); // 0x0000000188CC4ABC-0x0000000188CC4AF4
+		private static void _OnAudioSuiteModeChange(Beyond.GameSetting.GameSettingAudioSuiteMode mode); // 0x00000001861E9050-0x00000001861E90F0
+		private static void _OnAudioControllerChange(bool enable); // 0x00000001861E8550-0x00000001861E85E0
+		private static void _OnAudioSpatialAudioChange(bool enable); // 0x00000001861E83D0-0x00000001861E8440
+		private static void _OnCameraDistanceLevelChange(float distance); // 0x00000001871783E0-0x0000000187178470
+		private static void _OnControllerMotionChange(bool valid); // 0x00000001861E84C0-0x00000001861E8550
+		private static void _OnKeyboardTypeChange(Beyond.GameSetting.KeyboardLayoutType value); // 0x00000001861E8670-0x00000001861E86F0
+		private static void _OnLanguageTextChange(EnvLang language); // 0x000000018671D4A0-0x000000018671D6A0
+		private static void _OnLanguageAudioChange(Beyond.GameSetting.GameSettingLanguageAudio language); // 0x00000001861E8E10-0x00000001861E8F40
+		private static void _OnVideoQualityChange(Beyond.GameSetting.GameSettingVideoQuality quality); // 0x00000001867F1830-0x00000001867F18B0
+		private static void _OnVideoFullScreenChange(bool fullScreen); // 0x00000001861E8440-0x00000001861E84C0
+		private static void _OnVideoResolutionChange(Beyond.GameSetting.ScreenResolution newResolution); // 0x00000001861E8930-0x00000001861E8C70
+		private static void _SetResolution(int width, int height, bool fullScreen); // 0x0000000185E38EF0-0x0000000185E390D0
+		private static void _OnVideoNotchPaddingChange(float notchPadding); // 0x0000000188CC4AF4-0x0000000188CC4BB0
+		private static void _OnTeammateSkillEffectStrengthChange(Beyond.GameSetting.TeammateSkillEffectStrength strength); // 0x00000001861E86F0-0x00000001861E8790
+		private static void _OnTeammateSkillEffectOpacityChange(float opacity); // 0x00000001861E7FA0-0x00000001861E8030
 	}
 
-	public class WarmUpProgress : LoginHotUpdateModel.IProgress // TypeDefIndex: 56573
+	public class WarmUpProgress : LoginHotUpdateModel.IProgress // TypeDefIndex: 81134
 	{
 		// Constructors
-		public WarmUpProgress(); // 0x00000001841E1670-0x00000001841E1680
+		public WarmUpProgress(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public double GetTotal(); // 0x00000001869B4FDC-0x00000001869B5064
-		public double GetCurrent(); // 0x00000001869B4EE0-0x00000001869B4F70
-		public string GetInfo(); // 0x00000001869B4F70-0x00000001869B4FDC
+		public double GetTotal(); // 0x0000000188CCA808-0x0000000188CCA894
+		public double GetCurrent(); // 0x0000000188CCA708-0x0000000188CCA798
+		public string GetInfo(); // 0x0000000188CCA798-0x0000000188CCA808
 	}
 }
 
 namespace Beyond.SDK
 {
-	public class PlatformFont : IPlatformFont // TypeDefIndex: 56382
+	public class PlatformFont : IPlatformFont // TypeDefIndex: 80916
 	{
 		// Fields
-		private const int DEFAULT_FONT_ID = -430371804; // Metadata: 0x023483BB
+		private const int DEFAULT_FONT_ID = -430371804; // Metadata: 0x0263DE70
 		private readonly bool m_forceChineseFont; // 0x10
 	
 		// Constructors
-		public PlatformFont(bool forceChineseFont = false /* Metadata: 0x023483BA */); // 0x0000000184D86130-0x0000000184D86140
+		public PlatformFont(bool forceChineseFont = false /* Metadata: 0x0263DE6F */); // 0x0000000182A819C0-0x0000000182A819D0
 	
 		// Methods
-		public TMP_FontAsset GetFont(); // 0x000000018699B6E4-0x000000018699B77C
+		public TMP_FontAsset GetFont(); // 0x0000000188CB3630-0x0000000188CB36C8
 	}
 
-	public static class SDKNetUtils // TypeDefIndex: 56391
+	public static class SDKLaunchAuth // TypeDefIndex: 80918
 	{
 		// Fields
-		public const string CONTENT_TYPE_JSON = "application/json"; // Metadata: 0x023483C0
-		private const int GENERAL_TIMEOUT = 30; // Metadata: 0x023483D1
+		public const long ERROR_UNKNOWN = 10999; // Metadata: 0x0263DE75
+		public const float NETWORK_CFG_TIMEOUT_SECONDS = 1f; // Metadata: 0x0263DE7D
+		[CompilerGenerated]
+		private static bool _hasFailed_k__BackingField; // 0x00
+		private static bool s_waiting; // 0x01
+		private static bool s_done; // 0x02
+		private static bool s_success; // 0x03
+		private static long s_errorCode; // 0x08
+		private static string s_filePath; // 0x10
+	
+		// Properties
+		public static bool hasFailed { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182758870-0x0000000182758B70 0x0000000182758B70-0x0000000182758E70
+	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class _WaitIfNeeded_d__11 : IEnumerator<object> // TypeDefIndex: 80917
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+	
+			// Constructors
+			[DebuggerHidden]
+			public _WaitIfNeeded_d__11(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018275AFA0-0x000000018275CA20
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018275CA20-0x000000018275CA70
+		}
+	
+		// Methods
+		[IteratorStateMachine(typeof(_WaitIfNeeded_d__11))]
+		public static IEnumerator WaitIfNeeded(); // 0x0000000182756F20-0x0000000182757250
+		public static void OnResult(bool success, long errorCode, string filePath); // 0x0000000182756870-0x0000000182756F20
+		private static bool _ShouldRun(); // 0x00000001827584F0-0x0000000182758870
+		private static bool _IsExcludedSubChannel(); // 0x0000000182757B20-0x0000000182757EF0
+		private static bool _HasNetworkCfg(); // 0x0000000182757250-0x0000000182757B20
+		private static bool _IsLaunchAuthEnabled(); // 0x0000000182757EF0-0x00000001827584F0
+	}
+
+	public static class SDKNetUtils // TypeDefIndex: 80927
+	{
+		// Fields
+		public const string CONTENT_TYPE_JSON = "application/json"; // Metadata: 0x0263DE81
+		private const int GENERAL_TIMEOUT = 30; // Metadata: 0x0263DE92
 		private static HTTPImpl s_HTTPImpl; // 0x00
 	
 		// Nested types
-		public struct HttpPostRequest // TypeDefIndex: 56383
+		public struct HttpPostRequest // TypeDefIndex: 80919
 		{
 			// Fields
 			public string url; // 0x00
@@ -5664,14 +6383,14 @@ namespace Beyond.SDK
 			public Action<WebHttpResponse> callback; // 0x20
 		}
 	
-		public struct HttpGetRequest // TypeDefIndex: 56384
+		public struct HttpGetRequest // TypeDefIndex: 80920
 		{
 			// Fields
 			public string url; // 0x00
 			public Action<WebHttpResponse> callback; // 0x08
 		}
 	
-		public struct WebHttpResponse // TypeDefIndex: 56385
+		public struct WebHttpResponse // TypeDefIndex: 80921
 		{
 			// Fields
 			public bool isTimeout; // 0x00
@@ -5683,13 +6402,13 @@ namespace Beyond.SDK
 			public string error; // 0x28
 		}
 	
-		private enum HTTPOptType // TypeDefIndex: 56386
+		private enum HTTPOptType // TypeDefIndex: 80922
 		{
 			GET = 0,
 			POST = 1
 		}
 	
-		private struct HTTPConfig // TypeDefIndex: 56387
+		private struct HTTPConfig // TypeDefIndex: 80923
 		{
 			// Fields
 			public string url; // 0x00
@@ -5700,20 +6419,20 @@ namespace Beyond.SDK
 			public Action<WebHttpResponse> callback; // 0x28
 		}
 	
-		private abstract class HTTPImpl // TypeDefIndex: 56388
+		private abstract class HTTPImpl // TypeDefIndex: 80924
 		{
 			// Constructors
-			protected HTTPImpl(); // 0x00000001841E1670-0x00000001841E1680
+			protected HTTPImpl(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
 			public abstract IEnumerator DoHTTP(HTTPConfig config);
 		}
 	
-		private class BeyondHttp : HTTPImpl // TypeDefIndex: 56390
+		private class BeyondHttp : HTTPImpl // TypeDefIndex: 80926
 		{
 			// Nested types
 			[CompilerGenerated]
-			private sealed class _DoHTTP_d__0 : IEnumerator<object> // TypeDefIndex: 56389
+			private sealed class _DoHTTP_d__0 : IEnumerator<object> // TypeDefIndex: 80925
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -5722,56 +6441,56 @@ namespace Beyond.SDK
 				private WaitForAsyncTask<HttpSender.Result> _sendTask_5__2; // 0x50
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _DoHTTP_d__0(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _DoHTTP_d__0(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x000000018699BDC0-0x000000018699C05C
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000185B67150-0x0000000185B673A0
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699C05C-0x000000018699C0A8
+				void IEnumerator.Reset(); // 0x0000000188CB3E54-0x0000000188CB3EA0
 			}
 	
 			// Constructors
-			public BeyondHttp(); // 0x00000001841E1670-0x00000001841E1680
+			public BeyondHttp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
 			[IteratorStateMachine(typeof(_DoHTTP_d__0))]
-			public override IEnumerator DoHTTP(HTTPConfig config); // 0x00000001869964CC-0x0000000186996594
+			public override IEnumerator DoHTTP(HTTPConfig config); // 0x0000000186FD1FA0-0x0000000186FD2040
 		}
 	
 		// Constructors
-		static SDKNetUtils(); // 0x000000018699BAC0-0x000000018699BB30
+		static SDKNetUtils(); // 0x00000001871CA070-0x00000001871CA0E0
 	
 		// Methods
-		public static void HTTPPost(HttpPostRequest request); // 0x000000018699B8D4-0x000000018699BAC0
-		public static void HTTPGet(HttpGetRequest request); // 0x000000018699B77C-0x000000018699B8D4
+		public static void HTTPPost(HttpPostRequest request); // 0x0000000186CA2A80-0x0000000186CA35D0
+		public static void HTTPGet(HttpGetRequest request); // 0x0000000188CB36C8-0x0000000188CB38B4
 	}
 
-	public static class SDKTextDefines // TypeDefIndex: 56392
+	public static class SDKTextDefines // TypeDefIndex: 80928
 	{
 		// Fields
-		public const string CS_SDK_STO_DESC = "CS_SDK_STO_DESC"; // Metadata: 0x023483D4
-		public const string CS_SDK_COMMON_ERROR = "CS_SDK_COMMON_ERROR"; // Metadata: 0x023483E4
-		public const string CS_SDK_CREATE_ORDER_ERROR = "CS_SDK_CREATE_ORDER_ERROR"; // Metadata: 0x023483F8
-		public const string CS_SDK_CREATE_ORDER_ERROR_LIMIT_COUNT = "CS_SDK_CREATE_ORDER_ERROR_LIMIT_COUNT"; // Metadata: 0x02348412
-		public const string CS_SDK_USR_BAN = "CS_SDK_USR_BAN"; // Metadata: 0x02348438
-		public const string CS_SDK_USR_BAN_TIME = "CS_SDK_USR_BAN_TIME"; // Metadata: 0x02348447
-		public const string CS_SDK_LOGIN_FORBID = "CS_SDK_LOGIN_FORBID"; // Metadata: 0x0234845B
-		public const string CS_SDK_CREATE_ORDER_ERROR_NETWORK_TIMEOUT = "CS_SDK_CREATE_ORDER_ERROR_NETWORK_TIMEOUT"; // Metadata: 0x0234846F
-		public const string CS_SDK_CREATE_ORDER_ERROR_NETWORK_ERROR = "CS_SDK_CREATE_ORDER_ERROR_NETWORK_ERROR"; // Metadata: 0x02348499
-		public const string CS_SDK_CREATE_ORDER_ERROR_TOKEN_INVALID = "CS_SDK_CREATE_ORDER_ERROR_TOKEN_INVALID"; // Metadata: 0x023484C1
+		public const string CS_SDK_STO_DESC = "CS_SDK_STO_DESC"; // Metadata: 0x0263DE95
+		public const string CS_SDK_COMMON_ERROR = "CS_SDK_COMMON_ERROR"; // Metadata: 0x0263DEA5
+		public const string CS_SDK_CREATE_ORDER_ERROR = "CS_SDK_CREATE_ORDER_ERROR"; // Metadata: 0x0263DEB9
+		public const string CS_SDK_CREATE_ORDER_ERROR_LIMIT_COUNT = "CS_SDK_CREATE_ORDER_ERROR_LIMIT_COUNT"; // Metadata: 0x0263DED3
+		public const string CS_SDK_USR_BAN = "CS_SDK_USR_BAN"; // Metadata: 0x0263DEF9
+		public const string CS_SDK_USR_BAN_TIME = "CS_SDK_USR_BAN_TIME"; // Metadata: 0x0263DF08
+		public const string CS_SDK_LOGIN_FORBID = "CS_SDK_LOGIN_FORBID"; // Metadata: 0x0263DF1C
+		public const string CS_SDK_CREATE_ORDER_ERROR_NETWORK_TIMEOUT = "CS_SDK_CREATE_ORDER_ERROR_NETWORK_TIMEOUT"; // Metadata: 0x0263DF30
+		public const string CS_SDK_CREATE_ORDER_ERROR_NETWORK_ERROR = "CS_SDK_CREATE_ORDER_ERROR_NETWORK_ERROR"; // Metadata: 0x0263DF5A
+		public const string CS_SDK_CREATE_ORDER_ERROR_TOKEN_INVALID = "CS_SDK_CREATE_ORDER_ERROR_TOKEN_INVALID"; // Metadata: 0x0263DF82
 	}
 }
 
 namespace Beyond.SDK.Impl
 {
-	public class U8ExternalTools : SDKExternalToolsShortcut // TypeDefIndex: 56400
+	public class U8ExternalTools : SDKExternalToolsShortcut // TypeDefIndex: 80936
 	{
 		// Fields
 		private static bool s_inited; // 0x00
@@ -5781,23 +6500,23 @@ namespace Beyond.SDK.Impl
 		private static FHGSDKInit s_initHGSDK; // 0x04
 	
 		// Nested types
-		private struct FHGSDKInit // TypeDefIndex: 56393
+		private struct FHGSDKInit // TypeDefIndex: 80929
 		{
 			// Fields
 			public bool isIniting; // 0x00
 			public bool isInited; // 0x01
 		}
 	
-		private class CaptchaHandler : SDKCaptchaHandler // TypeDefIndex: 56395
+		private class CaptchaHandler : SDKCaptchaHandler // TypeDefIndex: 80931
 		{
 			// Fields
-			private const int FAILED = 1000; // Metadata: 0x023484E9
+			private const int FAILED = 1000; // Metadata: 0x0263DFAA
 			private long m_flag; // 0x10
 			private string m_desc; // 0x18
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class _FetchCaptchaCoroutine_d__3 : IEnumerator<object> // TypeDefIndex: 56394
+			private sealed class _FetchCaptchaCoroutine_d__3 : IEnumerator<object> // TypeDefIndex: 80930
 			{
 				// Fields
 				private int __1__state; // 0x10
@@ -5807,33 +6526,33 @@ namespace Beyond.SDK.Impl
 				public SDKCaptchaHandler.Result outResult; // 0x30
 	
 				// Properties
-				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 				// Constructors
 				[DebuggerHidden]
-				public _FetchCaptchaCoroutine_d__3(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+				public _FetchCaptchaCoroutine_d__3(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 				// Methods
 				[DebuggerHidden]
-				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-				private bool MoveNext(); // 0x000000018699C400-0x000000018699C4F4
+				void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+				private bool MoveNext(); // 0x0000000188CB3EA0-0x0000000188CB3F9C
 				[DebuggerHidden]
-				void IEnumerator.Reset(); // 0x000000018699C4F4-0x000000018699C540
+				void IEnumerator.Reset(); // 0x0000000188CB3F9C-0x0000000188CB3FE8
 			}
 	
 			// Constructors
-			public CaptchaHandler(); // 0x0000000184D8CCA0-0x0000000184D8CCB0
+			public CaptchaHandler(); // 0x0000000187239970-0x0000000187239980
 	
 			// Methods
 			[IteratorStateMachine(typeof(_FetchCaptchaCoroutine_d__3))]
-			public override IEnumerator FetchCaptchaCoroutine(string captchaParams, Result outResult); // 0x0000000186996594-0x000000018699665C
-			public void OnGT3Message(Dictionary<string, object> msg); // 0x000000018699665C-0x0000000186996750
+			public override IEnumerator FetchCaptchaCoroutine(string captchaParams, Result outResult); // 0x0000000188CAC5B8-0x0000000188CAC68C
+			public void OnGT3Message(Dictionary<string, object> msg); // 0x0000000188CAC68C-0x0000000188CAC788
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 56396
+		private sealed class __c // TypeDefIndex: 80932
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -5842,189 +6561,168 @@ namespace Beyond.SDK.Impl
 			public static Action __9__27_0; // 0x18
 	
 			// Constructors
-			static __c(); // 0x0000000184D4AF50-0x0000000184D4AFB0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E6F20-0x00000001871E6F80
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _InitSDKSystem_b__9_0(object error); // 0x000000018699C540-0x000000018699C6E8
-			internal void _InitSDKSystem_b__9_1(string rawExtConfig); // 0x00000001835A38E0-0x00000001835A39D0
-			internal void __ProcessExtraInfo_b__27_0(); // 0x000000018699C70C-0x000000018699C774
+			internal void _InitSDKSystem_b__9_0(object error); // 0x0000000188CB43D8-0x0000000188CB4580
+			internal void _InitSDKSystem_b__9_1(string rawExtConfig); // 0x0000000186E61930-0x0000000186E61A20
+			internal void __ProcessExtraInfo_b__27_0(); // 0x0000000188CB45A0-0x0000000188CB4608
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForInited_d__10 : IEnumerator<object> // TypeDefIndex: 56397
+		private sealed class _WaitForInited_d__10 : IEnumerator<object> // TypeDefIndex: 80933
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForInited_d__10(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _WaitForInited_d__10(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184B4A840-0x0000000184B4A8B0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x0000000186FC5030-0x0000000186FC50B0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699C94C-0x000000018699C998
+			void IEnumerator.Reset(); // 0x0000000188CB4D2C-0x0000000188CB4D78
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForInitHGSDK_d__15 : IEnumerator<object> // TypeDefIndex: 56398
+		private sealed class _WaitForInitHGSDK_d__15 : IEnumerator<object> // TypeDefIndex: 80934
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForInitHGSDK_d__15(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _WaitForInitHGSDK_d__15(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000184CD0580-0x0000000184CD05F0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001870DC6A0-0x00000001870DC710
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699C900-0x000000018699C94C
+			void IEnumerator.Reset(); // 0x0000000188CBD370-0x0000000188CBD3BC
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0 // TypeDefIndex: 56399
+		private sealed class __c__DisplayClass25_0 // TypeDefIndex: 80935
 		{
 			// Fields
 			public Action<SDKExternalTools.POSTResult> callback; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass25_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass25_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _POSTImplementation_b__0(SDKNetUtils.WebHttpResponse webRequest); // 0x000000018699C7C0-0x000000018699C824
+			internal void _POSTImplementation_b__0(SDKNetUtils.WebHttpResponse webRequest); // 0x0000000186DDCD00-0x0000000186DDCD70
 		}
 	
 		// Constructors
-		public U8ExternalTools(); // 0x0000000184D778D0-0x0000000184D778E0
+		public U8ExternalTools(); // 0x000000018721F310-0x000000018721F320
 	
 		// Methods
-		public static bool IsInited(); // 0x000000018699EFE4-0x000000018699F050
-		public static bool NeedRetryInit(); // 0x0000000183C90D50-0x0000000183C90DA0
-		public static bool NeedQuitGame(); // 0x0000000184A427C0-0x0000000184A42810
-		public static void RetryInitSDKSystem(string env); // 0x000000018699F3C4-0x000000018699F464
-		public static void PublicSetGameVersion(string version); // 0x0000000184D225E0-0x0000000184D22660
-		public static void InitSDKSystem(string env); // 0x0000000183C8F0A0-0x0000000183C8F3C0
+		public static bool IsInited(); // 0x0000000188CB61B8-0x0000000188CB6224
+		public static bool NeedRetryInit(); // 0x0000000188CB6394-0x0000000188CB6404
+		public static bool NeedQuitGame(); // 0x0000000188CB6324-0x0000000188CB6394
+		public static void RetryInitSDKSystem(string env); // 0x0000000188CB6404-0x0000000188CB64AC
+		public static void PublicSetGameVersion(string version); // 0x0000000185319B60-0x0000000185319BF0
+		public static void InitSDKSystem(string env); // 0x0000000186CF3A30-0x0000000186CF5440
 		[IteratorStateMachine(typeof(_WaitForInited_d__10))]
-		public static IEnumerator WaitForInited(); // 0x0000000184A42760-0x0000000184A427C0
-		public static void InitHGSDK(string env); // 0x0000000183AF7760-0x0000000183AF78D0
-		public static bool IsHGSDKInited(); // 0x000000018699EF78-0x000000018699EFE4
+		public static IEnumerator WaitForInited(); // 0x0000000186F94440-0x0000000186F944A0
+		public static void InitHGSDK(string env); // 0x00000001859BC7A0-0x00000001859BC910
+		public static bool IsHGSDKInited(); // 0x0000000188CB6148-0x0000000188CB61B8
 		[IteratorStateMachine(typeof(_WaitForInitHGSDK_d__15))]
-		public static IEnumerator WaitForInitHGSDK(); // 0x000000018332A350-0x000000018332A3B0
-		protected override void Log(string content); // 0x000000018699F130-0x000000018699F184
-		protected override void LogError(string content); // 0x000000018699F050-0x000000018699F0DC
-		protected override void LogWarning(string content); // 0x000000018699F0DC-0x000000018699F130
-		protected override string GetSignKey(); // 0x000000018699EF0C-0x000000018699EF78
-		public override Dictionary<string, string> GetDeviceIDs(); // 0x000000018699EBA0-0x000000018699ECD4
-		public void SetSubChannel(string subChannel); // 0x000000018699F464-0x000000018699F4C8
-		protected override int GetPlatformKey(); // 0x000000018699EE94-0x000000018699EF0C
-		public override void OnSDKExtraInfo(string jsonData); // 0x00000001844419B0-0x0000000184441A40
-		protected override string U8RootUrl(); // 0x000000018699F4D0-0x000000018699F560
-		protected override void POSTImplementation(POSTRequest request, Action<POSTResult> callback); // 0x000000018699F184-0x000000018699F3C4
-		private static POSTResult _ConvertToPOSTResult(SDKNetUtils.WebHttpResponse response); // 0x000000018699F560-0x000000018699F664
-		private void _ProcessExtraInfo(SDKExtraData extraData); // 0x0000000184441BC0-0x0000000184445630
-		private static void _ProcessGameProtocolUpdateCheck(Dictionary<string, object> msg); // 0x00000001814FF310-0x0000000181500F80
-		private static long _TryGetGameProtocolUpdateCheckErrorCode(Dictionary<string, object> msg); // 0x0000000181500F80-0x0000000181502380
-		private static void _OnRequestExitGame(); // 0x000000018699FA4C-0x000000018699FAE8
-		private static void _OnFakeAccountCenter(); // 0x000000018699FA0C-0x000000018699FA4C
-		protected override SDKCaptchaHandler CreateCaptchaHandler(); // 0x000000018699EB24-0x000000018699EBA0
-		protected override string GetErrorMessage(ErrMsgMeta meta); // 0x000000018699ECD4-0x000000018699EE94
-		private bool _ErrorMsg_GET_TOKEN(ErrMsgMeta meta, out string errorMsg); // 0x000000018699F804-0x000000018699FA0C
-		private bool _ErrorMsg_CREATE_ORDER(ErrMsgMeta meta, out string errorMsg); // 0x000000018699F664-0x000000018699F804
-		public string __iFixBaseProxy_GetSignKey(); // 0x00000001811EC580-0x00000001811EC590
-		public Dictionary<string, string> __iFixBaseProxy_GetDeviceIDs(); // 0x000000018699F4C8-0x000000018699F4D0
-		public void __iFixBaseProxy_OnSDKExtraInfo(string P0); // 0x00000001841E1670-0x00000001841E1680
+		public static IEnumerator WaitForInitHGSDK(); // 0x00000001871DCB30-0x00000001871DCB90
+		protected override void Log(string content); // 0x0000000188CB62EC-0x0000000188CB6324
+		protected override void LogError(string content); // 0x0000000188CB6224-0x0000000188CB62B4
+		protected override void LogWarning(string content); // 0x0000000188CB62B4-0x0000000188CB62EC
+		protected override string GetSignKey(); // 0x0000000188CB60D8-0x0000000188CB6148
+		public override Dictionary<string, string> GetDeviceIDs(); // 0x0000000188CB5D6C-0x0000000188CB5EA4
+		public void SetSubChannel(string subChannel); // 0x0000000188CB64AC-0x0000000188CB64EC
+		protected override int GetPlatformKey(); // 0x0000000188CB605C-0x0000000188CB60D8
+		public override void OnSDKExtraInfo(string jsonData); // 0x00000001859BF150-0x00000001859BF1F0
+		protected override string U8RootUrl(); // 0x00000001867A2DE0-0x00000001867A2E60
+		protected override void POSTImplementation(POSTRequest request, Action<POSTResult> callback); // 0x00000001856B92F0-0x00000001856B9530
+		private static POSTResult _ConvertToPOSTResult(SDKNetUtils.WebHttpResponse response); // 0x0000000186DDCD70-0x0000000186DDCE30
+		private void _ProcessExtraInfo(SDKExtraData extraData); // 0x0000000186B84830-0x0000000186B88420
+		private static void _ProcessLaunchAuth(Dictionary<string, object> msg); // 0x000000018275CA70-0x000000018275DA10
+		private static void _TryGetLaunchAuthDetail(Dictionary<string, object> msg, out long errorCode, out string filePath); // 0x000000018275DA10-0x000000018275F060
+		private static void _ProcessGameProtocolUpdateCheck(Dictionary<string, object> msg); // 0x0000000188CB6960-0x0000000188CB6AE8
+		private static long _TryGetGameProtocolUpdateCheckErrorCode(Dictionary<string, object> msg); // 0x0000000188CB6AE8-0x0000000188CB6D4C
+		private static void _OnRequestExitGame(); // 0x0000000188CB68C0-0x0000000188CB6960
+		private static void _OnFakeAccountCenter(); // 0x0000000188CB688C-0x0000000188CB68C0
+		protected override SDKCaptchaHandler CreateCaptchaHandler(); // 0x0000000188CB5CE4-0x0000000188CB5D6C
+		protected override string GetErrorMessage(ErrMsgMeta meta); // 0x0000000188CB5EA4-0x0000000188CB605C
+		private bool _ErrorMsg_GET_TOKEN(ErrMsgMeta meta, out string errorMsg); // 0x0000000188CB6680-0x0000000188CB688C
+		private bool _ErrorMsg_CREATE_ORDER(ErrMsgMeta meta, out string errorMsg); // 0x0000000188CB64F4-0x0000000188CB6680
+		public string __iFixBaseProxy_GetSignKey(); // 0x0000000185829EC0-0x0000000185829ED0
+		public Dictionary<string, string> __iFixBaseProxy_GetDeviceIDs(); // 0x0000000188CB64EC-0x0000000188CB64F4
+		public void __iFixBaseProxy_OnSDKExtraInfo(string P0); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class U8Plugin : IExternalPlugin // TypeDefIndex: 56403
+	public class U8Plugin : IExternalPlugin // TypeDefIndex: 80939
 	{
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 56401
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 80937
 		{
 			// Fields
 			public ExternalPluginPayParams args; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass7_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass7_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _Pay_b__0(U8PayResult payResult); // 0x000000018699C844-0x000000018699C87C
-			internal void _Pay_b__1(object failMsg); // 0x000000018699C87C-0x000000018699C89C
+			internal void _Pay_b__0(U8PayResult payResult); // 0x0000000188CBD254-0x0000000188CBD288
+			internal void _Pay_b__1(object failMsg); // 0x0000000188CBD288-0x0000000188CBD2A8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 56402
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 80938
 		{
 			// Fields
 			public ExternalPluginLoginParams args; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass10_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __MockLogin_b__0(string uid); // 0x0000000183074E90-0x0000000183074F90
+			internal void __MockLogin_b__0(string uid); // 0x00000001859BC9F0-0x00000001859BCB00
 		}
 	
 		// Constructors
-		public U8Plugin(); // 0x00000001841E1670-0x00000001841E1680
+		public U8Plugin(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public string GetPayAddition(); // 0x000000018699FAE8-0x000000018699FB34
-		public string GetSDKToken(); // 0x000000018699FB34-0x000000018699FB80
-		public string GetSDKUid(); // 0x000000018699FB80-0x000000018699FBCC
-		public void Init(); // 0x00000001835A20D0-0x00000001835A2100
-		public void Login(ExternalPluginLoginParams args); // 0x0000000183AF75B0-0x0000000183AF7680
-		public void Logout(ExternalPluginLogoutParams args); // 0x000000018699FBCC-0x000000018699FC54
-		public void OnProductListChanged(List<U8ProductInfo> productList); // 0x000000018699FC54-0x000000018699FCA8
-		public void Pay(ExternalPluginPayParams args); // 0x000000018699FCA8-0x000000018699FE8C
-		public bool TryLoadSDKMeta(Func<SDKMeta> loadMetaNative, out SDKMeta meta); // 0x000000018699FE8C-0x000000018699FFA4
-		private static bool _UseMockVersion(); // 0x0000000183AF7680-0x0000000183AF76E0
-		private void _MockLogin(ExternalPluginLoginParams args); // 0x0000000183AF90A0-0x0000000183AF91C0
+		public string GetPayAddition(); // 0x0000000188CBE084-0x0000000188CBE0C4
+		public string GetSDKToken(); // 0x0000000188CBE0C4-0x0000000188CBE104
+		public string GetSDKUid(); // 0x0000000188CBE104-0x0000000188CBE144
+		public void Init(); // 0x0000000186E61B40-0x0000000186E61B70
+		public void Login(ExternalPluginLoginParams args); // 0x00000001859BC910-0x00000001859BC9F0
+		public void Logout(ExternalPluginLogoutParams args); // 0x0000000188CBE144-0x0000000188CBE1C0
+		public void OnProductListChanged(List<U8ProductInfo> productList); // 0x0000000186ECFBA0-0x0000000186ECFBD0
+		public void Pay(ExternalPluginPayParams args); // 0x0000000188CBE1C0-0x0000000188CBE3AC
+		public bool TryLoadSDKMeta(Func<SDKMeta> loadMetaNative, out SDKMeta meta); // 0x00000001859BCE50-0x00000001859BCF40
+		private static bool _UseMockVersion(); // 0x00000001859BCF70-0x00000001859BCFE0
+		private void _MockLogin(ExternalPluginLoginParams args); // 0x00000001867A3DB0-0x00000001867A3ED0
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 56370
-	{
-		// Fields
-		public int capacity; // 0x10
-		public int tSize; // 0x14
-		public bool ring; // 0x18
-	
-		// Constructors
-		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
-	}
-
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 56371
-	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
-		// Constructors
-		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
-	}
-
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 56372
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 80902
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -6034,27 +6732,65 @@ namespace Beyond.SourceGenerator
 	}
 
 	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 56373
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 80903
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public AnimatorBlackboardAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class SwapRuntimeStateAttribute : Attribute // TypeDefIndex: 80904
+	{
+		// Constructors
+		public SwapRuntimeStateAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class ResetOnSwapAttribute : Attribute // TypeDefIndex: 80905
+	{
+		// Constructors
+		public ResetOnSwapAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 56374
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 80906
 	{
 		// Constructors
-		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public CameraControlConfigAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 80907
+	{
+		// Fields
+		public int capacity; // 0x10
+		public int tSize; // 0x14
+		public bool ring; // 0x18
+		public bool native; // 0x19
+	
+		// Constructors
+		public DataNAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 80908
+	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
+		// Constructors
+		public ECSComponentAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace Beyond.UI
 {
-	public class SplashController : MonoBehaviour // TypeDefIndex: 56381
+	public class SplashController : MonoBehaviour // TypeDefIndex: 80915
 	{
 		// Fields
-		private const string CURSOR_KEY_SPLASH = "SplashController"; // Metadata: 0x023483A2
-		private const string SPLASH_RESOURCES_PATH = "Splash"; // Metadata: 0x023483B3
+		private const string CURSOR_KEY_SPLASH = "SplashController"; // Metadata: 0x0263DE57
+		private const string SPLASH_RESOURCES_PATH = "Splash"; // Metadata: 0x0263DE68
 		[SerializeField]
 		private float _initialFadeTime; // 0x18
 		[SerializeField]
@@ -6078,12 +6814,12 @@ namespace Beyond.UI
 		private static SplashController _instance_k__BackingField; // 0x08
 	
 		// Properties
-		public static SplashController instance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000186993DDC-0x0000000186993E14 0x0000000186993E14-0x0000000186993E68
-		public static bool isPlaying { get; } // 0x000000018340B960-0x000000018340B9B0 
+		public static SplashController instance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000188CB39C0-0x0000000188CB39F8 0x0000000188CB3A64-0x0000000188CB3AB8
+		public static bool isPlaying { get; } // 0x0000000188CB39F8-0x0000000188CB3A64 
 	
 		// Nested types
 		[Serializable]
-		private struct SplashConfig // TypeDefIndex: 56375
+		private struct SplashConfig // TypeDefIndex: 80909
 		{
 			// Fields
 			public Sprite sprite; // 0x00
@@ -6091,7 +6827,7 @@ namespace Beyond.UI
 		}
 	
 		[Serializable]
-		private struct SplashConfigOverride // TypeDefIndex: 56376
+		private struct SplashConfigOverride // TypeDefIndex: 80910
 		{
 			// Fields
 			public EnvLang envLang; // 0x00
@@ -6099,7 +6835,7 @@ namespace Beyond.UI
 		}
 	
 		[Serializable]
-		private struct SplashConfigs // TypeDefIndex: 56377
+		private struct SplashConfigs // TypeDefIndex: 80911
 		{
 			// Fields
 			public SplashConfig[] splashConfigs; // 0x00
@@ -6108,22 +6844,22 @@ namespace Beyond.UI
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 56378
+		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 80912
 		{
 			// Fields
 			public SplashConfig config; // 0x10
 			public SplashController __4__this; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass31_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass31_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void __DoStartSplash_b__0(); // 0x0000000184D25EF0-0x0000000184D25F20
-			internal void __DoStartSplash_b__2(); // 0x0000000184CF4D60-0x0000000184CF4DD0
+			internal void __DoStartSplash_b__0(); // 0x0000000187184C70-0x0000000187184CA0
+			internal void __DoStartSplash_b__2(); // 0x0000000187120070-0x00000001871200E0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __OnSplashCompleteCoroutine_d__33 : IEnumerator<object> // TypeDefIndex: 56379
+		private sealed class __OnSplashCompleteCoroutine_d__33 : IEnumerator<object> // TypeDefIndex: 80913
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6131,23 +6867,23 @@ namespace Beyond.UI
 			public SplashController __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __OnSplashCompleteCoroutine_d__33(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __OnSplashCompleteCoroutine_d__33(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183811690-0x00000001838118B0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018531A3E0-0x000000018531A5F0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699DCF0-0x000000018699DD3C
+			void IEnumerator.Reset(); // 0x0000000188CB52E0-0x0000000188CB532C
 		}
 	
 		[CompilerGenerated]
-		private sealed class __StartLicenseCoroutine_d__34 : IEnumerator<object> // TypeDefIndex: 56380
+		private sealed class __StartLicenseCoroutine_d__34 : IEnumerator<object> // TypeDefIndex: 80914
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6157,57 +6893,57 @@ namespace Beyond.UI
 			private bool _isGranted_5__4; // 0x22
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public __StartLicenseCoroutine_d__34(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public __StartLicenseCoroutine_d__34(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000183A72270-0x0000000183A724C0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x00000001859BF680-0x00000001859BF8C0
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018699DD88-0x000000018699DDD4
+			void IEnumerator.Reset(); // 0x0000000188CB5C98-0x0000000188CB5CE4
 		}
 	
 		// Constructors
-		public SplashController(); // 0x0000000184D5EC50-0x0000000184D5EC80
+		public SplashController(); // 0x00000001871FD4A0-0x00000001871FD4D0
 	
 		// Methods
-		public static SplashController Show(Action onComplete = null, bool skipLicense = false /* Metadata: 0x023483A1 */); // 0x000000018380F750-0x000000018380FA90
-		public static void Hide(); // 0x000000018380F650-0x000000018380F750
-		public static void CanFinished(); // 0x000000018380F5A0-0x000000018380F650
-		private void Awake(); // 0x000000018380F460-0x000000018380F510
-		private void OnDestroy(); // 0x000000018380F510-0x000000018380F5A0
-		private void _Play(Action onComplete, bool skipLicense); // 0x00000001841E4EF0-0x00000001841E5000
-		private void _Stop(); // 0x000000018380E980-0x000000018380EA50
-		private SplashConfig[] _GetSplashConfigs(); // 0x00000001841E5000-0x00000001841E5100
-		private void _DoStartSplash(SplashConfig[] splashConfigs); // 0x00000001845E2E10-0x00000001845E3170
-		private void _OnTweenFinished(); // 0x0000000184CA7270-0x0000000184CA72D0
+		public static SplashController Show(Action onComplete = null, bool skipLicense = false /* Metadata: 0x0263DE56 */); // 0x000000018531A7A0-0x000000018531AAE0
+		public static void Hide(); // 0x000000018531A6A0-0x000000018531A7A0
+		public static void CanFinished(); // 0x000000018531A5F0-0x000000018531A6A0
+		private void Awake(); // 0x000000018531A290-0x000000018531A350
+		private void OnDestroy(); // 0x000000018531A350-0x000000018531A3E0
+		private void _Play(Action onComplete, bool skipLicense); // 0x00000001863F8E70-0x00000001863F8F90
+		private void _Stop(); // 0x0000000185319BF0-0x0000000185319C70
+		private SplashConfig[] _GetSplashConfigs(); // 0x00000001863F8F90-0x00000001863F9090
+		private void _DoStartSplash(SplashConfig[] splashConfigs); // 0x00000001869E5B90-0x00000001869E5EF0
+		private void _OnTweenFinished(); // 0x00000001870A05F0-0x00000001870A0650
 		[IteratorStateMachine(typeof(__OnSplashCompleteCoroutine_d__33))]
-		private IEnumerator _OnSplashCompleteCoroutine(); // 0x0000000184CA72D0-0x0000000184CA7340
+		private IEnumerator _OnSplashCompleteCoroutine(); // 0x00000001870A0650-0x00000001870A06D0
 		[IteratorStateMachine(typeof(__StartLicenseCoroutine_d__34))]
-		private IEnumerator _StartLicenseCoroutine(); // 0x0000000184D32AA0-0x0000000184D32B00
+		private IEnumerator _StartLicenseCoroutine(); // 0x000000018531A220-0x000000018531A290
 		[CompilerGenerated]
-		private void __DoStartSplash_b__31_1(); // 0x0000000184D4E7C0-0x0000000184D4E810
+		private void __DoStartSplash_b__31_1(); // 0x00000001871E84B0-0x00000001871E8500
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
 	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 56296
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 80828
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public HGConstantBufferLayoutAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 56576
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 81137
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -6216,181 +6952,207 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x00000001832B2C30-0x00000001832B2C60
-		static ILFixDynamicMethodWrapper(); // 0x0000000184D37790-0x0000000184D37800
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x000000018536C3F0-0x000000018536C420
+		static ILFixDynamicMethodWrapper(); // 0x0000000188CC5A60-0x0000000188CC5AC4
 	
 		// Methods
-		public GameState __Gen_Wrap_0(object P0); // 0x0000000186360E84-0x0000000186360F54
-		public void __Gen_Wrap_1(object P0, GameState P1); // 0x00000001866F3838-0x00000001866F3914
-		public void __Gen_Wrap_2(float P0); // 0x00000001869ABD7C-0x00000001869ABE3C
-		public void __Gen_Wrap_3(bool P0); // 0x0000000186375088-0x0000000186375148
-		public void __Gen_Wrap_4(GameSetting.GameSettingAudioSuiteMode P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_5(GameSetting.KeyboardLayoutType P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_6(EnvLang P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_7(GameSetting.GameSettingLanguageAudio P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_8(GameSetting.GameSettingVideoQuality P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_9(int P0, int P1, bool P2); // 0x00000001869AF3C0-0x00000001869AF4B8
-		public void __Gen_Wrap_10(GameSetting.ScreenResolution P0); // 0x00000001869AB15C-0x00000001869AB250
-		public void __Gen_Wrap_11(GameSetting.TeammateSkillEffectStrength P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_12(); // 0x00000001863625A4-0x0000000186362640
-		public void __Gen_Wrap_13(object P0); // 0x00000001863633B4-0x0000000186363474
-		public bool __Gen_Wrap_14(object P0); // 0x00000001863632E4-0x00000001863633B4
-		public SplashController.SplashConfig[] __Gen_Wrap_15(object P0); // 0x00000001869AB250-0x00000001869AB32C
-		public IEnumerator __Gen_Wrap_16(object P0); // 0x00000001869AB32C-0x00000001869AB41C
-		public void __Gen_Wrap_17(object P0, object P1); // 0x0000000186377B18-0x0000000186377BF4
-		public void __Gen_Wrap_18(object P0, object P1, bool P2); // 0x00000001869AB41C-0x00000001869AB500
-		public SplashController __Gen_Wrap_19(object P0, bool P1); // 0x00000001869AB500-0x00000001869AB5F8
-		public void __Gen_Wrap_20(in EventData<bool, bool> P0); // 0x00000001869AB5F8-0x00000001869AB6F0
-		public string __Gen_Wrap_21(); // 0x00000001869AB6F0-0x00000001869AB7A8
-		public string __Gen_Wrap_22(object P0); // 0x00000001869AB7A8-0x00000001869AB898
-		public bool __Gen_Wrap_23(object P0, uint P1); // 0x00000001869AB898-0x00000001869AB970
-		public GameApp.FileEntry __Gen_Wrap_24(GameApp.PendingFile P0); // 0x00000001869AB970-0x00000001869ABA7C
-		public List<GameApp.FileEntry> __Gen_Wrap_25(object P0, int P1); // 0x00000001869ABA7C-0x00000001869ABB74
-		public int __Gen_Wrap_26(object P0, object P1); // 0x0000000186360610-0x00000001863606FC
-		public string __Gen_Wrap_27(long P0); // 0x00000001869ABB74-0x00000001869ABC50
-		public void __Gen_Wrap_28(object P0, object P1, object P2); // 0x0000000186364290-0x0000000186364388
-		public void __Gen_Wrap_29(object P0, object P1, System.DateTime P2, object P3, object P4); // 0x00000001869ABC50-0x00000001869ABD7C
-		public void __Gen_Wrap_30(object P0, object P1, int P2, object P3); // 0x00000001869ABE3C-0x00000001869ABF34
-		public void __Gen_Wrap_31(object P0, object P1, int P2); // 0x00000001863778A4-0x0000000186377988
-		public bool __Gen_Wrap_32(); // 0x00000001863623A8-0x0000000186362454
-		public void __Gen_Wrap_33(object P0, bool P1); // 0x00000001866C2B40-0x00000001866C2C1C
-		public void __Gen_Wrap_34(int P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_35(GameAppExitCode P0); // 0x000000018635FF24-0x000000018635FFE4
-		public bool __Gen_Wrap_36(out string P0); // 0x00000001869ABF34-0x00000001869AC03C
-		public bool __Gen_Wrap_37(object P0, out LocalResPref P1, out VirtualFileSystem.BlockValidator P2); // 0x00000001869AC03C-0x00000001869AC1C4
-		public void __Gen_Wrap_38(object P0, out VirtualFileSystem.BlockValidator P1); // 0x00000001869AC1C4-0x00000001869AC2EC
-		public void __Gen_Wrap_39(object P0, in EventData<Beyond.DeviceInfo.InputType> P1); // 0x00000001869AC2EC-0x00000001869AC400
-		public LoginController.MaskCtrl __Gen_Wrap_40(object P0); // 0x00000001869AC400-0x00000001869AC4F0
-		public UISwitchTween __Gen_Wrap_41(object P0, int P1); // 0x00000001869AC4F0-0x00000001869AC5FC
-		public IEnumerator __Gen_Wrap_42(object P0, object P1); // 0x00000001869AC5FC-0x00000001869AC708
-		public void __Gen_Wrap_43(object P0, object P1, LoginController.EMaskType P2, bool P3, bool P4); // 0x00000001869AC708-0x00000001869AC81C
-		public UIAnimationLayerMixPlayer __Gen_Wrap_44(object P0); // 0x00000001869AC81C-0x00000001869AC90C
-		public void __Gen_Wrap_45(object P0, LoginController.FOptions P1); // 0x00000001869AC90C-0x00000001869ACA1C
-		public LoginWorkFlow.FWork __Gen_Wrap_46(); // 0x00000001869ACA1C-0x00000001869ACB10
-		public LoginWorkFlow.ENode __Gen_Wrap_47(ref LoginWorkFlow.FWork P0); // 0x00000001869ACB10-0x00000001869ACC64
-		public bool __Gen_Wrap_48(LoginWorkFlow.ENode P0, LoginWorkFlow.ENode P1); // 0x00000001869ACC64-0x00000001869ACD4C
-		public bool __Gen_Wrap_49(LoginWorkFlow.ENode P0); // 0x0000000186361FA4-0x0000000186362070
-		public IEnumerator __Gen_Wrap_50(LoginWorkFlow.ENode P0); // 0x00000001869ACD4C-0x00000001869ACE38
-		public CustomYieldInstruction __Gen_Wrap_51(object P0); // 0x00000001869ACE38-0x00000001869ACF28
-		public bool __Gen_Wrap_52(ref LoginWorkFlow.FWork P0); // 0x00000001869ACF28-0x00000001869AD07C
-		public void __Gen_Wrap_53(ref LoginWorkFlow.FWork P0); // 0x00000001869AD07C-0x00000001869AD1C0
-		public void __Gen_Wrap_54(object P0, LoginAlertDialog.FParams P1); // 0x00000001869AD1C0-0x00000001869AD2C0
-		public void __Gen_Wrap_55(object P0, LoginVocResSelDialog.FParams P1); // 0x00000001869AD2C0-0x00000001869AD3C0
-		public void __Gen_Wrap_56(object P0, LoginJudgeDialog.FParams P1); // 0x00000001869AD3C0-0x00000001869AD4E4
-		public void __Gen_Wrap_57(LoginAlertDialog P0, LoginAlertDialog.FParams P1); // 0x00000001869AD4E4-0x00000001869AD5E4
-		public void __Gen_Wrap_58(object P0, bool P1, object P2, object P3, object P4, object P5, object P6, object P7, object P8); // 0x00000001869AD5E4-0x00000001869AD73C
-		public IEnumerator __Gen_Wrap_59(object P0, bool P1); // 0x00000001869AD73C-0x00000001869AD848
-		public bool __Gen_Wrap_60(object P0, out LoginWorkFlow.ENode P1); // 0x00000001869AD848-0x00000001869AD954
-		public void __Gen_Wrap_61(GameState P0); // 0x000000018635FF24-0x000000018635FFE4
-		public void __Gen_Wrap_62(object P0, float P1); // 0x00000001866C288C-0x00000001866C296C
-		public LoginRootPanel __Gen_Wrap_63(object P0); // 0x00000001869AD954-0x00000001869ADA44
-		public float __Gen_Wrap_64(object P0); // 0x00000001866C0730-0x00000001866C0800
-		public LoginController __Gen_Wrap_65(object P0); // 0x00000001869ADA44-0x00000001869ADB34
-		public void __Gen_Wrap_66(object P0, object P1, float P2); // 0x00000001869ADB34-0x00000001869ADC18
-		public List<ServerZoneManager.ServerZoneData> __Gen_Wrap_67(object P0); // 0x00000001869ADC18-0x00000001869ADD08
-		public bool __Gen_Wrap_68(object P0, object P1); // 0x0000000186366BC4-0x0000000186366CB0
-		public ServerZoneManager.ServerZoneData __Gen_Wrap_69(object P0); // 0x00000001869ADD08-0x00000001869ADDF8
-		public bool __Gen_Wrap_70(object P0, ELoginEvent P1, object P2); // 0x00000001869ADDF8-0x00000001869ADEFC
-		public void __Gen_Wrap_71(object P0, ELoginEvent P1, object P2); // 0x00000001866F4C88-0x00000001866F4D80
-		public void __Gen_Wrap_72(string P0); // 0x00000001866C296C-0x00000001866C2A18
-		public void __Gen_Wrap_73(PointerEventData P0); // 0x00000001866C296C-0x00000001866C2A18
-		public bool __Gen_Wrap_74(ref LoginMockUIDPanel.FOptions P0); // 0x00000001869ADEFC-0x00000001869AE048
-		public void __Gen_Wrap_75(object P0, ref int P1); // 0x00000001869AE048-0x00000001869AE148
-		public void __Gen_Wrap_76(int P0, UIDropdownOption P1, bool P2); // 0x00000001869AE148-0x00000001869AE22C
-		public void __Gen_Wrap_77(object P0, int P1); // 0x00000001866F3838-0x00000001866F3914
-		public void __Gen_Wrap_78(object P0, LoginMockUIDPanel.FOptions P1, object P2); // 0x00000001869AE22C-0x00000001869AE358
-		public UISwitchTween __Gen_Wrap_79(object P0); // 0x00000001869AE358-0x00000001869AE448
-		public bool __Gen_Wrap_80(object P0, LoginController.EMaskType P1); // 0x00000001866E0A9C-0x00000001866E0B88
-		public void __Gen_Wrap_81(LoginVocResSelDialog P0, LoginVocResSelDialog.FParams P1); // 0x00000001869AE448-0x00000001869AE548
-		public IEnumerator __Gen_Wrap_82(object P0, object P1, object P2, object P3); // 0x00000001869AE548-0x00000001869AE680
-		public void __Gen_Wrap_83(LoginJudgeDialog P0, LoginJudgeDialog.FParams P1); // 0x00000001869AE680-0x00000001869AE790
-		public void __Gen_Wrap_84(object P0, object P1, object P2, object P3); // 0x00000001866E8E30-0x00000001866E8F38
-		public string __Gen_Wrap_85(object P0, object P1, object P2); // 0x00000001869AE790-0x00000001869AE8B8
-		public void __Gen_Wrap_86(ref bool P0); // 0x00000001869AE8B8-0x00000001869AE98C
-		public void __Gen_Wrap_87(object P0, ref bool P1); // 0x00000001869AE98C-0x00000001869AEA7C
-		public void __Gen_Wrap_88(object P0, LoginManager.FFlowWithMask P1); // 0x00000001869AEA7C-0x00000001869AEBA0
-		public bool __Gen_Wrap_89(ref LoginManager.FFlowCondition P0, LoginWorkFlow.ENode P1); // 0x00000001869AEBA0-0x00000001869AECF4
-		public IEnumerator __Gen_Wrap_90(object P0, LoginManager.FFlowWithMask P1); // 0x00000001869AECF4-0x00000001869AEE34
-		public TMP_FontAsset __Gen_Wrap_91(object P0); // 0x00000001869AEE34-0x00000001869AEF10
-		public void __Gen_Wrap_92(SDKNetUtils.HttpPostRequest P0); // 0x00000001869AEF10-0x00000001869AF004
-		public void __Gen_Wrap_93(SDKNetUtils.HttpGetRequest P0); // 0x00000001869AF004-0x00000001869AF0E8
-		public IEnumerator __Gen_Wrap_94(object P0, SDKNetUtils.HTTPConfig P1); // 0x00000001869AF0E8-0x00000001869AF218
-		public IEnumerator __Gen_Wrap_95(); // 0x00000001869AF218-0x00000001869AF2E4
-		public Dictionary<string, string> __Gen_Wrap_96(object P0); // 0x00000001869AF2E4-0x00000001869AF3C0
-		public int __Gen_Wrap_97(object P0); // 0x0000000186360E84-0x0000000186360F54
-		public long __Gen_Wrap_98(object P0); // 0x00000001811D1C90-0x00000001811D1F50
-		public void __Gen_Wrap_99(object P0, SDKExtraData P1); // 0x0000000181527E90-0x0000000181528510
-		public SDKExternalTools.POSTResult __Gen_Wrap_100(SDKNetUtils.WebHttpResponse P0); // 0x000000018150B3A0-0x000000018150BF40
-		public void __Gen_Wrap_101(SDKNetUtils.WebHttpResponse P0); // 0x000000018150BF40-0x000000018150C4F0
-		public void __Gen_Wrap_102(object P0, SDKExternalTools.POSTRequest P1, object P2); // 0x000000018150C4F0-0x000000018150CC40
-		public SDKCaptchaHandler __Gen_Wrap_103(object P0); // 0x000000018150CC40-0x000000018150D570
-		public bool __Gen_Wrap_104(object P0, SDKExternalTools.ErrMsgMeta P1, out string P2); // 0x000000018150D570-0x000000018150E2F0
-		public string __Gen_Wrap_105(object P0, SDKExternalTools.ErrMsgMeta P1); // 0x000000018150E2F0-0x000000018150EFD0
-		public IEnumerator __Gen_Wrap_106(object P0, object P1, object P2); // 0x000000018150EFD0-0x000000018150FAD0
-		public void __Gen_Wrap_107(object P0, ExternalPluginLoginParams P1); // 0x000000018150FAD0-0x0000000181510160
-		public void __Gen_Wrap_108(object P0, ExternalPluginLogoutParams P1); // 0x0000000181510160-0x00000001815107D0
-		public void __Gen_Wrap_109(U8PayResult P0); // 0x00000001815107D0-0x0000000181510D70
-		public void __Gen_Wrap_110(object P0, ExternalPluginPayParams P1); // 0x0000000181510D70-0x00000001815113E0
-		public bool __Gen_Wrap_111(object P0, object P1, out SDKMeta P2); // 0x00000001815113E0-0x0000000181511F20
-		public LoginWorkFlow.ENode __Gen_Wrap_112(object P0); // 0x0000000181298AE0-0x0000000181298DA0
-		public void __Gen_Wrap_113(ref LoginWorkFlow.FWork P0, int P1); // 0x0000000181511F20-0x0000000181512B10
-		public bool __Gen_Wrap_114(object P0, LoginWorkFlow.ENode P1, bool P2); // 0x0000000181512B10-0x0000000181512E20
-		public HGDownloader.DownloadProgress __Gen_Wrap_115(object P0); // 0x0000000181512E20-0x0000000181513720
-		public HGDownloader.WorkState __Gen_Wrap_116(object P0); // 0x0000000181298AE0-0x0000000181298DA0
-		public List<HGFileInfo> __Gen_Wrap_117(object P0, object P1); // 0x0000000181513720-0x0000000181514140
-		public List<HGFolder> __Gen_Wrap_118(object P0, object P1); // 0x0000000181514140-0x0000000181514B60
-		public bool __Gen_Wrap_119(object P0, HGRetCodeType P1, int P2); // 0x000000018129F0D0-0x000000018129F3D0
-		public string __Gen_Wrap_120(double P0); // 0x0000000181514B60-0x00000001815153E0
-		public void __Gen_Wrap_121(object P0, long P1, object P2, object P3, object P4); // 0x00000001815153E0-0x0000000181515910
-		public void __Gen_Wrap_122(object P0, HGDownloader.PauseReason P1); // 0x00000001812A0D50-0x00000001812A1020
-		public IEnumerator __Gen_Wrap_123(object P0, long P1); // 0x0000000181515910-0x00000001815162B0
-		public void __Gen_Wrap_124(object P0, long P1, long P2, long P3); // 0x00000001815162B0-0x00000001815165C0
-		public double __Gen_Wrap_125(object P0); // 0x000000018146E800-0x000000018146EAC0
-		public bool __Gen_Wrap_126(bool P0); // 0x0000000181408E40-0x0000000181409040
-		public string __Gen_Wrap_127(object P0, bool P1); // 0x00000001815165C0-0x0000000181516F60
-		public LocalResPref __Gen_Wrap_128(); // 0x0000000181516F60-0x00000001815177A0
-		public LoginHotUpdater.HotUpdateInfo __Gen_Wrap_129(object P0, bool P1); // 0x00000001815177A0-0x0000000181518140
-		public ResourceIndex __Gen_Wrap_130(); // 0x0000000181518140-0x0000000181518980
-		public string __Gen_Wrap_131(object P0, object P1, bool P2); // 0x0000000181518980-0x00000001815193D0
-		public object __Gen_Wrap_132(); // 0x00000001815193D0-0x0000000181519C10
-		public IEnumerator __Gen_Wrap_133(object P0, object P1, bool P2, object P3); // 0x0000000181519C10-0x000000018151A730
-		public IEnumerator __Gen_Wrap_134(bool P0, object P1, object P2); // 0x000000018151A730-0x000000018151B170
-		public LocalResPref __Gen_Wrap_135(object P0, bool P1, object P2, FResourceDiff P3, out int P4); // 0x000000018151B170-0x000000018151BED0
-		public void __Gen_Wrap_136(object P0, ref bool P1, double P2, double P3, int P4, bool P5); // 0x000000018151BED0-0x000000018151C240
-		public bool __Gen_Wrap_137(object P0, EVFSBlockType P1); // 0x000000018151C240-0x000000018151C530
-		public IEnumerator __Gen_Wrap_138(object P0, object P1, bool P2, bool P3); // 0x000000018151C530-0x000000018151CFA0
-		public LoginHotUpdater __Gen_Wrap_139(object P0, bool P1); // 0x000000018151CFA0-0x000000018151D900
-		public LoginProgress.FDownloadSize.EUnit __Gen_Wrap_140(double P0); // 0x000000018151D900-0x000000018151DB00
-		public float __Gen_Wrap_141(double P0, LoginProgress.FDownloadSize.EUnit P1); // 0x000000018151DB00-0x000000018151DD30
-		public string __Gen_Wrap_142(float P0, float P1, LoginProgress.FDownloadSize.EUnit P2); // 0x000000018151DD30-0x000000018151E620
-		public string __Gen_Wrap_143(float P0, LoginProgress.FDownloadSize.EUnit P1); // 0x000000018151E620-0x000000018151EED0
-		public string __Gen_Wrap_144(float P0, float P1); // 0x000000018151EED0-0x000000018151F7A0
-		public void __Gen_Wrap_145(ref LoginProgress.FDownloadSize P0, double P1, double P2, double P3); // 0x000000018151F7A0-0x0000000181520470
-		public void __Gen_Wrap_146(ref LoginProgress.FDownloadSize P0, double P1, double P2); // 0x0000000181520470-0x0000000181521120
-		public void __Gen_Wrap_147(ref LoginProgress.FDownloadSize P0); // 0x0000000181521120-0x0000000181521D30
-		public void __Gen_Wrap_148(object P0, GameAppExitCode P1); // 0x000000018133CDE0-0x000000018133D0C0
-		public void __Gen_Wrap_149(SpeedTestResult P0); // 0x00000001812A5970-0x00000001812A5C30
-		public Task<Hypergryph.SpeedTest.TaskResult> __Gen_Wrap_150(); // 0x0000000181521D30-0x0000000181522570
-		public bool __Gen_Wrap_151(ref LoginViewModel.FAgeTipsPolicy P0); // 0x0000000181522570-0x0000000181523140
-		public LoginViewModel.FAgeTipsPolicy __Gen_Wrap_152(); // 0x0000000181523140-0x0000000181523950
-		public LoginWorkFlow.Node[] __Gen_Wrap_153(object P0); // 0x0000000181523950-0x0000000181524290
-		public float __Gen_Wrap_154(object P0, out bool P1); // 0x0000000181524290-0x00000001815245B0
-		public TickType __Gen_Wrap_155(object P0); // 0x0000000181298AE0-0x0000000181298DA0
-		public UIAnimationMixPlayer __Gen_Wrap_156(object P0); // 0x00000001815245B0-0x0000000181524EF0
-		public void __Gen_Wrap_157(object P0, LoginSceneAnimCtrl.EState P1); // 0x000000018133CDE0-0x000000018133D0C0
-		public List<string> __Gen_Wrap_158(object P0); // 0x0000000181524EF0-0x0000000181525830
-		public void __Gen_Wrap_159(object P0, LoginViewModel.FAgeTipsPolicy P1); // 0x0000000181525830-0x0000000181525EC0
-		public void __Gen_Wrap_160(object P0, object P1, bool P2, bool P3); // 0x0000000181525EC0-0x00000001815262A0
-		public void __Gen_Wrap_161(bool P0, bool P1, bool P2); // 0x00000001815262A0-0x00000001815264D0
-		public void __Gen_Wrap_162(object P0, in EventData<bool> P1); // 0x00000001815264D0-0x0000000181526B50
-		public LoginMockUIDPanel __Gen_Wrap_163(); // 0x0000000181526B50-0x0000000181527390
-		public void __Gen_Wrap_164(object P0, in EventData<float> P1); // 0x0000000181527390-0x0000000181527A20
-		public void __Gen_Wrap_165(object P0, object P1, object P2, bool P3); // 0x0000000181527A20-0x0000000181527E90
-		public void __Gen_Wrap_166(object P0, int P1, object P2); // 0x00000001812ABC50-0x00000001812ABFE0
-		public void __Gen_Wrap_167(object P0, EVFSBlockType P1); // 0x000000018122AC70-0x000000018122AF40
+		public Beyond.GameState __Gen_Wrap_0(object P0); // 0x00000001887EBA14-0x00000001887EBAD4
+		public void __Gen_Wrap_1(object P0, Beyond.GameState P1); // 0x0000000188B4D6D0-0x0000000188B4D7A0
+		public void __Gen_Wrap_2(float P0); // 0x0000000188CC508C-0x0000000188CC5140
+		public void __Gen_Wrap_3(bool P0); // 0x00000001887EDB90-0x00000001887EDC44
+		public void __Gen_Wrap_4(Beyond.GameSetting.GameSettingAudioSuiteMode P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_5(Beyond.GameSetting.KeyboardLayoutType P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_6(EnvLang P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_7(Beyond.GameSetting.GameSettingLanguageAudio P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_8(Beyond.GameSetting.GameSettingVideoQuality P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_9(int P0, int P1, bool P2); // 0x0000000188CC5978-0x0000000188CC5A60
+		public void __Gen_Wrap_10(Beyond.GameSetting.ScreenResolution P0); // 0x0000000188CC4BB0-0x0000000188CC4C9C
+		public void __Gen_Wrap_11(Beyond.GameSetting.TeammateSkillEffectStrength P0); // 0x00000001887DBA64-0x00000001887DBB14
+		public void __Gen_Wrap_12(); // 0x00000001887ED074-0x00000001887ED104
+		public void __Gen_Wrap_13(object P0); // 0x00000001887ED758-0x00000001887ED80C
+		public bool __Gen_Wrap_14(object P0); // 0x0000000188B46E14-0x0000000188B46ED4
+		public string __Gen_Wrap_15(); // 0x0000000182798820-0x0000000182799040
+		public string __Gen_Wrap_16(object P0); // 0x000000018279D310-0x000000018279DC30
+		public void __Gen_Wrap_17(object P0, object P1); // 0x0000000188B47220-0x0000000188B472F0
+		public bool __Gen_Wrap_18(object P0, uint P1); // 0x0000000182460990-0x0000000182460C70
+		public GameApp.FileEntry __Gen_Wrap_19(GameApp.PendingFile P0); // 0x00000001827A6740-0x00000001827A7320
+		public List<GameApp.FileEntry> __Gen_Wrap_20(object P0, int P1); // 0x00000001827A7320-0x00000001827A7C70
+		public int __Gen_Wrap_21(object P0, object P1); // 0x0000000182224290-0x0000000182224620
+		public string __Gen_Wrap_22(long P0); // 0x00000001827A7C70-0x00000001827A84D0
+		public void __Gen_Wrap_23(object P0, object P1, object P2); // 0x0000000182532090-0x00000001825324E0
+		public void __Gen_Wrap_24(object P0, object P1, System.DateTime P2, object P3, object P4); // 0x00000001827A84D0-0x00000001827A8DB0
+		public void __Gen_Wrap_25(object P0, object P1, int P2, object P3); // 0x00000001825A0C90-0x00000001825A1100
+		public void __Gen_Wrap_26(object P0, object P1, int P2); // 0x0000000182528040-0x00000001825283D0
+		public bool __Gen_Wrap_27(); // 0x0000000182541760-0x0000000182541930
+		public IEnumerator __Gen_Wrap_28(object P0, float P1); // 0x00000001827A8DB0-0x00000001827A9700
+		public void __Gen_Wrap_29(int P0); // 0x0000000182220CF0-0x0000000182220EE0
+		public IEnumerator __Gen_Wrap_30(); // 0x00000001827A9700-0x00000001827A9F20
+		public SplashController.SplashConfig[] __Gen_Wrap_31(object P0); // 0x00000001827A9F20-0x00000001827AA840
+		public IEnumerator __Gen_Wrap_32(object P0); // 0x00000001827AA840-0x00000001827AB160
+		public void __Gen_Wrap_33(object P0, object P1, bool P2); // 0x00000001825283D0-0x0000000182528770
+		public SplashController __Gen_Wrap_34(object P0, bool P1); // 0x00000001827AB160-0x00000001827ABAF0
+		public void __Gen_Wrap_35(in EventData<bool, bool> P0); // 0x00000001827ABAF0-0x00000001827AC0A0
+		public void __Gen_Wrap_36(object P0, bool P1); // 0x000000018253E590-0x000000018253E870
+		public IEnumerator __Gen_Wrap_37(object P0, bool P1); // 0x00000001827AC0A0-0x00000001827ACA30
+		public void __Gen_Wrap_38(GameAppExitCode P0); // 0x0000000182220CF0-0x0000000182220EE0
+		public bool __Gen_Wrap_39(out string P0); // 0x00000001827ACA30-0x00000001827AD330
+		public bool __Gen_Wrap_40(object P0, out LocalResPref P1, out VirtualFileSystem.BlockValidator P2); // 0x00000001827AD330-0x00000001827AE070
+		public void __Gen_Wrap_41(object P0, out VirtualFileSystem.BlockValidator P1); // 0x00000001827AE070-0x00000001827AEA70
+		public void __Gen_Wrap_42(object P0, in EventData<Beyond.DeviceInfo.InputType> P1); // 0x00000001827AEA70-0x00000001827AF0F0
+		public LoginController.MaskCtrl __Gen_Wrap_43(object P0); // 0x00000001827AF0F0-0x00000001827AFA10
+		public UISwitchTween __Gen_Wrap_44(object P0, int P1); // 0x00000001827AFA10-0x00000001827B0360
+		public IEnumerator __Gen_Wrap_45(object P0, object P1); // 0x00000001827B0360-0x00000001827B0D60
+		public void __Gen_Wrap_46(object P0, object P1, LoginController.EMaskType P2, bool P3, bool P4); // 0x00000001824EC7E0-0x00000001824ECBB0
+		public UIAnimationLayerMixPlayer __Gen_Wrap_47(object P0); // 0x00000001827B0D60-0x00000001827B1680
+		public void __Gen_Wrap_48(object P0, LoginController.FOptions P1); // 0x00000001827B1680-0x00000001827B1D10
+		public LoginWorkFlow.FWork __Gen_Wrap_49(); // 0x00000001827B1D10-0x00000001827B2500
+		public LoginWorkFlow.ENode __Gen_Wrap_50(ref LoginWorkFlow.FWork P0); // 0x00000001827B2500-0x00000001827B30A0
+		public bool __Gen_Wrap_51(LoginWorkFlow.ENode P0, LoginWorkFlow.ENode P1); // 0x0000000182522890-0x0000000182522AA0
+		public bool __Gen_Wrap_52(LoginWorkFlow.ENode P0); // 0x0000000182220AF0-0x0000000182220CF0
+		public IEnumerator __Gen_Wrap_53(LoginWorkFlow.ENode P0); // 0x00000001827B30A0-0x00000001827B3900
+		public CustomYieldInstruction __Gen_Wrap_54(object P0); // 0x00000001827B3900-0x00000001827B4220
+		public bool __Gen_Wrap_55(ref LoginWorkFlow.FWork P0); // 0x00000001827B4220-0x00000001827B4DD0
+		public void __Gen_Wrap_56(ref LoginWorkFlow.FWork P0); // 0x00000001827B4DD0-0x00000001827B5960
+		public void __Gen_Wrap_57(object P0, LoginAlertDialog.FParams P1); // 0x00000001827B5960-0x00000001827B5FD0
+		public void __Gen_Wrap_58(object P0, LoginVocResSelDialog.FParams P1); // 0x00000001827B5FD0-0x00000001827B6660
+		public void __Gen_Wrap_59(object P0, LoginJudgeDialog.FParams P1); // 0x00000001827B6660-0x00000001827B6CE0
+		public void __Gen_Wrap_60(LoginAlertDialog P0, LoginAlertDialog.FParams P1); // 0x00000001827B6CE0-0x00000001827B7350
+		public void __Gen_Wrap_61(object P0, bool P1, object P2, object P3, object P4, object P5, object P6, object P7, object P8); // 0x00000001827B7350-0x00000001827B7BC0
+		public bool __Gen_Wrap_62(object P0, out LoginWorkFlow.ENode P1); // 0x00000001827B7BC0-0x00000001827B7EC0
+		public void __Gen_Wrap_63(Beyond.GameState P0); // 0x0000000182220CF0-0x0000000182220EE0
+		public void __Gen_Wrap_64(object P0, float P1); // 0x0000000182659420-0x0000000182659700
+		public LoginRootPanel __Gen_Wrap_65(object P0); // 0x00000001827B7EC0-0x00000001827B87E0
+		public float __Gen_Wrap_66(object P0); // 0x00000001826A2110-0x00000001826A23D0
+		public LoginController __Gen_Wrap_67(object P0); // 0x00000001827B87E0-0x00000001827B9100
+		public void __Gen_Wrap_68(object P0, object P1, float P2); // 0x00000001827B9100-0x00000001827B94A0
+		public List<ServerZoneManager.ServerZoneData> __Gen_Wrap_69(object P0); // 0x00000001827B94A0-0x00000001827B9DC0
+		public bool __Gen_Wrap_70(object P0, object P1); // 0x00000001827B9DC0-0x00000001827BA150
+		public ServerZoneManager.ServerZoneData __Gen_Wrap_71(object P0); // 0x00000001827BA150-0x00000001827BAA70
+		public bool __Gen_Wrap_72(object P0, ELoginEvent P1, object P2); // 0x00000001827BAA70-0x00000001827BAE20
+		public void __Gen_Wrap_73(object P0, ELoginEvent P1, object P2); // 0x00000001824EC440-0x00000001824EC7E0
+		public void __Gen_Wrap_74(string P0); // 0x0000000182510780-0x0000000182510A40
+		public void __Gen_Wrap_75(PointerEventData P0); // 0x0000000182510780-0x0000000182510A40
+		public bool __Gen_Wrap_76(ref LoginMockUIDPanel.FOptions P0); // 0x00000001827BAE20-0x00000001827BBA10
+		public void __Gen_Wrap_77(object P0, ref int P1); // 0x00000001827BBA10-0x00000001827BBD00
+		public void __Gen_Wrap_78(int P0, UIDropdownOption P1, bool P2); // 0x00000001827BBD00-0x00000001827BC000
+		public void __Gen_Wrap_79(object P0, int P1); // 0x00000001824828A0-0x0000000182482B70
+		public void __Gen_Wrap_80(object P0, LoginMockUIDPanel.FOptions P1, object P2); // 0x00000001827BC000-0x00000001827BC750
+		public UISwitchTween __Gen_Wrap_81(object P0); // 0x00000001827BC750-0x00000001827BD070
+		public bool __Gen_Wrap_82(object P0, LoginController.EMaskType P1); // 0x0000000182460990-0x0000000182460C70
+		public void __Gen_Wrap_83(LoginVocResSelDialog P0, LoginVocResSelDialog.FParams P1); // 0x00000001827BD070-0x00000001827BD700
+		public IEnumerator __Gen_Wrap_84(object P0, object P1, object P2, object P3); // 0x00000001827BD700-0x00000001827BE2C0
+		public void __Gen_Wrap_85(LoginJudgeDialog P0, LoginJudgeDialog.FParams P1); // 0x00000001827BE2C0-0x00000001827BE940
+		public void __Gen_Wrap_86(object P0, object P1, object P2, object P3); // 0x0000000182558BB0-0x00000001825590D0
+		public string __Gen_Wrap_87(object P0, object P1, object P2); // 0x0000000188CC5140-0x0000000188CC525C
+		public void __Gen_Wrap_88(ref bool P0); // 0x0000000188CC525C-0x0000000188CC5330
+		public void __Gen_Wrap_89(object P0, ref bool P1); // 0x0000000188CC5330-0x0000000188CC5424
+		public void __Gen_Wrap_90(object P0, LoginManager.FFlowWithMask P1); // 0x0000000188CC5424-0x0000000188CC553C
+		public bool __Gen_Wrap_91(ref LoginManager.FFlowCondition P0, LoginWorkFlow.ENode P1); // 0x0000000188CC553C-0x0000000188CC5680
+		public IEnumerator __Gen_Wrap_92(object P0, LoginManager.FFlowWithMask P1); // 0x0000000188CC5680-0x0000000188CC57B8
+		public TMP_FontAsset __Gen_Wrap_93(object P0); // 0x0000000188CC57B8-0x0000000188CC5898
+		public void __Gen_Wrap_94(bool P0, long P1, object P2); // 0x00000001827BE940-0x00000001827BEC30
+		public void __Gen_Wrap_95(SDKNetUtils.HttpPostRequest P0); // 0x00000001827BEC30-0x00000001827BF1E0
+		public void __Gen_Wrap_96(SDKNetUtils.HttpGetRequest P0); // 0x00000001827BF1E0-0x00000001827BF780
+		public IEnumerator __Gen_Wrap_97(object P0, SDKNetUtils.HTTPConfig P1); // 0x00000001827BF780-0x00000001827C0450
+		public Dictionary<string, string> __Gen_Wrap_98(object P0); // 0x0000000188CC5898-0x0000000188CC5978
+		public int __Gen_Wrap_99(object P0); // 0x00000001887EBA14-0x00000001887EBAD4
+		public long __Gen_Wrap_100(object P0); // 0x0000000188AB6D9C-0x0000000188AB6E5C
+		public void __Gen_Wrap_101(object P0, out long P1, out string P2); // 0x0000000182783E80-0x00000001827848D0
+		public void __Gen_Wrap_102(object P0, SDKExtraData P1); // 0x00000001827848D0-0x0000000182784F40
+		public SDKExternalTools.POSTResult __Gen_Wrap_103(SDKNetUtils.WebHttpResponse P0); // 0x0000000182784F40-0x0000000182785AE0
+		public void __Gen_Wrap_104(SDKNetUtils.WebHttpResponse P0); // 0x0000000182785AE0-0x0000000182786090
+		public void __Gen_Wrap_105(object P0, SDKExternalTools.POSTRequest P1, object P2); // 0x0000000182786090-0x00000001827867E0
+		public SDKCaptchaHandler __Gen_Wrap_106(object P0); // 0x00000001827867E0-0x0000000182787100
+		public bool __Gen_Wrap_107(object P0, SDKExternalTools.ErrMsgMeta P1, out string P2); // 0x0000000182787100-0x0000000182787E60
+		public string __Gen_Wrap_108(object P0, SDKExternalTools.ErrMsgMeta P1); // 0x0000000182787E60-0x0000000182788B20
+		public IEnumerator __Gen_Wrap_109(object P0, object P1, object P2); // 0x0000000182788B20-0x0000000182789610
+		public void __Gen_Wrap_110(object P0, ExternalPluginLoginParams P1); // 0x0000000182789610-0x0000000182789C90
+		public void __Gen_Wrap_111(object P0, ExternalPluginLogoutParams P1); // 0x0000000182789C90-0x000000018278A300
+		public void __Gen_Wrap_112(U8PayResult P0); // 0x000000018278A300-0x000000018278A8A0
+		public void __Gen_Wrap_113(object P0, ExternalPluginPayParams P1); // 0x000000018278A8A0-0x000000018278AF10
+		public bool __Gen_Wrap_114(object P0, object P1, out SDKMeta P2); // 0x000000018278AF10-0x000000018278BA30
+		public LoginWorkFlow.ENode __Gen_Wrap_115(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public void __Gen_Wrap_116(ref LoginWorkFlow.FWork P0, int P1); // 0x000000018278BA30-0x000000018278C5F0
+		public bool __Gen_Wrap_117(object P0, LoginWorkFlow.ENode P1, bool P2); // 0x000000018278C5F0-0x000000018278C900
+		public HGDownloader.DownloadProgress __Gen_Wrap_118(object P0); // 0x000000018278C900-0x000000018278D1F0
+		public HGDownloader.WorkState __Gen_Wrap_119(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public List<HGFileInfo> __Gen_Wrap_120(object P0, object P1); // 0x000000018278D1F0-0x000000018278DBF0
+		public List<HGFolder> __Gen_Wrap_121(object P0, object P1); // 0x000000018278DBF0-0x000000018278E5F0
+		public bool __Gen_Wrap_122(object P0, HGRetCodeType P1, int P2); // 0x0000000182508ED0-0x00000001825091C0
+		public string __Gen_Wrap_123(double P0); // 0x000000018278E5F0-0x000000018278EE60
+		public void __Gen_Wrap_124(object P0, long P1, object P2, object P3, object P4, object P5); // 0x000000018278EE60-0x000000018278F470
+		public void __Gen_Wrap_125(object P0, HGDownloader.PauseReason P1); // 0x00000001824828A0-0x0000000182482B70
+		public bool __Gen_Wrap_126(object P0, object P1, out LoginGameUpdater.HGLatestGameInfo P2); // 0x000000018278F470-0x000000018278FF90
+		public IEnumerator __Gen_Wrap_127(object P0, long P1, object P2); // 0x000000018278FF90-0x00000001827909C0
+		public void __Gen_Wrap_128(object P0, long P1, long P2, long P3); // 0x00000001827909C0-0x0000000182790CD0
+		public IEnumerator __Gen_Wrap_129(object P0, long P1); // 0x0000000182790CD0-0x0000000182791620
+		public LoginGameUpdater.ResAction __Gen_Wrap_130(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public void __Gen_Wrap_131(object P0, LoginGameUpdater.ResAction P1); // 0x00000001824828A0-0x0000000182482B70
+		public void __Gen_Wrap_132(object P0, long P1, int P2, ref int P3); // 0x0000000182791620-0x0000000182791940
+		public void __Gen_Wrap_133(long P0, int P1, ref int P2); // 0x0000000182791940-0x0000000182791B90
+		public void __Gen_Wrap_134(ref bool P0, int P1, int P2); // 0x0000000182791B90-0x0000000182791DE0
+		public void __Gen_Wrap_135(LoginGameUpdater.PreDownloadErrorChoice P0); // 0x0000000182220CF0-0x0000000182220EE0
+		public string __Gen_Wrap_136(int P0); // 0x0000000182791DE0-0x0000000182792640
+		public IEnumerator __Gen_Wrap_137(object P0, int P1, object P2); // 0x0000000182792640-0x0000000182793060
+		public int __Gen_Wrap_138(long P0, long P1); // 0x000000018265E000-0x000000018265E210
+		public void __Gen_Wrap_139(object P0, int P1, long P2, long P3); // 0x0000000182793060-0x0000000182793370
+		public int __Gen_Wrap_140(long P0); // 0x0000000188CC4C9C-0x0000000188CC4D5C
+		public void __Gen_Wrap_141(object P0, object P1, long P2, long P3); // 0x0000000188CC4D5C-0x0000000188CC4E5C
+		public IEnumerator __Gen_Wrap_142(object P0, long P1, bool P2, object P3); // 0x0000000188CC4E5C-0x0000000188CC4F8C
+		public void __Gen_Wrap_143(object P0, long P1, long P2); // 0x0000000182500740-0x0000000182500A30
+		public void __Gen_Wrap_144(object P0, long P1, long P2, int P3); // 0x0000000182793370-0x0000000182793680
+		public void __Gen_Wrap_145(long P0); // 0x0000000182232C20-0x0000000182232E10
+		public void __Gen_Wrap_146(ref bool P0, long P1, long P2, int P3); // 0x0000000182793680-0x0000000182793900
+		public void __Gen_Wrap_147(long P0, long P1, long P2, long P3, ref int P4); // 0x0000000182793900-0x0000000182793BA0
+		public bool __Gen_Wrap_148(int P0); // 0x0000000182220AF0-0x0000000182220CF0
+		public bool __Gen_Wrap_149(object P0, object P1, out string P2); // 0x0000000182793BA0-0x00000001827946C0
+		public double __Gen_Wrap_150(object P0); // 0x00000001826A9620-0x00000001826A98E0
+		public bool __Gen_Wrap_151(bool P0); // 0x00000001822291E0-0x00000001822293E0
+		public string __Gen_Wrap_152(object P0, bool P1); // 0x00000001827946C0-0x0000000182795050
+		public LoginHotUpdater.HotUpdateInfo __Gen_Wrap_153(object P0, bool P1); // 0x0000000188CC4F8C-0x0000000188CC508C
+		public LocalResPref __Gen_Wrap_154(); // 0x0000000182795050-0x0000000182795870
+		public ResourceIndex __Gen_Wrap_155(); // 0x0000000182795870-0x0000000182796090
+		public string __Gen_Wrap_156(object P0, object P1, bool P2); // 0x0000000182796090-0x0000000182796AD0
+		public object __Gen_Wrap_157(); // 0x0000000182796AD0-0x00000001827972F0
+		public IEnumerator __Gen_Wrap_158(object P0, object P1, bool P2, object P3); // 0x00000001827972F0-0x0000000182797DF0
+		public IEnumerator __Gen_Wrap_159(bool P0, object P1, object P2); // 0x0000000182797DF0-0x0000000182798820
+		public LocalResPref __Gen_Wrap_160(object P0, bool P1, object P2, FResourceDiff P3, out int P4); // 0x0000000182799040-0x0000000182799DC0
+		public void __Gen_Wrap_161(object P0, ref bool P1, double P2, double P3, int P4, bool P5); // 0x0000000182799DC0-0x000000018279A130
+		public bool __Gen_Wrap_162(object P0, EVFSBlockType P1); // 0x0000000182676010-0x00000001826762F0
+		public IEnumerator __Gen_Wrap_163(object P0, object P1, bool P2, bool P3); // 0x000000018279A130-0x000000018279AB90
+		public LoginHotUpdater __Gen_Wrap_164(object P0, bool P1); // 0x000000018279AB90-0x000000018279B520
+		public LoginProgress.FDownloadSize.EUnit __Gen_Wrap_165(double P0); // 0x000000018279B520-0x000000018279B710
+		public float __Gen_Wrap_166(double P0, LoginProgress.FDownloadSize.EUnit P1); // 0x000000018279B710-0x000000018279B930
+		public string __Gen_Wrap_167(float P0, float P1, LoginProgress.FDownloadSize.EUnit P2); // 0x000000018279B930-0x000000018279C1E0
+		public string __Gen_Wrap_168(float P0, LoginProgress.FDownloadSize.EUnit P1); // 0x000000018279C1E0-0x000000018279CA70
+		public string __Gen_Wrap_169(float P0, float P1); // 0x000000018279CA70-0x000000018279D310
+		public void __Gen_Wrap_170(ref LoginProgress.FDownloadSize P0, double P1, double P2, double P3); // 0x000000018279DC30-0x000000018279E890
+		public void __Gen_Wrap_171(ref LoginProgress.FDownloadSize P0, double P1, double P2); // 0x000000018279E890-0x000000018279F4D0
+		public void __Gen_Wrap_172(ref LoginProgress.FDownloadSize P0); // 0x000000018279F4D0-0x00000001827A00D0
+		public void __Gen_Wrap_173(object P0, GameAppExitCode P1); // 0x00000001824828A0-0x0000000182482B70
+		public void __Gen_Wrap_174(SpeedTestResult P0); // 0x0000000182510780-0x0000000182510A40
+		public Task<Hypergryph.SpeedTest.TaskResult> __Gen_Wrap_175(); // 0x00000001827A00D0-0x00000001827A08F0
+		public bool __Gen_Wrap_176(object P0, out string P1); // 0x00000001827A08F0-0x00000001827A1300
+		public bool __Gen_Wrap_177(ref LoginViewModel.FAgeTipsPolicy P0); // 0x00000001827A1300-0x00000001827A1EB0
+		public LoginViewModel.FAgeTipsPolicy __Gen_Wrap_178(); // 0x00000001827A1EB0-0x00000001827A26A0
+		public LoginWorkFlow.Node[] __Gen_Wrap_179(object P0); // 0x00000001827A26A0-0x00000001827A2FC0
+		public float __Gen_Wrap_180(object P0, out bool P1); // 0x00000001827A2FC0-0x00000001827A32C0
+		public TickType __Gen_Wrap_181(object P0); // 0x000000018246EB30-0x000000018246EDF0
+		public UIAnimationMixPlayer __Gen_Wrap_182(object P0); // 0x00000001827A32C0-0x00000001827A3BE0
+		public void __Gen_Wrap_183(object P0, LoginSceneAnimCtrl.EState P1); // 0x00000001824828A0-0x0000000182482B70
+		public List<string> __Gen_Wrap_184(object P0); // 0x00000001827A3BE0-0x00000001827A4500
+		public void __Gen_Wrap_185(object P0, LoginViewModel.FAgeTipsPolicy P1); // 0x00000001827A4500-0x00000001827A4B70
+		public void __Gen_Wrap_186(object P0, object P1, bool P2, bool P3); // 0x00000001826D4DB0-0x00000001826D5170
+		public void __Gen_Wrap_187(bool P0, bool P1, bool P2); // 0x00000001827A4B70-0x00000001827A4DA0
+		public void __Gen_Wrap_188(object P0, in EventData<bool> P1); // 0x00000001827A4DA0-0x00000001827A5420
+		public LoginMockUIDPanel __Gen_Wrap_189(); // 0x00000001827A5420-0x00000001827A5C40
+		public void __Gen_Wrap_190(object P0, in EventData<float> P1); // 0x00000001827A5C40-0x00000001827A62D0
+		public void __Gen_Wrap_191(object P0, object P1, object P2, bool P3); // 0x00000001827A62D0-0x00000001827A6740
+		public void __Gen_Wrap_192(object P0, int P1, object P2); // 0x00000001824EC440-0x00000001824EC7E0
+		public void __Gen_Wrap_193(object P0, EVFSBlockType P1); // 0x0000000182494990-0x0000000182494C60
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey, IEnumerator<object> // TypeDefIndex: 56577
+	public class ILFixInterfaceBridge : AnonymousStorey, IEnumerator<object> // TypeDefIndex: 81138
 	{
 		// Fields
 		private int methodId_0; // 0x40
@@ -6400,721 +7162,1149 @@ namespace IFix
 		private int methodId_4; // 0x50
 	
 		// Properties
-		object IEnumerator<System.Object>.Current { [IDTag(2)] get; } // 0x00000001869B5064-0x00000001869B5110 
-		object IEnumerator.Current { [IDTag(4)] get; } // 0x00000001869B5110-0x00000001869B51BC 
+		object IEnumerator<System.Object>.Current { [IDTag(2)] get; } // 0x0000000188CCA894-0x0000000188CCA944 
+		object IEnumerator.Current { [IDTag(4)] get; } // 0x0000000188CCA944-0x0000000188CCA9F4 
 	
 		// Constructors
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x00000001869B51BC-0x00000001869B5298
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x0000000188CCA9F4-0x0000000188CCAAD4
 	
 		// Methods
 		[IDTag(0)]
-		void IDisposable.Dispose(); // 0x0000000186365FC0-0x000000018636603C
+		void IDisposable.Dispose(); // 0x00000001887F0184-0x00000001887F0204
 		[IDTag(1)]
-		private bool MoveNext(); // 0x0000000186365D60-0x0000000186365DEC
+		private bool MoveNext(); // 0x00000001887EFF14-0x00000001887EFFA4
 		[IDTag(3)]
-		void IEnumerator.Reset(); // 0x0000000186365E98-0x0000000186365F14
-		public void RefAsyncBuilderStartMethod(); // 0x00000001841E1670-0x00000001841E1680
+		void IEnumerator.Reset(); // 0x00000001887F0054-0x00000001887F00D4
+		public void RefAsyncBuilderStartMethod(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 56578
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 81139
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
-		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x00000001853908C0-0x00000001853908D0
+		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x00000001869B5480-0x00000001869B54E4
-		public static bool IsPatched(int id); // 0x0000000182F44DE0-0x0000000182F44E30
-		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x00000001869B533C-0x00000001869B5408
-		public object CreateWrapper(int id); // 0x00000001869B5408-0x00000001869B5480
-		public object InitWrapperArray(int len); // 0x00000001869B54E4-0x00000001869B58D8
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x00000001869B5298-0x00000001869B533C
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x0000000188CCACC0-0x0000000188CCAD24
+		public static bool IsPatched(int id); // 0x0000000188CCADB0-0x0000000188CCAE2C
+		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x0000000188CCAB78-0x0000000188CCAC44
+		public object CreateWrapper(int id); // 0x0000000188CCAC44-0x0000000188CCACC0
+		public object InitWrapperArray(int len); // 0x0000000188CCAD24-0x0000000188CCADB0
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x0000000188CCAAD4-0x0000000188CCAB78
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 56579
+	public delegate Beyond.GameState __HotPatchDelegate_0(object P0); // TypeDefIndex: 81140; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public enum HotPatchIDMAP0 // TypeDefIndex: 81141
 	{
 		Beyond-GameApp-get_currentState0 = 0,
+		Beyond-GameInitState-get_stateId0 = 0,
+		Beyond-GameLoginState-get_stateId0 = 0,
+		Beyond-GameMainState-get_stateId0 = 0,
+		Beyond-GamePreloadState-get_stateId0 = 0,
+		Beyond-GameQuitState-get_stateId0 = 0,
+		Beyond-GameSoftRestartState-get_stateId0 = 0,
+		Beyond-GameStartState-get_stateId0 = 0,
+		Beyond-GameStateMachine-get_curState0 = 0,
 		Beyond-GameApp-SwitchState0 = 1,
-		Beyond-GameApp-Awake0 = 2,
-		Beyond-GameApp-_PreInitGameSetting0 = 3,
-		Beyond-Scripts-Entry-GameSettingSetter-RegisterSettingCallbacks0 = 4,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioGlobalVolumeChange0 = 5,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioMusicVolumeChange0 = 6,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioVoiceVolumeChange0 = 7,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSfxVolumeChange0 = 8,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSuspendUnfocusedChange0 = 9,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioBackgroundMusicChange0 = 10,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSuiteModeChange0 = 11,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioControllerChange0 = 12,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSpatialAudioChange0 = 13,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnCameraDistanceLevelChange0 = 14,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnControllerMotionChange0 = 15,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnKeyboardTypeChange0 = 16,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnLanguageTextChange0 = 17,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnLanguageAudioChange0 = 18,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoQualityChange0 = 19,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoFullScreenChange0 = 20,
-		Beyond-Scripts-Entry-GameSettingSetter-_SetResolution0 = 21,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoResolutionChange0 = 22,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoNotchPaddingChange0 = 23,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnTeammateSkillEffectStrengthChange0 = 24,
-		Beyond-Scripts-Entry-GameSettingSetter-_OnTeammateSkillEffectOpacityChange0 = 25,
-		Beyond-GameApp-_NeedDeepProfilerMode0 = 26,
-		Beyond-UI-SplashController-Show0 = 27,
-		Beyond-RenderPipelineDataLoader-LoadSimpleRpData0 = 28,
-		Beyond-UI-SplashController-_Play0 = 30,
+		Beyond-GameStateBase-OnEnter0 = 1,
+		Beyond-GameInitState-OnEnter0 = 1,
+		Beyond-GameStateBase-OnLeave0 = 1,
+		Beyond-GameInitState-OnLeave0 = 1,
+		Beyond-GameLoginState-OnEnter0 = 1,
+		Beyond-GameLoginState-OnLeave0 = 1,
+		Beyond-GameMainState-OnEnter0 = 1,
+		Beyond-GameMainState-OnLeave0 = 1,
+		Beyond-GamePreloadState-OnEnter0 = 1,
+		Beyond-GamePreloadState-OnLeave0 = 1,
+		Beyond-GameQuitState-OnEnter0 = 1,
+		Beyond-GameQuitState-OnLeave0 = 1,
+		Beyond-GameSoftRestartState-OnEnter0 = 1,
+		Beyond-GameStartState-OnEnter0 = 1,
+		Beyond-GameStartState-OnLeave0 = 1,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioGlobalVolumeChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioMusicVolumeChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioVoiceVolumeChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSfxVolumeChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnCameraDistanceLevelChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoNotchPaddingChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnTeammateSkillEffectOpacityChange0 = 2,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSuspendUnfocusedChange0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioBackgroundMusicChange0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioControllerChange0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSpatialAudioChange0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnControllerMotionChange0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoFullScreenChange0 = 3,
+		Beyond-Login-LoginHotUpdater-MarkNeedClearFolder0 = 3,
+		Beyond-Login-LoginHotUpdater-MarkClearSuccessed0 = 3,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnAudioSuiteModeChange0 = 4,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnKeyboardTypeChange0 = 5,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnLanguageTextChange0 = 6,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnLanguageAudioChange0 = 7,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoQualityChange0 = 8,
+		Beyond-Scripts-Entry-GameSettingSetter-_SetResolution0 = 9,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnVideoResolutionChange0 = 10,
+		Beyond-Scripts-Entry-GameSettingSetter-_OnTeammateSkillEffectStrengthChange0 = 11,
+		Beyond-Scripts-Entry-GameSettingSetter-RegisterSettingCallbacks0 = 12,
+		Beyond-RenderPipelineDataLoader-LoadSimpleRpData0 = 12,
+		Beyond-UI-SplashController-Hide0 = 12,
+		Beyond-GameApp-RefreshScreenResolution0 = 12,
+		Beyond-GameApp-_OnSystemDisplaySizeChanged0 = 12,
+		Beyond-RenderPipelineDataLoader-PreloadFullRpResources0 = 12,
+		Beyond-VietnamLoginAgePanel-_UnInit0 = 12,
+		Beyond-VietnamLoginAgePanel-_Init0 = 12,
+		Beyond-VietnamLoginAgePanel-Init0 = 12,
+		Beyond-UI-SplashController-CanFinished0 = 12,
+		Beyond-RenderPipelineDataLoader-LoadFullRpResources0 = 12,
+		Beyond-GameLoginState-_TryStartLoginWorkflow0 = 12,
+		Beyond-LoginManager-OnReleaseMainGame0 = 12,
+		Beyond-GameMainState-_ClearUtils0 = 12,
+		Beyond-VietnamLoginAgePanel-UnInit0 = 12,
+		Beyond-GameQuitState-DoQuit0 = 12,
+		Beyond-Login-LoginWorkFlow-ClearEnteredPreloadThisSession0 = 12,
+		Beyond-GlobalInitializer-InitGlobalConfig0 = 12,
+		Beyond-SDK-Impl-U8ExternalTools-_OnRequestExitGame0 = 12,
+		Beyond-SDK-Impl-U8ExternalTools-_OnFakeAccountCenter0 = 12,
+		Beyond-Login-LoginHotUpdater-MarkInitialAssetChanged0 = 12,
+		Beyond-Login-LoginHotUpdater-MarkSoftRestart0 = 12,
+		Beyond-Login-LoginHotUpdater-ClearSoftRestartFlag0 = 12,
+		Beyond-Login-LoginHotUpdater-_SetResVersionForLog0 = 12,
+		Beyond-Login-LoginWorkFlow-MarkEnteredPreloadThisSession0 = 12,
+		Beyond-Login-LoginMenuPanel-_OnBulletinOpen0 = 12,
+		Beyond-Login-LoginMenuPanel-_OnBulletinClose0 = 12,
+		Beyond-GameApp-_PreInitGameSetting0 = 13,
+		Beyond-GameApp-_WorkerLoop0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-PublicSetGameVersion0 = 13,
+		Beyond-UI-SplashController-_Stop0 = 13,
+		Beyond-UI-SplashController-_OnTweenFinished0 = 13,
+		Beyond-GameApp-_InitNotificationCenter0 = 13,
+		Beyond-GameApp-_InitGameStateMachine0 = 13,
+		Beyond-GameApp-_OnApplicationFocusForLua0 = 13,
+		Beyond-GameApp-_OnApplicationPauseForLua0 = 13,
+		Beyond-GameApp-_RegisterLuaAfterGCEvent0 = 13,
+		Beyond-GameApp-Awake0 = 13,
+		Beyond-GameApp-Update0 = 13,
+		Beyond-GameApp-LateUpdate0 = 13,
+		Beyond-GameApp-OnApplicationQuit0 = 13,
+		Beyond-GameApp-_UnInitGameStateMachine0 = 13,
+		Beyond-GameApp-_UnInit0 = 13,
+		Beyond-GameApp-OnDestroy0 = 13,
+		Beyond-GameInitState-_InitAPPDefaultCulture0 = 13,
+		Beyond-GameInitState-_InitGameSetting0 = 13,
+		Beyond-Login-LoginWorkFlow-Node-OnDispose0 = 13,
+		Beyond-Login-LoginWorkFlow-Node-Dispose0 = 13,
+		Beyond-Login-LoginWorkFlow-_EnbaleToggleGroup0 = 13,
+		Beyond-Login-LoginWorkFlow-Worker-Dispose0 = 13,
+		Beyond-Login-LoginWorkFlow-Dispose0 = 13,
+		Beyond-LoginManager-AssetLoader-Dispose0 = 13,
+		Beyond-LoginContext-_DisposeImpl0 = 13,
+		Beyond-LoginController-MaskCtrl-Dispose0 = 13,
+		Beyond-LoginContext-Dispose0 = 13,
+		Beyond-Login-LoginRootPanel-_InitController0 = 13,
+		Beyond-Login-LoginRootPanel-ChildPanel-OnInit0 = 13,
+		Beyond-LoginController-_InitVersionBtn0 = 13,
+		Beyond-LoginController-_InitImpl0 = 13,
+		Beyond-Login-LoginWorkFlow-Worker-_InternalTick0 = 13,
+		Beyond-Login-LoginWorkFlow-Worker-TickInEmptyFrame0 = 13,
+		Beyond-LoginManager-_PrepareBeforeLoginProcess0 = 13,
+		Beyond-LoginManager-_Init0 = 13,
+		Beyond-LoginContext-ShutDown0 = 13,
+		Beyond-LoginManager-_ReleaseLoginScene0 = 13,
+		Beyond-LoginManager-Clear0 = 13,
+		Beyond-GamePreloadState-_InitGameSettingStateInPreload0 = 13,
+		Beyond-LoginManager-ClearSync0 = 13,
+		Beyond-GameStartState-_OnEnterMainGame0 = 13,
+		Beyond-GameStateMachine-_RegisterStates0 = 13,
+		Beyond-LoginController-Awake0 = 13,
+		Beyond-LoginController-Start0 = 13,
+		Beyond-Login-LoginWorkFlow-_EventOnOpenAgeTips0 = 13,
+		Beyond-Login-LoginWorkFlow-_EventOnCloseAgeTips0 = 13,
+		Beyond-Login-LoginWorkFlow-_EventOnConfirmServer0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_SaveConfig0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_OnBtnEnterGame0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_OnBtnDelLocalFile0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_TryClosePanel0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_InitLoginInfo0 = 13,
+		Beyond-Login-LoginMockUIDPanel-_UpdateStatus0 = 13,
+		Beyond-LoginController-Dialog-Show0 = 13,
+		Beyond-LoginController-Dialog-OnInit0 = 13,
+		Beyond-Login-LoginSceneComponent-OnBindToManager0 = 13,
+		Beyond-LoginManager-_BindPendingComponents0 = 13,
+		Beyond-VietnamLoginAgePanel-OnApplicationQuit0 = 13,
+		Beyond-VietnamLoginAgeTipsPanelCtrl-Awake0 = 13,
+		Beyond-TailGameLoop-Update0 = 13,
+		Beyond-TailGameLoop-LateUpdate0 = 13,
+		Beyond-UI-SplashController-Awake0 = 13,
+		Beyond-UI-SplashController-OnDestroy0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-InitSDKSystem0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-RetryInitSDKSystem0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-InitHGSDK0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-_ProcessGameProtocolUpdateCheck0 = 13,
+		Beyond-SDK-Impl-U8ExternalTools-_ProcessLaunchAuth0 = 13,
+		Beyond-SDK-Impl-U8Plugin-Init0 = 13,
+		Beyond-Login-LoginGameUpdater-Clear0 = 13,
+		Beyond-Login-LoginGameUpdater-ShowWaitProgress0 = 13,
+		Beyond-Login-LoginGameUpdater-ClearWaitProgress0 = 13,
+		Beyond-Login-LoginGameUpdater-_CreateDirectoryIfNotExists0 = 13,
+		Beyond-Login-LoginCreateRoleNode-WorkProcess-Dispose0 = 13,
+		Beyond-Login-LoginCreateRoleNode-OnDispose0 = 13,
+		Beyond-Login-LoginDownloadTask-Dispose0 = 13,
+		Beyond-Login-LoginDownloadTask-_OnDownloadFinish0 = 13,
+		Beyond-Login-LoginDownloadTask-_StartDownloadImpl0 = 13,
+		Beyond-Login-LoginDownloadTask-_StartDownload0 = 13,
+		Beyond-Login-LoginGameUpdater-_OnDownloadStart0 = 13,
+		Beyond-Login-LoginGameUpdater-_OnApplyPreDownloadStart0 = 13,
+		Beyond-Login-LoginGameUpdater-PreDownloadApplyContext-ResetTaskTrackState0 = 13,
+		Beyond-Login-LoginGameUpdater-_OnPreDownloadDownloadStart0 = 13,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_ReLoginWhenErrorEncountered0 = 13,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_GlobalLoginSucBusiness0 = 13,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-EnterGame0 = 13,
+		Beyond-Login-LoginGSNode-_OnEventLogout0 = 13,
+		Beyond-Login-LoginViewModel-RequestResourceRepair0 = 13,
+		Beyond-Login-LoginGSNode-_OnEventResourceRepair0 = 13,
+		Beyond-Login-LoginViewModel-RequestPreDownload0 = 13,
+		Beyond-Login-LoginGSNode-_OnEventPreDownload0 = 13,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-MarkAborting0 = 13,
+		Beyond-Login-LoginLocalResTask-Dispose0 = 13,
+		Beyond-Login-LoginHotUpdater-Dispose0 = 13,
+		Beyond-Login-LoginHotUpdater-_StartDownloadingShaderWarmupIfNeeded0 = 13,
+		Beyond-Login-LoginHotUpdater-_StopDownloadingShaderWarmupIfNeeded0 = 13,
+		Beyond-Login-LoginHotUpdater-WorkContext-MarkIllegalItemsInLocalRes0 = 13,
+		Beyond-Login-LoginViewModel-RequestSkipU8Login0 = 13,
+		Beyond-Login-LoginViewModel-RequestCancelPreDownload0 = 13,
+		Beyond-Login-PreloadNode-_ShowPreloadResourcePanel0 = 13,
+		Beyond-Login-PreloadNode-_OnGetServerListSuc0 = 13,
+		Beyond-Login-PreloadNode-_EnterPreLoad0 = 13,
+		Beyond-Login-LoginSDKInitNode-_InitSubSDKs0 = 13,
+		Beyond-Login-U8LoginNode-_OnSDKViewDisabled0 = 13,
+		Beyond-Login-LoginMenuPanel-_UpdateAnnounceRedDot0 = 13,
+		Beyond-Login-LoginMenuPanel-InitBulletinAndRedAfterLoginSuc0 = 13,
+		Beyond-Login-LoginRootPanel-InitBulletinAndRedAfterLoginSuc0 = 13,
+		Beyond-Login-LoginMenuPanel-_StopToastHideRoutine0 = 13,
+		Beyond-Login-LoginMenuPanel-_HideLoginSuccessToast0 = 13,
+		Beyond-Login-LoginMenuPanel-_RestartToastHideRoutine0 = 13,
+		Beyond-Login-LoginMenuPanel-ShowLoginSuccessToast0 = 13,
+		Beyond-Login-LoginRootPanel-ShowLoginSuccessToast0 = 13,
+		Beyond-Login-U8LoginNode-_OnLoginSuc0 = 13,
+		Beyond-Login-U8LoginNode-_OnGameProtocolUpdateCheckSucceeded0 = 13,
+		Beyond-Login-U8LoginNode-_OnLoginCanceled0 = 13,
+		Beyond-Login-U8LoginNode-_SetCursorOnLoginStart0 = 13,
+		Beyond-Login-U8LoginNode-_SetCursorOnLoginFinish0 = 13,
+		Beyond-Login-U8LoginNode-_StartGameProtocolUpdateCheck0 = 13,
+		Beyond-Login-U8LoginNode-_StartSDKLogin0 = 13,
+		Beyond-Login-U8LoginNode-_OnGameProtocolUpdateCheckFailed0 = 13,
+		Beyond-Login-U8LoginNode-_ClearGameProtocolUpdateCheckEvents0 = 13,
+		Beyond-Login-LoginAgeTipsProp-ClearContentCache0 = 13,
+		Beyond-Login-U8LoginNode-_ClearLoginCaches0 = 13,
+		Beyond-Login-U8LoginNode-_SkipSDKLogin0 = 13,
+		Beyond-Login-LoginWorkFlow-Node-OnInit0 = 13,
+		Beyond-Login-HotUpdateNode-OnDispose0 = 13,
+		Beyond-Login-WaitForSecondsNode-_NotifyTimeout0 = 13,
+		Beyond-Login-WaitForSecondsNode-_DisposeTimer0 = 13,
+		Beyond-Login-WaitForSecondsNode-OnDispose0 = 13,
+		Beyond-Login-PreloadPostDelayNode-_DisableLoadingPanel0 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-OnBindToManager0 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-_ResetToA10 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-_PlayA1A2Impl0 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-_TransitionToA20 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-_PlayA1sAndTriggerNext0 = 13,
+		Beyond-Login-LoginSceneComponent-Start0 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-Start0 = 13,
+		Beyond-Login-LoginSceneAnimCtrl-OnRelease0 = 13,
+		Beyond-Login-LoginSceneRoot-OnBindToManager0 = 13,
+		Beyond-Login-LoginAgeTipsDetailPanel-_ShowContent0 = 13,
+		Beyond-Login-LoginAgeTipsPanel-OnInit0 = 13,
+		Beyond-Login-LoginAlertDialog-OnInit0 = 13,
+		Beyond-Login-LoginDecorateUI-_TriggerTrans2GSLoginImpl0 = 13,
+		Beyond-Login-LoginDecorateUI-OnRelease0 = 13,
+		Beyond-Login-LoginEnterGamePanel-_InitIfNot0 = 13,
+		Beyond-Login-LoginGovTipsPanel-OnInit0 = 13,
+		Beyond-Login-LoginJudgeDialog-OnInit0 = 13,
+		Beyond-Login-LoginMenuPanel-_OnAnnounceClosed0 = 13,
+		Beyond-Login-LoginMenuPanel-_SendCancelPreDownloadEventIfNeeded0 = 13,
+		Beyond-Login-LoginMenuPanel-_ShowPausePreDownloadConfirm0 = 13,
+		Beyond-Login-LoginMenuPanel-_SendPreDownloadEvent0 = 13,
+		Beyond-Login-LoginMenuPanel-_OnServerZoneBtnClicked0 = 13,
+		Beyond-Login-LoginMenuPanel-OnInit0 = 13,
+		Beyond-Login-LoginMenuPanel-_UpdateServerZone0 = 13,
+		Beyond-Login-LoginMenuPanel-Awake0 = 13,
+		Beyond-Login-LoginMenuPanel-_OnRequestRelogin0 = 13,
+		Beyond-Login-LoginMenuPanel-OnEnable0 = 13,
+		Beyond-Login-LoginMenuPanel-OnDisable0 = 13,
+		Beyond-Login-LoginRootPanel-ChildPanel-OnDestroy0 = 13,
+		Beyond-Login-LoginMenuPanel-OnDestroy0 = 13,
+		Beyond-Login-LoginMockUIDPanel-Refresh0 = 13,
+		Beyond-Login-LoginMockUIDPanel-OnDestroy0 = 13,
+		Beyond-Login-LoginResourcePanel-_UpdateResourceInfo0 = 13,
+		Beyond-Login-LoginResourcePanel-Update0 = 13,
+		Beyond-Login-LoginRootPanel-Awake0 = 13,
+		Beyond-Login-LoginRootPanel-OnDestroy0 = 13,
+		Beyond-Login-LoginServerSelectItemView-NaviToBtnTarget0 = 13,
+		Beyond-Login-LoginServerSelectModel-InitData0 = 13,
+		Beyond-Login-LoginServerSelectPanel-OnInit0 = 13,
+		Beyond-Login-LoginServerSelectPanel-_NaviToSelectedItem0 = 13,
+		Beyond-Login-LoginServerSelectPanel-OnDisable0 = 13,
+		Beyond-Login-LoginServerSelectPanel-OnEnable0 = 13,
+		Beyond-Login-LoginVersionPanel-Start0 = 13,
+		Beyond-Login-LoginVocResSelDialog-_OnConfirmClicked0 = 13,
+		Beyond-Login-LoginVocResSelDialog-_UpdateList0 = 13,
+		Beyond-Login-LoginVocResSelDialog-_RefreshConfirmInteractable0 = 13,
+		Beyond-Login-LoginVocResSelItemView-NaviToBtnTarget0 = 13,
+		Beyond-Login-LoginVocResSelDialog-_NaviToSelectedItem0 = 13,
+		Beyond-Login-LoginVocResSelDialog-OnInit0 = 13,
+		Beyond-Login-LoginVocResSelDialog-OnEnable0 = 13,
+		Beyond-Login-LoginVocResSelDialog-OnDisable0 = 13,
+		Beyond-GameApp-_NeedDeepProfilerMode0 = 14,
+		Beyond-LoginContext-IsDisposed0 = 14,
+		Beyond-LoginManager-IsWorkflowInProgress0 = 14,
+		Beyond-LoginController-MaskCtrl-IsCrossSceneMaskTweening0 = 14,
+		Beyond-LoginContext-IsWorkflowDisposed0 = 14,
+		Beyond-LoginManager-IsReLoginInProgress0 = 14,
+		Beyond-GameStateMachine-CheckCanReturnToLoginState0 = 14,
+		Beyond-Login-LoginAgeTipsModel-IsContentEmpty0 = 14,
+		Beyond-LoginManager-get_firstLogin0 = 14,
+		Beyond-LoginManager-IsLoginSceneLoading0 = 14,
+		Beyond-Login-LoginCreateRoleNode-CanCancel0 = 14,
+		Beyond-Login-LoginCreateRoleNode-WorkProcess-get_keepWaiting0 = 14,
+		Beyond-Login-LoginDownloadTask-Tick0 = 14,
+		Beyond-Login-NetUsagePolicy-AllowMobileDataInLastCheck0 = 14,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-IsInterruptable0 = 14,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-TryInterrupt0 = 14,
+		Beyond-Login-LoginGSNode-_FallbackToInitNodeImpl0 = 14,
+		Beyond-Login-LoginGSNode-_LogoutToInitNode0 = 14,
+		Beyond-Login-LoginGSNode-_FallbackToResRepairImpl0 = 14,
+		Beyond-Login-LoginGSNode-_FallbackToPreDownloadImpl0 = 14,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-get_keepWaiting0 = 14,
+		Beyond-Login-LoginHotUpdater-get_keepWaiting0 = 14,
+		Beyond-Login-LoginHotUpdater-HotUpdateInfo-CheckIfNeedReload0 = 14,
+		Beyond-Login-LoginHotUpdater-HotUpdateInfo-HasAssetsChanged0 = 14,
+		Beyond-Login-LoginPreDownloadNode-_ConsumePreDownloadRequest0 = 14,
+		Beyond-Login-LoginViewModel-IsAgeTipsVisible0 = 14,
+		Beyond-Login-LoginViewModel-IsGovTipsVisible0 = 14,
+		Beyond-Login-LoginViewModel-IsMenuVisible0 = 14,
+		Beyond-Login-LoginAgeTipsModel-CanDisplay0 = 14,
+		Beyond-Login-LoginWorkFlow-Node-CanCancel0 = 14,
+		Beyond-Login-LoginWorkFlow-Worker-Cancel0 = 14,
+		Beyond-Login-WaitForSecondsNode-_IsTimeout0 = 14,
+		Beyond-Login-LoginMenuPanel-_ShouldShowPreDownloadButton0 = 14,
+		Beyond-Login-LoginMenuPanel-_CanQRLogin0 = 14,
+		Beyond-GameApp-_CollectSystemInfo0 = 15,
+		Beyond-GameApp-_MakeLongPath0 = 16,
+		Beyond-GameApp-_CalculateMd50 = 16,
+		Beyond-SDK-Impl-U8ExternalTools-GetSignKey0 = 16,
+		Beyond-SDK-Impl-U8ExternalTools-U8RootUrl0 = 16,
+		Beyond-SDK-Impl-U8Plugin-GetPayAddition0 = 16,
+		Beyond-SDK-Impl-U8Plugin-GetSDKToken0 = 16,
+		Beyond-SDK-Impl-U8Plugin-GetSDKUid0 = 16,
+		Beyond-Login-LoginCheckForUpdateNode-_GetRequestPram0 = 16,
+		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetInfo0 = 16,
+		Beyond-Login-LoginProgress-GetInfo0 = 16,
+		Beyond-Login-LoginVersionPanel-get_versionZoneType0 = 16,
+		Beyond-Login-LoginVersionPanel-get_versionPlatform0 = 16,
+		Beyond-Login-LoginVersionPanel-get_versionAppType0 = 16,
+		Beyond-Login-LoginVersionPanel-get_versionVersionNum0 = 16,
+		Beyond-Login-LoginVersionPanel-get_versionProjectCL0 = 16,
+		Beyond-Login-LoginVersionPanel-get_displayGameVersion0 = 16,
+		Beyond-Scripts-Entry-WarmUpProgress-GetInfo0 = 16,
+		Beyond-GameApp-_ScanDirectory0 = 17,
+		Beyond-UI-SplashController-_DoStartSplash0 = 17,
+		Beyond-Login-LoginRootPanel-ChildPanel-OnLoginContext0 = 17,
+		Beyond-Login-LoginRootPanel-_InitChildPanel0 = 17,
+		Beyond-Login-LoginRootPanel-Init0 = 17,
+		Beyond-Login-LoginDecorateUI-OnLoginContext0 = 17,
+		Beyond-Login-LoginWorkFlow-Worker-SetCurNode0 = 17,
+		Beyond-LoginContext-StartCoroutine0 = 17,
+		Beyond-LoginController-InvokeWhenStart0 = 17,
+		Beyond-LoginManager-InvokeWhenWorkFlowFinished0 = 17,
+		Beyond-LoginController-MaskCtrl-DisableNetMask0 = 17,
+		Beyond-Login-LoginWorkFlow-_EventOnSelectServer0 = 17,
+		Beyond-LoginController-OnValueChanged0 = 17,
+		Beyond-Login-LoginMockUIDPanel-_SaveLastSelectedServer0 = 17,
+		Beyond-LoginContext-StopCoroutine0 = 17,
+		Beyond-LoginManager-SceneComponentOnly_Bind0 = 17,
+		Beyond-LoginManager-VocResSelDialog0 = 17,
+		Beyond-LoginManager-MockLoginWithCallback0 = 17,
+		Beyond-VietnamLoginAgeTipsPanelCtrl-_SetStateTips0 = 17,
+		Beyond-VietnamLoginAgeTipsPanelCtrl-_SetStateCircle0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-Log0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-LogError0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-LogWarning0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-SetSubChannel0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-CaptchaHandler-OnGT3Message0 = 17,
+		Beyond-SDK-Impl-U8ExternalTools-OnSDKExtraInfo0 = 17,
+		Beyond-SDK-Impl-U8Plugin-OnProductListChanged0 = 17,
+		Beyond-Login-LoginHotUpdater-WriteLocalResPrefToFile0 = 17,
+		Beyond-Login-PreloadNode-_OnGetServerListFail0 = 17,
+		Beyond-Login-U8LoginNode-_OnLoginFail0 = 17,
+		Beyond-Login-LoginAgeTipsProp-UpdateContent0 = 17,
+		Beyond-Login-LoginWorkFlow-AddEventReceiver0 = 17,
+		Beyond-Login-LoginSceneAnimCtrl-OnValueChanged0 = 17,
+		Beyond-Login-LoginSceneAnimCtrl-GetAnimationClips0 = 17,
+		Beyond-Login-LoginAgeTipsDetailPanel-_EventOnCloseClicked0 = 17,
+		Beyond-Login-LoginAgeTipsDetailPanel-Init0 = 17,
+		Beyond-Login-LoginAgeTipsDetailPanel-_SplitLongString0 = 17,
+		Beyond-Login-LoginAgeTipsDetailPanel-_RenderContent0 = 17,
+		Beyond-Login-LoginAgeTipsDetailPanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginAgeTipsPanel-_EventOnOpenAgeTipsClicked0 = 17,
+		Beyond-Login-LoginAgeTipsPanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginAlertDialog-_OnConfirmClicked0 = 17,
+		Beyond-Login-LoginDecorateUI-OnValueChanged0 = 17,
+		Beyond-Login-LoginEnterGamePanel-_OnEnterGameClicked0 = 17,
+		Beyond-Login-LoginEnterGamePanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginGovTipsPanel-_EventOnOpenAgeTipsClicked0 = 17,
+		Beyond-Login-LoginGovTipsPanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginJudgeDialog-_OnPositiveClicked0 = 17,
+		Beyond-Login-LoginJudgeDialog-_OnNegativeClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnAnnounceClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnSettingClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnResCheckClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_ShowPreDownloadConfirm0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnPreDownloadClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnLogoutClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnQuitGameClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnLoginClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnQRClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_HideLoginSuccessToastIfFallback0 = 17,
+		Beyond-Login-LoginMenuPanel-_UpdatePreDownloadButtonState0 = 17,
+		Beyond-Login-LoginMenuPanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnCustomServiceClicked0 = 17,
+		Beyond-Login-LoginMenuPanel-_OnAccountCenterClicked0 = 17,
+		Beyond-Login-LoginResourcePanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginServerSelectItemView-_OnClicked0 = 17,
+		Beyond-Login-LoginServerSelectPanel-_OnConfirmClicked0 = 17,
+		Beyond-Login-LoginServerSelectPanel-_OnCloseClicked0 = 17,
+		Beyond-Login-LoginServerSelectPanel-OnValueChanged0 = 17,
+		Beyond-Login-LoginVocResSelDialog-_OnConfirmClicked1 = 17,
+		Beyond-Login-LoginVocResSelItemView-_OnClicked0 = 17,
+		Beyond-GameApp-_CanAccess0 = 18,
+		Beyond-GameApp-_BuildEntry0 = 19,
+		Beyond-GameApp-_ScanParallel0 = 20,
+		Beyond-GameApp-_TreeNodeCompare0 = 21,
+		Beyond-Login-LoginMockUIDPanel-_IndexOfServer0 = 21,
+		Beyond-GameApp-_FormatSize0 = 22,
+		Beyond-Login-LoginMenuPanel-_FormatPreDownloadSize0 = 22,
+		Beyond-GameApp-_PrintTreeNode0 = 23,
+		Beyond-LoginManager-AlertDialog0 = 23,
+		Beyond-LoginController-MockLoginWithCallback0 = 23,
+		Beyond-Login-LoginSceneComponent-Bind0 = 23,
+		Beyond-LoginManager-MockManualSelectServer0 = 23,
+		Beyond-Login-LoginWorkFlow-Node-Init0 = 23,
+		Beyond-Login-LoginMockUIDPanel-_SmokeEnterGame0 = 23,
+		Beyond-GameApp-_WriteTreeReport0 = 24,
+		Beyond-GameApp-LaunchScanCoordinator0 = 25,
+		Beyond-GameApp-ScanLocalFiles0 = 26,
+		Beyond-Login-LoginServerSelectPanel-_UpdateServerCell0 = 26,
+		Beyond-Login-LoginVocResSelDialog-_UpdateCell0 = 26,
+		Beyond-SDK-SDKLaunchAuth-_IsExcludedSubChannel0 = 27,
+		Beyond-SDK-SDKLaunchAuth-_ShouldRun0 = 27,
+		Beyond-SDK-SDKLaunchAuth-_HasNetworkCfg0 = 27,
+		Beyond-SDK-SDKLaunchAuth-_IsLaunchAuthEnabled0 = 27,
+		Beyond-GameApp-get_IsScanRunning0 = 27,
+		Beyond-RenderPipelineDataLoader-IsPreLoadFinished0 = 27,
+		Beyond-Login-LoginHotUpdater-IsNeedSoftRestart0 = 27,
+		Beyond-UI-SplashController-get_isPlaying0 = 27,
+		Beyond-SDK-Impl-U8ExternalTools-IsInited0 = 27,
+		Beyond-SDK-Impl-U8ExternalTools-NeedRetryInit0 = 27,
+		Beyond-SDK-Impl-U8ExternalTools-NeedQuitGame0 = 27,
+		Beyond-SDK-Impl-U8ExternalTools-IsHGSDKInited0 = 27,
+		Beyond-SDK-Impl-U8Plugin-_UseMockVersion0 = 27,
+		Beyond-Login-LoginCheckForUpdateNode-_ShouldUseCloudGameLowScoreTip0 = 27,
+		Beyond-Login-LoginWorkFlow-HasEnteredPreloadThisSession0 = 27,
+		Beyond-Login-LoginGameUpdater-IsPreDownloadSupportedOnCurrentPlatform0 = 27,
+		Beyond-Login-LoginGameUpdater-IsPreDownloadEnabled0 = 27,
+		Beyond-Login-LoginHotUpdater-CheckInitialAssetChanged0 = 27,
+		Beyond-GameApp-FetchRemoteNetworkCfg0 = 28,
+		Beyond-GameApp-QuitGame0 = 29,
+		Beyond-SDK-SDKLaunchAuth-WaitIfNeeded0 = 30,
+		Beyond-SDK-Impl-U8ExternalTools-WaitForInited0 = 30,
+		Beyond-SDK-Impl-U8ExternalTools-WaitForInitHGSDK0 = 30,
+		Beyond-Login-LoginCheckForUpdateNode-AlertNoMatchDeviceBeforeLogin0 = 30,
+		Beyond-Login-LoginGSNode-_ConfirmServer0 = 30,
 		Beyond-UI-SplashController-_GetSplashConfigs0 = 31,
-		Beyond-UI-SplashController-_DoStartSplash0 = 32,
-		Beyond-UI-SplashController-_OnTweenFinished0 = 37,
-		Beyond-UI-SplashController-_OnSplashCompleteCoroutine0 = 38,
-		Beyond-SDK-Impl-U8ExternalTools-PublicSetGameVersion0 = 42,
-		Beyond-UI-SplashController-_StartLicenseCoroutine0 = 43,
-		Beyond-UI-SplashController-Hide0 = 50,
-		Beyond-UI-SplashController-_Stop0 = 51,
-		Beyond-GameApp-_Init0 = 58,
-		Beyond-GameApp-_InitNotificationCenter0 = 59,
-		Beyond-GameApp-_InitSecuritySDK0 = 60,
-		Beyond-GameApp-_FetchRemoteConfigUtilSuc0 = 64,
-		Beyond-GameApp-_InitGameStateMachine0 = 74,
-		Beyond-GameApp-_RegisterLuaAfterGCEvent0 = 75,
-		Beyond-GameApp-_OnApplicationFocusForLua0 = 76,
-		Beyond-GameApp-_OnApplicationPauseForLua0 = 77,
-		Beyond-GameApp-_OnSystemDisplaySizeChanged0 = 78,
-		Beyond-GameApp-RefreshScreenResolution0 = 79,
-		Beyond-GameApp-_OnSystemScreenSizeChanged0 = 80,
-		Beyond-GameApp-ScanLocalFiles0 = 81,
-		Beyond-GameApp-_CollectSystemInfo0 = 82,
-		Beyond-GameApp-LaunchScanCoordinator0 = 83,
-		Beyond-GameApp-_ScanParallel0 = 86,
-		Beyond-GameApp-_WorkerLoop0 = 87,
-		Beyond-GameApp-_ScanDirectory0 = 88,
-		Beyond-GameApp-_MakeLongPath0 = 89,
-		Beyond-GameApp-_BuildEntry0 = 90,
-		Beyond-GameApp-_CanAccess0 = 91,
-		Beyond-GameApp-_CalculateMd50 = 92,
-		Beyond-GameApp-_WriteTreeReport0 = 93,
-		Beyond-GameApp-_PrintTreeNode0 = 94,
-		Beyond-GameApp-_TreeNodeCompare0 = 95,
-		Beyond-GameApp-_FormatSize0 = 96,
-		Beyond-GameApp-_DelayInit0 = 97,
-		Beyond-GameApp-get_IsScanRunning0 = 101,
-		Beyond-GameApp-Update0 = 105,
-		Beyond-GameApp-LateUpdate0 = 106,
-		Beyond-GameApp-OnApplicationQuit0 = 107,
-		Beyond-GameApp-OnApplicationFocus0 = 108,
-		Beyond-GameApp-OnApplicationPause0 = 109,
-		Beyond-GameApp-_OnApplicationPauseForSecurity0 = 110,
-		Beyond-GameApp-OnDestroy0 = 111,
-		Beyond-GameApp-_UnInit0 = 112,
-		Beyond-GameApp-_UnInitGameStateMachine0 = 113,
-		Beyond-GameApp-QuitGame1 = 114,
-		Beyond-GameApp-QuitGame0 = 115,
-		Beyond-GameApp-PollScanResult0 = 116,
-		Beyond-GameInitState-get_stateId0 = 117,
-		Beyond-GameInitState-OnEnter0 = 118,
-		Beyond-GameStateBase-OnEnter0 = 119,
-		Beyond-GameInitState-_DoInit0 = 120,
-		Beyond-GameInitState-_InitInitialResourceManager0 = 124,
-		Beyond-GameInitState-_CheckIfLocalInitialAssetsValid0 = 125,
-		Beyond-GameInitState-_InitAPPDefaultCulture0 = 126,
-		Beyond-RenderPipelineDataLoader-PreloadFullRpResources0 = 127,
-		Beyond-VietnamLoginAgePanel-Init0 = 128,
-		Beyond-VietnamLoginAgePanel-_Init0 = 129,
-		Beyond-VietnamLoginAgePanel-_UnInit0 = 130,
-		Beyond-GameInitState-_InitGameSetting0 = 131,
-		Beyond-RenderPipelineDataLoader-IsPreLoadFinished0 = 132,
-		Beyond-GameInitState-OnLeave0 = 136,
-		Beyond-GameStateBase-OnLeave0 = 137,
-		Beyond-GameLoginState-get_stateId0 = 138,
-		Beyond-GameLoginState-OnEnter0 = 139,
-		Beyond-UI-SplashController-CanFinished0 = 140,
-		Beyond-RenderPipelineDataLoader-LoadFullRpResources0 = 141,
-		Beyond-GameLoginState-_TryStartLoginWorkflow0 = 142,
-		Beyond-LoginManager-IsWorkflowInProgress0 = 143,
-		Beyond-LoginContext-IsDisposed0 = 144,
-		Beyond-LoginManager-InitCoroutine0 = 145,
-		Beyond-LoginContext-Dispose0 = 149,
-		Beyond-LoginContext-_DisposeImpl0 = 150,
-		Beyond-Login-LoginWorkFlow-Dispose0 = 152,
-		Beyond-Login-LoginWorkFlow-Node-Dispose0 = 155,
-		Beyond-Login-LoginWorkFlow-Node-OnDispose0 = 156,
-		Beyond-Login-LoginWorkFlow-_UpdateCursor0 = 157,
-		Beyond-Login-LoginWorkFlow-_EnableCursor0 = 158,
-		Beyond-Login-LoginWorkFlow-_EnbaleToggleGroup0 = 159,
-		Beyond-Login-LoginWorkFlow-Worker-Dispose0 = 160,
-		Beyond-LoginManager-AssetLoader-Dispose0 = 164,
-		Beyond-LoginContext-_DisposeCoroutine0 = 165,
-		Beyond-LoginController-BeforeDestroy0 = 169,
-		Beyond-LoginController-get_maskCtrl0 = 173,
-		Beyond-LoginController-MaskCtrl-IsCrossSceneMaskTweening0 = 174,
-		Beyond-LoginController-MaskCtrl-_GetMaskByType0 = 175,
-		Beyond-LoginController-MaskCtrl-WaitForCrossSceneMasks0 = 176,
-		Beyond-LoginController-MaskCtrl-Dispose0 = 183,
-		Beyond-LoginContext-IsWorkflowDisposed0 = 190,
-		Beyond-LoginManager-_Init0 = 192,
-		Beyond-LoginManager-_LoginWorkFlowCoroutine0 = 195,
-		Beyond-LoginController-InitUI0 = 199,
-		Beyond-LoginController-MaskCtrl-EnableMask0 = 200,
-		Beyond-LoginController-_InitImpl0 = 201,
-		Beyond-LoginController-_InitCoroutine0 = 202,
-		Beyond-Login-LoginRootPanel-Init0 = 206,
-		Beyond-Login-LoginRootPanel-_InitController0 = 208,
-		Beyond-Login-LoginRootPanel-_InitChildPanel0 = 209,
-		Beyond-Login-LoginRootPanel-ChildPanel-OnLoginContext0 = 210,
-		Beyond-Login-LoginRootPanel-ChildPanel-OnInit0 = 212,
-		Beyond-Login-LoginDecorateUI-OnLoginContext0 = 214,
-		Beyond-Login-LoginDecorateUI-_ToggleGlow0 = 215,
-		Beyond-Login-LoginDecorateUI-_EnsureGlowPlayer0 = 216,
-		Beyond-LoginController-_InitVersionBtn0 = 217,
-		Beyond-Login-LoginWorkFlow-DoWorkFlow0 = 221,
-		Beyond-Login-LoginWorkFlow-FWork-Start0 = 226,
-		Beyond-Login-LoginWorkFlow-FWork-get_curNode0 = 230,
-		Beyond-Login-LoginWorkFlow-_CheckIfGameStateNotMatch0 = 232,
-		Beyond-Login-LoginWorkFlow-IsBeforeWork0 = 233,
-		Beyond-Login-LoginWorkFlow-IsOnOrAfterWork0 = 234,
-		Beyond-Login-LoginWorkFlow-_AdjustCurrentGameState0 = 235,
-		Beyond-Login-LoginWorkFlow-Worker-SetCurNode0 = 242,
-		Beyond-Login-LoginWorkFlow-Worker-Work0 = 245,
-		Beyond-Login-LoginWorkFlow-Worker-_InternalTick0 = 251,
-		Beyond-Login-LoginWorkFlow-Node-Cancel0 = 253,
-		Beyond-Login-LoginHotUpdater-IsNeedSoftRestart0 = 257,
-		Beyond-Login-LoginWorkFlow-Worker-TickInEmptyFrame0 = 258,
-		Beyond-Login-LoginWorkFlow-FWork-ConsumeFallback0 = 259,
-		Beyond-Login-LoginWorkFlow-FWork-MoveNextIndex0 = 261,
-		Beyond-Login-LoginWorkFlow-FWork-WorkEnd0 = 262,
-		Beyond-LoginManager-_PrepareBeforeLoginProcess0 = 269,
-		Beyond-LoginManager-AlertDialog0 = 271,
-		Beyond-Login-LoginAlertDialog-SetParams0 = 275,
-		Beyond-Login-LoginVocResSelDialog-SetParams0 = 277,
-		Beyond-Login-LoginJudgeDialog-SetParams0 = 279,
-		Beyond-LoginContext-StartCoroutine0 = 280,
-		Beyond-LoginContext-Init0 = 282,
-		Beyond-LoginController-InvokeWhenStart0 = 289,
-		Beyond-GameLoginState-OnLeave0 = 293,
-		Beyond-GameMainState-get_stateId0 = 294,
-		Beyond-GameMainState-OnEnter0 = 295,
-		Beyond-LoginManager-Clear0 = 296,
-		Beyond-LoginManager-_ClearWorkflowAndContext0 = 297,
-		Beyond-LoginContext-ShutDown0 = 298,
-		Beyond-LoginManager-_ReleaseLoginScene0 = 299,
-		Beyond-GameMainState-OnLeave0 = 300,
-		Beyond-GameMainState-ReleaseMainGame0 = 301,
-		Beyond-LoginManager-OnReleaseMainGame0 = 302,
-		Beyond-LoginManager-IsReLoginInProgress0 = 303,
-		Beyond-Login-LoginWorkFlow-IsAfterWork0 = 304,
-		Beyond-Login-LoginWorkFlow-PeekFallbackStatus0 = 305,
-		Beyond-GameMainState-_ClearUtils0 = 306,
-		Beyond-GamePreloadState-get_stateId0 = 307,
-		Beyond-GamePreloadState-OnEnter0 = 308,
-		Beyond-GamePreloadState-_DoPreload0 = 309,
-		Beyond-GamePreloadState-_InitGameSettingStateInPreload0 = 313,
-		Beyond-GamePreloadState-OnLeave0 = 317,
-		Beyond-GameQuitState-get_stateId0 = 318,
-		Beyond-GameQuitState-OnEnter0 = 319,
-		Beyond-GameQuitState-DoQuit0 = 320,
-		Beyond-VietnamLoginAgePanel-UnInit0 = 321,
-		Beyond-GameQuitState-OnLeave0 = 322,
-		Beyond-GameSoftRestartState-get_stateId0 = 323,
-		Beyond-GameSoftRestartState-OnEnter0 = 324,
-		Beyond-GameSoftRestartState-_SoftRestart0 = 325,
-		Beyond-LoginManager-ClearSync0 = 329,
-		Beyond-Login-LoginWorkFlow-ClearEnteredPreloadThisSession0 = 330,
-		Beyond-GameStartState-get_stateId0 = 334,
-		Beyond-GameStartState-OnEnter0 = 335,
-		Beyond-GameStartState-_OnEnterMainGame0 = 336,
-		Beyond-LoginManager-InvokeWhenWorkFlowFinished0 = 338,
-		Beyond-GameStartState-OnLeave0 = 339,
-		Beyond-GameStateBase-OnTick0 = 340,
-		Beyond-GameStateMachine-get_curState0 = 341,
-		Beyond-GameStateMachine-_RegisterStates0 = 342,
-		Beyond-GameStateMachine-CheckCanReturnToLoginState0 = 343,
-		Beyond-GameStateMachine-ReturnToLoginState0 = 344,
-		Beyond-GlobalInitializer-InitGlobalConfig0 = 351,
-		Beyond-LoginController-get_rootPanel0 = 352,
-		Beyond-LoginController-Awake0 = 353,
-		Beyond-LoginController-Start0 = 354,
-		Beyond-LoginController-GetEnterGamePanelPredelay0 = 355,
-		Beyond-LoginController-OnValueChanged0 = 356,
-		Beyond-Login-LoginWorkFlow-SendEvent0 = 357,
-		Beyond-Login-LoginWorkFlow-_HandleGlobalEvent0 = 358,
-		Beyond-Login-LoginWorkFlow-_EventOnOpenAgeTips0 = 359,
-		Beyond-Login-LoginAgeTipsModel-IsContentEmpty0 = 361,
-		Beyond-Login-LoginWorkFlow-_FetchAgeTipsCoroutine0 = 362,
-		Beyond-LoginContext-ViewOnlyController0 = 366,
-		Beyond-LoginController-MaskCtrl-EnableNetMask0 = 367,
-		Beyond-LoginController-MaskCtrl-DisableNetMask0 = 368,
-		Beyond-Login-LoginRootPanel-ToggleLoginBindingGroup0 = 372,
-		Beyond-Login-LoginWorkFlow-_EventOnCloseAgeTips0 = 373,
-		Beyond-Login-LoginWorkFlow-_EventOnOpenServerSelect0 = 374,
-		Beyond-Login-LoginWorkFlow-_EventOnSelectServer0 = 377,
-		Beyond-Login-LoginServerSelectModel-UpdateSelectedServer0 = 378,
-		Beyond-Login-LoginServerSelectModel-get_serverList0 = 379,
-		Beyond-Login-LoginWorkFlow-_EventOnConfirmServer0 = 380,
-		Beyond-Login-LoginServerSelectModel-GetSelectedServer0 = 381,
-		Beyond-Login-LoginWorkFlow-Node-OnEvent0 = 382,
-		Beyond-LoginController-MockLoginWithCallback0 = 383,
-		Beyond-LoginController-_MockLoginCoroutine0 = 386,
-		Beyond-Login-LoginMockUIDPanel-LoginWithCallback0 = 392,
-		Beyond-Login-LoginMockUIDPanel-_UpdateStatus0 = 393,
-		Beyond-Login-LoginMockUIDPanel-_OnBtnEnterGame0 = 395,
-		Beyond-Login-LoginMockUIDPanel-_SaveConfig0 = 396,
-		Beyond-Login-LoginMockUIDPanel-_OnBtnDelLocalFile0 = 398,
-		Beyond-Login-LoginMockUIDPanel-_TryClosePanel0 = 400,
-		Beyond-Login-LoginMockUIDPanel-FOptions-IsUIDFixed0 = 401,
-		Beyond-Login-LoginMockUIDPanel-_InitLoginInfo0 = 402,
-		Beyond-Login-LoginMockUIDPanel-_MovePreferredServerToFront0 = 403,
-		Beyond-Login-LoginMockUIDPanel-_IndexOfServer0 = 404,
-		Beyond-Login-LoginMockUIDPanel-_OnSelectServer0 = 406,
-		Beyond-Login-LoginMockUIDPanel-_SaveLastSelectedServer0 = 407,
-		Beyond-Login-LoginMockUIDPanel-HideAndDestroy0 = 408,
-		Beyond-LoginController-Dialog-_CloseCoroutine0 = 419,
-		Beyond-LoginController-Dialog-TryCloseWithCallback0 = 426,
-		Beyond-LoginController-Dialog-Show0 = 427,
-		Beyond-LoginController-Dialog-OnInit0 = 428,
-		Beyond-LoginController-MaskCfg-CreateTweenAndHide0 = 429,
-		Beyond-LoginController-MaskCtrl-IsMaskTweening0 = 430,
-		Beyond-LoginContext-StopCoroutine0 = 431,
-		Beyond-LoginContext-SendEvent0 = 432,
-		Beyond-LoginManager-get_firstLogin0 = 433,
-		Beyond-LoginManager-SceneComponentOnly_Bind0 = 435,
-		Beyond-LoginManager-_BindPendingComponents0 = 436,
-		Beyond-Login-LoginSceneComponent-Bind0 = 437,
-		Beyond-Login-LoginSceneComponent-OnBindToManager0 = 440,
-		Beyond-LoginManager-ToggleLoginBindingGroup0 = 441,
-		Beyond-LoginManager-VocResSelDialog0 = 442,
-		Beyond-LoginManager-VocResSelDialogWithConfirm0 = 443,
-		Beyond-LoginManager-AlertDialogWithResult0 = 452,
-		Beyond-LoginManager-AlertDialogWithConfirm0 = 461,
-		Beyond-LoginManager-JudgeDialog0 = 470,
-		Beyond-LoginManager-_StartShowJudgeDialogCoroutine0 = 471,
-		Beyond-LoginManager-JudgeDialog1 = 472,
-		Beyond-LoginManager-MockLoginWithCallback0 = 473,
-		Beyond-LoginManager-MockManualSelectServer0 = 474,
-		Beyond-LoginManager-IsLoginSceneLoading0 = 477,
-		Beyond-LoginManager-FetchRemoteConfigUtilSuc0 = 478,
-		Beyond-LoginManager-_ExtractErrorInfo0 = 482,
-		Beyond-LoginManager-DevOnlyCheckEnableLocalResMode0 = 486,
-		Beyond-LoginManager-DevOnlyUseLocalResVersion0 = 487,
-		Beyond-LoginManager-AssetLoader-_CheckDisposedBeforeLoad0 = 488,
-		Beyond-LoginManager-FlowWithMaskMgr-StartFlow0 = 489,
-		Beyond-LoginManager-FlowWithMaskMgr-_FlowCoroutine0 = 490,
-		Beyond-LoginManager-FlowWithMaskMgr-_OnFlowFinished0 = 494,
-		Beyond-LoginManager-FFlowCondition-IsTargetMatch0 = 495,
-		Beyond-VietnamLoginAgePanel-OnApplicationQuit0 = 501,
-		Beyond-VietnamLoginAgeTipsPanelCtrl-Awake0 = 502,
-		Beyond-VietnamLoginAgeTipsPanelCtrl-_SetStateTips0 = 503,
-		Beyond-VietnamLoginAgeTipsPanelCtrl-_SetStateCircle0 = 504,
-		Beyond-TailGameLoop-Update0 = 505,
-		Beyond-TailGameLoop-LateUpdate0 = 506,
-		Beyond-UI-SplashController-get_isPlaying0 = 507,
-		Beyond-UI-SplashController-Awake0 = 508,
-		Beyond-UI-SplashController-OnDestroy0 = 509,
-		Beyond-SDK-PlatformFont-GetFont0 = 510,
-		Beyond-SDK-SDKNetUtils-HTTPPost0 = 511,
-		Beyond-SDK-SDKNetUtils-HTTPGet0 = 512,
-		Beyond-SDK-SDKNetUtils-BeyondHttp-DoHTTP0 = 513,
-		Beyond-SDK-Impl-U8ExternalTools-IsInited0 = 520,
-		Beyond-SDK-Impl-U8ExternalTools-NeedRetryInit0 = 521,
-		Beyond-SDK-Impl-U8ExternalTools-NeedQuitGame0 = 522,
-		Beyond-SDK-Impl-U8ExternalTools-RetryInitSDKSystem0 = 523,
-		Beyond-SDK-Impl-U8ExternalTools-InitSDKSystem0 = 524,
-		Beyond-SDK-Impl-U8ExternalTools-_OnRequestExitGame0 = 525,
-		Beyond-SDK-Impl-U8ExternalTools-WaitForInited0 = 531,
-		Beyond-SDK-Impl-U8ExternalTools-InitHGSDK0 = 538,
-		Beyond-SDK-Impl-U8ExternalTools-IsHGSDKInited0 = 539,
-		Beyond-SDK-Impl-U8ExternalTools-WaitForInitHGSDK0 = 540,
-		Beyond-SDK-Impl-U8ExternalTools-Log0 = 547,
-		Beyond-SDK-Impl-U8ExternalTools-LogError0 = 548,
-		Beyond-SDK-Impl-U8ExternalTools-LogWarning0 = 549,
-		Beyond-SDK-Impl-U8ExternalTools-GetSignKey0 = 550,
-		Beyond-SDK-Impl-U8ExternalTools-GetDeviceIDs0 = 551,
-		Beyond-SDK-Impl-U8ExternalTools-SetSubChannel0 = 552,
-		Beyond-SDK-Impl-U8ExternalTools-GetPlatformKey0 = 553,
-		Beyond-SDK-Impl-U8ExternalTools-OnSDKExtraInfo0 = 554,
-		Beyond-SDK-Impl-U8ExternalTools-_ProcessExtraInfo0 = 555,
-		Beyond-SDK-Impl-U8ExternalTools-CaptchaHandler-OnGT3Message0 = 556,
-		Beyond-SDK-Impl-U8ExternalTools-_ProcessGameProtocolUpdateCheck0 = 557,
-		Beyond-SDK-Impl-U8ExternalTools-_TryGetGameProtocolUpdateCheckErrorCode0 = 558,
-		Beyond-SDK-Impl-U8ExternalTools-U8RootUrl0 = 559,
-		Beyond-SDK-Impl-U8ExternalTools-POSTImplementation0 = 560,
-		Beyond-SDK-Impl-U8ExternalTools-_ConvertToPOSTResult0 = 563,
-		Beyond-SDK-Impl-U8ExternalTools-_OnFakeAccountCenter0 = 564,
-		Beyond-SDK-Impl-U8ExternalTools-CreateCaptchaHandler0 = 565,
-		Beyond-SDK-Impl-U8ExternalTools-GetErrorMessage0 = 566,
-		Beyond-SDK-Impl-U8ExternalTools-_ErrorMsg_GET_TOKEN0 = 567,
-		Beyond-SDK-Impl-U8ExternalTools-_ErrorMsg_CREATE_ORDER0 = 568,
-		Beyond-SDK-Impl-U8ExternalTools-CaptchaHandler-FetchCaptchaCoroutine0 = 569,
-		Beyond-SDK-Impl-U8Plugin-GetPayAddition0 = 576,
-		Beyond-SDK-Impl-U8Plugin-GetSDKToken0 = 577,
-		Beyond-SDK-Impl-U8Plugin-GetSDKUid0 = 578,
-		Beyond-SDK-Impl-U8Plugin-Init0 = 579,
-		Beyond-SDK-Impl-U8Plugin-Login0 = 580,
-		Beyond-SDK-Impl-U8Plugin-_UseMockVersion0 = 581,
-		Beyond-SDK-Impl-U8Plugin-_MockLogin0 = 582,
-		Beyond-SDK-Impl-U8Plugin-Logout0 = 585,
-		Beyond-SDK-Impl-U8Plugin-OnProductListChanged0 = 586,
-		Beyond-SDK-Impl-U8Plugin-Pay0 = 587,
-		Beyond-SDK-Impl-U8Plugin-TryLoadSDKMeta0 = 591,
-		Beyond-Login-LoginCheckForUpdateNode-get_type0 = 592,
-		Beyond-Login-LoginCheckForUpdateNode-Work0 = 593,
-		Beyond-Login-LoginGameUpdater-Clear0 = 596,
-		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutine0 = 597,
-		Beyond-Login-LoginCheckForUpdateNode-_AlertAndQuitForExtraConfigFatalError0 = 601,
-		Beyond-Login-LoginCheckForUpdateNode-AlertNoMatchDeviceBeforeLogin0 = 608,
-		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutinePC0 = 615,
-		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdatePC0 = 619,
-		Beyond-Login-LoginCheckForUpdateNode-_GetOnlineAppVersion0 = 623,
-		Beyond-Login-LoginCheckForUpdateNode-_GetRequestPram0 = 627,
-		Beyond-Login-LoginGameUpdater-ShowWaitProgress0 = 631,
-		Beyond-Login-LoginGameUpdater-GetWaitTime0 = 632,
-		Beyond-Login-LoginGameUpdater-ClearWaitProgress0 = 639,
-		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutineMobile0 = 643,
-		Beyond-Login-LoginGameUpdater-CheckLastGameInfo0 = 647,
-		Beyond-Login-LoginGameUpdater-_GetLastGameInfo0 = 651,
-		Beyond-Login-LoginGameUpdater-_CreateDirectoryIfNotExists0 = 655,
-		Beyond-Login-LoginGameUpdater-Context-CompleteWithCode0 = 656,
-		Beyond-Login-LoginGameUpdater-Context-UncompleteWithCode0 = 659,
-		Beyond-Login-LoginGameUpdater-GetNoAlertCode0 = 660,
-		Beyond-Login-LoginWorkFlow-Fallback0 = 670,
-		Beyond-Login-LoginWorkFlow-FWork-MarkFallback0 = 671,
-		Beyond-Login-LoginCreateRoleNode-get_type0 = 675,
-		Beyond-Login-LoginCreateRoleNode-OnDispose0 = 676,
-		Beyond-Login-LoginCreateRoleNode-WorkProcess-Dispose0 = 677,
-		Beyond-Login-LoginCreateRoleNode-CanCancel0 = 678,
-		Beyond-Login-LoginCreateRoleNode-Work0 = 679,
-		Beyond-Login-LoginCreateRoleNode-WorkProcess-get_keepWaiting0 = 680,
-		Beyond-Login-LoginDownloadTask-GetDownloadProgress0 = 681,
-		Beyond-Login-LoginDownloadTask-GetDecompressProgress0 = 682,
-		Beyond-Login-LoginDownloadTask-GetWorkState0 = 683,
-		Beyond-Login-LoginDownloadTask-Tick0 = 684,
-		Beyond-Login-LoginDownloadTask-Dispose0 = 685,
-		Beyond-Login-LoginDownloadTask-_StartDownload0 = 686,
-		Beyond-Login-LoginDownloadTask-_GetFileList0 = 687,
-		Beyond-Login-LoginDownloadTask-_StartDownloadImpl0 = 688,
-		Beyond-Login-LoginDownloadTask-_GetAllFileList0 = 689,
-		Beyond-Login-LoginWorkFlow-HasEnteredPreloadThisSession0 = 690,
-		Beyond-Login-NetUsagePolicy-AllowMobileDataInLastCheck0 = 691,
-		Beyond-Login-LoginDownloadTask-_OnDownloadFinish0 = 692,
-		Beyond-Login-LoginDownloadTask-_OnDownloadError0 = 693,
-		Beyond-Login-LoginDownloadTask-_OnDownloadPaused0 = 695,
-		Beyond-Login-NetUsagePolicy-CheckIfAllowDownload0 = 701,
-		Beyond-Login-NetUsagePolicy-_GetPrettySizeStringUpToMB0 = 705,
-		Beyond-Login-LoginGameSettingInitializer-Awake0 = 706,
-		Beyond-Login-LoginGameSettingInitializer-_TryInitializeComponents0 = 707,
-		Beyond-Login-LoginGameSettingInitializer-OnEnable0 = 708,
-		Beyond-Login-LoginGameSettingInitializer-_InitGameSettingStateInLogin0 = 709,
-		Beyond-Login-LoginGameSettingInitializer-_InitGameSettingNotchPadding0 = 710,
-		Beyond-Login-LoginGameUpdateNode-get_type0 = 711,
-		Beyond-Login-LoginGameUpdateNode-Work0 = 712,
-		Beyond-Login-LoginGameUpdateNode-_GameUpdateCoroutine0 = 714,
-		Beyond-Login-LoginGameUpdateNode-_GameUpdateCoroutineMobileImpl0 = 721,
-		Beyond-Login-LoginGameUpdater-DoUpdate0 = 725,
-		Beyond-Login-LoginGameUpdater-_UpdateGame0 = 729,
-		Beyond-Login-LoginGameUpdater-_YieldCheckNetUsagePolicy0 = 733,
-		Beyond-Login-LoginGameUpdater-_YieldErrorAlert0 = 745,
-		Beyond-Login-LoginGameUpdater-_DoTaskUpdating0 = 754,
-		Beyond-Login-LoginGameUpdater-_OnDownloadStart0 = 758,
-		Beyond-Login-LoginGameUpdater-_OnDownloadProgress0 = 759,
-		Beyond-Login-LoginGameUpdater-_WaitForTaskCancel0 = 766,
-		Beyond-Login-LoginGSNode-get_type0 = 779,
-		Beyond-Login-LoginGSNode-Work0 = 780,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-EnterGame0 = 781,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_EnterGameCoroutine0 = 782,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_OnAuthError0 = 787,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_ReLoginWhenErrorEncountered0 = 791,
-		Beyond-Login-LoginGSNode-_FallbackToInitWithMask0 = 792,
-		Beyond-Login-LoginGSNode-_FallbackToInitNodeImpl0 = 794,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-TryInterrupt0 = 795,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-IsInterruptable0 = 796,
-		Beyond-Login-LoginGSNode-_LogoutToInitNode0 = 797,
-		Beyond-Login-LoginGSNode-_ConfirmServer0 = 801,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_NetConnectAndGSLogin0 = 808,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_SaveCurrentUserToServerConfig0 = 812,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_MockManualSelectServer0 = 816,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_GlobalLoginSucBusiness0 = 831,
-		Beyond-Login-LoginGSNode-OnEvent0 = 836,
-		Beyond-Login-LoginGSNode-_OnEventLogout0 = 837,
-		Beyond-Login-LoginGSNode-_OnEventResourceRepair0 = 839,
-		Beyond-Login-LoginGSNode-_FallbackToResRepairImpl0 = 841,
-		Beyond-Login-LoginViewModel-RequestResourceRepair0 = 842,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-get_keepWaiting0 = 845,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-MarkAborting0 = 846,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_ExtractErrorInfo0 = 847,
-		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_YieldAlertError0 = 848,
-		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetCurrent0 = 855,
-		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetTotal0 = 856,
-		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetInfo0 = 857,
-		Beyond-Login-LoginHotUpdater-MarkInitialAssetChanged0 = 858,
-		Beyond-Login-LoginHotUpdater-CheckInitialAssetChanged0 = 859,
-		Beyond-Login-LoginHotUpdater-MarkNeedClearFolder0 = 860,
-		Beyond-Login-LoginHotUpdater-NeedClearFolder0 = 861,
-		Beyond-Login-LoginHotUpdater-MarkClearSuccessed0 = 862,
-		Beyond-Login-LoginHotUpdater-MarkSoftRestart0 = 863,
-		Beyond-Login-LoginHotUpdater-ClearSoftRestartFlag0 = 864,
-		Beyond-Login-LoginHotUpdater-get_keepWaiting0 = 865,
-		Beyond-Login-LoginHotUpdater-Dispose0 = 866,
-		Beyond-Login-LoginLocalResTask-Dispose0 = 867,
-		Beyond-Login-LoginHotUpdater-StartHotUpdate0 = 868,
-		Beyond-Login-LoginHotUpdater-_Work0 = 869,
-		Beyond-Login-LoginHotUpdater-_UpdateResVersion0 = 873,
-		Beyond-Login-LoginHotUpdater-_UpdateResVersionDev0 = 877,
-		Beyond-Login-LoginHotUpdater-_UpdateResVersionProd0 = 884,
-		Beyond-Login-LoginHotUpdater-_SetResVersionForLog0 = 894,
-		Beyond-Login-LoginHotUpdater-_CreateMainCoroutine0 = 895,
-		Beyond-Login-LoginHotUpdater-_CurrentWorkMode0 = 899,
-		Beyond-Login-LoginHotUpdater-_MainCoroutineModeDownload0 = 900,
-		Beyond-Login-LoginHotUpdater-_GetOnlineResVersion0 = 906,
-		Beyond-Login-LoginHotUpdater-WorkContext-GetHotUpdateInfo0 = 907,
-		Beyond-Login-LoginHotUpdater-_CheckAndDownloadResource0 = 908,
-		Beyond-Login-LoginHotUpdater-_GenResIndex0 = 912,
-		Beyond-Login-LoginHotUpdater-_LoadOrDownloadResIndex0 = 916,
-		Beyond-Login-LoginHotUpdater-_ResourceIndexUrl0 = 923,
-		Beyond-Login-LoginHotUpdater-ResourceRootUrl0 = 924,
-		Beyond-Login-LoginHotUpdater-_GenRiff0 = 931,
-		Beyond-Login-LoginHotUpdater-_ResourcePatchUrl0 = 935,
-		Beyond-Login-LoginHotUpdater-_ResourceFileUrl0 = 936,
-		Beyond-Login-LoginHotUpdater-_LoadStreamingIndex0 = 937,
-		Beyond-Login-LoginHotUpdater-_DownloadPatchInfo0 = 949,
-		Beyond-Login-LoginHotUpdater-_ResourcePatchRootUrl0 = 953,
-		Beyond-Login-LoginHotUpdater-_CreateUpdatedLocalResPref0 = 957,
-		Beyond-Login-LoginHotUpdater-_StartDownloadingShaderWarmupIfNeeded0 = 959,
-		Beyond-Login-LoginHotUpdater-_EventLogDownloadProgress0 = 960,
-		Beyond-Login-LoginHotUpdater-_GenLocalRef0 = 961,
-		Beyond-Login-LoginHotUpdater-WriteLocalResPrefToFile0 = 965,
-		Beyond-Login-LoginHotUpdater-_StopDownloadingShaderWarmupIfNeeded0 = 972,
-		Beyond-Login-LoginHotUpdater-HotUpdateInfo-CheckIfNeedReload0 = 973,
-		Beyond-Login-LoginHotUpdater-HotUpdateInfo-HasChangedByType0 = 974,
-		Beyond-Login-LoginHotUpdater-_CheckLocalResConsistency0 = 975,
-		Beyond-Login-LoginHotUpdater-WorkContext-MarkIllegalItemsInLocalRes0 = 979,
-		Beyond-Login-LoginHotUpdater-_ClearDownloadFolder0 = 988,
-		Beyond-Login-LoginHotUpdater-_ReloadResourceIndexes0 = 995,
-		Beyond-Login-LoginHotUpdater-WorkContext-HasChangedByType0 = 999,
-		Beyond-Login-LoginHotUpdater-_MainCoroutineModeLocal0 = 1006,
-		Beyond-Login-LoginLocalResTask-Work0 = 1010,
-		Beyond-Login-LoginHotUpdater-_MainCoroutineModeSkip0 = 1023,
-		Beyond-Login-LoginHotUpdater-_VitalError0 = 1033,
-		Beyond-Login-LoginViewModel-RequestSkipU8Login0 = 1037,
-		Beyond-Login-LoginHotUpdater-HotUpdateInfo-HasAssetsChanged0 = 1046,
-		Beyond-Login-LoginProgress-GetCurrent0 = 1047,
-		Beyond-Login-LoginProgress-GetTotal0 = 1048,
-		Beyond-Login-LoginProgress-GetInfo0 = 1049,
-		Beyond-Login-LoginProgress-FDownloadSize-SetSize0 = 1050,
-		Beyond-Login-LoginProgress-FDownloadSize-_PickUnit0 = 1051,
-		Beyond-Login-LoginProgress-FDownloadSize-_DisplayWithUnit0 = 1052,
-		Beyond-Login-LoginProgress-FDownloadSize-_FormatDisplayInfo0 = 1053,
-		Beyond-Login-LoginProgress-FDownloadSize-_FormatSpeedInfo0 = 1054,
-		Beyond-Login-LoginProgress-FDownloadSize-_FormatProgressInfo0 = 1055,
-		Beyond-Login-LoginProgress-FDownloadSize-SetProgress0 = 1056,
-		Beyond-Login-LoginProgress-FDownloadSize-SetIdle0 = 1057,
-		Beyond-Login-LoginInitNode-get_type0 = 1058,
-		Beyond-Login-LoginInitNode-Work0 = 1059,
-		Beyond-Login-LoginInitNode-_InitCoroutine0 = 1060,
-		Beyond-Login-LoginInitNode-_InitRemoteConfigs0 = 1064,
-		Beyond-Login-LoginInitNode-_YieldAlertError0 = 1068,
-		Beyond-Login-PreloadNode-get_type0 = 1081,
-		Beyond-Login-PreloadNode-Work0 = 1082,
-		Beyond-Login-LoginWorkFlow-MarkEnteredPreloadThisSession0 = 1083,
-		Beyond-Login-PreloadNode-_ShowPreloadResourcePanel0 = 1084,
-		Beyond-Login-PreloadNode-_LoginPreLoad0 = 1085,
-		Beyond-Login-PreloadNode-_QuitGame0 = 1089,
-		Beyond-Login-PreloadNode-_WarmUp0 = 1090,
-		Beyond-Login-PreloadNode-_GetServerList0 = 1097,
-		Beyond-Login-PreloadNode-_GetServerListInfoMock0 = 1101,
-		Beyond-Login-PreloadNode-_OnGetServerListSuc0 = 1105,
-		Beyond-Login-PreloadNode-_GetServerListInfo0 = 1112,
-		Beyond-Login-PreloadNode-_OnGetServerListFail0 = 1116,
-		Beyond-Login-PreloadNode-_EnterPreLoad0 = 1123,
-		Beyond-Login-LoginSDKInitNode-get_type0 = 1130,
-		Beyond-Login-LoginSDKInitNode-Work0 = 1131,
-		Beyond-Login-LoginSDKInitNode-_SDKInitCoroutine0 = 1132,
-		Beyond-Login-LoginSDKInitNode-_WaitForSDKInited0 = 1136,
-		Beyond-Login-LoginSDKInitNode-_InitSubSDKs0 = 1143,
-		Beyond-Login-U8LoginNode-get_type0 = 1153,
-		Beyond-Login-U8LoginNode-Work0 = 1154,
-		Beyond-Login-U8LoginNode-_LoginCoroutine0 = 1155,
-		Beyond-Login-U8LoginNode-_ClearLoginCaches0 = 1159,
-		Beyond-Login-U8LoginNode-_ClearGameProtocolUpdateCheckEvents0 = 1160,
-		Beyond-Login-U8LoginNode-_OnGameProtocolUpdateCheckSucceeded0 = 1161,
-		Beyond-Login-U8LoginNode-_OnLoginSuc0 = 1162,
-		Beyond-Login-U8LoginNode-_OnSDKViewDisabled0 = 1163,
-		Beyond-Login-U8LoginNode-_EnableBlurMask0 = 1164,
-		Beyond-Login-LoginRootPanel-InitBulletinAndRedAfterLoginSuc0 = 1165,
-		Beyond-Login-LoginMenuPanel-InitBulletinAndRedAfterLoginSuc0 = 1166,
-		Beyond-Login-LoginMenuPanel-_UpdateAnnounceRedDot0 = 1167,
-		Beyond-Login-LoginMenuPanel-_OnReceiveRedDotAndPopup0 = 1168,
-		Beyond-Login-LoginMenuPanel-_OnBulletinOpen0 = 1169,
-		Beyond-Login-LoginMenuPanel-_OnBulletinClose0 = 1170,
-		Beyond-Login-U8LoginNode-_OnGameProtocolUpdateCheckFailed0 = 1171,
-		Beyond-Login-U8LoginNode-_OnLoginFail0 = 1172,
-		Beyond-Login-U8LoginNode-_OnLoginCanceled0 = 1173,
-		Beyond-Login-U8LoginNode-_StartSDKLogin0 = 1174,
-		Beyond-Login-U8LoginNode-_SetCursorOnLoginStart0 = 1175,
-		Beyond-Login-U8LoginNode-_SetCursorOnLoginFinish0 = 1177,
-		Beyond-Login-U8LoginNode-_StartGameProtocolUpdateCheck0 = 1178,
-		Beyond-Login-U8LoginNode-_SkipSDKLogin0 = 1180,
-		Beyond-Login-U8LoginNode-_FinishLogin0 = 1181,
-		Beyond-Login-U8LoginNode-OnEvent0 = 1191,
-		Beyond-Login-LoginViewModel-IsAgeTipsVisible0 = 1192,
-		Beyond-Login-LoginViewModel-FAgeTipsPolicy-get_display0 = 1193,
-		Beyond-Login-LoginViewModel-IsGovTipsVisible0 = 1194,
-		Beyond-Login-LoginViewModel-IsMenuVisible0 = 1195,
-		Beyond-Login-LoginViewModel-_LoadAgeTipsPolicy0 = 1196,
-		Beyond-Login-LoginAgeTipsModel-CanDisplay0 = 1197,
-		Beyond-Login-LoginAgeTipsProp-ClearContentCache0 = 1198,
-		Beyond-Login-LoginAgeTipsProp-UpdateContent0 = 1199,
-		Beyond-Login-LoginWorkFlow-_RegisterNodes0 = 1200,
-		Beyond-Login-LoginWorkFlow-CancelAndFallback0 = 1201,
-		Beyond-Login-LoginWorkFlow-Worker-Cancel0 = 1202,
-		Beyond-Login-LoginWorkFlow-Node-CanCancel0 = 1203,
-		Beyond-Login-LoginWorkFlow-AddEventReceiver0 = 1204,
-		Beyond-Login-LoginWorkFlow-UpdateOnce0 = 1205,
-		Beyond-Login-LoginWorkFlow-Worker-UpdateOnce0 = 1206,
-		Beyond-Login-LoginWorkFlow-Node-Init0 = 1207,
-		Beyond-Login-LoginWorkFlow-Node-OnInit0 = 1210,
-		Beyond-Login-HotUpdateNode-get_type0 = 1211,
-		Beyond-Login-HotUpdateNode-Work0 = 1212,
-		Beyond-Login-HotUpdateNode-OnDispose0 = 1213,
-		Beyond-Login-WaitForSecondsNode-Work0 = 1214,
-		Beyond-Login-WaitForSecondsNode-_NotifyTimeout0 = 1215,
-		Beyond-Login-WaitForSecondsNode-_IsTimeout0 = 1216,
-		Beyond-Login-WaitForSecondsNode-_DisposeTimer0 = 1217,
-		Beyond-Login-WaitForSecondsNode-OnDispose0 = 1218,
-		Beyond-Login-PreloadPostDelayNode-get_type0 = 1219,
-		Beyond-Login-PreloadPostDelayNode-WaitForSeconds0 = 1220,
-		Beyond-Login-PreloadPostDelayNode-Work0 = 1221,
-		Beyond-Login-PreloadPostDelayNode-_DisableLoadingPanel0 = 1222,
-		Beyond-Login-Trans2GsLoginNode-get_type0 = 1223,
-		Beyond-Login-Trans2GsLoginNode-WaitForSeconds0 = 1224,
-		Beyond-Login-Trans2GsLoginNode-Work0 = 1225,
-		Beyond-Login-FinishNode-get_type0 = 1226,
-		Beyond-Login-FinishNode-Work0 = 1227,
-		Beyond-Login-LoginSceneAnimCtrl-get_tickOption0 = 1228,
-		Beyond-Login-LoginSceneAnimCtrl-OnBindToManager0 = 1229,
-		Beyond-Login-LoginSceneAnimCtrl-_EnsurePlayer0 = 1231,
-		Beyond-Login-LoginSceneAnimCtrl-_ChangeToState0 = 1232,
-		Beyond-Login-LoginSceneAnimCtrl-_ResetToA10 = 1233,
-		Beyond-Login-LoginSceneAnimCtrl-_RandomIntervalA1s0 = 1234,
-		Beyond-Login-LoginSceneAnimCtrl-_TransitionToA20 = 1235,
-		Beyond-Login-LoginSceneAnimCtrl-_PlayA1A2Impl0 = 1236,
-		Beyond-Login-LoginSceneAnimCtrl-_PlayA1sAndTriggerNext0 = 1237,
-		Beyond-Login-LoginSceneAnimCtrl-OnValueChanged0 = 1238,
-		Beyond-Login-LoginSceneAnimCtrl-Start0 = 1239,
-		Beyond-Login-LoginSceneComponent-Start0 = 1240,
-		Beyond-Login-LoginSceneAnimCtrl-Tick0 = 1241,
-		Beyond-Login-LoginSceneAnimCtrl-OnRelease0 = 1242,
-		Beyond-Login-LoginSceneAnimCtrl-GetAnimationClips0 = 1243,
-		Beyond-Login-LoginSceneComponent-get_tickOption0 = 1244,
-		Beyond-Login-LoginSceneRoot-get_tickOption0 = 1245,
-		Beyond-Login-LoginSceneRoot-OnBindToManager0 = 1246,
-		Beyond-Login-LoginAgeTipsDetailPanel-Init0 = 1247,
-		Beyond-Login-LoginAgeTipsDetailPanel-_EventOnCloseClicked0 = 1248,
-		Beyond-Login-LoginAgeTipsDetailPanel-OnValueChanged0 = 1249,
-		Beyond-Login-LoginAgeTipsDetailPanel-_RenderContent0 = 1250,
-		Beyond-Login-LoginAgeTipsDetailPanel-_SplitLicenseToSegments0 = 1251,
-		Beyond-Login-LoginAgeTipsDetailPanel-_SplitLongString0 = 1252,
-		Beyond-Login-LoginAgeTipsDetailPanel-_ShowContent0 = 1253,
-		Beyond-Login-LoginAgeTipsPanel-OnInit0 = 1254,
-		Beyond-Login-LoginAgeTipsPanel-_EventOnOpenAgeTipsClicked0 = 1256,
-		Beyond-Login-LoginAgeTipsPanel-OnValueChanged0 = 1257,
-		Beyond-Login-LoginAgeTipsPanel-_UpdateAgeTipsPolicy0 = 1258,
-		Beyond-Login-LoginAlertDialog-OnInit0 = 1259,
-		Beyond-Login-LoginAlertDialog-_OnConfirmClicked0 = 1260,
-		Beyond-Login-LoginDecorateUI-get_tickOption0 = 1261,
-		Beyond-Login-LoginDecorateUI-OnValueChanged0 = 1262,
-		Beyond-Login-LoginDecorateUI-_TriggerTrans2GSLoginImpl0 = 1263,
-		Beyond-Login-LoginDecorateUI-Tick0 = 1264,
-		Beyond-Login-LoginDecorateUI-_TimeManagerTick0 = 1265,
-		Beyond-Login-LoginDecorateUI-OnRelease0 = 1266,
-		Beyond-Login-LoginEnterGamePanel-_InitIfNot0 = 1267,
-		Beyond-Login-LoginEnterGamePanel-_OnEnterGameClicked0 = 1268,
-		Beyond-Login-LoginEnterGamePanel-OnValueChanged0 = 1269,
-		Beyond-Login-LoginRootPanel-ChildPanel-SetPanelVisibleByFadeSwitchTween0 = 1270,
-		Beyond-Login-LoginGovTipsPanel-OnInit0 = 1273,
-		Beyond-Login-LoginGovTipsPanel-_EventOnOpenAgeTipsClicked0 = 1274,
-		Beyond-Login-LoginGovTipsPanel-OnValueChanged0 = 1275,
-		Beyond-Login-LoginJudgeDialog-OnInit0 = 1276,
-		Beyond-Login-LoginJudgeDialog-_OnPositiveClicked0 = 1277,
-		Beyond-Login-LoginJudgeDialog-_OnNegativeClicked0 = 1278,
-		Beyond-Login-LoginMenuPanel-OnInit0 = 1279,
-		Beyond-Login-LoginMenuPanel-_OnAnnounceClicked0 = 1280,
-		Beyond-Login-LoginMenuPanel-_OnAnnounceClosed0 = 1282,
-		Beyond-Login-LoginMenuPanel-_OnSettingClicked0 = 1284,
-		Beyond-Login-LoginMenuPanel-_OnResCheckClicked0 = 1286,
-		Beyond-Login-LoginMenuPanel-_OnLogoutClicked0 = 1288,
-		Beyond-Login-LoginMenuPanel-_OnQuitGameClicked0 = 1290,
-		Beyond-Login-LoginMenuPanel-_OnLoginClicked0 = 1294,
-		Beyond-Login-LoginMenuPanel-_OnQRClicked0 = 1295,
-		Beyond-Login-LoginMenuPanel-_OnServerZoneBtnClicked0 = 1298,
-		Beyond-Login-LoginMenuPanel-_OnFocusMenuGroup0 = 1300,
-		Beyond-Login-LoginMenuPanel-OnValueChanged0 = 1301,
-		Beyond-Login-LoginMenuPanel-_CanQRLogin0 = 1302,
-		Beyond-Login-LoginMenuPanel-Awake0 = 1303,
-		Beyond-Login-LoginMenuPanel-_UpdateServerZone0 = 1304,
-		Beyond-Login-LoginMenuPanel-OnEnable0 = 1305,
-		Beyond-Login-LoginMenuPanel-_OnRequestRelogin0 = 1306,
-		Beyond-Login-LoginMenuPanel-_OnInputChanged0 = 1307,
-		Beyond-Login-LoginMenuPanel-_OnUpdateRedDotForSDKListener0 = 1308,
-		Beyond-Login-LoginMenuPanel-OnDisable0 = 1309,
-		Beyond-Login-LoginMenuPanel-OnDestroy0 = 1310,
-		Beyond-Login-LoginRootPanel-ChildPanel-OnDestroy0 = 1311,
-		Beyond-Login-LoginMenuPanel-_OnCustomServiceClicked0 = 1312,
-		Beyond-Login-LoginMenuPanel-_OnAccountCenterClicked0 = 1313,
-		Beyond-Login-LoginMockUIDPanel-get_instance0 = 1314,
-		Beyond-Login-LoginMockUIDPanel-Refresh0 = 1315,
-		Beyond-Login-LoginMockUIDPanel-_SmokeEnterGame0 = 1316,
-		Beyond-Login-LoginMockUIDPanel-OnDestroy0 = 1317,
-		Beyond-Login-LoginResourcePanel-OnValueChanged0 = 1318,
-		Beyond-Login-LoginResourcePanel-_UpdateResourceInfo0 = 1319,
-		Beyond-Login-LoginResourcePanel-Update0 = 1320,
-		Beyond-Login-LoginRootPanel-Awake0 = 1321,
-		Beyond-Login-LoginRootPanel-_OnNotchPaddingChanged0 = 1322,
-		Beyond-Login-LoginRootPanel-OnDestroy0 = 1323,
-		Beyond-Login-LoginRootPanel-ChildPanel-SetPanelVisibleByAnimSwitchTween0 = 1324,
-		Beyond-Login-LoginServerSelectItemView-RefreshView0 = 1325,
-		Beyond-Login-LoginServerSelectItemView-_OnClicked0 = 1326,
-		Beyond-Login-LoginServerSelectItemView-NaviToBtnTarget0 = 1327,
-		Beyond-Login-LoginServerSelectItemView-SetSelected0 = 1328,
-		Beyond-Login-LoginServerSelectModel-get_curServerZoneData0 = 1329,
-		Beyond-Login-LoginServerSelectModel-InitData0 = 1330,
-		Beyond-Login-LoginServerSelectPanel-OnInit0 = 1331,
-		Beyond-Login-LoginServerSelectPanel-_OnConfirmClicked0 = 1332,
-		Beyond-Login-LoginServerSelectPanel-_OnCloseClicked0 = 1333,
-		Beyond-Login-LoginServerSelectPanel-_UpdateServerCell0 = 1334,
-		Beyond-Login-LoginServerSelectPanel-OnDisable0 = 1335,
-		Beyond-Login-LoginServerSelectPanel-_OnInputChanged0 = 1336,
-		Beyond-Login-LoginServerSelectPanel-_NaviToSelectedItem0 = 1337,
-		Beyond-Login-LoginServerSelectPanel-OnEnable0 = 1338,
-		Beyond-Login-LoginServerSelectPanel-_WaitingForShowListAwake0 = 1342,
-		Beyond-Login-LoginServerSelectPanel-_UpdateServerSelected0 = 1349,
-		Beyond-Login-LoginServerSelectPanel-OnValueChanged0 = 1350,
-		Beyond-Login-LoginVersionPanel-Start0 = 1351,
-		Beyond-Login-LoginVersionPanel-get_displayGameVersion0 = 1352,
-		Beyond-Login-LoginVersionPanel-get_versionZoneType0 = 1353,
-		Beyond-Login-LoginVersionPanel-get_versionPlatform0 = 1354,
-		Beyond-Login-LoginVersionPanel-get_versionAppType0 = 1355,
-		Beyond-Login-LoginVersionPanel-get_versionVersionNum0 = 1356,
-		Beyond-Login-LoginVersionPanel-get_versionProjectCL0 = 1357,
-		Beyond-Login-LoginVocResSelDialog-OnInit0 = 1358,
-		Beyond-Login-LoginVocResSelDialog-_OnConfirmClicked1 = 1359,
-		Beyond-Login-LoginVocResSelDialog-_OnConfirmClicked0 = 1360,
-		Beyond-Login-LoginVocResSelDialog-_UpdateCell0 = 1361,
-		Beyond-Login-LoginVocResSelItemView-RefreshView0 = 1362,
-		Beyond-Login-LoginVocResSelItemView-_OnClicked0 = 1363,
-		Beyond-Login-LoginVocResSelDialog-UpdateSelected0 = 1364,
-		Beyond-Login-LoginVocResSelDialog-_UpdateList0 = 1365,
-		Beyond-Login-LoginVocResSelDialog-_UpdateSelected0 = 1366,
-		Beyond-Login-LoginVocResSelItemView-SetSelected0 = 1367,
-		Beyond-Login-LoginVocResSelDialog-_RefreshConfirmInteractable0 = 1368,
-		Beyond-Login-LoginVocResSelDialog-_ResolveInitialSelectedIndex0 = 1369,
-		Beyond-Login-LoginVocResSelDialog-_NaviToSelectedItem0 = 1370,
-		Beyond-Login-LoginVocResSelItemView-NaviToBtnTarget0 = 1371,
-		Beyond-Login-LoginVocResSelDialog-OnEnable0 = 1372,
-		Beyond-Login-LoginVocResSelDialog-_OnInputTypeChanged0 = 1373,
-		Beyond-Login-LoginVocResSelDialog-OnDisable0 = 1374,
-		Beyond-Scripts-Entry-WarmUpProgress-GetTotal0 = 1375,
-		Beyond-Scripts-Entry-WarmUpProgress-GetCurrent0 = 1376,
-		Beyond-Scripts-Entry-WarmUpProgress-GetInfo0 = 1377
+		Beyond-UI-SplashController-_StartLicenseCoroutine0 = 32,
+		Beyond-UI-SplashController-_OnSplashCompleteCoroutine0 = 32,
+		Beyond-GameApp-_InitSecuritySDK0 = 32,
+		Beyond-GameInitState-_DoInit0 = 32,
+		Beyond-LoginController-MaskCtrl-WaitForCrossSceneMasks0 = 32,
+		Beyond-LoginController-BeforeDestroy0 = 32,
+		Beyond-LoginController-_InitCoroutine0 = 32,
+		Beyond-Login-LoginWorkFlow-DoWorkFlow0 = 32,
+		Beyond-GamePreloadState-_DoPreload0 = 32,
+		Beyond-GameSoftRestartState-_SoftRestart0 = 32,
+		Beyond-GameStateMachine-ReturnToLoginState0 = 32,
+		Beyond-Login-LoginMockUIDPanel-HideAndDestroy0 = 32,
+		Beyond-LoginManager-VocResSelDialogWithConfirm0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_AlertAndQuitForExtraConfigFatalError0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_AlertStartupHardwareCheckIfNeeded0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdatePC0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutinePC0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutine0 = 32,
+		Beyond-Login-LoginCheckForUpdateNode-_CheckForUpdateCoroutineMobile0 = 32,
+		Beyond-Login-LoginGameUpdateNode-_GameUpdateCoroutine0 = 32,
+		Beyond-Login-LoginGameUpdateNode-_GameUpdateCoroutineMobileImpl0 = 32,
+		Beyond-Login-LoginGameUpdater-_YieldGameUpdateInfoChangedAndQuit0 = 32,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_EnterGameCoroutine0 = 32,
+		Beyond-Login-LoginLocalResTask-Work0 = 32,
+		Beyond-Login-LoginHotUpdater-_Work0 = 32,
+		Beyond-Login-LoginInitNode-_InitRemoteConfigs0 = 32,
+		Beyond-Login-LoginInitNode-_InitCoroutine0 = 32,
+		Beyond-Login-LoginPreDownloadNode-_ApplyPreDownloadCoroutine0 = 32,
+		Beyond-Login-LoginPreDownloadNode-_DownloadPreDownloadCoroutine0 = 32,
+		Beyond-Login-LoginPreDownloadNode-_PreDownloadCoroutine0 = 32,
+		Beyond-Login-PreloadNode-_WarmUp0 = 32,
+		Beyond-Login-PreloadNode-_GetServerListInfoMock0 = 32,
+		Beyond-Login-PreloadNode-_GetServerListInfo0 = 32,
+		Beyond-Login-PreloadNode-_GetServerList0 = 32,
+		Beyond-Login-PreloadNode-_LoginPreLoad0 = 32,
+		Beyond-Login-LoginSDKInitNode-_WaitForSDKInited0 = 32,
+		Beyond-Login-LoginSDKInitNode-_SDKInitCoroutine0 = 32,
+		Beyond-Login-LoginMenuPanel-_HideLoginSuccessToastCoroutine0 = 32,
+		Beyond-Login-U8LoginNode-_FinishLogin0 = 32,
+		Beyond-Login-U8LoginNode-_LoginCoroutine0 = 32,
+		Beyond-Login-LoginServerSelectPanel-_WaitingForShowListAwake0 = 32,
+		Beyond-UI-SplashController-_Play0 = 33,
+		Beyond-UI-SplashController-Show0 = 34,
+		Beyond-GameApp-_OnSystemScreenSizeChanged0 = 35,
+		Beyond-GameApp-_Init0 = 36,
+		Beyond-GameApp-OnApplicationFocus0 = 36,
+		Beyond-GameApp-_OnApplicationPauseForSecurity0 = 36,
+		Beyond-GameApp-OnApplicationPause0 = 36,
+		Beyond-Login-LoginWorkFlow-_EnableCursor0 = 36,
+		Beyond-Login-LoginRootPanel-_SetDebugPanelActive0 = 36,
+		Beyond-Login-LoginDecorateUI-_ToggleGlow0 = 36,
+		Beyond-LoginManager-_ClearWorkflowAndContext0 = 36,
+		Beyond-Login-LoginRootPanel-ToggleLoginBindingGroup0 = 36,
+		Beyond-Login-LoginWorkFlow-_EventOnOpenServerSelect0 = 36,
+		Beyond-LoginManager-ToggleLoginBindingGroup0 = 36,
+		Beyond-Login-LoginGSNode-_FallbackToInitWithMask0 = 36,
+		Beyond-Login-LoginViewModel-SetPreDownloadDownloading0 = 36,
+		Beyond-Login-U8LoginNode-_EnableBlurMask0 = 36,
+		Beyond-Login-LoginMenuPanel-_OnReceiveRedDotAndPopup0 = 36,
+		Beyond-Login-LoginMenuPanel-_OnFocusMenuGroup0 = 36,
+		Beyond-Login-LoginServerSelectItemView-SetSelected0 = 36,
+		Beyond-Login-LoginVocResSelItemView-SetSelected0 = 36,
+		Beyond-GameApp-_DelayInit0 = 37,
+		Beyond-LoginManager-InitCoroutine0 = 37,
+		Beyond-GameApp-QuitGame1 = 38,
+		Beyond-GameApp-PollScanResult0 = 39,
+		Beyond-GameInitState-_CheckIfLocalInitialAssetsValid0 = 40,
+		Beyond-GameInitState-_InitInitialResourceManager0 = 41,
+		Beyond-Login-LoginWorkFlow-_UpdateCursor0 = 42,
+		Beyond-Login-LoginMenuPanel-_OnInputChanged0 = 42,
+		Beyond-Login-LoginServerSelectPanel-_OnInputChanged0 = 42,
+		Beyond-Login-LoginVocResSelDialog-_OnInputTypeChanged0 = 42,
+		Beyond-LoginController-get_maskCtrl0 = 43,
+		Beyond-LoginController-MaskCtrl-_GetMaskByType0 = 44,
+		Beyond-LoginContext-_DisposeCoroutine0 = 45,
+		Beyond-Login-LoginWorkFlow-Worker-Work0 = 45,
+		Beyond-LoginManager-_LoginWorkFlowCoroutine0 = 45,
+		Beyond-Login-LoginWorkFlow-_FetchAgeTipsCoroutine0 = 45,
+		Beyond-LoginController-_MockLoginCoroutine0 = 45,
+		Beyond-LoginController-Dialog-_CloseCoroutine0 = 45,
+		Beyond-LoginManager-AlertDialogWithConfirm0 = 45,
+		Beyond-Login-LoginCheckForUpdateNode-_GetOnlineAppVersion0 = 45,
+		Beyond-Login-LoginGameUpdater-_GetLastGameInfo0 = 45,
+		Beyond-Login-LoginGameUpdater-CheckLastGameInfo0 = 45,
+		Beyond-Login-LoginGameUpdater-_YieldErrorAlert0 = 45,
+		Beyond-Login-LoginGameUpdater-_DoTaskUpdating0 = 45,
+		Beyond-Login-LoginGameUpdater-_UpdateGame0 = 45,
+		Beyond-Login-LoginGameUpdater-DoUpdate0 = 45,
+		Beyond-Login-LoginGameUpdater-_ApplyPreDownload0 = 45,
+		Beyond-Login-LoginGameUpdater-ApplyPreDownload0 = 45,
+		Beyond-Login-LoginGameUpdater-_DownloadPreDownload0 = 45,
+		Beyond-Login-LoginGameUpdater-_RefreshPreDownloadResAction0 = 45,
+		Beyond-Login-LoginGameUpdater-DownloadPreDownload0 = 45,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_OnAuthError0 = 45,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_MockManualSelectServer0 = 45,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_SaveCurrentUserToServerConfig0 = 45,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_YieldAlertError0 = 45,
+		Beyond-Login-LoginHotUpdater-_UpdateResVersionDev0 = 45,
+		Beyond-Login-LoginHotUpdater-_UpdateResVersionProd0 = 45,
+		Beyond-Login-LoginHotUpdater-_UpdateResVersion0 = 45,
+		Beyond-Login-LoginHotUpdater-_ReloadResourceIndexes0 = 45,
+		Beyond-Login-LoginHotUpdater-_MainCoroutineModeDownload0 = 45,
+		Beyond-Login-LoginHotUpdater-_MainCoroutineModeLocal0 = 45,
+		Beyond-Login-LoginHotUpdater-_MainCoroutineModeSkip0 = 45,
+		Beyond-Login-LoginHotUpdater-_CreateMainCoroutine0 = 45,
+		Beyond-Login-LoginHotUpdater-_VitalError0 = 45,
+		Beyond-Login-LoginInitNode-_YieldAlertError0 = 45,
+		Beyond-LoginController-MaskCtrl-EnableMask0 = 46,
+		Beyond-Login-LoginDecorateUI-_EnsureGlowPlayer0 = 47,
+		Beyond-LoginController-InitUI0 = 48,
+		Beyond-Login-LoginWorkFlow-FWork-Start0 = 49,
+		Beyond-Login-LoginWorkFlow-FWork-get_curNode0 = 50,
+		Beyond-Login-LoginWorkFlow-IsOnOrAfterWork0 = 51,
+		Beyond-Login-LoginWorkFlow-IsBeforeWork0 = 51,
+		Beyond-Login-LoginWorkFlow-IsAfterWork0 = 51,
+		Beyond-Login-LoginWorkFlow-_CheckIfGameStateNotMatch0 = 52,
+		Beyond-Login-LoginWorkFlow-_AdjustCurrentGameState0 = 53,
+		Beyond-Login-LoginWorkFlow-Node-Cancel0 = 54,
+		Beyond-Login-LoginCheckForUpdateNode-Work0 = 54,
+		Beyond-Login-LoginCreateRoleNode-Work0 = 54,
+		Beyond-Login-LoginGameUpdateNode-Work0 = 54,
+		Beyond-Login-LoginGSNode-Work0 = 54,
+		Beyond-Login-LoginInitNode-Work0 = 54,
+		Beyond-Login-LoginPreDownloadNode-Work0 = 54,
+		Beyond-Login-PreloadNode-Work0 = 54,
+		Beyond-Login-LoginSDKInitNode-Work0 = 54,
+		Beyond-Login-U8LoginNode-Work0 = 54,
+		Beyond-Login-HotUpdateNode-Work0 = 54,
+		Beyond-Login-WaitForSecondsNode-Work0 = 54,
+		Beyond-Login-PreloadPostDelayNode-Work0 = 54,
+		Beyond-Login-Trans2GsLoginNode-Work0 = 54,
+		Beyond-Login-FinishNode-Work0 = 54,
+		Beyond-Login-LoginWorkFlow-FWork-ConsumeFallback0 = 55,
+		Beyond-Login-LoginWorkFlow-FWork-WorkEnd0 = 55,
+		Beyond-Login-LoginWorkFlow-FWork-MoveNextIndex0 = 56,
+		Beyond-Login-LoginAlertDialog-SetParams0 = 57,
+		Beyond-Login-LoginVocResSelDialog-SetParams0 = 58,
+		Beyond-Login-LoginJudgeDialog-SetParams0 = 59,
+		Beyond-LoginManager-_StartShowJudgeDialogCoroutine0 = 59,
+		Beyond-LoginManager-JudgeDialog1 = 59,
+		Beyond-LoginContext-Init0 = 60,
+		Beyond-Login-LoginWorkFlow-PeekFallbackStatus0 = 61,
+		Beyond-GameMainState-ReleaseMainGame0 = 62,
+		Beyond-GameStateBase-OnTick0 = 63,
+		Beyond-Login-LoginSceneAnimCtrl-Tick0 = 63,
+		Beyond-Login-LoginDecorateUI-_TimeManagerTick0 = 63,
+		Beyond-Login-LoginDecorateUI-Tick0 = 63,
+		Beyond-LoginController-get_rootPanel0 = 64,
+		Beyond-LoginController-GetEnterGamePanelPredelay0 = 65,
+		Beyond-Login-LoginGameUpdater-GetWaitTime0 = 65,
+		Beyond-Login-LoginDownloadTask-GetDecompressProgress0 = 65,
+		Beyond-Login-LoginDownloadTask-GetCheckProgress0 = 65,
+		Beyond-Login-LoginSceneAnimCtrl-_RandomIntervalA1s0 = 65,
+		Beyond-LoginContext-ViewOnlyController0 = 66,
+		Beyond-LoginController-MaskCtrl-EnableNetMask0 = 67,
+		Beyond-Login-LoginServerSelectModel-get_serverList0 = 68,
+		Beyond-Login-LoginServerSelectModel-UpdateSelectedServer0 = 69,
+		Beyond-LoginController-Dialog-TryCloseWithCallback0 = 69,
+		Beyond-LoginManager-AssetLoader-_CheckDisposedBeforeLoad0 = 69,
+		Beyond-Login-LoginGameUpdater-_ConsumePreDownloadCancelRequest0 = 69,
+		Beyond-Login-LoginWorkFlow-Worker-UpdateOnce0 = 69,
+		Beyond-Login-LoginWorkFlow-UpdateOnce0 = 69,
+		Beyond-Login-LoginServerSelectModel-GetSelectedServer0 = 70,
+		Beyond-Login-LoginServerSelectModel-get_curServerZoneData0 = 70,
+		Beyond-Login-LoginWorkFlow-_HandleGlobalEvent0 = 71,
+		Beyond-Login-LoginWorkFlow-Node-OnEvent0 = 71,
+		Beyond-Login-LoginGSNode-OnEvent0 = 71,
+		Beyond-Login-LoginPreDownloadNode-OnEvent0 = 71,
+		Beyond-Login-U8LoginNode-OnEvent0 = 71,
+		Beyond-Login-LoginWorkFlow-SendEvent0 = 72,
+		Beyond-LoginContext-SendEvent0 = 72,
+		Beyond-Login-LoginMockUIDPanel-FOptions-IsUIDFixed0 = 73,
+		Beyond-Login-LoginMockUIDPanel-_MovePreferredServerToFront0 = 74,
+		Beyond-Login-LoginMockUIDPanel-_OnSelectServer0 = 75,
+		Beyond-Login-LoginGameUpdater-OperationContext-CompleteWithCode0 = 75,
+		Beyond-Login-LoginGameUpdater-OperationContext-UncompleteWithCode0 = 75,
+		Beyond-Login-LoginGameUpdater-_OnApplyPreDownloadProgress0 = 75,
+		Beyond-Login-LoginMockUIDPanel-LoginWithCallback0 = 76,
+		Beyond-LoginController-MaskCfg-CreateTweenAndHide0 = 77,
+		Beyond-LoginController-MaskCtrl-IsMaskTweening0 = 78,
+		Beyond-LoginManager-AlertDialogWithResult0 = 79,
+		Beyond-LoginManager-FetchRemoteConfigUtilSuc0 = 79,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_NetConnectAndGSLogin0 = 79,
+		Beyond-LoginManager-JudgeDialog0 = 80,
+		Beyond-LoginManager-_ExtractErrorInfo0 = 81,
+		Beyond-Login-LoginGSNode-EnterGameServiceFlow-_ExtractErrorInfo0 = 81,
+		Beyond-LoginManager-DevOnlyCheckEnableLocalResMode0 = 82,
+		Beyond-LoginManager-DevOnlyUseLocalResVersion0 = 83,
+		Beyond-LoginManager-FlowWithMaskMgr-_OnFlowFinished0 = 84,
+		Beyond-LoginManager-FlowWithMaskMgr-StartFlow0 = 84,
+		Beyond-LoginManager-FFlowCondition-IsTargetMatch0 = 85,
+		Beyond-LoginManager-FlowWithMaskMgr-_FlowCoroutine0 = 86,
+		Beyond-SDK-PlatformFont-GetFont0 = 87,
+		Beyond-SDK-SDKLaunchAuth-OnResult0 = 88,
+		Beyond-SDK-SDKNetUtils-HTTPPost0 = 89,
+		Beyond-SDK-SDKNetUtils-HTTPGet0 = 90,
+		Beyond-SDK-SDKNetUtils-BeyondHttp-DoHTTP0 = 91,
+		Beyond-SDK-Impl-U8ExternalTools-GetDeviceIDs0 = 92,
+		Beyond-SDK-Impl-U8ExternalTools-GetPlatformKey0 = 93,
+		Beyond-Login-LoginGameUpdater-GetNoAlertCode0 = 93,
+		Beyond-Login-LoginHotUpdater-_CurrentWorkMode0 = 93,
+		Beyond-Login-LoginVocResSelDialog-_ResolveInitialSelectedIndex0 = 93,
+		Beyond-SDK-Impl-U8ExternalTools-_TryGetGameProtocolUpdateCheckErrorCode0 = 94,
+		Beyond-Login-LoginGameUpdater-GetCachedEstimatedPreDownloadSize0 = 94,
+		Beyond-SDK-Impl-U8ExternalTools-_TryGetLaunchAuthDetail0 = 95,
+		Beyond-SDK-Impl-U8ExternalTools-_ProcessExtraInfo0 = 96,
+		Beyond-SDK-Impl-U8ExternalTools-_ConvertToPOSTResult0 = 97,
+		Beyond-SDK-Impl-U8ExternalTools-POSTImplementation0 = 98,
+		Beyond-SDK-Impl-U8ExternalTools-CreateCaptchaHandler0 = 99,
+		Beyond-SDK-Impl-U8ExternalTools-_ErrorMsg_GET_TOKEN0 = 100,
+		Beyond-SDK-Impl-U8ExternalTools-_ErrorMsg_CREATE_ORDER0 = 100,
+		Beyond-SDK-Impl-U8ExternalTools-GetErrorMessage0 = 101,
+		Beyond-SDK-Impl-U8ExternalTools-CaptchaHandler-FetchCaptchaCoroutine0 = 102,
+		Beyond-SDK-Impl-U8Plugin-_MockLogin0 = 103,
+		Beyond-SDK-Impl-U8Plugin-Login0 = 103,
+		Beyond-SDK-Impl-U8Plugin-Logout0 = 104,
+		Beyond-SDK-Impl-U8Plugin-Pay0 = 105,
+		Beyond-SDK-Impl-U8Plugin-TryLoadSDKMeta0 = 106,
+		Beyond-Login-LoginCheckForUpdateNode-get_type0 = 107,
+		Beyond-Login-LoginCreateRoleNode-get_type0 = 107,
+		Beyond-Login-LoginGameUpdateNode-get_type0 = 107,
+		Beyond-Login-LoginGSNode-get_type0 = 107,
+		Beyond-Login-LoginInitNode-get_type0 = 107,
+		Beyond-Login-LoginPreDownloadNode-get_type0 = 107,
+		Beyond-Login-PreloadNode-get_type0 = 107,
+		Beyond-Login-LoginSDKInitNode-get_type0 = 107,
+		Beyond-Login-U8LoginNode-get_type0 = 107,
+		Beyond-Login-HotUpdateNode-get_type0 = 107,
+		Beyond-Login-PreloadPostDelayNode-get_type0 = 107,
+		Beyond-Login-Trans2GsLoginNode-get_type0 = 107,
+		Beyond-Login-FinishNode-get_type0 = 107,
+		Beyond-Login-LoginWorkFlow-FWork-MarkFallback0 = 108,
+		Beyond-Login-LoginWorkFlow-Fallback0 = 109,
+		Beyond-Login-LoginWorkFlow-CancelAndFallback0 = 109,
+		Beyond-Login-LoginDownloadTask-GetDownloadProgress0 = 110,
+		Beyond-Login-LoginDownloadTask-GetWorkState0 = 111,
+		Beyond-Login-LoginDownloadTask-_GetFileList0 = 112,
+		Beyond-Login-LoginDownloadTask-_GetAllFileList0 = 113,
+		Beyond-Login-LoginDownloadTask-_OnDownloadError0 = 114,
+		Beyond-Login-NetUsagePolicy-_GetPrettySizeStringUpToMB0 = 115,
+		Beyond-Login-NetUsagePolicy-CheckIfAllowDownload0 = 116,
+		Beyond-Login-LoginDownloadTask-_OnDownloadPaused0 = 117,
+		Beyond-Login-LoginGameUpdater-_TryGetLatestGameInfo0 = 118,
+		Beyond-Login-LoginGameUpdater-_YieldCheckNetUsagePolicy0 = 119,
+		Beyond-Login-LoginGameUpdater-_OnDownloadProgress0 = 120,
+		Beyond-Login-LoginGameUpdater-_WaitForTaskCancel0 = 121,
+		Beyond-Login-LoginGameUpdater-_CancelAndClearTask0 = 121,
+		Beyond-Login-LoginGameUpdater-GetResAction0 = 122,
+		Beyond-Login-LoginGameUpdater-RefreshEstimatedPreDownloadSize0 = 123,
+		Beyond-Login-LoginGameUpdater-_LogPreDownloadStatusChanged0 = 124,
+		Beyond-Login-LoginGameUpdater-_LogPreDownloadApplyProgress0 = 125,
+		Beyond-Login-LoginGameUpdater-_EventLogPreApplyProgress0 = 126,
+		Beyond-Login-LoginGameUpdater-_GetPreDownloadErrorInfo0 = 127,
+		Beyond-Login-LoginGameUpdater-_YieldPreDownloadErrorDialog0 = 128,
+		Beyond-Login-LoginGameUpdater-_GetEventLogProgress0 = 129,
+		Beyond-Login-LoginGameUpdater-PreDownloadDownloadContext-ResetTaskTrackState0 = 130,
+		Beyond-Login-LoginGameUpdater-_BytesToMB0 = 131,
+		Beyond-Login-LoginGameUpdater-_EventLogPreDownloadStart0 = 132,
+		Beyond-Login-LoginGameUpdater-_CancelPreDownloadTask0 = 133,
+		Beyond-Login-LoginGameUpdater-PreDownloadDownloadContext-UpdateSizeTrackState0 = 134,
+		Beyond-Login-LoginGameUpdater-_EventLogPreDownloadPause0 = 135,
+		Beyond-Login-LoginGameUpdater-_EventLogPreDownloadFinish0 = 136,
+		Beyond-Login-LoginGameUpdater-_EventLogPreDownloadProgress0 = 137,
+		Beyond-Login-LoginGameUpdater-_LogPreDownloadSizeProgress0 = 138,
+		Beyond-Login-LoginGameUpdater-_ShouldClearPreDownloadTask0 = 139,
+		Beyond-Login-LoginGameUpdater-_IsSameGameUpdateInfo0 = 140,
+		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetCurrent0 = 141,
+		Beyond-Login-LoginHotUpdateModel-SimpleProgress-GetTotal0 = 141,
+		Beyond-Login-LoginProgress-GetCurrent0 = 141,
+		Beyond-Login-LoginProgress-GetTotal0 = 141,
+		Beyond-Scripts-Entry-WarmUpProgress-GetTotal0 = 141,
+		Beyond-Scripts-Entry-WarmUpProgress-GetCurrent0 = 141,
+		Beyond-Login-LoginHotUpdater-NeedClearFolder0 = 142,
+		Beyond-Login-LoginHotUpdater-_GetOnlineResVersion0 = 143,
+		Beyond-Login-LoginHotUpdater-WorkContext-GetHotUpdateInfo0 = 144,
+		Beyond-Login-LoginHotUpdater-ResourceRootUrl0 = 145,
+		Beyond-Login-LoginHotUpdater-_ResourceIndexUrl0 = 145,
+		Beyond-Login-LoginHotUpdater-_ResourcePatchUrl0 = 145,
+		Beyond-Login-LoginHotUpdater-_ResourceFileUrl0 = 145,
+		Beyond-Login-LoginHotUpdater-_ResourcePatchRootUrl0 = 145,
+		Beyond-Login-LoginHotUpdater-_LoadOrDownloadResIndex0 = 146,
+		Beyond-Login-LoginHotUpdater-_GenResIndex0 = 146,
+		Beyond-Login-LoginHotUpdater-_GenRiff0 = 146,
+		Beyond-Login-LoginHotUpdater-_DownloadPatchInfo0 = 146,
+		Beyond-Login-LoginHotUpdater-_GenLocalRef0 = 146,
+		Beyond-Login-LoginHotUpdater-_CheckAndDownloadResource0 = 146,
+		Beyond-Login-LoginHotUpdater-_CheckLocalResConsistency0 = 146,
+		Beyond-Login-LoginHotUpdater-_LoadStreamingIndex0 = 147,
+		Beyond-Login-LoginHotUpdater-_CreateUpdatedLocalResPref0 = 148,
+		Beyond-Login-LoginHotUpdater-_EventLogDownloadProgress0 = 149,
+		Beyond-Login-LoginHotUpdater-HotUpdateInfo-HasChangedByType0 = 150,
+		Beyond-Login-LoginHotUpdater-WorkContext-HasChangedByType0 = 150,
+		Beyond-Login-LoginHotUpdater-_ClearDownloadFolder0 = 151,
+		Beyond-Login-LoginHotUpdater-StartHotUpdate0 = 152,
+		Beyond-Login-LoginProgress-FDownloadSize-_PickUnit0 = 153,
+		Beyond-Login-LoginProgress-FDownloadSize-_DisplayWithUnit0 = 154,
+		Beyond-Login-LoginProgress-FDownloadSize-_FormatDisplayInfo0 = 155,
+		Beyond-Login-LoginProgress-FDownloadSize-_FormatSpeedInfo0 = 156,
+		Beyond-Login-LoginProgress-FDownloadSize-_FormatProgressInfo0 = 157,
+		Beyond-Login-LoginProgress-FDownloadSize-SetSize0 = 158,
+		Beyond-Login-LoginProgress-FDownloadSize-SetProgress0 = 159,
+		Beyond-Login-LoginProgress-FDownloadSize-SetIdle0 = 160,
+		Beyond-Login-PreloadNode-_QuitGame0 = 161,
+		Beyond-Login-LoginMenuPanel-_TryGetLoginSuccessAccount0 = 162,
+		Beyond-Login-LoginViewModel-FAgeTipsPolicy-get_display0 = 163,
+		Beyond-Login-LoginViewModel-_LoadAgeTipsPolicy0 = 164,
+		Beyond-Login-LoginWorkFlow-_RegisterNodes0 = 165,
+		Beyond-Login-PreloadPostDelayNode-WaitForSeconds0 = 166,
+		Beyond-Login-Trans2GsLoginNode-WaitForSeconds0 = 166,
+		Beyond-Login-LoginSceneAnimCtrl-get_tickOption0 = 167,
+		Beyond-Login-LoginSceneComponent-get_tickOption0 = 167,
+		Beyond-Login-LoginSceneRoot-get_tickOption0 = 167,
+		Beyond-Login-LoginDecorateUI-get_tickOption0 = 167,
+		Beyond-Login-LoginSceneAnimCtrl-_EnsurePlayer0 = 168,
+		Beyond-Login-LoginSceneAnimCtrl-_ChangeToState0 = 169,
+		Beyond-Login-LoginAgeTipsDetailPanel-_SplitLicenseToSegments0 = 170,
+		Beyond-Login-LoginAgeTipsPanel-_UpdateAgeTipsPolicy0 = 171,
+		Beyond-Login-LoginRootPanel-ChildPanel-SetPanelVisibleByFadeSwitchTween0 = 172,
+		Beyond-Login-LoginRootPanel-ChildPanel-SetPanelVisibleByAnimSwitchTween0 = 172,
+		Beyond-Login-LoginMenuPanel-_OnUpdateRedDotForSDKListener0 = 173,
+		Beyond-Login-LoginMockUIDPanel-get_instance0 = 174,
+		Beyond-Login-LoginRootPanel-_OnNotchPaddingChanged0 = 175,
+		Beyond-Login-LoginServerSelectItemView-RefreshView0 = 176,
+		Beyond-Login-LoginVocResSelItemView-RefreshView0 = 176,
+		Beyond-Login-LoginServerSelectPanel-_UpdateServerSelected0 = 177,
+		Beyond-Login-LoginVocResSelDialog-_UpdateSelected0 = 177,
+		Beyond-Login-LoginVocResSelDialog-UpdateSelected0 = 178
 	}
+
+	public delegate void __HotPatchDelegate_1(object P0, Beyond.GameState P1); // TypeDefIndex: 81142; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_2(float P0); // TypeDefIndex: 81143; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_3(bool P0); // TypeDefIndex: 81144; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_4(Beyond.GameSetting.GameSettingAudioSuiteMode P0); // TypeDefIndex: 81145; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_5(Beyond.GameSetting.KeyboardLayoutType P0); // TypeDefIndex: 81146; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_6(EnvLang P0); // TypeDefIndex: 81147; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_7(Beyond.GameSetting.GameSettingLanguageAudio P0); // TypeDefIndex: 81148; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_8(Beyond.GameSetting.GameSettingVideoQuality P0); // TypeDefIndex: 81149; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_9(int P0, int P1, bool P2); // TypeDefIndex: 81150; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_10(Beyond.GameSetting.ScreenResolution P0); // TypeDefIndex: 81151; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_11(Beyond.GameSetting.TeammateSkillEffectStrength P0); // TypeDefIndex: 81152; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_12(); // TypeDefIndex: 81153; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate void __HotPatchDelegate_13(object P0); // TypeDefIndex: 81154; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_14(object P0); // TypeDefIndex: 81155; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate string __HotPatchDelegate_15(); // TypeDefIndex: 81156; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate string __HotPatchDelegate_16(object P0); // TypeDefIndex: 81157; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_17(object P0, object P1); // TypeDefIndex: 81158; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_18(object P0, uint P1); // TypeDefIndex: 81159; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate GameApp.FileEntry __HotPatchDelegate_19(GameApp.PendingFile P0); // TypeDefIndex: 81160; 0x00000001852BC110-0x00000001852BC140
+
+	public delegate List<GameApp.FileEntry> __HotPatchDelegate_20(object P0, int P1); // TypeDefIndex: 81161; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate int __HotPatchDelegate_21(object P0, object P1); // TypeDefIndex: 81162; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate string __HotPatchDelegate_22(long P0); // TypeDefIndex: 81163; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_23(object P0, object P1, object P2); // TypeDefIndex: 81164; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_24(object P0, object P1, System.DateTime P2, object P3, object P4); // TypeDefIndex: 81165; 0x00000001812083C0-0x00000001812083E0
+
+	public delegate void __HotPatchDelegate_25(object P0, object P1, int P2, object P3); // TypeDefIndex: 81166; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_26(object P0, object P1, int P2); // TypeDefIndex: 81167; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate bool __HotPatchDelegate_27(); // TypeDefIndex: 81168; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate IEnumerator __HotPatchDelegate_28(object P0, float P1); // TypeDefIndex: 81169; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_29(int P0); // TypeDefIndex: 81170; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate IEnumerator __HotPatchDelegate_30(); // TypeDefIndex: 81171; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate SplashController.SplashConfig[] __HotPatchDelegate_31(object P0); // TypeDefIndex: 81172; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate IEnumerator __HotPatchDelegate_32(object P0); // TypeDefIndex: 81173; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_33(object P0, object P1, bool P2); // TypeDefIndex: 81174; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate SplashController __HotPatchDelegate_34(object P0, bool P1); // TypeDefIndex: 81175; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_35(in EventData<bool, bool> P0); // TypeDefIndex: 81176; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_36(object P0, bool P1); // TypeDefIndex: 81177; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate IEnumerator __HotPatchDelegate_37(object P0, bool P1); // TypeDefIndex: 81178; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_38(GameAppExitCode P0); // TypeDefIndex: 81179; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_39(out string P0); // TypeDefIndex: 81180; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_40(object P0, out LocalResPref P1, out VirtualFileSystem.BlockValidator P2); // TypeDefIndex: 81181; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_41(object P0, out VirtualFileSystem.BlockValidator P1); // TypeDefIndex: 81182; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_42(object P0, in EventData<Beyond.DeviceInfo.InputType> P1); // TypeDefIndex: 81183; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginController.MaskCtrl __HotPatchDelegate_43(object P0); // TypeDefIndex: 81184; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate UISwitchTween __HotPatchDelegate_44(object P0, int P1); // TypeDefIndex: 81185; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate IEnumerator __HotPatchDelegate_45(object P0, object P1); // TypeDefIndex: 81186; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_46(object P0, object P1, LoginController.EMaskType P2, bool P3, bool P4); // TypeDefIndex: 81187; 0x00000001826DF690-0x00000001826DF6C0
+
+	public delegate UIAnimationLayerMixPlayer __HotPatchDelegate_47(object P0); // TypeDefIndex: 81188; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_48(object P0, LoginController.FOptions P1); // TypeDefIndex: 81189; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginWorkFlow.FWork __HotPatchDelegate_49(); // TypeDefIndex: 81190; 0x000000018691BF80-0x000000018691BFC0
+
+	public delegate LoginWorkFlow.ENode __HotPatchDelegate_50(ref LoginWorkFlow.FWork P0); // TypeDefIndex: 81191; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_51(LoginWorkFlow.ENode P0, LoginWorkFlow.ENode P1); // TypeDefIndex: 81192; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_52(LoginWorkFlow.ENode P0); // TypeDefIndex: 81193; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate IEnumerator __HotPatchDelegate_53(LoginWorkFlow.ENode P0); // TypeDefIndex: 81194; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate CustomYieldInstruction __HotPatchDelegate_54(object P0); // TypeDefIndex: 81195; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_55(ref LoginWorkFlow.FWork P0); // TypeDefIndex: 81196; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_56(ref LoginWorkFlow.FWork P0); // TypeDefIndex: 81197; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_57(object P0, LoginAlertDialog.FParams P1); // TypeDefIndex: 81198; 0x00000001857E4CE0-0x00000001857E4D10
+
+	public delegate void __HotPatchDelegate_58(object P0, LoginVocResSelDialog.FParams P1); // TypeDefIndex: 81199; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_59(object P0, LoginJudgeDialog.FParams P1); // TypeDefIndex: 81200; 0x00000001827C6CC0-0x00000001827C6D00
+
+	public delegate void __HotPatchDelegate_60(object P0, bool P1, object P2, object P3, object P4, object P5, object P6, object P7, object P8); // TypeDefIndex: 81201; 0x00000001823B2550-0x00000001823B25C0
+
+	public delegate bool __HotPatchDelegate_61(object P0, out LoginWorkFlow.ENode P1); // TypeDefIndex: 81202; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_62(Beyond.GameState P0); // TypeDefIndex: 81203; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_63(object P0, float P1); // TypeDefIndex: 81204; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginRootPanel __HotPatchDelegate_64(object P0); // TypeDefIndex: 81205; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate float __HotPatchDelegate_65(object P0); // TypeDefIndex: 81206; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate LoginController __HotPatchDelegate_66(object P0); // TypeDefIndex: 81207; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_67(object P0, object P1, float P2); // TypeDefIndex: 81208; 0x000000018124EAD0-0x000000018124EAF0
+
+	public delegate List<ServerZoneManager.ServerZoneData> __HotPatchDelegate_68(object P0); // TypeDefIndex: 81209; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_69(object P0, object P1); // TypeDefIndex: 81210; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate ServerZoneManager.ServerZoneData __HotPatchDelegate_70(object P0); // TypeDefIndex: 81211; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_71(object P0, ELoginEvent P1, object P2); // TypeDefIndex: 81212; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_72(object P0, ELoginEvent P1, object P2); // TypeDefIndex: 81213; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate bool __HotPatchDelegate_73(ref LoginMockUIDPanel.FOptions P0); // TypeDefIndex: 81214; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_74(object P0, ref int P1); // TypeDefIndex: 81215; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_75(object P0, int P1); // TypeDefIndex: 81216; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_76(object P0, LoginMockUIDPanel.FOptions P1, object P2); // TypeDefIndex: 81217; 0x0000000181256E30-0x0000000181256E60
+
+	public delegate UISwitchTween __HotPatchDelegate_77(object P0); // TypeDefIndex: 81218; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_78(object P0, LoginController.EMaskType P1); // TypeDefIndex: 81219; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate IEnumerator __HotPatchDelegate_79(object P0, object P1, object P2, object P3); // TypeDefIndex: 81220; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_80(object P0, object P1, object P2, object P3); // TypeDefIndex: 81221; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate string __HotPatchDelegate_81(object P0, object P1, object P2); // TypeDefIndex: 81222; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_82(ref bool P0); // TypeDefIndex: 81223; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_83(object P0, ref bool P1); // TypeDefIndex: 81224; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_84(object P0, LoginManager.FFlowWithMask P1); // TypeDefIndex: 81225; 0x0000000186493DB0-0x0000000186493DF0
+
+	public delegate bool __HotPatchDelegate_85(ref LoginManager.FFlowCondition P0, LoginWorkFlow.ENode P1); // TypeDefIndex: 81226; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate IEnumerator __HotPatchDelegate_86(object P0, LoginManager.FFlowWithMask P1); // TypeDefIndex: 81227; 0x0000000186493DB0-0x0000000186493DF0
+
+	public delegate TMP_FontAsset __HotPatchDelegate_87(object P0); // TypeDefIndex: 81228; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_88(bool P0, long P1, object P2); // TypeDefIndex: 81229; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_89(SDKNetUtils.HttpPostRequest P0); // TypeDefIndex: 81230; 0x0000000186CAA190-0x0000000186CAA1D0
+
+	public delegate void __HotPatchDelegate_90(SDKNetUtils.HttpGetRequest P0); // TypeDefIndex: 81231; 0x0000000186A4F2D0-0x0000000186A4F300
+
+	public delegate IEnumerator __HotPatchDelegate_91(object P0, SDKNetUtils.HTTPConfig P1); // TypeDefIndex: 81232; 0x00000001827C6CC0-0x00000001827C6D00
+
+	public delegate Dictionary<string, string> __HotPatchDelegate_92(object P0); // TypeDefIndex: 81233; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate int __HotPatchDelegate_93(object P0); // TypeDefIndex: 81234; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate long __HotPatchDelegate_94(object P0); // TypeDefIndex: 81235; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_95(object P0, out long P1, out string P2); // TypeDefIndex: 81236; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_96(object P0, SDKExtraData P1); // TypeDefIndex: 81237; 0x00000001857E4CE0-0x00000001857E4D10
+
+	public delegate SDKExternalTools.POSTResult __HotPatchDelegate_97(SDKNetUtils.WebHttpResponse P0); // TypeDefIndex: 81238; 0x00000001827C6D00-0x00000001827C6D60
+
+	public delegate void __HotPatchDelegate_98(object P0, SDKExternalTools.POSTRequest P1, object P2); // TypeDefIndex: 81239; 0x00000001827C6B50-0x00000001827C6B90
+
+	public delegate SDKCaptchaHandler __HotPatchDelegate_99(object P0); // TypeDefIndex: 81240; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_100(object P0, SDKExternalTools.ErrMsgMeta P1, out string P2); // TypeDefIndex: 81241; 0x00000001827C6B50-0x00000001827C6B90
+
+	public delegate string __HotPatchDelegate_101(object P0, SDKExternalTools.ErrMsgMeta P1); // TypeDefIndex: 81242; 0x00000001827C6B90-0x00000001827C6BC0
+
+	public delegate IEnumerator __HotPatchDelegate_102(object P0, object P1, object P2); // TypeDefIndex: 81243; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_103(object P0, ExternalPluginLoginParams P1); // TypeDefIndex: 81244; 0x0000000186493DB0-0x0000000186493DF0
+
+	public delegate void __HotPatchDelegate_104(object P0, ExternalPluginLogoutParams P1); // TypeDefIndex: 81245; 0x00000001826DF780-0x00000001826DF7C0
+
+	public delegate void __HotPatchDelegate_105(object P0, ExternalPluginPayParams P1); // TypeDefIndex: 81246; 0x00000001827C6B90-0x00000001827C6BC0
+
+	public delegate bool __HotPatchDelegate_106(object P0, object P1, out SDKMeta P2); // TypeDefIndex: 81247; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate LoginWorkFlow.ENode __HotPatchDelegate_107(object P0); // TypeDefIndex: 81248; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_108(ref LoginWorkFlow.FWork P0, int P1); // TypeDefIndex: 81249; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_109(object P0, LoginWorkFlow.ENode P1, bool P2); // TypeDefIndex: 81250; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate HGDownloader.DownloadProgress __HotPatchDelegate_110(object P0); // TypeDefIndex: 81251; 0x00000001811D4E00-0x00000001811D4E40
+
+	public delegate HGDownloader.WorkState __HotPatchDelegate_111(object P0); // TypeDefIndex: 81252; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate List<HGFileInfo> __HotPatchDelegate_112(object P0, object P1); // TypeDefIndex: 81253; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate List<HGFolder> __HotPatchDelegate_113(object P0, object P1); // TypeDefIndex: 81254; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_114(object P0, HGRetCodeType P1, int P2); // TypeDefIndex: 81255; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate string __HotPatchDelegate_115(double P0); // TypeDefIndex: 81256; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_116(object P0, long P1, object P2, object P3, object P4, object P5); // TypeDefIndex: 81257; 0x0000000181256340-0x0000000181256360
+
+	public delegate void __HotPatchDelegate_117(object P0, HGDownloader.PauseReason P1); // TypeDefIndex: 81258; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_118(object P0, object P1, out LoginGameUpdater.HGLatestGameInfo P2); // TypeDefIndex: 81259; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate IEnumerator __HotPatchDelegate_119(object P0, long P1, object P2); // TypeDefIndex: 81260; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_120(object P0, long P1, long P2, long P3); // TypeDefIndex: 81261; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate IEnumerator __HotPatchDelegate_121(object P0, long P1); // TypeDefIndex: 81262; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginGameUpdater.ResAction __HotPatchDelegate_122(object P0); // TypeDefIndex: 81263; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_123(object P0, LoginGameUpdater.ResAction P1); // TypeDefIndex: 81264; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_124(object P0, long P1, int P2, ref int P3); // TypeDefIndex: 81265; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_125(long P0, int P1, ref int P2); // TypeDefIndex: 81266; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_126(ref bool P0, int P1, int P2); // TypeDefIndex: 81267; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate string __HotPatchDelegate_127(int P0); // TypeDefIndex: 81268; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate IEnumerator __HotPatchDelegate_128(object P0, int P1, object P2); // TypeDefIndex: 81269; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate int __HotPatchDelegate_129(long P0, long P1); // TypeDefIndex: 81270; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_130(object P0, int P1, long P2, long P3); // TypeDefIndex: 81271; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate int __HotPatchDelegate_131(long P0); // TypeDefIndex: 81272; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_132(object P0, object P1, long P2, long P3); // TypeDefIndex: 81273; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate IEnumerator __HotPatchDelegate_133(object P0, long P1, bool P2, object P3); // TypeDefIndex: 81274; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_134(object P0, long P1, long P2); // TypeDefIndex: 81275; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_135(object P0, long P1, long P2, int P3); // TypeDefIndex: 81276; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_136(long P0); // TypeDefIndex: 81277; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_137(ref bool P0, long P1, long P2, int P3); // TypeDefIndex: 81278; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate void __HotPatchDelegate_138(long P0, long P1, long P2, long P3, ref int P4); // TypeDefIndex: 81279; 0x00000001812083C0-0x00000001812083E0
+
+	public delegate bool __HotPatchDelegate_139(int P0); // TypeDefIndex: 81280; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_140(object P0, object P1, out string P2); // TypeDefIndex: 81281; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate double __HotPatchDelegate_141(object P0); // TypeDefIndex: 81282; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate bool __HotPatchDelegate_142(bool P0); // TypeDefIndex: 81283; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate string __HotPatchDelegate_143(object P0, bool P1); // TypeDefIndex: 81284; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginHotUpdater.HotUpdateInfo __HotPatchDelegate_144(object P0, bool P1); // TypeDefIndex: 81285; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate string __HotPatchDelegate_145(object P0, object P1, bool P2); // TypeDefIndex: 81286; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate IEnumerator __HotPatchDelegate_146(object P0, object P1, bool P2, object P3); // TypeDefIndex: 81287; 0x00000001811CDB70-0x00000001811CDB90
+
+	public delegate IEnumerator __HotPatchDelegate_147(bool P0, object P1, object P2); // TypeDefIndex: 81288; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate LocalResPref __HotPatchDelegate_148(object P0, bool P1, object P2, FResourceDiff P3, out int P4); // TypeDefIndex: 81289; 0x00000001827C6BC0-0x00000001827C6C30
+
+	public delegate void __HotPatchDelegate_149(object P0, ref bool P1, double P2, double P3, int P4, bool P5); // TypeDefIndex: 81290; 0x00000001827C6C30-0x00000001827C6C50
+
+	public delegate bool __HotPatchDelegate_150(object P0, EVFSBlockType P1); // TypeDefIndex: 81291; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate IEnumerator __HotPatchDelegate_151(object P0, object P1, bool P2, bool P3); // TypeDefIndex: 81292; 0x0000000181217F60-0x0000000181217F80
+
+	public delegate LoginHotUpdater __HotPatchDelegate_152(object P0, bool P1); // TypeDefIndex: 81293; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginProgress.FDownloadSize.EUnit __HotPatchDelegate_153(double P0); // TypeDefIndex: 81294; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate float __HotPatchDelegate_154(double P0, LoginProgress.FDownloadSize.EUnit P1); // TypeDefIndex: 81295; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate string __HotPatchDelegate_155(float P0, float P1, LoginProgress.FDownloadSize.EUnit P2); // TypeDefIndex: 81296; 0x0000000182235E70-0x0000000182235E90
+
+	public delegate string __HotPatchDelegate_156(float P0, LoginProgress.FDownloadSize.EUnit P1); // TypeDefIndex: 81297; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate string __HotPatchDelegate_157(float P0, float P1); // TypeDefIndex: 81298; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_158(ref LoginProgress.FDownloadSize P0, double P1, double P2, double P3); // TypeDefIndex: 81299; 0x00000001812250A0-0x00000001812250C0
+
+	public delegate void __HotPatchDelegate_159(ref LoginProgress.FDownloadSize P0, double P1, double P2); // TypeDefIndex: 81300; 0x000000018238E680-0x000000018238E6A0
+
+	public delegate void __HotPatchDelegate_160(ref LoginProgress.FDownloadSize P0); // TypeDefIndex: 81301; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_161(object P0, GameAppExitCode P1); // TypeDefIndex: 81302; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_162(object P0, out string P1); // TypeDefIndex: 81303; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate bool __HotPatchDelegate_163(ref LoginViewModel.FAgeTipsPolicy P0); // TypeDefIndex: 81304; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate LoginViewModel.FAgeTipsPolicy __HotPatchDelegate_164(); // TypeDefIndex: 81305; 0x00000001827C6C50-0x00000001827C6C90
+
+	public delegate LoginWorkFlow.Node[] __HotPatchDelegate_165(object P0); // TypeDefIndex: 81306; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate float __HotPatchDelegate_166(object P0, out bool P1); // TypeDefIndex: 81307; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate TickType __HotPatchDelegate_167(object P0); // TypeDefIndex: 81308; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate UIAnimationMixPlayer __HotPatchDelegate_168(object P0); // TypeDefIndex: 81309; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_169(object P0, LoginSceneAnimCtrl.EState P1); // TypeDefIndex: 81310; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate List<string> __HotPatchDelegate_170(object P0); // TypeDefIndex: 81311; 0x0000000185B78EA0-0x0000000185B78EB0
+
+	public delegate void __HotPatchDelegate_171(object P0, LoginViewModel.FAgeTipsPolicy P1); // TypeDefIndex: 81312; 0x00000001827C6C90-0x00000001827C6CC0
+
+	public delegate void __HotPatchDelegate_172(object P0, object P1, bool P2, bool P3); // TypeDefIndex: 81313; 0x0000000181217F60-0x0000000181217F80
+
+	public delegate void __HotPatchDelegate_173(object P0, in EventData<bool> P1); // TypeDefIndex: 81314; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate LoginMockUIDPanel __HotPatchDelegate_174(); // TypeDefIndex: 81315; 0x0000000185B44B70-0x0000000185B44B80
+
+	public delegate void __HotPatchDelegate_175(object P0, in EventData<float> P1); // TypeDefIndex: 81316; 0x00000001859B7730-0x00000001859B7740
+
+	public delegate void __HotPatchDelegate_176(object P0, object P1, object P2, bool P3); // TypeDefIndex: 81317; 0x0000000181217F60-0x0000000181217F80
+
+	public delegate void __HotPatchDelegate_177(object P0, int P1, object P2); // TypeDefIndex: 81318; 0x00000001811DF7F0-0x00000001811DF810
+
+	public delegate void __HotPatchDelegate_178(object P0, EVFSBlockType P1); // TypeDefIndex: 81319; 0x00000001859B7730-0x00000001859B7740
 }

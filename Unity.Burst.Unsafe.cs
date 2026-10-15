@@ -7,34 +7,21 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 
-// Image 168: Unity.Burst.Unsafe.dll - Assembly: Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=null - Types 63981-63983
-[assembly: AssemblyCompany("Microsoft Corporation")]
-[assembly: AssemblyCopyright("\u00A9 Microsoft Corporation.  All rights reserved.")]
-[assembly: AssemblyDescription("System.Runtime.CompilerServices.Unsafe")]
-[assembly: AssemblyFileVersion("4.0.0.0")]
-[assembly: AssemblyInformationalVersion("4.0.0.0")]
-[assembly: AssemblyMetadata(".NETFrameworkAssembly", "")]
-[assembly: AssemblyMetadata("Serviceable", "True")]
-[assembly: AssemblyProduct("Microsoft\u00AE .NET Framework")]
-[assembly: AssemblyTitle("Unity.Burst.Unsafe")]
-[assembly: CLSCompliant(false)]
-[assembly: CompilationRelaxations(8)]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 170: Unity.Burst.Unsafe.dll - Assembly: Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=null - Types 91472-91474
 
 namespace System.Runtime.Versioning
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-	internal sealed class NonVersionableAttribute : Attribute // TypeDefIndex: 63983
+	internal sealed class NonVersionableAttribute : Attribute // TypeDefIndex: 91474
 	{
 		// Constructors
-		public NonVersionableAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public NonVersionableAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
 namespace Unity.Burst
 {
-	internal static class Unsafe // TypeDefIndex: 63982
+	internal static class Unsafe // TypeDefIndex: 91473
 	{
 		// Methods
 		[NonVersionable]

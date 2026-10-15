@@ -10,36 +10,22 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-// Image 79: clipper_library.dll - Assembly: clipper_library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62478-62503
-[assembly: AssemblyCompany("Angus Johnson")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCopyright("Copyright \u00A9 Angus Johnson 2010-14")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyProduct("clipper_library")]
-[assembly: AssemblyTitle("clipper_library")]
-[assembly: AssemblyTrademark("")]
-[assembly: CompilationRelaxations(8)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Guid("51a6bdca-bc4e-4b2c-ae69-36e2497204f2")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName = ".NET Framework 4")]
+// Image 77: clipper_library.dll - Assembly: clipper_library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 89742-89767
 
 namespace ClipperLib
 {
-	public struct DoublePoint // TypeDefIndex: 62479
+	public struct DoublePoint // TypeDefIndex: 89743
 	{
 		// Fields
 		public double X; // 0x00
 		public double Y; // 0x08
 	
 		// Constructors
-		public DoublePoint(double x = 0 /* Metadata: 0x02351B2F */, double y = 0 /* Metadata: 0x02351B37 */); // 0x0000000184D881B0-0x0000000184D881C0
-		public DoublePoint(DoublePoint dp); // 0x0000000184D881A0-0x0000000184D881B0
+		public DoublePoint(double x = 0 /* Metadata: 0x0264A404 */, double y = 0 /* Metadata: 0x0264A40C */); // 0x0000000187235160-0x0000000187235170
+		public DoublePoint(DoublePoint dp); // 0x0000000187235150-0x0000000187235160
 	}
 
-	public class PolyNode // TypeDefIndex: 62480
+	public class PolyNode // TypeDefIndex: 89744
 	{
 		// Fields
 		internal PolyNode m_Parent; // 0x10
@@ -52,52 +38,52 @@ namespace ClipperLib
 		private bool _IsOpen_k__BackingField; // 0x38
 	
 		// Properties
-		public int ChildCount { get; } // 0x00000001867C4EE8-0x00000001867C4F28 
-		public List<PolyNode> Childs { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+		public int ChildCount { get; } // 0x0000000188AAD658-0x0000000188AAD698 
+		public List<PolyNode> Childs { get; } // 0x00000001829600D0-0x00000001829600E0 
 	
 		// Constructors
-		public PolyNode(); // 0x00000001867C4E28-0x00000001867C4EE8
+		public PolyNode(); // 0x0000000188AAD598-0x0000000188AAD658
 	
 		// Methods
-		internal void AddChild(PolyNode Child); // 0x00000001867C4DA0-0x00000001867C4E28
+		internal void AddChild(PolyNode Child); // 0x0000000188AAD510-0x0000000188AAD598
 	}
 
-	internal struct Int128 // TypeDefIndex: 62481
+	internal struct Int128 // TypeDefIndex: 89745
 	{
 		// Fields
 		private long hi; // 0x00
 		private ulong lo; // 0x08
 	
 		// Constructors
-		public Int128(long _hi, ulong _lo); // 0x0000000184D881E0-0x0000000184D881F0
+		public Int128(long _hi, ulong _lo); // 0x0000000187235190-0x00000001872351A0
 	
 		// Methods
-		public static bool operator ==(Int128 val1, Int128 val2); // 0x00000001867C4BB4-0x00000001867C4C4C
-		public override bool Equals(object obj); // 0x00000001867C4A84-0x00000001867C4AF8
-		public override int GetHashCode(); // 0x0000000184D881C0-0x0000000184D881E0
-		public static Int128 operator -(Int128 val); // 0x00000001867C4C4C-0x00000001867C4C78
-		public static Int128 Int128Mul(long lhs, long rhs); // 0x00000001867C4AF8-0x00000001867C4BB4
+		public static bool operator ==(Int128 val1, Int128 val2); // 0x0000000188AAD320-0x0000000188AAD3B8
+		public override bool Equals(object obj); // 0x0000000188AAD1E8-0x0000000188AAD25C
+		public override int GetHashCode(); // 0x0000000187235170-0x0000000187235190
+		public static Int128 operator -(Int128 val); // 0x0000000188AAD3B8-0x0000000188AAD3E8
+		public static Int128 Int128Mul(long lhs, long rhs); // 0x0000000188AAD25C-0x0000000188AAD320
 	}
 
-	public struct IntPoint // TypeDefIndex: 62482
+	public struct IntPoint // TypeDefIndex: 89746
 	{
 		// Fields
 		public long X; // 0x00
 		public long Y; // 0x08
 	
 		// Constructors
-		public IntPoint(long X, long Y); // 0x0000000184D861B0-0x0000000184D861C0
-		public IntPoint(double x, double y); // 0x0000000184D881F0-0x0000000184D88210
-		public IntPoint(IntPoint pt); // 0x0000000184D881A0-0x0000000184D881B0
+		public IntPoint(long X, long Y); // 0x0000000187232F10-0x0000000187232F20
+		public IntPoint(double x, double y); // 0x00000001872351A0-0x00000001872351C0
+		public IntPoint(IntPoint pt); // 0x0000000187235150-0x0000000187235160
 	
 		// Methods
-		public static bool operator ==(IntPoint a, IntPoint b); // 0x00000001867C4D3C-0x00000001867C4D54
-		public static bool operator !=(IntPoint a, IntPoint b); // 0x00000001867C4D54-0x00000001867C4D6C
-		public override bool Equals(object obj); // 0x00000001867C4C78-0x00000001867C4CEC
-		public override int GetHashCode(); // 0x00000001867C4CEC-0x00000001867C4D3C
+		public static bool operator ==(IntPoint a, IntPoint b); // 0x0000000188AAD4AC-0x0000000188AAD4C4
+		public static bool operator !=(IntPoint a, IntPoint b); // 0x0000000188AAD4C4-0x0000000188AAD4DC
+		public override bool Equals(object obj); // 0x0000000188AAD3E8-0x0000000188AAD45C
+		public override int GetHashCode(); // 0x0000000188AAD45C-0x0000000188AAD4AC
 	}
 
-	public struct IntRect // TypeDefIndex: 62483
+	public struct IntRect // TypeDefIndex: 89747
 	{
 		// Fields
 		public long left; // 0x00
@@ -106,10 +92,10 @@ namespace ClipperLib
 		public long bottom; // 0x18
 	
 		// Constructors
-		public IntRect(long l, long t, long r, long b); // 0x0000000184D861C0-0x0000000184D861E0
+		public IntRect(long l, long t, long r, long b); // 0x0000000187232F20-0x0000000187232F40
 	}
 
-	public enum ClipType // TypeDefIndex: 62484
+	public enum ClipType // TypeDefIndex: 89748
 	{
 		ctIntersection = 0,
 		ctUnion = 1,
@@ -117,13 +103,13 @@ namespace ClipperLib
 		ctXor = 3
 	}
 
-	public enum PolyType // TypeDefIndex: 62485
+	public enum PolyType // TypeDefIndex: 89749
 	{
 		ptSubject = 0,
 		ptClip = 1
 	}
 
-	public enum PolyFillType // TypeDefIndex: 62486
+	public enum PolyFillType // TypeDefIndex: 89750
 	{
 		pftEvenOdd = 0,
 		pftNonZero = 1,
@@ -131,14 +117,14 @@ namespace ClipperLib
 		pftNegative = 3
 	}
 
-	public enum JoinType // TypeDefIndex: 62487
+	public enum JoinType // TypeDefIndex: 89751
 	{
 		jtSquare = 0,
 		jtRound = 1,
 		jtMiter = 2
 	}
 
-	public enum EndType // TypeDefIndex: 62488
+	public enum EndType // TypeDefIndex: 89752
 	{
 		etClosedPolygon = 0,
 		etClosedLine = 1,
@@ -147,19 +133,19 @@ namespace ClipperLib
 		etOpenRound = 4
 	}
 
-	internal enum EdgeSide // TypeDefIndex: 62489
+	internal enum EdgeSide // TypeDefIndex: 89753
 	{
 		esLeft = 0,
 		esRight = 1
 	}
 
-	internal enum Direction // TypeDefIndex: 62490
+	internal enum Direction // TypeDefIndex: 89754
 	{
 		dRightToLeft = 0,
 		dLeftToRight = 1
 	}
 
-	internal class TEdge // TypeDefIndex: 62491
+	internal class TEdge // TypeDefIndex: 89755
 	{
 		// Fields
 		internal IntPoint Bot; // 0x10
@@ -182,10 +168,10 @@ namespace ClipperLib
 		internal TEdge PrevInSEL; // 0xA0
 	
 		// Constructors
-		public TEdge(); // 0x00000001841E1670-0x00000001841E1680
+		public TEdge(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class IntersectNode // TypeDefIndex: 62492
+	public class IntersectNode // TypeDefIndex: 89756
 	{
 		// Fields
 		internal TEdge Edge1; // 0x10
@@ -193,19 +179,19 @@ namespace ClipperLib
 		internal IntPoint Pt; // 0x20
 	
 		// Constructors
-		public IntersectNode(); // 0x00000001841E1670-0x00000001841E1680
+		public IntersectNode(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class MyIntersectNodeSort : IComparer<ClipperLib.IntersectNode> // TypeDefIndex: 62493
+	public class MyIntersectNodeSort : IComparer<ClipperLib.IntersectNode> // TypeDefIndex: 89757
 	{
 		// Constructors
-		public MyIntersectNodeSort(); // 0x00000001841E1670-0x00000001841E1680
+		public MyIntersectNodeSort(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public int Compare(IntersectNode node1, IntersectNode node2); // 0x00000001867C4D6C-0x00000001867C4DA0
+		public int Compare(IntersectNode node1, IntersectNode node2); // 0x0000000188AAD4DC-0x0000000188AAD510
 	}
 
-	internal class LocalMinima // TypeDefIndex: 62494
+	internal class LocalMinima // TypeDefIndex: 89758
 	{
 		// Fields
 		internal long Y; // 0x10
@@ -214,20 +200,20 @@ namespace ClipperLib
 		internal LocalMinima Next; // 0x28
 	
 		// Constructors
-		public LocalMinima(); // 0x00000001841E1670-0x00000001841E1680
+		public LocalMinima(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal class Scanbeam // TypeDefIndex: 62495
+	internal class Scanbeam // TypeDefIndex: 89759
 	{
 		// Fields
 		internal long Y; // 0x10
 		internal Scanbeam Next; // 0x18
 	
 		// Constructors
-		public Scanbeam(); // 0x00000001841E1670-0x00000001841E1680
+		public Scanbeam(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal class Maxima // TypeDefIndex: 62496
+	internal class Maxima // TypeDefIndex: 89760
 	{
 		// Fields
 		internal long X; // 0x10
@@ -235,10 +221,10 @@ namespace ClipperLib
 		internal Maxima Prev; // 0x20
 	
 		// Constructors
-		public Maxima(); // 0x00000001841E1670-0x00000001841E1680
+		public Maxima(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal class OutRec // TypeDefIndex: 62497
+	internal class OutRec // TypeDefIndex: 89761
 	{
 		// Fields
 		internal int Idx; // 0x10
@@ -250,10 +236,10 @@ namespace ClipperLib
 		internal PolyNode PolyNode; // 0x30
 	
 		// Constructors
-		public OutRec(); // 0x00000001841E1670-0x00000001841E1680
+		public OutRec(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal class OutPt // TypeDefIndex: 62498
+	internal class OutPt // TypeDefIndex: 89762
 	{
 		// Fields
 		internal int Idx; // 0x10
@@ -262,10 +248,10 @@ namespace ClipperLib
 		internal OutPt Prev; // 0x30
 	
 		// Constructors
-		public OutPt(); // 0x00000001841E1670-0x00000001841E1680
+		public OutPt(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	internal class Join // TypeDefIndex: 62499
+	internal class Join // TypeDefIndex: 89763
 	{
 		// Fields
 		internal OutPt OutPt1; // 0x10
@@ -273,10 +259,10 @@ namespace ClipperLib
 		internal IntPoint OffPt; // 0x20
 	
 		// Constructors
-		public Join(); // 0x00000001841E1670-0x00000001841E1680
+		public Join(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class ClipperBase // TypeDefIndex: 62500
+	public class ClipperBase // TypeDefIndex: 89764
 	{
 		// Fields
 		internal LocalMinima m_MinimaList; // 0x10
@@ -291,46 +277,46 @@ namespace ClipperLib
 		private bool _PreserveCollinear_k__BackingField; // 0x42
 	
 		// Properties
-		public bool PreserveCollinear { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86F30-0x0000000184D86F40 0x0000000184D86F50-0x0000000184D86F60
+		public bool PreserveCollinear { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872338B0-0x00000001872338C0 0x00000001872338C0-0x00000001872338D0
 	
 		// Constructors
-		internal ClipperBase(); // 0x00000001867BADB8-0x00000001867BAE50
+		internal ClipperBase(); // 0x0000000188AA341C-0x0000000188AA34BC
 	
 		// Methods
-		internal static bool near_zero(double val); // 0x00000001867BAE50-0x00000001867BAE70
-		public void Swap(ref long val1, ref long val2); // 0x0000000184D88130-0x0000000184D88140
-		internal static bool IsHorizontal(TEdge e); // 0x00000001867B9E34-0x00000001867B9E50
-		internal static bool SlopesEqual(TEdge e1, TEdge e2, bool UseFullRange); // 0x00000001867BA764-0x00000001867BA818
-		internal static bool SlopesEqual(IntPoint pt1, IntPoint pt2, IntPoint pt3, bool UseFullRange); // 0x00000001867BA6B0-0x00000001867BA764
-		internal static bool SlopesEqual(IntPoint pt1, IntPoint pt2, IntPoint pt3, IntPoint pt4, bool UseFullRange); // 0x00000001867BA818-0x00000001867BA8DC
-		public virtual void Clear(); // 0x00000001867B93B0-0x00000001867B94FC
-		private void DisposeLocalMinimaList(); // 0x00000001867B9668-0x00000001867B96BC
-		private void RangeTest(IntPoint Pt, ref bool useFullRange); // 0x00000001867BA468-0x00000001867BA53C
-		private void InitEdge(TEdge e, TEdge eNext, TEdge ePrev, IntPoint pt); // 0x00000001867B9C44-0x00000001867B9C8C
-		private void InitEdge2(TEdge e, PolyType polyType); // 0x00000001867B9BCC-0x00000001867B9C44
-		private TEdge FindNextLocMin(TEdge E); // 0x00000001867B9748-0x00000001867B9870
-		private TEdge ProcessBound(TEdge E, bool LeftBoundIsForward); // 0x00000001867B9EEC-0x00000001867BA390
-		public bool AddPath(List<IntPoint> pg, PolyType polyType, bool Closed); // 0x00000001867B8810-0x00000001867B92EC
-		public bool AddPaths(List<List<IntPoint>> ppg, PolyType polyType, bool closed); // 0x00000001867B92EC-0x00000001867B93B0
-		internal bool Pt2IsBetweenPt1AndPt3(IntPoint pt1, IntPoint pt2, IntPoint pt3); // 0x00000001867BA390-0x00000001867BA468
-		private TEdge RemoveEdge(TEdge e); // 0x00000001867BA53C-0x00000001867BA59C
-		private void SetDx(TEdge e); // 0x00000001867BA658-0x00000001867BA6B0
-		private void InsertLocalMinima(LocalMinima newLm); // 0x00000001867B9C8C-0x00000001867B9D14
-		internal bool PopLocalMinima(long Y, out LocalMinima current); // 0x00000001867B9E5C-0x00000001867B9EA4
-		private void ReverseHorizontal(TEdge e); // 0x00000001867BA634-0x00000001867BA658
-		internal virtual void Reset(); // 0x00000001867BA59C-0x00000001867BA634
-		public static IntRect GetBounds(List<List<IntPoint>> paths); // 0x00000001867B9870-0x00000001867B9BCC
-		internal void InsertScanbeam(long Y); // 0x00000001867B9D14-0x00000001867B9E34
-		internal bool PopScanbeam(out long Y); // 0x00000001867B9EA4-0x00000001867B9EEC
-		internal bool LocalMinimaPending(); // 0x00000001867B9E50-0x00000001867B9E5C
-		internal OutRec CreateOutRec(); // 0x00000001867B94FC-0x00000001867B95D0
-		internal void DisposeOutRec(int index); // 0x00000001867B96BC-0x00000001867B9748
-		internal void UpdateEdgeIntoAEL(ref TEdge e); // 0x00000001867BAB78-0x00000001867BADB8
-		internal void SwapPositionsInAEL(TEdge edge1, TEdge edge2); // 0x00000001867BA8DC-0x00000001867BAB78
-		internal void DeleteFromAEL(TEdge e); // 0x00000001867B95D0-0x00000001867B9668
+		internal static bool near_zero(double val); // 0x0000000188AA34BC-0x0000000188AA34DC
+		public void Swap(ref long val1, ref long val2); // 0x00000001872350E0-0x00000001872350F0
+		internal static bool IsHorizontal(TEdge e); // 0x0000000188AA2504-0x0000000188AA2520
+		internal static bool SlopesEqual(TEdge e1, TEdge e2, bool UseFullRange); // 0x0000000188AA2DE8-0x0000000188AA2E98
+		internal static bool SlopesEqual(IntPoint pt1, IntPoint pt2, IntPoint pt3, bool UseFullRange); // 0x0000000188AA2D58-0x0000000188AA2DE8
+		internal static bool SlopesEqual(IntPoint pt1, IntPoint pt2, IntPoint pt3, IntPoint pt4, bool UseFullRange); // 0x0000000188AA2E98-0x0000000188AA2F44
+		public virtual void Clear(); // 0x0000000188AA1A74-0x0000000188AA1BAC
+		private void DisposeLocalMinimaList(); // 0x0000000188AA1D2C-0x0000000188AA1D88
+		private void RangeTest(IntPoint Pt, ref bool useFullRange); // 0x0000000188AA2B04-0x0000000188AA2BD8
+		private void InitEdge(TEdge e, TEdge eNext, TEdge ePrev, IntPoint pt); // 0x0000000188AA2314-0x0000000188AA235C
+		private void InitEdge2(TEdge e, PolyType polyType); // 0x0000000188AA229C-0x0000000188AA2314
+		private TEdge FindNextLocMin(TEdge E); // 0x0000000188AA1E18-0x0000000188AA1F40
+		private TEdge ProcessBound(TEdge E, bool LeftBoundIsForward); // 0x0000000188AA25B0-0x0000000188AA2A2C
+		public bool AddPath(List<IntPoint> pg, PolyType polyType, bool Closed); // 0x0000000188AA0EBC-0x0000000188AA19AC
+		public bool AddPaths(List<List<IntPoint>> ppg, PolyType polyType, bool closed); // 0x0000000188AA19AC-0x0000000188AA1A74
+		internal bool Pt2IsBetweenPt1AndPt3(IntPoint pt1, IntPoint pt2, IntPoint pt3); // 0x0000000188AA2A2C-0x0000000188AA2B04
+		private TEdge RemoveEdge(TEdge e); // 0x0000000188AA2BD8-0x0000000188AA2C3C
+		private void SetDx(TEdge e); // 0x0000000188AA2D00-0x0000000188AA2D58
+		private void InsertLocalMinima(LocalMinima newLm); // 0x0000000188AA235C-0x0000000188AA23E4
+		internal bool PopLocalMinima(long Y, out LocalMinima current); // 0x0000000188AA2520-0x0000000188AA2568
+		private void ReverseHorizontal(TEdge e); // 0x0000000188AA2CDC-0x0000000188AA2D00
+		internal virtual void Reset(); // 0x0000000188AA2C3C-0x0000000188AA2CDC
+		public static IntRect GetBounds(List<List<IntPoint>> paths); // 0x0000000188AA1F40-0x0000000188AA229C
+		internal void InsertScanbeam(long Y); // 0x0000000188AA23E4-0x0000000188AA2504
+		internal bool PopScanbeam(out long Y); // 0x0000000188AA2568-0x0000000188AA25B0
+		internal bool LocalMinimaPending(); // 0x0000000185B19DF0-0x0000000185B19E00
+		internal OutRec CreateOutRec(); // 0x0000000188AA1BAC-0x0000000188AA1C94
+		internal void DisposeOutRec(int index); // 0x0000000188AA1D88-0x0000000188AA1E18
+		internal void UpdateEdgeIntoAEL(ref TEdge e); // 0x0000000188AA31EC-0x0000000188AA341C
+		internal void SwapPositionsInAEL(TEdge edge1, TEdge edge2); // 0x0000000188AA2F44-0x0000000188AA31EC
+		internal void DeleteFromAEL(TEdge e); // 0x0000000188AA1C94-0x0000000188AA1D2C
 	}
 
-	public class Clipper : ClipperBase // TypeDefIndex: 62501
+	public class Clipper : ClipperBase // TypeDefIndex: 89765
 	{
 		// Fields
 		private ClipType m_ClipType; // 0x48
@@ -350,90 +336,90 @@ namespace ClipperLib
 		private bool _StrictlySimple_k__BackingField; // 0x92
 	
 		// Properties
-		public bool ReverseSolution { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88160-0x0000000184D88170 0x0000000184D88180-0x0000000184D88190
-		public bool StrictlySimple { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88170-0x0000000184D88180 0x0000000184D88190-0x0000000184D881A0
+		public bool ReverseSolution { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187235110-0x0000000187235120 0x0000000187235130-0x0000000187235140
+		public bool StrictlySimple { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187235120-0x0000000187235130 0x0000000187235140-0x0000000187235150
 	
 		// Constructors
-		public Clipper(int InitOptions = 0 /* Metadata: 0x02351B55 */); // 0x00000001867C4888-0x00000001867C4A84
+		public Clipper(int InitOptions = 0 /* Metadata: 0x0264A42A */); // 0x0000000188AACFE0-0x0000000188AAD1E8
 	
 		// Methods
-		private void InsertMaxima(long X); // 0x00000001867C1460-0x00000001867C1590
-		public bool Execute(ClipType clipType, List<List<IntPoint>> solution, PolyFillType subjFillType, PolyFillType clipFillType); // 0x00000001867BF844-0x00000001867BF9D8
-		private bool ExecuteInternal(); // 0x00000001867BF300-0x00000001867BF844
-		private void DisposeAllPolyPts(); // 0x00000001867BEC6C-0x00000001867BECE8
-		private void AddJoin(OutPt Op1, OutPt Op2, IntPoint OffPt); // 0x00000001867BDD98-0x00000001867BDE4C
-		private void AddGhostJoin(OutPt Op, IntPoint OffPt); // 0x00000001867BDCFC-0x00000001867BDD98
-		private void InsertLocalMinimaIntoAEL(long botY); // 0x00000001867C0F6C-0x00000001867C1460
-		private void InsertEdgeIntoAEL(TEdge edge, TEdge startEdge); // 0x00000001867C0DF0-0x00000001867C0F6C
-		private bool E2InsertsBeforeE1(TEdge e1, TEdge e2); // 0x00000001867BF24C-0x00000001867BF2C0
-		private bool IsEvenOddFillType(TEdge edge); // 0x00000001867C1E3C-0x00000001867C1E64
-		private bool IsEvenOddAltFillType(TEdge edge); // 0x00000001867C1E14-0x00000001867C1E3C
-		private bool IsContributing(TEdge edge); // 0x00000001867C1CF8-0x00000001867C1E14
-		private void SetWindingCount(TEdge edge); // 0x00000001867C432C-0x00000001867C4514
-		private void AddEdgeToSEL(TEdge edge); // 0x00000001867BDC50-0x00000001867BDCFC
-		internal bool PopEdgeFromSEL(out TEdge e); // 0x00000001867C31C8-0x00000001867C3250
-		private void CopyAELToSEL(); // 0x00000001867BEC10-0x00000001867BEC6C
-		private void SwapPositionsInSEL(TEdge edge1, TEdge edge2); // 0x00000001867C453C-0x00000001867C47EC
-		private void AddLocalMaxPoly(TEdge e1, TEdge e2, IntPoint pt); // 0x00000001867BDE4C-0x00000001867BDEF8
-		private OutPt AddLocalMinPoly(TEdge e1, TEdge e2, IntPoint pt); // 0x00000001867BDEF8-0x00000001867BE128
-		private OutPt AddOutPt(TEdge e, IntPoint pt); // 0x00000001867BE128-0x00000001867BE370
-		private OutPt GetLastOutPt(TEdge e); // 0x00000001867C09DC-0x00000001867C0A5C
-		private bool HorzSegmentsOverlap(long seg1a, long seg1b, long seg2a, long seg2b); // 0x00000001867C0DB8-0x00000001867C0DF0
-		private void SetHoleState(TEdge e, OutRec outRec); // 0x00000001867C423C-0x00000001867C432C
-		private double GetDx(IntPoint pt1, IntPoint pt2); // 0x00000001867C0954-0x00000001867C098C
-		private bool FirstIsBottomPt(OutPt btmPt1, OutPt btmPt2); // 0x00000001867BF9D8-0x00000001867BFD14
-		private OutPt GetBottomPt(OutPt pp); // 0x00000001867C0860-0x00000001867C0954
-		private OutRec GetLowermostRec(OutRec outRec1, OutRec outRec2); // 0x00000001867C0A5C-0x00000001867C0B2C
-		private bool OutRec1RightOfOutRec2(OutRec outRec1, OutRec outRec2); // 0x00000001867C2DE0-0x00000001867C2E08
-		private OutRec GetOutRec(int idx); // 0x00000001867C0C54-0x00000001867C0CE0
-		private void AppendPolygon(TEdge e1, TEdge e2); // 0x00000001867BE370-0x00000001867BE6A8
-		private void ReversePolyPtLinks(OutPt pp); // 0x00000001867C41F0-0x00000001867C423C
-		private static void SwapSides(TEdge edge1, TEdge edge2); // 0x00000001867C47EC-0x00000001867C4814
-		private static void SwapPolyIndexes(TEdge edge1, TEdge edge2); // 0x00000001867C4514-0x00000001867C453C
-		private void IntersectEdges(TEdge e1, TEdge e2, IntPoint pt); // 0x00000001867C1590-0x00000001867C1A4C
-		private void ProcessHorizontals(); // 0x00000001867C3F34-0x00000001867C3F84
-		private void GetHorzDirection(TEdge HorzEdge, out Direction Dir, out long Left, out long Right); // 0x00000001867C098C-0x00000001867C09DC
-		private void ProcessHorizontal(TEdge horzEdge); // 0x00000001867C3744-0x00000001867C3F34
-		private TEdge GetNextInAEL(TEdge e, Direction Direction); // 0x00000001867C0C24-0x00000001867C0C54
-		private bool IsMaxima(TEdge e, double Y); // 0x00000001867C1E98-0x00000001867C1EC0
-		private bool IsIntermediate(TEdge e, double Y); // 0x00000001867C1E64-0x00000001867C1E98
-		internal TEdge GetMaximaPair(TEdge e); // 0x00000001867C0B74-0x00000001867C0C24
-		internal TEdge GetMaximaPairEx(TEdge e); // 0x00000001867C0B2C-0x00000001867C0B74
-		private bool ProcessIntersections(long topY); // 0x00000001867C4058-0x00000001867C41F0
-		private void BuildIntersectList(long topY); // 0x00000001867BE860-0x00000001867BEA54
-		private bool EdgesAdjacent(IntersectNode inode); // 0x00000001867BF2C0-0x00000001867BF300
-		private bool FixupIntersectionOrder(); // 0x00000001867C0350-0x00000001867C0550
-		private void ProcessIntersectList(); // 0x00000001867C3F84-0x00000001867C4058
-		internal static long Round(double value); // 0x00000001867BDB50-0x00000001867BDB74
-		private static long TopX(TEdge edge, long currentY); // 0x00000001867C4814-0x00000001867C4858
-		private void IntersectPoint(TEdge edge1, TEdge edge2, out IntPoint ip); // 0x00000001867C1A4C-0x00000001867C1CF8
-		private void ProcessEdgesAtTopOfScanbeam(long topY); // 0x00000001867C3250-0x00000001867C3744
-		private void DoMaxima(TEdge e); // 0x00000001867BECE8-0x00000001867BEEC8
-		public static bool Orientation(List<IntPoint> poly); // 0x00000001867C2DC4-0x00000001867C2DE0
-		private int PointCount(OutPt pts); // 0x00000001867C2E24-0x00000001867C2E50
-		private void BuildResult(List<List<IntPoint>> polyg); // 0x00000001867BEA54-0x00000001867BEC10
-		private void FixupOutPolyline(OutRec outrec); // 0x00000001867C0770-0x00000001867C0860
-		private void FixupOutPolygon(OutRec outRec); // 0x00000001867C0550-0x00000001867C0770
-		private OutPt DupOutPt(OutPt outPt, bool InsertAfter); // 0x00000001867BF150-0x00000001867BF24C
-		private bool GetOverlap(long a1, long a2, long b1, long b2, out long Left, out long Right); // 0x00000001867C0CE0-0x00000001867C0DB8
-		private bool JoinHorz(OutPt op1, OutPt op1b, OutPt op2, OutPt op2b, IntPoint Pt, bool DiscardLeft); // 0x00000001867C226C-0x00000001867C265C
-		private bool JoinPoints(Join j, OutRec outRec1, OutRec outRec2); // 0x00000001867C265C-0x00000001867C2DC4
-		public static int PointInPolygon(IntPoint pt, List<IntPoint> path); // 0x00000001867C2E50-0x00000001867C3028
-		private static int PointInPolygon(IntPoint pt, OutPt op); // 0x00000001867C3028-0x00000001867C3164
-		private static bool Poly2ContainsPoly1(OutPt outPt1, OutPt outPt2); // 0x00000001867C3164-0x00000001867C31C8
-		private void FixupFirstLefts1(OutRec OldOutRec, OutRec NewOutRec); // 0x00000001867BFD14-0x00000001867BFED4
-		private void FixupFirstLefts2(OutRec innerOutRec, OutRec outerOutRec); // 0x00000001867BFED4-0x00000001867C01B8
-		private void FixupFirstLefts3(OutRec OldOutRec, OutRec NewOutRec); // 0x00000001867C01B8-0x00000001867C0350
-		private static OutRec ParseFirstLeft(OutRec FirstLeft); // 0x00000001867C2E08-0x00000001867C2E24
-		private void JoinCommonEdges(); // 0x00000001867C1EC0-0x00000001867C226C
-		private void UpdateOutPtIdxs(OutRec outrec); // 0x00000001867C4858-0x00000001867C4888
-		private void DoSimplePolygons(); // 0x00000001867BEEC8-0x00000001867BF150
-		public static double Area(List<IntPoint> poly); // 0x00000001867BE72C-0x00000001867BE860
-		internal double Area(OutRec outRec); // 0x00000001867BE6A8-0x00000001867BE6C8
-		internal double Area(OutPt op); // 0x00000001867BE6C8-0x00000001867BE72C
+		private void InsertMaxima(long X); // 0x0000000188AA9B30-0x0000000188AA9C68
+		public bool Execute(ClipType clipType, List<List<IntPoint>> solution, PolyFillType subjFillType, PolyFillType clipFillType); // 0x0000000188AA7EF0-0x0000000188AA8088
+		private bool ExecuteInternal(); // 0x0000000188AA79A8-0x0000000188AA7EF0
+		private void DisposeAllPolyPts(); // 0x0000000188AA7318-0x0000000188AA7394
+		private void AddJoin(OutPt Op1, OutPt Op2, IntPoint OffPt); // 0x0000000188AA6424-0x0000000188AA64D8
+		private void AddGhostJoin(OutPt Op, IntPoint OffPt); // 0x0000000188AA6388-0x0000000188AA6424
+		private void InsertLocalMinimaIntoAEL(long botY); // 0x0000000188AA9634-0x0000000188AA9B30
+		private void InsertEdgeIntoAEL(TEdge edge, TEdge startEdge); // 0x0000000188AA94B0-0x0000000188AA9634
+		private bool E2InsertsBeforeE1(TEdge e1, TEdge e2); // 0x0000000188AA78FC-0x0000000188AA7970
+		private bool IsEvenOddFillType(TEdge edge); // 0x0000000188AAA56C-0x0000000188AAA594
+		private bool IsEvenOddAltFillType(TEdge edge); // 0x0000000188AAA544-0x0000000188AAA56C
+		private bool IsContributing(TEdge edge); // 0x0000000188AAA420-0x0000000188AAA544
+		private void SetWindingCount(TEdge edge); // 0x0000000188AACA7C-0x0000000188AACC6C
+		private void AddEdgeToSEL(TEdge edge); // 0x0000000188AA62DC-0x0000000188AA6388
+		internal bool PopEdgeFromSEL(out TEdge e); // 0x0000000188AAB900-0x0000000188AAB994
+		private void CopyAELToSEL(); // 0x0000000188AA72BC-0x0000000188AA7318
+		private void SwapPositionsInSEL(TEdge edge1, TEdge edge2); // 0x0000000188AACC94-0x0000000188AACF44
+		private void AddLocalMaxPoly(TEdge e1, TEdge e2, IntPoint pt); // 0x0000000188AA64D8-0x0000000188AA6584
+		private OutPt AddLocalMinPoly(TEdge e1, TEdge e2, IntPoint pt); // 0x0000000188AA6584-0x0000000188AA67C0
+		private OutPt AddOutPt(TEdge e, IntPoint pt); // 0x0000000188AA67C0-0x0000000188AA6A08
+		private OutPt GetLastOutPt(TEdge e); // 0x0000000188AA9094-0x0000000188AA9114
+		private bool HorzSegmentsOverlap(long seg1a, long seg1b, long seg2a, long seg2b); // 0x0000000188AA9478-0x0000000188AA94B0
+		private void SetHoleState(TEdge e, OutRec outRec); // 0x0000000188AAC988-0x0000000188AACA7C
+		private double GetDx(IntPoint pt1, IntPoint pt2); // 0x0000000188AA900C-0x0000000188AA9044
+		private bool FirstIsBottomPt(OutPt btmPt1, OutPt btmPt2); // 0x0000000188AA8088-0x0000000188AA83C4
+		private OutPt GetBottomPt(OutPt pp); // 0x0000000188AA8F18-0x0000000188AA900C
+		private OutRec GetLowermostRec(OutRec outRec1, OutRec outRec2); // 0x0000000188AA9114-0x0000000188AA91EC
+		private bool OutRec1RightOfOutRec2(OutRec outRec1, OutRec outRec2); // 0x0000000188AAB518-0x0000000188AAB540
+		private OutRec GetOutRec(int idx); // 0x0000000188AA9314-0x0000000188AA93A0
+		private void AppendPolygon(TEdge e1, TEdge e2); // 0x0000000188AA6A08-0x0000000188AA6D48
+		private void ReversePolyPtLinks(OutPt pp); // 0x0000000188AAC93C-0x0000000188AAC988
+		private static void SwapSides(TEdge edge1, TEdge edge2); // 0x0000000188AACF44-0x0000000188AACF6C
+		private static void SwapPolyIndexes(TEdge edge1, TEdge edge2); // 0x0000000188AACC6C-0x0000000188AACC94
+		private void IntersectEdges(TEdge e1, TEdge e2, IntPoint pt); // 0x0000000188AA9C68-0x0000000188AAA170
+		private void ProcessHorizontals(); // 0x0000000188AAC684-0x0000000188AAC6D4
+		private void GetHorzDirection(TEdge HorzEdge, out Direction Dir, out long Left, out long Right); // 0x0000000188AA9044-0x0000000188AA9094
+		private void ProcessHorizontal(TEdge horzEdge); // 0x0000000188AABE88-0x0000000188AAC684
+		private TEdge GetNextInAEL(TEdge e, Direction Direction); // 0x0000000188AA92E4-0x0000000188AA9314
+		private bool IsMaxima(TEdge e, double Y); // 0x0000000188AAA5C8-0x0000000188AAA5F0
+		private bool IsIntermediate(TEdge e, double Y); // 0x0000000188AAA594-0x0000000188AAA5C8
+		internal TEdge GetMaximaPair(TEdge e); // 0x0000000188AA9234-0x0000000188AA92E4
+		internal TEdge GetMaximaPairEx(TEdge e); // 0x0000000188AA91EC-0x0000000188AA9234
+		private bool ProcessIntersections(long topY); // 0x0000000188AAC7A4-0x0000000188AAC93C
+		private void BuildIntersectList(long topY); // 0x0000000188AA6F00-0x0000000188AA7100
+		private bool EdgesAdjacent(IntersectNode inode); // 0x0000000188AA7970-0x0000000188AA79A8
+		private bool FixupIntersectionOrder(); // 0x0000000188AA89FC-0x0000000188AA8BFC
+		private void ProcessIntersectList(); // 0x0000000188AAC6D4-0x0000000188AAC7A4
+		internal static long Round(double value); // 0x0000000188AA61DC-0x0000000188AA6200
+		private static long TopX(TEdge edge, long currentY); // 0x0000000188AACF6C-0x0000000188AACFB0
+		private void IntersectPoint(TEdge edge1, TEdge edge2, out IntPoint ip); // 0x0000000188AAA170-0x0000000188AAA420
+		private void ProcessEdgesAtTopOfScanbeam(long topY); // 0x0000000188AAB994-0x0000000188AABE88
+		private void DoMaxima(TEdge e); // 0x0000000188AA7394-0x0000000188AA7578
+		public static bool Orientation(List<IntPoint> poly); // 0x0000000188AAB4FC-0x0000000188AAB518
+		private int PointCount(OutPt pts); // 0x0000000188AAB55C-0x0000000188AAB588
+		private void BuildResult(List<List<IntPoint>> polyg); // 0x0000000188AA7100-0x0000000188AA72BC
+		private void FixupOutPolyline(OutRec outrec); // 0x0000000188AA8E24-0x0000000188AA8F18
+		private void FixupOutPolygon(OutRec outRec); // 0x0000000188AA8BFC-0x0000000188AA8E24
+		private OutPt DupOutPt(OutPt outPt, bool InsertAfter); // 0x0000000188AA7800-0x0000000188AA78FC
+		private bool GetOverlap(long a1, long a2, long b1, long b2, out long Left, out long Right); // 0x0000000188AA93A0-0x0000000188AA9478
+		private bool JoinHorz(OutPt op1, OutPt op1b, OutPt op2, OutPt op2b, IntPoint Pt, bool DiscardLeft); // 0x0000000188AAA99C-0x0000000188AAAD8C
+		private bool JoinPoints(Join j, OutRec outRec1, OutRec outRec2); // 0x0000000188AAAD8C-0x0000000188AAB4FC
+		public static int PointInPolygon(IntPoint pt, List<IntPoint> path); // 0x0000000188AAB588-0x0000000188AAB760
+		private static int PointInPolygon(IntPoint pt, OutPt op); // 0x0000000188AAB760-0x0000000188AAB89C
+		private static bool Poly2ContainsPoly1(OutPt outPt1, OutPt outPt2); // 0x0000000188AAB89C-0x0000000188AAB900
+		private void FixupFirstLefts1(OutRec OldOutRec, OutRec NewOutRec); // 0x0000000188AA83C4-0x0000000188AA857C
+		private void FixupFirstLefts2(OutRec innerOutRec, OutRec outerOutRec); // 0x0000000188AA857C-0x0000000188AA8870
+		private void FixupFirstLefts3(OutRec OldOutRec, OutRec NewOutRec); // 0x0000000188AA8870-0x0000000188AA89FC
+		private static OutRec ParseFirstLeft(OutRec FirstLeft); // 0x0000000188AAB540-0x0000000188AAB55C
+		private void JoinCommonEdges(); // 0x0000000188AAA5F0-0x0000000188AAA99C
+		private void UpdateOutPtIdxs(OutRec outrec); // 0x0000000188AACFB0-0x0000000188AACFE0
+		private void DoSimplePolygons(); // 0x0000000188AA7578-0x0000000188AA7800
+		public static double Area(List<IntPoint> poly); // 0x0000000188AA6DCC-0x0000000188AA6F00
+		internal double Area(OutRec outRec); // 0x0000000188AA6D48-0x0000000188AA6D68
+		internal double Area(OutPt op); // 0x0000000188AA6D68-0x0000000188AA6DCC
 	}
 
-	public class ClipperOffset // TypeDefIndex: 62502
+	public class ClipperOffset // TypeDefIndex: 89766
 	{
 		// Fields
 		private List<List<IntPoint>> m_destPolys; // 0x10
@@ -452,34 +438,34 @@ namespace ClipperLib
 		private double _ArcTolerance_k__BackingField; // 0x78
 		[CompilerGenerated]
 		private double _MiterLimit_k__BackingField; // 0x80
-		private const double two_pi = 6.283185307179586; // Metadata: 0x02351B66
-		private const double def_arc_tolerance = 0.25; // Metadata: 0x02351B6E
+		private const double two_pi = 6.283185307179586; // Metadata: 0x0264A43B
+		private const double def_arc_tolerance = 0.25; // Metadata: 0x0264A443
 	
 		// Properties
-		public double ArcTolerance { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86E70-0x0000000184D86E80 0x0000000184D86EC0-0x0000000184D86ED0
-		public double MiterLimit { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88140-0x0000000184D88150 0x0000000184D88150-0x0000000184D88160
+		public double ArcTolerance { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872337B0-0x00000001872337C0 0x0000000187233800-0x0000000187233810
+		public double MiterLimit { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872350F0-0x0000000187235100 0x0000000187235100-0x0000000187235110
 	
 		// Constructors
-		public ClipperOffset(double miterLimit = 2 /* Metadata: 0x02351B56 */, double arcTolerance = 0.25 /* Metadata: 0x02351B5E */); // 0x00000001867BDB74-0x00000001867BDC50
+		public ClipperOffset(double miterLimit = 2 /* Metadata: 0x0264A42B */, double arcTolerance = 0.25 /* Metadata: 0x0264A433 */); // 0x0000000188AA6200-0x0000000188AA62DC
 	
 		// Methods
-		public void Clear(); // 0x00000001867BB418-0x00000001867BB46C
-		internal static long Round(double value); // 0x00000001867BDB50-0x00000001867BDB74
-		public void AddPath(List<IntPoint> path, JoinType joinType, EndType endType); // 0x00000001867BAE70-0x00000001867BB2E0
-		public void AddPaths(List<List<IntPoint>> paths, JoinType joinType, EndType endType); // 0x00000001867BB2E0-0x00000001867BB418
-		private void FixOrientations(); // 0x00000001867BD254-0x00000001867BD3EC
-		internal static DoublePoint GetUnitNormal(IntPoint pt1, IntPoint pt2); // 0x00000001867BD3EC-0x00000001867BD4C8
-		private void DoOffset(double delta); // 0x00000001867BB63C-0x00000001867BC7D8
-		public void Execute(ref List<List<IntPoint>> solution, double delta); // 0x00000001867BCF78-0x00000001867BD254
-		private void OffsetPoint(int j, ref int k, JoinType jointype); // 0x00000001867BD4C8-0x00000001867BDB50
-		internal void DoSquare(int j, int k); // 0x00000001867BCB78-0x00000001867BCF78
-		internal void DoMiter(int j, int k, double r); // 0x00000001867BB46C-0x00000001867BB63C
-		internal void DoRound(int j, int k); // 0x00000001867BC7D8-0x00000001867BCB78
+		public void Clear(); // 0x0000000188AA3A9C-0x0000000188AA3AF4
+		internal static long Round(double value); // 0x0000000188AA61DC-0x0000000188AA6200
+		public void AddPath(List<IntPoint> path, JoinType joinType, EndType endType); // 0x0000000188AA34DC-0x0000000188AA394C
+		public void AddPaths(List<List<IntPoint>> paths, JoinType joinType, EndType endType); // 0x0000000188AA394C-0x0000000188AA3A9C
+		private void FixOrientations(); // 0x0000000188AA58E0-0x0000000188AA5A78
+		internal static DoublePoint GetUnitNormal(IntPoint pt1, IntPoint pt2); // 0x0000000188AA5A78-0x0000000188AA5B54
+		private void DoOffset(double delta); // 0x0000000188AA3CC4-0x0000000188AA4E64
+		public void Execute(ref List<List<IntPoint>> solution, double delta); // 0x0000000188AA55F8-0x0000000188AA58E0
+		private void OffsetPoint(int j, ref int k, JoinType jointype); // 0x0000000188AA5B54-0x0000000188AA61DC
+		internal void DoSquare(int j, int k); // 0x0000000188AA51F8-0x0000000188AA55F8
+		internal void DoMiter(int j, int k, double r); // 0x0000000188AA3AF4-0x0000000188AA3CC4
+		internal void DoRound(int j, int k); // 0x0000000188AA4E64-0x0000000188AA51F8
 	}
 
-	internal class ClipperException : Exception // TypeDefIndex: 62503
+	internal class ClipperException : Exception // TypeDefIndex: 89767
 	{
 		// Constructors
-		public ClipperException(string description); // 0x00000001867C4F28-0x00000001867C5514
+		public ClipperException(string description); // 0x0000000188AAD698-0x0000000188AADF74
 	}
 }

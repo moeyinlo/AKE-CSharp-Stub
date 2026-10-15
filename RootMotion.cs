@@ -15,19 +15,16 @@ using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
 
-// Image 27: RootMotion.dll - Assembly: RootMotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 56068-56293
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 28: RootMotion.dll - Assembly: RootMotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 82800-83025
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 56293
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 83025
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_16 CF97ADEEDB59E05BFD73A2B4C2A8885708C4F4F70C84C64B27120E72AB733B72; // 0x00 // Static value (base64): AQAAAAIAAAADAAAABAAAAA== - Metadata: 0x02347974
+	internal static readonly __StaticArrayInitTypeSize_16 CF97ADEEDB59E05BFD73A2B4C2A8885708C4F4F70C84C64B27120E72AB733B72; // 0x00 // Static value (base64): AQAAAAIAAAADAAAABAAAAA== - Metadata: 0x026417B0
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 56292
+	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 83024
 	{
 	}
 }
@@ -36,7 +33,7 @@ namespace RootMotion
 {
 	[AddComponentMenu("Scripts/RootMotion/Baker")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page3.html")]
-	public abstract class Baker : MonoBehaviour // TypeDefIndex: 56075
+	public abstract class Baker : MonoBehaviour // TypeDefIndex: 82807
 	{
 		// Fields
 		[Range(1f, 90f)]
@@ -76,13 +73,13 @@ namespace RootMotion
 		protected bool addLoopFrame; // 0x8C
 	
 		// Properties
-		public bool isBaking { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86800-0x0000000184D86810 0x0000000184D86840-0x0000000184D86850
-		public float bakingProgress { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86E00-0x0000000184D86E10 0x0000000184D86E10-0x0000000184D86E20
-		protected float clipLength { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8E220-0x0000000184D8E230 0x0000000184D8E250-0x0000000184D8E260
+		public bool isBaking { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DFF0-0x000000018225E000 0x000000018225E000-0x000000018225E010
+		public float bakingProgress { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233590-0x00000001872335A0 0x00000001872335A0-0x00000001872335B0
+		protected float clipLength { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723B540-0x000000018723B550 0x000000018723B570-0x000000018723B580
 	
 		// Nested types
 		[Serializable]
-		public enum Mode // TypeDefIndex: 56069
+		public enum Mode // TypeDefIndex: 82801
 		{
 			AnimationClips = 0,
 			AnimationStates = 1,
@@ -90,10 +87,10 @@ namespace RootMotion
 			Realtime = 3
 		}
 	
-		public delegate void BakerDelegate(AnimationClip clip, float time); // TypeDefIndex: 56070; 0x00000001838E1420-0x00000001838E1430
+		public delegate void BakerDelegate(AnimationClip clip, float time); // TypeDefIndex: 82802; 0x00000001859B7730-0x00000001859B7740
 	
 		[Serializable]
-		public class ClipSettings // TypeDefIndex: 56074
+		public class ClipSettings // TypeDefIndex: 82806
 		{
 			// Fields
 			public bool loopTime; // 0x10
@@ -111,14 +108,14 @@ namespace RootMotion
 	
 			// Nested types
 			[Serializable]
-			public enum BasedUponRotation // TypeDefIndex: 56071
+			public enum BasedUponRotation // TypeDefIndex: 82803
 			{
 				Original = 0,
 				BodyOrientation = 1
 			}
 	
 			[Serializable]
-			public enum BasedUponY // TypeDefIndex: 56072
+			public enum BasedUponY // TypeDefIndex: 82804
 			{
 				Original = 0,
 				CenterOfMass = 1,
@@ -126,39 +123,39 @@ namespace RootMotion
 			}
 	
 			[Serializable]
-			public enum BasedUponXZ // TypeDefIndex: 56073
+			public enum BasedUponXZ // TypeDefIndex: 82805
 			{
 				Original = 0,
 				CenterOfMass = 1
 			}
 	
 			// Constructors
-			public ClipSettings(); // 0x00000001841E1670-0x00000001841E1680
+			public ClipSettings(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		protected Baker(); // 0x000000018ABD7DDC-0x000000018ABD7EC0
+		protected Baker(); // 0x000000018CDCC908-0x000000018CDCC9EC
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018ABD7D74-0x000000018ABD7DA8
+		private void OpenUserManual(); // 0x000000018CDCC8A0-0x000000018CDCC8D4
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018ABD7D40-0x000000018ABD7D74
+		private void OpenScriptReference(); // 0x000000018CDCC86C-0x000000018CDCC8A0
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABD7DA8-0x000000018ABD7DDC
+		private void SupportGroup(); // 0x000000018CDCC8D4-0x000000018CDCC908
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABD7D0C-0x000000018ABD7D40
+		private void ASThread(); // 0x000000018CDCC838-0x000000018CDCC86C
 		protected abstract Transform GetCharacterRoot();
 		protected abstract void OnStartBaking();
 		protected abstract void OnSetLoopFrame(float time);
 		protected abstract void OnSetCurves(ref AnimationClip clip);
 		protected abstract void OnSetKeyframes(float time, bool lastFrame);
-		public void BakeClip(); // 0x00000001841E1670-0x00000001841E1680
-		public void StartBaking(); // 0x00000001841E1670-0x00000001841E1680
-		public void StopBaking(); // 0x00000001841E1670-0x00000001841E1680
+		public void BakeClip(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void StartBaking(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void StopBaking(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
-	public class GenericBaker : Baker // TypeDefIndex: 56076
+	public class GenericBaker : Baker // TypeDefIndex: 82808
 	{
 		// Fields
 		[Tooltip("If true, produced AnimationClips will be marked as Legacy and usable with the Legacy animation system.")]
@@ -176,55 +173,55 @@ namespace RootMotion
 		private int rootChildIndex; // 0xC8
 	
 		// Constructors
-		public GenericBaker(); // 0x000000018ABDE9DC-0x000000018ABDEA38
+		public GenericBaker(); // 0x000000018CDD3658-0x000000018CDD36B8
 	
 		// Methods
-		private void Awake(); // 0x000000018ABDE448-0x000000018ABDE670
-		protected override Transform GetCharacterRoot(); // 0x0000000184D85EE0-0x0000000184D85EF0
-		protected override void OnStartBaking(); // 0x000000018ABDE8E8-0x000000018ABDE9DC
-		protected override void OnSetLoopFrame(float time); // 0x000000018ABDE880-0x000000018ABDE8E8
-		protected override void OnSetCurves(ref AnimationClip clip); // 0x000000018ABDE7B0-0x000000018ABDE818
-		protected override void OnSetKeyframes(float time, bool lastFrame); // 0x000000018ABDE818-0x000000018ABDE880
-		private bool IsIgnored(Transform t); // 0x000000018ABDE710-0x000000018ABDE7B0
-		private bool BakePosition(Transform t); // 0x000000018ABDE670-0x000000018ABDE710
+		private void Awake(); // 0x000000018CDD307C-0x000000018CDD32B0
+		protected override Transform GetCharacterRoot(); // 0x0000000187232C70-0x0000000187232C80
+		protected override void OnStartBaking(); // 0x000000018CDD3558-0x000000018CDD3658
+		protected override void OnSetLoopFrame(float time); // 0x000000018CDD34E8-0x000000018CDD3558
+		protected override void OnSetCurves(ref AnimationClip clip); // 0x000000018CDD3408-0x000000018CDD3478
+		protected override void OnSetKeyframes(float time, bool lastFrame); // 0x000000018CDD3478-0x000000018CDD34E8
+		private bool IsIgnored(Transform t); // 0x000000018CDD335C-0x000000018CDD3408
+		private bool BakePosition(Transform t); // 0x000000018CDD32B0-0x000000018CDD335C
 	}
 
-	public class TQ // TypeDefIndex: 56077
+	public class TQ // TypeDefIndex: 82809
 	{
 		// Fields
 		public Vector3 t; // 0x10
 		public Quaternion q; // 0x1C
 	
 		// Constructors
-		public TQ(); // 0x00000001841E1670-0x00000001841E1680
-		public TQ(Vector3 translation, Quaternion rotation); // 0x0000000184DA9470-0x0000000184DA9490
+		public TQ(); // 0x0000000186805BA0-0x0000000186805BB0
+		public TQ(Vector3 translation, Quaternion rotation); // 0x0000000187257540-0x0000000187257560
 	}
 
-	public class AvatarUtility // TypeDefIndex: 56078
+	public class AvatarUtility // TypeDefIndex: 82810
 	{
 		// Constructors
-		public AvatarUtility(); // 0x00000001841E1670-0x00000001841E1680
+		public AvatarUtility(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static Quaternion GetPostRotation(Avatar avatar, AvatarIKGoal avatarIKGoal); // 0x000000018ABD4100-0x000000018ABD42FC
-		public static TQ GetIKGoalTQ(Avatar avatar, float humanScale, AvatarIKGoal avatarIKGoal, TQ bodyPositionRotation, TQ boneTQ); // 0x000000018ABD3B40-0x000000018ABD4100
-		public static TQ WorldSpaceIKGoalToBone(TQ goalTQ, Avatar avatar, AvatarIKGoal avatarIKGoal); // 0x000000018ABD4480-0x000000018ABD48CC
-		public static TQ GetWorldSpaceIKGoal(BakerHumanoidQT ikQT, BakerHumanoidQT rootQT, float time, float humanScale); // 0x000000018ABD42FC-0x000000018ABD444C
-		public static HumanBodyBones HumanIDFromAvatarIKGoal(AvatarIKGoal avatarIKGoal); // 0x000000018ABD444C-0x000000018ABD4480
+		public static Quaternion GetPostRotation(Avatar avatar, AvatarIKGoal avatarIKGoal); // 0x000000018CDC8B44-0x000000018CDC8D40
+		public static TQ GetIKGoalTQ(Avatar avatar, float humanScale, AvatarIKGoal avatarIKGoal, TQ bodyPositionRotation, TQ boneTQ); // 0x000000018CDC8584-0x000000018CDC8B44
+		public static TQ WorldSpaceIKGoalToBone(TQ goalTQ, Avatar avatar, AvatarIKGoal avatarIKGoal); // 0x000000018CDC8EC0-0x000000018CDC930C
+		public static TQ GetWorldSpaceIKGoal(BakerHumanoidQT ikQT, BakerHumanoidQT rootQT, float time, float humanScale); // 0x000000018CDC8D40-0x000000018CDC8E8C
+		public static HumanBodyBones HumanIDFromAvatarIKGoal(AvatarIKGoal avatarIKGoal); // 0x000000018CDC8E8C-0x000000018CDC8EC0
 	}
 
-	public static class BakerUtilities // TypeDefIndex: 56079
+	public static class BakerUtilities // TypeDefIndex: 82811
 	{
 		// Methods
-		public static void ReduceKeyframes(AnimationCurve curve, float maxError); // 0x000000018ABD7B7C-0x000000018ABD7BBC
-		public static Keyframe[] GetReducedKeyframes(AnimationCurve curve, float maxError); // 0x000000018ABD784C-0x000000018ABD7B7C
-		public static void SetLoopFrame(float time, AnimationCurve curve); // 0x000000018ABD7BBC-0x000000018ABD7D0C
-		public static void SetTangentMode(AnimationCurve curve); // 0x00000001841E1670-0x00000001841E1680
-		public static Quaternion EnsureQuaternionContinuity(Quaternion lastQ, Quaternion q); // 0x000000018ABD76B4-0x000000018ABD784C
+		public static void ReduceKeyframes(AnimationCurve curve, float maxError); // 0x000000018CDCC6A8-0x000000018CDCC6E8
+		public static Keyframe[] GetReducedKeyframes(AnimationCurve curve, float maxError); // 0x000000018CDCC394-0x000000018CDCC6A8
+		public static void SetLoopFrame(float time, AnimationCurve curve); // 0x000000018CDCC6E8-0x000000018CDCC838
+		public static void SetTangentMode(AnimationCurve curve); // 0x0000000186805BA0-0x0000000186805BB0
+		public static Quaternion EnsureQuaternionContinuity(Quaternion lastQ, Quaternion q); // 0x000000018CDCC1FC-0x000000018CDCC394
 	}
 
 	[Serializable]
-	public class BakerHumanoidQT // TypeDefIndex: 56080
+	public class BakerHumanoidQT // TypeDefIndex: 82812
 	{
 		// Fields
 		private Transform transform; // 0x10
@@ -247,27 +244,27 @@ namespace RootMotion
 		private bool lastQSet; // 0x9C
 	
 		// Constructors
-		public BakerHumanoidQT(string name); // 0x000000018ABD5C28-0x000000018ABD5D8C
-		public BakerHumanoidQT(Transform transform, AvatarIKGoal goal, string name); // 0x000000018ABD5D8C-0x000000018ABD5F1C
+		public BakerHumanoidQT(string name); // 0x000000018CDCA744-0x000000018CDCA8A8
+		public BakerHumanoidQT(Transform transform, AvatarIKGoal goal, string name); // 0x000000018CDCA8A8-0x000000018CDCAA38
 	
 		// Methods
-		public Quaternion EvaluateRotation(float time); // 0x000000018ABD4F50-0x000000018ABD5018
-		public Vector3 EvaluatePosition(float time); // 0x000000018ABD4EB4-0x000000018ABD4F50
-		public TQ Evaluate(float time); // 0x000000018ABD5018-0x000000018ABD50B8
-		public void GetCurvesFromClip(AnimationClip clip, Animator animator); // 0x00000001841E1670-0x00000001841E1680
-		public void Reset(); // 0x000000018ABD5230-0x000000018ABD53D0
-		public void SetIKKeyframes(float time, Avatar avatar, Transform root, float humanScale, Vector3 bodyPosition, Quaternion bodyRotation); // 0x000000018ABD576C-0x000000018ABD5AAC
-		public void SetKeyframes(float time, Vector3 pos, Quaternion rot); // 0x000000018ABD5AAC-0x000000018ABD5BA0
-		public void MoveLastKeyframes(float time); // 0x000000018ABD511C-0x000000018ABD51B4
-		public void SetLoopFrame(float time); // 0x000000018ABD5BA0-0x000000018ABD5C28
-		public void SetRootLoopFrame(float time); // 0x00000001841E1670-0x00000001841E1680
-		private void MoveLastKeyframe(float time, AnimationCurve curve); // 0x000000018ABD50B8-0x000000018ABD511C
-		public void MultiplyLength(AnimationCurve curve, float mlp); // 0x000000018ABD51B4-0x000000018ABD5230
-		public void SetCurves(ref AnimationClip clip, float maxError, float lengthMlp); // 0x000000018ABD53D0-0x000000018ABD576C
+		public Quaternion EvaluateRotation(float time); // 0x000000018CDC9A54-0x000000018CDC9B1C
+		public Vector3 EvaluatePosition(float time); // 0x000000018CDC99B8-0x000000018CDC9A54
+		public TQ Evaluate(float time); // 0x000000018CDC9B1C-0x000000018CDC9BBC
+		public void GetCurvesFromClip(AnimationClip clip, Animator animator); // 0x0000000186805BA0-0x0000000186805BB0
+		public void Reset(); // 0x000000018CDC9D34-0x000000018CDC9ED4
+		public void SetIKKeyframes(float time, Avatar avatar, Transform root, float humanScale, Vector3 bodyPosition, Quaternion bodyRotation); // 0x000000018CDCA284-0x000000018CDCA5C8
+		public void SetKeyframes(float time, Vector3 pos, Quaternion rot); // 0x000000018CDCA5C8-0x000000018CDCA6BC
+		public void MoveLastKeyframes(float time); // 0x000000018CDC9C20-0x000000018CDC9CB8
+		public void SetLoopFrame(float time); // 0x000000018CDCA6BC-0x000000018CDCA744
+		public void SetRootLoopFrame(float time); // 0x0000000186805BA0-0x0000000186805BB0
+		private void MoveLastKeyframe(float time, AnimationCurve curve); // 0x000000018CDC9BBC-0x000000018CDC9C20
+		public void MultiplyLength(AnimationCurve curve, float mlp); // 0x000000018CDC9CB8-0x000000018CDC9D34
+		public void SetCurves(ref AnimationClip clip, float maxError, float lengthMlp); // 0x000000018CDC9ED4-0x000000018CDCA284
 	}
 
 	[Serializable]
-	public class BakerMuscle // TypeDefIndex: 56081
+	public class BakerMuscle // TypeDefIndex: 82813
 	{
 		// Fields
 		public AnimationCurve curve; // 0x10
@@ -275,19 +272,19 @@ namespace RootMotion
 		private string propertyName; // 0x20
 	
 		// Constructors
-		public BakerMuscle(int muscleIndex); // 0x000000018ABD6A68-0x000000018ABD6ACC
+		public BakerMuscle(int muscleIndex); // 0x000000018CDCB584-0x000000018CDCB5E8
 	
 		// Methods
-		private string MuscleNameToPropertyName(string n); // 0x000000018ABD5F1C-0x000000018ABD68B8
-		public void MultiplyLength(AnimationCurve curve, float mlp); // 0x000000018ABD51B4-0x000000018ABD5230
-		public void SetCurves(ref AnimationClip clip, float maxError, float lengthMlp); // 0x000000018ABD691C-0x000000018ABD6A18
-		public void Reset(); // 0x000000018ABD68B8-0x000000018ABD691C
-		public void SetKeyframe(float time, float[] muscles); // 0x000000018ABD6A18-0x000000018ABD6A58
-		public void SetLoopFrame(float time); // 0x000000018ABD6A58-0x000000018ABD6A68
+		private string MuscleNameToPropertyName(string n); // 0x000000018CDCAA38-0x000000018CDCB3D4
+		public void MultiplyLength(AnimationCurve curve, float mlp); // 0x000000018CDC9CB8-0x000000018CDC9D34
+		public void SetCurves(ref AnimationClip clip, float maxError, float lengthMlp); // 0x000000018CDCB438-0x000000018CDCB534
+		public void Reset(); // 0x000000018CDCB3D4-0x000000018CDCB438
+		public void SetKeyframe(float time, float[] muscles); // 0x000000018CDCB534-0x000000018CDCB574
+		public void SetLoopFrame(float time); // 0x000000018CDCB574-0x000000018CDCB584
 	}
 
 	[Serializable]
-	public class BakerTransform // TypeDefIndex: 56082
+	public class BakerTransform // TypeDefIndex: 82814
 	{
 		// Fields
 		public Transform transform; // 0x10
@@ -305,19 +302,19 @@ namespace RootMotion
 		private Quaternion relativeRotation; // 0x6C
 	
 		// Constructors
-		public BakerTransform(Transform transform, Transform root, bool recordPosition, bool isRootNode); // 0x000000018ABD762C-0x000000018ABD76B4
+		public BakerTransform(Transform transform, Transform root, bool recordPosition, bool isRootNode); // 0x000000018CDCC174-0x000000018CDCC1FC
 	
 		// Methods
-		public void SetRelativeSpace(Vector3 position, Quaternion rotation); // 0x0000000184DA8EF0-0x0000000184DA8F10
-		public void SetCurves(ref AnimationClip clip); // 0x000000018ABD7150-0x000000018ABD7420
-		private void AddRootMotionCurves(ref AnimationClip clip); // 0x000000018ABD6CA8-0x000000018ABD6F54
-		public void Reset(); // 0x000000018ABD6FD8-0x000000018ABD7150
-		public void ReduceKeyframes(float maxError); // 0x000000018ABD6F54-0x000000018ABD6FD8
-		public void SetKeyframes(float time); // 0x000000018ABD7420-0x000000018ABD762C
-		public void AddLoopFrame(float time); // 0x000000018ABD6ACC-0x000000018ABD6CA8
+		public void SetRelativeSpace(Vector3 position, Quaternion rotation); // 0x0000000187256FC0-0x0000000187256FE0
+		public void SetCurves(ref AnimationClip clip); // 0x000000018CDCBC80-0x000000018CDCBF68
+		private void AddRootMotionCurves(ref AnimationClip clip); // 0x000000018CDCB7C4-0x000000018CDCBA84
+		public void Reset(); // 0x000000018CDCBB08-0x000000018CDCBC80
+		public void ReduceKeyframes(float maxError); // 0x000000018CDCBA84-0x000000018CDCBB08
+		public void SetKeyframes(float time); // 0x000000018CDCBF68-0x000000018CDCC174
+		public void AddLoopFrame(float time); // 0x000000018CDCB5E8-0x000000018CDCB7C4
 	}
 
-	public class HumanoidBaker : Baker // TypeDefIndex: 56083
+	public class HumanoidBaker : Baker // TypeDefIndex: 82815
 	{
 		// Fields
 		[Tooltip("Should the hand IK curves be added to the animation? Disable this if the original hand positions are not important when using the clip on another character via Humanoid retargeting.")]
@@ -343,43 +340,43 @@ namespace RootMotion
 		private Quaternion lastBodyRotation; // 0x128
 	
 		// Constructors
-		public HumanoidBaker(); // 0x000000018ABE010C-0x000000018ABE01A0
+		public HumanoidBaker(); // 0x000000018CDD4E0C-0x000000018CDD4EA0
 	
 		// Methods
-		private void Awake(); // 0x000000018ABDF380-0x000000018ABDF87C
-		protected override Transform GetCharacterRoot(); // 0x000000018ABDF87C-0x000000018ABDF89C
-		protected override void OnStartBaking(); // 0x000000018ABDFF3C-0x000000018ABE0020
-		protected override void OnSetLoopFrame(float time); // 0x000000018ABDFE5C-0x000000018ABDFF3C
-		protected override void OnSetCurves(ref AnimationClip clip); // 0x000000018ABDF89C-0x000000018ABDFAA8
-		protected override void OnSetKeyframes(float time, bool lastFrame); // 0x000000018ABDFAA8-0x000000018ABDFE5C
-		private void UpdateHumanPose(); // 0x000000018ABE0020-0x000000018ABE010C
+		private void Awake(); // 0x000000018CDD4014-0x000000018CDD4530
+		protected override Transform GetCharacterRoot(); // 0x000000018CDD4530-0x000000018CDD4550
+		protected override void OnStartBaking(); // 0x000000018CDD4C2C-0x000000018CDD4D1C
+		protected override void OnSetLoopFrame(float time); // 0x000000018CDD4B40-0x000000018CDD4C2C
+		protected override void OnSetCurves(ref AnimationClip clip); // 0x000000018CDD4550-0x000000018CDD4778
+		protected override void OnSetKeyframes(float time, bool lastFrame); // 0x000000018CDD4778-0x000000018CDD4B40
+		private void UpdateHumanPose(); // 0x000000018CDD4D1C-0x000000018CDD4E0C
 	}
 
 	[Serializable]
-	public enum Axis // TypeDefIndex: 56084
+	public enum Axis // TypeDefIndex: 82816
 	{
 		X = 0,
 		Y = 1,
 		Z = 2
 	}
 
-	public class AxisTools // TypeDefIndex: 56085
+	public class AxisTools // TypeDefIndex: 82817
 	{
 		// Constructors
-		public AxisTools(); // 0x00000001841E1670-0x00000001841E1680
+		public AxisTools(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static Vector3 ToVector3(RootMotion.Axis axis); // 0x000000018ABD4DF4-0x000000018ABD4E34
-		public static RootMotion.Axis ToAxis(Vector3 v); // 0x000000018ABD4DB4-0x000000018ABD4DF4
-		public static RootMotion.Axis GetAxisToPoint(Transform t, Vector3 worldPosition); // 0x000000018ABD49B8-0x000000018ABD4AA4
-		public static RootMotion.Axis GetAxisToDirection(Transform t, Vector3 direction); // 0x000000018ABD48CC-0x000000018ABD49B8
-		public static Vector3 GetAxisVectorToPoint(Transform t, Vector3 worldPosition); // 0x000000018ABD4D04-0x000000018ABD4DB4
-		public static Vector3 GetAxisVectorToDirection(Transform t, Vector3 direction); // 0x000000018ABD4AA4-0x000000018ABD4B10
-		public static Vector3 GetAxisVectorToDirection(Quaternion r, Vector3 direction); // 0x000000018ABD4B10-0x000000018ABD4D04
+		public static Vector3 ToVector3(RootMotion.Axis axis); // 0x000000018CDC9834-0x000000018CDC9874
+		public static RootMotion.Axis ToAxis(Vector3 v); // 0x000000018CDC97F4-0x000000018CDC9834
+		public static RootMotion.Axis GetAxisToPoint(Transform t, Vector3 worldPosition); // 0x000000018CDC93F8-0x000000018CDC94E4
+		public static RootMotion.Axis GetAxisToDirection(Transform t, Vector3 direction); // 0x000000018CDC930C-0x000000018CDC93F8
+		public static Vector3 GetAxisVectorToPoint(Transform t, Vector3 worldPosition); // 0x000000018CDC9744-0x000000018CDC97F4
+		public static Vector3 GetAxisVectorToDirection(Transform t, Vector3 direction); // 0x000000018CDC94E4-0x000000018CDC9550
+		public static Vector3 GetAxisVectorToDirection(Quaternion r, Vector3 direction); // 0x000000018CDC9550-0x000000018CDC9744
 	}
 
 	[Serializable]
-	public class BipedLimbOrientations // TypeDefIndex: 56087
+	public class BipedLimbOrientations // TypeDefIndex: 82819
 	{
 		// Fields
 		public LimbOrientation leftArm; // 0x10
@@ -388,12 +385,12 @@ namespace RootMotion
 		public LimbOrientation rightLeg; // 0x28
 	
 		// Properties
-		public static BipedLimbOrientations UMA { get; } // 0x000000018ABD88A8-0x000000018ABD8B38 
-		public static BipedLimbOrientations MaxBiped { get; } // 0x000000018ABD8618-0x000000018ABD88A8 
+		public static BipedLimbOrientations UMA { get; } // 0x000000018CDCD400-0x000000018CDCD694 
+		public static BipedLimbOrientations MaxBiped { get; } // 0x000000018CDCD16C-0x000000018CDCD400 
 	
 		// Nested types
 		[Serializable]
-		public class LimbOrientation // TypeDefIndex: 56086
+		public class LimbOrientation // TypeDefIndex: 82818
 		{
 			// Fields
 			public Vector3 upperBoneForwardAxis; // 0x10
@@ -401,14 +398,14 @@ namespace RootMotion
 			public Vector3 lastBoneLeftAxis; // 0x28
 	
 			// Constructors
-			public LimbOrientation(Vector3 upperBoneForwardAxis, Vector3 lowerBoneForwardAxis, Vector3 lastBoneLeftAxis); // 0x0000000184D8EB70-0x0000000184D8EBB0
+			public LimbOrientation(Vector3 upperBoneForwardAxis, Vector3 lowerBoneForwardAxis, Vector3 lastBoneLeftAxis); // 0x000000018723D660-0x000000018723D6A0
 		}
 	
 		// Constructors
-		public BipedLimbOrientations(LimbOrientation leftArm, LimbOrientation rightArm, LimbOrientation leftLeg, LimbOrientation rightLeg); // 0x00000001832FABF0-0x00000001832FAC40
+		public BipedLimbOrientations(LimbOrientation leftArm, LimbOrientation rightArm, LimbOrientation leftLeg, LimbOrientation rightLeg); // 0x00000001851E8C40-0x00000001851E8C90
 	}
 
-	public static class BipedNaming // TypeDefIndex: 56090
+	public static class BipedNaming // TypeDefIndex: 82822
 	{
 		// Fields
 		public static string[] typeLeft; // 0x00
@@ -432,7 +429,7 @@ namespace RootMotion
 	
 		// Nested types
 		[Serializable]
-		public enum BoneType // TypeDefIndex: 56088
+		public enum BoneType // TypeDefIndex: 82820
 		{
 			Unassigned = 0,
 			Spine = 1,
@@ -444,7 +441,7 @@ namespace RootMotion
 		}
 	
 		[Serializable]
-		public enum BoneSide // TypeDefIndex: 56089
+		public enum BoneSide // TypeDefIndex: 82821
 		{
 			Center = 0,
 			Left = 1,
@@ -452,36 +449,36 @@ namespace RootMotion
 		}
 	
 		// Constructors
-		static BipedNaming(); // 0x000000018ABD91B8-0x000000018ABDA430
+		static BipedNaming(); // 0x000000018CDCDD58-0x000000018CDCEFD0
 	
 		// Methods
-		public static Transform[] GetBonesOfType(BoneType boneType, Transform[] bones); // 0x000000018ABD8ECC-0x000000018ABD901C
-		public static Transform[] GetBonesOfSide(BoneSide boneSide, Transform[] bones); // 0x000000018ABD8D14-0x000000018ABD8E64
-		public static Transform[] GetBonesOfTypeAndSide(BoneType boneType, BoneSide boneSide, Transform[] bones); // 0x000000018ABD8E64-0x000000018ABD8ECC
-		public static Transform GetFirstBoneOfTypeAndSide(BoneType boneType, BoneSide boneSide, Transform[] bones); // 0x000000018ABD901C-0x000000018ABD90A0
-		public static Transform GetNamingMatch(Transform[] transforms, params string[][] namings); // 0x000000018ABD90A0-0x000000018ABD9180
-		public static BoneType GetBoneType(string boneName); // 0x000000018ABD8BA4-0x000000018ABD8C9C
-		public static BoneSide GetBoneSide(string boneName); // 0x000000018ABD8B38-0x000000018ABD8BA4
-		public static Transform GetBone(Transform[] transforms, BoneType boneType, BoneSide boneSide = BoneSide.Center /* Metadata: 0x023478A6 */, params string[][] namings); // 0x000000018ABD8C9C-0x000000018ABD8D14
-		private static bool isLeft(string boneName); // 0x000000018ABDA68C-0x000000018ABDA74C
-		private static bool isRight(string boneName); // 0x000000018ABDA7D4-0x000000018ABDA894
-		private static bool isSpine(string boneName); // 0x000000018ABDA894-0x000000018ABDA91C
-		private static bool isHead(string boneName); // 0x000000018ABDA604-0x000000018ABDA68C
-		private static bool isArm(string boneName); // 0x000000018ABDA4F4-0x000000018ABDA57C
-		private static bool isLeg(string boneName); // 0x000000018ABDA74C-0x000000018ABDA7D4
-		private static bool isTail(string boneName); // 0x000000018ABDA91C-0x000000018ABDA9A4
-		private static bool isEye(string boneName); // 0x000000018ABDA57C-0x000000018ABDA604
-		private static bool isTypeExclude(string boneName); // 0x000000018ABDA9A4-0x000000018ABDA9F8
-		private static bool matchesNaming(string boneName, string[] namingConvention); // 0x000000018ABDAAEC-0x000000018ABDAB9C
-		private static bool excludesNaming(string boneName, string[] namingConvention); // 0x000000018ABDA430-0x000000018ABDA498
-		private static bool matchesLastLetter(string boneName, string[] namingConvention); // 0x000000018ABDAA54-0x000000018ABDAAEC
-		private static bool LastLetterIs(string boneName, string letter); // 0x000000018ABD9180-0x000000018ABD91B8
-		private static string firstLetter(string boneName); // 0x000000018ABDA498-0x000000018ABDA4F4
-		private static string lastLetter(string boneName); // 0x000000018ABDA9F8-0x000000018ABDAA54
+		public static Transform[] GetBonesOfType(BoneType boneType, Transform[] bones); // 0x000000018CDCDA40-0x000000018CDCDBA8
+		public static Transform[] GetBonesOfSide(BoneSide boneSide, Transform[] bones); // 0x000000018CDCD870-0x000000018CDCD9D8
+		public static Transform[] GetBonesOfTypeAndSide(BoneType boneType, BoneSide boneSide, Transform[] bones); // 0x000000018CDCD9D8-0x000000018CDCDA40
+		public static Transform GetFirstBoneOfTypeAndSide(BoneType boneType, BoneSide boneSide, Transform[] bones); // 0x000000018CDCDBA8-0x000000018CDCDC2C
+		public static Transform GetNamingMatch(Transform[] transforms, params string[][] namings); // 0x000000018CDCDC2C-0x000000018CDCDD1C
+		public static BoneType GetBoneType(string boneName); // 0x000000018CDCD700-0x000000018CDCD7F8
+		public static BoneSide GetBoneSide(string boneName); // 0x000000018CDCD694-0x000000018CDCD700
+		public static Transform GetBone(Transform[] transforms, BoneType boneType, BoneSide boneSide = BoneSide.Center /* Metadata: 0x026416DE */, params string[][] namings); // 0x000000018CDCD7F8-0x000000018CDCD870
+		private static bool isLeft(string boneName); // 0x000000018CDCF238-0x000000018CDCF2F8
+		private static bool isRight(string boneName); // 0x000000018CDCF380-0x000000018CDCF440
+		private static bool isSpine(string boneName); // 0x000000018CDCF440-0x000000018CDCF4C8
+		private static bool isHead(string boneName); // 0x000000018CDCF1B0-0x000000018CDCF238
+		private static bool isArm(string boneName); // 0x000000018CDCF0A0-0x000000018CDCF128
+		private static bool isLeg(string boneName); // 0x000000018CDCF2F8-0x000000018CDCF380
+		private static bool isTail(string boneName); // 0x000000018CDCF4C8-0x000000018CDCF550
+		private static bool isEye(string boneName); // 0x000000018CDCF128-0x000000018CDCF1B0
+		private static bool isTypeExclude(string boneName); // 0x000000018CDCF550-0x000000018CDCF5A4
+		private static bool matchesNaming(string boneName, string[] namingConvention); // 0x000000018CDCF6A4-0x000000018CDCF760
+		private static bool excludesNaming(string boneName, string[] namingConvention); // 0x000000018CDCEFD0-0x000000018CDCF044
+		private static bool matchesLastLetter(string boneName, string[] namingConvention); // 0x000000018CDCF600-0x000000018CDCF6A4
+		private static bool LastLetterIs(string boneName, string letter); // 0x000000018CDCDD1C-0x000000018CDCDD58
+		private static string firstLetter(string boneName); // 0x000000018CDCF044-0x000000018CDCF0A0
+		private static string lastLetter(string boneName); // 0x000000018CDCF5A4-0x000000018CDCF600
 	}
 
 	[Serializable]
-	public class BipedReferences // TypeDefIndex: 56092
+	public class BipedReferences // TypeDefIndex: 82824
 	{
 		// Fields
 		public Transform root; // 0x10
@@ -503,104 +500,104 @@ namespace RootMotion
 		public Transform[] eyes; // 0x90
 	
 		// Properties
-		public virtual bool isFilled { get; } // 0x00000001839DCB00-0x00000001839DD2A0 
-		public bool isEmpty { get; } // 0x000000018ABDCCD0-0x000000018ABDCCDC 
+		public virtual bool isFilled { get; } // 0x0000000186A0CB20-0x0000000186A0D2D0 
+		public bool isEmpty { get; } // 0x000000018CDD18F0-0x000000018CDD18FC 
 	
 		// Nested types
-		public struct AutoDetectParams // TypeDefIndex: 56091
+		public struct AutoDetectParams // TypeDefIndex: 82823
 		{
 			// Fields
 			public bool legsParentInSpine; // 0x00
 			public bool includeEyes; // 0x01
 	
 			// Properties
-			public static AutoDetectParams Default { get; } // 0x0000000184DA8EE0-0x0000000184DA8EF0 
+			public static AutoDetectParams Default { get; } // 0x0000000187256FB0-0x0000000187256FC0 
 	
 			// Constructors
-			public AutoDetectParams(bool legsParentInSpine, bool includeEyes); // 0x0000000182BBF3D0-0x0000000182BBF3E0
+			public AutoDetectParams(bool legsParentInSpine, bool includeEyes); // 0x00000001844AD090-0x00000001844AD0A0
 		}
 	
 		// Constructors
-		public BipedReferences(); // 0x00000001839DD730-0x00000001839DD7A0
+		public BipedReferences(); // 0x0000000185CD2640-0x0000000185CD26B0
 	
 		// Methods
-		public virtual bool IsEmpty(bool includeRoot); // 0x000000018ABDC3B0-0x000000018ABDC6BC
-		public virtual bool Contains(Transform t, bool ignoreRoot = false /* Metadata: 0x023478B1 */); // 0x000000018ABDB50C-0x000000018ABDB838
-		public static bool AutoDetectReferences(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams); // 0x000000018ABDB314-0x000000018ABDB50C
-		public static void DetectReferencesByNaming(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams); // 0x000000018ABDB958-0x000000018ABDC0EC
-		public static void AssignHumanoidReferences(ref BipedReferences references, Animator animator, AutoDetectParams autoDetectParams); // 0x000000018ABDAE74-0x000000018ABDB314
-		public static bool SetupError(BipedReferences references, ref string errorMessage); // 0x00000001839DD2A0-0x00000001839DD3C0
-		public static bool SetupWarning(BipedReferences references, ref string warningMessage); // 0x000000018ABDCC04-0x000000018ABDCCD0
-		private static bool IsNeckBone(Transform bone, Transform leftUpperArm); // 0x000000018ABDC6BC-0x000000018ABDC778
-		private static bool AddBoneToEyes(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams); // 0x000000018ABDAB9C-0x000000018ABDAC78
-		private static bool AddBoneToSpine(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams); // 0x000000018ABDAD2C-0x000000018ABDAE74
-		private static void DetectLimb(BipedNaming.BoneType boneType, BipedNaming.BoneSide boneSide, ref Transform firstBone, ref Transform secondBone, ref Transform lastBone, Transform[] transforms); // 0x000000018ABDB838-0x000000018ABDB958
-		private static void AddBoneToHierarchy(ref Transform[] bones, Transform transform); // 0x000000018ABDAC78-0x000000018ABDAD2C
-		private static bool LimbError(Transform bone1, Transform bone2, Transform bone3, ref string errorMessage); // 0x00000001835B1DE0-0x00000001835B22D0
-		private static bool LimbWarning(Transform bone1, Transform bone2, Transform bone3, ref string warningMessage); // 0x000000018ABDC778-0x000000018ABDCA0C
-		private static bool SpineError(BipedReferences references, ref string errorMessage); // 0x00000001839E01C0-0x00000001839E0590
-		private static bool SpineWarning(BipedReferences references, ref string warningMessage); // 0x00000001812081B0-0x0000000181208610
-		private static bool EyesError(BipedReferences references, ref string errorMessage); // 0x00000001839DD3C0-0x00000001839DD470
-		private static bool EyesWarning(BipedReferences references, ref string warningMessage); // 0x00000001812081B0-0x0000000181208610
-		private static bool RootHeightWarning(BipedReferences references, ref string warningMessage); // 0x000000018ABDCA0C-0x000000018ABDCC04
-		private static bool FacingAxisWarning(BipedReferences references, ref string warningMessage); // 0x000000018ABDC0EC-0x000000018ABDC308
-		private static float GetVerticalOffset(Vector3 p1, Vector3 p2, Quaternion rotation); // 0x000000018ABDC308-0x000000018ABDC3B0
+		public virtual bool IsEmpty(bool includeRoot); // 0x000000018CDD0FB4-0x000000018CDD12D0
+		public virtual bool Contains(Transform t, bool ignoreRoot = false /* Metadata: 0x026416E9 */); // 0x000000018CDD00DC-0x000000018CDD040C
+		public static bool AutoDetectReferences(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams); // 0x000000018CDCFED8-0x000000018CDD00DC
+		public static void DetectReferencesByNaming(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams); // 0x000000018CDD052C-0x000000018CDD0CF0
+		public static void AssignHumanoidReferences(ref BipedReferences references, Animator animator, AutoDetectParams autoDetectParams); // 0x000000018CDCFA38-0x000000018CDCFED8
+		public static bool SetupError(BipedReferences references, ref string errorMessage); // 0x0000000185A167D0-0x0000000185A168F0
+		public static bool SetupWarning(BipedReferences references, ref string warningMessage); // 0x000000018CDD1818-0x000000018CDD18F0
+		private static bool IsNeckBone(Transform bone, Transform leftUpperArm); // 0x000000018CDD12D0-0x000000018CDD138C
+		private static bool AddBoneToEyes(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams); // 0x000000018CDCF760-0x000000018CDCF83C
+		private static bool AddBoneToSpine(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams); // 0x000000018CDCF8F0-0x000000018CDCFA38
+		private static void DetectLimb(BipedNaming.BoneType boneType, BipedNaming.BoneSide boneSide, ref Transform firstBone, ref Transform secondBone, ref Transform lastBone, Transform[] transforms); // 0x000000018CDD040C-0x000000018CDD052C
+		private static void AddBoneToHierarchy(ref Transform[] bones, Transform transform); // 0x000000018CDCF83C-0x000000018CDCF8F0
+		private static bool LimbError(Transform bone1, Transform bone2, Transform bone3, ref string errorMessage); // 0x0000000185A15E90-0x0000000185A16390
+		private static bool LimbWarning(Transform bone1, Transform bone2, Transform bone3, ref string warningMessage); // 0x000000018CDD138C-0x000000018CDD1620
+		private static bool SpineError(BipedReferences references, ref string errorMessage); // 0x0000000185CD5D00-0x0000000185CD60D0
+		private static bool SpineWarning(BipedReferences references, ref string warningMessage); // 0x00000001843FFFF0-0x0000000184400000
+		private static bool EyesError(BipedReferences references, ref string errorMessage); // 0x0000000186ED7F60-0x0000000186ED8010
+		private static bool EyesWarning(BipedReferences references, ref string warningMessage); // 0x00000001843FFFF0-0x0000000184400000
+		private static bool RootHeightWarning(BipedReferences references, ref string warningMessage); // 0x000000018CDD1620-0x000000018CDD1818
+		private static bool FacingAxisWarning(BipedReferences references, ref string warningMessage); // 0x000000018CDD0CF0-0x000000018CDD0F0C
+		private static float GetVerticalOffset(Vector3 p1, Vector3 p2, Quaternion rotation); // 0x000000018CDD0F0C-0x000000018CDD0FB4
 	}
 
-	public class Comments : MonoBehaviour // TypeDefIndex: 56093
+	public class Comments : MonoBehaviour // TypeDefIndex: 82825
 	{
 		// Fields
 		[Multiline]
 		public string text; // 0x18
 	
 		// Constructors
-		public Comments(); // 0x0000000185393520-0x0000000185393538
+		public Comments(); // 0x00000001878364A0-0x00000001878364B8
 	}
 
-	public class DemoGUIMessage : MonoBehaviour // TypeDefIndex: 56094
+	public class DemoGUIMessage : MonoBehaviour // TypeDefIndex: 82826
 	{
 		// Fields
 		public string text; // 0x18
 		public UnityEngine.Color color; // 0x20
 	
 		// Constructors
-		public DemoGUIMessage(); // 0x000000018ABDD30C-0x000000018ABDD344
+		public DemoGUIMessage(); // 0x000000018CDD1F34-0x000000018CDD1F6C
 	
 		// Methods
-		private void OnGUI(); // 0x000000018ABDD268-0x000000018ABDD30C
+		private void OnGUI(); // 0x000000018CDD1E90-0x000000018CDD1F34
 	}
 
-	public class Hierarchy // TypeDefIndex: 56095
+	public class Hierarchy // TypeDefIndex: 82827
 	{
 		// Constructors
-		public Hierarchy(); // 0x00000001841E1670-0x00000001841E1680
+		public Hierarchy(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static bool HierarchyIsValid(Transform[] bones); // 0x00000001839DFDE0-0x00000001839DFE50
-		public static UnityEngine.Object ContainsDuplicate(UnityEngine.Object[] objects); // 0x00000001835B1D00-0x00000001835B1DE0
-		public static bool IsAncestor(Transform transform, Transform ancestor); // 0x00000001839DFE50-0x00000001839E0040
-		public static bool ContainsChild(Transform transform, Transform child); // 0x000000018ABDEC94-0x000000018ABDED6C
-		public static void AddAncestors(Transform transform, Transform blocker, ref Transform[] array); // 0x000000018ABDEA38-0x000000018ABDEC94
-		public static Transform GetAncestor(Transform transform, int minChildCount); // 0x000000018ABDED6C-0x000000018ABDEE40
-		public static Transform GetFirstCommonAncestor(Transform t1, Transform t2); // 0x000000018ABDEF90-0x000000018ABDF0BC
-		public static Transform GetFirstCommonAncestor(Transform[] transforms); // 0x000000018ABDF0BC-0x000000018ABDF1DC
-		public static Transform GetFirstCommonAncestorRecursive(Transform transform, Transform[] transforms); // 0x000000018ABDEE40-0x000000018ABDEF90
-		public static bool IsCommonAncestor(Transform transform, Transform[] transforms); // 0x000000018ABDF1DC-0x000000018ABDF380
+		public static bool HierarchyIsValid(Transform[] bones); // 0x0000000185CD5840-0x0000000185CD58C0
+		public static UnityEngine.Object ContainsDuplicate(UnityEngine.Object[] objects); // 0x0000000185A166C0-0x0000000185A167D0
+		public static bool IsAncestor(Transform transform, Transform ancestor); // 0x0000000185CD58C0-0x0000000185CD5AD0
+		public static bool ContainsChild(Transform transform, Transform child); // 0x000000018CDD3914-0x000000018CDD39F8
+		public static void AddAncestors(Transform transform, Transform blocker, ref Transform[] array); // 0x000000018CDD36B8-0x000000018CDD3914
+		public static Transform GetAncestor(Transform transform, int minChildCount); // 0x000000018CDD39F8-0x000000018CDD3ACC
+		public static Transform GetFirstCommonAncestor(Transform t1, Transform t2); // 0x000000018CDD3C1C-0x000000018CDD3D48
+		public static Transform GetFirstCommonAncestor(Transform[] transforms); // 0x000000018CDD3D48-0x000000018CDD3E70
+		public static Transform GetFirstCommonAncestorRecursive(Transform transform, Transform[] transforms); // 0x000000018CDD3ACC-0x000000018CDD3C1C
+		public static bool IsCommonAncestor(Transform transform, Transform[] transforms); // 0x000000018CDD3E70-0x000000018CDD4014
 	}
 
-	public class InspectorComment : PropertyAttribute // TypeDefIndex: 56096
+	public class InspectorComment : PropertyAttribute // TypeDefIndex: 82828
 	{
 		// Fields
 		public string name; // 0x10
 		public string color; // 0x18
 	
 		// Constructors
-		public InspectorComment(string name); // 0x000000018ABE0214-0x000000018ABE0280
-		public InspectorComment(string name, string color); // 0x000000018ABE01A0-0x000000018ABE0214
+		public InspectorComment(string name); // 0x000000018CDD4F14-0x000000018CDD4F80
+		public InspectorComment(string name, string color); // 0x000000018CDD4EA0-0x000000018CDD4F14
 	}
 
 	[Serializable]
-	public enum InterpolationMode // TypeDefIndex: 56097
+	public enum InterpolationMode // TypeDefIndex: 82829
 	{
 		None = 0,
 		InOutCubic = 1,
@@ -631,64 +628,64 @@ namespace RootMotion
 		BackInQuartic = 26
 	}
 
-	public class Interp // TypeDefIndex: 56098
+	public class Interp // TypeDefIndex: 82830
 	{
 		// Constructors
-		public Interp(); // 0x00000001841E1670-0x00000001841E1680
+		public Interp(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static float Float(float t, RootMotion.InterpolationMode mode); // 0x000000018ABE0280-0x000000018ABE05D0
-		public static Vector3 V3(Vector3 v1, Vector3 v2, float t, RootMotion.InterpolationMode mode); // 0x000000018ABE0890-0x000000018ABE0960
-		public static float LerpValue(float value, float target, float increaseSpeed, float decreaseSpeed); // 0x00000001831CD6D0-0x00000001831CD780
-		private static float None(float t, float b, float c); // 0x0000000184DA9140-0x0000000184DA9150
-		private static float InOutCubic(float t, float b, float c); // 0x0000000184DA9070-0x0000000184DA90A0
-		private static float InOutQuintic(float t, float b, float c); // 0x0000000184DA90A0-0x0000000184DA90F0
-		private static float InQuintic(float t, float b, float c); // 0x0000000184DA9120-0x0000000184DA9140
-		private static float InQuartic(float t, float b, float c); // 0x0000000184DA9100-0x0000000184DA9120
-		private static float InCubic(float t, float b, float c); // 0x0000000184DA8F90-0x0000000184DA8FB0
-		private static float InQuadratic(float t, float b, float c); // 0x0000000184DA90F0-0x0000000184DA9100
-		private static float OutQuintic(float t, float b, float c); // 0x0000000184DA9400-0x0000000184DA9470
-		private static float OutQuartic(float t, float b, float c); // 0x0000000184DA93A0-0x0000000184DA9400
-		private static float OutCubic(float t, float b, float c); // 0x0000000184DA91E0-0x0000000184DA9220
-		private static float OutInCubic(float t, float b, float c); // 0x0000000184DA9320-0x0000000184DA9360
-		private static float OutInQuartic(float t, float b, float c); // 0x0000000184DA9360-0x0000000184DA93A0
-		private static float BackInCubic(float t, float b, float c); // 0x0000000184DA8F20-0x0000000184DA8F50
-		private static float BackInQuartic(float t, float b, float c); // 0x0000000184DA8F50-0x0000000184DA8F90
-		private static float OutBackCubic(float t, float b, float c); // 0x0000000184DA9150-0x0000000184DA9190
-		private static float OutBackQuartic(float t, float b, float c); // 0x0000000184DA9190-0x0000000184DA91E0
-		private static float OutElasticSmall(float t, float b, float c); // 0x0000000184DA92A0-0x0000000184DA9320
-		private static float OutElasticBig(float t, float b, float c); // 0x0000000184DA9220-0x0000000184DA92A0
-		private static float InElasticSmall(float t, float b, float c); // 0x0000000184DA9010-0x0000000184DA9070
-		private static float InElasticBig(float t, float b, float c); // 0x0000000184DA8FB0-0x0000000184DA9010
-		private static float InSine(float t, float b, float c); // 0x000000018ABE0714-0x000000018ABE0760
-		private static float OutSine(float t, float b, float c); // 0x000000018ABE0854-0x000000018ABE0890
-		private static float InOutSine(float t, float b, float c); // 0x000000018ABE06C0-0x000000018ABE0714
-		private static float InElastic(float t, float b, float c); // 0x000000018ABE05F8-0x000000018ABE06C0
-		private static float OutElastic(float t, float b, float c); // 0x000000018ABE079C-0x000000018ABE0854
-		private static float InBack(float t, float b, float c); // 0x000000018ABE05D0-0x000000018ABE05F8
-		private static float OutBack(float t, float b, float c); // 0x000000018ABE0760-0x000000018ABE079C
+		public static float Float(float t, RootMotion.InterpolationMode mode); // 0x000000018CDD4F80-0x000000018CDD52D0
+		public static Vector3 V3(Vector3 v1, Vector3 v2, float t, RootMotion.InterpolationMode mode); // 0x000000018CDD558C-0x000000018CDD565C
+		public static float LerpValue(float value, float target, float increaseSpeed, float decreaseSpeed); // 0x00000001854AF8C0-0x00000001854AF970
+		private static float None(float t, float b, float c); // 0x0000000187257210-0x0000000187257220
+		private static float InOutCubic(float t, float b, float c); // 0x0000000187257140-0x0000000187257170
+		private static float InOutQuintic(float t, float b, float c); // 0x0000000187257170-0x00000001872571C0
+		private static float InQuintic(float t, float b, float c); // 0x00000001872571F0-0x0000000187257210
+		private static float InQuartic(float t, float b, float c); // 0x00000001872571D0-0x00000001872571F0
+		private static float InCubic(float t, float b, float c); // 0x0000000187257060-0x0000000187257080
+		private static float InQuadratic(float t, float b, float c); // 0x00000001872571C0-0x00000001872571D0
+		private static float OutQuintic(float t, float b, float c); // 0x00000001872574D0-0x0000000187257540
+		private static float OutQuartic(float t, float b, float c); // 0x0000000187257470-0x00000001872574D0
+		private static float OutCubic(float t, float b, float c); // 0x00000001872572B0-0x00000001872572F0
+		private static float OutInCubic(float t, float b, float c); // 0x00000001872573F0-0x0000000187257430
+		private static float OutInQuartic(float t, float b, float c); // 0x0000000187257430-0x0000000187257470
+		private static float BackInCubic(float t, float b, float c); // 0x0000000187256FF0-0x0000000187257020
+		private static float BackInQuartic(float t, float b, float c); // 0x0000000187257020-0x0000000187257060
+		private static float OutBackCubic(float t, float b, float c); // 0x0000000187257220-0x0000000187257260
+		private static float OutBackQuartic(float t, float b, float c); // 0x0000000187257260-0x00000001872572B0
+		private static float OutElasticSmall(float t, float b, float c); // 0x0000000187257370-0x00000001872573F0
+		private static float OutElasticBig(float t, float b, float c); // 0x00000001872572F0-0x0000000187257370
+		private static float InElasticSmall(float t, float b, float c); // 0x00000001872570E0-0x0000000187257140
+		private static float InElasticBig(float t, float b, float c); // 0x0000000187257080-0x00000001872570E0
+		private static float InSine(float t, float b, float c); // 0x000000018CDD5410-0x000000018CDD545C
+		private static float OutSine(float t, float b, float c); // 0x000000018CDD5550-0x000000018CDD558C
+		private static float InOutSine(float t, float b, float c); // 0x000000018CDD53BC-0x000000018CDD5410
+		private static float InElastic(float t, float b, float c); // 0x000000018CDD52F8-0x000000018CDD53BC
+		private static float OutElastic(float t, float b, float c); // 0x000000018CDD5498-0x000000018CDD5550
+		private static float InBack(float t, float b, float c); // 0x000000018CDD52D0-0x000000018CDD52F8
+		private static float OutBack(float t, float b, float c); // 0x000000018CDD545C-0x000000018CDD5498
 	}
 
-	public static class LayerMaskExtensions // TypeDefIndex: 56099
+	public static class LayerMaskExtensions // TypeDefIndex: 82831
 	{
 		// Methods
-		public static bool Contains(LayerMask mask, int layer); // 0x000000018ABE0A40-0x000000018ABE0A50
-		public static LayerMask Create(params string[] layerNames); // 0x000000018A994A28-0x000000018A994A30
-		public static LayerMask Create(params int[] layerNumbers); // 0x000000018A994A30-0x000000018A994A38
-		public static LayerMask NamesToMask(params string[] layerNames); // 0x000000018A994A38-0x000000018A994A94
-		public static LayerMask LayerNumbersToMask(params int[] layerNumbers); // 0x000000018A994A94-0x000000018A994AD4
+		public static bool Contains(LayerMask mask, int layer); // 0x000000018CDD573C-0x000000018CDD574C
+		public static LayerMask Create(params string[] layerNames); // 0x000000018CB45C28-0x000000018CB45C30
+		public static LayerMask Create(params int[] layerNumbers); // 0x000000018CB45C30-0x000000018CB45C38
+		public static LayerMask NamesToMask(params string[] layerNames); // 0x000000018CB45C38-0x000000018CB45CA0
+		public static LayerMask LayerNumbersToMask(params int[] layerNumbers); // 0x000000018CB45CA0-0x000000018CB45CE0
 	
 		// Extension methods
-		public static LayerMask Inverse(this LayerMask original); // 0x0000000184DA68B0-0x0000000184DA68C0
-		public static LayerMask AddToMask(this LayerMask original, params string[] layerNames); // 0x000000018A994948-0x000000018A994968
-		public static LayerMask RemoveFromMask(this LayerMask original, params string[] layerNames); // 0x000000018A994C78-0x000000018A994C9C
-		public static string[] MaskToNames(this LayerMask original); // 0x000000018ABE0A50-0x000000018ABE0B2C
-		public static int[] MaskToNumbers(this LayerMask original); // 0x000000018ABE0B2C-0x000000018ABE0BF4
-		public static string MaskToString(this LayerMask original); // 0x000000018ABE0BF4-0x000000018ABE0C30
-		public static string MaskToString(this LayerMask original, string delimiter); // 0x000000018ABE0C30-0x000000018ABE0CBC
+		public static LayerMask Inverse(this LayerMask original); // 0x00000001872544A0-0x00000001872544B0
+		public static LayerMask AddToMask(this LayerMask original, params string[] layerNames); // 0x000000018CB45B28-0x000000018CB45B48
+		public static LayerMask RemoveFromMask(this LayerMask original, params string[] layerNames); // 0x000000018CB45E80-0x000000018CB45EA4
+		public static string[] MaskToNames(this LayerMask original); // 0x000000018CDD574C-0x000000018CDD5824
+		public static int[] MaskToNumbers(this LayerMask original); // 0x000000018CDD5824-0x000000018CDD58E8
+		public static string MaskToString(this LayerMask original); // 0x000000018CDD58E8-0x000000018CDD5924
+		public static string MaskToString(this LayerMask original, string delimiter); // 0x000000018CDD5924-0x000000018CDD59B0
 	}
 
-	public abstract class LazySingleton<T> : MonoBehaviour // TypeDefIndex: 56100
+	public abstract class LazySingleton<T> : MonoBehaviour // TypeDefIndex: 82832
 		where T : LazySingleton<T>
 	{
 		// Fields
@@ -705,14 +702,14 @@ namespace RootMotion
 		protected virtual void Awake();
 	}
 
-	public enum ShowIfMode // TypeDefIndex: 56101
+	public enum ShowIfMode // TypeDefIndex: 82833
 	{
 		Disabled = 0,
 		Hidden = 1
 	}
 
 	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = true)]
-	public class ShowIfAttribute : PropertyAttribute // TypeDefIndex: 56102
+	public class ShowIfAttribute : PropertyAttribute // TypeDefIndex: 82834
 	{
 		// Fields
 		[CompilerGenerated]
@@ -727,18 +724,18 @@ namespace RootMotion
 		private ShowIfMode _mode_k__BackingField; // 0x2C
 	
 		// Properties
-		public string propName { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-		public object propValue { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		public object otherPropValue { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		public bool indent { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F33C0-0x00000001811F33D0 0x00000001811F33D0-0x00000001811F33E0
-		public ShowIfMode mode { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D86710-0x0000000184D86720 0x0000000184D86720-0x0000000184D86730
+		public string propName { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+		public object propValue { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		public object otherPropValue { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		public bool indent { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DF70-0x000000018225DF80 0x000000018225DF80-0x000000018225DF90
+		public ShowIfMode mode { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000182271A80-0x0000000182271A90 0x0000000182271AB0-0x0000000182271AC0
 	
 		// Constructors
-		public ShowIfAttribute(string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x023478CF */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x023478D0 */); // 0x000000018ABE2800-0x000000018ABE2848
+		public ShowIfAttribute(string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x02641707 */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x02641708 */); // 0x000000018CDD753C-0x000000018CDD7584
 	}
 
 	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = true)]
-	public class ShowRangeIfAttribute : ShowIfAttribute // TypeDefIndex: 56103
+	public class ShowRangeIfAttribute : ShowIfAttribute // TypeDefIndex: 82835
 	{
 		// Fields
 		[CompilerGenerated]
@@ -747,62 +744,62 @@ namespace RootMotion
 		private float _max_k__BackingField; // 0x34
 	
 		// Properties
-		public float min { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86E20-0x0000000184D86E30 0x0000000184D86E30-0x0000000184D86E40
-		public float max { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8E050-0x0000000184D8E060 0x0000000184D8E060-0x0000000184D8E070
+		public float min { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233870-0x0000000187233880 0x0000000187233880-0x0000000187233890
+		public float max { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723CEF0-0x000000018723CF00 0x0000000187233AF0-0x0000000187233B00
 	
 		// Constructors
-		public ShowRangeIfAttribute(float min, float max, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x023478D1 */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x023478D2 */); // 0x000000018ABE29AC-0x000000018ABE2A18
+		public ShowRangeIfAttribute(float min, float max, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x02641709 */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x0264170A */); // 0x000000018CDD76EC-0x000000018CDD7758
 	}
 
-	public class ShowLargeHeaderIf : ShowIfAttribute // TypeDefIndex: 56104
+	public class ShowLargeHeaderIf : ShowIfAttribute // TypeDefIndex: 82836
 	{
 		// Fields
 		public string name; // 0x30
 		public string color; // 0x38
 	
 		// Constructors
-		public ShowLargeHeaderIf(string name, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x023478D3 */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x023478D4 */); // 0x000000018ABE28F8-0x000000018ABE29AC
-		public ShowLargeHeaderIf(string name, string color, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x023478D5 */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x023478D6 */); // 0x000000018ABE2848-0x000000018ABE28F8
+		public ShowLargeHeaderIf(string name, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x0264170B */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x0264170C */); // 0x000000018CDD7638-0x000000018CDD76EC
+		public ShowLargeHeaderIf(string name, string color, string propertyName, object propertyValue = null, object otherPropertyValue = null, bool indent = false /* Metadata: 0x0264170D */, ShowIfMode mode = ShowIfMode.Hidden /* Metadata: 0x0264170E */); // 0x000000018CDD7584-0x000000018CDD7638
 	}
 
-	public class LargeHeader : PropertyAttribute // TypeDefIndex: 56105
+	public class LargeHeader : PropertyAttribute // TypeDefIndex: 82837
 	{
 		// Fields
 		public string name; // 0x10
 		public string color; // 0x18
 	
 		// Constructors
-		public LargeHeader(string name); // 0x000000018ABE09D4-0x000000018ABE0A40
-		public LargeHeader(string name, string color); // 0x000000018ABE0960-0x000000018ABE09D4
+		public LargeHeader(string name); // 0x000000018CDD56D0-0x000000018CDD573C
+		public LargeHeader(string name, string color); // 0x000000018CDD565C-0x000000018CDD56D0
 	}
 
-	public static class QuaTools // TypeDefIndex: 56106
+	public static class QuaTools // TypeDefIndex: 82838
 	{
 		// Methods
-		public static float GetYaw(Quaternion space, Vector3 forward); // 0x000000018ABE20D4-0x000000018ABE214C
-		public static float GetPitch(Quaternion space, Vector3 forward); // 0x000000018ABE2054-0x000000018ABE20D4
-		public static float GetBank(Quaternion space, Vector3 forward, Vector3 up); // 0x000000018ABE1DF0-0x000000018ABE1F98
-		public static float GetYaw(Quaternion space, Quaternion rotation); // 0x000000018ABE214C-0x000000018ABE2210
-		public static float GetPitch(Quaternion space, Quaternion rotation); // 0x000000018ABE1F98-0x000000018ABE2054
-		public static float GetBank(Quaternion space, Quaternion rotation); // 0x000000018ABE1BF4-0x000000018ABE1DF0
-		public static Quaternion Lerp(Quaternion fromRotation, Quaternion toRotation, float weight); // 0x000000018ABE2210-0x000000018ABE226C
-		public static Quaternion Slerp(Quaternion fromRotation, Quaternion toRotation, float weight); // 0x000000018ABE2698-0x000000018ABE26F4
-		public static Quaternion LinearBlend(Quaternion q, float weight); // 0x000000018ABE226C-0x000000018ABE22E8
-		public static Quaternion SphericalBlend(Quaternion q, float weight); // 0x000000018ABE26F4-0x000000018ABE2770
-		public static Quaternion FromToAroundAxis(Vector3 fromDirection, Vector3 toDirection, Vector3 axis); // 0x000000018ABE18A4-0x000000018ABE19B8
-		public static Quaternion RotationToLocalSpace(Quaternion space, Quaternion rotation); // 0x0000000184128B30-0x0000000184128BE0
-		public static Quaternion FromToRotation(Quaternion from, Quaternion to); // 0x000000018ABE19B8-0x000000018ABE1A5C
-		public static Vector3 GetAxis(Vector3 v); // 0x000000018ABE1A5C-0x000000018ABE1BF4
-		public static Quaternion ClampRotation(Quaternion rotation, float clampWeight, int clampSmoothing); // 0x000000018ABE1720-0x000000018ABE18A4
-		public static float ClampAngle(float angle, float clampWeight, int clampSmoothing); // 0x000000018ABE1634-0x000000018ABE1720
-		public static Quaternion MatchRotation(Quaternion targetRotation, Vector3 targetAxis1, Vector3 targetAxis2, Vector3 axis1, Vector3 axis2); // 0x000000018ABE22E8-0x000000018ABE2410
-		public static Vector3 ToBiPolar(Vector3 euler); // 0x000000018ABE27B0-0x000000018ABE2800
-		public static float ToBiPolar(float angle); // 0x000000018ABE2770-0x000000018ABE27B0
-		public static Quaternion MirrorYZ(Quaternion r, Quaternion space); // 0x000000018ABE2410-0x000000018ABE2588
-		public static Quaternion MirrorYZ(Quaternion r); // 0x000000018ABE2588-0x000000018ABE2698
+		public static float GetYaw(Quaternion space, Vector3 forward); // 0x000000018CDD6E00-0x000000018CDD6E78
+		public static float GetPitch(Quaternion space, Vector3 forward); // 0x000000018CDD6D80-0x000000018CDD6E00
+		public static float GetBank(Quaternion space, Vector3 forward, Vector3 up); // 0x000000018CDD6B1C-0x000000018CDD6CC4
+		public static float GetYaw(Quaternion space, Quaternion rotation); // 0x000000018CDD6E78-0x000000018CDD6F3C
+		public static float GetPitch(Quaternion space, Quaternion rotation); // 0x000000018CDD6CC4-0x000000018CDD6D80
+		public static float GetBank(Quaternion space, Quaternion rotation); // 0x000000018CDD6920-0x000000018CDD6B1C
+		public static Quaternion Lerp(Quaternion fromRotation, Quaternion toRotation, float weight); // 0x000000018CDD6F3C-0x000000018CDD6F9C
+		public static Quaternion Slerp(Quaternion fromRotation, Quaternion toRotation, float weight); // 0x000000018CDD73CC-0x000000018CDD742C
+		public static Quaternion LinearBlend(Quaternion q, float weight); // 0x000000018CDD6F9C-0x000000018CDD701C
+		public static Quaternion SphericalBlend(Quaternion q, float weight); // 0x000000018CDD742C-0x000000018CDD74AC
+		public static Quaternion FromToAroundAxis(Vector3 fromDirection, Vector3 toDirection, Vector3 axis); // 0x000000018CDD65C4-0x000000018CDD66E4
+		public static Quaternion RotationToLocalSpace(Quaternion space, Quaternion rotation); // 0x0000000185764E10-0x0000000185764EC0
+		public static Quaternion FromToRotation(Quaternion from, Quaternion to); // 0x000000018CDD66E4-0x000000018CDD6788
+		public static Vector3 GetAxis(Vector3 v); // 0x000000018CDD6788-0x000000018CDD6920
+		public static Quaternion ClampRotation(Quaternion rotation, float clampWeight, int clampSmoothing); // 0x000000018CDD643C-0x000000018CDD65C4
+		public static float ClampAngle(float angle, float clampWeight, int clampSmoothing); // 0x000000018CDD6350-0x000000018CDD643C
+		public static Quaternion MatchRotation(Quaternion targetRotation, Vector3 targetAxis1, Vector3 targetAxis2, Vector3 axis1, Vector3 axis2); // 0x000000018CDD701C-0x000000018CDD7144
+		public static Vector3 ToBiPolar(Vector3 euler); // 0x000000018CDD74EC-0x000000018CDD753C
+		public static float ToBiPolar(float angle); // 0x000000018CDD74AC-0x000000018CDD74EC
+		public static Quaternion MirrorYZ(Quaternion r, Quaternion space); // 0x000000018CDD7144-0x000000018CDD72BC
+		public static Quaternion MirrorYZ(Quaternion r); // 0x000000018CDD72BC-0x000000018CDD73CC
 	}
 
-	public abstract class Singleton<T> : MonoBehaviour // TypeDefIndex: 56107
+	public abstract class Singleton<T> : MonoBehaviour // TypeDefIndex: 82839
 		where T : Singleton<T>
 	{
 		// Fields
@@ -819,7 +816,7 @@ namespace RootMotion
 		protected virtual void Awake();
 	}
 
-	public class SolverManager : MonoBehaviour // TypeDefIndex: 56108
+	public class SolverManager : MonoBehaviour // TypeDefIndex: 82840
 	{
 		// Fields
 		[Tooltip("If true, will fix all the Transforms used by the solver to their initial state in each Update. This prevents potential problems with unanimated bones and animator culling with a small cost of performance. Not recommended for CCD and FABRIK solvers.")]
@@ -831,95 +828,95 @@ namespace RootMotion
 		private bool skipSolverUpdate; // 0x32
 	
 		// Properties
-		private bool animatePhysics { get; } // 0x00000001835BD390-0x00000001835BD460 
-		private bool isAnimated { get; } // 0x000000018408A440-0x000000018408A560 
+		private bool animatePhysics { get; } // 0x00000001859E68E0-0x00000001859E69B0 
+		private bool isAnimated { get; } // 0x0000000185EA51D0-0x0000000185EA5300 
 	
 		// Constructors
-		public SolverManager(); // 0x0000000185394740-0x000000018539475C
+		public SolverManager(); // 0x0000000187836ABC-0x0000000187836AD8
 	
 		// Methods
-		public void Disable(); // 0x000000018ABE2A18-0x000000018ABE2A90
-		protected virtual void InitiateSolver(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void UpdateSolver(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void FixTransforms(); // 0x00000001841E1670-0x00000001841E1680
-		private void OnDisable(); // 0x0000000184089B40-0x0000000184089B70
-		private void Start(); // 0x000000018408A300-0x000000018408A310
-		public void Initiate(); // 0x000000018408A310-0x000000018408A350
-		private void Update(); // 0x00000001835BD130-0x00000001835BD200
-		private void FindAnimatorRecursive(Transform t, bool findInChildren); // 0x000000018408A350-0x000000018408A440
-		private void FixedUpdate(); // 0x00000001835BD2D0-0x00000001835BD390
-		private void LateUpdate(); // 0x00000001835BD200-0x00000001835BD2D0
-		public void UpdateSolverExternal(); // 0x000000018ABE2A90-0x000000018ABE2AC0
+		public void Disable(); // 0x000000018CDD7758-0x000000018CDD77D0
+		protected virtual void InitiateSolver(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void UpdateSolver(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void FixTransforms(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void OnDisable(); // 0x0000000185EA5060-0x0000000185EA5090
+		private void Start(); // 0x0000000185EA5090-0x0000000185EA50A0
+		public void Initiate(); // 0x0000000185EA50A0-0x0000000185EA50E0
+		private void Update(); // 0x00000001859E5A80-0x00000001859E6140
+		private void FindAnimatorRecursive(Transform t, bool findInChildren); // 0x0000000185EA50E0-0x0000000185EA51D0
+		private void FixedUpdate(); // 0x00000001859E6800-0x00000001859E68E0
+		private void LateUpdate(); // 0x00000001859E6140-0x00000001859E6800
+		public void UpdateSolverExternal(); // 0x000000018CDD77D0-0x000000018CDD7800
 	}
 
-	public class TriggerEventBroadcaster : MonoBehaviour // TypeDefIndex: 56109
+	public class TriggerEventBroadcaster : MonoBehaviour // TypeDefIndex: 82841
 	{
 		// Fields
 		public GameObject target; // 0x18
 	
 		// Constructors
-		public TriggerEventBroadcaster(); // 0x0000000185393520-0x0000000185393538
+		public TriggerEventBroadcaster(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void OnTriggerEnter(Collider collider); // 0x000000018ABE2AC0-0x000000018ABE2B58
-		private void OnTriggerStay(Collider collider); // 0x000000018ABE2BF0-0x000000018ABE2C88
-		private void OnTriggerExit(Collider collider); // 0x000000018ABE2B58-0x000000018ABE2BF0
+		private void OnTriggerEnter(Collider collider); // 0x000000018CDD7800-0x000000018CDD789C
+		private void OnTriggerStay(Collider collider); // 0x000000018CDD7938-0x000000018CDD79D4
+		private void OnTriggerExit(Collider collider); // 0x000000018CDD789C-0x000000018CDD7938
 	}
 
-	public static class V2Tools // TypeDefIndex: 56110
+	public static class V2Tools // TypeDefIndex: 82842
 	{
 		// Methods
-		public static Vector2 XZ(Vector3 v); // 0x0000000184D88A40-0x0000000184D88A60
-		public static float DeltaAngle(Vector2 dir1, Vector2 dir2); // 0x000000018ABE2CD8-0x000000018ABE2D34
-		public static float DeltaAngleXZ(Vector3 dir1, Vector3 dir2); // 0x000000018ABE2C88-0x000000018ABE2CD8
-		public static bool LineCircleIntersect(Vector2 p1, Vector2 p2, Vector2 c, float r); // 0x000000018ABE2D34-0x000000018ABE2E48
-		public static bool RayCircleIntersect(Vector2 p1, Vector2 dir, Vector2 c, float r); // 0x000000018ABE2E48-0x000000018ABE2F6C
+		public static Vector2 XZ(Vector3 v); // 0x0000000187235940-0x0000000187235960
+		public static float DeltaAngle(Vector2 dir1, Vector2 dir2); // 0x000000018CDD7A24-0x000000018CDD7A80
+		public static float DeltaAngleXZ(Vector3 dir1, Vector3 dir2); // 0x000000018CDD79D4-0x000000018CDD7A24
+		public static bool LineCircleIntersect(Vector2 p1, Vector2 p2, Vector2 c, float r); // 0x000000018CDD7A80-0x000000018CDD7B98
+		public static bool RayCircleIntersect(Vector2 p1, Vector2 dir, Vector2 c, float r); // 0x000000018CDD7B98-0x000000018CDD7CC0
 	}
 
-	public static class V3Tools // TypeDefIndex: 56111
+	public static class V3Tools // TypeDefIndex: 82843
 	{
 		// Methods
-		public static float GetYaw(Vector3 forward); // 0x0000000184DA9490-0x0000000184DA94B0
-		public static float GetPitch(Vector3 forward); // 0x000000018ABE3A98-0x000000018ABE3ADC
-		public static float GetBank(Vector3 forward, Vector3 up); // 0x000000018ABE39D8-0x000000018ABE3A98
-		public static float GetYaw(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward); // 0x000000018ABE3B88-0x000000018ABE3C38
-		public static float GetPitch(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward); // 0x000000018ABE3ADC-0x000000018ABE3B88
-		public static float GetBank(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward, Vector3 up); // 0x000000018ABE3840-0x000000018ABE39D8
-		public static Vector3 Lerp(Vector3 fromVector, Vector3 toVector, float weight); // 0x000000018ABE3E14-0x000000018ABE3E8C
-		public static Vector3 Slerp(Vector3 fromVector, Vector3 toVector, float weight); // 0x000000018ABE4048-0x000000018ABE40C8
-		public static Vector3 ExtractVertical(Vector3 v, Vector3 verticalAxis, float weight); // 0x000000018ABE3620-0x000000018ABE3744
-		public static Vector3 ExtractHorizontal(Vector3 v, Vector3 normal, float weight); // 0x000000018ABE34DC-0x000000018ABE3620
-		public static Vector3 Flatten(Vector3 v, Vector3 normal); // 0x000000018ABE3744-0x000000018ABE3840
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing); // 0x000000018ABE331C-0x000000018ABE34DC
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out bool changed); // 0x000000018ABE2F6C-0x000000018ABE3138
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out float clampValue); // 0x000000018ABE3138-0x000000018ABE331C
-		public static Vector3 LineToPlane(Vector3 origin, Vector3 direction, Vector3 planeNormal, Vector3 planePoint); // 0x00000001831CD780-0x00000001831CD8D0
-		public static Vector3 PointToPlane(Vector3 point, Vector3 planePosition, Vector3 planeNormal); // 0x000000018ABE3E8C-0x000000018ABE4048
-		public static Vector3 TransformPointUnscaled(Transform t, Vector3 point); // 0x000000018ABE40C8-0x000000018ABE41A4
-		public static Vector3 InverseTransformPointUnscaled(Transform t, Vector3 point); // 0x000000018ABE3C38-0x000000018ABE3D24
-		public static Vector3 InverseTransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point); // 0x000000018ABE3D24-0x000000018ABE3E14
-		public static Vector3 TransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point); // 0x000000018ABE41A4-0x000000018ABE4270
-		public static Vector3 Div(Vector3 v1, Vector3 v2); // 0x000000018AAED088-0x000000018AAED0BC
+		public static float GetYaw(Vector3 forward); // 0x0000000187257560-0x0000000187257580
+		public static float GetPitch(Vector3 forward); // 0x000000018CDD8804-0x000000018CDD8848
+		public static float GetBank(Vector3 forward, Vector3 up); // 0x000000018CDD8744-0x000000018CDD8804
+		public static float GetYaw(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward); // 0x000000018CDD88F4-0x000000018CDD89A4
+		public static float GetPitch(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward); // 0x000000018CDD8848-0x000000018CDD88F4
+		public static float GetBank(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward, Vector3 up); // 0x000000018CDD85AC-0x000000018CDD8744
+		public static Vector3 Lerp(Vector3 fromVector, Vector3 toVector, float weight); // 0x000000018CDD8B80-0x000000018CDD8BF8
+		public static Vector3 Slerp(Vector3 fromVector, Vector3 toVector, float weight); // 0x000000018CDD8DB4-0x000000018CDD8E34
+		public static Vector3 ExtractVertical(Vector3 v, Vector3 verticalAxis, float weight); // 0x000000018CDD8388-0x000000018CDD84AC
+		public static Vector3 ExtractHorizontal(Vector3 v, Vector3 normal, float weight); // 0x000000018CDD8244-0x000000018CDD8388
+		public static Vector3 Flatten(Vector3 v, Vector3 normal); // 0x000000018CDD84AC-0x000000018CDD85AC
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing); // 0x000000018CDD8080-0x000000018CDD8244
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out bool changed); // 0x000000018CDD7CC0-0x000000018CDD7E90
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out float clampValue); // 0x000000018CDD7E90-0x000000018CDD8080
+		public static Vector3 LineToPlane(Vector3 origin, Vector3 direction, Vector3 planeNormal, Vector3 planePoint); // 0x00000001856C0520-0x00000001856C0720
+		public static Vector3 PointToPlane(Vector3 point, Vector3 planePosition, Vector3 planeNormal); // 0x000000018CDD8BF8-0x000000018CDD8DB4
+		public static Vector3 TransformPointUnscaled(Transform t, Vector3 point); // 0x000000018CDD8E34-0x000000018CDD8F10
+		public static Vector3 InverseTransformPointUnscaled(Transform t, Vector3 point); // 0x000000018CDD89A4-0x000000018CDD8A90
+		public static Vector3 InverseTransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point); // 0x000000018CDD8A90-0x000000018CDD8B80
+		public static Vector3 TransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point); // 0x000000018CDD8F10-0x000000018CDD8FDC
+		public static Vector3 Div(Vector3 v1, Vector3 v2); // 0x000000018CCDFE94-0x000000018CCDFEC8
 	}
 
-	public static class Warning // TypeDefIndex: 56113
+	public static class Warning // TypeDefIndex: 82845
 	{
 		// Fields
 		public static bool logged; // 0x00
 	
 		// Nested types
-		public delegate void Logger(string message); // TypeDefIndex: 56112; 0x0000000182B46B90-0x0000000182B46BA0
+		public delegate void Logger(string message); // TypeDefIndex: 82844; 0x0000000185B78EA0-0x0000000185B78EB0
 	
 		// Methods
-		public static void Log(string message, Logger logger, bool logInEditMode = false /* Metadata: 0x023478D7 */); // 0x000000018ABE4310-0x000000018ABE4418
-		public static void Log(string message, Transform context, bool logInEditMode = false /* Metadata: 0x023478D8 */); // 0x000000018ABE4270-0x000000018ABE4310
+		public static void Log(string message, Logger logger, bool logInEditMode = false /* Metadata: 0x0264170F */); // 0x000000018CDD907C-0x000000018CDD9188
+		public static void Log(string message, Transform context, bool logInEditMode = false /* Metadata: 0x02641710 */); // 0x000000018CDD8FDC-0x000000018CDD907C
 	}
 }
 
 namespace RootMotion.Demos
 {
 	[Serializable]
-	public class Navigator // TypeDefIndex: 56115
+	public class Navigator // TypeDefIndex: 82847
 	{
 		// Fields
 		[Tooltip("Should this Navigator be actively seeking a path.")]
@@ -945,11 +942,11 @@ namespace RootMotion.Demos
 		private float nextPathTime; // 0x68
 	
 		// Properties
-		public Vector3 normalizedDeltaPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D905E0-0x0000000184D90600 0x0000000184D905D0-0x0000000184D905E0
-		public State state { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D864F0-0x0000000184D86500 0x0000000184D86740-0x0000000184D86750
+		public Vector3 normalizedDeltaPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723E4F0-0x000000018723E510 0x000000018723E4E0-0x000000018723E4F0
+		public State state { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBA0-0x000000018226EBB0 0x0000000186033510-0x0000000186033520
 	
 		// Nested types
-		public enum State // TypeDefIndex: 56114
+		public enum State // TypeDefIndex: 82846
 		{
 			Idle = 0,
 			Seeking = 1,
@@ -957,16 +954,16 @@ namespace RootMotion.Demos
 		}
 	
 		// Constructors
-		public Navigator(); // 0x000000018ABE15D0-0x000000018ABE1634
+		public Navigator(); // 0x000000018CDD62EC-0x000000018CDD6350
 	
 		// Methods
-		public void Initiate(Transform transform); // 0x000000018ABE0F30-0x000000018ABE0FF4
-		public void Update(Vector3 targetPosition); // 0x000000018ABE1010-0x000000018ABE13C8
-		private void CalculatePath(Vector3 targetPosition); // 0x000000018ABE0CBC-0x000000018ABE0D40
-		private bool Find(Vector3 targetPosition); // 0x000000018ABE0D40-0x000000018ABE0F04
-		private void Stop(); // 0x000000018ABE0FF4-0x000000018ABE1010
-		private float HorDistance(Vector3 p1, Vector3 p2); // 0x000000018ABE0F04-0x000000018ABE0F30
-		public void Visualize(); // 0x000000018ABE13C8-0x000000018ABE15D0
+		public void Initiate(Transform transform); // 0x000000018CDD5C48-0x000000018CDD5D10
+		public void Update(Vector3 targetPosition); // 0x000000018CDD5D2C-0x000000018CDD60EC
+		private void CalculatePath(Vector3 targetPosition); // 0x000000018CDD59B0-0x000000018CDD5A38
+		private bool Find(Vector3 targetPosition); // 0x000000018CDD5A38-0x000000018CDD5C1C
+		private void Stop(); // 0x000000018CDD5D10-0x000000018CDD5D2C
+		private float HorDistance(Vector3 p1, Vector3 p2); // 0x000000018CDD5C1C-0x000000018CDD5C48
+		public void Visualize(); // 0x000000018CDD60EC-0x000000018CDD62EC
 	}
 }
 
@@ -974,48 +971,48 @@ namespace RootMotion.FinalIK
 {
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Biped IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page4.html")]
-	public class BipedIK : SolverManager // TypeDefIndex: 56116
+	public class BipedIK : SolverManager // TypeDefIndex: 82848
 	{
 		// Fields
 		public BipedReferences references; // 0x38
 		public BipedIKSolvers solvers; // 0x40
 	
 		// Constructors
-		public BipedIK(); // 0x00000001839DD680-0x00000001839DD730
+		public BipedIK(); // 0x0000000185CD2590-0x0000000185CD2640
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018ABD81E8-0x000000018ABD821C
+		private void OpenUserManual(); // 0x000000018CDCCD14-0x000000018CDCCD48
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018ABD81B4-0x000000018ABD81E8
+		private void OpenScriptReference(); // 0x000000018CDCCCE0-0x000000018CDCCD14
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABD85D4-0x000000018ABD8608
+		private void SupportGroup(); // 0x000000018CDCD128-0x000000018CDCD15C
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABD8018-0x000000018ABD804C
-		public float GetIKPositionWeight(AvatarIKGoal goal); // 0x000000018ABD80AC-0x000000018ABD80D0
-		public float GetIKRotationWeight(AvatarIKGoal goal); // 0x000000018ABD8120-0x000000018ABD8144
-		public void SetIKPositionWeight(AvatarIKGoal goal, float weight); // 0x000000018ABD821C-0x000000018ABD8254
-		public void SetIKRotationWeight(AvatarIKGoal goal, float weight); // 0x000000018ABD8288-0x000000018ABD82C0
-		public void SetIKPosition(AvatarIKGoal goal, Vector3 IKPosition); // 0x000000018ABD8254-0x000000018ABD8288
-		public void SetIKRotation(AvatarIKGoal goal, Quaternion IKRotation); // 0x000000018ABD82C0-0x000000018ABD82EC
-		public Vector3 GetIKPosition(AvatarIKGoal goal); // 0x000000018ABD80D0-0x000000018ABD8120
-		public Quaternion GetIKRotation(AvatarIKGoal goal); // 0x000000018ABD8144-0x000000018ABD817C
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight, float clampWeightHead, float clampWeightEyes); // 0x000000018ABD831C-0x000000018ABD8388
-		public void SetLookAtPosition(Vector3 lookAtPosition); // 0x000000018ABD82EC-0x000000018ABD831C
-		public void SetSpinePosition(Vector3 spinePosition); // 0x000000018ABD8388-0x000000018ABD83B8
-		public void SetSpineWeight(float weight); // 0x000000018ABD83B8-0x000000018ABD83E0
-		public IKSolverLimb GetGoalIK(AvatarIKGoal goal); // 0x000000018ABD804C-0x000000018ABD80AC
-		public void InitiateBipedIK(); // 0x000000018ABD817C-0x000000018ABD818C
-		public void UpdateBipedIK(); // 0x000000018ABD8608-0x000000018ABD8618
-		public void SetToDefaults(); // 0x000000018ABD83E0-0x000000018ABD85D4
-		protected override void FixTransforms(); // 0x000000018326A140-0x000000018326A380
-		protected override void InitiateSolver(); // 0x00000001839DE270-0x00000001839DE430
-		protected override void UpdateSolver(); // 0x000000018326A380-0x000000018326AB60
-		public void LogWarning(string message); // 0x000000018ABD818C-0x000000018ABD81B4
+		private void ASThread(); // 0x000000018CDCCB44-0x000000018CDCCB78
+		public float GetIKPositionWeight(AvatarIKGoal goal); // 0x000000018CDCCBD8-0x000000018CDCCBFC
+		public float GetIKRotationWeight(AvatarIKGoal goal); // 0x000000018CDCCC4C-0x000000018CDCCC70
+		public void SetIKPositionWeight(AvatarIKGoal goal, float weight); // 0x000000018CDCCD48-0x000000018CDCCD80
+		public void SetIKRotationWeight(AvatarIKGoal goal, float weight); // 0x000000018CDCCDB4-0x000000018CDCCDEC
+		public void SetIKPosition(AvatarIKGoal goal, Vector3 IKPosition); // 0x000000018CDCCD80-0x000000018CDCCDB4
+		public void SetIKRotation(AvatarIKGoal goal, Quaternion IKRotation); // 0x000000018CDCCDEC-0x000000018CDCCE18
+		public Vector3 GetIKPosition(AvatarIKGoal goal); // 0x000000018CDCCBFC-0x000000018CDCCC4C
+		public Quaternion GetIKRotation(AvatarIKGoal goal); // 0x000000018CDCCC70-0x000000018CDCCCA8
+		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight, float clampWeightHead, float clampWeightEyes); // 0x000000018CDCCE48-0x000000018CDCCEB8
+		public void SetLookAtPosition(Vector3 lookAtPosition); // 0x000000018CDCCE18-0x000000018CDCCE48
+		public void SetSpinePosition(Vector3 spinePosition); // 0x000000018CDCCEB8-0x000000018CDCCEE8
+		public void SetSpineWeight(float weight); // 0x000000018CDCCEE8-0x000000018CDCCF10
+		public IKSolverLimb GetGoalIK(AvatarIKGoal goal); // 0x000000018CDCCB78-0x000000018CDCCBD8
+		public void InitiateBipedIK(); // 0x000000018CDCCCA8-0x000000018CDCCCB8
+		public void UpdateBipedIK(); // 0x000000018CDCD15C-0x000000018CDCD16C
+		public void SetToDefaults(); // 0x000000018CDCCF10-0x000000018CDCD128
+		protected override void FixTransforms(); // 0x00000001854ACAC0-0x00000001854ACD00
+		protected override void InitiateSolver(); // 0x0000000185CD20C0-0x0000000185CD2290
+		protected override void UpdateSolver(); // 0x00000001854ACD00-0x00000001854AD510
+		public void LogWarning(string message); // 0x000000018CDCCCB8-0x000000018CDCCCE0
 	}
 
 	[Serializable]
-	public class BipedIKSolvers // TypeDefIndex: 56117
+	public class BipedIKSolvers // TypeDefIndex: 82849
 	{
 		// Fields
 		public IKSolverLimb leftFoot; // 0x10
@@ -1030,49 +1027,49 @@ namespace RootMotion.FinalIK
 		private IKSolver[] _ikSolvers; // 0x58
 	
 		// Properties
-		public IKSolverLimb[] limbs { get; } // 0x000000018326AB60-0x000000018326AC50 
-		public IKSolver[] ikSolvers { get; } // 0x000000018ABD7EC0-0x000000018ABD8018 
+		public IKSolverLimb[] limbs { get; } // 0x00000001854AD510-0x00000001854AD600 
+		public IKSolver[] ikSolvers { get; } // 0x000000018CDCC9EC-0x000000018CDCCB44 
 	
 		// Constructors
-		public BipedIKSolvers(); // 0x00000001839DD7A0-0x00000001839DD990
+		public BipedIKSolvers(); // 0x0000000185CD26B0-0x0000000185CD28A0
 	
 		// Methods
-		public void AssignReferences(BipedReferences references); // 0x00000001839DE050-0x00000001839DE1F0
+		public void AssignReferences(BipedReferences references); // 0x0000000185CD2FE0-0x0000000185CD3180
 	}
 
 	[Serializable]
-	public abstract class Constraint // TypeDefIndex: 56118
+	public abstract class Constraint // TypeDefIndex: 82850
 	{
 		// Fields
 		public Transform transform; // 0x10
 		public float weight; // 0x18
 	
 		// Properties
-		public bool isValid { get; } // 0x000000018ABDD218-0x000000018ABDD268 
+		public bool isValid { get; } // 0x000000018CDD1E40-0x000000018CDD1E90 
 	
 		// Constructors
-		protected Constraint(); // 0x00000001841E1670-0x00000001841E1680
+		protected Constraint(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
 		public abstract void UpdateConstraint();
 	}
 
 	[Serializable]
-	public class ConstraintPosition : Constraint // TypeDefIndex: 56119
+	public class ConstraintPosition : Constraint // TypeDefIndex: 82851
 	{
 		// Fields
 		public Vector3 position; // 0x20
 	
 		// Constructors
-		public ConstraintPosition(); // 0x00000001841E1670-0x00000001841E1680
-		public ConstraintPosition(Transform transform); // 0x00000001853908C0-0x00000001853908D0
+		public ConstraintPosition(); // 0x0000000186805BA0-0x0000000186805BB0
+		public ConstraintPosition(Transform transform); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void UpdateConstraint(); // 0x000000018ABDCF14-0x000000018ABDCFC0
+		public override void UpdateConstraint(); // 0x000000018CDD1B34-0x000000018CDD1BE0
 	}
 
 	[Serializable]
-	public class ConstraintPositionOffset : Constraint // TypeDefIndex: 56120
+	public class ConstraintPositionOffset : Constraint // TypeDefIndex: 82852
 	{
 		// Fields
 		public Vector3 offset; // 0x20
@@ -1081,32 +1078,32 @@ namespace RootMotion.FinalIK
 		private bool initiated; // 0x44
 	
 		// Properties
-		private bool positionChanged { get; } // 0x000000018ABDCE90-0x000000018ABDCF14 
+		private bool positionChanged { get; } // 0x000000018CDD1AB0-0x000000018CDD1B34 
 	
 		// Constructors
-		public ConstraintPositionOffset(); // 0x00000001841E1670-0x00000001841E1680
-		public ConstraintPositionOffset(Transform transform); // 0x00000001853908C0-0x00000001853908D0
+		public ConstraintPositionOffset(); // 0x0000000186805BA0-0x0000000186805BB0
+		public ConstraintPositionOffset(Transform transform); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void UpdateConstraint(); // 0x000000018ABDCCDC-0x000000018ABDCE90
+		public override void UpdateConstraint(); // 0x000000018CDD18FC-0x000000018CDD1AB0
 	}
 
 	[Serializable]
-	public class ConstraintRotation : Constraint // TypeDefIndex: 56121
+	public class ConstraintRotation : Constraint // TypeDefIndex: 82853
 	{
 		// Fields
 		public Quaternion rotation; // 0x20
 	
 		// Constructors
-		public ConstraintRotation(); // 0x00000001841E1670-0x00000001841E1680
-		public ConstraintRotation(Transform transform); // 0x00000001853908C0-0x00000001853908D0
+		public ConstraintRotation(); // 0x0000000186805BA0-0x0000000186805BB0
+		public ConstraintRotation(Transform transform); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void UpdateConstraint(); // 0x000000018ABDD180-0x000000018ABDD218
+		public override void UpdateConstraint(); // 0x000000018CDD1DA4-0x000000018CDD1E40
 	}
 
 	[Serializable]
-	public class ConstraintRotationOffset : Constraint // TypeDefIndex: 56122
+	public class ConstraintRotationOffset : Constraint // TypeDefIndex: 82854
 	{
 		// Fields
 		public Quaternion offset; // 0x20
@@ -1117,18 +1114,18 @@ namespace RootMotion.FinalIK
 		private bool initiated; // 0x70
 	
 		// Properties
-		private bool rotationChanged { get; } // 0x000000018ABDD128-0x000000018ABDD180 
+		private bool rotationChanged { get; } // 0x000000018CDD1D4C-0x000000018CDD1DA4 
 	
 		// Constructors
-		public ConstraintRotationOffset(); // 0x00000001841E1670-0x00000001841E1680
-		public ConstraintRotationOffset(Transform transform); // 0x00000001853908C0-0x00000001853908D0
+		public ConstraintRotationOffset(); // 0x0000000186805BA0-0x0000000186805BB0
+		public ConstraintRotationOffset(Transform transform); // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Methods
-		public override void UpdateConstraint(); // 0x000000018ABDCFC0-0x000000018ABDD128
+		public override void UpdateConstraint(); // 0x000000018CDD1BE0-0x000000018CDD1D4C
 	}
 
 	[Serializable]
-	public class Constraints // TypeDefIndex: 56123
+	public class Constraints // TypeDefIndex: 82855
 	{
 		// Fields
 		public Transform transform; // 0x10
@@ -1143,16 +1140,16 @@ namespace RootMotion.FinalIK
 		public float rotationWeight; // 0x54
 	
 		// Constructors
-		public Constraints(); // 0x00000001841E1670-0x00000001841E1680
+		public Constraints(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public bool IsValid(); // 0x000000018326B110-0x000000018326B180
-		public void Initiate(Transform transform); // 0x00000001839DDFD0-0x00000001839DE050
-		public void Update(); // 0x000000018326ADF0-0x000000018326B110
+		public bool IsValid(); // 0x00000001854ADBA0-0x00000001854ADC10
+		public void Initiate(Transform transform); // 0x0000000185CD2290-0x0000000185CD2310
+		public void Update(); // 0x00000001854AD860-0x00000001854ADBA0
 	}
 
 	[Serializable]
-	public class Finger // TypeDefIndex: 56125
+	public class Finger // TypeDefIndex: 82857
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -1187,30 +1184,30 @@ namespace RootMotion.FinalIK
 		private Vector3 defaultBendNormal; // 0xA8
 	
 		// Properties
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
-		public Vector3 IKPosition { get; set; } // 0x000000018ABDE3AC-0x000000018ABDE3D8 0x000000018ABDE3FC-0x000000018ABDE428
-		public Quaternion IKRotation { get; set; } // 0x000000018ABDE3D8-0x000000018ABDE3FC 0x000000018ABDE428-0x000000018ABDE448
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018223CB60-0x000000018223CB70 0x000000018223CB70-0x000000018223CB80
+		public Vector3 IKPosition { get; set; } // 0x000000018CDD2FE0-0x000000018CDD300C 0x000000018CDD3030-0x000000018CDD305C
+		public Quaternion IKRotation { get; set; } // 0x000000018CDD300C-0x000000018CDD3030 0x000000018CDD305C-0x000000018CDD307C
 	
 		// Nested types
 		[Serializable]
-		public enum DOF // TypeDefIndex: 56124
+		public enum DOF // TypeDefIndex: 82856
 		{
 			One = 0,
 			Three = 1
 		}
 	
 		// Constructors
-		public Finger(); // 0x0000000184DA8F10-0x0000000184DA8F20
+		public Finger(); // 0x0000000187256FE0-0x0000000187256FF0
 	
 		// Methods
-		public bool IsValid(ref string errorMessage); // 0x000000018ABDDC10-0x000000018ABDDCD8
-		public void Initiate(Transform hand, int index); // 0x000000018ABDD418-0x000000018ABDDC10
-		public void FixTransforms(); // 0x000000018ABDD344-0x000000018ABDD418
-		public void StoreDefaultLocalState(); // 0x000000018ABDDCD8-0x000000018ABDDD90
-		public void Update(float masterWeight); // 0x000000018ABDDD90-0x000000018ABDE3AC
+		public bool IsValid(ref string errorMessage); // 0x000000018CDD2840-0x000000018CDD2908
+		public void Initiate(Transform hand, int index); // 0x000000018CDD2040-0x000000018CDD2840
+		public void FixTransforms(); // 0x000000018CDD1F6C-0x000000018CDD2040
+		public void StoreDefaultLocalState(); // 0x000000018CDD2908-0x000000018CDD29C0
+		public void Update(float masterWeight); // 0x000000018CDD29C0-0x000000018CDD2FE0
 	}
 
-	public class FingerRig : SolverManager // TypeDefIndex: 56126
+	public class FingerRig : SolverManager // TypeDefIndex: 82858
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -1221,27 +1218,27 @@ namespace RootMotion.FinalIK
 		private bool _initiated_k__BackingField; // 0x48
 	
 		// Properties
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018223CB60-0x000000018223CB70 0x000000018223CB70-0x000000018223CB80
 	
 		// Constructors
-		public FingerRig(); // 0x000000018ABE5278-0x000000018ABE52D0
+		public FingerRig(); // 0x000000018CDDA038-0x000000018CDDA090
 	
 		// Methods
-		public bool IsValid(ref string errorMessage); // 0x000000018ABE5028-0x000000018ABE5090
+		public bool IsValid(ref string errorMessage); // 0x000000018CDD9DB0-0x000000018CDD9E24
 		[ContextMenu("Auto-detect")]
-		public void AutoDetect(); // 0x000000018ABE4CCC-0x000000018ABE4F28
-		public void AddFinger(Transform bone1, Transform bone2, Transform bone3, Transform tip, Transform target = null); // 0x000000018ABE4B48-0x000000018ABE4CCC
-		public void RemoveFinger(int index); // 0x000000018ABE5090-0x000000018ABE51C4
-		private void AddChildrenRecursive(Transform parent, ref Transform[] array); // 0x000000018ABE4A8C-0x000000018ABE4B48
-		protected override void InitiateSolver(); // 0x000000018ABE4F90-0x000000018ABE5028
-		public void UpdateFingerSolvers(); // 0x000000018ABE5210-0x000000018ABE5270
-		public void FixFingerTransforms(); // 0x000000018ABE4F28-0x000000018ABE4F7C
-		public void StoreDefaultLocalState(); // 0x000000018ABE51C4-0x000000018ABE5210
-		protected override void UpdateSolver(); // 0x000000018ABE5270-0x000000018ABE5278
-		protected override void FixTransforms(); // 0x000000018ABE4F7C-0x000000018ABE4F90
+		public void AutoDetect(); // 0x000000018CDD9A3C-0x000000018CDD9C98
+		public void AddFinger(Transform bone1, Transform bone2, Transform bone3, Transform tip, Transform target = null); // 0x000000018CDD98B8-0x000000018CDD9A3C
+		public void RemoveFinger(int index); // 0x000000018CDD9E24-0x000000018CDD9F6C
+		private void AddChildrenRecursive(Transform parent, ref Transform[] array); // 0x000000018CDD97FC-0x000000018CDD98B8
+		protected override void InitiateSolver(); // 0x000000018CDD9D10-0x000000018CDD9DB0
+		public void UpdateFingerSolvers(); // 0x000000018CDD9FC4-0x000000018CDDA030
+		public void FixFingerTransforms(); // 0x000000018CDD9C98-0x000000018CDD9CFC
+		public void StoreDefaultLocalState(); // 0x000000018CDD9F6C-0x000000018CDD9FC4
+		protected override void UpdateSolver(); // 0x000000018CDDA030-0x000000018CDDA038
+		protected override void FixTransforms(); // 0x000000018CDD9CFC-0x000000018CDD9D10
 	}
 
-	public abstract class Grounder : MonoBehaviour // TypeDefIndex: 56128
+	public abstract class Grounder : MonoBehaviour // TypeDefIndex: 82860
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -1262,27 +1259,27 @@ namespace RootMotion.FinalIK
 		private bool _initiated_k__BackingField; // 0x48
 	
 		// Properties
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x000000018223CB60-0x000000018223CB70 0x000000018223CB70-0x000000018223CB80
 	
 		// Nested types
-		public delegate void GrounderDelegate(); // TypeDefIndex: 56127; 0x00000001853DEDB8-0x00000001853DEDC8
+		public delegate void GrounderDelegate(); // TypeDefIndex: 82859; 0x0000000185B44B70-0x0000000185B44B80
 	
 		// Constructors
-		protected Grounder(); // 0x0000000184407EE0-0x0000000184407F80
+		protected Grounder(); // 0x0000000186860F90-0x0000000186861030
 	
 		// Methods
 		public abstract void ResetPosition();
-		protected Vector3 GetSpineOffsetTarget(); // 0x000000018ABEAA4C-0x000000018ABEAB2C
-		protected void LogWarning(string message); // 0x000000018ABD818C-0x000000018ABD81B4
-		private Vector3 GetLegSpineBendVector(Grounding.Leg leg); // 0x000000018ABEA6A4-0x000000018ABEA850
-		private Vector3 GetLegSpineTangent(Grounding.Leg leg); // 0x000000018ABEA850-0x000000018ABEAA4C
+		protected Vector3 GetSpineOffsetTarget(); // 0x000000018CDDF8DC-0x000000018CDDF9C4
+		protected void LogWarning(string message); // 0x000000018CDCCCB8-0x000000018CDCCCE0
+		private Vector3 GetLegSpineBendVector(Grounding.Leg leg); // 0x000000018CDDF530-0x000000018CDDF6DC
+		private Vector3 GetLegSpineTangent(Grounding.Leg leg); // 0x000000018CDDF6DC-0x000000018CDDF8DC
 		protected abstract void OpenUserManual();
 		protected abstract void OpenScriptReference();
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder Biped")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page9.html")]
-	public class GrounderBipedIK : Grounder // TypeDefIndex: 56129
+	public class GrounderBipedIK : Grounder // TypeDefIndex: 82861
 	{
 		// Fields
 		[Tooltip("The BipedIK componet.")]
@@ -1305,35 +1302,35 @@ namespace RootMotion.FinalIK
 		public Transform ikOriReferenceBone; // 0xB0
 	
 		// Properties
-		public float RightFootOffsetY { get; } // 0x0000000184D92880-0x0000000184D92890 
-		public float LeftFootOffsetY { get; } // 0x0000000184D91E60-0x0000000184D91E70 
-		public float RightFootOri { get; } // 0x0000000184DA94B0-0x0000000184DA94C0 
-		public float LeftFootOri { get; } // 0x0000000184D8E650-0x0000000184D8E660 
+		public float RightFootOffsetY { get; } // 0x000000018723D7D0-0x000000018723D7E0 
+		public float LeftFootOffsetY { get; } // 0x0000000187253DD0-0x0000000187253DE0 
+		public float RightFootOri { get; } // 0x000000018723F320-0x000000018723F330 
+		public float LeftFootOri { get; } // 0x0000000187250E40-0x0000000187250E50 
 	
 		// Constructors
-		public GrounderBipedIK(); // 0x0000000184407E50-0x0000000184407EE0
+		public GrounderBipedIK(); // 0x0000000186860F00-0x0000000186860F90
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE5BD4-0x000000018ABE5C08
+		protected override void OpenUserManual(); // 0x000000018CDDA998-0x000000018CDDA9CC
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE5BA0-0x000000018ABE5BD4
-		public override void ResetPosition(); // 0x000000018ABE5C08-0x000000018ABE5C48
-		private bool IsReadyToInitiate(); // 0x0000000183E5EAC0-0x0000000183E5EBC0
-		private void Update(); // 0x0000000183E5EA60-0x0000000183E5EAC0
-		private void Initiate(); // 0x0000000183E5EBC0-0x0000000183E5EF60
-		private void OnDisable(); // 0x0000000184D1A0D0-0x0000000184D1A130
-		private void OnSolverUpdate(); // 0x000000018326EB70-0x000000018326F5A0
-		private void SetLegIK(IKSolverLimb limb, int index); // 0x000000018326CB90-0x000000018326CF60
-		private void OnPostSolverUpdate(); // 0x000000018326C820-0x000000018326CB90
-		private void OnDestroy(); // 0x0000000184D38F60-0x0000000184D38FC0
-		private Quaternion ClampPitchAndRollAroundForward(Quaternion Q, Quaternion calfQ, float minPitch, float maxPitch, float minRoll, float maxRoll); // 0x0000000183271CE0-0x00000001832721C0
-		private float NormalizeAngle(float angle); // 0x00000001832721C0-0x0000000183272240
+		protected override void OpenScriptReference(); // 0x000000018CDDA964-0x000000018CDDA998
+		public override void ResetPosition(); // 0x000000018CDDA9CC-0x000000018CDDAA0C
+		private bool IsReadyToInitiate(); // 0x00000001857637C0-0x00000001857638C0
+		private void Update(); // 0x0000000185763760-0x00000001857637C0
+		private void Initiate(); // 0x0000000185763D60-0x0000000185764100
+		private void OnDisable(); // 0x0000000186D24700-0x0000000186D24760
+		private void OnSolverUpdate(); // 0x0000000185549B90-0x000000018554BD10
+		private void SetLegIK(IKSolverLimb limb, int index); // 0x0000000185184170-0x0000000185184550
+		private void OnPostSolverUpdate(); // 0x00000001854ADDB0-0x00000001854AE120
+		private void OnDestroy(); // 0x00000001871DD1F0-0x00000001871DD250
+		private Quaternion ClampPitchAndRollAroundForward(Quaternion Q, Quaternion calfQ, float minPitch, float maxPitch, float minRoll, float maxRoll); // 0x0000000185024020-0x0000000185024500
+		private float NormalizeAngle(float angle); // 0x0000000185023FA0-0x0000000185024020
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder Full Body Biped")]
 	[HelpURL("https://www.youtube.com/watch?v=9MiZiaJorws&index=6&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
-	public class GrounderFBBIK : Grounder // TypeDefIndex: 56131
+	public class GrounderFBBIK : Grounder // TypeDefIndex: 82863
 	{
 		// Fields
 		[Tooltip("Reference to the FBBIK componet.")]
@@ -1349,7 +1346,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class SpineEffector // TypeDefIndex: 56130
+		public class SpineEffector // TypeDefIndex: 82862
 		{
 			// Fields
 			[Tooltip("The type of the effector.")]
@@ -1360,36 +1357,36 @@ namespace RootMotion.FinalIK
 			public float verticalWeight; // 0x18
 	
 			// Constructors
-			public SpineEffector(); // 0x00000001815845C0-0x00000001815845D0
-			public SpineEffector(FullBodyBipedEffector effectorType, float horizontalWeight, float verticalWeight); // 0x0000000184DA9650-0x0000000184DA9660
+			public SpineEffector(); // 0x000000018723C870-0x000000018723C880
+			public SpineEffector(FullBodyBipedEffector effectorType, float horizontalWeight, float verticalWeight); // 0x0000000187257710-0x0000000187257720
 		}
 	
 		// Constructors
-		public GrounderFBBIK(); // 0x000000018ABE6A98-0x000000018ABE6B20
+		public GrounderFBBIK(); // 0x000000018CDDB86C-0x000000018CDDB8F4
 	
 		// Methods
 		[ContextMenu("TUTORIAL VIDEO")]
-		private void OpenTutorial(); // 0x000000018ABE67EC-0x000000018ABE6820
+		private void OpenTutorial(); // 0x000000018CDDB5BC-0x000000018CDDB5F0
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE6820-0x000000018ABE6854
+		protected override void OpenUserManual(); // 0x000000018CDDB5F0-0x000000018CDDB624
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE67B8-0x000000018ABE67EC
-		public override void ResetPosition(); // 0x000000018ABE6854-0x000000018ABE688C
-		private bool IsReadyToInitiate(); // 0x000000018ABE5F58-0x000000018ABE5FD0
-		private void Update(); // 0x000000018ABE6A3C-0x000000018ABE6A98
-		private void FixedUpdate(); // 0x0000000184D8D080-0x0000000184D8D090
-		private void LateUpdate(); // 0x0000000184D8D080-0x0000000184D8D090
-		private void Initiate(); // 0x000000018ABE5C48-0x000000018ABE5F58
-		private void OnSolverUpdate(); // 0x000000018ABE62DC-0x000000018ABE67B8
-		private void SetLegIK(IKEffector effector, Grounding.Leg leg); // 0x000000018ABE688C-0x000000018ABE6A3C
-		private void OnDrawGizmosSelected(); // 0x000000018ABE61B4-0x000000018ABE62C4
-		private void OnPostSolverUpdate(); // 0x000000018ABE62C4-0x000000018ABE62DC
-		private void OnDestroy(); // 0x000000018ABE5FD0-0x000000018ABE61B4
+		protected override void OpenScriptReference(); // 0x000000018CDDB588-0x000000018CDDB5BC
+		public override void ResetPosition(); // 0x000000018CDDB624-0x000000018CDDB65C
+		private bool IsReadyToInitiate(); // 0x000000018CDDAD1C-0x000000018CDDAD94
+		private void Update(); // 0x000000018CDDB810-0x000000018CDDB86C
+		private void FixedUpdate(); // 0x000000018723B270-0x000000018723B280
+		private void LateUpdate(); // 0x000000018723B270-0x000000018723B280
+		private void Initiate(); // 0x000000018CDDAA0C-0x000000018CDDAD1C
+		private void OnSolverUpdate(); // 0x000000018CDDB0A4-0x000000018CDDB588
+		private void SetLegIK(IKEffector effector, Grounding.Leg leg); // 0x000000018CDDB65C-0x000000018CDDB810
+		private void OnDrawGizmosSelected(); // 0x000000018CDDAF78-0x000000018CDDB088
+		private void OnPostSolverUpdate(); // 0x000000018CDDB088-0x000000018CDDB0A4
+		private void OnDestroy(); // 0x000000018CDDAD94-0x000000018CDDAF78
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page9.html")]
-	public class GrounderIK : Grounder // TypeDefIndex: 56132
+	public class GrounderIK : Grounder // TypeDefIndex: 82864
 	{
 		// Fields
 		public IK[] legs; // 0x50
@@ -1414,27 +1411,27 @@ namespace RootMotion.FinalIK
 		private Rigidbody characterRootRigidbody; // 0xB0
 	
 		// Constructors
-		public GrounderIK(); // 0x000000018ABE81E8-0x000000018ABE8274
+		public GrounderIK(); // 0x000000018CDDCFF0-0x000000018CDDD07C
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE7848-0x000000018ABE787C
+		protected override void OpenUserManual(); // 0x000000018CDDC648-0x000000018CDDC67C
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE7814-0x000000018ABE7848
-		public override void ResetPosition(); // 0x000000018ABE787C-0x000000018ABE7B04
-		private bool IsReadyToInitiate(); // 0x000000018ABE6F7C-0x000000018ABE70F8
-		private void OnDisable(); // 0x000000018ABE7320-0x000000018ABE73D8
-		private void Update(); // 0x000000018ABE7DEC-0x000000018ABE81E8
-		private void Initiate(); // 0x000000018ABE6B20-0x000000018ABE6F7C
-		private void OnSolverUpdate(); // 0x000000018ABE75AC-0x000000018ABE7814
-		private void SetLegIK(int index); // 0x000000018ABE7B04-0x000000018ABE7DEC
-		private void OnPostSolverUpdate(); // 0x000000018ABE73D8-0x000000018ABE75AC
-		private void OnDestroy(); // 0x000000018ABE70F8-0x000000018ABE7320
+		protected override void OpenScriptReference(); // 0x000000018CDDC614-0x000000018CDDC648
+		public override void ResetPosition(); // 0x000000018CDDC67C-0x000000018CDDC8FC
+		private bool IsReadyToInitiate(); // 0x000000018CDDBD50-0x000000018CDDBEDC
+		private void OnDisable(); // 0x000000018CDDC104-0x000000018CDDC1C8
+		private void Update(); // 0x000000018CDDCBEC-0x000000018CDDCFF0
+		private void Initiate(); // 0x000000018CDDB8F4-0x000000018CDDBD50
+		private void OnSolverUpdate(); // 0x000000018CDDC3A4-0x000000018CDDC614
+		private void SetLegIK(int index); // 0x000000018CDDC8FC-0x000000018CDDCBEC
+		private void OnPostSolverUpdate(); // 0x000000018CDDC1C8-0x000000018CDDC3A4
+		private void OnDestroy(); // 0x000000018CDDBEDC-0x000000018CDDC104
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder Quadruped")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page9.html")]
-	public class GrounderQuadruped : Grounder // TypeDefIndex: 56134
+	public class GrounderQuadruped : Grounder // TypeDefIndex: 82866
 	{
 		// Fields
 		[Tooltip("The Grounding solver for the forelegs.")]
@@ -1485,7 +1482,7 @@ namespace RootMotion.FinalIK
 		private Rigidbody characterRootRigidbody; // 0x148
 	
 		// Nested types
-		public struct Foot // TypeDefIndex: 56133
+		public struct Foot // TypeDefIndex: 82865
 		{
 			// Fields
 			public IKSolver solver; // 0x00
@@ -1494,36 +1491,36 @@ namespace RootMotion.FinalIK
 			public Grounding.Leg leg; // 0x20
 	
 			// Constructors
-			public Foot(IKSolver solver, Transform transform); // 0x000000018ABE52D0-0x000000018ABE532C
+			public Foot(IKSolver solver, Transform transform); // 0x000000018CDDA090-0x000000018CDDA0EC
 		}
 	
 		// Constructors
-		public GrounderQuadruped(); // 0x000000018ABEA5BC-0x000000018ABEA6A4
+		public GrounderQuadruped(); // 0x000000018CDDF448-0x000000018CDDF530
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE9AB4-0x000000018ABE9AE8
+		protected override void OpenUserManual(); // 0x000000018CDDE92C-0x000000018CDDE960
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE9A80-0x000000018ABE9AB4
-		public override void ResetPosition(); // 0x000000018ABE9AE8-0x000000018ABE9CAC
-		private bool IsReadyToInitiate(); // 0x000000018ABE8D18-0x000000018ABE8E18
-		private bool IsReadyToInitiateLegs(IK[] ikComponents); // 0x000000018ABE8BD0-0x000000018ABE8D18
-		private void OnDisable(); // 0x000000018ABE8F34-0x000000018ABE8FA0
-		private void Update(); // 0x000000018ABEA55C-0x000000018ABEA5BC
-		private void Initiate(); // 0x000000018ABE87F4-0x000000018ABE8BD0
-		private Transform[] InitiateFeet(IK[] ikComponents, ref Foot[] f, int indexOffset); // 0x000000018ABE8490-0x000000018ABE87F4
-		private void LateUpdate(); // 0x000000018ABE8E18-0x000000018ABE8EF8
-		private void RootRotation(); // 0x000000018ABE9CAC-0x000000018ABEA158
-		private void OnSolverUpdate(); // 0x000000018ABE9278-0x000000018ABE9A80
-		private void UpdateForefeetRoot(); // 0x000000018ABEA2C4-0x000000018ABEA55C
-		private void SetFootIK(Foot foot, float maxOffset); // 0x000000018ABEA158-0x000000018ABEA2C4
-		private void OnPostSolverUpdate(); // 0x000000018ABE8FA0-0x000000018ABE9278
-		private void OnDestroy(); // 0x000000018ABE8EF8-0x000000018ABE8F34
-		private void DestroyLegs(IK[] ikComponents); // 0x000000018ABE8274-0x000000018ABE8490
+		protected override void OpenScriptReference(); // 0x000000018CDDE8F8-0x000000018CDDE92C
+		public override void ResetPosition(); // 0x000000018CDDE960-0x000000018CDDEB28
+		private bool IsReadyToInitiate(); // 0x000000018CDDDB64-0x000000018CDDDC64
+		private bool IsReadyToInitiateLegs(IK[] ikComponents); // 0x000000018CDDDA0C-0x000000018CDDDB64
+		private void OnDisable(); // 0x000000018CDDDD80-0x000000018CDDDDF0
+		private void Update(); // 0x000000018CDDF3E8-0x000000018CDDF448
+		private void Initiate(); // 0x000000018CDDD610-0x000000018CDDDA0C
+		private Transform[] InitiateFeet(IK[] ikComponents, ref Foot[] f, int indexOffset); // 0x000000018CDDD298-0x000000018CDDD610
+		private void LateUpdate(); // 0x000000018CDDDC64-0x000000018CDDDD44
+		private void RootRotation(); // 0x000000018CDDEB28-0x000000018CDDEFD8
+		private void OnSolverUpdate(); // 0x000000018CDDE0D4-0x000000018CDDE8F8
+		private void UpdateForefeetRoot(); // 0x000000018CDDF144-0x000000018CDDF3E8
+		private void SetFootIK(Foot foot, float maxOffset); // 0x000000018CDDEFD8-0x000000018CDDF144
+		private void OnPostSolverUpdate(); // 0x000000018CDDDDF0-0x000000018CDDE0D4
+		private void OnDestroy(); // 0x000000018CDDDD44-0x000000018CDDDD80
+		private void DestroyLegs(IK[] ikComponents); // 0x000000018CDDD07C-0x000000018CDDD298
 	}
 
 	[Serializable]
-	public class Grounding // TypeDefIndex: 56141
+	public class Grounding // TypeDefIndex: 82873
 	{
 		// Fields
 		public Transform IKFootBoneL; // 0x10
@@ -1663,25 +1660,25 @@ namespace RootMotion.FinalIK
 		private bool initiated; // 0x18E
 	
 		// Properties
-		public BipedReferences references { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
-		public Leg[] legs { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
-		public Pelvis pelvis { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D876B0-0x0000000184D876C0 0x000000018678D7BC-0x000000018678D7D0
-		public bool isGrounded { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA6C90-0x0000000184DA6CA0 0x0000000184DA6CE0-0x0000000184DA6CF0
-		public Transform root { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D1C0-0x0000000184D8D1D0 0x0000000186AC5B08-0x0000000186AC5B1C
-		public RaycastHit rootHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA0A70-0x0000000184DA0AA0 0x0000000184DA9530-0x0000000184DA9560
-		public bool rootGrounded { get; } // 0x0000000182FFF600-0x0000000182FFF610 
-		public Transform entityTransform { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8DA60-0x0000000184D8DA70 0x0000000186B8B404-0x0000000186B8B418
-		public bool entityIsOnMovableBase { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8FE60-0x0000000184D8FE70 0x0000000184D8FE90-0x0000000184D8FEA0
-		public Vector3 entityRelativePosition { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA94C0-0x0000000184DA94E0 0x0000000184DA9500-0x0000000184DA9520
-		public Quaternion entityRelativeRotation { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA94E0-0x0000000184DA94F0 0x0000000184DA9520-0x0000000184DA9530
-		public bool isInitiated { get; } // 0x0000000184DA94F0-0x0000000184DA9500 
-		public Vector3 up { get; } // 0x0000000183269FA0-0x000000018326A000 
-		public Vector3 forward { get; } // 0x0000000182F40ED0-0x0000000182F40F70 
-		private bool useRootRotation { get; } // 0x000000018326A000-0x000000018326A020 
+		public BipedReferences references { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236200-0x0000000187236210 0x0000000188D95540-0x0000000188D95554
+		public Leg[] legs { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723BB00-0x000000018723BB10 0x0000000188D9C9D0-0x0000000188D9C9E4
+		public Pelvis pelvis { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187234580-0x0000000187234590 0x0000000188A79A0C-0x0000000188A79A20
+		public bool isGrounded { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184F59D60-0x0000000184F59D70 0x0000000184F59D70-0x0000000184F59D80
+		public Transform root { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872360B0-0x00000001872360C0 0x0000000188C247F0-0x0000000188C24804
+		public RaycastHit rootHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018724ECF0-0x000000018724ED20 0x00000001872575F0-0x0000000187257620
+		public bool rootGrounded { get; } // 0x00000001851A4410-0x00000001851A4420 
+		public Transform entityTransform { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723BE50-0x000000018723BE60 0x0000000188DC478C-0x0000000188DC47A0
+		public bool entityIsOnMovableBase { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184F6ABE0-0x0000000184F6ABF0 0x0000000184F6ABF0-0x0000000184F6AC00
+		public Vector3 entityRelativePosition { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187257580-0x00000001872575A0 0x00000001872575C0-0x00000001872575E0
+		public Quaternion entityRelativeRotation { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872575A0-0x00000001872575B0 0x00000001872575E0-0x00000001872575F0
+		public bool isInitiated { get; } // 0x00000001872575B0-0x00000001872575C0 
+		public Vector3 up { get; } // 0x00000001854AF010-0x00000001854AF070 
+		public Vector3 forward { get; } // 0x0000000185184550-0x00000001851845F0 
+		private bool useRootRotation { get; } // 0x00000001854AF070-0x00000001854AF090 
 	
 		// Nested types
 		[Serializable]
-		public enum Quality // TypeDefIndex: 56135
+		public enum Quality // TypeDefIndex: 82867
 		{
 			Fastest = 0,
 			Simple = 1,
@@ -1689,13 +1686,13 @@ namespace RootMotion.FinalIK
 			Custom = 3
 		}
 	
-		public delegate bool OnRaycastDelegate(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 56136; 0x0000000186226A0C-0x0000000186226A7C
+		public delegate bool OnRaycastDelegate(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 82868; 0x0000000184161650-0x00000001841616C0
 	
-		public delegate bool OnCapsuleCastDelegate(Vector3 point1, Vector3 point2, float radius, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 56137; 0x0000000186225F10-0x0000000186225FB4
+		public delegate bool OnCapsuleCastDelegate(Vector3 point1, Vector3 point2, float radius, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 82869; 0x00000001879913BC-0x0000000187991460
 	
-		public delegate bool OnSphereCastDelegate(Vector3 origin, float radius, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 56138; 0x0000000186225970-0x00000001862259EC
+		public delegate bool OnSphereCastDelegate(Vector3 origin, float radius, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction); // TypeDefIndex: 82870; 0x0000000187996BC8-0x0000000187996C44
 	
-		public class Leg // TypeDefIndex: 56139
+		public class Leg // TypeDefIndex: 82871
 		{
 			// Fields
 			[CompilerGenerated]
@@ -1746,7 +1743,7 @@ namespace RootMotion.FinalIK
 			public Vector3 transformPosition; // 0x1A4
 			private static readonly ProfilerMarker MARKER_TEMP_PREDICT_FOOT_CAST; // 0x00
 			private static readonly ProfilerMarker MARKER_TEMP_BUILTIN_BEST_CAST; // 0x08
-			public const float MAX_PREDICTION_DISTANCE = 2.25f; // Metadata: 0x023478E8
+			public const float MAX_PREDICTION_DISTANCE = 2.25f; // Metadata: 0x02641720
 			private Vector2 lastFramePredictPos; // 0x1B0
 			public Vector3 predictOffset; // 0x1B8
 			public Vector3 lastPredictOffset; // 0x1C4
@@ -1772,63 +1769,63 @@ namespace RootMotion.FinalIK
 			private Vector3 lastCapusuleHitPos; // 0x31C
 	
 			// Properties
-			public bool isGrounded { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
-			public Vector3 IKPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001816057F0-0x0000000181605810 0x0000000184D91E50-0x0000000184D91E60
-			public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
-			public float heightFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8E050-0x0000000184D8E060 0x0000000184D8E060-0x0000000184D8E070
-			public float fowardMoveFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88360-0x0000000184D88370 0x0000000184D88370-0x0000000184D88380
-			public float rightMoveFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863E0-0x0000000184D863F0 0x0000000184D86460-0x0000000184D86470
-			public Vector3 velocity { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D89660-0x0000000184D89680 0x0000000184D89690-0x0000000184D896A0
-			public Transform transform { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
-			public float IKOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88400-0x0000000184D88410 0x0000000184D88430-0x0000000184D88440
-			public float IKOffsetZ { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D91500-0x0000000184D91510 0x0000000184D91510-0x0000000184D91520
-			public float IKOffsetX { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88480-0x0000000184D88490 0x0000000184D884A0-0x0000000184D884B0
-			public RaycastHit heelHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA95C0-0x0000000184DA95F0 0x0000000184DA9620-0x0000000184DA9650
-			public RaycastHit capsuleHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA9590-0x0000000184DA95C0 0x0000000184DA95F0-0x0000000184DA9620
-			public RaycastHit GetHitPoint { get; } // 0x000000018ABEBE48-0x000000018ABEBEBC 
-			public Vector3 right { get; } // 0x000000018326A020-0x000000018326A140 
-			public Vector3 speedRight { get; } // 0x000000018411E9B0-0x000000018411EA40 
-			public Vector3 predictOffsetwithPercent { get; } // 0x0000000183EE2080-0x0000000183EE2190 
-			private bool isLeft { get; } // 0x0000000183277EC0-0x0000000183277FD0 
-			private bool isMoving { get; } // 0x000000018ABEBEBC-0x000000018ABEBEDC 
-			public float stepHeightFromGround { get; } // 0x0000000183DB9310-0x0000000183DB9440 
-			public float stepForwardFromGround { get; } // 0x0000000183DF3490-0x0000000183DF34C0 
-			public float stepRightFromGround { get; } // 0x0000000183DF34C0-0x0000000183DF3590 
-			private Vector3 animFootGroundPos { get; } // 0x0000000183275760-0x00000001832759E0 
-			public float rootYOffset { get; } // 0x0000000183269C20-0x0000000183269F50 
+			public bool isGrounded { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829D0800-0x00000001829D0810 0x0000000182A819C0-0x0000000182A819D0
+			public Vector3 IKPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829EBA20-0x00000001829EBA40 0x000000018723FDA0-0x000000018723FDB0
+			public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001822434B0-0x00000001822434C0 0x00000001822434C0-0x00000001822434D0
+			public float heightFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723CEF0-0x000000018723CF00 0x0000000187233AF0-0x0000000187233B00
+			public float fowardMoveFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187235380-0x0000000187235390 0x0000000187235390-0x00000001872353A0
+			public float rightMoveFromGround { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872330B0-0x00000001872330C0 0x0000000187233110-0x0000000187233120
+			public Vector3 velocity { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236520-0x0000000187236540 0x0000000187236550-0x0000000187236560
+			public Transform transform { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBD0-0x000000018226EBE0 0x00000001869E1E00-0x00000001869E1E10
+			public float IKOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872353B0-0x00000001872353C0 0x00000001872353E0-0x00000001872353F0
+			public float IKOffsetZ { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001826DD0B0-0x00000001826DD0C0 0x00000001826DD0C0-0x00000001826DD0D0
+			public float IKOffsetX { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872352B0-0x00000001872352C0 0x00000001872352D0-0x00000001872352E0
+			public RaycastHit heelHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257680-0x00000001872576B0 0x00000001872576E0-0x0000000187257710
+			public RaycastHit capsuleHit { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257650-0x0000000187257680 0x00000001872576B0-0x00000001872576E0
+			public RaycastHit GetHitPoint { get; } // 0x000000018CDE0D00-0x000000018CDE0D74 
+			public Vector3 right { get; } // 0x00000001854AE210-0x00000001854AE330 
+			public Vector3 speedRight { get; } // 0x00000001854A5800-0x00000001854A5920 
+			public Vector3 predictOffsetwithPercent { get; } // 0x0000000186047CE0-0x0000000186047DF0 
+			private bool isLeft { get; } // 0x00000001854AF970-0x00000001854AFA80 
+			private bool isMoving { get; } // 0x000000018CDE0D74-0x000000018CDE0D94 
+			public float stepHeightFromGround { get; } // 0x00000001854AF090-0x00000001854AF0E0 
+			public float stepForwardFromGround { get; } // 0x00000001854AF820-0x00000001854AF850 
+			public float stepRightFromGround { get; } // 0x00000001854AF850-0x00000001854AF880 
+			private Vector3 animFootGroundPos { get; } // 0x0000000185027B40-0x0000000185027DC0 
+			public float rootYOffset { get; } // 0x00000001854AEC90-0x00000001854AEFC0 
 	
 			// Constructors
-			public Leg(); // 0x0000000183E5F1E0-0x0000000183E5F250
-			static Leg(); // 0x0000000184CE9F90-0x0000000184CEA030
+			public Leg(); // 0x0000000185764680-0x00000001857646F0
+			static Leg(); // 0x0000000187110120-0x00000001871101C0
 	
 			// Methods
-			public void SetFootPosition(Vector3 position); // 0x0000000184DA9570-0x0000000184DA9590
-			public void Initiate(Grounding grounding, Transform transform); // 0x0000000183E5F250-0x0000000183E5F330
-			public void OnEnable(); // 0x0000000183E5F330-0x0000000183E5F390
-			public void Reset(); // 0x000000018ABEBAE4-0x000000018ABEBB70
-			private void _ResetPredictReference(RaycastHit curHit); // 0x0000000183BB64B0-0x0000000183BB6530
-			private void _PredictNextStepHit(Vector3 prediction, Vector3 predictVec, bool canChangeHeight = true /* Metadata: 0x023478E6 */); // 0x000000018327FC60-0x000000018327FEC0
-			private float _CanHitPointLand(RaycastHit hit, out RaycastHit predictHit); // 0x000000018327FEC0-0x00000001832802B0
-			public void Process(); // 0x0000000183277FD0-0x000000018327ABA0
-			private void _UpdateHeelHit(float curStepPercent, Vector3 prediction); // 0x0000000183D24FE0-0x0000000183D250E0
-			private Vector3 _UpdatePredictOffset(float curStepPercent); // 0x0000000183D250E0-0x0000000183D25200
-			public void FinalSetIKPosition(Vector3 thighPos); // 0x000000018326BDB0-0x000000018326BFC0
-			private RaycastHit GetCapsuleHit(Vector3 offsetFromHeel, Vector3 predictPos); // 0x0000000183913000-0x0000000183913D80
-			private RaycastHit GetCapsuleHit(Vector3 offsetFromHeel); // 0x000000018ABEAF98-0x000000018ABEB694
-			private RaycastHit GetRaycastHitCustom(Vector3 offsetFromHeel); // 0x00000001832028C0-0x0000000183202E40
-			private RaycastHit GetRaycastHit(Vector3 offsetFromHeel); // 0x000000018ABEB694-0x000000018ABEBAE4
-			private Vector3 RotateNormal(Vector3 normal); // 0x0000000183268970-0x00000001832689E0
-			private void SetFootToPoint(Vector3 normal, Vector3 point); // 0x000000018ABEBD80-0x000000018ABEBE48
-			private void SetFootToPlane(Vector3 planeNormal, Vector3 planePoint, Vector3 heelHitPoint); // 0x000000018ABEBB70-0x000000018ABEBD80
-			private void SetFootToPoint(Vector3 normal, Vector3 pointForXZ, Vector3 pointForY); // 0x0000000183268620-0x0000000183268970
-			private void SetFootToPlane(Vector3 planeNormal, Vector3 planePoint, Vector3 heelHitPoint, Vector3 footNormal, bool isLimitByComplex = true /* Metadata: 0x023478E7 */); // 0x00000001831CD2D0-0x00000001831CD6D0
-			private float GetHeightFromGround(Vector3 hitPoint); // 0x0000000183269590-0x0000000183269640
-			private void RotateFoot(); // 0x000000018326C6A0-0x000000018326C730
-			private Quaternion GetRotationOffsetTarget(); // 0x0000000184DA9560-0x0000000184DA9570
-			private Vector3 RotateNormalWithLimit(Vector3 normal); // 0x00000001832689E0-0x00000001832693B0
+			public void SetFootPosition(Vector3 position); // 0x0000000187257630-0x0000000187257650
+			public void Initiate(Grounding grounding, Transform transform); // 0x00000001857646F0-0x00000001857647D0
+			public void OnEnable(); // 0x00000001857647D0-0x0000000185764830
+			public void Reset(); // 0x000000018CDE0994-0x000000018CDE0A24
+			private void _ResetPredictReference(RaycastHit curHit); // 0x00000001854ADC10-0x00000001854ADD20
+			private void _PredictNextStepHit(Vector3 prediction, Vector3 predictVec, bool canChangeHeight = true /* Metadata: 0x0264171E */); // 0x0000000185879D20-0x0000000185879F80
+			private float _CanHitPointLand(RaycastHit hit, out RaycastHit predictHit); // 0x0000000185879F80-0x000000018587A350
+			public void Process(); // 0x00000001854AFA80-0x00000001854B32D0
+			private void _UpdateHeelHit(float curStepPercent, Vector3 prediction); // 0x0000000185E330D0-0x0000000185E33290
+			private Vector3 _UpdatePredictOffset(float curStepPercent); // 0x0000000185E33290-0x0000000185E333B0
+			public void FinalSetIKPosition(Vector3 thighPos); // 0x000000018546A520-0x000000018546A7E0
+			private RaycastHit GetCapsuleHit(Vector3 offsetFromHeel, Vector3 predictPos); // 0x0000000185BB79C0-0x0000000185BB86B0
+			private RaycastHit GetCapsuleHit(Vector3 offsetFromHeel); // 0x000000018CDDFE40-0x000000018CDE0544
+			private RaycastHit GetRaycastHitCustom(Vector3 offsetFromHeel); // 0x000000018517B9A0-0x000000018517BFF0
+			private RaycastHit GetRaycastHit(Vector3 offsetFromHeel); // 0x000000018CDE0544-0x000000018CDE0994
+			private Vector3 RotateNormal(Vector3 normal); // 0x0000000184FBF2C0-0x0000000184FBF330
+			private void SetFootToPoint(Vector3 normal, Vector3 point); // 0x000000018CDE0C38-0x000000018CDE0D00
+			private void SetFootToPlane(Vector3 planeNormal, Vector3 planePoint, Vector3 heelHitPoint); // 0x000000018CDE0A24-0x000000018CDE0C38
+			private void SetFootToPoint(Vector3 normal, Vector3 pointForXZ, Vector3 pointForY); // 0x0000000184FBEC20-0x0000000184FBF2C0
+			private void SetFootToPlane(Vector3 planeNormal, Vector3 planePoint, Vector3 heelHitPoint, Vector3 footNormal, bool isLimitByComplex = true /* Metadata: 0x0264171F */); // 0x00000001856BFF90-0x00000001856C0520
+			private float GetHeightFromGround(Vector3 hitPoint); // 0x00000001854AE330-0x00000001854AE6E0
+			private void RotateFoot(); // 0x00000001854ADD20-0x00000001854ADDB0
+			private Quaternion GetRotationOffsetTarget(); // 0x0000000187257620-0x0000000187257630
+			private Vector3 RotateNormalWithLimit(Vector3 normal); // 0x0000000184FBF330-0x0000000184FBFDD0
 		}
 	
-		public class Pelvis // TypeDefIndex: 56140
+		public class Pelvis // TypeDefIndex: 82872
 		{
 			// Fields
 			[CompilerGenerated]
@@ -1844,200 +1841,200 @@ namespace RootMotion.FinalIK
 			private float lastTime; // 0x44
 	
 			// Properties
-			public Vector3 IKOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8C950-0x0000000184D8C970 0x0000000184D8C970-0x0000000184D8C980
-			public float heightOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D868F0-0x0000000184D86900 0x0000000184D86900-0x0000000184D86910
+			public Vector3 IKOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184432B70-0x0000000184432B90 0x0000000187239670-0x0000000187239680
+			public float heightOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233410-0x0000000187233420 0x0000000187233420-0x0000000187233430
 	
 			// Constructors
-			public Pelvis(); // 0x00000001841E1670-0x00000001841E1680
+			public Pelvis(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Initiate(Grounding grounding); // 0x0000000183E5F390-0x0000000183E5F3C0
-			public void Reset(); // 0x000000018ABEC63C-0x000000018ABEC6BC
-			public void OnEnable(); // 0x0000000183E5F3C0-0x0000000183E5F430
-			public void Process(float pelivsOffset, float _forwardOffset, bool isGrounded, bool islastFrameLegStretch = false /* Metadata: 0x023478EC */, bool isSameLegReflastFrame = false /* Metadata: 0x023478ED */); // 0x000000018326B180-0x000000018326B8B0
-			private RaycastHit GetRaycastHitCustom(Vector3 rayOrigin); // 0x000000018ABEC274-0x000000018ABEC63C
+			public void Initiate(Grounding grounding); // 0x0000000185764830-0x0000000185764860
+			public void Reset(); // 0x000000018CDE1500-0x000000018CDE1584
+			public void OnEnable(); // 0x0000000185764860-0x00000001857648D0
+			public void Process(float pelivsOffset, float _forwardOffset, bool isGrounded, bool islastFrameLegStretch = false /* Metadata: 0x02641724 */, bool isSameLegReflastFrame = false /* Metadata: 0x02641725 */); // 0x00000001854AF0E0-0x00000001854AF820
+			private RaycastHit GetRaycastHitCustom(Vector3 rayOrigin); // 0x000000018CDE1138-0x000000018CDE1500
 		}
 	
 		// Constructors
-		public Grounding(); // 0x0000000184407F80-0x0000000184408140
+		public Grounding(); // 0x0000000186861030-0x00000001868611F0
 	
 		// Methods
-		private void _UpdateFloorPredictTheta(); // 0x0000000183269640-0x0000000183269970
-		private void _UpdateFloorFeetThetaByFoot(); // 0x0000000183269970-0x0000000183269C20
-		private void _UpdateFloorFeetThetaByRoot(); // 0x0000000183C5D910-0x0000000183C5DB50
-		public RaycastHit GetRootHit(float maxDistanceMlp = 10f /* Metadata: 0x023478DE */); // 0x00000001832701C0-0x0000000183270630
-		public bool IsValid(ref string errorMessage); // 0x0000000183E5F430-0x0000000183E5F570
-		public void Initiate(Transform root, Transform[] feet, BipedReferences references = null); // 0x0000000183E5EF60-0x0000000183E5F1E0
-		public void Update(); // 0x000000018326D370-0x000000018326E580
-		public Vector3 GetLegsPlaneNormal(); // 0x000000018ABEAD1C-0x000000018ABEAF10
-		public void Reset(); // 0x000000018ABEAF28-0x000000018ABEAF98
-		public void LogWarning(string message); // 0x000000018ABEAF10-0x000000018ABEAF28
-		public float GetVerticalOffset(Vector3 p1, Vector3 p2); // 0x0000000183269F50-0x0000000183269FA0
-		public Vector3 Flatten(Vector3 v); // 0x000000018ABEAB2C-0x000000018ABEAC20
-		public Vector3 GetFootCenterOffset(); // 0x000000018ABEAC20-0x000000018ABEAD1C
+		private void _UpdateFloorPredictTheta(); // 0x00000001854AE6E0-0x00000001854AE9E0
+		private void _UpdateFloorFeetThetaByFoot(); // 0x00000001854AE9E0-0x00000001854AEC90
+		private void _UpdateFloorFeetThetaByRoot(); // 0x0000000185CB9180-0x0000000185CB93C0
+		public RaycastHit GetRootHit(float maxDistanceMlp = 10f /* Metadata: 0x02641716 */); // 0x000000018517D440-0x000000018517DAC0
+		public bool IsValid(ref string errorMessage); // 0x00000001857648D0-0x0000000185764A10
+		public void Initiate(Transform root, Transform[] feet, BipedReferences references = null); // 0x00000001857643E0-0x0000000185764680
+		public void Update(); // 0x00000001851825B0-0x0000000185184170
+		public Vector3 GetLegsPlaneNormal(); // 0x000000018CDDFBB4-0x000000018CDDFDAC
+		public void Reset(); // 0x000000018CDDFDC4-0x000000018CDDFE40
+		public void LogWarning(string message); // 0x000000018CDDFDAC-0x000000018CDDFDC4
+		public float GetVerticalOffset(Vector3 p1, Vector3 p2); // 0x00000001854AEFC0-0x00000001854AF010
+		public Vector3 Flatten(Vector3 v); // 0x000000018CDDF9C4-0x000000018CDDFAB8
+		public Vector3 GetFootCenterOffset(); // 0x000000018CDDFAB8-0x000000018CDDFBB4
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Aim IK")]
 	[HelpURL("https://www.youtube.com/watch?v=wT8fViZpLmQ&index=3&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
-	public class AimIK : IK // TypeDefIndex: 56142
+	public class AimIK : IK // TypeDefIndex: 82874
 	{
 		// Fields
 		public IKSolverAim solver; // 0x38
 	
 		// Constructors
-		public AimIK(); // 0x000000018ABE451C-0x000000018ABE458C
+		public AimIK(); // 0x000000018CDD928C-0x000000018CDD92FC
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE44B4-0x000000018ABE44E8
+		protected override void OpenUserManual(); // 0x000000018CDD9224-0x000000018CDD9258
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE444C-0x000000018ABE4480
+		protected override void OpenScriptReference(); // 0x000000018CDD91BC-0x000000018CDD91F0
 		[ContextMenu("TUTORIAL VIDEO")]
-		private void OpenSetupTutorial(); // 0x000000018ABE4480-0x000000018ABE44B4
+		private void OpenSetupTutorial(); // 0x000000018CDD91F0-0x000000018CDD9224
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE44E8-0x000000018ABE451C
+		private void SupportGroup(); // 0x000000018CDD9258-0x000000018CDD928C
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE4418-0x000000018ABE444C
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDD9188-0x000000018CDD91BC
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Arm IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page2.html")]
-	public class ArmIK : IK // TypeDefIndex: 56143
+	public class ArmIK : IK // TypeDefIndex: 82875
 	{
 		// Fields
 		public IKSolverArm solver; // 0x38
 	
 		// Constructors
-		public ArmIK(); // 0x000000018ABE465C-0x000000018ABE46CC
+		public ArmIK(); // 0x000000018CDD93CC-0x000000018CDD943C
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE45F4-0x000000018ABE4628
+		protected override void OpenUserManual(); // 0x000000018CDD9364-0x000000018CDD9398
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE45C0-0x000000018ABE45F4
+		protected override void OpenScriptReference(); // 0x000000018CDD9330-0x000000018CDD9364
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE4628-0x000000018ABE465C
+		private void SupportGroup(); // 0x000000018CDD9398-0x000000018CDD93CC
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE458C-0x000000018ABE45C0
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDD92FC-0x000000018CDD9330
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/CCD IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page5.html")]
-	public class CCDIK : IK // TypeDefIndex: 56144
+	public class CCDIK : IK // TypeDefIndex: 82876
 	{
 		// Fields
 		public IKSolverCCD solver; // 0x38
 	
 		// Constructors
-		public CCDIK(); // 0x000000018ABE479C-0x000000018ABE480C
+		public CCDIK(); // 0x000000018CDD950C-0x000000018CDD957C
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE4734-0x000000018ABE4768
+		protected override void OpenUserManual(); // 0x000000018CDD94A4-0x000000018CDD94D8
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE4700-0x000000018ABE4734
+		protected override void OpenScriptReference(); // 0x000000018CDD9470-0x000000018CDD94A4
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE4768-0x000000018ABE479C
+		private void SupportGroup(); // 0x000000018CDD94D8-0x000000018CDD950C
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE46CC-0x000000018ABE4700
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDD943C-0x000000018CDD9470
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/FABRIK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page6.html")]
-	public class FABRIK : IK // TypeDefIndex: 56145
+	public class FABRIK : IK // TypeDefIndex: 82877
 	{
 		// Fields
 		public IKSolverFABRIK solver; // 0x38
 	
 		// Constructors
-		public FABRIK(); // 0x000000018ABE4A1C-0x000000018ABE4A8C
+		public FABRIK(); // 0x000000018CDD978C-0x000000018CDD97FC
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE49B4-0x000000018ABE49E8
+		protected override void OpenUserManual(); // 0x000000018CDD9724-0x000000018CDD9758
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE4980-0x000000018ABE49B4
+		protected override void OpenScriptReference(); // 0x000000018CDD96F0-0x000000018CDD9724
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE49E8-0x000000018ABE4A1C
+		private void SupportGroup(); // 0x000000018CDD9758-0x000000018CDD978C
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE494C-0x000000018ABE4980
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDD96BC-0x000000018CDD96F0
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/FABRIK Root")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page7.html")]
-	public class FABRIKRoot : IK // TypeDefIndex: 56146
+	public class FABRIKRoot : IK // TypeDefIndex: 82878
 	{
 		// Fields
 		public IKSolverFABRIKRoot solver; // 0x38
 	
 		// Constructors
-		public FABRIKRoot(); // 0x000000018ABE48DC-0x000000018ABE494C
+		public FABRIKRoot(); // 0x000000018CDD964C-0x000000018CDD96BC
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE4874-0x000000018ABE48A8
+		protected override void OpenUserManual(); // 0x000000018CDD95E4-0x000000018CDD9618
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE4840-0x000000018ABE4874
+		protected override void OpenScriptReference(); // 0x000000018CDD95B0-0x000000018CDD95E4
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE48A8-0x000000018ABE48DC
+		private void SupportGroup(); // 0x000000018CDD9618-0x000000018CDD964C
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE480C-0x000000018ABE4840
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDD957C-0x000000018CDD95B0
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Full Body Biped IK")]
 	[HelpURL("https://www.youtube.com/watch?v=7__IafZGwvI&index=1&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
-	public class FullBodyBipedIK : IK // TypeDefIndex: 56147
+	public class FullBodyBipedIK : IK // TypeDefIndex: 82879
 	{
 		// Fields
 		public BipedReferences references; // 0x38
 		public IKSolverFullBodyBiped solver; // 0x40
 	
 		// Constructors
-		public FullBodyBipedIK(); // 0x000000018ABE5AF8-0x000000018ABE5BA0
+		public FullBodyBipedIK(); // 0x000000018CDDA8BC-0x000000018CDDA964
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABE54D4-0x000000018ABE5508
+		protected override void OpenUserManual(); // 0x000000018CDDA294-0x000000018CDDA2C8
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABE546C-0x000000018ABE54A0
+		protected override void OpenScriptReference(); // 0x000000018CDDA22C-0x000000018CDDA260
 		[ContextMenu("TUTORIAL VIDEO (SETUP)")]
-		private void OpenSetupTutorial(); // 0x000000018ABE54A0-0x000000018ABE54D4
+		private void OpenSetupTutorial(); // 0x000000018CDDA260-0x000000018CDDA294
 		[ContextMenu("TUTORIAL VIDEO (INSPECTOR)")]
-		private void OpenInspectorTutorial(); // 0x000000018ABE5438-0x000000018ABE546C
+		private void OpenInspectorTutorial(); // 0x000000018CDDA1F8-0x000000018CDDA22C
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABE5AC4-0x000000018ABE5AF8
+		private void SupportGroup(); // 0x000000018CDDA888-0x000000018CDDA8BC
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABE532C-0x000000018ABE5360
-		public void SetReferences(BipedReferences references, Transform rootNode); // 0x000000018ABE5A88-0x000000018ABE5AC4
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A60-0x0000000184D85A70
-		public bool ReferencesError(ref string errorMessage); // 0x000000018ABE5508-0x000000018ABE56E8
-		public bool ReferencesWarning(ref string warningMessage); // 0x000000018ABE56E8-0x000000018ABE5A5C
+		private void ASThread(); // 0x000000018CDDA0EC-0x000000018CDDA120
+		public void SetReferences(BipedReferences references, Transform rootNode); // 0x000000018CDDA84C-0x000000018CDDA888
+		public override IKSolver GetIKSolver(); // 0x000000018226EEA0-0x000000018226EEB0
+		public bool ReferencesError(ref string errorMessage); // 0x000000018CDDA2C8-0x000000018CDDA4AC
+		public bool ReferencesWarning(ref string warningMessage); // 0x000000018CDDA4AC-0x000000018CDDA820
 		[ContextMenu("Reinitiate")]
-		private void Reinitiate(); // 0x000000018ABE5A5C-0x000000018ABE5A88
+		private void Reinitiate(); // 0x000000018CDDA820-0x000000018CDDA84C
 		[ContextMenu("Auto-detect References")]
-		private void AutoDetectReferences(); // 0x000000018ABE5360-0x000000018ABE5438
+		private void AutoDetectReferences(); // 0x000000018CDDA120-0x000000018CDDA1F8
 	}
 
-	public abstract class IK : SolverManager // TypeDefIndex: 56148
+	public abstract class IK : SolverManager // TypeDefIndex: 82880
 	{
 		// Constructors
-		protected IK(); // 0x0000000185394738-0x0000000185394740
+		protected IK(); // 0x000000018783A01C-0x000000018783A024
 	
 		// Methods
 		public abstract IKSolver GetIKSolver();
-		protected override void UpdateSolver(); // 0x000000018ABFD638-0x000000018ABFD698
-		protected override void InitiateSolver(); // 0x000000018ABFD5DC-0x000000018ABFD638
-		protected override void FixTransforms(); // 0x000000018ABFD598-0x000000018ABFD5DC
+		protected override void UpdateSolver(); // 0x00000001863B9850-0x00000001863B98B0
+		protected override void InitiateSolver(); // 0x00000001863B97A0-0x00000001863B9800
+		protected override void FixTransforms(); // 0x00000001863B9800-0x00000001863B9850
 		protected abstract void OpenUserManual();
 		protected abstract void OpenScriptReference();
 	}
 
-	public class IKExecutionOrder : MonoBehaviour // TypeDefIndex: 56149
+	public class IKExecutionOrder : MonoBehaviour // TypeDefIndex: 82881
 	{
 		// Fields
 		[Tooltip("The IK components, assign in the order in which you wish to update them.")]
@@ -2047,109 +2044,109 @@ namespace RootMotion.FinalIK
 		private bool fixedFrame; // 0x28
 	
 		// Properties
-		private bool animatePhysics { get; } // 0x000000018ABF8560-0x000000018ABF85D8 
+		private bool animatePhysics { get; } // 0x000000018CDED590-0x000000018CDED608 
 	
 		// Constructors
-		public IKExecutionOrder(); // 0x0000000185393520-0x0000000185393538
+		public IKExecutionOrder(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Start(); // 0x000000018ABF84E0-0x000000018ABF8534
-		private void Update(); // 0x000000018ABF8534-0x000000018ABF8560
-		private void FixedUpdate(); // 0x000000018ABF843C-0x000000018ABF846C
-		private void LateUpdate(); // 0x000000018ABF846C-0x000000018ABF84E0
-		private void FixTransforms(); // 0x000000018ABF83CC-0x000000018ABF843C
+		private void Start(); // 0x000000018CDED504-0x000000018CDED564
+		private void Update(); // 0x000000018CDED564-0x000000018CDED590
+		private void FixedUpdate(); // 0x000000018CDED454-0x000000018CDED484
+		private void LateUpdate(); // 0x000000018CDED484-0x000000018CDED504
+		private void FixTransforms(); // 0x000000018CDED3E0-0x000000018CDED454
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Leg IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page11.html")]
-	public class LegIK : IK // TypeDefIndex: 56150
+	public class LegIK : IK // TypeDefIndex: 82882
 	{
 		// Fields
 		public IKSolverLeg solver; // 0x38
 	
 		// Constructors
-		public LegIK(); // 0x000000018ABFD7E0-0x000000018ABFD850
+		public LegIK(); // 0x000000018CDF2728-0x000000018CDF2798
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABFD778-0x000000018ABFD7AC
+		protected override void OpenUserManual(); // 0x000000018CDF26C0-0x000000018CDF26F4
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABFD744-0x000000018ABFD778
+		protected override void OpenScriptReference(); // 0x000000018CDF268C-0x000000018CDF26C0
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABFD7AC-0x000000018ABFD7E0
+		private void SupportGroup(); // 0x000000018CDF26F4-0x000000018CDF2728
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABFD710-0x000000018ABFD744
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDF2658-0x000000018CDF268C
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page12.html")]
-	public class LimbIK : IK // TypeDefIndex: 56151
+	public class LimbIK : IK // TypeDefIndex: 82883
 	{
 		// Fields
 		public IKSolverLimb solver; // 0x38
 	
 		// Constructors
-		public LimbIK(); // 0x000000018ABFD920-0x000000018ABFD990
+		public LimbIK(); // 0x000000018CDF2868-0x000000018CDF28D8
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABFD8B8-0x000000018ABFD8EC
+		protected override void OpenUserManual(); // 0x000000018CDF2800-0x000000018CDF2834
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABFD884-0x000000018ABFD8B8
+		protected override void OpenScriptReference(); // 0x000000018CDF27CC-0x000000018CDF2800
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABFD8EC-0x000000018ABFD920
+		private void SupportGroup(); // 0x000000018CDF2834-0x000000018CDF2868
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABFD850-0x000000018ABFD884
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDF2798-0x000000018CDF27CC
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Look At IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page13.html")]
-	public class LookAtIK : IK // TypeDefIndex: 56152
+	public class LookAtIK : IK // TypeDefIndex: 82884
 	{
 		// Fields
 		public IKSolverLookAt solver; // 0x38
 	
 		// Constructors
-		public LookAtIK(); // 0x00000001839DCA90-0x00000001839DCB00
+		public LookAtIK(); // 0x0000000185CD2520-0x0000000185CD2590
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABFD9F8-0x000000018ABFDA2C
+		protected override void OpenUserManual(); // 0x000000018CDF2940-0x000000018CDF2974
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABFD9C4-0x000000018ABFD9F8
+		protected override void OpenScriptReference(); // 0x000000018CDF290C-0x000000018CDF2940
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABFDA2C-0x000000018ABFDA60
+		private void SupportGroup(); // 0x000000018CDF2974-0x000000018CDF29A8
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABFD990-0x000000018ABFD9C4
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDF28D8-0x000000018CDF290C
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Trigonometric IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page15.html")]
-	public class TrigonometricIK : IK // TypeDefIndex: 56153
+	public class TrigonometricIK : IK // TypeDefIndex: 82885
 	{
 		// Fields
 		public IKSolverTrigonometric solver; // 0x38
 	
 		// Constructors
-		public TrigonometricIK(); // 0x000000018ABFEEAC-0x000000018ABFEF1C
+		public TrigonometricIK(); // 0x000000018CDF3DF4-0x000000018CDF3E64
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABFEE44-0x000000018ABFEE78
+		protected override void OpenUserManual(); // 0x000000018CDF3D8C-0x000000018CDF3DC0
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABFEE10-0x000000018ABFEE44
+		protected override void OpenScriptReference(); // 0x000000018CDF3D58-0x000000018CDF3D8C
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018ABFEE78-0x000000018ABFEEAC
+		private void SupportGroup(); // 0x000000018CDF3DC0-0x000000018CDF3DF4
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018ABFEDDC-0x000000018ABFEE10
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A50-0x0000000184D85A60
+		private void ASThread(); // 0x000000018CDF3D24-0x000000018CDF3D58
+		public override IKSolver GetIKSolver(); // 0x0000000182986470-0x0000000182986480
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/VR IK")]
-	public class VRIK : IK // TypeDefIndex: 56155
+	public class VRIK : IK // TypeDefIndex: 82887
 	{
 		// Fields
 		[ContextMenuItem("Auto-detect References", "AutoDetectReferences")]
@@ -2160,7 +2157,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class References // TypeDefIndex: 56154
+		public class References // TypeDefIndex: 82886
 		{
 			// Fields
 			public Transform root; // 0x10
@@ -2210,39 +2207,39 @@ namespace RootMotion.FinalIK
 			public Transform rightToes; // 0xB8
 	
 			// Properties
-			public bool isFilled { get; } // 0x000000018ABFE978-0x000000018ABFEDDC 
-			public bool isEmpty { get; } // 0x000000018ABFE608-0x000000018ABFE978 
+			public bool isFilled { get; } // 0x000000018CDF38C0-0x000000018CDF3D24 
+			public bool isEmpty { get; } // 0x000000018CDF3550-0x000000018CDF38C0 
 	
 			// Constructors
-			public References(); // 0x00000001841E1670-0x00000001841E1680
-			public References(BipedReferences b); // 0x000000018ABFE3C4-0x000000018ABFE608
+			public References(); // 0x0000000186805BA0-0x0000000186805BB0
+			public References(BipedReferences b); // 0x000000018CDF330C-0x000000018CDF3550
 	
 			// Methods
-			public Transform[] GetTransforms(); // 0x000000018ABFE0A4-0x000000018ABFE3C4
-			public static bool AutoDetectReferences(Transform root, out References references); // 0x000000018ABFDC0C-0x000000018ABFE0A4
+			public Transform[] GetTransforms(); // 0x000000018CDF2FEC-0x000000018CDF330C
+			public static bool AutoDetectReferences(Transform root, out References references); // 0x000000018CDF2B54-0x000000018CDF2FEC
 		}
 	
 		// Constructors
-		public VRIK(); // 0x000000018ABFF1C4-0x000000018ABFF25C
+		public VRIK(); // 0x000000018CDF410C-0x000000018CDF41A4
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		protected override void OpenUserManual(); // 0x000000018ABFF03C-0x000000018ABFF070
+		protected override void OpenUserManual(); // 0x000000018CDF3F84-0x000000018CDF3FB8
 		[ContextMenu("Scrpt Reference")]
-		protected override void OpenScriptReference(); // 0x000000018ABFEFD4-0x000000018ABFF008
+		protected override void OpenScriptReference(); // 0x000000018CDF3F1C-0x000000018CDF3F50
 		[ContextMenu("TUTORIAL VIDEO (STEAMVR SETUP)")]
-		private void OpenSetupTutorial(); // 0x000000018ABFF008-0x000000018ABFF03C
+		private void OpenSetupTutorial(); // 0x000000018CDF3F50-0x000000018CDF3F84
 		[ContextMenu("Auto-detect References")]
-		public void AutoDetectReferences(); // 0x000000018ABFEF1C-0x000000018ABFEF40
+		public void AutoDetectReferences(); // 0x000000018CDF3E64-0x000000018CDF3E88
 		[ContextMenu("Guess Hand Orientations")]
-		public void GuessHandOrientations(); // 0x000000018ABFEF40-0x000000018ABFEF6C
-		public override IKSolver GetIKSolver(); // 0x0000000184D85A60-0x0000000184D85A70
-		protected override void InitiateSolver(); // 0x000000018ABFEF6C-0x000000018ABFEFD4
-		protected override void UpdateSolver(); // 0x000000018ABFF070-0x000000018ABFF1C4
+		public void GuessHandOrientations(); // 0x000000018CDF3E88-0x000000018CDF3EB4
+		public override IKSolver GetIKSolver(); // 0x000000018226EEA0-0x000000018226EEB0
+		protected override void InitiateSolver(); // 0x000000018CDF3EB4-0x000000018CDF3F1C
+		protected override void UpdateSolver(); // 0x000000018CDF3FB8-0x000000018CDF410C
 	}
 
 	[Serializable]
-	public class FABRIKChain // TypeDefIndex: 56156
+	public class FABRIKChain // TypeDefIndex: 82888
 	{
 		// Fields
 		public FABRIK ik; // 0x10
@@ -2253,17 +2250,17 @@ namespace RootMotion.FinalIK
 		public int[] children; // 0x20
 	
 		// Constructors
-		public FABRIKChain(); // 0x000000018ABEEE04-0x000000018ABEEE54
+		public FABRIKChain(); // 0x000000018CDE3D0C-0x000000018CDE3D5C
 	
 		// Methods
-		public bool IsValid(ref string message); // 0x000000018ABEEB38-0x000000018ABEEBE8
-		public void Initiate(); // 0x000000018ABEEB14-0x000000018ABEEB38
-		public void Stage1(FABRIKChain[] chain); // 0x000000018ABEEBE8-0x000000018ABEECDC
-		public void Stage2(Vector3 rootPosition, FABRIKChain[] chain); // 0x000000018ABEECDC-0x000000018ABEEE04
-		private Vector3 GetCentroid(FABRIKChain[] chain); // 0x000000018ABEE818-0x000000018ABEEB14
+		public bool IsValid(ref string message); // 0x000000018CDE3A1C-0x000000018CDE3ACC
+		public void Initiate(); // 0x000000018CDE39F8-0x000000018CDE3A1C
+		public void Stage1(FABRIKChain[] chain); // 0x000000018CDE3ACC-0x000000018CDE3BD4
+		public void Stage2(Vector3 rootPosition, FABRIKChain[] chain); // 0x000000018CDE3BD4-0x000000018CDE3D0C
+		private Vector3 GetCentroid(FABRIKChain[] chain); // 0x000000018CDE36F4-0x000000018CDE39F8
 	}
 
-	public class FBBIKArmBending : MonoBehaviour // TypeDefIndex: 56157
+	public class FBBIKArmBending : MonoBehaviour // TypeDefIndex: 82889
 	{
 		// Fields
 		public FullBodyBipedIK ik; // 0x18
@@ -2276,15 +2273,15 @@ namespace RootMotion.FinalIK
 		private bool initiated; // 0x70
 	
 		// Constructors
-		public FBBIKArmBending(); // 0x0000000185393520-0x0000000185393538
+		public FBBIKArmBending(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void LateUpdate(); // 0x000000018ABEEE54-0x000000018ABEF470
-		private void OnPostFBBIK(); // 0x000000018ABEF598-0x000000018ABEF76C
-		private void OnDestroy(); // 0x000000018ABEF470-0x000000018ABEF598
+		private void LateUpdate(); // 0x000000018CDE3D5C-0x000000018CDE4378
+		private void OnPostFBBIK(); // 0x000000018CDE44A0-0x000000018CDE4674
+		private void OnDestroy(); // 0x000000018CDE4378-0x000000018CDE44A0
 	}
 
-	public class FBBIKHeadEffector : MonoBehaviour // TypeDefIndex: 56159
+	public class FBBIKHeadEffector : MonoBehaviour // TypeDefIndex: 82891
 	{
 		// Fields
 		[Tooltip("Reference to the FBBIK component.")]
@@ -2372,7 +2369,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class BendBone // TypeDefIndex: 56158
+		public class BendBone // TypeDefIndex: 82890
 		{
 			// Fields
 			[Tooltip("Assign spine and/or neck bones.")]
@@ -2383,35 +2380,35 @@ namespace RootMotion.FinalIK
 			private Quaternion defaultLocalRotation; // 0x1C
 	
 			// Constructors
-			public BendBone(); // 0x000000018ABEC75C-0x000000018ABEC780
-			public BendBone(Transform transform, float weight); // 0x000000018ABEC724-0x000000018ABEC75C
+			public BendBone(); // 0x000000018CDE1624-0x000000018CDE1648
+			public BendBone(Transform transform, float weight); // 0x000000018CDE15EC-0x000000018CDE1624
 	
 			// Methods
-			public void StoreDefaultLocalState(); // 0x000000018ABEC6F0-0x000000018ABEC724
-			public void FixTransforms(); // 0x000000018ABEC6BC-0x000000018ABEC6F0
+			public void StoreDefaultLocalState(); // 0x000000018CDE15B8-0x000000018CDE15EC
+			public void FixTransforms(); // 0x000000018CDE1584-0x000000018CDE15B8
 		}
 	
 		// Constructors
-		public FBBIKHeadEffector(); // 0x000000018ABF2DD4-0x000000018ABF2FA8
+		public FBBIKHeadEffector(); // 0x000000018CDE7CFC-0x000000018CDE7ED0
 	
 		// Methods
-		private void Start(); // 0x000000018ABF2924-0x000000018ABF2DD4
-		private void OnStoreDefaultLocalState(); // 0x000000018ABF1BEC-0x000000018ABF2120
-		private void OnFixTransforms(); // 0x000000018ABF0D84-0x000000018ABF1170
-		private void OnPreRead(); // 0x000000018ABF1370-0x000000018ABF1BEC
-		private void SpineBend(); // 0x000000018ABF25F4-0x000000018ABF2924
-		private void CCDPass(); // 0x000000018ABEF76C-0x000000018ABEFAF4
-		private void Iterate(int iteration); // 0x000000018ABEFDA0-0x000000018ABF0850
-		private void OnPostUpdate(); // 0x000000018ABF1170-0x000000018ABF1370
-		private void ChestDirection(); // 0x000000018ABEFAF4-0x000000018ABEFDA0
-		private void PostStretching(); // 0x000000018ABF2120-0x000000018ABF2488
-		private void LerpSolverPosition(IKEffector effector, Vector3 position, float weight, Vector3 offset); // 0x000000018ABF0850-0x000000018ABF0970
-		private void Solve(ref Vector3 pos1, ref Vector3 pos2, float nominalDistance); // 0x000000018ABF2488-0x000000018ABF25F4
-		private void OnDestroy(); // 0x000000018ABF0970-0x000000018ABF0D84
+		private void Start(); // 0x000000018CDE784C-0x000000018CDE7CFC
+		private void OnStoreDefaultLocalState(); // 0x000000018CDE6B18-0x000000018CDE7044
+		private void OnFixTransforms(); // 0x000000018CDE5CAC-0x000000018CDE6090
+		private void OnPreRead(); // 0x000000018CDE6298-0x000000018CDE6B18
+		private void SpineBend(); // 0x000000018CDE751C-0x000000018CDE784C
+		private void CCDPass(); // 0x000000018CDE4674-0x000000018CDE4A00
+		private void Iterate(int iteration); // 0x000000018CDE4CB4-0x000000018CDE5778
+		private void OnPostUpdate(); // 0x000000018CDE6090-0x000000018CDE6298
+		private void ChestDirection(); // 0x000000018CDE4A00-0x000000018CDE4CB4
+		private void PostStretching(); // 0x000000018CDE7044-0x000000018CDE73B0
+		private void LerpSolverPosition(IKEffector effector, Vector3 position, float weight, Vector3 offset); // 0x000000018CDE5778-0x000000018CDE5898
+		private void Solve(ref Vector3 pos1, ref Vector3 pos2, float nominalDistance); // 0x000000018CDE73B0-0x000000018CDE751C
+		private void OnDestroy(); // 0x000000018CDE5898-0x000000018CDE5CAC
 	}
 
 	[Serializable]
-	public class FBIKChain // TypeDefIndex: 56162
+	public class FBIKChain // TypeDefIndex: 82894
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -2441,11 +2438,11 @@ namespace RootMotion.FinalIK
 		private float sqrMag1; // 0x78
 		private float sqrMag2; // 0x7C
 		private float sqrMagDif; // 0x80
-		private const float maxLimbLength = 0.99999f; // Metadata: 0x023478EF
+		private const float maxLimbLength = 0.99999f; // Metadata: 0x02641727
 	
 		// Nested types
 		[Serializable]
-		public class ChildConstraint // TypeDefIndex: 56160
+		public class ChildConstraint // TypeDefIndex: 82892
 		{
 			// Fields
 			public float pushElasticity; // 0x10
@@ -2464,20 +2461,20 @@ namespace RootMotion.FinalIK
 			private int chain2Index; // 0x3C
 	
 			// Properties
-			public float nominalDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x0000000184D86C00-0x0000000184D86C10
-			public bool isRigid { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D869F0-0x0000000184D86A00 0x0000000184D86A00-0x0000000184D86A10
+			public float nominalDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233430-0x0000000187233440 0x0000000187233440-0x0000000187233450
+			public bool isRigid { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018224A5F0-0x000000018224A600 0x000000018224A600-0x000000018224A610
 	
 			// Constructors
-			public ChildConstraint(Transform bone1, Transform bone2, float pushElasticity = 0f /* Metadata: 0x023478F3 */, float pullElasticity = 0f /* Metadata: 0x023478F7 */); // 0x000000018ABEE7DC-0x000000018ABEE818
+			public ChildConstraint(Transform bone1, Transform bone2, float pushElasticity = 0f /* Metadata: 0x0264172B */, float pullElasticity = 0f /* Metadata: 0x0264172F */); // 0x000000018CDE36B8-0x000000018CDE36F4
 	
 			// Methods
-			public void Initiate(IKSolverFullBody solver); // 0x000000018ABEE29C-0x000000018ABEE2F4
-			public void OnPreSolve(IKSolverFullBody solver); // 0x000000018ABEE2F4-0x000000018ABEE4C8
-			public void Solve(IKSolverFullBody solver); // 0x000000018ABEE4C8-0x000000018ABEE7DC
+			public void Initiate(IKSolverFullBody solver); // 0x000000018CDE317C-0x000000018CDE31D4
+			public void OnPreSolve(IKSolverFullBody solver); // 0x000000018CDE31D4-0x000000018CDE33A8
+			public void Solve(IKSolverFullBody solver); // 0x000000018CDE33A8-0x000000018CDE36B8
 		}
 	
 		[Serializable]
-		public enum Smoothing // TypeDefIndex: 56161
+		public enum Smoothing // TypeDefIndex: 82893
 		{
 			None = 0,
 			Exponential = 1,
@@ -2485,32 +2482,32 @@ namespace RootMotion.FinalIK
 		}
 	
 		// Constructors
-		public FBIKChain(); // 0x000000018ABF56DC-0x000000018ABF57E0
-		public FBIKChain(float pin, float pull, params Transform[] nodeTransforms); // 0x000000018ABF5580-0x000000018ABF56DC
+		public FBIKChain(); // 0x000000018CDEA688-0x000000018CDEA78C
+		public FBIKChain(float pin, float pull, params Transform[] nodeTransforms); // 0x000000018CDEA52C-0x000000018CDEA688
 	
 		// Methods
-		public void SetNodes(params Transform[] boneTransforms); // 0x000000018ABF4850-0x000000018ABF4948
-		public int GetNodeIndex(Transform boneTransform); // 0x000000018ABF395C-0x000000018ABF3A04
-		public bool IsValid(ref string message); // 0x000000018ABF3B9C-0x000000018ABF3C80
-		public void Initiate(IKSolverFullBody solver); // 0x000000018ABF3A04-0x000000018ABF3B9C
-		public void ReadPose(IKSolverFullBody solver, bool fullBody); // 0x000000018ABF4374-0x000000018ABF4850
-		private void CalculateBoneLengths(IKSolverFullBody solver); // 0x000000018ABF3154-0x000000018ABF3660
-		public void Reach(IKSolverFullBody solver); // 0x000000018ABF4010-0x000000018ABF4374
-		public Vector3 Push(IKSolverFullBody solver); // 0x000000018ABF3C80-0x000000018ABF4010
-		public void SolveTrigonometric(IKSolverFullBody solver, bool calculateBendDirection = false /* Metadata: 0x023478EE */); // 0x000000018ABF4D48-0x000000018ABF5044
-		public void Stage1(IKSolverFullBody solver); // 0x000000018ABF5044-0x000000018ABF5460
-		public void Stage2(IKSolverFullBody solver, Vector3 position); // 0x000000018ABF5460-0x000000018ABF5580
-		public void SolveConstraintSystems(IKSolverFullBody solver); // 0x000000018ABF49AC-0x000000018ABF4AC0
-		private Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018ABF4AC0-0x000000018ABF4B98
-		protected Vector3 GetDirToBendPoint(Vector3 direction, Vector3 bendDirection, float directionMagnitude); // 0x000000018ABF379C-0x000000018ABF395C
-		private void SolveChildConstraints(IKSolverFullBody solver); // 0x000000018ABF4948-0x000000018ABF49AC
-		private void SolveLinearConstraint(IKSolver.Node node1, IKSolver.Node node2, float crossFade, float distance); // 0x000000018ABF4B98-0x000000018ABF4D48
-		public void ForwardReach(Vector3 position); // 0x000000018ABF3660-0x000000018ABF379C
-		private void BackwardReach(Vector3 position); // 0x000000018ABF2FA8-0x000000018ABF3154
+		public void SetNodes(params Transform[] boneTransforms); // 0x000000018CDE97D8-0x000000018CDE98DC
+		public int GetNodeIndex(Transform boneTransform); // 0x000000018CDE88A0-0x000000018CDE8954
+		public bool IsValid(ref string message); // 0x000000018CDE8AF4-0x000000018CDE8BE4
+		public void Initiate(IKSolverFullBody solver); // 0x000000018CDE8954-0x000000018CDE8AF4
+		public void ReadPose(IKSolverFullBody solver, bool fullBody); // 0x000000018CDE92E8-0x000000018CDE97D8
+		private void CalculateBoneLengths(IKSolverFullBody solver); // 0x000000018CDE8080-0x000000018CDE8580
+		public void Reach(IKSolverFullBody solver); // 0x000000018CDE8F7C-0x000000018CDE92E8
+		public Vector3 Push(IKSolverFullBody solver); // 0x000000018CDE8BE4-0x000000018CDE8F7C
+		public void SolveTrigonometric(IKSolverFullBody solver, bool calculateBendDirection = false /* Metadata: 0x02641726 */); // 0x000000018CDE9CEC-0x000000018CDE9FEC
+		public void Stage1(IKSolverFullBody solver); // 0x000000018CDE9FEC-0x000000018CDEA3FC
+		public void Stage2(IKSolverFullBody solver, Vector3 position); // 0x000000018CDEA3FC-0x000000018CDEA52C
+		public void SolveConstraintSystems(IKSolverFullBody solver); // 0x000000018CDE9948-0x000000018CDE9A64
+		private Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018CDE9A64-0x000000018CDE9B3C
+		protected Vector3 GetDirToBendPoint(Vector3 direction, Vector3 bendDirection, float directionMagnitude); // 0x000000018CDE86E0-0x000000018CDE88A0
+		private void SolveChildConstraints(IKSolverFullBody solver); // 0x000000018CDE98DC-0x000000018CDE9948
+		private void SolveLinearConstraint(IKSolver.Node node1, IKSolver.Node node2, float crossFade, float distance); // 0x000000018CDE9B3C-0x000000018CDE9CEC
+		public void ForwardReach(Vector3 position); // 0x000000018CDE8580-0x000000018CDE86E0
+		private void BackwardReach(Vector3 position); // 0x000000018CDE7ED0-0x000000018CDE8080
 	}
 
 	[Serializable]
-	public class IKConstraintBend // TypeDefIndex: 56163
+	public class IKConstraintBend // TypeDefIndex: 82895
 	{
 		// Fields
 		public Transform bone1; // 0x10
@@ -2536,25 +2533,25 @@ namespace RootMotion.FinalIK
 		private bool limbOrientationsSet; // 0x85
 	
 		// Properties
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182A80FA0-0x0000000182A80FB0 0x0000000182A80FB0-0x0000000182A80FC0
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018224EFC0-0x000000018224EFD0 0x000000018224EFD0-0x000000018224EFE0
 	
 		// Constructors
-		public IKConstraintBend(); // 0x000000018ABF6AA4-0x000000018ABF6AC4
-		public IKConstraintBend(Transform bone1, Transform bone2, Transform bone3); // 0x000000018ABF6A74-0x000000018ABF6AA4
+		public IKConstraintBend(); // 0x000000018CDEBA78-0x000000018CDEBA98
+		public IKConstraintBend(Transform bone1, Transform bone2, Transform bone3); // 0x000000018CDEBA48-0x000000018CDEBA78
 	
 		// Methods
-		public bool IsValid(IKSolverFullBody solver, Warning.Logger logger); // 0x000000018ABF608C-0x000000018ABF6218
-		public void SetBones(Transform bone1, Transform bone2, Transform bone3); // 0x00000001831D14F0-0x00000001831D1530
-		public void Initiate(IKSolverFullBody solver); // 0x000000018ABF5D9C-0x000000018ABF608C
-		public void SetLimbOrientation(Vector3 upper, Vector3 lower, Vector3 last); // 0x000000018ABF6874-0x000000018ABF6A74
-		public void LimitBend(float solverWeight, float positionWeight); // 0x000000018ABF6218-0x000000018ABF667C
-		public Vector3 GetDir(IKSolverFullBody solver); // 0x000000018ABF57E0-0x000000018ABF5D9C
-		private Vector3 OrthoToLimb(IKSolverFullBody solver, Vector3 tangent); // 0x000000018ABF6778-0x000000018ABF6874
-		private Vector3 OrthoToBone1(IKSolverFullBody solver, Vector3 tangent); // 0x000000018ABF667C-0x000000018ABF6778
+		public bool IsValid(IKSolverFullBody solver, Warning.Logger logger); // 0x000000018CDEB048-0x000000018CDEB1E4
+		public void SetBones(Transform bone1, Transform bone2, Transform bone3); // 0x00000001854F5A50-0x00000001854F5A90
+		public void Initiate(IKSolverFullBody solver); // 0x000000018CDEAD48-0x000000018CDEB048
+		public void SetLimbOrientation(Vector3 upper, Vector3 lower, Vector3 last); // 0x000000018CDEB848-0x000000018CDEBA48
+		public void LimitBend(float solverWeight, float positionWeight); // 0x000000018CDEB1E4-0x000000018CDEB650
+		public Vector3 GetDir(IKSolverFullBody solver); // 0x000000018CDEA78C-0x000000018CDEAD48
+		private Vector3 OrthoToLimb(IKSolverFullBody solver, Vector3 tangent); // 0x000000018CDEB74C-0x000000018CDEB848
+		private Vector3 OrthoToBone1(IKSolverFullBody solver, Vector3 tangent); // 0x000000018CDEB650-0x000000018CDEB74C
 	}
 
 	[Serializable]
-	public class IKEffector // TypeDefIndex: 56164
+	public class IKEffector // TypeDefIndex: 82896
 	{
 		// Fields
 		public Transform bone; // 0x10
@@ -2595,32 +2592,32 @@ namespace RootMotion.FinalIK
 		private int[] childNodeIndexes; // 0xE8
 	
 		// Properties
-		public bool isEndEffector { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86800-0x0000000184D86810 0x0000000184D86840-0x0000000184D86850
+		public bool isEndEffector { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225DFF0-0x000000018225E000 0x000000018225E000-0x000000018225E010
 	
 		// Constructors
-		public IKEffector(); // 0x000000018ABF8108-0x000000018ABF8250
-		public IKEffector(Transform bone, Transform[] childBones); // 0x000000018ABF8250-0x000000018ABF83CC
+		public IKEffector(); // 0x000000018CDED11C-0x000000018CDED264
+		public IKEffector(Transform bone, Transform[] childBones); // 0x000000018CDED264-0x000000018CDED3E0
 	
 		// Methods
-		public IKSolver.Node GetNode(IKSolverFullBody solver); // 0x000000018ABF6AC4-0x000000018ABF6B1C
-		public void PinToBone(float positionWeight, float rotationWeight); // 0x000000018ABF7BA0-0x000000018ABF7C68
-		public bool IsValid(IKSolver solver, ref string message); // 0x000000018ABF7304-0x000000018ABF7554
-		public void Initiate(IKSolverFullBody solver); // 0x000000018ABF7028-0x000000018ABF7304
-		public void ResetOffset(IKSolverFullBody solver); // 0x000000018ABF7C68-0x000000018ABF7D48
-		public void SetToTarget(); // 0x000000018ABF7D48-0x000000018ABF7DE8
-		public void OnPreSolve(IKSolverFullBody solver); // 0x000000018ABF7568-0x000000018ABF7BA0
-		public void OnPostWrite(); // 0x000000018ABF7554-0x000000018ABF7568
-		private Quaternion GetPlaneRotation(IKSolverFullBody solver); // 0x000000018ABF6B1C-0x000000018ABF6D30
-		public void Update(IKSolverFullBody solver); // 0x000000018ABF7DE8-0x000000018ABF8108
-		private Vector3 GetPosition(IKSolverFullBody solver, out Quaternion planeRotationOffset); // 0x000000018ABF6D30-0x000000018ABF7028
+		public IKSolver.Node GetNode(IKSolverFullBody solver); // 0x000000018CDEBA98-0x000000018CDEBAF0
+		public void PinToBone(float positionWeight, float rotationWeight); // 0x000000018CDECBB0-0x000000018CDECC78
+		public bool IsValid(IKSolver solver, ref string message); // 0x000000018CDEC2EC-0x000000018CDEC550
+		public void Initiate(IKSolverFullBody solver); // 0x000000018CDEBFFC-0x000000018CDEC2EC
+		public void ResetOffset(IKSolverFullBody solver); // 0x000000018CDECC78-0x000000018CDECD5C
+		public void SetToTarget(); // 0x000000018CDECD5C-0x000000018CDECDFC
+		public void OnPreSolve(IKSolverFullBody solver); // 0x000000018CDEC564-0x000000018CDECBB0
+		public void OnPostWrite(); // 0x000000018CDEC550-0x000000018CDEC564
+		private Quaternion GetPlaneRotation(IKSolverFullBody solver); // 0x000000018CDEBAF0-0x000000018CDEBD04
+		public void Update(IKSolverFullBody solver); // 0x000000018CDECDFC-0x000000018CDED11C
+		private Vector3 GetPosition(IKSolverFullBody solver, out Quaternion planeRotationOffset); // 0x000000018CDEBD04-0x000000018CDEBFFC
 	}
 
 	[Serializable]
-	public class IKMapping // TypeDefIndex: 56166
+	public class IKMapping // TypeDefIndex: 82898
 	{
 		// Nested types
 		[Serializable]
-		public class BoneMap // TypeDefIndex: 56165
+		public class BoneMap // TypeDefIndex: 82897
 		{
 			// Fields
 			public Transform transform; // 0x10
@@ -2647,50 +2644,50 @@ namespace RootMotion.FinalIK
 			private int plane3NodeIndex; // 0xCC
 	
 			// Properties
-			public Vector3 swingDirection { get; } // 0x000000018ABEDA94-0x000000018ABEDB10 
-			public bool isNodeBone { get; } // 0x000000018ABED88C-0x000000018ABED894 
-			private Quaternion lastAnimatedTargetRotation { get; } // 0x000000018ABED894-0x000000018ABEDA94 
+			public Vector3 swingDirection { get; } // 0x000000018CDE296C-0x000000018CDE29E8 
+			public bool isNodeBone { get; } // 0x000000018CDE2764-0x000000018CDE276C 
+			private Quaternion lastAnimatedTargetRotation { get; } // 0x000000018CDE276C-0x000000018CDE296C 
 	
 			// Constructors
-			public BoneMap(); // 0x0000000184DA9660-0x0000000184DA9690
+			public BoneMap(); // 0x0000000187257720-0x0000000187257750
 	
 			// Methods
-			public void Initiate(Transform transform, IKSolverFullBody solver); // 0x000000018ABECBAC-0x000000018ABECBF8
-			public void StoreDefaultLocalState(); // 0x000000018ABED324-0x000000018ABED380
-			public void FixTransform(bool position); // 0x000000018ABEC884-0x000000018ABEC8EC
-			public void SetLength(BoneMap nextBone); // 0x000000018ABECF80-0x000000018ABED020
-			public void SetLocalSwingAxis(BoneMap swingTarget); // 0x000000018ABED150-0x000000018ABED15C
-			public void SetLocalSwingAxis(BoneMap bone1, BoneMap bone2); // 0x000000018ABED020-0x000000018ABED150
-			public void SetLocalTwistAxis(Vector3 twistDirection, Vector3 normalDirection); // 0x000000018ABED15C-0x000000018ABED1FC
-			public void SetPlane(IKSolverFullBody solver, Transform planeBone1, Transform planeBone2, Transform planeBone3); // 0x000000018ABED1FC-0x000000018ABED2E8
-			public void UpdatePlane(bool rotation, bool position); // 0x000000018ABED728-0x000000018ABED88C
-			public void SetIKPosition(); // 0x000000018ABECF44-0x000000018ABECF80
-			public void MaintainRotation(); // 0x000000018ABECBF8-0x000000018ABECC2C
-			public void SetToIKPosition(); // 0x000000018ABED2E8-0x000000018ABED324
-			public void FixToNode(IKSolverFullBody solver, float weight, IKSolver.Node fixNode = null); // 0x000000018ABEC780-0x000000018ABEC884
-			public Vector3 GetPlanePosition(IKSolverFullBody solver); // 0x000000018ABEC8EC-0x000000018ABEC9E4
-			public void PositionToPlane(IKSolverFullBody solver); // 0x000000018ABECC2C-0x000000018ABECC7C
-			public void RotateToPlane(IKSolverFullBody solver, float weight); // 0x000000018ABECE5C-0x000000018ABECF44
-			public void Swing(Vector3 swingTarget, float weight); // 0x000000018ABED528-0x000000018ABED5AC
-			public void Swing(Vector3 pos1, Vector3 pos2, float weight); // 0x000000018ABED380-0x000000018ABED528
-			public void Twist(Vector3 twistDirection, Vector3 normalDirection, float weight); // 0x000000018ABED5AC-0x000000018ABED728
-			public void RotateToMaintain(float weight); // 0x000000018ABECDC4-0x000000018ABECE5C
-			public void RotateToEffector(IKSolverFullBody solver, float weight); // 0x000000018ABECC7C-0x000000018ABECDC4
-			private Quaternion GetTargetRotation(IKSolverFullBody solver); // 0x000000018ABEC9E4-0x000000018ABECBAC
+			public void Initiate(Transform transform, IKSolverFullBody solver); // 0x000000018CDE1A74-0x000000018CDE1AC0
+			public void StoreDefaultLocalState(); // 0x000000018CDE21F4-0x000000018CDE2250
+			public void FixTransform(bool position); // 0x000000018CDE174C-0x000000018CDE17B4
+			public void SetLength(BoneMap nextBone); // 0x000000018CDE1E48-0x000000018CDE1EE8
+			public void SetLocalSwingAxis(BoneMap swingTarget); // 0x000000018CDE2018-0x000000018CDE2024
+			public void SetLocalSwingAxis(BoneMap bone1, BoneMap bone2); // 0x000000018CDE1EE8-0x000000018CDE2018
+			public void SetLocalTwistAxis(Vector3 twistDirection, Vector3 normalDirection); // 0x000000018CDE2024-0x000000018CDE20C4
+			public void SetPlane(IKSolverFullBody solver, Transform planeBone1, Transform planeBone2, Transform planeBone3); // 0x000000018CDE20C4-0x000000018CDE21B8
+			public void UpdatePlane(bool rotation, bool position); // 0x000000018CDE2600-0x000000018CDE2764
+			public void SetIKPosition(); // 0x000000018CDE1E0C-0x000000018CDE1E48
+			public void MaintainRotation(); // 0x000000018CDE1AC0-0x000000018CDE1AF4
+			public void SetToIKPosition(); // 0x000000018CDE21B8-0x000000018CDE21F4
+			public void FixToNode(IKSolverFullBody solver, float weight, IKSolver.Node fixNode = null); // 0x000000018CDE1648-0x000000018CDE174C
+			public Vector3 GetPlanePosition(IKSolverFullBody solver); // 0x000000018CDE17B4-0x000000018CDE18AC
+			public void PositionToPlane(IKSolverFullBody solver); // 0x000000018CDE1AF4-0x000000018CDE1B44
+			public void RotateToPlane(IKSolverFullBody solver, float weight); // 0x000000018CDE1D2C-0x000000018CDE1E0C
+			public void Swing(Vector3 swingTarget, float weight); // 0x000000018CDE23FC-0x000000018CDE2480
+			public void Swing(Vector3 pos1, Vector3 pos2, float weight); // 0x000000018CDE2250-0x000000018CDE23FC
+			public void Twist(Vector3 twistDirection, Vector3 normalDirection, float weight); // 0x000000018CDE2480-0x000000018CDE2600
+			public void RotateToMaintain(float weight); // 0x000000018CDE1C90-0x000000018CDE1D2C
+			public void RotateToEffector(IKSolverFullBody solver, float weight); // 0x000000018CDE1B44-0x000000018CDE1C90
+			private Quaternion GetTargetRotation(IKSolverFullBody solver); // 0x000000018CDE18AC-0x000000018CDE1A74
 		}
 	
 		// Constructors
-		public IKMapping(); // 0x00000001841E1670-0x00000001841E1680
+		public IKMapping(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public virtual bool IsValid(IKSolver solver, ref string message); // 0x0000000182FFF600-0x0000000182FFF610
-		public virtual void Initiate(IKSolverFullBody solver); // 0x00000001841E1670-0x00000001841E1680
-		protected bool BoneIsValid(Transform bone, IKSolver solver, ref string message, Warning.Logger logger = null); // 0x000000018ABFB2EC-0x000000018ABFB3E8
-		protected Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018ABF4AC0-0x000000018ABF4B98
+		public virtual bool IsValid(IKSolver solver, ref string message); // 0x00000001851A4410-0x00000001851A4420
+		public virtual void Initiate(IKSolverFullBody solver); // 0x0000000186805BA0-0x0000000186805BB0
+		protected bool BoneIsValid(Transform bone, IKSolver solver, ref string message, Warning.Logger logger = null); // 0x000000018CDF0328-0x000000018CDF0428
+		protected Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018CDE9A64-0x000000018CDE9B3C
 	}
 
 	[Serializable]
-	public class IKMappingBone : IKMapping // TypeDefIndex: 56167
+	public class IKMappingBone : IKMapping // TypeDefIndex: 82899
 	{
 		// Fields
 		public Transform bone; // 0x10
@@ -2699,20 +2696,20 @@ namespace RootMotion.FinalIK
 		private BoneMap boneMap; // 0x20
 	
 		// Constructors
-		public IKMappingBone(); // 0x000000018ABF8790-0x000000018ABF8814
-		public IKMappingBone(Transform bone); // 0x000000018ABF8814-0x000000018ABF88B0
+		public IKMappingBone(); // 0x000000018CDED7C0-0x000000018CDED844
+		public IKMappingBone(Transform bone); // 0x000000018CDED844-0x000000018CDED8E0
 	
 		// Methods
-		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018ABF86A4-0x000000018ABF8720
-		public void StoreDefaultLocalState(); // 0x000000018ABF8740-0x000000018ABF8760
-		public void FixTransforms(); // 0x000000018ABF85D8-0x000000018ABF85FC
-		public override void Initiate(IKSolverFullBody solver); // 0x000000018ABF85FC-0x000000018ABF86A4
-		public void ReadPose(); // 0x000000018ABF8720-0x000000018ABF8740
-		public void WritePose(float solverWeight); // 0x000000018ABF8760-0x000000018ABF8790
+		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018CDED6D4-0x000000018CDED750
+		public void StoreDefaultLocalState(); // 0x000000018CDED770-0x000000018CDED790
+		public void FixTransforms(); // 0x000000018CDED608-0x000000018CDED62C
+		public override void Initiate(IKSolverFullBody solver); // 0x000000018CDED62C-0x000000018CDED6D4
+		public void ReadPose(); // 0x000000018CDED750-0x000000018CDED770
+		public void WritePose(float solverWeight); // 0x000000018CDED790-0x000000018CDED7C0
 	}
 
 	[Serializable]
-	public class IKMappingLimb : IKMapping // TypeDefIndex: 56169
+	public class IKMappingLimb : IKMapping // TypeDefIndex: 82901
 	{
 		// Fields
 		public Transform parentBone; // 0x10
@@ -2732,7 +2729,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public enum BoneMapType // TypeDefIndex: 56168
+		public enum BoneMapType // TypeDefIndex: 82900
 		{
 			Parent = 0,
 			Bone1 = 1,
@@ -2741,23 +2738,23 @@ namespace RootMotion.FinalIK
 		}
 	
 		// Constructors
-		public IKMappingLimb(); // 0x000000018ABF939C-0x000000018ABF9510
-		public IKMappingLimb(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null); // 0x000000018ABF9510-0x000000018ABF96F0
+		public IKMappingLimb(); // 0x000000018CDEE3F0-0x000000018CDEE564
+		public IKMappingLimb(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null); // 0x000000018CDEE564-0x000000018CDEE73C
 	
 		// Methods
-		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018ABF8CEC-0x000000018ABF8D7C
-		public BoneMap GetBoneMap(BoneMapType boneMap); // 0x000000018ABF8958-0x000000018ABF89F8
-		public void SetLimbOrientation(Vector3 upper, Vector3 lower); // 0x000000018ABF8E40-0x000000018ABF9188
-		public void SetBones(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null); // 0x000000018ABF8DF8-0x000000018ABF8E40
-		public void StoreDefaultLocalState(); // 0x000000018ABF9188-0x000000018ABF9224
-		public void FixTransforms(); // 0x000000018ABF88B0-0x000000018ABF8958
-		public override void Initiate(IKSolverFullBody solver); // 0x000000018ABF89F8-0x000000018ABF8CEC
-		public void ReadPose(); // 0x000000018ABF8D7C-0x000000018ABF8DF8
-		public void WritePose(IKSolverFullBody solver, bool fullBody); // 0x000000018ABF9224-0x000000018ABF939C
+		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018CDEDD28-0x000000018CDEDDCC
+		public BoneMap GetBoneMap(BoneMapType boneMap); // 0x000000018CDED988-0x000000018CDEDA28
+		public void SetLimbOrientation(Vector3 upper, Vector3 lower); // 0x000000018CDEDE90-0x000000018CDEE1D8
+		public void SetBones(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null); // 0x000000018CDEDE48-0x000000018CDEDE90
+		public void StoreDefaultLocalState(); // 0x000000018CDEE1D8-0x000000018CDEE274
+		public void FixTransforms(); // 0x000000018CDED8E0-0x000000018CDED988
+		public override void Initiate(IKSolverFullBody solver); // 0x000000018CDEDA28-0x000000018CDEDD28
+		public void ReadPose(); // 0x000000018CDEDDCC-0x000000018CDEDE48
+		public void WritePose(IKSolverFullBody solver, bool fullBody); // 0x000000018CDEE274-0x000000018CDEE3F0
 	}
 
 	[Serializable]
-	public class IKMappingSpine : IKMapping // TypeDefIndex: 56170
+	public class IKMappingSpine : IKMapping // TypeDefIndex: 82902
 	{
 		// Fields
 		public Transform[] spineBones; // 0x10
@@ -2778,25 +2775,25 @@ namespace RootMotion.FinalIK
 		private bool useFABRIK; // 0x70
 	
 		// Constructors
-		public IKMappingSpine(); // 0x000000018ABFB14C-0x000000018ABFB2EC
-		public IKMappingSpine(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone); // 0x000000018ABFAF34-0x000000018ABFB14C
+		public IKMappingSpine(); // 0x000000018CDF0188-0x000000018CDF0328
+		public IKMappingSpine(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone); // 0x000000018CDEFF84-0x000000018CDF0188
 	
 		// Methods
-		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018ABFA170-0x000000018ABFA444
-		public void SetBones(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone); // 0x000000018932E3C0-0x000000018932E41C
-		public void StoreDefaultLocalState(); // 0x000000018ABFAAD4-0x000000018ABFAB28
-		public void FixTransforms(); // 0x000000018ABF9814-0x000000018ABF9880
-		public override void Initiate(IKSolverFullBody solver); // 0x000000018ABF99D4-0x000000018ABFA170
-		private bool UseFABRIK(); // 0x000000018ABFAB28-0x000000018ABFAB54
-		public void ReadPose(); // 0x000000018ABFA7B8-0x000000018ABFAAD4
-		public void WritePose(IKSolverFullBody solver); // 0x000000018ABFAB54-0x000000018ABFAF34
-		public void ForwardReach(Vector3 position); // 0x000000018ABF9880-0x000000018ABF99D4
-		private void BackwardReach(Vector3 position); // 0x000000018ABF96F0-0x000000018ABF9814
-		private void MapToSolverPositions(IKSolverFullBody solver); // 0x000000018ABFA444-0x000000018ABFA7B8
+		public override bool IsValid(IKSolver solver, ref string message); // 0x000000018CDEF1A8-0x000000018CDEF494
+		public void SetBones(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone); // 0x000000018B8B62E0-0x000000018B8B633C
+		public void StoreDefaultLocalState(); // 0x000000018CDEFB18-0x000000018CDEFB74
+		public void FixTransforms(); // 0x000000018CDEE860-0x000000018CDEE8D4
+		public override void Initiate(IKSolverFullBody solver); // 0x000000018CDEEA48-0x000000018CDEF1A8
+		private bool UseFABRIK(); // 0x000000018CDEFB74-0x000000018CDEFBA0
+		public void ReadPose(); // 0x000000018CDEF804-0x000000018CDEFB18
+		public void WritePose(IKSolverFullBody solver); // 0x000000018CDEFBA0-0x000000018CDEFF84
+		public void ForwardReach(Vector3 position); // 0x000000018CDEE8D4-0x000000018CDEEA48
+		private void BackwardReach(Vector3 position); // 0x000000018CDEE73C-0x000000018CDEE860
+		private void MapToSolverPositions(IKSolverFullBody solver); // 0x000000018CDEF494-0x000000018CDEF804
 	}
 
 	[Serializable]
-	public abstract class IKSolver // TypeDefIndex: 56176
+	public abstract class IKSolver // TypeDefIndex: 82908
 	{
 		// Fields
 		[HideInInspector]
@@ -2818,11 +2815,11 @@ namespace RootMotion.FinalIK
 		protected Transform root; // 0x50
 	
 		// Properties
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86870-0x0000000184D86880 0x0000000184D86880-0x0000000184D86890
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018223FE80-0x000000018223FE90 0x000000018223FE90-0x000000018223FEA0
 	
 		// Nested types
 		[Serializable]
-		public class Point // TypeDefIndex: 56171
+		public class Point // TypeDefIndex: 82903
 		{
 			// Fields
 			public Transform transform; // 0x10
@@ -2834,19 +2831,19 @@ namespace RootMotion.FinalIK
 			public Quaternion defaultLocalRotation; // 0x44
 	
 			// Constructors
-			public Point(); // 0x00000001839DDFA0-0x00000001839DDFD0
+			public Point(); // 0x0000000185CD2EB0-0x0000000185CD2EE0
 	
 			// Methods
-			public void StoreDefaultLocalState(); // 0x00000001839DFD60-0x00000001839DFDE0
-			public void FixTransform(); // 0x0000000182FA5C50-0x0000000182FA5DE0
-			public void UpdateSolverPosition(); // 0x000000018ABFDB74-0x000000018ABFDBB0
-			public void UpdateSolverLocalPosition(); // 0x000000018ABFDADC-0x000000018ABFDB18
-			public void UpdateSolverState(); // 0x000000018ABFDBB0-0x000000018ABFDC0C
-			public void UpdateSolverLocalState(); // 0x000000018ABFDB18-0x000000018ABFDB74
+			public void StoreDefaultLocalState(); // 0x0000000185CD57A0-0x0000000185CD5840
+			public void FixTransform(); // 0x000000018514E660-0x000000018514E880
+			public void UpdateSolverPosition(); // 0x000000018CDF2ABC-0x000000018CDF2AF8
+			public void UpdateSolverLocalPosition(); // 0x000000018CDF2A24-0x000000018CDF2A60
+			public void UpdateSolverState(); // 0x000000018CDF2AF8-0x000000018CDF2B54
+			public void UpdateSolverLocalState(); // 0x000000018CDF2A60-0x000000018CDF2ABC
 		}
 	
 		[Serializable]
-		public class Bone : Point // TypeDefIndex: 56172
+		public class Bone : Point // TypeDefIndex: 82904
 		{
 			// Fields
 			public float length; // 0x58
@@ -2856,22 +2853,22 @@ namespace RootMotion.FinalIK
 			private bool isLimited; // 0x78
 	
 			// Properties
-			public RotationLimit rotationLimit { get; set; } // 0x00000001833B2120-0x00000001833B22A0 0x000000018ABEE23C-0x000000018ABEE29C
+			public RotationLimit rotationLimit { get; set; } // 0x0000000185CD3D40-0x0000000185CD3EC0 0x000000018CDE311C-0x000000018CDE317C
 	
 			// Constructors
-			public Bone(); // 0x00000001839DDF40-0x00000001839DDFA0
-			public Bone(Transform transform); // 0x000000018ABEE1CC-0x000000018ABEE23C
-			public Bone(Transform transform, float weight); // 0x000000018ABEE148-0x000000018ABEE1CC
+			public Bone(); // 0x0000000185CD2E50-0x0000000185CD2EB0
+			public Bone(Transform transform); // 0x000000018CDE30AC-0x000000018CDE311C
+			public Bone(Transform transform, float weight); // 0x000000018CDE3028-0x000000018CDE30AC
 	
 			// Methods
-			public void Swing(Vector3 swingTarget, float weight = 1f /* Metadata: 0x02347902 */); // 0x000000018ABEDF44-0x000000018ABEE148
-			public static void SolverSwing(Bone[] bones, int index, Vector3 swingTarget, float weight = 1f /* Metadata: 0x02347906 */); // 0x000000018ABEDB4C-0x000000018ABEDD74
-			public void Swing2D(Vector3 swingTarget, float weight = 1f /* Metadata: 0x0234790A */); // 0x000000018ABEDD74-0x000000018ABEDF44
-			public void SetToSolverPosition(); // 0x000000018ABEDB10-0x000000018ABEDB4C
+			public void Swing(Vector3 swingTarget, float weight = 1f /* Metadata: 0x0264173A */); // 0x000000018CDE2E24-0x000000018CDE3028
+			public static void SolverSwing(Bone[] bones, int index, Vector3 swingTarget, float weight = 1f /* Metadata: 0x0264173E */); // 0x000000018CDE2A24-0x000000018CDE2C54
+			public void Swing2D(Vector3 swingTarget, float weight = 1f /* Metadata: 0x02641742 */); // 0x000000018CDE2C54-0x000000018CDE2E24
+			public void SetToSolverPosition(); // 0x000000018CDE29E8-0x000000018CDE2A24
 		}
 	
 		[Serializable]
-		public class Node : Point // TypeDefIndex: 56173
+		public class Node : Point // TypeDefIndex: 82905
 		{
 			// Fields
 			public float length; // 0x58
@@ -2880,42 +2877,42 @@ namespace RootMotion.FinalIK
 			public Vector3 offset; // 0x64
 	
 			// Constructors
-			public Node(); // 0x000000018ABFDA90-0x000000018ABFDA98
-			public Node(Transform transform); // 0x000000018ABFDA60-0x000000018ABFDA90
-			public Node(Transform transform, float weight); // 0x000000018ABFDA98-0x000000018ABFDADC
+			public Node(); // 0x000000018CDF29D8-0x000000018CDF29E0
+			public Node(Transform transform); // 0x000000018CDF29A8-0x000000018CDF29D8
+			public Node(Transform transform, float weight); // 0x000000018CDF29E0-0x000000018CDF2A24
 		}
 	
-		public delegate void UpdateDelegate(); // TypeDefIndex: 56174; 0x00000001853DEDB8-0x00000001853DEDC8
+		public delegate void UpdateDelegate(); // TypeDefIndex: 82906; 0x0000000185B44B70-0x0000000185B44B80
 	
-		public delegate void IterationDelegate(int i); // TypeDefIndex: 56175; 0x0000000182B46B90-0x0000000182B46BA0
+		public delegate void IterationDelegate(int i); // TypeDefIndex: 82907; 0x0000000185B78EA0-0x0000000185B78EB0
 	
 		// Constructors
-		protected IKSolver(); // 0x0000000184DA9690-0x0000000184DA96A0
+		protected IKSolver(); // 0x0000000187257750-0x0000000187257760
 	
 		// Methods
-		public bool IsValid(); // 0x000000018ABFD198-0x000000018ABFD1EC
+		public bool IsValid(); // 0x000000018CDF21FC-0x000000018CDF2258
 		public abstract bool IsValid(ref string message);
-		public void Initiate(Transform root); // 0x00000001839DE430-0x00000001839DE590
-		public void Update(); // 0x000000018326AC50-0x000000018326ACB0
-		public virtual Vector3 GetIKPosition(); // 0x00000001816057F0-0x0000000181605810
-		public void SetIKPosition(Vector3 position); // 0x0000000184D91E50-0x0000000184D91E60
-		public float GetIKPositionWeight(); // 0x00000001811EC8A0-0x00000001811EC8B0
-		public void SetIKPositionWeight(float weight); // 0x000000018ABFD574-0x000000018ABFD598
-		public Transform GetRoot(); // 0x0000000184D86270-0x0000000184D86280
+		public void Initiate(Transform root); // 0x00000001859AF750-0x00000001859AF8C0
+		public void Update(); // 0x00000001854AD600-0x00000001854AD670
+		public virtual Vector3 GetIKPosition(); // 0x00000001829EBA20-0x00000001829EBA40
+		public void SetIKPosition(Vector3 position); // 0x000000018723FDA0-0x000000018723FDB0
+		public float GetIKPositionWeight(); // 0x00000001872332C0-0x00000001872332D0
+		public void SetIKPositionWeight(float weight); // 0x000000018CDF25B8-0x000000018CDF25DC
+		public Transform GetRoot(); // 0x000000018226EBD0-0x000000018226EBE0
 		public abstract Point[] GetPoints();
 		public abstract Point GetPoint(Transform transform);
 		public abstract void FixTransforms();
 		public abstract void StoreDefaultLocalState();
 		protected abstract void OnInitiate();
 		protected abstract void OnUpdate();
-		protected void LogWarning(string message); // 0x000000018ABFD1EC-0x000000018ABFD204
-		public static Transform ContainsDuplicateBone(Bone[] bones); // 0x00000001839DFC20-0x00000001839DFD10
-		public static bool HierarchyIsValid(Bone[] bones); // 0x00000001839DEEF0-0x00000001839DEF70
-		protected static float PreSolveBones(ref Bone[] bones); // 0x000000018ABFD204-0x000000018ABFD574
+		protected void LogWarning(string message); // 0x000000018CDF2258-0x000000018CDF2270
+		public static Transform ContainsDuplicateBone(Bone[] bones); // 0x0000000185CD5630-0x0000000185CD5750
+		public static bool HierarchyIsValid(Bone[] bones); // 0x0000000185CD48D0-0x0000000185CD4960
+		protected static float PreSolveBones(ref Bone[] bones); // 0x000000018CDF2270-0x000000018CDF25B8
 	}
 
 	[Serializable]
-	public class IKSolverAim : IKSolverHeuristic // TypeDefIndex: 56177
+	public class IKSolverAim : IKSolverHeuristic // TypeDefIndex: 82909
 	{
 		// Fields
 		public Transform transform; // 0x88
@@ -2936,25 +2933,25 @@ namespace RootMotion.FinalIK
 		private Transform lastTransform; // 0xE8
 	
 		// Properties
-		public Vector3 transformAxis { get; } // 0x000000018ABFBF7C-0x000000018ABFC000 
-		public Vector3 transformPoleAxis { get; } // 0x000000018ABFC000-0x000000018ABFC084 
-		protected override int minBones { get; } // 0x0000000184D85B80-0x0000000184D85B90 
-		protected override Vector3 localDirection { get; } // 0x000000018ABFBECC-0x000000018ABFBF7C 
+		public Vector3 transformAxis { get; } // 0x000000018CDF0FDC-0x000000018CDF1060 
+		public Vector3 transformPoleAxis { get; } // 0x000000018CDF1060-0x000000018CDF10E4 
+		protected override int minBones { get; } // 0x00000001872328C0-0x00000001872328D0 
+		protected override Vector3 localDirection { get; } // 0x000000018CDF0F24-0x000000018CDF0FDC 
 	
 		// Constructors
-		public IKSolverAim(); // 0x00000001839DDB50-0x00000001839DDBB0
+		public IKSolverAim(); // 0x0000000185CD2A60-0x0000000185CD2AC0
 	
 		// Methods
-		public float GetAngle(); // 0x000000018ABFB3E8-0x000000018ABFB4B4
-		protected override void OnInitiate(); // 0x00000001839DE740-0x00000001839DE920
-		protected override void OnUpdate(); // 0x0000000183B9F470-0x0000000183B9F680
-		private void Solve(); // 0x000000018ABFBDB8-0x000000018ABFBECC
-		private Vector3 GetClampedIKPosition(); // 0x000000018ABFB4B4-0x000000018ABFB888
-		private void RotateToTarget(Vector3 targetPosition, Bone bone, float weight); // 0x000000018ABFB888-0x000000018ABFBDB8
+		public float GetAngle(); // 0x000000018CDF0428-0x000000018CDF04F4
+		protected override void OnInitiate(); // 0x0000000185CD4090-0x0000000185CD4290
+		protected override void OnUpdate(); // 0x00000001851509B0-0x0000000185150BD0
+		private void Solve(); // 0x000000018CDF0E00-0x000000018CDF0F24
+		private Vector3 GetClampedIKPosition(); // 0x000000018CDF04F4-0x000000018CDF08CC
+		private void RotateToTarget(Vector3 targetPosition, Bone bone, float weight); // 0x000000018CDF08CC-0x000000018CDF0E00
 	}
 
 	[Serializable]
-	public class IKSolverArm : IKSolver // TypeDefIndex: 56178
+	public class IKSolverArm : IKSolver // TypeDefIndex: 82910
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -2971,40 +2968,40 @@ namespace RootMotion.FinalIK
 		private Quaternion[] rotations; // 0xB0
 	
 		// Constructors
-		public IKSolverArm(); // 0x000000018ABFCFA0-0x000000018ABFD198
+		public IKSolverArm(); // 0x000000018CDF2004-0x000000018CDF21FC
 	
 		// Methods
-		public override bool IsValid(ref string message); // 0x000000018ABFC358-0x000000018ABFC654
-		public bool SetChain(Transform chest, Transform shoulder, Transform upperArm, Transform forearm, Transform hand, Transform root); // 0x000000018ABFCBC0-0x000000018ABFCC70
-		public override Point[] GetPoints(); // 0x000000018ABFC254-0x000000018ABFC358
-		public override Point GetPoint(Transform transform); // 0x000000018ABFC0E8-0x000000018ABFC254
-		public override void StoreDefaultLocalState(); // 0x000000018ABFCCF0-0x000000018ABFCD50
-		public override void FixTransforms(); // 0x000000018ABFC084-0x000000018ABFC0E8
-		protected override void OnInitiate(); // 0x000000018ABFC654-0x000000018ABFC6D0
-		protected override void OnUpdate(); // 0x000000018ABFC6D0-0x000000018ABFC6FC
-		private void Solve(); // 0x000000018ABFCC70-0x000000018ABFCCF0
-		private void Read(); // 0x000000018ABFC6FC-0x000000018ABFCBC0
-		private void Write(); // 0x000000018ABFCD50-0x000000018ABFCFA0
+		public override bool IsValid(ref string message); // 0x000000018CDF13B8-0x000000018CDF16B4
+		public bool SetChain(Transform chest, Transform shoulder, Transform upperArm, Transform forearm, Transform hand, Transform root); // 0x000000018CDF1C24-0x000000018CDF1CD4
+		public override Point[] GetPoints(); // 0x000000018CDF12B4-0x000000018CDF13B8
+		public override Point GetPoint(Transform transform); // 0x000000018CDF1148-0x000000018CDF12B4
+		public override void StoreDefaultLocalState(); // 0x000000018CDF1D54-0x000000018CDF1DB4
+		public override void FixTransforms(); // 0x000000018CDF10E4-0x000000018CDF1148
+		protected override void OnInitiate(); // 0x000000018CDF16B4-0x000000018CDF1730
+		protected override void OnUpdate(); // 0x000000018CDF1730-0x000000018CDF175C
+		private void Solve(); // 0x000000018CDF1CD4-0x000000018CDF1D54
+		private void Read(); // 0x000000018CDF175C-0x000000018CDF1C24
+		private void Write(); // 0x000000018CDF1DB4-0x000000018CDF2004
 	}
 
 	[Serializable]
-	public class IKSolverCCD : IKSolverHeuristic // TypeDefIndex: 56179
+	public class IKSolverCCD : IKSolverHeuristic // TypeDefIndex: 82911
 	{
 		// Fields
 		public IterationDelegate OnPreIteration; // 0x88
 	
 		// Constructors
-		public IKSolverCCD(); // 0x000000018ABFFD84-0x000000018ABFFD8C
+		public IKSolverCCD(); // 0x000000018CDF4CB8-0x000000018CDF4CC0
 	
 		// Methods
-		public void FadeOutBoneWeights(); // 0x000000018ABFF25C-0x000000018ABFF2F4
-		protected override void OnInitiate(); // 0x000000018ABFF2F4-0x000000018ABFF370
-		protected override void OnUpdate(); // 0x000000018ABFF370-0x000000018ABFF628
-		protected void Solve(Vector3 targetPosition); // 0x000000018ABFF628-0x000000018ABFFD84
+		public void FadeOutBoneWeights(); // 0x000000018CDF41A4-0x000000018CDF4248
+		protected override void OnInitiate(); // 0x000000018CDF4248-0x000000018CDF42C4
+		protected override void OnUpdate(); // 0x000000018CDF42C4-0x000000018CDF457C
+		protected void Solve(Vector3 targetPosition); // 0x000000018CDF457C-0x000000018CDF4CB8
 	}
 
 	[Serializable]
-	public class IKSolverFABRIK : IKSolverHeuristic // TypeDefIndex: 56180
+	public class IKSolverFABRIK : IKSolverHeuristic // TypeDefIndex: 82912
 	{
 		// Fields
 		public IterationDelegate OnPreIteration; // 0x88
@@ -3012,39 +3009,39 @@ namespace RootMotion.FinalIK
 		private Vector3[] solverLocalPositions; // 0x98
 	
 		// Properties
-		protected override bool boneLengthCanBeZero { get; } // 0x00000001812081B0-0x0000000181208610 
+		protected override bool boneLengthCanBeZero { get; } // 0x00000001843FFFF0-0x0000000184400000 
 	
 		// Constructors
-		public IKSolverFABRIK(); // 0x00000001839DDBB0-0x00000001839DDC40
+		public IKSolverFABRIK(); // 0x0000000185CD2AC0-0x0000000185CD2B50
 	
 		// Methods
-		public void SolveForward(Vector3 position); // 0x000000018AC02600-0x000000018AC0269C
-		public void SolveBackward(Vector3 position); // 0x000000018AC02564-0x000000018AC02600
-		public override Vector3 GetIKPosition(); // 0x000000018AC016A8-0x000000018AC01744
-		protected override void OnInitiate(); // 0x00000001839DF320-0x00000001839DF680
-		protected override void OnUpdate(); // 0x0000000183F6ECB0-0x0000000183F6ECF0
-		private Vector3 SolveJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018AC0269C-0x000000018AC02784
-		private void OnPreSolve(); // 0x000000018AC02098-0x000000018AC02564
-		private void OnPostSolve(); // 0x000000018AC02050-0x000000018AC02098
-		private void Solve(Vector3 targetPosition); // 0x000000018AC02784-0x000000018AC0280C
-		private void ForwardReach(Vector3 position); // 0x000000018AC014CC-0x000000018AC016A8
-		private void SolverMove(int index, Vector3 offset); // 0x000000018AC02998-0x000000018AC02A2C
-		private void SolverRotate(int index, Quaternion rotation, bool recursive); // 0x000000018AC02AB0-0x000000018AC02B40
-		private void SolverRotateChildren(int index, Quaternion rotation); // 0x000000018AC02A2C-0x000000018AC02AB0
-		private void SolverMoveChildrenAroundPoint(int index, Quaternion rotation); // 0x000000018AC0280C-0x000000018AC02998
-		private Quaternion GetParentSolverRotation(int index); // 0x00000001839DEA40-0x00000001839DEBD0
-		private Vector3 GetParentSolverPosition(int index); // 0x00000001839DEBD0-0x00000001839DED80
-		private Quaternion GetLimitedRotation(int index, Quaternion q, out bool changed); // 0x000000018AC01744-0x000000018AC01880
-		private void LimitForward(int rotateBone, int limitBone); // 0x000000018AC01880-0x000000018AC01DF4
-		private void BackwardReach(Vector3 position); // 0x000000018AC01498-0x000000018AC014CC
-		private void BackwardReachUnlimited(Vector3 position); // 0x000000018AC01378-0x000000018AC01498
-		private void BackwardReachLimited(Vector3 position); // 0x000000018AC00DBC-0x000000018AC01378
-		private void MapToSolverPositions(); // 0x000000018AC01EE4-0x000000018AC02050
-		private void MapToSolverPositionsLimited(); // 0x000000018AC01DF4-0x000000018AC01EE4
+		public void SolveForward(Vector3 position); // 0x000000018CDF75DC-0x000000018CDF7678
+		public void SolveBackward(Vector3 position); // 0x000000018CDF7540-0x000000018CDF75DC
+		public override Vector3 GetIKPosition(); // 0x000000018CDF66A8-0x000000018CDF6744
+		protected override void OnInitiate(); // 0x0000000185CD4D10-0x0000000185CD50A0
+		protected override void OnUpdate(); // 0x000000018618DCB0-0x000000018618DCF0
+		private Vector3 SolveJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018CDF7678-0x000000018CDF7760
+		private void OnPreSolve(); // 0x000000018CDF70B0-0x000000018CDF7540
+		private void OnPostSolve(); // 0x000000018CDF7068-0x000000018CDF70B0
+		private void Solve(Vector3 targetPosition); // 0x000000018CDF7760-0x000000018CDF77E8
+		private void ForwardReach(Vector3 position); // 0x000000018CDF64B8-0x000000018CDF66A8
+		private void SolverMove(int index, Vector3 offset); // 0x000000018CDF7974-0x000000018CDF7A14
+		private void SolverRotate(int index, Quaternion rotation, bool recursive); // 0x000000018CDF7AA0-0x000000018CDF7B3C
+		private void SolverRotateChildren(int index, Quaternion rotation); // 0x000000018CDF7A14-0x000000018CDF7AA0
+		private void SolverMoveChildrenAroundPoint(int index, Quaternion rotation); // 0x000000018CDF77E8-0x000000018CDF7974
+		private Quaternion GetParentSolverRotation(int index); // 0x0000000185CD4290-0x0000000185CD4420
+		private Vector3 GetParentSolverPosition(int index); // 0x0000000185CD4420-0x0000000185CD45D0
+		private Quaternion GetLimitedRotation(int index, Quaternion q, out bool changed); // 0x000000018CDF6744-0x000000018CDF6880
+		private void LimitForward(int rotateBone, int limitBone); // 0x000000018CDF6880-0x000000018CDF6E08
+		private void BackwardReach(Vector3 position); // 0x000000018CDF6484-0x000000018CDF64B8
+		private void BackwardReachUnlimited(Vector3 position); // 0x000000018CDF6364-0x000000018CDF6484
+		private void BackwardReachLimited(Vector3 position); // 0x000000018CDF5DDC-0x000000018CDF6364
+		private void MapToSolverPositions(); // 0x000000018CDF6EF8-0x000000018CDF7068
+		private void MapToSolverPositionsLimited(); // 0x000000018CDF6E08-0x000000018CDF6EF8
 	}
 
 	[Serializable]
-	public class IKSolverFABRIKRoot : IKSolver // TypeDefIndex: 56181
+	public class IKSolverFABRIKRoot : IKSolver // TypeDefIndex: 82913
 	{
 		// Fields
 		public int iterations; // 0x58
@@ -3056,23 +3053,23 @@ namespace RootMotion.FinalIK
 		private Vector3 rootDefaultPosition; // 0x78
 	
 		// Constructors
-		public IKSolverFABRIKRoot(); // 0x000000018AC00D64-0x000000018AC00DBC
+		public IKSolverFABRIKRoot(); // 0x000000018CDF5D84-0x000000018CDF5DDC
 	
 		// Methods
-		public override bool IsValid(ref string message); // 0x000000018AC003BC-0x000000018AC00A08
-		public override void StoreDefaultLocalState(); // 0x000000018AC00CD4-0x000000018AC00D64
-		public override void FixTransforms(); // 0x000000018ABFFE84-0x000000018ABFFF24
-		protected override void OnInitiate(); // 0x000000018AC00A08-0x000000018AC00AD8
-		private bool IsRoot(int index); // 0x000000018AC0032C-0x000000018AC003BC
-		protected override void OnUpdate(); // 0x000000018AC00AD8-0x000000018AC00CD4
-		public override Point[] GetPoints(); // 0x000000018AC002A4-0x000000018AC0032C
-		public override Point GetPoint(Transform transform); // 0x000000018AC0022C-0x000000018AC002A4
-		private void AddPointsToArray(ref Point[] array, FABRIKChain chain); // 0x000000018ABFFD8C-0x000000018ABFFE84
-		private Vector3 GetCentroid(); // 0x000000018ABFFF24-0x000000018AC0022C
+		public override bool IsValid(ref string message); // 0x000000018CDF534C-0x000000018CDF59F4
+		public override void StoreDefaultLocalState(); // 0x000000018CDF5CEC-0x000000018CDF5D84
+		public override void FixTransforms(); // 0x000000018CDF4DCC-0x000000018CDF4E74
+		protected override void OnInitiate(); // 0x000000018CDF59F4-0x000000018CDF5ACC
+		private bool IsRoot(int index); // 0x000000018CDF52B4-0x000000018CDF534C
+		protected override void OnUpdate(); // 0x000000018CDF5ACC-0x000000018CDF5CEC
+		public override Point[] GetPoints(); // 0x000000018CDF5218-0x000000018CDF52B4
+		public override Point GetPoint(Transform transform); // 0x000000018CDF5194-0x000000018CDF5218
+		private void AddPointsToArray(ref Point[] array, FABRIKChain chain); // 0x000000018CDF4CC0-0x000000018CDF4DCC
+		private Vector3 GetCentroid(); // 0x000000018CDF4E74-0x000000018CDF5194
 	}
 
 	[Serializable]
-	public class IKSolverFullBody : IKSolver // TypeDefIndex: 56182
+	public class IKSolverFullBody : IKSolver // TypeDefIndex: 82914
 	{
 		// Fields
 		[Range(0f, 10f)]
@@ -3093,29 +3090,29 @@ namespace RootMotion.FinalIK
 		public UpdateDelegate OnFixTransforms; // 0xC8
 	
 		// Constructors
-		public IKSolverFullBody(); // 0x000000018AC06C58-0x000000018AC06D78
+		public IKSolverFullBody(); // 0x000000018CDFBDAC-0x000000018CDFBECC
 	
 		// Methods
-		public IKEffector GetEffector(Transform t); // 0x000000018AC05DDC-0x000000018AC05E98
-		public FBIKChain GetChain(Transform transform); // 0x000000018AC05D98-0x000000018AC05DDC
-		public int GetChainIndex(Transform transform); // 0x000000018AC05C94-0x000000018AC05D98
-		public Node GetNode(int chainIndex, int nodeIndex); // 0x000000018AC05E98-0x000000018AC05EE0
-		public void GetChainAndNodeIndexes(Transform transform, out int chainIndex, out int nodeIndex); // 0x000000018AC05C18-0x000000018AC05C94
-		public override Point[] GetPoints(); // 0x000000018AC06020-0x000000018AC0616C
-		public override Point GetPoint(Transform transform); // 0x000000018AC05EE0-0x000000018AC06020
-		public override bool IsValid(ref string message); // 0x000000018AC0616C-0x000000018AC0631C
-		public override void StoreDefaultLocalState(); // 0x000000018AC06AE4-0x000000018AC06B98
-		public override void FixTransforms(); // 0x000000018AC05B50-0x000000018AC05C18
-		protected override void OnInitiate(); // 0x000000018AC0631C-0x000000018AC06428
-		protected override void OnUpdate(); // 0x000000018AC06428-0x000000018AC06588
-		protected virtual void ReadPose(); // 0x000000018AC06588-0x000000018AC067B0
-		protected virtual void Solve(); // 0x000000018AC067B0-0x000000018AC06AE4
-		protected virtual void ApplyBendConstraints(); // 0x000000018AC05B14-0x000000018AC05B50
-		protected virtual void WritePose(); // 0x000000018AC06B98-0x000000018AC06C58
+		public IKEffector GetEffector(Transform t); // 0x000000018CDFAE78-0x000000018CDFAF3C
+		public FBIKChain GetChain(Transform transform); // 0x000000018CDFAE34-0x000000018CDFAE78
+		public int GetChainIndex(Transform transform); // 0x000000018CDFAD1C-0x000000018CDFAE34
+		public Node GetNode(int chainIndex, int nodeIndex); // 0x000000018CDFAF3C-0x000000018CDFAF84
+		public void GetChainAndNodeIndexes(Transform transform, out int chainIndex, out int nodeIndex); // 0x000000018CDFAC9C-0x000000018CDFAD1C
+		public override Point[] GetPoints(); // 0x000000018CDFB0D4-0x000000018CDFB234
+		public override Point GetPoint(Transform transform); // 0x000000018CDFAF84-0x000000018CDFB0D4
+		public override bool IsValid(ref string message); // 0x000000018CDFB234-0x000000018CDFB3F8
+		public override void StoreDefaultLocalState(); // 0x000000018CDFBC08-0x000000018CDFBCD8
+		public override void FixTransforms(); // 0x000000018CDFABB4-0x000000018CDFAC9C
+		protected override void OnInitiate(); // 0x000000018CDFB3F8-0x000000018CDFB51C
+		protected override void OnUpdate(); // 0x000000018CDFB51C-0x000000018CDFB694
+		protected virtual void ReadPose(); // 0x000000018CDFB694-0x000000018CDFB8C4
+		protected virtual void Solve(); // 0x000000018CDFB8C4-0x000000018CDFBC08
+		protected virtual void ApplyBendConstraints(); // 0x000000018CDFAB78-0x000000018CDFABB4
+		protected virtual void WritePose(); // 0x000000018CDFBCD8-0x000000018CDFBDAC
 	}
 
 	[Serializable]
-	public enum FullBodyBipedEffector // TypeDefIndex: 56183
+	public enum FullBodyBipedEffector // TypeDefIndex: 82915
 	{
 		Body = 0,
 		LeftShoulder = 1,
@@ -3129,7 +3126,7 @@ namespace RootMotion.FinalIK
 	}
 
 	[Serializable]
-	public enum FullBodyBipedChain // TypeDefIndex: 56184
+	public enum FullBodyBipedChain // TypeDefIndex: 82916
 	{
 		LeftArm = 0,
 		RightArm = 1,
@@ -3138,7 +3135,7 @@ namespace RootMotion.FinalIK
 	}
 
 	[Serializable]
-	public class IKSolverFullBodyBiped : IKSolverFullBody // TypeDefIndex: 56185
+	public class IKSolverFullBodyBiped : IKSolverFullBody // TypeDefIndex: 82917
 	{
 		// Fields
 		public Transform rootNode; // 0xD0
@@ -3153,59 +3150,59 @@ namespace RootMotion.FinalIK
 		private Vector3 offset; // 0xF0
 	
 		// Properties
-		public IKEffector bodyEffector { get; } // 0x000000018AC05938-0x000000018AC05944 
-		public IKEffector leftShoulderEffector { get; } // 0x000000018AC05A0C-0x000000018AC05A1C 
-		public IKEffector rightShoulderEffector { get; } // 0x000000018AC05AF4-0x000000018AC05B04 
-		public IKEffector leftThighEffector { get; } // 0x000000018AC05A1C-0x000000018AC05A2C 
-		public IKEffector rightThighEffector { get; } // 0x000000018AC05B04-0x000000018AC05B14 
-		public IKEffector leftHandEffector { get; } // 0x000000018AC059A8-0x000000018AC059B8 
-		public IKEffector rightHandEffector { get; } // 0x000000018AC05A90-0x000000018AC05AA0 
-		public IKEffector leftFootEffector { get; } // 0x000000018AC05998-0x000000018AC059A8 
-		public IKEffector rightFootEffector { get; } // 0x000000018AC05A80-0x000000018AC05A90 
-		public FBIKChain leftArmChain { get; } // 0x000000018AC05944-0x000000018AC0596C 
-		public FBIKChain rightArmChain { get; } // 0x000000018AC05A2C-0x000000018AC05A54 
-		public FBIKChain leftLegChain { get; } // 0x000000018AC059B8-0x000000018AC059E0 
-		public FBIKChain rightLegChain { get; } // 0x000000018AC05AA0-0x000000018AC05AC8 
-		public IKMappingLimb leftArmMapping { get; } // 0x000000018AC0596C-0x000000018AC05998 
-		public IKMappingLimb rightArmMapping { get; } // 0x000000018AC05A54-0x000000018AC05A80 
-		public IKMappingLimb leftLegMapping { get; } // 0x000000018AC059E0-0x000000018AC05A0C 
-		public IKMappingLimb rightLegMapping { get; } // 0x000000018AC05AC8-0x000000018AC05AF4 
-		public IKMappingBone headMapping { get; } // 0x000000018AC039E4-0x000000018AC03A0C 
-		public Vector3 pullBodyOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA96A0-0x0000000184DA96C0 0x0000000184DA96C0-0x0000000184DA96E0
+		public IKEffector bodyEffector { get; } // 0x000000018CDFA99C-0x000000018CDFA9A8 
+		public IKEffector leftShoulderEffector { get; } // 0x000000018CDFAA70-0x000000018CDFAA80 
+		public IKEffector rightShoulderEffector { get; } // 0x000000018CDFAB58-0x000000018CDFAB68 
+		public IKEffector leftThighEffector { get; } // 0x000000018CDFAA80-0x000000018CDFAA90 
+		public IKEffector rightThighEffector { get; } // 0x000000018CDFAB68-0x000000018CDFAB78 
+		public IKEffector leftHandEffector { get; } // 0x000000018CDFAA0C-0x000000018CDFAA1C 
+		public IKEffector rightHandEffector { get; } // 0x000000018CDFAAF4-0x000000018CDFAB04 
+		public IKEffector leftFootEffector { get; } // 0x000000018CDFA9FC-0x000000018CDFAA0C 
+		public IKEffector rightFootEffector { get; } // 0x000000018CDFAAE4-0x000000018CDFAAF4 
+		public FBIKChain leftArmChain { get; } // 0x000000018CDFA9A8-0x000000018CDFA9D0 
+		public FBIKChain rightArmChain { get; } // 0x000000018CDFAA90-0x000000018CDFAAB8 
+		public FBIKChain leftLegChain { get; } // 0x000000018CDFAA1C-0x000000018CDFAA44 
+		public FBIKChain rightLegChain { get; } // 0x000000018CDFAB04-0x000000018CDFAB2C 
+		public IKMappingLimb leftArmMapping { get; } // 0x000000018CDFA9D0-0x000000018CDFA9FC 
+		public IKMappingLimb rightArmMapping { get; } // 0x000000018CDFAAB8-0x000000018CDFAAE4 
+		public IKMappingLimb leftLegMapping { get; } // 0x000000018CDFAA44-0x000000018CDFAA70 
+		public IKMappingLimb rightLegMapping { get; } // 0x000000018CDFAB2C-0x000000018CDFAB58 
+		public IKMappingBone headMapping { get; } // 0x000000018CDF8A08-0x000000018CDF8A30 
+		public Vector3 pullBodyOffset { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257760-0x0000000187257780 0x0000000187257780-0x00000001872577A0
 	
 		// Constructors
-		public IKSolverFullBodyBiped(); // 0x000000018AC0591C-0x000000018AC05938
+		public IKSolverFullBodyBiped(); // 0x000000018CDFA980-0x000000018CDFA99C
 	
 		// Methods
-		public void SetChainWeights(FullBodyBipedChain c, float pull, float reach = 0f /* Metadata: 0x0234791B */); // 0x000000018AC040E4-0x000000018AC04148
-		public void SetEffectorWeights(FullBodyBipedEffector effector, float positionWeight, float rotationWeight); // 0x000000018AC04148-0x000000018AC041FC
-		public FBIKChain GetChain(FullBodyBipedChain c); // 0x000000018AC03544-0x000000018AC035C4
-		public FBIKChain GetChain(FullBodyBipedEffector effector); // 0x000000018AC035C4-0x000000018AC03674
-		public IKEffector GetEffector(FullBodyBipedEffector effector); // 0x000000018AC03674-0x000000018AC037AC
-		public IKEffector GetEndEffector(FullBodyBipedChain c); // 0x000000018AC037AC-0x000000018AC0382C
-		public IKMappingLimb GetLimbMapping(FullBodyBipedChain chain); // 0x000000018AC03AAC-0x000000018AC03B38
-		public IKMappingLimb GetLimbMapping(FullBodyBipedEffector effector); // 0x000000018AC03B38-0x000000018AC03BD8
-		public IKMappingSpine GetSpineMapping(); // 0x0000000184D862B0-0x0000000184D862C0
-		public IKMappingBone GetHeadMapping(); // 0x000000018AC039E4-0x000000018AC03A0C
-		public IKConstraintBend GetBendConstraint(FullBodyBipedChain limb); // 0x000000018AC032A4-0x000000018AC0332C
-		public override bool IsValid(ref string message); // 0x000000018AC03C78-0x000000018AC03E0C
-		public void SetToReferences(BipedReferences references, Transform rootNode = null); // 0x000000018AC04494-0x000000018AC05848
-		public static Transform DetectRootNodeBone(BipedReferences references); // 0x000000018AC02F28-0x000000018AC032A4
-		public void SetLimbOrientations(BipedLimbOrientations o); // 0x000000018AC04428-0x000000018AC04494
-		private void SetLimbOrientation(FullBodyBipedChain chain, BipedLimbOrientations.LimbOrientation limbOrientation); // 0x000000018AC041FC-0x000000018AC04428
-		private static Transform GetLeftClavicle(BipedReferences references); // 0x000000018AC03A0C-0x000000018AC03AAC
-		private static Transform GetRightClavicle(BipedReferences references); // 0x000000018AC03BD8-0x000000018AC03C78
-		private static bool Contains(Transform[] array, Transform transform); // 0x000000018AC02E90-0x000000018AC02F28
-		protected override void ReadPose(); // 0x000000018AC03FE0-0x000000018AC040E4
-		private void PullBody(); // 0x000000018AC03E0C-0x000000018AC03FE0
-		private Vector3 GetBodyOffset(); // 0x000000018AC0332C-0x000000018AC03544
-		private Vector3 GetHandBodyPull(IKEffector effector, FBIKChain arm, Vector3 offset); // 0x000000018AC0382C-0x000000018AC039E4
-		protected override void ApplyBendConstraints(); // 0x000000018AC02B40-0x000000018AC02E90
-		protected override void WritePose(); // 0x000000018AC05848-0x000000018AC0591C
+		public void SetChainWeights(FullBodyBipedChain c, float pull, float reach = 0f /* Metadata: 0x02641753 */); // 0x000000018CDF9118-0x000000018CDF917C
+		public void SetEffectorWeights(FullBodyBipedEffector effector, float positionWeight, float rotationWeight); // 0x000000018CDF917C-0x000000018CDF9230
+		public FBIKChain GetChain(FullBodyBipedChain c); // 0x000000018CDF8568-0x000000018CDF85E8
+		public FBIKChain GetChain(FullBodyBipedEffector effector); // 0x000000018CDF85E8-0x000000018CDF8698
+		public IKEffector GetEffector(FullBodyBipedEffector effector); // 0x000000018CDF8698-0x000000018CDF87D0
+		public IKEffector GetEndEffector(FullBodyBipedChain c); // 0x000000018CDF87D0-0x000000018CDF8850
+		public IKMappingLimb GetLimbMapping(FullBodyBipedChain chain); // 0x000000018CDF8AD0-0x000000018CDF8B5C
+		public IKMappingLimb GetLimbMapping(FullBodyBipedEffector effector); // 0x000000018CDF8B5C-0x000000018CDF8BFC
+		public IKMappingSpine GetSpineMapping(); // 0x0000000187232FC0-0x0000000187232FD0
+		public IKMappingBone GetHeadMapping(); // 0x000000018CDF8A08-0x000000018CDF8A30
+		public IKConstraintBend GetBendConstraint(FullBodyBipedChain limb); // 0x000000018CDF82C0-0x000000018CDF8348
+		public override bool IsValid(ref string message); // 0x000000018CDF8C9C-0x000000018CDF8E30
+		public void SetToReferences(BipedReferences references, Transform rootNode = null); // 0x000000018CDF94D0-0x000000018CDFA8AC
+		public static Transform DetectRootNodeBone(BipedReferences references); // 0x000000018CDF7F34-0x000000018CDF82C0
+		public void SetLimbOrientations(BipedLimbOrientations o); // 0x000000018CDF9464-0x000000018CDF94D0
+		private void SetLimbOrientation(FullBodyBipedChain chain, BipedLimbOrientations.LimbOrientation limbOrientation); // 0x000000018CDF9230-0x000000018CDF9464
+		private static Transform GetLeftClavicle(BipedReferences references); // 0x000000018CDF8A30-0x000000018CDF8AD0
+		private static Transform GetRightClavicle(BipedReferences references); // 0x000000018CDF8BFC-0x000000018CDF8C9C
+		private static bool Contains(Transform[] array, Transform transform); // 0x000000018CDF7E90-0x000000018CDF7F34
+		protected override void ReadPose(); // 0x000000018CDF9008-0x000000018CDF9118
+		private void PullBody(); // 0x000000018CDF8E30-0x000000018CDF9008
+		private Vector3 GetBodyOffset(); // 0x000000018CDF8348-0x000000018CDF8568
+		private Vector3 GetHandBodyPull(IKEffector effector, FBIKChain arm, Vector3 offset); // 0x000000018CDF8850-0x000000018CDF8A08
+		protected override void ApplyBendConstraints(); // 0x000000018CDF7B3C-0x000000018CDF7E90
+		protected override void WritePose(); // 0x000000018CDFA8AC-0x000000018CDFA980
 	}
 
 	[Serializable]
-	public class IKSolverHeuristic : IKSolver // TypeDefIndex: 56186
+	public class IKSolverHeuristic : IKSolver // TypeDefIndex: 82918
 	{
 		// Fields
 		public Transform target; // 0x58
@@ -3218,32 +3215,32 @@ namespace RootMotion.FinalIK
 		protected float chainLength; // 0x84
 	
 		// Properties
-		protected virtual int minBones { get; } // 0x0000000182BBE540-0x0000000182BBE550 
-		protected virtual bool boneLengthCanBeZero { get; } // 0x0000000182FFF600-0x0000000182FFF610 
-		protected virtual bool allowCommonParent { get; } // 0x00000001812081B0-0x0000000181208610 
-		protected virtual Vector3 localDirection { get; } // 0x000000018AC07578-0x000000018AC076C4 
-		protected float positionOffset { get; } // 0x000000018AC076C4-0x000000018AC0773C 
+		protected virtual int minBones { get; } // 0x00000001845AFFB0-0x00000001845AFFC0 
+		protected virtual bool boneLengthCanBeZero { get; } // 0x00000001851A4410-0x00000001851A4420 
+		protected virtual bool allowCommonParent { get; } // 0x00000001843FFFF0-0x0000000184400000 
+		protected virtual Vector3 localDirection { get; } // 0x000000018CDFC6E0-0x000000018CDFC830 
+		protected float positionOffset { get; } // 0x000000018CDFC830-0x000000018CDFC8A8 
 	
 		// Constructors
-		public IKSolverHeuristic(); // 0x00000001839DDC40-0x00000001839DDCA0
+		public IKSolverHeuristic(); // 0x0000000185CD2B50-0x0000000185CD2BB0
 	
 		// Methods
-		public bool SetChain(Transform[] hierarchy, Transform root); // 0x00000001839DED80-0x00000001839DEE90
-		public void AddBone(Transform bone); // 0x000000018AC06D78-0x000000018AC06E7C
-		public override void StoreDefaultLocalState(); // 0x00000001839DEE90-0x00000001839DEEF0
-		public override void FixTransforms(); // 0x000000018AC06E7C-0x000000018AC06EDC
-		public override bool IsValid(ref string message); // 0x00000001839DEF70-0x00000001839DF320
-		public override Point[] GetPoints(); // 0x0000000184D862B0-0x0000000184D862C0
-		public override Point GetPoint(Transform transform); // 0x000000018AC06EDC-0x000000018AC06F98
-		protected override void OnInitiate(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnUpdate(); // 0x00000001841E1670-0x00000001841E1680
-		protected void InitiateBones(); // 0x00000001839DF680-0x00000001839DFC20
-		protected Vector3 GetSingularityOffset(); // 0x000000018AC06F98-0x000000018AC072E8
-		private bool SingularityDetected(); // 0x000000018AC072E8-0x000000018AC07578
+		public bool SetChain(Transform[] hierarchy, Transform root); // 0x0000000185CD4750-0x0000000185CD4870
+		public void AddBone(Transform bone); // 0x000000018CDFBECC-0x000000018CDFBFD0
+		public override void StoreDefaultLocalState(); // 0x0000000185CD4870-0x0000000185CD48D0
+		public override void FixTransforms(); // 0x000000018CDFBFD0-0x000000018CDFC03C
+		public override bool IsValid(ref string message); // 0x0000000185CD4960-0x0000000185CD4D10
+		public override Point[] GetPoints(); // 0x0000000187232FC0-0x0000000187232FD0
+		public override Point GetPoint(Transform transform); // 0x000000018CDFC03C-0x000000018CDFC100
+		protected override void OnInitiate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected void InitiateBones(); // 0x0000000185CD50A0-0x0000000185CD5630
+		protected Vector3 GetSingularityOffset(); // 0x000000018CDFC100-0x000000018CDFC450
+		private bool SingularityDetected(); // 0x000000018CDFC450-0x000000018CDFC6E0
 	}
 
 	[Serializable]
-	public class IKSolverLeg : IKSolver // TypeDefIndex: 56187
+	public class IKSolverLeg : IKSolver // TypeDefIndex: 82919
 	{
 		// Fields
 		[Range(0f, 1f)]
@@ -3260,24 +3257,24 @@ namespace RootMotion.FinalIK
 		private Quaternion[] rotations; // 0xB8
 	
 		// Constructors
-		public IKSolverLeg(); // 0x000000018AC0854C-0x000000018AC08744
+		public IKSolverLeg(); // 0x000000018CDFD6BC-0x000000018CDFD8B4
 	
 		// Methods
-		public override bool IsValid(ref string message); // 0x000000018AC079AC-0x000000018AC07CA8
-		public bool SetChain(Transform pelvis, Transform thigh, Transform calf, Transform foot, Transform toe, Transform root); // 0x000000018ABFCBC0-0x000000018ABFCC70
-		public override Point[] GetPoints(); // 0x000000018AC078A8-0x000000018AC079AC
-		public override Point GetPoint(Transform transform); // 0x000000018AC0773C-0x000000018AC078A8
-		public override void StoreDefaultLocalState(); // 0x000000018ABFCCF0-0x000000018ABFCD50
-		public override void FixTransforms(); // 0x000000018ABFC084-0x000000018ABFC0E8
-		protected override void OnInitiate(); // 0x000000018AC07CA8-0x000000018AC07D24
-		protected override void OnUpdate(); // 0x000000018AC07D24-0x000000018AC07D50
-		private void Solve(); // 0x000000018AC08210-0x000000018AC082FC
-		private void Read(); // 0x000000018AC07D50-0x000000018AC08210
-		private void Write(); // 0x000000018AC082FC-0x000000018AC0854C
+		public override bool IsValid(ref string message); // 0x000000018CDFCB18-0x000000018CDFCE14
+		public bool SetChain(Transform pelvis, Transform thigh, Transform calf, Transform foot, Transform toe, Transform root); // 0x000000018CDF1C24-0x000000018CDF1CD4
+		public override Point[] GetPoints(); // 0x000000018CDFCA14-0x000000018CDFCB18
+		public override Point GetPoint(Transform transform); // 0x000000018CDFC8A8-0x000000018CDFCA14
+		public override void StoreDefaultLocalState(); // 0x000000018CDF1D54-0x000000018CDF1DB4
+		public override void FixTransforms(); // 0x000000018CDF10E4-0x000000018CDF1148
+		protected override void OnInitiate(); // 0x000000018CDFCE14-0x000000018CDFCE90
+		protected override void OnUpdate(); // 0x000000018CDFCE90-0x000000018CDFCEBC
+		private void Solve(); // 0x000000018CDFD380-0x000000018CDFD46C
+		private void Read(); // 0x000000018CDFCEBC-0x000000018CDFD380
+		private void Write(); // 0x000000018CDFD46C-0x000000018CDFD6BC
 	}
 
 	[Serializable]
-	public class IKSolverLimb : IKSolverTrigonometric // TypeDefIndex: 56190
+	public class IKSolverLimb : IKSolverTrigonometric // TypeDefIndex: 82922
 	{
 		// Fields
 		public AvatarIKGoal goal; // 0xA8
@@ -3300,11 +3297,11 @@ namespace RootMotion.FinalIK
 		private AxisDirection[] axisDirectionsRight; // 0x138
 	
 		// Properties
-		private AxisDirection[] axisDirections { get; } // 0x000000018AC087CC-0x000000018AC087E8 
+		private AxisDirection[] axisDirections { get; } // 0x000000018CDFD93C-0x000000018CDFD958 
 	
 		// Nested types
 		[Serializable]
-		public enum BendModifier // TypeDefIndex: 56188
+		public enum BendModifier // TypeDefIndex: 82920
 		{
 			Animation = 0,
 			Target = 1,
@@ -3314,7 +3311,7 @@ namespace RootMotion.FinalIK
 		}
 	
 		[Serializable]
-		public struct AxisDirection // TypeDefIndex: 56189
+		public struct AxisDirection // TypeDefIndex: 82921
 		{
 			// Fields
 			public Vector3 direction; // 0x00
@@ -3322,25 +3319,25 @@ namespace RootMotion.FinalIK
 			public float dot; // 0x18
 	
 			// Constructors
-			public AxisDirection(Vector3 direction, Vector3 axis); // 0x00000001833B3B20-0x00000001833B3B80
+			public AxisDirection(Vector3 direction, Vector3 axis); // 0x0000000185CD3CE0-0x0000000185CD3D40
 		}
 	
 		// Constructors
-		public IKSolverLimb(); // 0x000000018AC08744-0x000000018AC087CC
-		public IKSolverLimb(AvatarIKGoal goal); // 0x00000001839DD990-0x00000001839DDA30
+		public IKSolverLimb(); // 0x000000018CDFD8B4-0x000000018CDFD93C
+		public IKSolverLimb(AvatarIKGoal goal); // 0x0000000185CD28A0-0x0000000185CD2940
 	
 		// Methods
-		public void MaintainRotation(); // 0x000000018326ACB0-0x000000018326AD20
-		public void MaintainBend(); // 0x000000018326AD20-0x000000018326ADF0
-		protected override void OnInitiateVirtual(); // 0x00000001833B26B0-0x00000001833B29F0
-		protected override void OnUpdateVirtual(); // 0x0000000183A6DCD0-0x0000000183A6DDA0
-		protected override void OnPostSolveVirtual(); // 0x0000000183C2DF70-0x0000000183C2DFC0
-		private void StoreAxisDirections(ref AxisDirection[] axisDirections); // 0x00000001833B3830-0x00000001833B3B20
-		private Vector3 GetModifiedBendNormal(); // 0x0000000183A6DDA0-0x0000000183A6DED0
+		public void MaintainRotation(); // 0x00000001854AD670-0x00000001854AD6E0
+		public void MaintainBend(); // 0x00000001854AD6E0-0x00000001854AD7B0
+		protected override void OnInitiateVirtual(); // 0x0000000185CD3200-0x0000000185CD3560
+		protected override void OnUpdateVirtual(); // 0x00000001854A9590-0x00000001854A9660
+		protected override void OnPostSolveVirtual(); // 0x0000000185DE86A0-0x0000000185DE86F0
+		private void StoreAxisDirections(ref AxisDirection[] axisDirections); // 0x0000000185CD39F0-0x0000000185CD3CE0
+		private Vector3 GetModifiedBendNormal(); // 0x00000001854A9660-0x00000001854A9800
 	}
 
 	[Serializable]
-	public class IKSolverLookAt : IKSolver // TypeDefIndex: 56192
+	public class IKSolverLookAt : IKSolver // TypeDefIndex: 82924
 	{
 		// Fields
 		public Transform target; // 0x58
@@ -3372,65 +3369,65 @@ namespace RootMotion.FinalIK
 		private bool isDirty; // 0xF0
 	
 		// Properties
-		public Quaternion[] spineVirtualBone { get; set; } // 0x000000018AC08D98-0x000000018AC08E6C 0x000000018485F170-0x000000018485F180
-		public Quaternion headVirtualBones { get; set; } // 0x0000000184D8E8F0-0x0000000184D8E900 0x0000000184DA96F0-0x0000000184DA9700
-		public Quaternion eyeVirtualBone { get; set; } // 0x0000000184D9DC90-0x0000000184D9DCA0 0x0000000184DA12D0-0x0000000184DA12E0
-		protected bool spineIsValid { get; } // 0x00000001839E00C0-0x00000001839E01C0 
-		protected bool spineIsEmpty { get; } // 0x0000000183270BE0-0x0000000183270C10 
-		protected bool headIsValid { get; } // 0x00000001839E0040-0x00000001839E0050 
-		protected bool headIsEmpty { get; } // 0x0000000183270B60-0x0000000183270BE0 
-		protected bool eyesIsValid { get; } // 0x00000001839E0050-0x00000001839E00C0 
-		protected bool eyesIsEmpty { get; } // 0x0000000183270B30-0x0000000183270B60 
+		public Quaternion[] spineVirtualBone { get; set; } // 0x0000000185764300-0x00000001857643E0 0x0000000186B19440-0x0000000186B19450
+		public Quaternion headVirtualBones { get; set; } // 0x000000018723C550-0x000000018723C560 0x00000001872577B0-0x00000001872577C0
+		public Quaternion eyeVirtualBone { get; set; } // 0x000000018724BCC0-0x000000018724BCD0 0x0000000187233B50-0x0000000187233B60
+		protected bool spineIsValid { get; } // 0x0000000185CD5BF0-0x0000000185CD5D00 
+		protected bool spineIsEmpty { get; } // 0x00000001854A9800-0x00000001854A9830 
+		protected bool headIsValid { get; } // 0x0000000185CD5AD0-0x0000000185CD5AE0 
+		protected bool headIsEmpty { get; } // 0x00000001854A9830-0x00000001854A98B0 
+		protected bool eyesIsValid { get; } // 0x0000000185CD5AE0-0x0000000185CD5BF0 
+		protected bool eyesIsEmpty { get; } // 0x00000001854A8970-0x00000001854A89A0 
 	
 		// Nested types
 		[Serializable]
-		public class LookAtBone : IKSolver.Bone // TypeDefIndex: 56191
+		public class LookAtBone : IKSolver.Bone // TypeDefIndex: 82923
 		{
 			// Fields
 			public Vector3 positionOffset; // 0x80
 			public Vector3 baseForwardOffsetEuler; // 0x8C
 	
 			// Properties
-			public Vector3 forward { get; } // 0x0000000182F410B0-0x0000000182F41150 
+			public Vector3 forward { get; } // 0x000000018509FC40-0x000000018509FCE0 
 	
 			// Constructors
-			public LookAtBone(); // 0x00000001839DDF20-0x00000001839DDF40
-			public LookAtBone(Transform transform); // 0x00000001839DD630-0x00000001839DD680
+			public LookAtBone(); // 0x0000000185CD2E30-0x0000000185CD2E50
+			public LookAtBone(Transform transform); // 0x0000000185CD24D0-0x0000000185CD2520
 	
 			// Methods
-			public void Initiate(Transform root); // 0x00000001843C8CC0-0x00000001843C8E00
-			public void LookAt(Vector3 direction, float weight); // 0x0000000183272B30-0x0000000183272D20
-			public Quaternion LookAtReturnRotation(Vector3 direction, float weight); // 0x000000018AC0E6A4-0x000000018AC0E7A0
+			public void Initiate(Transform root); // 0x0000000185CD6360-0x0000000185CD64D0
+			public void LookAt(Vector3 direction, float weight); // 0x000000018509F890-0x000000018509FA80
+			public Quaternion LookAtReturnRotation(Vector3 direction, float weight); // 0x000000018CE037C8-0x000000018CE038C8
 		}
 	
 		// Constructors
-		public IKSolverLookAt(); // 0x00000001839DDCA0-0x00000001839DDF20
+		public IKSolverLookAt(); // 0x0000000185CD2BB0-0x0000000185CD2E30
 	
 		// Methods
-		public void SetLookAtWeight(float weight); // 0x000000018ABFD574-0x000000018ABFD598
-		public void SetLookAtWeight(float weight, float bodyWeight); // 0x000000018AC08AF4-0x000000018AC08B3C
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight); // 0x000000018AC08BE4-0x000000018AC08C48
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight); // 0x000000018AC08D20-0x000000018AC08D98
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight); // 0x000000018AC08B3C-0x000000018AC08BE4
-		public void SetLookAtWeight(float weight, float bodyWeight = 0f /* Metadata: 0x02347924 */, float headWeight = 1f /* Metadata: 0x02347928 */, float eyesWeight = 0.5f /* Metadata: 0x0234792C */, float clampWeight = 0.5f /* Metadata: 0x02347930 */, float clampWeightHead = 0.5f /* Metadata: 0x02347934 */, float clampWeightEyes = 0.3f /* Metadata: 0x02347938 */); // 0x000000018AC08C48-0x000000018AC08D20
-		public override void StoreDefaultLocalState(); // 0x00000001839DE920-0x00000001839DEA40
-		public void SetDirty(); // 0x0000000184DA96E0-0x0000000184DA96F0
-		public override void FixTransforms(); // 0x0000000183E998B0-0x0000000183E998E0
-		public override bool IsValid(ref string message); // 0x00000001839DE590-0x00000001839DE740
-		public override Point[] GetPoints(); // 0x000000018AC08920-0x000000018AC08AF4
-		public override Point GetPoint(Transform transform); // 0x000000018AC087E8-0x000000018AC08920
-		public bool SetChain(Transform[] spine, Transform head, Transform[] eyes, Transform root); // 0x00000001839DD470-0x00000001839DD540
-		protected override void OnInitiate(); // 0x00000001843C8A50-0x00000001843C8CC0
-		protected override void OnUpdate(); // 0x00000001832709C0-0x0000000183270A80
-		protected void SolveSpine(); // 0x00000001832724E0-0x0000000183272A10
-		protected void SolveHead(); // 0x00000001832713B0-0x0000000183271B40
-		protected void SolveEyes(); // 0x0000000183270A80-0x0000000183270B30
-		protected Vector3[] GetForwards(ref Vector3[] forwards, Vector3 baseForward, Vector3 targetForward, int bones, float clamp); // 0x0000000183251E90-0x0000000183251F80
-		protected void SetBones(Transform[] array, ref LookAtBone[] bones); // 0x00000001839DD540-0x00000001839DD630
+		public void SetLookAtWeight(float weight); // 0x0000000186D24A90-0x0000000186D24AC0
+		public void SetLookAtWeight(float weight, float bodyWeight); // 0x000000018CDFDC74-0x000000018CDFDCBC
+		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight); // 0x000000018CDFDD64-0x000000018CDFDDC8
+		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight); // 0x000000018CDFDEA0-0x000000018CDFDF18
+		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight); // 0x000000018CDFDCBC-0x000000018CDFDD64
+		public void SetLookAtWeight(float weight, float bodyWeight = 0f /* Metadata: 0x0264175C */, float headWeight = 1f /* Metadata: 0x02641760 */, float eyesWeight = 0.5f /* Metadata: 0x02641764 */, float clampWeight = 0.5f /* Metadata: 0x02641768 */, float clampWeightHead = 0.5f /* Metadata: 0x0264176C */, float clampWeightEyes = 0.3f /* Metadata: 0x02641770 */); // 0x000000018CDFDDC8-0x000000018CDFDEA0
+		public override void StoreDefaultLocalState(); // 0x0000000185CD45D0-0x0000000185CD4750
+		public void SetDirty(); // 0x00000001872577A0-0x00000001872577B0
+		public override void FixTransforms(); // 0x0000000185764100-0x0000000185764300
+		public override bool IsValid(ref string message); // 0x0000000185CD3EC0-0x0000000185CD4090
+		public override Point[] GetPoints(); // 0x000000018CDFDAA0-0x000000018CDFDC74
+		public override Point GetPoint(Transform transform); // 0x000000018CDFD958-0x000000018CDFDAA0
+		public bool SetChain(Transform[] spine, Transform head, Transform[] eyes, Transform root); // 0x0000000185CD2310-0x0000000185CD23E0
+		protected override void OnInitiate(); // 0x0000000185CD60D0-0x0000000185CD6360
+		protected override void OnUpdate(); // 0x00000001854A8540-0x00000001854A8670
+		protected void SolveSpine(); // 0x00000001854A9040-0x00000001854A9590
+		protected void SolveHead(); // 0x00000001854A89A0-0x00000001854A9040
+		protected void SolveEyes(); // 0x00000001854A8670-0x00000001854A8970
+		protected Vector3[] GetForwards(ref Vector3[] forwards, Vector3 baseForward, Vector3 targetForward, int bones, float clamp); // 0x00000001850DE4E0-0x00000001850DE820
+		protected void SetBones(Transform[] array, ref LookAtBone[] bones); // 0x0000000185CD23E0-0x0000000185CD24D0
 	}
 
 	[Serializable]
-	public class IKSolverTrigonometric : IKSolver // TypeDefIndex: 56194
+	public class IKSolverTrigonometric : IKSolver // TypeDefIndex: 82926
 	{
 		// Fields
 		public Transform target; // 0x58
@@ -3446,51 +3443,51 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class TrigonometricBone : IKSolver.Bone // TypeDefIndex: 56193
+		public class TrigonometricBone : IKSolver.Bone // TypeDefIndex: 82925
 		{
 			// Fields
 			private Quaternion targetToLocalSpace; // 0x80
 			private Vector3 defaultLocalBendNormal; // 0x90
 	
 			// Constructors
-			public TrigonometricBone(); // 0x000000018539475C-0x0000000185394764
+			public TrigonometricBone(); // 0x000000018783A024-0x000000018783A02C
 	
 			// Methods
-			public void Initiate(Vector3 childPosition, Vector3 bendNormal); // 0x0000000184128940-0x0000000184128B30
-			public Quaternion GetRotation(Vector3 direction, Vector3 bendNormal); // 0x0000000183271130-0x00000001832711D0
-			public Vector3 GetBendNormalFromCurrentRotation(); // 0x0000000182F41150-0x0000000182F41200
+			public void Initiate(Vector3 childPosition, Vector3 bendNormal); // 0x0000000185764C00-0x0000000185764E10
+			public Quaternion GetRotation(Vector3 direction, Vector3 bendNormal); // 0x00000001855482F0-0x0000000185548390
+			public Vector3 GetBendNormalFromCurrentRotation(); // 0x00000001854AD7B0-0x00000001854AD860
 		}
 	
 		// Constructors
-		public IKSolverTrigonometric(); // 0x00000001839DDA30-0x00000001839DDB50
+		public IKSolverTrigonometric(); // 0x0000000185CD2940-0x0000000185CD2A60
 	
 		// Methods
-		public void SetBendGoalPosition(Vector3 goalPosition, float weight); // 0x000000018AC091E4-0x000000018AC093F0
-		public void SetBendPlaneToCurrent(); // 0x0000000184128BE0-0x0000000184128C10
-		public void SetIKRotation(Quaternion rotation); // 0x0000000184DA9710-0x0000000184DA9720
-		public void SetIKRotationWeight(float weight); // 0x000000018AC093F0-0x000000018AC09414
-		public Quaternion GetIKRotation(); // 0x0000000184DA9700-0x0000000184DA9710
-		public float GetIKRotationWeight(); // 0x0000000184D88480-0x0000000184D88490
-		public override Point[] GetPoints(); // 0x000000018AC09120-0x000000018AC091E4
-		public override Point GetPoint(Transform transform); // 0x000000018AC09028-0x000000018AC09120
-		public override void StoreDefaultLocalState(); // 0x00000001839DFD10-0x00000001839DFD60
-		public override void FixTransforms(); // 0x0000000182FA5DE0-0x0000000182FA6250
-		public override bool IsValid(ref string message); // 0x00000001835B22D0-0x00000001835B27E0
-		public bool SetChain(Transform bone1, Transform bone2, Transform bone3, Transform root); // 0x00000001839DE1F0-0x00000001839DE270
-		public static void Solve(Transform bone1, Transform bone2, Transform bone3, Vector3 targetPosition, Vector3 bendNormal, float weight); // 0x000000018AC09414-0x000000018AC098F8
-		private static Vector3 GetDirectionToBendPoint(Vector3 direction, float directionMag, Vector3 bendDirection, float sqrMag1, float sqrMag2); // 0x000000018AC08E6C-0x000000018AC09028
-		protected override void OnInitiate(); // 0x0000000184128750-0x0000000184128840
-		private bool IsDirectHierarchy(); // 0x0000000184128C10-0x0000000184128D30
-		public void InitiateBones(); // 0x0000000184128840-0x0000000184128940
-		protected override void OnUpdate(); // 0x00000001832759E0-0x0000000183276380
-		protected virtual void OnInitiateVirtual(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnUpdateVirtual(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnPostSolveVirtual(); // 0x00000001841E1670-0x00000001841E1680
-		protected Vector3 GetBendDirection(Vector3 IKPosition, Vector3 bendNormal); // 0x0000000183270E10-0x0000000183271130
+		public void SetBendGoalPosition(Vector3 goalPosition, float weight); // 0x000000018CDFE290-0x000000018CDFE49C
+		public void SetBendPlaneToCurrent(); // 0x0000000185764EC0-0x0000000185764EF0
+		public void SetIKRotation(Quaternion rotation); // 0x00000001872577D0-0x00000001872577E0
+		public void SetIKRotationWeight(float weight); // 0x000000018CDFE49C-0x000000018CDFE4C0
+		public Quaternion GetIKRotation(); // 0x00000001872577C0-0x00000001872577D0
+		public float GetIKRotationWeight(); // 0x00000001872352B0-0x00000001872352C0
+		public override Point[] GetPoints(); // 0x000000018CDFE1CC-0x000000018CDFE290
+		public override Point GetPoint(Transform transform); // 0x000000018CDFE0D4-0x000000018CDFE1CC
+		public override void StoreDefaultLocalState(); // 0x0000000185CD5750-0x0000000185CD57A0
+		public override void FixTransforms(); // 0x000000018514E1E0-0x000000018514E660
+		public override bool IsValid(ref string message); // 0x0000000185A15980-0x0000000185A15E90
+		public bool SetChain(Transform bone1, Transform bone2, Transform bone3, Transform root); // 0x0000000185CD3180-0x0000000185CD3200
+		public static void Solve(Transform bone1, Transform bone2, Transform bone3, Vector3 targetPosition, Vector3 bendNormal, float weight); // 0x000000018CDFE4C0-0x000000018CDFE9AC
+		private static Vector3 GetDirectionToBendPoint(Vector3 direction, float directionMag, Vector3 bendDirection, float sqrMag1, float sqrMag2); // 0x000000018CDFDF18-0x000000018CDFE0D4
+		protected override void OnInitiate(); // 0x0000000185764A10-0x0000000185764B00
+		private bool IsDirectHierarchy(); // 0x0000000185764EF0-0x0000000185765010
+		public void InitiateBones(); // 0x0000000185764B00-0x0000000185764C00
+		protected override void OnUpdate(); // 0x0000000185028670-0x0000000185029010
+		protected virtual void OnInitiateVirtual(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnUpdateVirtual(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnPostSolveVirtual(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected Vector3 GetBendDirection(Vector3 IKPosition, Vector3 bendNormal); // 0x0000000185547FD0-0x00000001855482F0
 	}
 
 	[Serializable]
-	public class IKSolverVR : IKSolver // TypeDefIndex: 56206
+	public class IKSolverVR : IKSolver // TypeDefIndex: 82938
 	{
 		// Fields
 		[CompilerGenerated]
@@ -3547,13 +3544,13 @@ namespace RootMotion.FinalIK
 		private Vector3 debugPos4; // 0x17C
 	
 		// Properties
-		public Animator animator { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		public Animator animator { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F70-0x0000000187232F80 0x00000001856B9750-0x00000001856B9760
 		[HideInInspector]
-		public VirtualBone rootBone { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D1C0-0x0000000184D8D1D0 0x0000000186AC5B08-0x0000000186AC5B1C
+		public VirtualBone rootBone { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872360B0-0x00000001872360C0 0x0000000188C247F0-0x0000000188C24804
 	
 		// Nested types
 		[Serializable]
-		public class Arm : BodyPart // TypeDefIndex: 56196
+		public class Arm : BodyPart // TypeDefIndex: 82928
 		{
 			// Fields
 			[LargeHeader("Hand")]
@@ -3626,39 +3623,39 @@ namespace RootMotion.FinalIK
 			private Vector3 upperArmBendAxis; // 0x14C
 	
 			// Properties
-			public Vector3 position { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA9720-0x0000000184DA9740 0x0000000184DA9740-0x0000000184DA9760
-			public Quaternion rotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA0B10-0x0000000184DA0B20 0x0000000184DA9760-0x0000000184DA9770
-			private VirtualBone shoulder { get; } // 0x000000018AC11E54-0x000000018AC11E7C 
-			private VirtualBone upperArm { get; } // 0x000000018AC11E7C-0x000000018AC11EC4 
-			private VirtualBone forearm { get; } // 0x000000018AC11DBC-0x000000018AC11E08 
-			private VirtualBone hand { get; } // 0x000000018AC11E08-0x000000018AC11E54 
+			public Vector3 position { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872577E0-0x0000000187257800 0x0000000187257800-0x0000000187257820
+			public Quaternion rotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018724ED90-0x000000018724EDA0 0x0000000187257820-0x0000000187257830
+			private VirtualBone shoulder { get; } // 0x000000018CE06F84-0x000000018CE06FAC 
+			private VirtualBone upperArm { get; } // 0x000000018CE06FAC-0x000000018CE06FF4 
+			private VirtualBone forearm { get; } // 0x000000018CE06EEC-0x000000018CE06F38 
+			private VirtualBone hand { get; } // 0x000000018CE06F38-0x000000018CE06F84 
 	
 			// Nested types
 			[Serializable]
-			public enum ShoulderRotationMode // TypeDefIndex: 56195
+			public enum ShoulderRotationMode // TypeDefIndex: 82927
 			{
 				YawPitch = 0,
 				FromTo = 1
 			}
 	
 			// Constructors
-			public Arm(); // 0x000000018AC11C84-0x000000018AC11DBC
+			public Arm(); // 0x000000018CE06DB4-0x000000018CE06EEC
 	
 			// Methods
-			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018AC0EE9C-0x000000018AC0F89C
-			public override void PreSolve(float scale); // 0x000000018AC0F89C-0x000000018AC0FAC8
-			public override void ApplyOffsets(float scale); // 0x000000018AC0E7A0-0x000000018AC0E808
-			private void Stretching(); // 0x000000018AC1146C-0x000000018AC1192C
-			public void Solve(bool isLeft); // 0x000000018AC0FAE4-0x000000018AC1146C
-			public override void ResetOffsets(); // 0x000000018AC0FAC8-0x000000018AC0FAE4
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018AC11A44-0x000000018AC11C84
-			private float DamperValue(float value, float min, float max, float weight = 1f /* Metadata: 0x0234793C */); // 0x000000018AC0E808-0x000000018AC0E8B0
-			private Vector3 GetBendNormal(Vector3 dir); // 0x000000018AC0E8B0-0x000000018AC0EE9C
-			private void Visualize(VirtualBone bone1, VirtualBone bone2, VirtualBone bone3, UnityEngine.Color color); // 0x000000018AC1192C-0x000000018AC11A44
+			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018CE03FC4-0x000000018CE049C4
+			public override void PreSolve(float scale); // 0x000000018CE049C4-0x000000018CE04BF8
+			public override void ApplyOffsets(float scale); // 0x000000018CE038C8-0x000000018CE03930
+			private void Stretching(); // 0x000000018CE0659C-0x000000018CE06A5C
+			public void Solve(bool isLeft); // 0x000000018CE04C14-0x000000018CE0659C
+			public override void ResetOffsets(); // 0x000000018CE04BF8-0x000000018CE04C14
+			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018CE06B74-0x000000018CE06DB4
+			private float DamperValue(float value, float min, float max, float weight = 1f /* Metadata: 0x02641774 */); // 0x000000018CE03930-0x000000018CE039D8
+			private Vector3 GetBendNormal(Vector3 dir); // 0x000000018CE039D8-0x000000018CE03FC4
+			private void Visualize(VirtualBone bone1, VirtualBone bone2, VirtualBone bone3, UnityEngine.Color color); // 0x000000018CE06A5C-0x000000018CE06B74
 		}
 	
 		[Serializable]
-		public abstract class BodyPart // TypeDefIndex: 56197
+		public abstract class BodyPart // TypeDefIndex: 82929
 		{
 			// Fields
 			[CompilerGenerated]
@@ -3674,11 +3671,11 @@ namespace RootMotion.FinalIK
 			protected int LOD; // 0x44
 	
 			// Properties
-			public float sqrMag { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85F70-0x0000000184D85F80 0x0000000184D88280-0x0000000184D88290
-			public float mag { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88D40-0x0000000184D88D50 0x0000000184D88D50-0x0000000184D88D60
+			public float sqrMag { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232D00-0x0000000187232D10 0x0000000187235230-0x0000000187235240
+			public float mag { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187235C60-0x0000000187235C70 0x0000000187235C70-0x0000000187235C80
 	
 			// Constructors
-			protected BodyPart(); // 0x000000018AC12584-0x000000018AC125E4
+			protected BodyPart(); // 0x000000018CE076DC-0x000000018CE0773C
 	
 			// Methods
 			protected abstract void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index);
@@ -3686,19 +3683,19 @@ namespace RootMotion.FinalIK
 			public abstract void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations);
 			public abstract void ApplyOffsets(float scale);
 			public abstract void ResetOffsets();
-			public void SetLOD(int LOD); // 0x0000000184D86580-0x0000000184D86590
-			public void Read(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018AC12064-0x000000018AC1216C
-			public void MovePosition(Vector3 position); // 0x000000018AC11EC4-0x000000018AC11FA8
-			public void MoveRotation(Quaternion rotation); // 0x000000018AC11FA8-0x000000018AC12064
-			public void Translate(Vector3 position, Quaternion rotation); // 0x000000018AC123E8-0x000000018AC1243C
-			public void TranslateRoot(Vector3 newRootPos, Quaternion newRootRot); // 0x000000018AC1228C-0x000000018AC123E8
-			public void RotateTo(VirtualBone bone, Quaternion rotation, float weight = 1f /* Metadata: 0x02347942 */); // 0x000000018AC1216C-0x000000018AC1228C
-			public void Visualize(UnityEngine.Color color); // 0x000000018AC1243C-0x000000018AC12554
-			public void Visualize(); // 0x000000018AC12554-0x000000018AC12584
+			public void SetLOD(int LOD); // 0x0000000182271C60-0x0000000182271C70
+			public void Read(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018CE071A8-0x000000018CE072B0
+			public void MovePosition(Vector3 position); // 0x000000018CE06FF4-0x000000018CE070E8
+			public void MoveRotation(Quaternion rotation); // 0x000000018CE070E8-0x000000018CE071A8
+			public void Translate(Vector3 position, Quaternion rotation); // 0x000000018CE07540-0x000000018CE07594
+			public void TranslateRoot(Vector3 newRootPos, Quaternion newRootRot); // 0x000000018CE073DC-0x000000018CE07540
+			public void RotateTo(VirtualBone bone, Quaternion rotation, float weight = 1f /* Metadata: 0x0264177A */); // 0x000000018CE072B0-0x000000018CE073DC
+			public void Visualize(UnityEngine.Color color); // 0x000000018CE07594-0x000000018CE076AC
+			public void Visualize(); // 0x000000018CE076AC-0x000000018CE076DC
 		}
 	
 		[Serializable]
-		public class Footstep // TypeDefIndex: 56198
+		public class Footstep // TypeDefIndex: 82930
 		{
 			// Fields
 			public float stepSpeed; // 0x10
@@ -3719,22 +3716,22 @@ namespace RootMotion.FinalIK
 			private float supportLegWV; // 0xA0
 	
 			// Properties
-			public bool isStepping { get; } // 0x000000018AC12B90-0x000000018AC12BA0 
-			public float stepProgress { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+			public bool isStepping { get; } // 0x000000018CE07CF4-0x000000018CE07D04 
+			public float stepProgress { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EE90-0x000000018226EEA0 0x000000018226EF10-0x000000018226EF20
 	
 			// Constructors
-			public Footstep(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation, Vector3 characterSpaceOffset); // 0x000000018AC12A6C-0x000000018AC12B90
+			public Footstep(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation, Vector3 characterSpaceOffset); // 0x000000018CE07BD0-0x000000018CE07CF4
 	
 			// Methods
-			public void Reset(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation); // 0x0000000184DA9770-0x0000000184DA97C0
-			public void StepTo(Vector3 p, Quaternion rootRotation, float stepThreshold); // 0x000000018AC125E4-0x000000018AC1270C
-			public void UpdateStepping(Vector3 p, Quaternion rootRotation, float speed, float deltaTime); // 0x000000018AC12804-0x000000018AC12918
-			public void UpdateStanding(Quaternion rootRotation, float minAngle, float speed, float deltaTime); // 0x000000018AC1270C-0x000000018AC12804
-			public void Update(RootMotion.InterpolationMode interpolation, UnityEvent onStep, float deltaTime); // 0x000000018AC12918-0x000000018AC12A6C
+			public void Reset(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation); // 0x0000000187257830-0x0000000187257880
+			public void StepTo(Vector3 p, Quaternion rootRotation, float stepThreshold); // 0x000000018CE0773C-0x000000018CE07868
+			public void UpdateStepping(Vector3 p, Quaternion rootRotation, float speed, float deltaTime); // 0x000000018CE07960-0x000000018CE07A78
+			public void UpdateStanding(Quaternion rootRotation, float minAngle, float speed, float deltaTime); // 0x000000018CE07868-0x000000018CE07960
+			public void Update(RootMotion.InterpolationMode interpolation, UnityEvent onStep, float deltaTime); // 0x000000018CE07A78-0x000000018CE07BD0
 		}
 	
 		[Serializable]
-		public class Leg : BodyPart // TypeDefIndex: 56199
+		public class Leg : BodyPart // TypeDefIndex: 82931
 		{
 			// Fields
 			[LargeHeader("Foot/Toe")]
@@ -3803,36 +3800,36 @@ namespace RootMotion.FinalIK
 			private Vector3 _bendNormalRelToTarget_k__BackingField; // 0x144
 	
 			// Properties
-			public Vector3 position { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D9E3A0-0x0000000184D9E3C0 0x0000000184D9E440-0x0000000184D9E460
-			public Quaternion rotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D9E7C0-0x0000000184D9E7D0 0x0000000184DA12C0-0x0000000184DA12D0
-			public bool hasToes { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D885E0-0x0000000184D885F0 0x0000000184D88640-0x0000000184D88650
-			public VirtualBone thigh { get; } // 0x000000018AC11E54-0x000000018AC11E7C 
-			private VirtualBone calf { get; } // 0x0000000188355F28-0x0000000188355F50 
-			private VirtualBone foot { get; } // 0x000000018AC170B0-0x000000018AC170D8 
-			private VirtualBone toes { get; } // 0x000000018AC17108-0x000000018AC17130 
-			public VirtualBone lastBone { get; } // 0x000000018AC170D8-0x000000018AC17108 
-			public Vector3 thighRelativeToPelvis { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA96A0-0x0000000184DA96C0 0x0000000184DA96C0-0x0000000184DA96E0
-			public Vector3 bendNormalRelToPelvis { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA97C0-0x0000000184DA97E0 0x0000000184DA9800-0x0000000184DA9820
-			public Vector3 bendNormalRelToTarget { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA97E0-0x0000000184DA9800 0x0000000184DA9820-0x0000000184DA9840
+			public Vector3 position { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018724C500-0x000000018724C520 0x000000018724C5A0-0x000000018724C5C0
+			public Quaternion rotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018724C890-0x000000018724C8A0 0x0000000187233B40-0x0000000187233B50
+			public bool hasToes { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872354F0-0x0000000187235500 0x0000000187235540-0x0000000187235550
+			public VirtualBone thigh { get; } // 0x000000018CE06F84-0x000000018CE06FAC 
+			private VirtualBone calf { get; } // 0x000000018A83E1C8-0x000000018A83E1F0 
+			private VirtualBone foot { get; } // 0x000000018CE0C260-0x000000018CE0C288 
+			private VirtualBone toes { get; } // 0x000000018CE0C2B8-0x000000018CE0C2E0 
+			public VirtualBone lastBone { get; } // 0x000000018CE0C288-0x000000018CE0C2B8 
+			public Vector3 thighRelativeToPelvis { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257760-0x0000000187257780 0x0000000187257780-0x00000001872577A0
+			public Vector3 bendNormalRelToPelvis { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187257880-0x00000001872578A0 0x00000001872578C0-0x00000001872578E0
+			public Vector3 bendNormalRelToTarget { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872578A0-0x00000001872578C0 0x00000001872578E0-0x0000000187257900
 	
 			// Constructors
-			public Leg(); // 0x000000018AC16FC4-0x000000018AC170B0
+			public Leg(); // 0x000000018CE0C174-0x000000018CE0C260
 	
 			// Methods
-			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018AC156C8-0x000000018AC15F04
-			public override void PreSolve(float scale); // 0x000000018AC15F04-0x000000018AC164D8
-			public override void ApplyOffsets(float scale); // 0x000000018AC14A54-0x000000018AC15098
-			private void ApplyPositionOffset(Vector3 offset, float weight); // 0x000000018AC15098-0x000000018AC15180
-			private void ApplyRotationOffset(Quaternion offset, float weight); // 0x000000018AC15180-0x000000018AC15358
-			public void Solve(bool stretch); // 0x000000018AC16540-0x000000018AC167C8
-			private void FixTwistRotations(); // 0x000000018AC15358-0x000000018AC156C8
-			private void Stretching(); // 0x000000018AC167C8-0x000000018AC16D80
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018AC16D80-0x000000018AC16FC4
-			public override void ResetOffsets(); // 0x000000018AC164D8-0x000000018AC16540
+			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018CE0A86C-0x000000018CE0B0A8
+			public override void PreSolve(float scale); // 0x000000018CE0B0A8-0x000000018CE0B680
+			public override void ApplyOffsets(float scale); // 0x000000018CE09BF0-0x000000018CE0A234
+			private void ApplyPositionOffset(Vector3 offset, float weight); // 0x000000018CE0A234-0x000000018CE0A31C
+			private void ApplyRotationOffset(Quaternion offset, float weight); // 0x000000018CE0A31C-0x000000018CE0A4F8
+			public void Solve(bool stretch); // 0x000000018CE0B6E8-0x000000018CE0B978
+			private void FixTwistRotations(); // 0x000000018CE0A4F8-0x000000018CE0A86C
+			private void Stretching(); // 0x000000018CE0B978-0x000000018CE0BF30
+			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018CE0BF30-0x000000018CE0C174
+			public override void ResetOffsets(); // 0x000000018CE0B680-0x000000018CE0B6E8
 		}
 	
 		[Serializable]
-		public class Locomotion // TypeDefIndex: 56201
+		public class Locomotion // TypeDefIndex: 82933
 		{
 			// Fields
 			[Tooltip("Procedural (legacy) or animated locomotion.")]
@@ -3980,48 +3977,48 @@ namespace RootMotion.FinalIK
 			private int rightFootIndex; // 0x17C
 	
 			// Properties
-			public Vector3 centerOfMass { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D90FC0-0x0000000184D90FE0 0x0000000184D91040-0x0000000184D91060
-			public Vector3 leftFootstepPosition { get; } // 0x000000018AC1B360-0x000000018AC1B3A4 
-			public Vector3 rightFootstepPosition { get; } // 0x000000018AC1B3E4-0x000000018AC1B428 
-			public Quaternion leftFootstepRotation { get; } // 0x000000018AC1B3A4-0x000000018AC1B3E4 
-			public Quaternion rightFootstepRotation { get; } // 0x000000018AC1B428-0x000000018AC1B468 
+			public Vector3 centerOfMass { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723EED0-0x000000018723EEF0 0x000000018723EF50-0x000000018723EF70
+			public Vector3 leftFootstepPosition { get; } // 0x000000018CE1058C-0x000000018CE105D0 
+			public Vector3 rightFootstepPosition { get; } // 0x000000018CE10610-0x000000018CE10654 
+			public Quaternion leftFootstepRotation { get; } // 0x000000018CE105D0-0x000000018CE10610 
+			public Quaternion rightFootstepRotation { get; } // 0x000000018CE10654-0x000000018CE10694 
 	
 			// Nested types
 			[Serializable]
-			public enum Mode // TypeDefIndex: 56200
+			public enum Mode // TypeDefIndex: 82932
 			{
 				Procedural = 0,
 				Animated = 1
 			}
 	
 			// Constructors
-			public Locomotion(); // 0x000000018AC1B1B4-0x000000018AC1B360
+			public Locomotion(); // 0x000000018CE103E0-0x000000018CE1058C
 	
 			// Methods
-			public void Initiate(Animator animator, Vector3[] positions, Quaternion[] rotations, bool hasToes, float scale); // 0x000000018AC18048-0x000000018AC180A8
-			public void Reset(Vector3[] positions, Quaternion[] rotations); // 0x000000018AC186B0-0x000000018AC186E0
-			public void Relax(); // 0x000000018AC180FC-0x000000018AC18104
-			public void AddDeltaRotation(Quaternion delta, Vector3 pivot); // 0x000000018AC17A54-0x000000018AC17AD8
-			public void AddDeltaPosition(Vector3 delta); // 0x000000018AC173BC-0x000000018AC17418
-			public void Initiate_Animated(Animator animator, Vector3[] positions); // 0x000000018AC17CC8-0x000000018AC17D7C
-			private void ResetParams(Vector3[] positions); // 0x000000018AC18104-0x000000018AC181C4
-			public void Reset_Animated(Vector3[] positions); // 0x000000018AC181C4-0x000000018AC18414
-			private void AddDeltaRotation_Animated(Quaternion delta, Vector3 pivot); // 0x000000018AC17418-0x000000018AC17640
-			private void AddDeltaPosition_Animated(Vector3 delta); // 0x000000018AC17130-0x000000018AC17234
-			public void Solve_Animated(IKSolverVR solver, float scale, float deltaTime); // 0x000000018AC186E0-0x000000018AC196E4
-			private void Initiate_Procedural(Vector3[] positions, Quaternion[] rotations, bool hasToes, float scale); // 0x000000018AC17D7C-0x000000018AC18048
-			private void Reset_Procedural(Vector3[] positions, Quaternion[] rotations); // 0x000000018AC18414-0x000000018AC186B0
-			private void Relax_Procedural(); // 0x000000018AC180A8-0x000000018AC180FC
-			private void AddDeltaRotation_Procedural(Quaternion delta, Vector3 pivot); // 0x000000018AC17640-0x000000018AC17A54
-			private void AddDeltaPosition_Procedural(Vector3 delta); // 0x000000018AC17234-0x000000018AC173BC
-			public void Solve_Procedural(VirtualBone rootBone, Spine spine, Leg leftLeg, Leg rightLeg, Arm leftArm, Arm rightArm, int supportLegIndex, out Vector3 leftFootPosition, out Vector3 rightFootPosition, out Quaternion leftFootRotation, out Quaternion rightFootRotation, out float leftFootOffset, out float rightFootOffset, out float leftHeelOffset, out float rightHeelOffset, float scale, float deltaTime); // 0x000000018AC196E4-0x000000018AC1B028
-			private bool StepBlocked(Vector3 fromPosition, Vector3 toPosition, Vector3 rootPosition); // 0x000000018AC1B028-0x000000018AC1B1B4
-			private bool CanStep(); // 0x000000018AC17AD8-0x000000018AC17B38
-			private static bool GetLineSphereCollision(Vector3 lineStart, Vector3 lineEnd, Vector3 sphereCenter, float sphereRadius); // 0x000000018AC17B38-0x000000018AC17CC8
+			public void Initiate(Animator animator, Vector3[] positions, Quaternion[] rotations, bool hasToes, float scale); // 0x000000018CE0D220-0x000000018CE0D280
+			public void Reset(Vector3[] positions, Quaternion[] rotations); // 0x000000018CE0D8A8-0x000000018CE0D8D8
+			public void Relax(); // 0x000000018CE0D2D4-0x000000018CE0D2DC
+			public void AddDeltaRotation(Quaternion delta, Vector3 pivot); // 0x000000018CE0CC24-0x000000018CE0CCA8
+			public void AddDeltaPosition(Vector3 delta); // 0x000000018CE0C578-0x000000018CE0C5D4
+			public void Initiate_Animated(Animator animator, Vector3[] positions); // 0x000000018CE0CE98-0x000000018CE0CF4C
+			private void ResetParams(Vector3[] positions); // 0x000000018CE0D2DC-0x000000018CE0D39C
+			public void Reset_Animated(Vector3[] positions); // 0x000000018CE0D39C-0x000000018CE0D604
+			private void AddDeltaRotation_Animated(Quaternion delta, Vector3 pivot); // 0x000000018CE0C5D4-0x000000018CE0C7FC
+			private void AddDeltaPosition_Animated(Vector3 delta); // 0x000000018CE0C2E0-0x000000018CE0C3E4
+			public void Solve_Animated(IKSolverVR solver, float scale, float deltaTime); // 0x000000018CE0D8D8-0x000000018CE0E8E0
+			private void Initiate_Procedural(Vector3[] positions, Quaternion[] rotations, bool hasToes, float scale); // 0x000000018CE0CF4C-0x000000018CE0D220
+			private void Reset_Procedural(Vector3[] positions, Quaternion[] rotations); // 0x000000018CE0D604-0x000000018CE0D8A8
+			private void Relax_Procedural(); // 0x000000018CE0D280-0x000000018CE0D2D4
+			private void AddDeltaRotation_Procedural(Quaternion delta, Vector3 pivot); // 0x000000018CE0C7FC-0x000000018CE0CC24
+			private void AddDeltaPosition_Procedural(Vector3 delta); // 0x000000018CE0C3E4-0x000000018CE0C578
+			public void Solve_Procedural(VirtualBone rootBone, Spine spine, Leg leftLeg, Leg rightLeg, Arm leftArm, Arm rightArm, int supportLegIndex, out Vector3 leftFootPosition, out Vector3 rightFootPosition, out Quaternion leftFootRotation, out Quaternion rightFootRotation, out float leftFootOffset, out float rightFootOffset, out float leftHeelOffset, out float rightHeelOffset, float scale, float deltaTime); // 0x000000018CE0E8E0-0x000000018CE1024C
+			private bool StepBlocked(Vector3 fromPosition, Vector3 toPosition, Vector3 rootPosition); // 0x000000018CE1024C-0x000000018CE103E0
+			private bool CanStep(); // 0x000000018CE0CCA8-0x000000018CE0CD08
+			private static bool GetLineSphereCollision(Vector3 lineStart, Vector3 lineEnd, Vector3 sphereCenter, float sphereRadius); // 0x000000018CE0CD08-0x000000018CE0CE98
 		}
 	
 		[Serializable]
-		public class Spine : BodyPart // TypeDefIndex: 56202
+		public class Spine : BodyPart // TypeDefIndex: 82934
 		{
 			// Fields
 			[LargeHeader("Head")]
@@ -4156,37 +4153,37 @@ namespace RootMotion.FinalIK
 			private Vector3 chestForward; // 0x224
 	
 			// Properties
-			internal VirtualBone pelvis { get; } // 0x000000018AC1EFBC-0x000000018AC1EFEC 
-			internal VirtualBone firstSpineBone { get; } // 0x000000018AC1EF2C-0x000000018AC1EF5C 
-			internal VirtualBone chest { get; } // 0x000000018AC1EEE8-0x000000018AC1EF2C 
-			internal VirtualBone head { get; } // 0x000000018AC1EF5C-0x000000018AC1EF8C 
-			private VirtualBone neck { get; } // 0x000000018AC1EF8C-0x000000018AC1EFBC 
-			internal Quaternion anchorRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA9850-0x0000000184DA9860 0x0000000184DA9870-0x0000000184DA9880
-			internal Quaternion anchorRelativeToHead { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA9840-0x0000000184DA9850 0x0000000184DA9860-0x0000000184DA9870
+			internal VirtualBone pelvis { get; } // 0x000000018CE14270-0x000000018CE142A0 
+			internal VirtualBone firstSpineBone { get; } // 0x000000018CE141E0-0x000000018CE14210 
+			internal VirtualBone chest { get; } // 0x000000018CE1419C-0x000000018CE141E0 
+			internal VirtualBone head { get; } // 0x000000018CE14210-0x000000018CE14240 
+			private VirtualBone neck { get; } // 0x000000018CE14240-0x000000018CE14270 
+			internal Quaternion anchorRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257910-0x0000000187257920 0x0000000187257930-0x0000000187257940
+			internal Quaternion anchorRelativeToHead { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187257900-0x0000000187257910 0x0000000187257920-0x0000000187257930
 	
 			// Constructors
-			public Spine(); // 0x000000018AC1ED2C-0x000000018AC1EEE8
+			public Spine(); // 0x000000018CE13FE0-0x000000018CE1419C
 	
 			// Methods
-			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018AC1CB00-0x000000018AC1D668
-			public override void PreSolve(float scale); // 0x000000018AC1D668-0x000000018AC1DBE4
-			public override void ApplyOffsets(float scale); // 0x000000018AC1B840-0x000000018AC1BDA4
-			private void CalculateChestTargetRotation(VirtualBone rootBone, Arm[] arms); // 0x000000018AC1C228-0x000000018AC1C3F0
-			public void Solve(Animator animator, VirtualBone rootBone, Leg[] legs, Arm[] arms, float scale); // 0x000000018AC1DFB0-0x000000018AC1E6C0
-			private void FABRIKPass(Vector3 animatedPelvisPos, Vector3 rootUp, float weight); // 0x000000018AC1C3F0-0x000000018AC1C614
-			private void SolvePelvis(); // 0x000000018AC1DC98-0x000000018AC1DFB0
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018AC1EB20-0x000000018AC1ED2C
-			public override void ResetOffsets(); // 0x000000018AC1DBE4-0x000000018AC1DC98
-			private void AdjustChestByHands(ref Quaternion chestTargetRotation, Arm[] arms); // 0x000000018AC1B468-0x000000018AC1B840
-			public void InverseTranslateToHead(Leg[] legs, bool limited, bool useCurrentLegMag, Vector3 offset, float w); // 0x000000018AC1C614-0x000000018AC1C7A4
-			private void TranslatePelvis(Leg[] legs, Vector3 deltaPosition, Quaternion deltaRotation, float scale); // 0x000000018AC1E6C0-0x000000018AC1EB20
-			private Vector3 LimitPelvisPosition(Leg[] legs, Vector3 pelvisPosition, bool useCurrentLegMag, int it = 2 /* Metadata: 0x02347948 */); // 0x000000018AC1C7A4-0x000000018AC1CB00
-			private void Bend(VirtualBone[] bones, int firstIndex, int lastIndex, Quaternion targetRotation, float clampWeight, bool uniformWeight, float w); // 0x000000018AC1BDA4-0x000000018AC1BFB8
-			private void Bend(VirtualBone[] bones, int firstIndex, int lastIndex, Quaternion targetRotation, Quaternion rotationOffset, float clampWeight, bool uniformWeight, float w); // 0x000000018AC1BFB8-0x000000018AC1C228
+			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index); // 0x000000018CE11D74-0x000000018CE128DC
+			public override void PreSolve(float scale); // 0x000000018CE128DC-0x000000018CE12E64
+			public override void ApplyOffsets(float scale); // 0x000000018CE10A70-0x000000018CE10FD8
+			private void CalculateChestTargetRotation(VirtualBone rootBone, Arm[] arms); // 0x000000018CE11484-0x000000018CE1164C
+			public void Solve(Animator animator, VirtualBone rootBone, Leg[] legs, Arm[] arms, float scale); // 0x000000018CE1323C-0x000000018CE13964
+			private void FABRIKPass(Vector3 animatedPelvisPos, Vector3 rootUp, float weight); // 0x000000018CE1164C-0x000000018CE11870
+			private void SolvePelvis(); // 0x000000018CE12F18-0x000000018CE1323C
+			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations); // 0x000000018CE13DD4-0x000000018CE13FE0
+			public override void ResetOffsets(); // 0x000000018CE12E64-0x000000018CE12F18
+			private void AdjustChestByHands(ref Quaternion chestTargetRotation, Arm[] arms); // 0x000000018CE10694-0x000000018CE10A70
+			public void InverseTranslateToHead(Leg[] legs, bool limited, bool useCurrentLegMag, Vector3 offset, float w); // 0x000000018CE11870-0x000000018CE11A04
+			private void TranslatePelvis(Leg[] legs, Vector3 deltaPosition, Quaternion deltaRotation, float scale); // 0x000000018CE13964-0x000000018CE13DD4
+			private Vector3 LimitPelvisPosition(Leg[] legs, Vector3 pelvisPosition, bool useCurrentLegMag, int it = 2 /* Metadata: 0x02641780 */); // 0x000000018CE11A04-0x000000018CE11D74
+			private void Bend(VirtualBone[] bones, int firstIndex, int lastIndex, Quaternion targetRotation, float clampWeight, bool uniformWeight, float w); // 0x000000018CE10FD8-0x000000018CE11204
+			private void Bend(VirtualBone[] bones, int firstIndex, int lastIndex, Quaternion targetRotation, Quaternion rotationOffset, float clampWeight, bool uniformWeight, float w); // 0x000000018CE11204-0x000000018CE11484
 		}
 	
 		[Serializable]
-		public enum PositionOffset // TypeDefIndex: 56203
+		public enum PositionOffset // TypeDefIndex: 82935
 		{
 			Pelvis = 0,
 			Chest = 1,
@@ -4200,7 +4197,7 @@ namespace RootMotion.FinalIK
 		}
 	
 		[Serializable]
-		public enum RotationOffset // TypeDefIndex: 56204
+		public enum RotationOffset // TypeDefIndex: 82936
 		{
 			Pelvis = 0,
 			Chest = 1,
@@ -4208,7 +4205,7 @@ namespace RootMotion.FinalIK
 		}
 	
 		[Serializable]
-		public class VirtualBone // TypeDefIndex: 56205
+		public class VirtualBone // TypeDefIndex: 82937
 		{
 			// Fields
 			public Vector3 readPosition; // 0x10
@@ -4220,55 +4217,55 @@ namespace RootMotion.FinalIK
 			public Vector3 axis; // 0x50
 	
 			// Constructors
-			public VirtualBone(Vector3 position, Quaternion rotation); // 0x0000000184DA9880-0x0000000184DA98B0
+			public VirtualBone(Vector3 position, Quaternion rotation); // 0x0000000187257940-0x0000000187257970
 	
 			// Methods
-			public void Read(Vector3 position, Quaternion rotation); // 0x0000000184DA9880-0x0000000184DA98B0
-			public static void SwingRotation(VirtualBone[] bones, int index, Vector3 swingTarget, float weight = 1f /* Metadata: 0x02347955 */); // 0x000000018AC21714-0x000000018AC218D8
-			public static float PreSolve(ref VirtualBone[] bones); // 0x000000018AC20200-0x000000018AC204B8
-			public static void RotateAroundPoint(VirtualBone[] bones, int index, Vector3 point, Quaternion rotation); // 0x000000018AC204B8-0x000000018AC2063C
-			public static void RotateBy(VirtualBone[] bones, int index, Quaternion rotation); // 0x000000018AC2063C-0x000000018AC207FC
-			public static void RotateBy(VirtualBone[] bones, Quaternion rotation); // 0x000000018AC207FC-0x000000018AC209B4
-			public static void RotateTo(VirtualBone[] bones, int index, Quaternion rotation); // 0x000000018AC209B4-0x000000018AC20A68
-			public static void SolveTrigonometric(VirtualBone[] bones, int first, int second, int third, Vector3 targetPosition, Vector3 bendNormal, float weight); // 0x000000018AC211CC-0x000000018AC21714
-			private static Vector3 GetDirectionToBendPoint(Vector3 direction, float directionMag, Vector3 bendDirection, float sqrMag1, float sqrMag2); // 0x000000018AC20044-0x000000018AC20200
-			public static void SolveFABRIK(VirtualBone[] bones, Vector3 startPosition, Vector3 targetPosition, float weight, float minNormalizedTargetDistance, int iterations, float length, Vector3 startOffset); // 0x000000018AC20D3C-0x000000018AC211CC
-			private static Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018AC20C58-0x000000018AC20D3C
-			public static void SolveCCD(VirtualBone[] bones, Vector3 targetPosition, float weight, int iterations); // 0x000000018AC20A68-0x000000018AC20C58
+			public void Read(Vector3 position, Quaternion rotation); // 0x0000000187257940-0x0000000187257970
+			public static void SwingRotation(VirtualBone[] bones, int index, Vector3 swingTarget, float weight = 1f /* Metadata: 0x0264178D */); // 0x000000018CE16A04-0x000000018CE16BC8
+			public static float PreSolve(ref VirtualBone[] bones); // 0x000000018CE15508-0x000000018CE15794
+			public static void RotateAroundPoint(VirtualBone[] bones, int index, Vector3 point, Quaternion rotation); // 0x000000018CE15794-0x000000018CE15918
+			public static void RotateBy(VirtualBone[] bones, int index, Quaternion rotation); // 0x000000018CE15918-0x000000018CE15AD4
+			public static void RotateBy(VirtualBone[] bones, Quaternion rotation); // 0x000000018CE15AD4-0x000000018CE15C8C
+			public static void RotateTo(VirtualBone[] bones, int index, Quaternion rotation); // 0x000000018CE15C8C-0x000000018CE15D48
+			public static void SolveTrigonometric(VirtualBone[] bones, int first, int second, int third, Vector3 targetPosition, Vector3 bendNormal, float weight); // 0x000000018CE164C8-0x000000018CE16A04
+			private static Vector3 GetDirectionToBendPoint(Vector3 direction, float directionMag, Vector3 bendDirection, float sqrMag1, float sqrMag2); // 0x000000018CE1534C-0x000000018CE15508
+			public static void SolveFABRIK(VirtualBone[] bones, Vector3 startPosition, Vector3 targetPosition, float weight, float minNormalizedTargetDistance, int iterations, float length, Vector3 startOffset); // 0x000000018CE16034-0x000000018CE164C8
+			private static Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length); // 0x000000018CE15F50-0x000000018CE16034
+			public static void SolveCCD(VirtualBone[] bones, Vector3 targetPosition, float weight, int iterations); // 0x000000018CE15D48-0x000000018CE15F50
 		}
 	
 		// Constructors
-		public IKSolverVR(); // 0x000000018AC0E38C-0x000000018AC0E6A4
+		public IKSolverVR(); // 0x000000018CE034B0-0x000000018CE037C8
 	
 		// Methods
-		public void SetToReferences(VRIK.References references); // 0x000000018AC0BF8C-0x000000018AC0C290
-		public void GuessHandOrientations(VRIK.References references, bool onlyIfZero); // 0x000000018AC0AD88-0x000000018AC0B0D4
-		public void DefaultAnimationCurves(); // 0x000000018AC09E9C-0x000000018AC0A054
-		public void AddPositionOffset(PositionOffset positionOffset, Vector3 value); // 0x000000018AC09A44-0x000000018AC09D50
-		public void AddRotationOffset(RotationOffset rotationOffset, Vector3 value); // 0x000000018AC09D50-0x000000018AC09DA8
-		public void AddRotationOffset(RotationOffset rotationOffset, Quaternion value); // 0x000000018AC09DA8-0x000000018AC09E9C
-		public void AddPlatformMotion(Vector3 deltaPosition, Quaternion deltaRotation, Vector3 platformPivot); // 0x000000018AC098F8-0x000000018AC09A44
-		public void Reset(); // 0x000000018AC0BE54-0x000000018AC0BF8C
-		public override void StoreDefaultLocalState(); // 0x000000018AC0DAB8-0x000000018AC0DC10
-		public override void FixTransforms(); // 0x000000018AC0A054-0x000000018AC0A228
-		public override Point[] GetPoints(); // 0x000000018AC0AC14-0x000000018AC0AC64
-		public override Point GetPoint(Transform transform); // 0x000000018AC0ABC4-0x000000018AC0AC14
-		public override bool IsValid(ref string message); // 0x000000018AC0B0D4-0x000000018AC0B358
-		private Vector3 GetNormal(Transform[] transforms); // 0x000000018AC0A228-0x000000018AC0A4DC
-		private static Keyframe[] GetSineKeyframes(float mag); // 0x000000018AC0ACC4-0x000000018AC0AD88
-		private void UpdateSolverTransforms(); // 0x000000018AC0DC10-0x000000018AC0DD54
-		protected override void OnInitiate(); // 0x000000018AC0B358-0x000000018AC0B3AC
-		protected override void OnUpdate(); // 0x000000018AC0B3AC-0x000000018AC0B8EC
-		private void WriteTransforms(); // 0x000000018AC0DD54-0x000000018AC0E22C
-		private void Read(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, bool hasArms); // 0x000000018AC0B8EC-0x000000018AC0BE54
-		private void Solve(); // 0x000000018AC0C290-0x000000018AC0DAB8
-		private Vector3 GetPosition(int index); // 0x000000018AC0AC64-0x000000018AC0AC94
-		private Quaternion GetRotation(int index); // 0x000000018AC0AC94-0x000000018AC0ACC4
-		private void Write(); // 0x000000018AC0E22C-0x000000018AC0E38C
-		private Vector3 GetPelvisOffset(float deltaTime); // 0x000000018AC0A4DC-0x000000018AC0ABC4
+		public void SetToReferences(VRIK.References references); // 0x000000018CE01094-0x000000018CE01398
+		public void GuessHandOrientations(VRIK.References references, bool onlyIfZero); // 0x000000018CDFFE74-0x000000018CE001C0
+		public void DefaultAnimationCurves(); // 0x000000018CDFEF54-0x000000018CDFF10C
+		public void AddPositionOffset(PositionOffset positionOffset, Vector3 value); // 0x000000018CDFEAF8-0x000000018CDFEE04
+		public void AddRotationOffset(RotationOffset rotationOffset, Vector3 value); // 0x000000018CDFEE04-0x000000018CDFEE5C
+		public void AddRotationOffset(RotationOffset rotationOffset, Quaternion value); // 0x000000018CDFEE5C-0x000000018CDFEF54
+		public void AddPlatformMotion(Vector3 deltaPosition, Quaternion deltaRotation, Vector3 platformPivot); // 0x000000018CDFE9AC-0x000000018CDFEAF8
+		public void Reset(); // 0x000000018CE00F5C-0x000000018CE01094
+		public override void StoreDefaultLocalState(); // 0x000000018CE02BF8-0x000000018CE02D54
+		public override void FixTransforms(); // 0x000000018CDFF10C-0x000000018CDFF2F8
+		public override Point[] GetPoints(); // 0x000000018CDFFCF4-0x000000018CDFFD44
+		public override Point GetPoint(Transform transform); // 0x000000018CDFFCA4-0x000000018CDFFCF4
+		public override bool IsValid(ref string message); // 0x000000018CE001C0-0x000000018CE00444
+		private Vector3 GetNormal(Transform[] transforms); // 0x000000018CDFF2F8-0x000000018CDFF5B0
+		private static Keyframe[] GetSineKeyframes(float mag); // 0x000000018CDFFDA4-0x000000018CDFFE74
+		private void UpdateSolverTransforms(); // 0x000000018CE02D54-0x000000018CE02E9C
+		protected override void OnInitiate(); // 0x000000018CE00444-0x000000018CE0049C
+		protected override void OnUpdate(); // 0x000000018CE0049C-0x000000018CE009E8
+		private void WriteTransforms(); // 0x000000018CE02E9C-0x000000018CE03350
+		private void Read(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, bool hasArms); // 0x000000018CE009E8-0x000000018CE00F5C
+		private void Solve(); // 0x000000018CE01398-0x000000018CE02BF8
+		private Vector3 GetPosition(int index); // 0x000000018CDFFD44-0x000000018CDFFD74
+		private Quaternion GetRotation(int index); // 0x000000018CDFFD74-0x000000018CDFFDA4
+		private void Write(); // 0x000000018CE03350-0x000000018CE034B0
+		private Vector3 GetPelvisOffset(float deltaTime); // 0x000000018CDFF5B0-0x000000018CDFFCA4
 	}
 
-	public class TwistRelaxer : MonoBehaviour // TypeDefIndex: 56207
+	public class TwistRelaxer : MonoBehaviour // TypeDefIndex: 82939
 	{
 		// Fields
 		public IK ik; // 0x18
@@ -4276,18 +4273,18 @@ namespace RootMotion.FinalIK
 		public TwistSolver[] twistSolvers; // 0x20
 	
 		// Constructors
-		public TwistRelaxer(); // 0x000000018AC1F484-0x000000018AC1F4D4
+		public TwistRelaxer(); // 0x000000018CE1476C-0x000000018CE147BC
 	
 		// Methods
-		public void Start(); // 0x000000018AC1F230-0x000000018AC1F3E8
-		private void Update(); // 0x000000018AC1F3E8-0x000000018AC1F484
-		private void OnPostUpdate(); // 0x000000018AC1F1A4-0x000000018AC1F230
-		private void LateUpdate(); // 0x000000018AC1EFEC-0x000000018AC1F078
-		private void OnDestroy(); // 0x000000018AC1F078-0x000000018AC1F1A4
+		public void Start(); // 0x000000018CE144FC-0x000000018CE146C4
+		private void Update(); // 0x000000018CE146C4-0x000000018CE1476C
+		private void OnPostUpdate(); // 0x000000018CE14464-0x000000018CE144FC
+		private void LateUpdate(); // 0x000000018CE142A0-0x000000018CE14338
+		private void OnDestroy(); // 0x000000018CE14338-0x000000018CE14464
 	}
 
 	[Serializable]
-	public class TwistSolver // TypeDefIndex: 56208
+	public class TwistSolver // TypeDefIndex: 82940
 	{
 		// Fields
 		[Tooltip("The transform that this solver operates on.")]
@@ -4315,16 +4312,16 @@ namespace RootMotion.FinalIK
 		private Quaternion[] defaultChildLocalRotations; // 0x88
 	
 		// Constructors
-		public TwistSolver(); // 0x000000018AC1FFA8-0x000000018AC20044
+		public TwistSolver(); // 0x000000018CE152B0-0x000000018CE1534C
 	
 		// Methods
-		public void Initiate(); // 0x000000018AC1F588-0x000000018AC1FB44
-		public void FixTransforms(); // 0x000000018AC1F4D4-0x000000018AC1F588
-		public void Relax(); // 0x000000018AC1FB44-0x000000018AC1FFA8
+		public void Initiate(); // 0x000000018CE14880-0x000000018CE14E40
+		public void FixTransforms(); // 0x000000018CE147BC-0x000000018CE14880
+		public void Relax(); // 0x000000018CE14E40-0x000000018CE152B0
 	}
 
 	[Serializable]
-	public class InteractionEffector // TypeDefIndex: 56209
+	public class InteractionEffector // TypeDefIndex: 82941
 	{
 		// Fields
 		[CompilerGenerated]
@@ -4368,32 +4365,32 @@ namespace RootMotion.FinalIK
 		private bool started; // 0xC8
 	
 		// Properties
-		public FullBodyBipedEffector effectorType { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-		public bool isPaused { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8EE50-0x0000000184D8EE60 0x0000000184D8EE70-0x0000000184D8EE80
-		public InteractionObject interactionObject { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		public bool inInteraction { get; } // 0x000000018AC149CC-0x000000018AC14A1C 
-		public float progress { get; } // 0x000000018AC14A1C-0x000000018AC14A54 
+		public FullBodyBipedEffector effectorType { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+		public bool isPaused { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187239C50-0x0000000187239C60 0x000000018723C800-0x000000018723C810
+		public InteractionObject interactionObject { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		public bool inInteraction { get; } // 0x000000018CE09B68-0x000000018CE09BB8 
+		public float progress { get; } // 0x000000018CE09BB8-0x000000018CE09BF0 
 	
 		// Constructors
-		public InteractionEffector(FullBodyBipedEffector effectorType); // 0x000000018AC14940-0x000000018AC149CC
+		public InteractionEffector(FullBodyBipedEffector effectorType); // 0x000000018CE09ADC-0x000000018CE09B68
 	
 		// Methods
-		public void Initiate(InteractionSystem interactionSystem); // 0x000000018AC12BA0-0x000000018AC12C58
-		private void StoreDefaults(); // 0x000000018AC13E0C-0x000000018AC13FFC
-		public bool ResetToDefaults(float speed, float deltaTime); // 0x000000018AC13310-0x000000018AC13780
-		public bool Pause(); // 0x000000018AC12F44-0x000000018AC13064
-		public bool Resume(); // 0x000000018AC13780-0x000000018AC137D4
-		public bool Start(InteractionObject interactionObject, string tag, float fadeInTime, bool interrupt); // 0x000000018AC13BDC-0x000000018AC13CE4
-		public bool Start(InteractionObject interactionObject, InteractionTarget interactionTarget, float fadeInTime, bool interrupt); // 0x000000018AC137D4-0x000000018AC13BDC
-		public void Update(Transform root, float speed, float deltaTime); // 0x000000018AC142A4-0x000000018AC14940
-		private void TriggerUntriggeredEvents(bool checkTime, out bool pickUp, out bool pause); // 0x000000018AC13FFC-0x000000018AC142A4
-		private void PickUp(Transform root); // 0x000000018AC13064-0x000000018AC13310
-		public bool Stop(); // 0x000000018AC13CE4-0x000000018AC13E0C
-		public void OnPostFBBIK(); // 0x000000018AC12C58-0x000000018AC12F44
+		public void Initiate(InteractionSystem interactionSystem); // 0x000000018CE07D04-0x000000018CE07DBC
+		private void StoreDefaults(); // 0x000000018CE08FC0-0x000000018CE091B0
+		public bool ResetToDefaults(float speed, float deltaTime); // 0x000000018CE08490-0x000000018CE08900
+		public bool Pause(); // 0x000000018CE080B0-0x000000018CE081D4
+		public bool Resume(); // 0x000000018CE08900-0x000000018CE08958
+		public bool Start(InteractionObject interactionObject, string tag, float fadeInTime, bool interrupt); // 0x000000018CE08D88-0x000000018CE08E94
+		public bool Start(InteractionObject interactionObject, InteractionTarget interactionTarget, float fadeInTime, bool interrupt); // 0x000000018CE08958-0x000000018CE08D88
+		public void Update(Transform root, float speed, float deltaTime); // 0x000000018CE0943C-0x000000018CE09ADC
+		private void TriggerUntriggeredEvents(bool checkTime, out bool pickUp, out bool pause); // 0x000000018CE091B0-0x000000018CE0943C
+		private void PickUp(Transform root); // 0x000000018CE081D4-0x000000018CE08490
+		public bool Stop(); // 0x000000018CE08E94-0x000000018CE08FC0
+		public void OnPostFBBIK(); // 0x000000018CE07DBC-0x000000018CE080B0
 	}
 
 	[Serializable]
-	public class InteractionLookAt // TypeDefIndex: 56210
+	public class InteractionLookAt // TypeDefIndex: 82942
 	{
 		// Fields
 		[Tooltip("(Optional) reference to the LookAtIK component that will be used to make the character look at the objects that it is interacting with.")]
@@ -4410,19 +4407,19 @@ namespace RootMotion.FinalIK
 		private bool firstFBBIKSolve; // 0x38
 	
 		// Constructors
-		public InteractionLookAt(); // 0x0000000184DA99B0-0x0000000184DA99C0
+		public InteractionLookAt(); // 0x0000000187257A70-0x0000000187257A80
 	
 		// Methods
-		public void Look(Transform target, float time); // 0x000000018AC27558-0x000000018AC276E4
-		public void OnFixTransforms(); // 0x000000018AC276E4-0x000000018AC27764
-		public void Update(); // 0x000000018AC2793C-0x000000018AC27B60
-		public void SolveSpine(); // 0x000000018AC27828-0x000000018AC2793C
-		public void SolveHead(); // 0x000000018AC27764-0x000000018AC27828
+		public void Look(Transform target, float time); // 0x000000018CE1CA28-0x000000018CE1CBB4
+		public void OnFixTransforms(); // 0x000000018CE1CBB4-0x000000018CE1CC34
+		public void Update(); // 0x000000018CE1CE18-0x000000018CE1D03C
+		public void SolveSpine(); // 0x000000018CE1CCFC-0x000000018CE1CE18
+		public void SolveHead(); // 0x000000018CE1CC34-0x000000018CE1CCFC
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Object")]
 	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
-	public class InteractionObject : MonoBehaviour // TypeDefIndex: 56217
+	public class InteractionObject : MonoBehaviour // TypeDefIndex: 82949
 	{
 		// Fields
 		[Tooltip("If the Interaction System has a \'Look At\' LookAtIK component assigned, will use it to make the character look at the specified Transform. If unassigned, will look at this GameObject.")]
@@ -4441,14 +4438,14 @@ namespace RootMotion.FinalIK
 		private InteractionTarget[] targets; // 0x58
 	
 		// Properties
-		public float length { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
-		public InteractionSystem lastUsedInteractionSystem { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
-		public Transform lookAtTarget { get; } // 0x000000018AC28EE4-0x000000018AC28F4C 
-		public Transform targetsRoot { get; } // 0x000000018AC28F4C-0x000000018AC28FB4 
+		public float length { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723F460-0x000000018723F470 0x000000018723F470-0x000000018723F480
+		public InteractionSystem lastUsedInteractionSystem { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBD0-0x000000018226EBE0 0x00000001869E1E00-0x00000001869E1E10
+		public Transform lookAtTarget { get; } // 0x000000018CE1E3C0-0x000000018CE1E428 
+		public Transform targetsRoot { get; } // 0x000000018CE1E428-0x000000018CE1E490 
 	
 		// Nested types
 		[Serializable]
-		public class InteractionEvent // TypeDefIndex: 56211
+		public class InteractionEvent // TypeDefIndex: 82943
 		{
 			// Fields
 			[Tooltip("The time of the event since interaction start.")]
@@ -4465,31 +4462,31 @@ namespace RootMotion.FinalIK
 			public UnityEvent unityEvent; // 0x28
 	
 			// Constructors
-			public InteractionEvent(); // 0x00000001841E1670-0x00000001841E1680
+			public InteractionEvent(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Activate(Transform t); // 0x000000018AC274B0-0x000000018AC27558
+			public void Activate(Transform t); // 0x000000018CE1C970-0x000000018CE1CA28
 		}
 	
 		[Serializable]
-		public class Message // TypeDefIndex: 56212
+		public class Message // TypeDefIndex: 82944
 		{
 			// Fields
 			[Tooltip("The name of the function called.")]
 			public string function; // 0x10
 			[Tooltip("The recipient game object.")]
 			public GameObject recipient; // 0x18
-			private const string empty = ""; // Metadata: 0x02347959
+			private const string empty = ""; // Metadata: 0x02641791
 	
 			// Constructors
-			public Message(); // 0x00000001841E1670-0x00000001841E1680
+			public Message(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Send(Transform t); // 0x000000018AC2E2E0-0x000000018AC2E3B8
+			public void Send(Transform t); // 0x000000018CE23988-0x000000018CE23A64
 		}
 	
 		[Serializable]
-		public class AnimatorEvent // TypeDefIndex: 56213
+		public class AnimatorEvent // TypeDefIndex: 82945
 		{
 			// Fields
 			[Tooltip("The Animator component that will receive the AnimatorEvents.")]
@@ -4504,19 +4501,19 @@ namespace RootMotion.FinalIK
 			public int layer; // 0x2C
 			[Tooltip("Should the animation always start from 0 normalized time?")]
 			public bool resetNormalizedTime; // 0x30
-			private const string empty = ""; // Metadata: 0x0234795A
+			private const string empty = ""; // Metadata: 0x02641792
 	
 			// Constructors
-			public AnimatorEvent(); // 0x0000000184DA98B0-0x0000000184DA98C0
+			public AnimatorEvent(); // 0x0000000187257970-0x0000000187257980
 	
 			// Methods
-			public void Activate(bool pickUp); // 0x000000018AC22CA8-0x000000018AC22D68
-			private void Activate(Animator animator); // 0x000000018AC22D68-0x000000018AC22E04
-			private void Activate(Animation animation); // 0x000000018AC22BEC-0x000000018AC22CA8
+			public void Activate(bool pickUp); // 0x000000018CE17FB4-0x000000018CE18074
+			private void Activate(Animator animator); // 0x000000018CE18074-0x000000018CE18118
+			private void Activate(Animation animation); // 0x000000018CE17EF8-0x000000018CE17FB4
 		}
 	
 		[Serializable]
-		public class WeightCurve // TypeDefIndex: 56215
+		public class WeightCurve // TypeDefIndex: 82947
 		{
 			// Fields
 			[Tooltip("The type of the curve (InteractionObject.WeightCurve.Type).")]
@@ -4526,7 +4523,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public enum Type // TypeDefIndex: 56214
+			public enum Type // TypeDefIndex: 82946
 			{
 				PositionWeight = 0,
 				RotationWeight = 1,
@@ -4543,14 +4540,14 @@ namespace RootMotion.FinalIK
 			}
 	
 			// Constructors
-			public WeightCurve(); // 0x00000001841E1670-0x00000001841E1680
+			public WeightCurve(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public float GetValue(float timer); // 0x000000018AC337EC-0x000000018AC3380C
+			public float GetValue(float timer); // 0x000000018CE28F94-0x000000018CE28FB4
 		}
 	
 		[Serializable]
-		public class Multiplier // TypeDefIndex: 56216
+		public class Multiplier // TypeDefIndex: 82948
 		{
 			// Fields
 			[Tooltip("The curve type to multiply.")]
@@ -4561,50 +4558,50 @@ namespace RootMotion.FinalIK
 			public WeightCurve.Type result; // 0x18
 	
 			// Constructors
-			public Multiplier(); // 0x00000001815845C0-0x00000001815845D0
+			public Multiplier(); // 0x000000018723C870-0x000000018723C880
 	
 			// Methods
-			public float GetValue(WeightCurve weightCurve, float timer); // 0x000000018AC2E3B8-0x000000018AC2E3E8
+			public float GetValue(WeightCurve weightCurve, float timer); // 0x000000018CE23A64-0x000000018CE23A94
 		}
 	
 		// Constructors
-		public InteractionObject(); // 0x000000018AC28E94-0x000000018AC28EE4
+		public InteractionObject(); // 0x000000018CE1E370-0x000000018CE1E3C0
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC28E24-0x000000018AC28E58
+		private void OpenUserManual(); // 0x000000018CE1E300-0x000000018CE1E334
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC28D20-0x000000018AC28D54
+		private void OpenScriptReference(); // 0x000000018CE1E1FC-0x000000018CE1E230
 		[ContextMenu("TUTORIAL VIDEO (PART 1: BASICS)")]
-		private void OpenTutorial1(); // 0x000000018AC28D54-0x000000018AC28D88
+		private void OpenTutorial1(); // 0x000000018CE1E230-0x000000018CE1E264
 		[ContextMenu("TUTORIAL VIDEO (PART 2: PICKING UP...)")]
-		private void OpenTutorial2(); // 0x000000018AC28D88-0x000000018AC28DBC
+		private void OpenTutorial2(); // 0x000000018CE1E264-0x000000018CE1E298
 		[ContextMenu("TUTORIAL VIDEO (PART 3: ANIMATION)")]
-		private void OpenTutorial3(); // 0x000000018AC28DBC-0x000000018AC28DF0
+		private void OpenTutorial3(); // 0x000000018CE1E298-0x000000018CE1E2CC
 		[ContextMenu("TUTORIAL VIDEO (PART 4: TRIGGERS)")]
-		private void OpenTutorial4(); // 0x000000018AC28DF0-0x000000018AC28E24
+		private void OpenTutorial4(); // 0x000000018CE1E2CC-0x000000018CE1E300
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC28E60-0x000000018AC28E94
+		private void SupportGroup(); // 0x000000018CE1E33C-0x000000018CE1E370
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC27B60-0x000000018AC27B94
-		public void Initiate(); // 0x000000018AC28B6C-0x000000018AC28D20
-		public InteractionTarget GetTarget(FullBodyBipedEffector effectorType, InteractionSystem interactionSystem); // 0x000000018AC28774-0x000000018AC288A8
-		public bool CurveUsed(WeightCurve.Type type); // 0x000000018AC28590-0x000000018AC28608
-		public InteractionTarget[] GetTargets(); // 0x0000000182E56440-0x0000000182E56460
-		public Transform GetTarget(FullBodyBipedEffector effectorType, string tag); // 0x000000018AC2865C-0x000000018AC28774
-		public void OnStartInteraction(InteractionSystem interactionSystem); // 0x0000000182FDAEA0-0x0000000182FDAEB0
-		public void Apply(IKSolverFullBodyBiped solver, FullBodyBipedEffector effector, InteractionTarget target, float timer, float weight); // 0x000000018AC27B94-0x000000018AC27FF4
-		public float GetValue(WeightCurve.Type weightCurveType, InteractionTarget target, float timer); // 0x000000018AC28908-0x000000018AC28B18
-		private void Start(); // 0x000000018AC28E58-0x000000018AC28E60
-		private void Apply(IKSolverFullBodyBiped solver, FullBodyBipedEffector effector, WeightCurve.Type type, float value, float weight); // 0x000000018AC27FF4-0x000000018AC28590
-		private Transform GetTarget(FullBodyBipedEffector effectorType); // 0x000000018AC288A8-0x000000018AC28908
-		private int GetWeightCurveIndex(WeightCurve.Type weightCurveType); // 0x000000018AC28B18-0x000000018AC28B6C
-		private int GetMultiplierIndex(WeightCurve.Type weightCurveType); // 0x000000018AC28608-0x000000018AC2865C
+		private void ASThread(); // 0x000000018CE1D03C-0x000000018CE1D070
+		public void Initiate(); // 0x000000018CE1E044-0x000000018CE1E1FC
+		public InteractionTarget GetTarget(FullBodyBipedEffector effectorType, InteractionSystem interactionSystem); // 0x000000018CE1DC44-0x000000018CE1DD88
+		public bool CurveUsed(WeightCurve.Type type); // 0x000000018CE1DA54-0x000000018CE1DAD0
+		public InteractionTarget[] GetTargets(); // 0x0000000187232F70-0x0000000187232F80
+		public Transform GetTarget(FullBodyBipedEffector effectorType, string tag); // 0x000000018CE1DB24-0x000000018CE1DC44
+		public void OnStartInteraction(InteractionSystem interactionSystem); // 0x00000001869E1E00-0x00000001869E1E10
+		public void Apply(IKSolverFullBodyBiped solver, FullBodyBipedEffector effector, InteractionTarget target, float timer, float weight); // 0x000000018CE1D070-0x000000018CE1D4B8
+		public float GetValue(WeightCurve.Type weightCurveType, InteractionTarget target, float timer); // 0x000000018CE1DDE8-0x000000018CE1DFF0
+		private void Start(); // 0x000000018CE1E334-0x000000018CE1E33C
+		private void Apply(IKSolverFullBodyBiped solver, FullBodyBipedEffector effector, WeightCurve.Type type, float value, float weight); // 0x000000018CE1D4B8-0x000000018CE1DA54
+		private Transform GetTarget(FullBodyBipedEffector effectorType); // 0x000000018CE1DD88-0x000000018CE1DDE8
+		private int GetWeightCurveIndex(WeightCurve.Type weightCurveType); // 0x000000018CE1DFF0-0x000000018CE1E044
+		private int GetMultiplierIndex(WeightCurve.Type weightCurveType); // 0x000000018CE1DAD0-0x000000018CE1DB24
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction System")]
 	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
-	public class InteractionSystem : MonoBehaviour // TypeDefIndex: 56220
+	public class InteractionSystem : MonoBehaviour // TypeDefIndex: 82952
 	{
 		// Fields
 		[Tooltip("If not empty, only the targets with the specified tag will be used by this Interaction System.")]
@@ -4651,87 +4648,87 @@ namespace RootMotion.FinalIK
 		private float lastTime; // 0x100
 	
 		// Properties
-		public bool inInteraction { get; } // 0x000000018AC2C740-0x000000018AC2C7D0 
-		public FullBodyBipedIK ik { get; set; } // 0x0000000184D876B0-0x0000000184D876C0 0x000000018678D7BC-0x000000018678D7D0
-		public List<InteractionTrigger> triggersInRange { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
-		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8C8C0-0x0000000184D8C8D0 0x0000000184D8C8F0-0x0000000184D8C900
+		public bool inInteraction { get; } // 0x000000018CE21DB0-0x000000018CE21E48 
+		public FullBodyBipedIK ik { get; set; } // 0x0000000187234580-0x0000000187234590 0x0000000188A79A0C-0x0000000188A79A20
+		public List<InteractionTrigger> triggersInRange { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EE80-0x000000018226EE90 0x0000000185B68F50-0x0000000185B68F60
+		public bool initiated { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018299E130-0x000000018299E140 0x000000018299E140-0x000000018299E150
 	
 		// Nested types
-		public delegate void InteractionDelegate(FullBodyBipedEffector effectorType, InteractionObject interactionObject); // TypeDefIndex: 56218; 0x00000001838E1420-0x00000001838E1430
+		public delegate void InteractionDelegate(FullBodyBipedEffector effectorType, InteractionObject interactionObject); // TypeDefIndex: 82950; 0x00000001859B7730-0x00000001859B7740
 	
-		public delegate void InteractionEventDelegate(FullBodyBipedEffector effectorType, InteractionObject interactionObject, InteractionObject.InteractionEvent interactionEvent); // TypeDefIndex: 56219; 0x0000000181546280-0x00000001815462A0
+		public delegate void InteractionEventDelegate(FullBodyBipedEffector effectorType, InteractionObject interactionObject, InteractionObject.InteractionEvent interactionEvent); // TypeDefIndex: 82951; 0x00000001811DF7F0-0x00000001811DF810
 	
 		// Constructors
-		public InteractionSystem(); // 0x000000018AC2C360-0x000000018AC2C740
+		public InteractionSystem(); // 0x000000018CE219D0-0x000000018CE21DB0
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC2A858-0x000000018AC2A88C
+		private void OpenUserManual(); // 0x000000018CE1FDC0-0x000000018CE1FDF4
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC2A754-0x000000018AC2A788
+		private void OpenScriptReference(); // 0x000000018CE1FCBC-0x000000018CE1FCF0
 		[ContextMenu("TUTORIAL VIDEO (PART 1: BASICS)")]
-		private void OpenTutorial1(); // 0x000000018AC2A788-0x000000018AC2A7BC
+		private void OpenTutorial1(); // 0x000000018CE1FCF0-0x000000018CE1FD24
 		[ContextMenu("TUTORIAL VIDEO (PART 2: PICKING UP...)")]
-		private void OpenTutorial2(); // 0x000000018AC2A7BC-0x000000018AC2A7F0
+		private void OpenTutorial2(); // 0x000000018CE1FD24-0x000000018CE1FD58
 		[ContextMenu("TUTORIAL VIDEO (PART 3: ANIMATION)")]
-		private void OpenTutorial3(); // 0x000000018AC2A7F0-0x000000018AC2A824
+		private void OpenTutorial3(); // 0x000000018CE1FD58-0x000000018CE1FD8C
 		[ContextMenu("TUTORIAL VIDEO (PART 4: TRIGGERS)")]
-		private void OpenTutorial4(); // 0x000000018AC2A824-0x000000018AC2A858
+		private void OpenTutorial4(); // 0x000000018CE1FD8C-0x000000018CE1FDC0
 		[ContextMenu("Support")]
-		private void SupportGroup(); // 0x000000018AC2B428-0x000000018AC2B45C
+		private void SupportGroup(); // 0x000000018CE209EC-0x000000018CE20A20
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC28FB4-0x000000018AC28FE8
-		public bool IsInInteraction(FullBodyBipedEffector effectorType); // 0x000000018AC29A44-0x000000018AC29AF4
-		public bool IsPaused(FullBodyBipedEffector effectorType); // 0x000000018AC29C64-0x000000018AC29D10
-		public bool IsPaused(); // 0x000000018AC29BD4-0x000000018AC29C64
-		public bool IsInSync(); // 0x000000018AC29AF4-0x000000018AC29BD4
-		public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, bool interrupt); // 0x000000018AC2AC20-0x000000018AC2AD0C
-		public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, InteractionTarget target, bool interrupt); // 0x000000018AC2AB34-0x000000018AC2AC20
-		public bool PauseInteraction(FullBodyBipedEffector effectorType); // 0x000000018AC2A8F0-0x000000018AC2A96C
-		public bool ResumeInteraction(FullBodyBipedEffector effectorType); // 0x000000018AC2AAB8-0x000000018AC2AB34
-		public bool StopInteraction(FullBodyBipedEffector effectorType); // 0x000000018AC2B3AC-0x000000018AC2B428
-		public void PauseAll(); // 0x000000018AC2A88C-0x000000018AC2A8F0
-		public void ResumeAll(); // 0x000000018AC2AA54-0x000000018AC2AAB8
-		public void StopAll(); // 0x000000018AC2B358-0x000000018AC2B3AC
-		public InteractionObject GetInteractionObject(FullBodyBipedEffector effectorType); // 0x000000018AC29748-0x000000018AC297C4
-		public float GetProgress(FullBodyBipedEffector effectorType); // 0x000000018AC29880-0x000000018AC29900
-		public float GetMinActiveProgress(); // 0x000000018AC297C4-0x000000018AC29880
-		public bool TriggerInteraction(int index, bool interrupt); // 0x000000018AC2BC44-0x000000018AC2BDD8
-		public bool TriggerInteraction(int index, bool interrupt, out InteractionObject interactionObject); // 0x000000018AC2B7E4-0x000000018AC2B9C8
-		public bool TriggerInteraction(int index, bool interrupt, out InteractionTarget interactionTarget); // 0x000000018AC2B9C8-0x000000018AC2BC44
-		public InteractionTrigger.Range GetClosestInteractionRange(); // 0x000000018AC292C0-0x000000018AC29398
-		public InteractionObject GetClosestInteractionObjectInRange(); // 0x000000018AC29194-0x000000018AC291D4
-		public InteractionTarget GetClosestInteractionTargetInRange(); // 0x000000018AC29398-0x000000018AC29408
-		public InteractionObject[] GetClosestInteractionObjectsInRange(); // 0x000000018AC291D4-0x000000018AC292C0
-		public InteractionTarget[] GetClosestInteractionTargetsInRange(); // 0x000000018AC29408-0x000000018AC29564
-		public bool TriggerEffectorsReady(int index); // 0x000000018AC2B45C-0x000000018AC2B6FC
-		public InteractionTrigger.Range GetTriggerRange(int index); // 0x000000018AC29900-0x000000018AC29A04
-		public int GetClosestTriggerIndex(); // 0x000000018AC29564-0x000000018AC29748
-		public void Start(); // 0x000000018AC2AD0C-0x000000018AC2B358
-		private void InteractionPause(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018AC29A04-0x000000018AC29A24
-		private void InteractionResume(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018AC29A24-0x000000018AC29A44
-		private void InteractionStop(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018AC29A24-0x000000018AC29A44
-		private void LookAtInteraction(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018AC29DD8-0x000000018AC29E44
-		public void OnTriggerEnter(Collider c); // 0x000000018AC2A58C-0x000000018AC2A684
-		public void OnTriggerExit(Collider c); // 0x000000018AC2A684-0x000000018AC2A754
-		private bool ContactIsInRange(int index, out int bestRangeIndex); // 0x000000018AC28FE8-0x000000018AC29194
-		private void OnDrawGizmosSelected(); // 0x000000018AC2A344-0x000000018AC2A424
-		public void Update(); // 0x000000018AC2C150-0x000000018AC2C360
-		private void Raycasting(); // 0x000000018AC2A96C-0x000000018AC2AA54
-		private void UpdateTriggerEventBroadcasting(); // 0x000000018AC2BF04-0x000000018AC2C150
-		private void OnEnable(); // 0x000000018AC2A424-0x000000018AC2A444
-		private void UpdateEffectors(); // 0x000000018AC2BDD8-0x000000018AC2BF04
-		private void OnPreFBBIK(); // 0x000000018AC2A510-0x000000018AC2A58C
-		private void OnPostFBBIK(); // 0x000000018AC2A468-0x000000018AC2A510
-		private void OnFixTransforms(); // 0x000000018AC2A444-0x000000018AC2A468
-		private void OnDestroy(); // 0x000000018AC29E44-0x000000018AC2A344
-		private bool IsValid(bool log); // 0x000000018AC29D10-0x000000018AC29DD8
-		private bool TriggerIndexIsValid(int index); // 0x000000018AC2B6FC-0x000000018AC2B7E4
+		private void ASThread(); // 0x000000018CE1E490-0x000000018CE1E4C4
+		public bool IsInInteraction(FullBodyBipedEffector effectorType); // 0x000000018CE1EF50-0x000000018CE1F00C
+		public bool IsPaused(FullBodyBipedEffector effectorType); // 0x000000018CE1F1B4-0x000000018CE1F26C
+		public bool IsPaused(); // 0x000000018CE1F11C-0x000000018CE1F1B4
+		public bool IsInSync(); // 0x000000018CE1F00C-0x000000018CE1F11C
+		public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, bool interrupt); // 0x000000018CE201B8-0x000000018CE202AC
+		public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, InteractionTarget target, bool interrupt); // 0x000000018CE200C0-0x000000018CE201B8
+		public bool PauseInteraction(FullBodyBipedEffector effectorType); // 0x000000018CE1FE60-0x000000018CE1FEE4
+		public bool ResumeInteraction(FullBodyBipedEffector effectorType); // 0x000000018CE2003C-0x000000018CE200C0
+		public bool StopInteraction(FullBodyBipedEffector effectorType); // 0x000000018CE20968-0x000000018CE209EC
+		public void PauseAll(); // 0x000000018CE1FDF4-0x000000018CE1FE60
+		public void ResumeAll(); // 0x000000018CE1FFD0-0x000000018CE2003C
+		public void StopAll(); // 0x000000018CE20908-0x000000018CE20968
+		public InteractionObject GetInteractionObject(FullBodyBipedEffector effectorType); // 0x000000018CE1EC4C-0x000000018CE1ECCC
+		public float GetProgress(FullBodyBipedEffector effectorType); // 0x000000018CE1ED88-0x000000018CE1EE0C
+		public float GetMinActiveProgress(); // 0x000000018CE1ECCC-0x000000018CE1ED88
+		public bool TriggerInteraction(int index, bool interrupt); // 0x000000018CE2128C-0x000000018CE2142C
+		public bool TriggerInteraction(int index, bool interrupt, out InteractionObject interactionObject); // 0x000000018CE20E04-0x000000018CE20FF8
+		public bool TriggerInteraction(int index, bool interrupt, out InteractionTarget interactionTarget); // 0x000000018CE20FF8-0x000000018CE2128C
+		public InteractionTrigger.Range GetClosestInteractionRange(); // 0x000000018CE1E7AC-0x000000018CE1E884
+		public InteractionObject GetClosestInteractionObjectInRange(); // 0x000000018CE1E674-0x000000018CE1E6B4
+		public InteractionTarget GetClosestInteractionTargetInRange(); // 0x000000018CE1E884-0x000000018CE1E8F4
+		public InteractionObject[] GetClosestInteractionObjectsInRange(); // 0x000000018CE1E6B4-0x000000018CE1E7AC
+		public InteractionTarget[] GetClosestInteractionTargetsInRange(); // 0x000000018CE1E8F4-0x000000018CE1EA68
+		public bool TriggerEffectorsReady(int index); // 0x000000018CE20A20-0x000000018CE20D1C
+		public InteractionTrigger.Range GetTriggerRange(int index); // 0x000000018CE1EE0C-0x000000018CE1EF10
+		public int GetClosestTriggerIndex(); // 0x000000018CE1EA68-0x000000018CE1EC4C
+		public void Start(); // 0x000000018CE202AC-0x000000018CE20908
+		private void InteractionPause(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018CE1EF10-0x000000018CE1EF30
+		private void InteractionResume(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018CE1EF30-0x000000018CE1EF50
+		private void InteractionStop(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018CE1EF30-0x000000018CE1EF50
+		private void LookAtInteraction(FullBodyBipedEffector effector, InteractionObject interactionObject); // 0x000000018CE1F334-0x000000018CE1F3A0
+		public void OnTriggerEnter(Collider c); // 0x000000018CE1FAF4-0x000000018CE1FBEC
+		public void OnTriggerExit(Collider c); // 0x000000018CE1FBEC-0x000000018CE1FCBC
+		private bool ContactIsInRange(int index, out int bestRangeIndex); // 0x000000018CE1E4C4-0x000000018CE1E674
+		private void OnDrawGizmosSelected(); // 0x000000018CE1F8A0-0x000000018CE1F980
+		public void Update(); // 0x000000018CE217B8-0x000000018CE219D0
+		private void Raycasting(); // 0x000000018CE1FEE4-0x000000018CE1FFD0
+		private void UpdateTriggerEventBroadcasting(); // 0x000000018CE2156C-0x000000018CE217B8
+		private void OnEnable(); // 0x000000018CE1F980-0x000000018CE1F9A0
+		private void UpdateEffectors(); // 0x000000018CE2142C-0x000000018CE2156C
+		private void OnPreFBBIK(); // 0x000000018CE1FA78-0x000000018CE1FAF4
+		private void OnPostFBBIK(); // 0x000000018CE1F9C4-0x000000018CE1FA78
+		private void OnFixTransforms(); // 0x000000018CE1F9A0-0x000000018CE1F9C4
+		private void OnDestroy(); // 0x000000018CE1F3A0-0x000000018CE1F8A0
+		private bool IsValid(bool log); // 0x000000018CE1F26C-0x000000018CE1F334
+		private bool TriggerIndexIsValid(int index); // 0x000000018CE20D1C-0x000000018CE20E04
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Target")]
 	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
-	public class InteractionTarget : MonoBehaviour // TypeDefIndex: 56223
+	public class InteractionTarget : MonoBehaviour // TypeDefIndex: 82955
 	{
 		// Fields
 		[Tooltip("The type of the FBBIK effector.")]
@@ -4760,14 +4757,14 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public enum RotationMode // TypeDefIndex: 56221
+		public enum RotationMode // TypeDefIndex: 82953
 		{
 			TwoDOF = 0,
 			ThreeDOF = 1
 		}
 	
 		[Serializable]
-		public class Multiplier // TypeDefIndex: 56222
+		public class Multiplier // TypeDefIndex: 82954
 		{
 			// Fields
 			[Tooltip("The curve type (InteractionObject.WeightCurve.Type).")]
@@ -4776,37 +4773,37 @@ namespace RootMotion.FinalIK
 			public float multiplier; // 0x14
 	
 			// Constructors
-			public Multiplier(); // 0x00000001841E1670-0x00000001841E1680
+			public Multiplier(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		public InteractionTarget(); // 0x000000018AC2D0CC-0x000000018AC2D118
+		public InteractionTarget(); // 0x000000018CE22758-0x000000018CE227A4
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC2C968-0x000000018AC2C99C
+		private void OpenUserManual(); // 0x000000018CE21FE8-0x000000018CE2201C
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC2C864-0x000000018AC2C898
+		private void OpenScriptReference(); // 0x000000018CE21EE4-0x000000018CE21F18
 		[ContextMenu("TUTORIAL VIDEO (PART 1: BASICS)")]
-		private void OpenTutorial1(); // 0x000000018AC2C898-0x000000018AC2C8CC
+		private void OpenTutorial1(); // 0x000000018CE21F18-0x000000018CE21F4C
 		[ContextMenu("TUTORIAL VIDEO (PART 2: PICKING UP...)")]
-		private void OpenTutorial2(); // 0x000000018AC2C8CC-0x000000018AC2C900
+		private void OpenTutorial2(); // 0x000000018CE21F4C-0x000000018CE21F80
 		[ContextMenu("TUTORIAL VIDEO (PART 3: ANIMATION)")]
-		private void OpenTutorial3(); // 0x000000018AC2C900-0x000000018AC2C934
+		private void OpenTutorial3(); // 0x000000018CE21F80-0x000000018CE21FB4
 		[ContextMenu("TUTORIAL VIDEO (PART 4: TRIGGERS)")]
-		private void OpenTutorial4(); // 0x000000018AC2C934-0x000000018AC2C968
+		private void OpenTutorial4(); // 0x000000018CE21FB4-0x000000018CE21FE8
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC2D098-0x000000018AC2D0CC
+		private void SupportGroup(); // 0x000000018CE22724-0x000000018CE22758
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC2C7D0-0x000000018AC2C804
-		public float GetValue(InteractionObject.WeightCurve.Type curveType); // 0x000000018AC2C804-0x000000018AC2C864
-		public void ResetRotation(); // 0x000000018AC2C99C-0x000000018AC2CA18
-		public void RotateTo(Transform bone); // 0x000000018AC2CA18-0x000000018AC2D098
+		private void ASThread(); // 0x000000018CE21E48-0x000000018CE21E7C
+		public float GetValue(InteractionObject.WeightCurve.Type curveType); // 0x000000018CE21E7C-0x000000018CE21EE4
+		public void ResetRotation(); // 0x000000018CE2201C-0x000000018CE22098
+		public void RotateTo(Transform bone); // 0x000000018CE22098-0x000000018CE22724
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Trigger")]
 	[HelpURL("https://www.youtube.com/watch?v=-TDZpNjt2mk&index=15&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
-	public class InteractionTrigger : MonoBehaviour // TypeDefIndex: 56228
+	public class InteractionTrigger : MonoBehaviour // TypeDefIndex: 82960
 	{
 		// Fields
 		[Tooltip("The valid ranges of the character\'s and/or its camera\'s position for triggering interaction when the character is in contact with the collider of this trigger.")]
@@ -4814,7 +4811,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class CharacterPosition // TypeDefIndex: 56224
+		public class CharacterPosition // TypeDefIndex: 82956
 		{
 			// Fields
 			[Tooltip("If false, will not care where the character stands, as long as it is in contact with the trigger collider.")]
@@ -4835,18 +4832,18 @@ namespace RootMotion.FinalIK
 			public bool fixYAxis; // 0x29
 	
 			// Properties
-			public Vector3 offset3D { get; } // 0x0000000184DA9960-0x0000000184DA9980 
-			public Vector3 direction3D { get; } // 0x000000018AC24A8C-0x000000018AC24B1C 
+			public Vector3 offset3D { get; } // 0x0000000187257A20-0x0000000187257A40 
+			public Vector3 direction3D { get; } // 0x000000018CE19DF8-0x000000018CE19E88 
 	
 			// Constructors
-			public CharacterPosition(); // 0x0000000184DA9950-0x0000000184DA9960
+			public CharacterPosition(); // 0x0000000187257A10-0x0000000187257A20
 	
 			// Methods
-			public bool IsInRange(Transform character, Transform trigger, out float error); // 0x000000018AC24444-0x000000018AC24A8C
+			public bool IsInRange(Transform character, Transform trigger, out float error); // 0x000000018CE197A0-0x000000018CE19DF8
 		}
 	
 		[Serializable]
-		public class CameraPosition // TypeDefIndex: 56225
+		public class CameraPosition // TypeDefIndex: 82957
 		{
 			// Fields
 			[Tooltip("What the camera should be looking at to trigger the interaction? If null, this camera position will not be used.")]
@@ -4862,15 +4859,15 @@ namespace RootMotion.FinalIK
 			public bool fixYAxis; // 0x2C
 	
 			// Constructors
-			public CameraPosition(); // 0x000000018AC243EC-0x000000018AC24444
+			public CameraPosition(); // 0x000000018CE19748-0x000000018CE197A0
 	
 			// Methods
-			public Quaternion GetRotation(); // 0x000000018AC23FF0-0x000000018AC24150
-			public bool IsInRange(Transform raycastFrom, RaycastHit hit, Transform trigger, out float error); // 0x000000018AC24150-0x000000018AC243EC
+			public Quaternion GetRotation(); // 0x000000018CE19348-0x000000018CE194A8
+			public bool IsInRange(Transform raycastFrom, RaycastHit hit, Transform trigger, out float error); // 0x000000018CE194A8-0x000000018CE19748
 		}
 	
 		[Serializable]
-		public class Range // TypeDefIndex: 56227
+		public class Range // TypeDefIndex: 82959
 		{
 			// Fields
 			[HideInInspector]
@@ -4886,7 +4883,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class Interaction // TypeDefIndex: 56226
+			public class Interaction // TypeDefIndex: 82958
 			{
 				// Fields
 				[Tooltip("The InteractionObject to interact with.")]
@@ -4895,41 +4892,41 @@ namespace RootMotion.FinalIK
 				public FullBodyBipedEffector[] effectors; // 0x18
 	
 				// Constructors
-				public Interaction(); // 0x00000001841E1670-0x00000001841E1680
+				public Interaction(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public Range(); // 0x0000000184D8EB60-0x0000000184D8EB70
+			public Range(); // 0x0000000187233970-0x0000000187233980
 	
 			// Methods
-			public bool IsInRange(Transform character, Transform raycastFrom, RaycastHit raycastHit, Transform trigger, out float maxError); // 0x000000018AC2FB40-0x000000018AC2FC30
+			public bool IsInRange(Transform character, Transform raycastFrom, RaycastHit raycastHit, Transform trigger, out float maxError); // 0x000000018CE2528C-0x000000018CE2538C
 		}
 	
 		// Constructors
-		public InteractionTrigger(); // 0x000000018AC2D3CC-0x000000018AC2D41C
+		public InteractionTrigger(); // 0x000000018CE22A60-0x000000018CE22AB0
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC2D364-0x000000018AC2D398
+		private void OpenUserManual(); // 0x000000018CE229F8-0x000000018CE22A2C
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC2D2FC-0x000000018AC2D330
+		private void OpenScriptReference(); // 0x000000018CE22990-0x000000018CE229C4
 		[ContextMenu("TUTORIAL VIDEO")]
-		private void OpenTutorial4(); // 0x000000018AC2D330-0x000000018AC2D364
+		private void OpenTutorial4(); // 0x000000018CE229C4-0x000000018CE229F8
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC2D398-0x000000018AC2D3CC
+		private void SupportGroup(); // 0x000000018CE22A2C-0x000000018CE22A60
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC2D118-0x000000018AC2D14C
-		public int GetBestRangeIndex(Transform character, Transform raycastFrom, RaycastHit raycastHit); // 0x000000018AC2D14C-0x000000018AC2D2FC
+		private void ASThread(); // 0x000000018CE227A4-0x000000018CE227D8
+		public int GetBestRangeIndex(Transform character, Transform raycastFrom, RaycastHit raycastHit); // 0x000000018CE227D8-0x000000018CE22990
 	}
 
-	public class GenericPoser : Poser // TypeDefIndex: 56230
+	public class GenericPoser : Poser // TypeDefIndex: 82962
 	{
 		// Fields
 		public Map[] maps; // 0x50
 	
 		// Nested types
 		[Serializable]
-		public class Map // TypeDefIndex: 56229
+		public class Map // TypeDefIndex: 82961
 		{
 			// Fields
 			public Transform bone; // 0x10
@@ -4938,28 +4935,28 @@ namespace RootMotion.FinalIK
 			private Quaternion defaultLocalRotation; // 0x2C
 	
 			// Constructors
-			public Map(Transform bone, Transform target); // 0x000000018AC2E2AC-0x000000018AC2E2E0
+			public Map(Transform bone, Transform target); // 0x000000018CE23954-0x000000018CE23988
 	
 			// Methods
-			public void StoreDefaultState(); // 0x000000018ABED324-0x000000018ABED380
-			public void FixTransform(); // 0x000000018AC2E0F0-0x000000018AC2E150
-			public void Update(float localRotationWeight, float localPositionWeight); // 0x000000018AC2E150-0x000000018AC2E2AC
+			public void StoreDefaultState(); // 0x000000018CDE21F4-0x000000018CDE2250
+			public void FixTransform(); // 0x000000018CE23794-0x000000018CE237F4
+			public void Update(float localRotationWeight, float localPositionWeight); // 0x000000018CE237F4-0x000000018CE23954
 		}
 	
 		// Constructors
-		public GenericPoser(); // 0x000000018AC25E0C-0x000000018AC25E24
+		public GenericPoser(); // 0x000000018CE1B1B4-0x000000018CE1B1CC
 	
 		// Methods
 		[ContextMenu("Auto-Mapping")]
-		public override void AutoMapping(); // 0x000000018AC259D8-0x000000018AC25C08
-		protected override void InitiatePoser(); // 0x000000018AC25CD8-0x000000018AC25CE0
-		protected override void UpdatePoser(); // 0x000000018AC25D34-0x000000018AC25E0C
-		protected override void FixPoserTransforms(); // 0x000000018AC25C08-0x000000018AC25C5C
-		private void StoreDefaultState(); // 0x000000018AC25CE0-0x000000018AC25D34
-		private Transform GetTargetNamed(string tName, Transform[] array); // 0x000000018AC25C5C-0x000000018AC25CD8
+		public override void AutoMapping(); // 0x000000018CE1AD54-0x000000018CE1AF8C
+		protected override void InitiatePoser(); // 0x000000018CE1B070-0x000000018CE1B078
+		protected override void UpdatePoser(); // 0x000000018CE1B0D4-0x000000018CE1B1B4
+		protected override void FixPoserTransforms(); // 0x000000018CE1AF8C-0x000000018CE1AFE8
+		private void StoreDefaultState(); // 0x000000018CE1B078-0x000000018CE1B0D4
+		private Transform GetTargetNamed(string tName, Transform[] array); // 0x000000018CE1AFE8-0x000000018CE1B070
 	}
 
-	public class HandPoser : Poser // TypeDefIndex: 56231
+	public class HandPoser : Poser // TypeDefIndex: 82963
 	{
 		// Fields
 		protected Transform[] children; // 0x50
@@ -4969,17 +4966,17 @@ namespace RootMotion.FinalIK
 		private Quaternion[] defaultLocalRotations; // 0x70
 	
 		// Constructors
-		public HandPoser(); // 0x000000018AC25E0C-0x000000018AC25E24
+		public HandPoser(); // 0x000000018CE1B1B4-0x000000018CE1B1CC
 	
 		// Methods
-		public override void AutoMapping(); // 0x000000018AC25E24-0x000000018AC25EDC
-		protected override void InitiatePoser(); // 0x000000018AC25FD0-0x000000018AC26020
-		protected override void FixPoserTransforms(); // 0x000000018AC25EDC-0x000000018AC25FD0
-		protected override void UpdatePoser(); // 0x000000018AC26184-0x000000018AC264D4
-		protected void StoreDefaultState(); // 0x000000018AC26020-0x000000018AC26184
+		public override void AutoMapping(); // 0x000000018CE1B1CC-0x000000018CE1B284
+		protected override void InitiatePoser(); // 0x000000018CE1B380-0x000000018CE1B3D0
+		protected override void FixPoserTransforms(); // 0x000000018CE1B284-0x000000018CE1B380
+		protected override void UpdatePoser(); // 0x000000018CE1B53C-0x000000018CE1B878
+		protected void StoreDefaultState(); // 0x000000018CE1B3D0-0x000000018CE1B53C
 	}
 
-	public abstract class Poser : SolverManager // TypeDefIndex: 56232
+	public abstract class Poser : SolverManager // TypeDefIndex: 82964
 	{
 		// Fields
 		public Transform poseRoot; // 0x38
@@ -4992,20 +4989,20 @@ namespace RootMotion.FinalIK
 		private bool initiated; // 0x4C
 	
 		// Constructors
-		protected Poser(); // 0x000000018AC25E0C-0x000000018AC25E24
+		protected Poser(); // 0x000000018CE1B1B4-0x000000018CE1B1CC
 	
 		// Methods
 		public abstract void AutoMapping();
-		public void UpdateManual(); // 0x00000001873629EC-0x00000001873629FC
+		public void UpdateManual(); // 0x000000018783BBB0-0x000000018783BBC0
 		protected abstract void InitiatePoser();
 		protected abstract void UpdatePoser();
 		protected abstract void FixPoserTransforms();
-		protected override void UpdateSolver(); // 0x000000018AC2E81C-0x000000018AC2E858
-		protected override void InitiateSolver(); // 0x000000018AC2E7F4-0x000000018AC2E81C
-		protected override void FixTransforms(); // 0x000000018AC2E7E0-0x000000018AC2E7F4
+		protected override void UpdateSolver(); // 0x000000018CE23ED4-0x000000018CE23F10
+		protected override void InitiateSolver(); // 0x000000018CE23EAC-0x000000018CE23ED4
+		protected override void FixTransforms(); // 0x000000018CE23E98-0x000000018CE23EAC
 	}
 
-	public class RagdollUtility : MonoBehaviour // TypeDefIndex: 56236
+	public class RagdollUtility : MonoBehaviour // TypeDefIndex: 82968
 	{
 		// Fields
 		[Tooltip("If you have multiple IK components, then this should be the one that solves last each frame.")]
@@ -5031,11 +5028,11 @@ namespace RootMotion.FinalIK
 		private bool[] disabledIKComponents; // 0x70
 	
 		// Properties
-		private bool isRagdoll { get; } // 0x000000018AC2FAE0-0x000000018AC2FB40 
-		private bool ikUsed { get; } // 0x000000018AC2F9E4-0x000000018AC2FAE0 
+		private bool isRagdoll { get; } // 0x000000018CE2522C-0x000000018CE2528C 
+		private bool ikUsed { get; } // 0x000000018CE25124-0x000000018CE2522C 
 	
 		// Nested types
-		public class Rigidbone // TypeDefIndex: 56233
+		public class Rigidbone // TypeDefIndex: 82965
 		{
 			// Fields
 			public Rigidbody r; // 0x10
@@ -5051,14 +5048,14 @@ namespace RootMotion.FinalIK
 			public Quaternion lastRotation; // 0x68
 	
 			// Constructors
-			public Rigidbone(Rigidbody r); // 0x000000018AC30384-0x000000018AC304F8
+			public Rigidbone(Rigidbody r); // 0x000000018CE25AEC-0x000000018CE25C60
 	
 			// Methods
-			public void RecordVelocity(); // 0x000000018AC30010-0x000000018AC3012C
-			public void WakeUp(float velocityWeight, float angularVelocityWeight); // 0x000000018AC3012C-0x000000018AC30384
+			public void RecordVelocity(); // 0x000000018CE25770-0x000000018CE2588C
+			public void WakeUp(float velocityWeight, float angularVelocityWeight); // 0x000000018CE2588C-0x000000018CE25AEC
 		}
 	
-		public class Child // TypeDefIndex: 56234
+		public class Child // TypeDefIndex: 82966
 		{
 			// Fields
 			public Transform t; // 0x10
@@ -5066,15 +5063,15 @@ namespace RootMotion.FinalIK
 			public Quaternion localRotation; // 0x24
 	
 			// Constructors
-			public Child(Transform transform); // 0x000000018AC24CD4-0x000000018AC24D3C
+			public Child(Transform transform); // 0x000000018CE1A044-0x000000018CE1A0AC
 	
 			// Methods
-			public void FixTransform(float weight); // 0x000000018AC24B1C-0x000000018AC24C78
-			public void StoreLocalState(); // 0x000000018AC24C78-0x000000018AC24CD4
+			public void FixTransform(float weight); // 0x000000018CE19E88-0x000000018CE19FE8
+			public void StoreLocalState(); // 0x000000018CE19FE8-0x000000018CE1A044
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DisableRagdollSmooth_d__21 : IEnumerator<object> // TypeDefIndex: 56235
+		private sealed class _DisableRagdollSmooth_d__21 : IEnumerator<object> // TypeDefIndex: 82967
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -5082,44 +5079,44 @@ namespace RootMotion.FinalIK
 			public RagdollUtility __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DisableRagdollSmooth_d__21(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _DisableRagdollSmooth_d__21(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AC334D8-0x000000018AC336A0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CE28C5C-0x000000018CE28E3C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AC336A0-0x000000018AC336EC
+			void IEnumerator.Reset(); // 0x000000018CE28E3C-0x000000018CE28E88
 		}
 	
 		// Constructors
-		public RagdollUtility(); // 0x000000018AC2F8F0-0x000000018AC2F9E4
+		public RagdollUtility(); // 0x000000018CE25030-0x000000018CE25124
 	
 		// Methods
-		public void EnableRagdoll(); // 0x000000018AC2EDD8-0x000000018AC2EE00
-		public void DisableRagdoll(); // 0x000000018AC2ED90-0x000000018AC2EDD8
-		public void Start(); // 0x000000018AC2F2AC-0x000000018AC2F6B4
+		public void EnableRagdoll(); // 0x000000018CE244A4-0x000000018CE244CC
+		public void DisableRagdoll(); // 0x000000018CE2445C-0x000000018CE244A4
+		public void Start(); // 0x000000018CE249B8-0x000000018CE24DC4
 		[IteratorStateMachine(typeof(_DisableRagdollSmooth_d__21))]
-		private IEnumerator DisableRagdollSmooth(); // 0x000000018AC2ED34-0x000000018AC2ED90
-		private void Update(); // 0x000000018AC2F700-0x000000018AC2F8F0
-		private void FixedUpdate(); // 0x000000018AC2EE5C-0x000000018AC2EE94
-		private void LateUpdate(); // 0x000000018AC2EE94-0x000000018AC2EF00
-		private void AfterLastIK(); // 0x000000018AC2ED08-0x000000018AC2ED34
-		private void AfterAnimation(); // 0x000000018AC2ECD0-0x000000018AC2ED08
-		private void OnFinalPose(); // 0x000000018AC2F02C-0x000000018AC2F068
-		private void RagdollEnabler(); // 0x000000018AC2F068-0x000000018AC2F260
-		private void RecordVelocities(); // 0x000000018AC2F260-0x000000018AC2F2AC
-		private void StoreLocalState(); // 0x000000018AC2F6B4-0x000000018AC2F700
-		private void FixTransforms(float weight); // 0x000000018AC2EE00-0x000000018AC2EE5C
-		private void OnDestroy(); // 0x000000018AC2EF00-0x000000018AC2F02C
+		private IEnumerator DisableRagdollSmooth(); // 0x000000018CE24400-0x000000018CE2445C
+		private void Update(); // 0x000000018CE24E1C-0x000000018CE25030
+		private void FixedUpdate(); // 0x000000018CE24538-0x000000018CE24570
+		private void LateUpdate(); // 0x000000018CE24570-0x000000018CE245DC
+		private void AfterLastIK(); // 0x000000018CE243D4-0x000000018CE24400
+		private void AfterAnimation(); // 0x000000018CE2439C-0x000000018CE243D4
+		private void OnFinalPose(); // 0x000000018CE24708-0x000000018CE24744
+		private void RagdollEnabler(); // 0x000000018CE24744-0x000000018CE24960
+		private void RecordVelocities(); // 0x000000018CE24960-0x000000018CE249B8
+		private void StoreLocalState(); // 0x000000018CE24DC4-0x000000018CE24E1C
+		private void FixTransforms(float weight); // 0x000000018CE244CC-0x000000018CE24538
+		private void OnDestroy(); // 0x000000018CE245DC-0x000000018CE24708
 	}
 
-	public abstract class RotationLimit : MonoBehaviour // TypeDefIndex: 56237
+	public abstract class RotationLimit : MonoBehaviour // TypeDefIndex: 82969
 	{
 		// Fields
 		public Vector3 axis; // 0x18
@@ -5132,31 +5129,31 @@ namespace RootMotion.FinalIK
 		private bool defaultLocalRotationSet; // 0x37
 	
 		// Properties
-		public Vector3 secondaryAxis { get; } // 0x0000000184DA9A00-0x0000000184DA9A20 
-		public Vector3 crossAxis { get; } // 0x000000018AC32EC0-0x000000018AC32F30 
-		public bool defaultLocalRotationOverride { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86A90-0x0000000184D86AA0 0x0000000184D86AA0-0x0000000184D86AB0
+		public Vector3 secondaryAxis { get; } // 0x0000000187257AC0-0x0000000187257AE0 
+		public Vector3 crossAxis { get; } // 0x000000018CE2862C-0x000000018CE2869C 
+		public bool defaultLocalRotationOverride { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBB0-0x000000018226EBC0 0x000000018226EBC0-0x000000018226EBD0
 	
 		// Constructors
-		protected RotationLimit(); // 0x000000018AC32E90-0x000000018AC32EC0
+		protected RotationLimit(); // 0x000000018CE285FC-0x000000018CE2862C
 	
 		// Methods
-		public void SetDefaultLocalRotation(); // 0x000000018AC32E50-0x000000018AC32E90
-		public void SetDefaultLocalRotation(Quaternion localRotation); // 0x0000000184DA99F0-0x0000000184DA9A00
-		public Quaternion GetLimitedLocalRotation(Quaternion localRotation, out bool changed); // 0x000000018AC32A34-0x000000018AC32B58
-		public bool Apply(); // 0x000000018AC328A8-0x000000018AC32944
-		public void Disable(); // 0x000000018AC32A0C-0x000000018AC32A34
+		public void SetDefaultLocalRotation(); // 0x000000018CE285BC-0x000000018CE285FC
+		public void SetDefaultLocalRotation(Quaternion localRotation); // 0x0000000187257AB0-0x0000000187257AC0
+		public Quaternion GetLimitedLocalRotation(Quaternion localRotation, out bool changed); // 0x000000018CE281A4-0x000000018CE282C8
+		public bool Apply(); // 0x000000018CE28014-0x000000018CE280B4
+		public void Disable(); // 0x000000018CE2817C-0x000000018CE281A4
 		protected abstract Quaternion LimitRotation(Quaternion rotation);
-		private void Awake(); // 0x000000018AC32944-0x000000018AC32A0C
-		private void LateUpdate(); // 0x000000018AC32BD0-0x000000018AC32BD8
-		public void LogWarning(string message); // 0x000000018ABD818C-0x000000018ABD81B4
-		protected static Quaternion Limit1DOF(Quaternion rotation, Vector3 axis); // 0x000000018AC32BD8-0x000000018AC32C88
-		protected static Quaternion LimitTwist(Quaternion rotation, Vector3 axis, Vector3 orthoAxis, float twistLimit); // 0x000000018AC32C88-0x000000018AC32E50
-		protected static float GetOrthogonalAngle(Vector3 v1, Vector3 v2, Vector3 normal); // 0x000000018AC32B58-0x000000018AC32BD0
+		private void Awake(); // 0x000000018CE280B4-0x000000018CE2817C
+		private void LateUpdate(); // 0x000000018CE28340-0x000000018CE28348
+		public void LogWarning(string message); // 0x000000018CDCCCB8-0x000000018CDCCCE0
+		protected static Quaternion Limit1DOF(Quaternion rotation, Vector3 axis); // 0x000000018CE28348-0x000000018CE283F8
+		protected static Quaternion LimitTwist(Quaternion rotation, Vector3 axis, Vector3 orthoAxis, float twistLimit); // 0x000000018CE283F8-0x000000018CE285BC
+		protected static float GetOrthogonalAngle(Vector3 v1, Vector3 v2, Vector3 normal); // 0x000000018CE282C8-0x000000018CE28340
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Angle")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page14.html")]
-	public class RotationLimitAngle : RotationLimit // TypeDefIndex: 56238
+	public class RotationLimitAngle : RotationLimit // TypeDefIndex: 82970
 	{
 		// Fields
 		[Range(0f, 180f)]
@@ -5165,24 +5162,24 @@ namespace RootMotion.FinalIK
 		public float twistLimit; // 0x3C
 	
 		// Constructors
-		public RotationLimitAngle(); // 0x000000018AC30894-0x000000018AC308AC
+		public RotationLimitAngle(); // 0x000000018CE25FF0-0x000000018CE26008
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC3082C-0x000000018AC30860
+		private void OpenUserManual(); // 0x000000018CE25F88-0x000000018CE25FBC
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC307F8-0x000000018AC3082C
+		private void OpenScriptReference(); // 0x000000018CE25F54-0x000000018CE25F88
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC30860-0x000000018AC30894
+		private void SupportGroup(); // 0x000000018CE25FBC-0x000000018CE25FF0
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC304F8-0x000000018AC3052C
-		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018AC3052C-0x000000018AC305F0
-		private Quaternion LimitSwing(Quaternion rotation); // 0x000000018AC305F0-0x000000018AC307F8
+		private void ASThread(); // 0x000000018CE25C60-0x000000018CE25C94
+		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018CE25C94-0x000000018CE25D4C
+		private Quaternion LimitSwing(Quaternion rotation); // 0x000000018CE25D4C-0x000000018CE25F54
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Hinge")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page14.html")]
-	public class RotationLimitHinge : RotationLimit // TypeDefIndex: 56239
+	public class RotationLimitHinge : RotationLimit // TypeDefIndex: 82971
 	{
 		// Fields
 		public bool useLimits; // 0x38
@@ -5193,24 +5190,24 @@ namespace RootMotion.FinalIK
 		private float lastAngle; // 0x48
 	
 		// Constructors
-		public RotationLimitHinge(); // 0x000000018AC30BDC-0x000000018AC30BF8
+		public RotationLimitHinge(); // 0x000000018CE26338-0x000000018CE26354
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC30B74-0x000000018AC30BA8
+		private void OpenUserManual(); // 0x000000018CE262D0-0x000000018CE26304
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC30B40-0x000000018AC30B74
+		private void OpenScriptReference(); // 0x000000018CE2629C-0x000000018CE262D0
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC30BA8-0x000000018AC30BDC
+		private void SupportGroup(); // 0x000000018CE26304-0x000000018CE26338
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC308AC-0x000000018AC308E0
-		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018AC30B0C-0x000000018AC30B40
-		private Quaternion LimitHinge(Quaternion rotation); // 0x000000018AC308E0-0x000000018AC30B0C
+		private void ASThread(); // 0x000000018CE26008-0x000000018CE2603C
+		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018CE26268-0x000000018CE2629C
+		private Quaternion LimitHinge(Quaternion rotation); // 0x000000018CE2603C-0x000000018CE26268
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Polygonal")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page14.html")]
-	public class RotationLimitPolygonal : RotationLimit // TypeDefIndex: 56242
+	public class RotationLimitPolygonal : RotationLimit // TypeDefIndex: 82974
 	{
 		// Fields
 		[Range(0f, 180f)]
@@ -5226,7 +5223,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class ReachCone // TypeDefIndex: 56240
+		public class ReachCone // TypeDefIndex: 82972
 		{
 			// Fields
 			public Vector3[] tetrahedron; // 0x10
@@ -5235,58 +5232,58 @@ namespace RootMotion.FinalIK
 			public Vector3 B; // 0x28
 	
 			// Properties
-			public Vector3 o { get; } // 0x000000018AC2FFE4-0x000000018AC30010 
-			public Vector3 a { get; } // 0x000000018AC2FF44-0x000000018AC2FF74 
-			public Vector3 b { get; } // 0x000000018AC2FF74-0x000000018AC2FFA4 
-			public Vector3 c { get; } // 0x000000018AC2FFA4-0x000000018AC2FFD4 
-			public bool isValid { get; } // 0x000000018AC2FFD4-0x000000018AC2FFE4 
+			public Vector3 o { get; } // 0x000000018CE25744-0x000000018CE25770 
+			public Vector3 a { get; } // 0x000000018CE256A4-0x000000018CE256D4 
+			public Vector3 b { get; } // 0x000000018CE256D4-0x000000018CE25704 
+			public Vector3 c { get; } // 0x000000018CE25704-0x000000018CE25734 
+			public bool isValid { get; } // 0x000000018CE25734-0x000000018CE25744 
 	
 			// Constructors
-			public ReachCone(Vector3 _o, Vector3 _a, Vector3 _b, Vector3 _c); // 0x000000018AC2FDE8-0x000000018AC2FF44
+			public ReachCone(Vector3 _o, Vector3 _a, Vector3 _b, Vector3 _c); // 0x000000018CE25544-0x000000018CE256A4
 	
 			// Methods
-			public void Calculate(); // 0x000000018AC2FC30-0x000000018AC2FDE8
+			public void Calculate(); // 0x000000018CE2538C-0x000000018CE25544
 		}
 	
 		[Serializable]
-		public class LimitPoint // TypeDefIndex: 56241
+		public class LimitPoint // TypeDefIndex: 82973
 		{
 			// Fields
 			public Vector3 point; // 0x10
 			public float tangentWeight; // 0x1C
 	
 			// Constructors
-			public LimitPoint(); // 0x000000018AC2D41C-0x000000018AC2D440
+			public LimitPoint(); // 0x000000018CE22AB0-0x000000018CE22AD4
 		}
 	
 		// Constructors
-		public RotationLimitPolygonal(); // 0x000000018AC323D0-0x000000018AC32428
+		public RotationLimitPolygonal(); // 0x000000018CE27B48-0x000000018CE27BA0
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC31560-0x000000018AC31594
+		private void OpenUserManual(); // 0x000000018CE26CC0-0x000000018CE26CF4
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC3152C-0x000000018AC31560
+		private void OpenScriptReference(); // 0x000000018CE26C8C-0x000000018CE26CC0
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC32230-0x000000018AC32264
+		private void SupportGroup(); // 0x000000018CE279A8-0x000000018CE279DC
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC30BF8-0x000000018AC30C2C
-		public void SetLimitPoints(LimitPoint[] points); // 0x000000018AC31A7C-0x000000018AC31AF0
-		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018AC31190-0x000000018AC3127C
-		private void Start(); // 0x000000018AC32058-0x000000018AC32230
-		public void ResetToDefault(); // 0x000000018AC31698-0x000000018AC31A7C
-		public void BuildReachCones(); // 0x000000018AC30C2C-0x000000018AC30FF8
-		private Vector3[] SmoothPoints(); // 0x000000018AC31AF0-0x000000018AC32058
-		private float GetScalar(int k); // 0x000000018AC31140-0x000000018AC31190
-		private Vector3 PointToTangentPlane(Vector3 p, float r); // 0x000000018AC31594-0x000000018AC31698
-		private Vector3 TangentPointToSphere(Vector3 q, float r); // 0x000000018AC32264-0x000000018AC323D0
-		private Quaternion LimitSwing(Quaternion rotation); // 0x000000018AC3127C-0x000000018AC3152C
-		private int GetReachCone(Vector3 L); // 0x000000018AC30FF8-0x000000018AC31140
+		private void ASThread(); // 0x000000018CE26354-0x000000018CE26388
+		public void SetLimitPoints(LimitPoint[] points); // 0x000000018CE271E4-0x000000018CE27258
+		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018CE268FC-0x000000018CE269DC
+		private void Start(); // 0x000000018CE277CC-0x000000018CE279A8
+		public void ResetToDefault(); // 0x000000018CE26DF8-0x000000018CE271E4
+		public void BuildReachCones(); // 0x000000018CE26388-0x000000018CE26758
+		private Vector3[] SmoothPoints(); // 0x000000018CE27258-0x000000018CE277CC
+		private float GetScalar(int k); // 0x000000018CE268AC-0x000000018CE268FC
+		private Vector3 PointToTangentPlane(Vector3 p, float r); // 0x000000018CE26CF4-0x000000018CE26DF8
+		private Vector3 TangentPointToSphere(Vector3 q, float r); // 0x000000018CE279DC-0x000000018CE27B48
+		private Quaternion LimitSwing(Quaternion rotation); // 0x000000018CE269DC-0x000000018CE26C8C
+		private int GetReachCone(Vector3 L); // 0x000000018CE26758-0x000000018CE268AC
 	}
 
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Spline")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page14.html")]
-	public class RotationLimitSpline : RotationLimit // TypeDefIndex: 56243
+	public class RotationLimitSpline : RotationLimit // TypeDefIndex: 82975
 	{
 		// Fields
 		[Range(0f, 180f)]
@@ -5295,23 +5292,23 @@ namespace RootMotion.FinalIK
 		public AnimationCurve spline; // 0x40
 	
 		// Constructors
-		public RotationLimitSpline(); // 0x000000018AC32898-0x000000018AC328A8
+		public RotationLimitSpline(); // 0x000000018CE28004-0x000000018CE28014
 	
 		// Methods
 		[ContextMenu("User Manual")]
-		private void OpenUserManual(); // 0x000000018AC32810-0x000000018AC32844
+		private void OpenUserManual(); // 0x000000018CE27F7C-0x000000018CE27FB0
 		[ContextMenu("Scrpt Reference")]
-		private void OpenScriptReference(); // 0x000000018AC327DC-0x000000018AC32810
+		private void OpenScriptReference(); // 0x000000018CE27F48-0x000000018CE27F7C
 		[ContextMenu("Support Group")]
-		private void SupportGroup(); // 0x000000018AC32864-0x000000018AC32898
+		private void SupportGroup(); // 0x000000018CE27FD0-0x000000018CE28004
 		[ContextMenu("Asset Store Thread")]
-		private void ASThread(); // 0x000000018AC32428-0x000000018AC3245C
-		public void SetSpline(Keyframe[] keyframes); // 0x000000018AC32844-0x000000018AC32864
-		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018AC3245C-0x000000018AC32520
-		public Quaternion LimitSwing(Quaternion rotation); // 0x000000018AC32520-0x000000018AC327DC
+		private void ASThread(); // 0x000000018CE27BA0-0x000000018CE27BD4
+		public void SetSpline(Keyframe[] keyframes); // 0x000000018CE27FB0-0x000000018CE27FD0
+		protected override Quaternion LimitRotation(Quaternion rotation); // 0x000000018CE27BD4-0x000000018CE27C8C
+		public Quaternion LimitSwing(Quaternion rotation); // 0x000000018CE27C8C-0x000000018CE27F48
 	}
 
-	public class AimController : MonoBehaviour // TypeDefIndex: 56245
+	public class AimController : MonoBehaviour // TypeDefIndex: 82977
 	{
 		// Fields
 		[Tooltip("Reference to the AimIK component.")]
@@ -5371,11 +5368,11 @@ namespace RootMotion.FinalIK
 		private float dirMagV; // 0xC8
 	
 		// Properties
-		private Vector3 pivot { get; } // 0x000000018AC22840-0x000000018AC22948 
+		private Vector3 pivot { get; } // 0x000000018CE17B40-0x000000018CE17C48 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _TurnToTarget_d__37 : IEnumerator<object> // TypeDefIndex: 56244
+		private sealed class _TurnToTarget_d__37 : IEnumerator<object> // TypeDefIndex: 82976
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -5383,34 +5380,34 @@ namespace RootMotion.FinalIK
 			public AimController __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TurnToTarget_d__37(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _TurnToTarget_d__37(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AC336EC-0x000000018AC337A0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CE28E88-0x000000018CE28F48
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AC337A0-0x000000018AC337EC
+			void IEnumerator.Reset(); // 0x000000018CE28F48-0x000000018CE28F94
 		}
 	
 		// Constructors
-		public AimController(); // 0x000000018AC227B0-0x000000018AC22840
+		public AimController(); // 0x000000018CE17AB0-0x000000018CE17B40
 	
 		// Methods
-		private void Start(); // 0x000000018AC22664-0x000000018AC22754
-		private void LateUpdate(); // 0x000000018AC21A10-0x000000018AC223A0
-		private void ApplyMinDistance(); // 0x000000018AC218D8-0x000000018AC21A10
-		private void RootRotation(); // 0x000000018AC223A0-0x000000018AC22664
+		private void Start(); // 0x000000018CE17960-0x000000018CE17A54
+		private void LateUpdate(); // 0x000000018CE16D00-0x000000018CE1769C
+		private void ApplyMinDistance(); // 0x000000018CE16BC8-0x000000018CE16D00
+		private void RootRotation(); // 0x000000018CE1769C-0x000000018CE17960
 		[IteratorStateMachine(typeof(_TurnToTarget_d__37))]
-		private IEnumerator TurnToTarget(); // 0x000000018AC22754-0x000000018AC227B0
+		private IEnumerator TurnToTarget(); // 0x000000018CE17A54-0x000000018CE17AB0
 	}
 
-	public class AimPoser : MonoBehaviour // TypeDefIndex: 56247
+	public class AimPoser : MonoBehaviour // TypeDefIndex: 82979
 	{
 		// Fields
 		public float angleBuffer; // 0x18
@@ -5418,7 +5415,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class Pose // TypeDefIndex: 56246
+		public class Pose // TypeDefIndex: 82978
 		{
 			// Fields
 			public bool visualize; // 0x10
@@ -5429,22 +5426,22 @@ namespace RootMotion.FinalIK
 			private float angleBuffer; // 0x34
 	
 			// Constructors
-			public Pose(); // 0x0000000184DA99C0-0x0000000184DA99E0
+			public Pose(); // 0x0000000187257A80-0x0000000187257AA0
 	
 			// Methods
-			public bool IsInDirection(Vector3 d); // 0x000000018AC2E5BC-0x000000018AC2E7E0
-			public void SetAngleBuffer(float value); // 0x0000000184D8E060-0x0000000184D8E070
+			public bool IsInDirection(Vector3 d); // 0x000000018CE23C70-0x000000018CE23E98
+			public void SetAngleBuffer(float value); // 0x0000000187233AF0-0x0000000187233B00
 		}
 	
 		// Constructors
-		public AimPoser(); // 0x000000018AC22A70-0x000000018AC22AC8
+		public AimPoser(); // 0x000000018CE17D78-0x000000018CE17DD0
 	
 		// Methods
-		public Pose GetPose(Vector3 localDirection); // 0x000000018AC22948-0x000000018AC22A10
-		public void SetPoseActive(Pose pose); // 0x000000018AC22A10-0x000000018AC22A70
+		public Pose GetPose(Vector3 localDirection); // 0x000000018CE17C48-0x000000018CE17D20
+		public void SetPoseActive(Pose pose); // 0x000000018CE17D20-0x000000018CE17D78
 	}
 
-	public class Amplifier : OffsetModifier // TypeDefIndex: 56250
+	public class Amplifier : OffsetModifier // TypeDefIndex: 82982
 	{
 		// Fields
 		[Tooltip("The amplified bodies.")]
@@ -5452,7 +5449,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class Body // TypeDefIndex: 56249
+		public class Body // TypeDefIndex: 82981
 		{
 			// Fields
 			[Tooltip("The Transform that\'s motion we are reading.")]
@@ -5473,7 +5470,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class EffectorLink // TypeDefIndex: 56248
+			public class EffectorLink // TypeDefIndex: 82980
 			{
 				// Fields
 				[Tooltip("Type of the FBBIK effector to use")]
@@ -5482,25 +5479,25 @@ namespace RootMotion.FinalIK
 				public float weight; // 0x14
 	
 				// Constructors
-				public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+				public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public Body(); // 0x0000000184DA9920-0x0000000184DA9940
+			public Body(); // 0x00000001872579E0-0x0000000187257A00
 	
 			// Methods
-			public void Update(IKSolverFullBodyBiped solver, float w, float deltaTime); // 0x000000018AC23578-0x000000018AC239B8
-			private static Vector3 Multiply(Vector3 v1, Vector3 v2); // 0x0000000184DA98C0-0x0000000184DA9900
+			public void Update(IKSolverFullBodyBiped solver, float w, float deltaTime); // 0x000000018CE188A4-0x000000018CE18CEC
+			private static Vector3 Multiply(Vector3 v1, Vector3 v2); // 0x0000000187257980-0x00000001872579C0
 		}
 	
 		// Constructors
-		public Amplifier(); // 0x000000018AC22BE4-0x000000018AC22BEC
+		public Amplifier(); // 0x000000018CE17EF0-0x000000018CE17EF8
 	
 		// Methods
-		protected override void OnModifyOffset(); // 0x000000018AC22AC8-0x000000018AC22BE4
+		protected override void OnModifyOffset(); // 0x000000018CE17DD0-0x000000018CE17EF0
 	}
 
-	public class BodyTilt : OffsetModifier // TypeDefIndex: 56251
+	public class BodyTilt : OffsetModifier // TypeDefIndex: 82983
 	{
 		// Fields
 		[Tooltip("Speed of tilting")]
@@ -5515,14 +5512,14 @@ namespace RootMotion.FinalIK
 		private Vector3 lastForward; // 0x4C
 	
 		// Constructors
-		public BodyTilt(); // 0x000000018AC2302C-0x000000018AC23044
+		public BodyTilt(); // 0x000000018CE1834C-0x000000018CE18364
 	
 		// Methods
-		protected override void Start(); // 0x000000018AC22FE0-0x000000018AC2302C
-		protected override void OnModifyOffset(); // 0x000000018AC22E04-0x000000018AC22FE0
+		protected override void Start(); // 0x000000018CE18300-0x000000018CE1834C
+		protected override void OnModifyOffset(); // 0x000000018CE18118-0x000000018CE18300
 	}
 
-	public class CCDBendGoal : MonoBehaviour // TypeDefIndex: 56252
+	public class CCDBendGoal : MonoBehaviour // TypeDefIndex: 82984
 	{
 		// Fields
 		public CCDIK ik; // 0x18
@@ -5530,16 +5527,16 @@ namespace RootMotion.FinalIK
 		public float weight; // 0x20
 	
 		// Constructors
-		public CCDBendGoal(); // 0x000000018539808C-0x00000001853980A8
+		public CCDBendGoal(); // 0x000000018CE1932C-0x000000018CE19348
 	
 		// Methods
-		private void Start(); // 0x000000018AC23EFC-0x000000018AC23FF0
-		private void BeforeIK(); // 0x000000018AC23AEC-0x000000018AC23DD4
-		private void OnDestroy(); // 0x000000018AC23DD4-0x000000018AC23EFC
+		private void Start(); // 0x000000018CE19238-0x000000018CE1932C
+		private void BeforeIK(); // 0x000000018CE18E24-0x000000018CE19110
+		private void OnDestroy(); // 0x000000018CE19110-0x000000018CE19238
 	}
 
 	[ExecuteInEditMode]
-	public class EditorIK : MonoBehaviour // TypeDefIndex: 56253
+	public class EditorIK : MonoBehaviour // TypeDefIndex: 82985
 	{
 		// Fields
 		[Tooltip("If slot assigned, will update Animator before IK.")]
@@ -5552,39 +5549,39 @@ namespace RootMotion.FinalIK
 		private IK _ik_k__BackingField; // 0x30
 	
 		// Properties
-		public IK ik { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		public IK ik { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
 	
 		// Constructors
-		public EditorIK(); // 0x000000018AC2589C-0x000000018AC258EC
+		public EditorIK(); // 0x000000018CE1AC18-0x000000018CE1AC68
 	
 		// Methods
-		private void OnEnable(); // 0x000000018AC2544C-0x000000018AC25594
-		private void OnDisable(); // 0x000000018AC25380-0x000000018AC2544C
-		private void OnDestroy(); // 0x000000018AC25248-0x000000018AC25380
-		public void StoreDefaultPose(); // 0x000000018AC25594-0x000000018AC2560C
-		public bool Initiate(); // 0x000000018AC25078-0x000000018AC25248
-		public void Update(); // 0x000000018AC2560C-0x000000018AC2589C
+		private void OnEnable(); // 0x000000018CE1A7C8-0x000000018CE1A910
+		private void OnDisable(); // 0x000000018CE1A6FC-0x000000018CE1A7C8
+		private void OnDestroy(); // 0x000000018CE1A5C4-0x000000018CE1A6FC
+		public void StoreDefaultPose(); // 0x000000018CE1A910-0x000000018CE1A988
+		public bool Initiate(); // 0x000000018CE1A3F4-0x000000018CE1A5C4
+		public void Update(); // 0x000000018CE1A988-0x000000018CE1AC18
 	}
 
 	[CreateAssetMenu(fileName = "Editor IK Pose", menuName = "Final IK/Editor IK Pose", order = 1)]
-	public class EditorIKPose : ScriptableObject // TypeDefIndex: 56254
+	public class EditorIKPose : ScriptableObject // TypeDefIndex: 82986
 	{
 		// Fields
 		public Vector3[] localPositions; // 0x18
 		public Quaternion[] localRotations; // 0x20
 	
 		// Properties
-		public bool poseStored { get; } // 0x000000018AC25058-0x000000018AC25078 
+		public bool poseStored { get; } // 0x000000018CE1A3D4-0x000000018CE1A3F4 
 	
 		// Constructors
-		public EditorIKPose(); // 0x000000018AC24FE0-0x000000018AC25058
+		public EditorIKPose(); // 0x000000018CE1A35C-0x000000018CE1A3D4
 	
 		// Methods
-		public void Store(Transform[] T); // 0x000000018AC24E94-0x000000018AC24FE0
-		public bool Restore(Transform[] T); // 0x000000018AC24D3C-0x000000018AC24E94
+		public void Store(Transform[] T); // 0x000000018CE1A208-0x000000018CE1A35C
+		public bool Restore(Transform[] T); // 0x000000018CE1A0AC-0x000000018CE1A208
 	}
 
-	public class HitReaction : OffsetModifier // TypeDefIndex: 56260
+	public class HitReaction : OffsetModifier // TypeDefIndex: 82992
 	{
 		// Fields
 		[Tooltip("Hit points for the FBBIK effectors")]
@@ -5593,11 +5590,11 @@ namespace RootMotion.FinalIK
 		public HitPointBone[] boneHitPoints; // 0x38
 	
 		// Properties
-		public bool inProgress { get; } // 0x000000018AC2721C-0x000000018AC2729C 
+		public bool inProgress { get; } // 0x000000018CE1C614-0x000000018CE1C698 
 	
 		// Nested types
 		[Serializable]
-		public abstract class HitPoint // TypeDefIndex: 56255
+		public abstract class HitPoint // TypeDefIndex: 82987
 		{
 			// Fields
 			[Tooltip("Just for visual clarity, not used at all")]
@@ -5618,24 +5615,24 @@ namespace RootMotion.FinalIK
 			private float lastTime; // 0x40
 	
 			// Properties
-			public bool inProgress { get; } // 0x000000018AC26CF8-0x000000018AC26D08 
-			protected float crossFader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D89850-0x0000000184D89860 0x0000000184D89860-0x0000000184D89870
-			protected float timer { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x0000000184D86C00-0x0000000184D86C10
-			protected Vector3 force { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D90540-0x0000000184D90560 0x0000000184D90510-0x0000000184D90520
+			public bool inProgress { get; } // 0x000000018CE1C0C4-0x000000018CE1C0D4 
+			protected float crossFader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236710-0x0000000187236720 0x0000000187236720-0x0000000187236730
+			protected float timer { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233430-0x0000000187233440 0x0000000187233440-0x0000000187233450
+			protected Vector3 force { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233AD0-0x0000000187233AF0 0x0000000187233B00-0x0000000187233B10
 	
 			// Constructors
-			protected HitPoint(); // 0x0000000184DA99A0-0x0000000184DA99B0
+			protected HitPoint(); // 0x0000000187257A60-0x0000000187257A70
 	
 			// Methods
-			public virtual void Hit(Vector3 force, Vector3 point); // 0x000000018AC26C1C-0x000000018AC26CF8
-			public void Apply(IKSolverFullBodyBiped solver, float weight); // 0x000000018AC26B54-0x000000018AC26C1C
+			public virtual void Hit(Vector3 force, Vector3 point); // 0x000000018CE1BFE4-0x000000018CE1C0C4
+			public void Apply(IKSolverFullBodyBiped solver, float weight); // 0x000000018CE1BF1C-0x000000018CE1BFE4
 			protected abstract float GetLength();
 			protected abstract void CrossFadeStart();
 			protected abstract void OnApply(IKSolverFullBodyBiped solver, float weight);
 		}
 	
 		[Serializable]
-		public class HitPointEffector : HitPoint // TypeDefIndex: 56257
+		public class HitPointEffector : HitPoint // TypeDefIndex: 82989
 		{
 			// Fields
 			[Tooltip("Offset magnitude in the direction of the hit force")]
@@ -5647,7 +5644,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class EffectorLink // TypeDefIndex: 56256
+			public class EffectorLink // TypeDefIndex: 82988
 			{
 				// Fields
 				[Tooltip("The FBBIK effector type")]
@@ -5658,24 +5655,24 @@ namespace RootMotion.FinalIK
 				private Vector3 current; // 0x24
 	
 				// Constructors
-				public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+				public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				public void Apply(IKSolverFullBodyBiped solver, Vector3 offset, float crossFader); // 0x000000018AC258EC-0x000000018AC259D8
-				public void CrossFadeStart(); // 0x0000000184DA9980-0x0000000184DA99A0
+				public void Apply(IKSolverFullBodyBiped solver, Vector3 offset, float crossFader); // 0x000000018CE1AC68-0x000000018CE1AD54
+				public void CrossFadeStart(); // 0x0000000187257A40-0x0000000187257A60
 			}
 	
 			// Constructors
-			public HitPointEffector(); // 0x0000000184DA99A0-0x0000000184DA99B0
+			public HitPointEffector(); // 0x0000000187257A60-0x0000000187257A70
 	
 			// Methods
-			protected override float GetLength(); // 0x000000018AC26874-0x000000018AC2697C
-			protected override void CrossFadeStart(); // 0x000000018AC26828-0x000000018AC26874
-			protected override void OnApply(IKSolverFullBodyBiped solver, float weight); // 0x000000018AC2697C-0x000000018AC26B54
+			protected override float GetLength(); // 0x000000018CE1BC2C-0x000000018CE1BD34
+			protected override void CrossFadeStart(); // 0x000000018CE1BBDC-0x000000018CE1BC2C
+			protected override void OnApply(IKSolverFullBodyBiped solver, float weight); // 0x000000018CE1BD34-0x000000018CE1BF1C
 		}
 	
 		[Serializable]
-		public class HitPointBone : HitPoint // TypeDefIndex: 56259
+		public class HitPointBone : HitPoint // TypeDefIndex: 82991
 		{
 			// Fields
 			[Tooltip("The angle to rotate the bone around its rigidbody\'s world center of mass")]
@@ -5687,7 +5684,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class BoneLink // TypeDefIndex: 56258
+			public class BoneLink // TypeDefIndex: 82990
 			{
 				// Fields
 				[Tooltip("Reference to the bone that this hit point rotates")]
@@ -5699,32 +5696,32 @@ namespace RootMotion.FinalIK
 				private Quaternion current; // 0x2C
 	
 				// Constructors
-				public BoneLink(); // 0x000000018AC23ABC-0x000000018AC23AEC
+				public BoneLink(); // 0x000000018CE18DF4-0x000000018CE18E24
 	
 				// Methods
-				public void Apply(IKSolverFullBodyBiped solver, Quaternion offset, float crossFader); // 0x000000018AC239B8-0x000000018AC23ABC
-				public void CrossFadeStart(); // 0x0000000184DA9940-0x0000000184DA9950
+				public void Apply(IKSolverFullBodyBiped solver, Quaternion offset, float crossFader); // 0x000000018CE18CEC-0x000000018CE18DF4
+				public void CrossFadeStart(); // 0x0000000187257A00-0x0000000187257A10
 			}
 	
 			// Constructors
-			public HitPointBone(); // 0x0000000184DA99A0-0x0000000184DA99B0
+			public HitPointBone(); // 0x0000000187257A60-0x0000000187257A70
 	
 			// Methods
-			public override void Hit(Vector3 force, Vector3 point); // 0x000000018AC26594-0x000000018AC26754
-			protected override float GetLength(); // 0x000000018AC26518-0x000000018AC26594
-			protected override void CrossFadeStart(); // 0x000000018AC264D4-0x000000018AC26518
-			protected override void OnApply(IKSolverFullBodyBiped solver, float weight); // 0x000000018AC26754-0x000000018AC26828
+			public override void Hit(Vector3 force, Vector3 point); // 0x000000018CE1B938-0x000000018CE1BAF8
+			protected override float GetLength(); // 0x000000018CE1B8BC-0x000000018CE1B938
+			protected override void CrossFadeStart(); // 0x000000018CE1B878-0x000000018CE1B8BC
+			protected override void OnApply(IKSolverFullBodyBiped solver, float weight); // 0x000000018CE1BAF8-0x000000018CE1BBDC
 		}
 	
 		// Constructors
-		public HitReaction(); // 0x000000018AC22BE4-0x000000018AC22BEC
+		public HitReaction(); // 0x000000018CE17EF0-0x000000018CE17EF8
 	
 		// Methods
-		protected override void OnModifyOffset(); // 0x000000018AC27174-0x000000018AC2721C
-		public void Hit(Collider collider, Vector3 force, Vector3 point); // 0x000000018AC26F94-0x000000018AC27174
+		protected override void OnModifyOffset(); // 0x000000018CE1C558-0x000000018CE1C614
+		public void Hit(Collider collider, Vector3 force, Vector3 point); // 0x000000018CE1C378-0x000000018CE1C558
 	}
 
-	public class HitReactionVRIK : OffsetModifierVRIK // TypeDefIndex: 56266
+	public class HitReactionVRIK : OffsetModifierVRIK // TypeDefIndex: 82998
 	{
 		// Fields
 		public AnimationCurve[] offsetCurves; // 0x30
@@ -5735,7 +5732,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public abstract class Offset // TypeDefIndex: 56261
+		public abstract class Offset // TypeDefIndex: 82993
 		{
 			// Fields
 			[Tooltip("Just for visual clarity, not used at all")]
@@ -5756,23 +5753,23 @@ namespace RootMotion.FinalIK
 			private float lastTime; // 0x40
 	
 			// Properties
-			protected float crossFader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D89850-0x0000000184D89860 0x0000000184D89860-0x0000000184D89870
-			protected float timer { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x0000000184D86C00-0x0000000184D86C10
-			protected Vector3 force { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D90540-0x0000000184D90560 0x0000000184D90510-0x0000000184D90520
+			protected float crossFader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236710-0x0000000187236720 0x0000000187236720-0x0000000187236730
+			protected float timer { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233430-0x0000000187233440 0x0000000187233440-0x0000000187233450
+			protected Vector3 force { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187233AD0-0x0000000187233AF0 0x0000000187233B00-0x0000000187233B10
 	
 			// Constructors
-			protected Offset(); // 0x0000000184DA99A0-0x0000000184DA99B0
+			protected Offset(); // 0x0000000187257A60-0x0000000187257A70
 	
 			// Methods
-			public virtual void Hit(Vector3 force, AnimationCurve[] curves, Vector3 point); // 0x000000018AC2E4C0-0x000000018AC2E5BC
-			public void Apply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018AC2E3E8-0x000000018AC2E4C0
+			public virtual void Hit(Vector3 force, AnimationCurve[] curves, Vector3 point); // 0x000000018CE23B6C-0x000000018CE23C70
+			public void Apply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018CE23A94-0x000000018CE23B6C
 			protected abstract float GetLength(AnimationCurve[] curves);
 			protected abstract void CrossFadeStart();
 			protected abstract void OnApply(VRIK ik, AnimationCurve[] curves, float weight);
 		}
 	
 		[Serializable]
-		public class PositionOffset : Offset // TypeDefIndex: 56263
+		public class PositionOffset : Offset // TypeDefIndex: 82995
 		{
 			// Fields
 			[Tooltip("Offset magnitude in the direction of the hit force")]
@@ -5784,7 +5781,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class PositionOffsetLink // TypeDefIndex: 56262
+			public class PositionOffsetLink // TypeDefIndex: 82994
 			{
 				// Fields
 				[Tooltip("The FBBIK effector type")]
@@ -5795,24 +5792,24 @@ namespace RootMotion.FinalIK
 				private Vector3 current; // 0x24
 	
 				// Constructors
-				public PositionOffsetLink(); // 0x00000001841E1670-0x00000001841E1680
+				public PositionOffsetLink(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				public void Apply(VRIK ik, Vector3 offset, float crossFader); // 0x000000018AC2E858-0x000000018AC2E908
-				public void CrossFadeStart(); // 0x0000000184DA9980-0x0000000184DA99A0
+				public void Apply(VRIK ik, Vector3 offset, float crossFader); // 0x000000018CE23F10-0x000000018CE23FC0
+				public void CrossFadeStart(); // 0x0000000187257A40-0x0000000187257A60
 			}
 	
 			// Constructors
-			public PositionOffset(); // 0x0000000184DA99E0-0x0000000184DA99F0
+			public PositionOffset(); // 0x0000000187257AA0-0x0000000187257AB0
 	
 			// Methods
-			protected override float GetLength(AnimationCurve[] curves); // 0x000000018AC2E954-0x000000018AC2EAC8
-			protected override void CrossFadeStart(); // 0x000000018AC2E908-0x000000018AC2E954
-			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018AC2EAC8-0x000000018AC2ECD0
+			protected override float GetLength(AnimationCurve[] curves); // 0x000000018CE24010-0x000000018CE24184
+			protected override void CrossFadeStart(); // 0x000000018CE23FC0-0x000000018CE24010
+			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018CE24184-0x000000018CE2439C
 		}
 	
 		[Serializable]
-		public class RotationOffset : Offset // TypeDefIndex: 56265
+		public class RotationOffset : Offset // TypeDefIndex: 82997
 		{
 			// Fields
 			[Tooltip("The angle to rotate the bone around its rigidbody\'s world center of mass")]
@@ -5824,7 +5821,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class RotationOffsetLink // TypeDefIndex: 56264
+			public class RotationOffsetLink // TypeDefIndex: 82996
 			{
 				// Fields
 				[Tooltip("Reference to the bone that this hit point rotates")]
@@ -5836,32 +5833,32 @@ namespace RootMotion.FinalIK
 				private Quaternion current; // 0x28
 	
 				// Constructors
-				public RotationOffsetLink(); // 0x000000018AC3300C-0x000000018AC3303C
+				public RotationOffsetLink(); // 0x000000018CE2877C-0x000000018CE287AC
 	
 				// Methods
-				public void Apply(VRIK ik, Quaternion offset, float crossFader); // 0x000000018AC32F30-0x000000018AC3300C
-				public void CrossFadeStart(); // 0x0000000184DA9A20-0x0000000184DA9A30
+				public void Apply(VRIK ik, Quaternion offset, float crossFader); // 0x000000018CE2869C-0x000000018CE2877C
+				public void CrossFadeStart(); // 0x0000000187257AE0-0x0000000187257AF0
 			}
 	
 			// Constructors
-			public RotationOffset(); // 0x0000000184DA99A0-0x0000000184DA99B0
+			public RotationOffset(); // 0x0000000187257A60-0x0000000187257A70
 	
 			// Methods
-			public override void Hit(Vector3 force, AnimationCurve[] curves, Vector3 point); // 0x000000018AC33138-0x000000018AC33300
-			protected override float GetLength(AnimationCurve[] curves); // 0x000000018AC33080-0x000000018AC33138
-			protected override void CrossFadeStart(); // 0x000000018AC3303C-0x000000018AC33080
-			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018AC33300-0x000000018AC334D8
+			public override void Hit(Vector3 force, AnimationCurve[] curves, Vector3 point); // 0x000000018CE288A8-0x000000018CE28A74
+			protected override float GetLength(AnimationCurve[] curves); // 0x000000018CE287F0-0x000000018CE288A8
+			protected override void CrossFadeStart(); // 0x000000018CE287AC-0x000000018CE287F0
+			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight); // 0x000000018CE28A74-0x000000018CE28C5C
 		}
 	
 		// Constructors
-		public HitReactionVRIK(); // 0x000000018AC22BE4-0x000000018AC22BEC
+		public HitReactionVRIK(); // 0x000000018CE17EF0-0x000000018CE17EF8
 	
 		// Methods
-		protected override void OnModifyOffset(); // 0x000000018AC26EF0-0x000000018AC26F94
-		public void Hit(Collider collider, Vector3 force, Vector3 point); // 0x000000018AC26D08-0x000000018AC26EF0
+		protected override void OnModifyOffset(); // 0x000000018CE1C2BC-0x000000018CE1C378
+		public void Hit(Collider collider, Vector3 force, Vector3 point); // 0x000000018CE1C0D4-0x000000018CE1C2BC
 	}
 
-	public class Inertia : OffsetModifier // TypeDefIndex: 56269
+	public class Inertia : OffsetModifier // TypeDefIndex: 83001
 	{
 		// Fields
 		[Tooltip("The array of Bodies")]
@@ -5871,7 +5868,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class Body // TypeDefIndex: 56268
+		public class Body // TypeDefIndex: 83000
 		{
 			// Fields
 			[Tooltip("The Transform to follow, can be any bone of the character")]
@@ -5895,7 +5892,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class EffectorLink // TypeDefIndex: 56267
+			public class EffectorLink // TypeDefIndex: 82999
 			{
 				// Fields
 				[Tooltip("Type of the FBBIK effector to use")]
@@ -5904,26 +5901,26 @@ namespace RootMotion.FinalIK
 				public float weight; // 0x14
 	
 				// Constructors
-				public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+				public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public Body(); // 0x0000000184DA9900-0x0000000184DA9920
+			public Body(); // 0x00000001872579C0-0x00000001872579E0
 	
 			// Methods
-			public void Reset(); // 0x000000018AC23044-0x000000018AC23104
-			public void Update(IKSolverFullBodyBiped solver, float weight, float deltaTime); // 0x000000018AC23104-0x000000018AC23578
+			public void Reset(); // 0x000000018CE18364-0x000000018CE18424
+			public void Update(IKSolverFullBodyBiped solver, float weight, float deltaTime); // 0x000000018CE18424-0x000000018CE188A4
 		}
 	
 		// Constructors
-		public Inertia(); // 0x000000018AC22BE4-0x000000018AC22BEC
+		public Inertia(); // 0x000000018CE17EF0-0x000000018CE17EF8
 	
 		// Methods
-		public void ResetBodies(); // 0x000000018AC2734C-0x000000018AC273A8
-		protected override void OnModifyOffset(); // 0x000000018AC2729C-0x000000018AC2734C
+		public void ResetBodies(); // 0x000000018CE1C74C-0x000000018CE1C7B4
+		protected override void OnModifyOffset(); // 0x000000018CE1C698-0x000000018CE1C74C
 	}
 
-	public class LookAtController : MonoBehaviour // TypeDefIndex: 56270
+	public class LookAtController : MonoBehaviour // TypeDefIndex: 83002
 	{
 		// Fields
 		public LookAtIK ik; // 0x18
@@ -5963,19 +5960,19 @@ namespace RootMotion.FinalIK
 		private bool lastSmoothTowardsTarget; // 0x94
 	
 		// Properties
-		private Vector3 pivot { get; } // 0x000000018AC2DFE8-0x000000018AC2E0F0 
+		private Vector3 pivot { get; } // 0x000000018CE2368C-0x000000018CE23794 
 	
 		// Constructors
-		public LookAtController(); // 0x000000018AC2DF84-0x000000018AC2DFE8
+		public LookAtController(); // 0x000000018CE23628-0x000000018CE2368C
 	
 		// Methods
-		private void Start(); // 0x000000018AC2DEBC-0x000000018AC2DF84
-		private void LateUpdate(); // 0x000000018AC2D578-0x000000018AC2DC58
-		private void ApplyMinDistance(); // 0x000000018AC2D440-0x000000018AC2D578
-		private void RootRotation(); // 0x000000018AC2DC58-0x000000018AC2DEBC
+		private void Start(); // 0x000000018CE23560-0x000000018CE23628
+		private void LateUpdate(); // 0x000000018CE22C0C-0x000000018CE232F8
+		private void ApplyMinDistance(); // 0x000000018CE22AD4-0x000000018CE22C0C
+		private void RootRotation(); // 0x000000018CE232F8-0x000000018CE23560
 	}
 
-	public abstract class OffsetModifier : MonoBehaviour // TypeDefIndex: 56273
+	public abstract class OffsetModifier : MonoBehaviour // TypeDefIndex: 83005
 	{
 		// Fields
 		[Tooltip("The master weight")]
@@ -5985,11 +5982,11 @@ namespace RootMotion.FinalIK
 		protected float lastTime; // 0x28
 	
 		// Properties
-		protected float deltaTime { get; } // 0x000000018AC34514-0x000000018AC34530 
+		protected float deltaTime { get; } // 0x000000018CE29CEC-0x000000018CE29D08 
 	
 		// Nested types
 		[Serializable]
-		public class OffsetLimits // TypeDefIndex: 56271
+		public class OffsetLimits // TypeDefIndex: 83003
 		{
 			// Fields
 			[Tooltip("The effector type (this is just an enum)")]
@@ -6016,16 +6013,16 @@ namespace RootMotion.FinalIK
 			public float maxZ; // 0x30
 	
 			// Constructors
-			public OffsetLimits(); // 0x00000001841E1670-0x00000001841E1680
+			public OffsetLimits(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Apply(IKEffector e, Quaternion rootRotation); // 0x000000018AC34040-0x000000018AC34218
-			private float SpringAxis(float value, float min, float max); // 0x000000018AC34218-0x000000018AC3424C
-			private float Spring(float value, float limit, bool negative); // 0x000000018AC3424C-0x000000018AC342A8
+			public void Apply(IKEffector e, Quaternion rootRotation); // 0x000000018CE29808-0x000000018CE299EC
+			private float SpringAxis(float value, float min, float max); // 0x000000018CE299EC-0x000000018CE29A24
+			private float Spring(float value, float limit, bool negative); // 0x000000018CE29A24-0x000000018CE29A80
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Initiate_d__8 : IEnumerator<object> // TypeDefIndex: 56272
+		private sealed class _Initiate_d__8 : IEnumerator<object> // TypeDefIndex: 83004
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6033,35 +6030,35 @@ namespace RootMotion.FinalIK
 			public OffsetModifier __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Initiate_d__8(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _Initiate_d__8(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AC36A50-0x000000018AC36BBC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CE2C274-0x000000018CE2C3E8
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AC36BBC-0x000000018AC36C08
+			void IEnumerator.Reset(); // 0x000000018CE2C3E8-0x000000018CE2C434
 		}
 	
 		// Constructors
-		protected OffsetModifier(); // 0x00000001890D4B8C-0x00000001890D4BA8
+		protected OffsetModifier(); // 0x000000018B63B174-0x000000018B63B190
 	
 		// Methods
 		protected abstract void OnModifyOffset();
-		protected virtual void Start(); // 0x000000018AC34838-0x000000018AC3485C
+		protected virtual void Start(); // 0x000000018CE2A010-0x000000018CE2A034
 		[IteratorStateMachine(typeof(_Initiate_d__8))]
-		private IEnumerator Initiate(); // 0x000000018AC345F0-0x000000018AC3464C
-		private void ModifyOffset(); // 0x000000018AC3464C-0x000000018AC34710
-		protected void ApplyLimits(OffsetLimits[] limits); // 0x000000018AC34530-0x000000018AC345F0
-		protected virtual void OnDestroy(); // 0x000000018AC34710-0x000000018AC34838
+		private IEnumerator Initiate(); // 0x000000018CE29DC8-0x000000018CE29E24
+		private void ModifyOffset(); // 0x000000018CE29E24-0x000000018CE29EE8
+		protected void ApplyLimits(OffsetLimits[] limits); // 0x000000018CE29D08-0x000000018CE29DC8
+		protected virtual void OnDestroy(); // 0x000000018CE29EE8-0x000000018CE2A010
 	}
 
-	public abstract class OffsetModifierVRIK : MonoBehaviour // TypeDefIndex: 56275
+	public abstract class OffsetModifierVRIK : MonoBehaviour // TypeDefIndex: 83007
 	{
 		// Fields
 		[Tooltip("The master weight")]
@@ -6071,11 +6068,11 @@ namespace RootMotion.FinalIK
 		private float lastTime; // 0x28
 	
 		// Properties
-		protected float deltaTime { get; } // 0x000000018AC34514-0x000000018AC34530 
+		protected float deltaTime { get; } // 0x000000018CE29CEC-0x000000018CE29D08 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Initiate_d__7 : IEnumerator<object> // TypeDefIndex: 56274
+		private sealed class _Initiate_d__7 : IEnumerator<object> // TypeDefIndex: 83006
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6083,41 +6080,41 @@ namespace RootMotion.FinalIK
 			public OffsetModifierVRIK __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Initiate_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _Initiate_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AC36898-0x000000018AC36A04
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CE2C0B4-0x000000018CE2C228
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AC36A04-0x000000018AC36A50
+			void IEnumerator.Reset(); // 0x000000018CE2C228-0x000000018CE2C274
 		}
 	
 		// Constructors
-		protected OffsetModifierVRIK(); // 0x00000001890D4B8C-0x00000001890D4BA8
+		protected OffsetModifierVRIK(); // 0x000000018B63B174-0x000000018B63B190
 	
 		// Methods
 		protected abstract void OnModifyOffset();
-		protected virtual void Start(); // 0x000000018AC344F0-0x000000018AC34514
+		protected virtual void Start(); // 0x000000018CE29CC8-0x000000018CE29CEC
 		[IteratorStateMachine(typeof(_Initiate_d__7))]
-		private IEnumerator Initiate(); // 0x000000018AC342A8-0x000000018AC34304
-		private void ModifyOffset(); // 0x000000018AC34304-0x000000018AC343C8
-		protected virtual void OnDestroy(); // 0x000000018AC343C8-0x000000018AC344F0
+		private IEnumerator Initiate(); // 0x000000018CE29A80-0x000000018CE29ADC
+		private void ModifyOffset(); // 0x000000018CE29ADC-0x000000018CE29BA0
+		protected virtual void OnDestroy(); // 0x000000018CE29BA0-0x000000018CE29CC8
 	}
 
-	public class OffsetPose : MonoBehaviour // TypeDefIndex: 56277
+	public class OffsetPose : MonoBehaviour // TypeDefIndex: 83009
 	{
 		// Fields
 		public EffectorLink[] effectorLinks; // 0x18
 	
 		// Nested types
 		[Serializable]
-		public class EffectorLink // TypeDefIndex: 56276
+		public class EffectorLink // TypeDefIndex: 83008
 		{
 			// Fields
 			public FullBodyBipedEffector effector; // 0x10
@@ -6126,21 +6123,21 @@ namespace RootMotion.FinalIK
 			public Vector3 pinWeight; // 0x2C
 	
 			// Constructors
-			public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+			public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation); // 0x000000018AC33D78-0x000000018AC34040
+			public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation); // 0x000000018CE29540-0x000000018CE29808
 		}
 	
 		// Constructors
-		public OffsetPose(); // 0x000000018AC34998-0x000000018AC349E8
+		public OffsetPose(); // 0x000000018CE2A190-0x000000018CE2A1E0
 	
 		// Methods
-		public void Apply(IKSolverFullBodyBiped solver, float weight); // 0x000000018AC3485C-0x000000018AC34908
-		public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation); // 0x000000018AC34908-0x000000018AC34998
+		public void Apply(IKSolverFullBodyBiped solver, float weight); // 0x000000018CE2A034-0x000000018CE2A0F0
+		public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation); // 0x000000018CE2A0F0-0x000000018CE2A190
 	}
 
-	public class PenetrationAvoidance : OffsetModifier // TypeDefIndex: 56280
+	public class PenetrationAvoidance : OffsetModifier // TypeDefIndex: 83012
 	{
 		// Fields
 		[Tooltip("Definitions of penetration avoidances.")]
@@ -6148,7 +6145,7 @@ namespace RootMotion.FinalIK
 	
 		// Nested types
 		[Serializable]
-		public class Avoider // TypeDefIndex: 56279
+		public class Avoider // TypeDefIndex: 83011
 		{
 			// Fields
 			[Tooltip("Bones to start the raycast from. Multiple raycasts can be used by assigning more than 1 bone.")]
@@ -6172,7 +6169,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class EffectorLink // TypeDefIndex: 56278
+			public class EffectorLink // TypeDefIndex: 83010
 			{
 				// Fields
 				[Tooltip("Effector to apply the offset to.")]
@@ -6181,26 +6178,26 @@ namespace RootMotion.FinalIK
 				public float weight; // 0x14
 	
 				// Constructors
-				public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+				public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public Avoider(); // 0x0000000184DA9A30-0x0000000184DA9A40
+			public Avoider(); // 0x0000000187257AF0-0x0000000187257B00
 	
 			// Methods
-			public void Solve(IKSolverFullBodyBiped solver, float weight); // 0x000000018AC33BB4-0x000000018AC33D78
-			private Vector3 GetOffsetTarget(IKSolverFullBodyBiped solver); // 0x000000018AC3380C-0x000000018AC3398C
-			private Vector3 Raycast(Vector3 from, Vector3 to); // 0x000000018AC3398C-0x000000018AC33BB4
+			public void Solve(IKSolverFullBodyBiped solver, float weight); // 0x000000018CE29368-0x000000018CE29540
+			private Vector3 GetOffsetTarget(IKSolverFullBodyBiped solver); // 0x000000018CE28FB4-0x000000018CE29138
+			private Vector3 Raycast(Vector3 from, Vector3 to); // 0x000000018CE29138-0x000000018CE29368
 		}
 	
 		// Constructors
-		public PenetrationAvoidance(); // 0x000000018AC22BE4-0x000000018AC22BEC
+		public PenetrationAvoidance(); // 0x000000018CE17EF0-0x000000018CE17EF8
 	
 		// Methods
-		protected override void OnModifyOffset(); // 0x000000018AC349E8-0x000000018AC34A54
+		protected override void OnModifyOffset(); // 0x000000018CE2A1E0-0x000000018CE2A25C
 	}
 
-	public class Recoil : OffsetModifier // TypeDefIndex: 56284
+	public class Recoil : OffsetModifier // TypeDefIndex: 83016
 	{
 		// Fields
 		[Tooltip("Reference to the AimIK component. Optional, only used to getting the aiming direction.")]
@@ -6242,15 +6239,15 @@ namespace RootMotion.FinalIK
 		private Vector3 aimIKAxis; // 0xEC
 	
 		// Properties
-		public bool isFinished { get; } // 0x000000018AC35E0C-0x000000018AC35E2C 
-		private IKEffector primaryHandEffector { get; } // 0x000000018AC35E2C-0x000000018AC35E74 
-		private IKEffector secondaryHandEffector { get; } // 0x000000018AC35E94-0x000000018AC35EDC 
-		private Transform primaryHand { get; } // 0x000000018AC35E74-0x000000018AC35E94 
-		private Transform secondaryHand { get; } // 0x000000018AC35EDC-0x000000018AC35EFC 
+		public bool isFinished { get; } // 0x000000018CE2B63C-0x000000018CE2B65C 
+		private IKEffector primaryHandEffector { get; } // 0x000000018CE2B65C-0x000000018CE2B69C 
+		private IKEffector secondaryHandEffector { get; } // 0x000000018CE2B6BC-0x000000018CE2B6FC 
+		private Transform primaryHand { get; } // 0x000000018CE2B69C-0x000000018CE2B6BC 
+		private Transform secondaryHand { get; } // 0x000000018CE2B6FC-0x000000018CE2B71C 
 	
 		// Nested types
 		[Serializable]
-		public class RecoilOffset // TypeDefIndex: 56282
+		public class RecoilOffset // TypeDefIndex: 83014
 		{
 			// Fields
 			[Tooltip("Offset vector for the associated effector when doing recoil.")]
@@ -6267,7 +6264,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class EffectorLink // TypeDefIndex: 56281
+			public class EffectorLink // TypeDefIndex: 83013
 			{
 				// Fields
 				[Tooltip("Type of the FBBIK effector to use")]
@@ -6276,37 +6273,37 @@ namespace RootMotion.FinalIK
 				public float weight; // 0x14
 	
 				// Constructors
-				public EffectorLink(); // 0x00000001841E1670-0x00000001841E1680
+				public EffectorLink(); // 0x0000000186805BA0-0x0000000186805BB0
 			}
 	
 			// Constructors
-			public RecoilOffset(); // 0x0000000184DA9A40-0x0000000184DA9A50
+			public RecoilOffset(); // 0x0000000187257B00-0x0000000187257B10
 	
 			// Methods
-			public void Start(); // 0x000000018AC34C68-0x000000018AC34CDC
-			public void Apply(IKSolverFullBodyBiped solver, Quaternion rotation, float masterWeight, float length, float timeLeft); // 0x000000018AC34A54-0x000000018AC34C68
+			public void Start(); // 0x000000018CE2A47C-0x000000018CE2A4F0
+			public void Apply(IKSolverFullBodyBiped solver, Quaternion rotation, float masterWeight, float length, float timeLeft); // 0x000000018CE2A25C-0x000000018CE2A47C
 		}
 	
 		[Serializable]
-		public enum Handedness // TypeDefIndex: 56283
+		public enum Handedness // TypeDefIndex: 83015
 		{
 			Right = 0,
 			Left = 1
 		}
 	
 		// Constructors
-		public Recoil(); // 0x000000018AC35DA0-0x000000018AC35E0C
+		public Recoil(); // 0x000000018CE2B5D0-0x000000018CE2B63C
 	
 		// Methods
-		public void SetHandRotations(Quaternion leftHandRotation, Quaternion rightHandRotation); // 0x000000018AC35D80-0x000000018AC35DA0
-		public void Fire(float magnitude); // 0x000000018AC34ED4-0x000000018AC35020
-		protected override void OnModifyOffset(); // 0x000000018AC35234-0x000000018AC35D80
-		private void AfterFBBIK(); // 0x000000018AC34D8C-0x000000018AC34ED4
-		private void AfterAimIK(); // 0x000000018AC34CDC-0x000000018AC34D8C
-		protected override void OnDestroy(); // 0x000000018AC35020-0x000000018AC35234
+		public void SetHandRotations(Quaternion leftHandRotation, Quaternion rightHandRotation); // 0x000000018CE2B5B0-0x000000018CE2B5D0
+		public void Fire(float magnitude); // 0x000000018CE2A6E8-0x000000018CE2A840
+		protected override void OnModifyOffset(); // 0x000000018CE2AA54-0x000000018CE2B5B0
+		private void AfterFBBIK(); // 0x000000018CE2A5A0-0x000000018CE2A6E8
+		private void AfterAimIK(); // 0x000000018CE2A4F0-0x000000018CE2A5A0
+		protected override void OnDestroy(); // 0x000000018CE2A840-0x000000018CE2AA54
 	}
 
-	public class ShoulderRotator : MonoBehaviour // TypeDefIndex: 56285
+	public class ShoulderRotator : MonoBehaviour // TypeDefIndex: 83017
 	{
 		// Fields
 		[Tooltip("Weight of shoulder rotation")]
@@ -6317,21 +6314,21 @@ namespace RootMotion.FinalIK
 		private bool skip; // 0x28
 	
 		// Constructors
-		public ShoulderRotator(); // 0x000000018AC36770-0x000000018AC36794
+		public ShoulderRotator(); // 0x000000018CE2BF8C-0x000000018CE2BFB0
 	
 		// Methods
-		private void Start(); // 0x000000018AC36654-0x000000018AC36770
-		private void RotateShoulders(); // 0x000000018AC3657C-0x000000018AC36654
-		private void RotateShoulder(FullBodyBipedChain chain, float weight, float offset); // 0x000000018AC36128-0x000000018AC3657C
-		private IKMapping.BoneMap GetParentBoneMap(FullBodyBipedChain chain); // 0x000000018AC35FC4-0x000000018AC36000
-		private void OnDestroy(); // 0x000000018AC36000-0x000000018AC36128
+		private void Start(); // 0x000000018CE2BE70-0x000000018CE2BF8C
+		private void RotateShoulders(); // 0x000000018CE2BD90-0x000000018CE2BE70
+		private void RotateShoulder(FullBodyBipedChain chain, float weight, float offset); // 0x000000018CE2B948-0x000000018CE2BD90
+		private IKMapping.BoneMap GetParentBoneMap(FullBodyBipedChain chain); // 0x000000018CE2B7E4-0x000000018CE2B820
+		private void OnDestroy(); // 0x000000018CE2B820-0x000000018CE2B948
 	}
 
-	public static class VRIKCalibrator // TypeDefIndex: 56289
+	public static class VRIKCalibrator // TypeDefIndex: 83021
 	{
 		// Nested types
 		[Serializable]
-		public class Settings // TypeDefIndex: 56286
+		public class Settings // TypeDefIndex: 83018
 		{
 			// Fields
 			[Tooltip("Multiplies character scale")]
@@ -6366,11 +6363,11 @@ namespace RootMotion.FinalIK
 			public float pelvisRotationWeight; // 0x84
 	
 			// Constructors
-			public Settings(); // 0x000000018AC35EFC-0x000000018AC35FC4
+			public Settings(); // 0x000000018CE2B71C-0x000000018CE2B7E4
 		}
 	
 		[Serializable]
-		public class CalibrationData // TypeDefIndex: 56288
+		public class CalibrationData // TypeDefIndex: 83020
 		{
 			// Fields
 			public float scale; // 0x10
@@ -6388,7 +6385,7 @@ namespace RootMotion.FinalIK
 	
 			// Nested types
 			[Serializable]
-			public class Target // TypeDefIndex: 56287
+			public class Target // TypeDefIndex: 83019
 			{
 				// Fields
 				public bool used; // 0x10
@@ -6396,35 +6393,35 @@ namespace RootMotion.FinalIK
 				public Quaternion localRotation; // 0x20
 	
 				// Constructors
-				public Target(Transform t); // 0x000000018AC367FC-0x000000018AC36898
+				public Target(Transform t); // 0x000000018CE2C018-0x000000018CE2C0B4
 	
 				// Methods
-				public void SetTo(Transform t); // 0x000000018AC36794-0x000000018AC367FC
+				public void SetTo(Transform t); // 0x000000018CE2BFB0-0x000000018CE2C018
 			}
 	
 			// Constructors
-			public CalibrationData(); // 0x00000001841E1670-0x00000001841E1680
+			public CalibrationData(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Methods
-		public static void RecalibrateScale(VRIK ik, CalibrationData data, Settings settings); // 0x000000018AC3B260-0x000000018AC3B284
-		public static void RecalibrateScale(VRIK ik, CalibrationData data, float scaleMlp); // 0x000000018AC3B200-0x000000018AC3B260
-		private static void CalibrateScale(VRIK ik, Settings settings); // 0x000000018AC38530-0x000000018AC38550
-		private static void CalibrateScale(VRIK ik, float scaleMlp = 1f /* Metadata: 0x0234796B */); // 0x000000018AC38550-0x000000018AC386DC
-		public static CalibrationData Calibrate(VRIK ik, Settings settings, Transform headTracker, Transform bodyTracker = null, Transform leftHandTracker = null, Transform rightHandTracker = null, Transform leftFootTracker = null, Transform rightFootTracker = null); // 0x000000018AC39254-0x000000018AC3AA44
-		private static void CalibrateLeg(Settings settings, Transform tracker, IKSolverVR.Leg leg, Transform lastBone, Vector3 rootForward, bool isLeft); // 0x000000018AC37DF0-0x000000018AC38530
-		public static void Calibrate(VRIK ik, CalibrationData data, Transform headTracker, Transform bodyTracker = null, Transform leftHandTracker = null, Transform rightHandTracker = null, Transform leftFootTracker = null, Transform rightFootTracker = null); // 0x000000018AC386DC-0x000000018AC39254
-		private static void CalibrateLeg(CalibrationData data, Transform tracker, IKSolverVR.Leg leg, Transform lastBone, Vector3 rootForward, bool isLeft); // 0x000000018AC37BA0-0x000000018AC37DF0
-		public static CalibrationData Calibrate(VRIK ik, Transform centerEyeAnchor, Transform leftHandAnchor, Transform rightHandAnchor, Vector3 centerEyePositionOffset, Vector3 centerEyeRotationOffset, Vector3 handPositionOffset, Vector3 handRotationOffset, float scaleMlp = 1f /* Metadata: 0x0234796F */); // 0x000000018AC3AA44-0x000000018AC3AC90
-		public static void CalibrateHead(VRIK ik, Transform centerEyeAnchor, Vector3 anchorPositionOffset, Vector3 anchorRotationOffset); // 0x000000018AC37610-0x000000018AC37BA0
-		public static void CalibrateBody(VRIK ik, Transform pelvisTracker, Vector3 trackerPositionOffset, Vector3 trackerRotationOffset); // 0x000000018AC36C08-0x000000018AC36F04
-		public static void CalibrateHands(VRIK ik, Transform leftHandAnchor, Transform rightHandAnchor, Vector3 anchorPositionOffset, Vector3 anchorRotationOffset); // 0x000000018AC373C0-0x000000018AC37610
-		private static void CalibrateHand(VRIK ik, Transform anchor, Vector3 positionOffset, Vector3 rotationOffset, bool isLeft); // 0x000000018AC36F04-0x000000018AC373C0
-		public static Vector3 GuessWristToPalmAxis(Transform hand, Transform forearm); // 0x000000018AC3B084-0x000000018AC3B200
-		public static Vector3 GuessPalmToThumbAxis(Transform hand, Transform forearm); // 0x000000018AC3AC90-0x000000018AC3B084
+		public static void RecalibrateScale(VRIK ik, CalibrationData data, Settings settings); // 0x000000018CE30AC0-0x000000018CE30AE4
+		public static void RecalibrateScale(VRIK ik, CalibrationData data, float scaleMlp); // 0x000000018CE30A60-0x000000018CE30AC0
+		private static void CalibrateScale(VRIK ik, Settings settings); // 0x000000018CE2DD74-0x000000018CE2DD94
+		private static void CalibrateScale(VRIK ik, float scaleMlp = 1f /* Metadata: 0x026417A3 */); // 0x000000018CE2DD94-0x000000018CE2DF1C
+		public static CalibrationData Calibrate(VRIK ik, Settings settings, Transform headTracker, Transform bodyTracker = null, Transform leftHandTracker = null, Transform rightHandTracker = null, Transform leftFootTracker = null, Transform rightFootTracker = null); // 0x000000018CE2EAA0-0x000000018CE302A4
+		private static void CalibrateLeg(Settings settings, Transform tracker, IKSolverVR.Leg leg, Transform lastBone, Vector3 rootForward, bool isLeft); // 0x000000018CE2D634-0x000000018CE2DD74
+		public static void Calibrate(VRIK ik, CalibrationData data, Transform headTracker, Transform bodyTracker = null, Transform leftHandTracker = null, Transform rightHandTracker = null, Transform leftFootTracker = null, Transform rightFootTracker = null); // 0x000000018CE2DF1C-0x000000018CE2EAA0
+		private static void CalibrateLeg(CalibrationData data, Transform tracker, IKSolverVR.Leg leg, Transform lastBone, Vector3 rootForward, bool isLeft); // 0x000000018CE2D3E4-0x000000018CE2D634
+		public static CalibrationData Calibrate(VRIK ik, Transform centerEyeAnchor, Transform leftHandAnchor, Transform rightHandAnchor, Vector3 centerEyePositionOffset, Vector3 centerEyeRotationOffset, Vector3 handPositionOffset, Vector3 handRotationOffset, float scaleMlp = 1f /* Metadata: 0x026417A7 */); // 0x000000018CE302A4-0x000000018CE304F0
+		public static void CalibrateHead(VRIK ik, Transform centerEyeAnchor, Vector3 anchorPositionOffset, Vector3 anchorRotationOffset); // 0x000000018CE2CE54-0x000000018CE2D3E4
+		public static void CalibrateBody(VRIK ik, Transform pelvisTracker, Vector3 trackerPositionOffset, Vector3 trackerRotationOffset); // 0x000000018CE2C434-0x000000018CE2C730
+		public static void CalibrateHands(VRIK ik, Transform leftHandAnchor, Transform rightHandAnchor, Vector3 anchorPositionOffset, Vector3 anchorRotationOffset); // 0x000000018CE2CBFC-0x000000018CE2CE54
+		private static void CalibrateHand(VRIK ik, Transform anchor, Vector3 positionOffset, Vector3 rotationOffset, bool isLeft); // 0x000000018CE2C730-0x000000018CE2CBFC
+		public static Vector3 GuessWristToPalmAxis(Transform hand, Transform forearm); // 0x000000018CE308E4-0x000000018CE30A60
+		public static Vector3 GuessPalmToThumbAxis(Transform hand, Transform forearm); // 0x000000018CE304F0-0x000000018CE308E4
 	}
 
-	public class VRIKLODController : MonoBehaviour // TypeDefIndex: 56290
+	public class VRIKLODController : MonoBehaviour // TypeDefIndex: 83022
 	{
 		// Fields
 		public Renderer LODRenderer; // 0x18
@@ -6433,15 +6430,15 @@ namespace RootMotion.FinalIK
 		private VRIK ik; // 0x28
 	
 		// Constructors
-		public VRIKLODController(); // 0x000000018AC3B45C-0x000000018AC3B47C
+		public VRIKLODController(); // 0x000000018CE30CBC-0x000000018CE30CDC
 	
 		// Methods
-		private void Start(); // 0x000000018AC3B3E0-0x000000018AC3B428
-		private void Update(); // 0x000000018AC3B428-0x000000018AC3B45C
-		private int GetLODLevel(); // 0x000000018AC3B284-0x000000018AC3B3E0
+		private void Start(); // 0x000000018CE30C40-0x000000018CE30C88
+		private void Update(); // 0x000000018CE30C88-0x000000018CE30CBC
+		private int GetLODLevel(); // 0x000000018CE30AE4-0x000000018CE30C40
 	}
 
-	public class VRIKRootController : MonoBehaviour // TypeDefIndex: 56291
+	public class VRIKRootController : MonoBehaviour // TypeDefIndex: 83023
 	{
 		// Fields
 		[CompilerGenerated]
@@ -6452,16 +6449,16 @@ namespace RootMotion.FinalIK
 		private VRIK ik; // 0x40
 	
 		// Properties
-		public Vector3 pelvisTargetRight { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D89870-0x0000000184D89890 0x0000000184D89890-0x0000000184D898A0
+		public Vector3 pelvisTargetRight { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236730-0x0000000187236750 0x0000000187236750-0x0000000187236760
 	
 		// Constructors
-		public VRIKRootController(); // 0x0000000185393520-0x0000000185393538
+		public VRIKRootController(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Awake(); // 0x000000018AC3B47C-0x000000018AC3B5A8
-		public void Calibrate(); // 0x000000018AC3B5A8-0x000000018AC3B7CC
-		public void Calibrate(VRIKCalibrator.CalibrationData data); // 0x000000018AC3B7CC-0x000000018AC3B954
-		private void OnPreUpdate(); // 0x000000018AC3BA7C-0x000000018AC3BF88
-		private void OnDestroy(); // 0x000000018AC3B954-0x000000018AC3BA7C
+		private void Awake(); // 0x000000018CE30CDC-0x000000018CE30E08
+		public void Calibrate(); // 0x000000018CE30E08-0x000000018CE3102C
+		public void Calibrate(VRIKCalibrator.CalibrationData data); // 0x000000018CE3102C-0x000000018CE311B4
+		private void OnPreUpdate(); // 0x000000018CE312DC-0x000000018CE317EC
+		private void OnDestroy(); // 0x000000018CE311B4-0x000000018CE312DC
 	}
 }

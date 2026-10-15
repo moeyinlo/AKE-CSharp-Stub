@@ -21,14 +21,11 @@ using UnityEngine.LowLevel;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
 
-// Image 23: MagicaCloth.dll - Assembly: MagicaCloth, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 54947-55254
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 25: MagicaCloth.dll - Assembly: MagicaCloth, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 81994-82301
 
 namespace MagicaCloth
 {
-	public abstract class BaseCloth : PhysicsTeam // TypeDefIndex: 54984
+	public abstract class BaseCloth : PhysicsTeam // TypeDefIndex: 82031
 	{
 		// Fields
 		[SerializeField]
@@ -56,86 +53,86 @@ namespace MagicaCloth
 		private bool oldUseAnimatedDistance; // 0xC4
 	
 		// Properties
-		public float BlendWeight { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000189EC1054-0x0000000189EC106C
-		public Vector3 Gravity_GravityDirection { get; set; } // 0x0000000189EC0F08-0x0000000189EC0F34 0x0000000189EC1374-0x0000000189EC1454
-		public bool DistanceDisable_Active { get; set; } // 0x0000000189EC0E48-0x0000000189EC0E68 0x0000000189EC1130-0x0000000189EC1150
-		public Transform DistanceDisable_ReferenceObject { get; set; } // 0x0000000189EC0EA8-0x0000000189EC0EC8 0x0000000189EC11A0-0x0000000189EC11CC
-		public float DistanceDisable_Distance { get; set; } // 0x0000000189EC0E68-0x0000000189EC0E88 0x0000000189EC1150-0x0000000189EC1178
-		public float DistanceDisable_FadeDistance { get; set; } // 0x0000000189EC0E88-0x0000000189EC0EA8 0x0000000189EC1178-0x0000000189EC11A0
-		public float ExternalForce_WindInfluence { get; set; } // 0x0000000189EC0EC8-0x0000000189EC0EE8 0x0000000189EC11CC-0x0000000189EC12A0
-		public float ExternalForce_WindRandomScale { get; set; } // 0x0000000189EC0EE8-0x0000000189EC0F08 0x0000000189EC12A0-0x0000000189EC1374
-		public float WorldInfluence_MaxMoveSpeed { get; set; } // 0x0000000189EC0F94-0x0000000189EC0FB4 0x0000000189EC16AC-0x0000000189EC1774
-		public bool WorldInfluence_ResetAfterTeleport { get; set; } // 0x0000000189EC0FB4-0x0000000189EC0FD4 0x0000000189EC1774-0x0000000189EC1838
-		public float WorldInfluence_TeleportDistance { get; set; } // 0x0000000189EC0FF4-0x0000000189EC1014 0x0000000189EC18DC-0x0000000189EC19A0
-		public float WorldInfluence_TeleportRotation { get; set; } // 0x0000000189EC1034-0x0000000189EC1054 0x0000000189EC1A60-0x0000000189EC1B24
-		public ClothParams.TeleportMode WorldInfluence_TeleportMode { get; set; } // 0x0000000189EC1014-0x0000000189EC1034 0x0000000189EC19A0-0x0000000189EC1A60
-		public float WorldInfluence_StabilizationTime { get; set; } // 0x0000000189EC0FD4-0x0000000189EC0FF4 0x0000000189EC1838-0x0000000189EC18DC
-		public bool ColliderCollision_Active { get; set; } // 0x0000000189EC0E28-0x0000000189EC0E48 0x0000000189EC106C-0x0000000189EC1130
-		public bool Penetration_Active { get; set; } // 0x0000000189EC0F34-0x0000000189EC0F54 0x0000000189EC1454-0x0000000189EC151C
-		public bool Spring_Active { get; set; } // 0x0000000189EC0F54-0x0000000189EC0F74 0x0000000189EC151C-0x0000000189EC15DC
-		public float Spring_Power { get; set; } // 0x0000000189EC0F74-0x0000000189EC0F94 0x0000000189EC15DC-0x0000000189EC16AC
-		public ClothParams Params { get; } // 0x0000000184D862A0-0x0000000184D862B0 
-		public ClothData ClothData { get; set; } // 0x0000000184D861F0-0x0000000184D86200 0x0000000185395D30-0x0000000185395D44
-		public SelectionData ClothSelection { get; } // 0x0000000184D85EE0-0x0000000184D85EF0 
-		public ClothSetup Setup { get; } // 0x0000000184D86250-0x0000000184D86260 
+		public float BlendWeight { get; set; } // 0x00000001872330C0-0x00000001872330D0 0x0000000187839DAC-0x0000000187839DC4
+		public Vector3 Gravity_GravityDirection { get; set; } // 0x000000018C2F6ED0-0x000000018C2F6EFC 0x000000018C2F732C-0x000000018C2F740C
+		public bool DistanceDisable_Active { get; set; } // 0x000000018C2F6E10-0x000000018C2F6E30 0x000000018C2F70E0-0x000000018C2F7100
+		public Transform DistanceDisable_ReferenceObject { get; set; } // 0x000000018C2F6E70-0x000000018C2F6E90 0x000000018C2F7150-0x000000018C2F717C
+		public float DistanceDisable_Distance { get; set; } // 0x000000018C2F6E30-0x000000018C2F6E50 0x000000018C2F7100-0x000000018C2F7128
+		public float DistanceDisable_FadeDistance { get; set; } // 0x000000018C2F6E50-0x000000018C2F6E70 0x000000018C2F7128-0x000000018C2F7150
+		public float ExternalForce_WindInfluence { get; set; } // 0x000000018C2F6E90-0x000000018C2F6EB0 0x000000018C2F717C-0x000000018C2F7254
+		public float ExternalForce_WindRandomScale { get; set; } // 0x000000018C2F6EB0-0x000000018C2F6ED0 0x000000018C2F7254-0x000000018C2F732C
+		public float WorldInfluence_MaxMoveSpeed { get; set; } // 0x000000018C2F6F5C-0x000000018C2F6F7C 0x000000018C2F7674-0x000000018C2F7740
+		public bool WorldInfluence_ResetAfterTeleport { get; set; } // 0x000000018C2F6F7C-0x000000018C2F6F9C 0x000000018C2F7740-0x000000018C2F7808
+		public float WorldInfluence_TeleportDistance { get; set; } // 0x000000018C2F6FBC-0x000000018C2F6FDC 0x000000018C2F78AC-0x000000018C2F7974
+		public float WorldInfluence_TeleportRotation { get; set; } // 0x000000018C2F6FFC-0x000000018C2F701C 0x000000018C2F7A38-0x000000018C2F7B00
+		public ClothParams.TeleportMode WorldInfluence_TeleportMode { get; set; } // 0x000000018C2F6FDC-0x000000018C2F6FFC 0x000000018C2F7974-0x000000018C2F7A38
+		public float WorldInfluence_StabilizationTime { get; set; } // 0x000000018C2F6F9C-0x000000018C2F6FBC 0x000000018C2F7808-0x000000018C2F78AC
+		public bool ColliderCollision_Active { get; set; } // 0x000000018C2F6DF0-0x000000018C2F6E10 0x000000018C2F701C-0x000000018C2F70E0
+		public bool Penetration_Active { get; set; } // 0x000000018C2F6EFC-0x000000018C2F6F1C 0x000000018C2F740C-0x000000018C2F74D8
+		public bool Spring_Active { get; set; } // 0x000000018C2F6F1C-0x000000018C2F6F3C 0x000000018C2F74D8-0x000000018C2F75A0
+		public float Spring_Power { get; set; } // 0x000000018C2F6F3C-0x000000018C2F6F5C 0x000000018C2F75A0-0x000000018C2F7674
+		public ClothParams Params { get; } // 0x00000001829CD170-0x00000001829CD180 
+		public ClothData ClothData { get; set; } // 0x0000000187232F50-0x0000000187232F60 0x0000000188800C74-0x0000000188800C88
+		public SelectionData ClothSelection { get; } // 0x0000000187232C70-0x0000000187232C80 
+		public ClothSetup Setup { get; } // 0x0000000187232F90-0x0000000187232FA0 
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 54983
+		private sealed class __c // TypeDefIndex: 82030
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<Renderer, bool> __9__106_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189EEA808-0x0000000189EEA86C
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C31F4E0-0x000000018C31F544
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _GetCullRenderListCount_b__106_0(Renderer x); // 0x0000000189EEA438-0x0000000189EEA484
+			internal bool _GetCullRenderListCount_b__106_0(Renderer x); // 0x000000018C31F110-0x000000018C31F15C
 		}
 	
 		// Constructors
-		protected BaseCloth(); // 0x0000000189EC0D28-0x0000000189EC0E28
+		protected BaseCloth(); // 0x00000001855E0420-0x00000001855E0530
 	
 		// Methods
-		public void ResetCloth(); // 0x0000000189EC01C0-0x0000000189EC01F0
-		public void ResetCloth(float resetStabilizationTime); // 0x0000000189EC0190-0x0000000189EC01C0
-		public void ResetCloth(ClothParams.TeleportMode teleportMode, float resetStabilizationTime = -1f /* Metadata: 0x02346840 */); // 0x0000000189EC01F0-0x0000000189EC01F8
-		public void SetTimeScale(float timeScale); // 0x0000000189EC01F8-0x0000000189EC0280
-		public float GetTimeScale(); // 0x0000000189EBF494-0x0000000189EBF510
-		public void AddForce(Vector3 force, PhysicsManagerTeamData.ForceMode mode); // 0x0000000189EBE780-0x0000000189EBE860
-		public void AddCollider(ColliderComponent collider); // 0x0000000189EBE6DC-0x0000000189EBE780
-		public void RemoveCollider(ColliderComponent collider); // 0x0000000189EBFEE0-0x0000000189EBFF6C
-		public void SetUpdateMode(TeamUpdateMode updateMode); // 0x0000000184D865A0-0x0000000184D865B0
-		public void SetCullingMode(TeamCullingMode cullingMode); // 0x0000000184D86590-0x0000000184D865A0
-		public void Radius_SetRadius(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346844 */); // 0x0000000189EBFD58-0x0000000189EBFEE0
-		public void Mass_SetMass(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346848 */); // 0x0000000189EBF714-0x0000000189EBF8AC
-		public void ClampPosition_SetPositionLength(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x0234684C */); // 0x0000000189EBEA80-0x0000000189EBEC2C
-		public void Gravity_SetGravity(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346850 */); // 0x0000000189EBF58C-0x0000000189EBF664
-		public void Drag_SetDrag(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346854 */); // 0x0000000189EBEF80-0x0000000189EBF058
-		public void ExternalForce_DepthInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346858 */); // 0x0000000189EBF15C-0x0000000189EBF22C
-		public void WorldInfluence_SetMovementInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x0234685C */); // 0x0000000189EC0B30-0x0000000189EC0C2C
-		public void WorldInfluence_SetRotationInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346860 */); // 0x0000000189EC0C2C-0x0000000189EC0D28
-		public void WorldInfluence_ReplaceInfluenceTarget(Transform target); // 0x0000000189EC09E8-0x0000000189EC0B30
-		public void Penetration_SetMovingRadius(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346864 */); // 0x0000000189EBFC48-0x0000000189EBFD58
-		public override int GetDataHash(); // 0x0000000189EBF3C8-0x0000000189EBF494
-		protected virtual void Reset(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnValidate(); // 0x0000000189EBFC00-0x0000000189EBFC48
-		protected override void OnInit(); // 0x0000000189EBFBE0-0x0000000189EBFC00
-		protected override void OnActive(); // 0x0000000189EBF8AC-0x0000000189EBF9C4
-		protected override void OnInactive(); // 0x0000000189EBFADC-0x0000000189EBFBE0
-		protected override void OnDispose(); // 0x0000000189EBFABC-0x0000000189EBFADC
-		internal override void UpdateCullingMode(CoreComponent caller); // 0x0000000189EC0528-0x0000000189EC080C
-		protected override void OnChangeCalculation(); // 0x0000000189EBF9C4-0x0000000189EBFABC
-		public int GetCullRenderListCount(); // 0x0000000189EBF2A8-0x0000000189EBF3C8
-		private void BaseClothInit(); // 0x0000000189EBE8F8-0x0000000189EBE9F4
-		private void BaseClothDispose(); // 0x0000000189EBE860-0x0000000189EBE8F8
-		protected virtual void ClothInit(); // 0x0000000189EBECD0-0x0000000189EBED98
-		protected virtual void ClothActive(); // 0x0000000189EBEC2C-0x0000000189EBECA8
-		protected virtual void ClothInactive(); // 0x0000000189EBECA8-0x0000000189EBECD0
-		protected virtual void ClothDispose(); // 0x00000001841E1670-0x00000001841E1680
+		public void ResetCloth(); // 0x000000018C2F6928-0x000000018C2F6958
+		public void ResetCloth(float resetStabilizationTime); // 0x000000018C2F68F8-0x000000018C2F6928
+		public void ResetCloth(ClothParams.TeleportMode teleportMode, float resetStabilizationTime = -1f /* Metadata: 0x026408DC */); // 0x000000018C2F6958-0x000000018C2F6960
+		public void SetTimeScale(float timeScale); // 0x000000018C2F6960-0x000000018C2F69E8
+		public float GetTimeScale(); // 0x000000018C2F5F30-0x000000018C2F5FAC
+		public void AddForce(Vector3 force, PhysicsManagerTeamData.ForceMode mode); // 0x000000018C2F5504-0x000000018C2F55EC
+		public void AddCollider(ColliderComponent collider); // 0x000000018C2F5460-0x000000018C2F5504
+		public void RemoveCollider(ColliderComponent collider); // 0x000000018C2F6638-0x000000018C2F66C4
+		public void SetUpdateMode(TeamUpdateMode updateMode); // 0x00000001854CCF30-0x00000001854CCF40
+		public void SetCullingMode(TeamCullingMode cullingMode); // 0x0000000187233700-0x0000000187233710
+		public void Radius_SetRadius(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408E0 */); // 0x000000018C2F64AC-0x000000018C2F6638
+		public void Mass_SetMass(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408E4 */); // 0x000000018C2F61B4-0x000000018C2F6350
+		public void ClampPosition_SetPositionLength(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408E8 */); // 0x000000018C2F5678-0x000000018C2F5828
+		public void Gravity_SetGravity(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408EC */); // 0x000000018C2F6028-0x000000018C2F6104
+		public void Drag_SetDrag(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408F0 */); // 0x000000018C2F5A10-0x000000018C2F5AEC
+		public void ExternalForce_DepthInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408F4 */); // 0x000000018C2F5BF0-0x000000018C2F5CC8
+		public void WorldInfluence_SetMovementInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408F8 */); // 0x000000018C2F6BF0-0x000000018C2F6CF0
+		public void WorldInfluence_SetRotationInfluence(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x026408FC */); // 0x000000018C2F6CF0-0x000000018C2F6DF0
+		public void WorldInfluence_ReplaceInfluenceTarget(Transform target); // 0x000000018C2F6AA8-0x000000018C2F6BF0
+		public void Penetration_SetMovingRadius(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02640900 */); // 0x000000018C2F6398-0x000000018C2F64AC
+		public override int GetDataHash(); // 0x000000018C2F5E64-0x000000018C2F5F30
+		protected virtual void Reset(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnValidate(); // 0x000000018C2F6350-0x000000018C2F6398
+		protected override void OnInit(); // 0x00000001853C8CE0-0x00000001853C8D00
+		protected override void OnActive(); // 0x00000001853CA370-0x00000001853CA490
+		protected override void OnInactive(); // 0x00000001853CA230-0x00000001853CA340
+		protected override void OnDispose(); // 0x0000000185D96C00-0x0000000185D96C20
+		internal override void UpdateCullingMode(CoreComponent caller); // 0x00000001853CC6E0-0x00000001853CCA80
+		protected override void OnChangeCalculation(); // 0x00000001853C8B70-0x00000001853C8C30
+		public int GetCullRenderListCount(); // 0x000000018C2F5D44-0x000000018C2F5E64
+		private void BaseClothInit(); // 0x00000001853C9970-0x00000001853C9A10
+		private void BaseClothDispose(); // 0x0000000185D96CA0-0x0000000185D96D30
+		protected virtual void ClothInit(); // 0x0000000185223A90-0x0000000185223B60
+		protected virtual void ClothActive(); // 0x00000001853C9A10-0x00000001853C9AA0
+		protected virtual void ClothInactive(); // 0x00000001853CA340-0x00000001853CA370
+		protected virtual void ClothDispose(); // 0x0000000186805BA0-0x0000000186805BB0
 		protected abstract uint UserFlag(int vindex);
 		protected abstract Transform UserTransform(int vindex);
 		protected abstract float3 UserTransformLocalPosition(int vindex);
@@ -144,25 +141,25 @@ namespace MagicaCloth
 		public abstract BaseMeshDeformer GetDeformer();
 		protected abstract MeshData GetMeshData();
 		protected abstract void WorkerInit();
-		private void SetUseMesh(bool sw); // 0x0000000189EC0280-0x0000000189EC02EC
-		private void SetUseVertex(bool sw); // 0x0000000189EC02EC-0x0000000189EC0354
+		private void SetUseMesh(bool sw); // 0x00000001853CCA80-0x00000001853CCAE0
+		private void SetUseVertex(bool sw); // 0x00000001853CCAE0-0x00000001853CCB30
 		protected abstract void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer);
-		internal void DeformerForEach(Action<BaseMeshDeformer> act); // 0x0000000189EBEF44-0x0000000189EBEF80
-		public void UpdateBlend(); // 0x0000000189EC0354-0x0000000189EC0528
+		internal void DeformerForEach(Action<BaseMeshDeformer> act); // 0x000000018C2F59D4-0x000000018C2F5A10
+		public void UpdateBlend(); // 0x00000001853C9AA0-0x00000001853C9D10
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EBF510-0x0000000189EBF58C
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EBE9F4-0x0000000189EBEA80
-		public override void CreateVerifyData(); // 0x0000000189EBED98-0x0000000189EBEF44
-		public override Define.Error VerifyData(); // 0x0000000189EC08CC-0x0000000189EC09E8
-		public bool HasChangedParam(ClothParams.ParamType ptype); // 0x0000000189EBF664-0x0000000189EBF714
-		public Define.Error VerifyAlgorithmVersion(); // 0x0000000189EC0844-0x0000000189EC08CC
-		public override bool UpgradeFormat(); // 0x0000000189EC080C-0x0000000189EC0844
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EBF22C-0x0000000189EBF2A8
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EBF058-0x0000000189EBF15C
-		private void ResetClothInternal(ClothParams.TeleportMode teleportMode, float resetStabilizationTime); // 0x0000000189EBFF6C-0x0000000189EC0190
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C2F5FAC-0x000000018C2F6028
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C2F55EC-0x000000018C2F5678
+		public override void CreateVerifyData(); // 0x000000018C2F5828-0x000000018C2F59D4
+		public override Define.Error VerifyData(); // 0x00000001866403B0-0x0000000186640580
+		public bool HasChangedParam(ClothParams.ParamType ptype); // 0x000000018C2F6104-0x000000018C2F61B4
+		public Define.Error VerifyAlgorithmVersion(); // 0x000000018C2F6A20-0x000000018C2F6AA8
+		public override bool UpgradeFormat(); // 0x000000018C2F69E8-0x000000018C2F6A20
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C2F5CC8-0x000000018C2F5D44
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C2F5AEC-0x000000018C2F5BF0
+		private void ResetClothInternal(ClothParams.TeleportMode teleportMode, float resetStabilizationTime); // 0x000000018C2F66C4-0x000000018C2F68F8
 	}
 
-	public abstract class CoreComponent : BaseComponent, IShareDataObject, IDataVerify, IEditorMesh, IEditorCloth, IDataHash, IBoneReplace // TypeDefIndex: 54985
+	public abstract class CoreComponent : BaseComponent, IShareDataObject, IDataVerify, IEditorMesh, IEditorCloth, IDataHash, IBoneReplace // TypeDefIndex: 82032
 	{
 		// Fields
 		[SerializeField]
@@ -177,95 +174,95 @@ namespace MagicaCloth
 		protected int calculateValue; // 0x30
 	
 		// Properties
-		public RuntimeStatus Status { get; } // 0x0000000184D862C0-0x0000000184D862D0 
-		public bool IsVisible { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D86CB0-0x0000000184D86CC0 0x0000000184D86CE0-0x0000000184D86CF0
-		public bool IsCalculate { get; } // 0x00000001868D2DA0-0x00000001868D2DA8 
-		public int SaveDataHash { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
-		public int SaveDataVersion { get; } // 0x0000000184D86310-0x0000000184D86320 
+		public RuntimeStatus Status { get; } // 0x000000018225E800-0x000000018225E810 
+		public bool IsVisible { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x000000018225E0B0-0x000000018225E0C0 0x000000018225E0C0-0x000000018225E0D0
+		public bool IsCalculate { get; } // 0x00000001853C8CD0-0x00000001853C8CE0 
+		public int SaveDataHash { get; } // 0x00000001844AF510-0x00000001844AF520 
+		public int SaveDataVersion { get; } // 0x0000000187233000-0x0000000187233010 
 	
 		// Constructors
-		protected CoreComponent(); // 0x0000000189EE6760-0x0000000189EE67B8
+		protected CoreComponent(); // 0x00000001855E05B0-0x00000001855E0620
 	
 		// Methods
-		public Dictionary<string, Transform> GetUsedComponentBones(); // 0x0000000189EE5F4C-0x0000000189EE6210
-		public List<string> GetUsedComponentBoneNames(); // 0x0000000189EE5EB0-0x0000000189EE5F4C
-		public void ReplaceComponentBone(Dictionary<Transform, Transform> boneReplaceDict); // 0x0000000189EE65B8-0x0000000189EE6600
-		public void ReplaceComponentBone(Dictionary<string, Transform> boneReplaceDict); // 0x0000000189EE6570-0x0000000189EE65B8
+		public Dictionary<string, Transform> GetUsedComponentBones(); // 0x000000018C31B000-0x000000018C31B2C8
+		public List<string> GetUsedComponentBoneNames(); // 0x000000018C31AF64-0x000000018C31B000
+		public void ReplaceComponentBone(Dictionary<Transform, Transform> boneReplaceDict); // 0x000000018C31B33C-0x000000018C31B384
+		public void ReplaceComponentBone(Dictionary<string, Transform> boneReplaceDict); // 0x000000018C31B2F4-0x000000018C31B33C
 		public abstract int GetDataHash();
-		protected virtual void Start(); // 0x0000000189EE6698-0x0000000189EE66A0
-		public virtual void OnEnable(); // 0x0000000189EE64CC-0x0000000189EE6504
-		public virtual void OnDisable(); // 0x0000000189EE648C-0x0000000189EE64C4
-		protected virtual void OnDestroy(); // 0x0000000189EE6418-0x0000000189EE648C
-		public void Init(); // 0x0000000189EE622C-0x0000000189EE63F4
+		protected virtual void Start(); // 0x0000000186E4C680-0x0000000186E4C690
+		public virtual void OnEnable(); // 0x00000001853CB200-0x00000001853CB230
+		public virtual void OnDisable(); // 0x00000001853CB230-0x00000001853CB260
+		protected virtual void OnDestroy(); // 0x0000000186855710-0x0000000186855790
+		public void Init(); // 0x00000001853CA920-0x00000001853CAAD0
 		protected abstract void OnInit();
 		protected abstract void OnDispose();
 		protected abstract void OnUpdate();
 		protected abstract void OnActive();
 		protected abstract void OnInactive();
-		protected virtual void OnUpdateStatus(); // 0x0000000189EE6504-0x0000000189EE6570
-		protected virtual void OnDisconnectedStatus(); // 0x0000000189EE64C4-0x0000000189EE64CC
-		public void SetUseUnityPhysics(bool sw); // 0x0000000189EE6600-0x0000000189EE6664
-		private void ActiveUseUnityPhysics(); // 0x0000000189EE5C58-0x0000000189EE5C7C
-		private void InactiveUseUnityPhysics(); // 0x0000000189EE6210-0x0000000189EE622C
-		protected virtual void ChangeUseUnityPhysics(bool sw); // 0x00000001841E1670-0x00000001841E1680
-		protected bool IsUseUnityPhysics(); // 0x000000018931FCE4-0x000000018931FCEC
-		public virtual List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EE5CAC-0x0000000189EE5D0C
+		protected virtual void OnUpdateStatus(); // 0x00000001853CCB50-0x00000001853CCBC0
+		protected virtual void OnDisconnectedStatus(); // 0x000000018C31B2EC-0x000000018C31B2F4
+		public void SetUseUnityPhysics(bool sw); // 0x000000018C31B384-0x000000018C31B3EC
+		private void ActiveUseUnityPhysics(); // 0x0000000186C42F80-0x0000000186C42FA0
+		private void InactiveUseUnityPhysics(); // 0x0000000186D31DA0-0x0000000186D31DC0
+		protected virtual void ChangeUseUnityPhysics(bool sw); // 0x0000000186805BA0-0x0000000186805BB0
+		protected bool IsUseUnityPhysics(); // 0x000000018B8A5F60-0x000000018B8A5F68
+		public virtual List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C31AD60-0x000000018C31ADC0
 		public abstract ShareDataObject DuplicateShareDataObject(ShareDataObject source);
-		protected void SetUserEnable(bool sw); // 0x0000000189EE6664-0x0000000189EE6698
-		internal virtual void UpdateCullingMode(CoreComponent Caller); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnChangeCalculation(); // 0x00000001841E1670-0x00000001841E1680
+		protected void SetUserEnable(bool sw); // 0x00000001853C9E40-0x00000001853C9E80
+		internal virtual void UpdateCullingMode(CoreComponent Caller); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnChangeCalculation(); // 0x0000000186805BA0-0x0000000186805BB0
 		public abstract int GetVersion();
 		public abstract int GetErrorVersion();
-		public virtual Define.Error VerifyData(); // 0x0000000189EE66DC-0x0000000189EE6760
-		public Define.Error VerifyDataVersion(); // 0x0000000189EE66A0-0x0000000189EE66DC
-		public bool IsOldDataVertion(); // 0x0000000189EE63F4-0x0000000189EE6418
-		public virtual void CreateVerifyData(); // 0x0000000189EE5C7C-0x0000000189EE5CAC
-		public virtual string GetInformation(); // 0x0000000189EE5DF0-0x0000000189EE5E1C
-		public virtual bool UpgradeFormat(); // 0x00000001812081B0-0x0000000181208610
+		public virtual Define.Error VerifyData(); // 0x0000000186848530-0x00000001868485C0
+		public Define.Error VerifyDataVersion(); // 0x000000018C31B3EC-0x000000018C31B428
+		public bool IsOldDataVertion(); // 0x000000018C31B2C8-0x000000018C31B2EC
+		public virtual void CreateVerifyData(); // 0x000000018C31AD30-0x000000018C31AD60
+		public virtual string GetInformation(); // 0x000000018C31AEA4-0x000000018C31AED0
+		public virtual bool UpgradeFormat(); // 0x00000001843FFFF0-0x0000000184400000
 		public void ChangeAvatar<T>(Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
 		public virtual void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
-		public virtual HashSet<Transform> GetUsedBones(); // 0x0000000189EE5E1C-0x0000000189EE5EB0
-		public virtual int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EE5D58-0x0000000189EE5DA4
-		public virtual List<int> GetEditorTriangleList(); // 0x0000000189EE5DA4-0x0000000189EE5DF0
-		public virtual List<int> GetEditorLineList(); // 0x0000000189EE5D0C-0x0000000189EE5D58
-		public virtual List<int> GetSelectionList(); // 0x00000001811EC580-0x00000001811EC590
-		public virtual List<int> GetUseList(); // 0x00000001811EC580-0x00000001811EC590
+		public virtual HashSet<Transform> GetUsedBones(); // 0x000000018C31AED0-0x000000018C31AF64
+		public virtual int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C31AE0C-0x000000018C31AE58
+		public virtual List<int> GetEditorTriangleList(); // 0x000000018C31AE58-0x000000018C31AEA4
+		public virtual List<int> GetEditorLineList(); // 0x000000018C31ADC0-0x000000018C31AE0C
+		public virtual List<int> GetSelectionList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public virtual List<int> GetUseList(); // 0x0000000185829EC0-0x0000000185829ED0
 		[CompilerGenerated]
-		private object _Init_b__27_0(); // 0x000000018464E630-0x000000018464E640
+		private object _Init_b__27_0(); // 0x0000000185BD80B0-0x0000000185BD80C0
 	}
 
 	[Serializable]
-	public class AvatarPartsAttachEvent : UnityEvent<MagicaCloth.MagicaAvatar, MagicaCloth.MagicaAvatarParts> // TypeDefIndex: 54986
+	public class AvatarPartsAttachEvent : UnityEvent<MagicaCloth.MagicaAvatar, MagicaCloth.MagicaAvatarParts> // TypeDefIndex: 82033
 	{
 		// Constructors
-		public AvatarPartsAttachEvent(); // 0x0000000189ED815C-0x0000000189ED8198
+		public AvatarPartsAttachEvent(); // 0x000000018C30E2C4-0x000000018C30E300
 	}
 
 	[Serializable]
-	public class AvatarPartsDetachEvent : UnityEvent<MagicaCloth.MagicaAvatar> // TypeDefIndex: 54987
+	public class AvatarPartsDetachEvent : UnityEvent<MagicaCloth.MagicaAvatar> // TypeDefIndex: 82034
 	{
 		// Constructors
-		public AvatarPartsDetachEvent(); // 0x0000000189ED8198-0x0000000189ED81D4
+		public AvatarPartsDetachEvent(); // 0x000000018C30E300-0x000000018C30E33C
 	}
 
 	[Serializable]
-	public class PhysicsManagerPreUpdateEvent : UnityEvent // TypeDefIndex: 54988
+	public class PhysicsManagerPreUpdateEvent : UnityEvent // TypeDefIndex: 82035
 	{
 		// Constructors
-		public PhysicsManagerPreUpdateEvent(); // 0x0000000185393538-0x0000000185393540
+		public PhysicsManagerPreUpdateEvent(); // 0x000000018548D960-0x000000018548D970
 	}
 
 	[Serializable]
-	public class PhysicsManagerPostUpdateEvent : UnityEvent // TypeDefIndex: 54989
+	public class PhysicsManagerPostUpdateEvent : UnityEvent // TypeDefIndex: 82036
 	{
 		// Constructors
-		public PhysicsManagerPostUpdateEvent(); // 0x0000000185393538-0x0000000185393540
+		public PhysicsManagerPostUpdateEvent(); // 0x000000018548D960-0x000000018548D970
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaAreaWind")]
-	public class MagicaAreaWind : WindComponent // TypeDefIndex: 54990
+	public class MagicaAreaWind : WindComponent // TypeDefIndex: 82037
 	{
 		// Fields
 		[SerializeField]
@@ -274,30 +271,30 @@ namespace MagicaCloth
 		private bool isAddition; // 0x5C
 	
 		// Properties
-		public PhysicsManagerWindData.ShapeType ShapeType { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000189EE69DC-0x0000000189EE69FC
-		public bool Addition { get; set; } // 0x0000000184D86D90-0x0000000184D86DA0 0x0000000189EE69BC-0x0000000189EE69DC
+		public PhysicsManagerWindData.ShapeType ShapeType { get; set; } // 0x00000001872331A0-0x00000001872331B0 0x000000018C31B64C-0x000000018C31B66C
+		public bool Addition { get; set; } // 0x000000018225DF90-0x000000018225DFA0 0x000000018C31B62C-0x000000018C31B64C
 	
 		// Constructors
-		public MagicaAreaWind(); // 0x0000000189EE69B4-0x0000000189EE69BC
+		public MagicaAreaWind(); // 0x000000018C31B624-0x000000018C31B62C
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3370-0x0000000184DA3380
-		public override PhysicsManagerWindData.WindType GetWindType(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override PhysicsManagerWindData.ShapeType GetShapeType(); // 0x0000000184D86570-0x0000000184D86580
-		public override PhysicsManagerWindData.DirectionType GetDirectionType(); // 0x0000000189EE6944-0x0000000189EE6954
-		public override bool IsAddition(); // 0x0000000184D86D90-0x0000000184D86DA0
-		public override Vector3 GetAreaSize(); // 0x0000000189EE6804-0x0000000189EE689C
-		public override float GetAreaVolume(); // 0x0000000189EE689C-0x0000000189EE6944
-		public override float GetAreaLength(); // 0x0000000189EE67B8-0x0000000189EE6804
-		protected override void ResetParams(); // 0x0000000189EE6954-0x0000000189EE69B4
+		public override ComponentType GetComponentType(); // 0x0000000187250F50-0x0000000187250F60
+		public override PhysicsManagerWindData.WindType GetWindType(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override PhysicsManagerWindData.ShapeType GetShapeType(); // 0x00000001872331A0-0x00000001872331B0
+		public override PhysicsManagerWindData.DirectionType GetDirectionType(); // 0x000000018C31B5B4-0x000000018C31B5C4
+		public override bool IsAddition(); // 0x000000018225DF90-0x000000018225DFA0
+		public override Vector3 GetAreaSize(); // 0x000000018C31B474-0x000000018C31B50C
+		public override float GetAreaVolume(); // 0x000000018C31B50C-0x000000018C31B5B4
+		public override float GetAreaLength(); // 0x000000018C31B428-0x000000018C31B474
+		protected override void ResetParams(); // 0x000000018C31B5C4-0x000000018C31B624
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaAvatar")]
 	[HelpURL("https://magicasoft.jp/avatar/")]
-	public class MagicaAvatar : CoreComponent // TypeDefIndex: 54991
+	public class MagicaAvatar : CoreComponent // TypeDefIndex: 82038
 	{
 		// Fields
-		private const int DATA_VERSION = 1; // Metadata: 0x02346868
+		private const int DATA_VERSION = 1; // Metadata: 0x02640904
 		[SerializeField]
 		private bool dataReset; // 0x38
 		private MagicaAvatarRuntime runtime; // 0x40
@@ -305,56 +302,56 @@ namespace MagicaCloth
 		public AvatarPartsDetachEvent OnDetachParts; // 0x50
 	
 		// Properties
-		public bool DataReset { get; set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
-		public MagicaAvatarRuntime Runtime { get; } // 0x0000000184A37980-0x0000000184A379B0 
+		public bool DataReset { get; set; } // 0x000000018225E070-0x000000018225E080 0x000000018225E080-0x000000018225E090
+		public MagicaAvatarRuntime Runtime { get; } // 0x000000018C31EC30-0x000000018C31EC5C 
 	
 		// Constructors
-		public MagicaAvatar(); // 0x0000000189EE9E84-0x0000000189EE9F64
+		public MagicaAvatar(); // 0x000000018C31EB50-0x000000018C31EC30
 	
 		// Methods
-		public int AttachAvatarParts(GameObject avatarPartsPrefab, Action<GameObject> instanceAction = null); // 0x0000000189EE959C-0x0000000189EE9664
-		public void DetachAvatarParts(int partsId); // 0x0000000189EE969C-0x0000000189EE96C8
-		public void DetachAvatarParts(GameObject avatarPartsObject); // 0x0000000189EE96C8-0x0000000189EE9738
-		public void DetachAvatarParts(MagicaAvatarParts parts); // 0x0000000189EE966C-0x0000000189EE969C
-		public override ComponentType GetComponentType(); // 0x0000000184DA3390-0x0000000184DA33A0
-		public override int GetDataHash(); // 0x00000001811EC580-0x00000001811EC590
-		private void Reset(); // 0x0000000184D919E0-0x0000000184D919F0
-		private void OnValidate(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnInit(); // 0x0000000189EE9DE4-0x0000000189EE9E0C
-		protected override void OnDispose(); // 0x0000000189EE9D94-0x0000000189EE9DBC
-		protected override void OnUpdate(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnActive(); // 0x0000000189EE9D6C-0x0000000189EE9D94
-		protected override void OnInactive(); // 0x0000000189EE9DBC-0x0000000189EE9DE4
-		public override int GetVersion(); // 0x0000000184D85B80-0x0000000184D85B90
-		public override int GetErrorVersion(); // 0x00000001811EC580-0x00000001811EC590
-		public override void CreateVerifyData(); // 0x0000000189EE9664-0x0000000189EE966C
-		public override Define.Error VerifyData(); // 0x0000000189EE9E0C-0x0000000189EE9E84
-		public override string GetInformation(); // 0x0000000189EE9740-0x0000000189EE9D6C
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EE9738-0x0000000189EE9740
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x00000001811EC580-0x00000001811EC590
+		public int AttachAvatarParts(GameObject avatarPartsPrefab, Action<GameObject> instanceAction = null); // 0x000000018C31E264-0x000000018C31E32C
+		public void DetachAvatarParts(int partsId); // 0x000000018C31E364-0x000000018C31E390
+		public void DetachAvatarParts(GameObject avatarPartsObject); // 0x000000018C31E390-0x000000018C31E400
+		public void DetachAvatarParts(MagicaAvatarParts parts); // 0x000000018C31E334-0x000000018C31E364
+		public override ComponentType GetComponentType(); // 0x0000000187250F70-0x0000000187250F80
+		public override int GetDataHash(); // 0x0000000185829EC0-0x0000000185829ED0
+		private void Reset(); // 0x000000018723F910-0x000000018723F920
+		private void OnValidate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnInit(); // 0x000000018C31EAB0-0x000000018C31EAD8
+		protected override void OnDispose(); // 0x000000018C31EA60-0x000000018C31EA88
+		protected override void OnUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnActive(); // 0x000000018C31EA38-0x000000018C31EA60
+		protected override void OnInactive(); // 0x000000018C31EA88-0x000000018C31EAB0
+		public override int GetVersion(); // 0x00000001872328C0-0x00000001872328D0
+		public override int GetErrorVersion(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override void CreateVerifyData(); // 0x000000018C31E32C-0x000000018C31E334
+		public override Define.Error VerifyData(); // 0x000000018C31EAD8-0x000000018C31EB50
+		public override string GetInformation(); // 0x000000018C31E408-0x000000018C31EA38
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C31E400-0x000000018C31E408
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000185829EC0-0x0000000185829ED0
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaDirectionalWind")]
 	[HelpURL("https://magicasoft.jp/directional-wind/")]
-	public class MagicaDirectionalWind : WindComponent // TypeDefIndex: 54992
+	public class MagicaDirectionalWind : WindComponent // TypeDefIndex: 82039
 	{
 		// Constructors
-		public MagicaDirectionalWind(); // 0x0000000189EE69B4-0x0000000189EE69BC
+		public MagicaDirectionalWind(); // 0x000000018C31B624-0x000000018C31B62C
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA33E0-0x0000000184DA33F0
-		public override PhysicsManagerWindData.WindType GetWindType(); // 0x0000000184D85B80-0x0000000184D85B90
-		public override PhysicsManagerWindData.ShapeType GetShapeType(); // 0x00000001811EC580-0x00000001811EC590
-		public override PhysicsManagerWindData.DirectionType GetDirectionType(); // 0x00000001811EC580-0x00000001811EC590
-		public override bool IsAddition(); // 0x00000001812081B0-0x0000000181208610
-		public override Vector3 GetAreaSize(); // 0x0000000184DA33B0-0x0000000184DA33D0
-		public override float GetAreaVolume(); // 0x0000000184DA33D0-0x0000000184DA33E0
-		public override float GetAreaLength(); // 0x0000000184DA33A0-0x0000000184DA33B0
-		protected override void ResetParams(); // 0x0000000189EE9F64-0x0000000189EE9FC4
+		public override ComponentType GetComponentType(); // 0x0000000187250FC0-0x0000000187250FD0
+		public override PhysicsManagerWindData.WindType GetWindType(); // 0x00000001872328C0-0x00000001872328D0
+		public override PhysicsManagerWindData.ShapeType GetShapeType(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override PhysicsManagerWindData.DirectionType GetDirectionType(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override bool IsAddition(); // 0x00000001843FFFF0-0x0000000184400000
+		public override Vector3 GetAreaSize(); // 0x0000000187250F90-0x0000000187250FB0
+		public override float GetAreaVolume(); // 0x0000000187250FB0-0x0000000187250FC0
+		public override float GetAreaLength(); // 0x0000000187250F80-0x0000000187250F90
+		protected override void ResetParams(); // 0x000000018C31EC5C-0x000000018C31ECBC
 	}
 
 	[HelpURL("https://magicasoft.jp/magica-cloth-physics-manager/")]
-	public class MagicaPhysicsManager : CreateSingleton<MagicaCloth.MagicaPhysicsManager> // TypeDefIndex: 54995
+	public class MagicaPhysicsManager : CreateSingleton<MagicaCloth.MagicaPhysicsManager> // TypeDefIndex: 82042
 	{
 		// Fields
 		[SerializeField]
@@ -376,26 +373,26 @@ namespace MagicaCloth
 		private bool isActive; // 0x7A
 	
 		// Properties
-		public UpdateTimeManager.UpdateCount UpdatePerSeccond { get; set; } // 0x0000000189EEA36C-0x0000000189EEA388 0x0000000189EEA3D4-0x0000000189EEA3F0
-		public UpdateTimeManager.UpdateMode UpdateMode { get; set; } // 0x0000000189EEA350-0x0000000189EEA36C 0x0000000189EEA3B8-0x0000000189EEA3D4
-		public float FuturePredictionRate { get; set; } // 0x0000000189EEA1B8-0x0000000189EEA1D8 0x0000000189EEA388-0x0000000189EEA3B0
-		public UpdateTimeManager UpdateTime { get; } // 0x000000018385B100-0x000000018385B110 
-		public PhysicsManagerParticleData Particle { get; } // 0x0000000184A379B0-0x0000000184A379E0 
-		public PhysicsManagerBoneData Bone { get; } // 0x0000000183233960-0x0000000183233990 
-		public PhysicsManagerMeshData Mesh { get; } // 0x0000000183235430-0x00000001832354C0 
-		public PhysicsManagerTeamData Team { get; } // 0x00000001832354C0-0x0000000183235550 
-		public PhysicsManagerWindData Wind { get; } // 0x0000000184A37980-0x0000000184A379B0 
-		public PhysicsManagerComponent Component { get; } // 0x0000000183233E50-0x0000000183233E80 
-		public PhysicsManagerCompute Compute { get; } // 0x0000000183235C30-0x0000000183235E80 
-		public bool IsDelay { get; } // 0x0000000184D86F90-0x0000000184D86FA0 
-		public bool IsActive { get; set; } // 0x0000000184D88E50-0x0000000184D88E60 0x0000000189EEA3B0-0x0000000189EEA3B8
-		public bool IsFasterWrite { get; } // 0x0000000189EEA1D8-0x0000000189EEA28C 
-		internal ComputeShader MeshWriterShader { get; } // 0x0000000189EEA28C-0x0000000189EEA350 
+		public UpdateTimeManager.UpdateCount UpdatePerSeccond { get; set; } // 0x000000018C31F044-0x000000018C31F060 0x000000018C31F0AC-0x000000018C31F0C8
+		public UpdateTimeManager.UpdateMode UpdateMode { get; set; } // 0x000000018C31F028-0x000000018C31F044 0x000000018C31F090-0x000000018C31F0AC
+		public float FuturePredictionRate { get; set; } // 0x000000018C31EE90-0x000000018C31EEB0 0x000000018C31F060-0x000000018C31F088
+		public UpdateTimeManager UpdateTime { get; } // 0x0000000182234E30-0x0000000182234E40 
+		public PhysicsManagerParticleData Particle { get; } // 0x0000000185155400-0x0000000185155490 
+		public PhysicsManagerBoneData Bone { get; } // 0x0000000185153860-0x00000001851538F0 
+		public PhysicsManagerMeshData Mesh { get; } // 0x0000000185154C00-0x0000000185154C90 
+		public PhysicsManagerTeamData Team { get; } // 0x0000000185155490-0x0000000185155520 
+		public PhysicsManagerWindData Wind { get; } // 0x0000000185220290-0x00000001852202C0 
+		public PhysicsManagerComponent Component { get; } // 0x0000000185156F10-0x0000000185156F40 
+		public PhysicsManagerCompute Compute { get; } // 0x0000000185155370-0x0000000185155400 
+		public bool IsDelay { get; } // 0x000000018226EFA0-0x000000018226EFB0 
+		public bool IsActive { get; set; } // 0x0000000187235DA0-0x0000000187235DB0 0x000000018C31F088-0x000000018C31F090
+		public bool IsFasterWrite { get; } // 0x000000018C31EEB0-0x000000018C31EF64 
+		internal ComputeShader MeshWriterShader { get; } // 0x000000018C31EF64-0x000000018C31F028 
 	
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 54993
+		private sealed class __c // TypeDefIndex: 82040
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -419,75 +416,75 @@ namespace MagicaCloth
 			public static Predicate<PlayerLoopSystem> __9__69_10; // 0x90
 	
 			// Constructors
-			static __c(); // 0x0000000184D46B10-0x0000000184D46B70
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x00000001871E60E0-0x00000001871E6140
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _SetCustomGameLoop_b__69_11(); // 0x0000000183234FB0-0x0000000183235010
-			internal void _SetCustomGameLoop_b__69_12(); // 0x0000000183235010-0x0000000183235170
-			internal void _SetCustomGameLoop_b__69_13(); // 0x0000000183234DF0-0x0000000183234E60
-			internal void _SetCustomGameLoop_b__69_14(); // 0x0000000183234E60-0x0000000183234EB0
-			internal void _SetCustomGameLoop_b__69_15(); // 0x0000000183234EB0-0x0000000183234F00
-			internal void _SetCustomGameLoop_b__69_16(); // 0x0000000183234F00-0x0000000183234F50
-			internal void _SetCustomGameLoop_b__69_17(); // 0x0000000183234F50-0x0000000183234FB0
-			internal bool _SetCustomGameLoop_b__69_0(PlayerLoopSystem s); // 0x0000000184294250-0x00000001842942B0
-			internal bool _SetCustomGameLoop_b__69_1(PlayerLoopSystem s); // 0x0000000184294140-0x00000001842941A0
-			internal bool _SetCustomGameLoop_b__69_2(PlayerLoopSystem h); // 0x00000001842940D0-0x0000000184294140
-			internal bool _SetCustomGameLoop_b__69_3(PlayerLoopSystem s); // 0x0000000184294070-0x00000001842940D0
-			internal bool _SetCustomGameLoop_b__69_4(PlayerLoopSystem h); // 0x00000001842942B0-0x0000000184294320
-			internal bool _SetCustomGameLoop_b__69_5(PlayerLoopSystem s); // 0x0000000184294010-0x0000000184294070
-			internal bool _SetCustomGameLoop_b__69_6(PlayerLoopSystem h); // 0x0000000184293E70-0x0000000184293EE0
-			internal bool _SetCustomGameLoop_b__69_7(PlayerLoopSystem s); // 0x0000000184293FB0-0x0000000184294010
-			internal bool _SetCustomGameLoop_b__69_8(PlayerLoopSystem h); // 0x00000001842941A0-0x0000000184294210
-			internal bool _SetCustomGameLoop_b__69_9(PlayerLoopSystem s); // 0x0000000184293F50-0x0000000184293FB0
-			internal bool _SetCustomGameLoop_b__69_10(PlayerLoopSystem h); // 0x00000001845F40F0-0x00000001845F4160
+			internal void _SetCustomGameLoop_b__69_11(); // 0x0000000185153230-0x0000000185153290
+			internal void _SetCustomGameLoop_b__69_12(); // 0x00000001851538F0-0x0000000185153A20
+			internal void _SetCustomGameLoop_b__69_13(); // 0x0000000185152FC0-0x00000001851530E0
+			internal void _SetCustomGameLoop_b__69_14(); // 0x00000001851530E0-0x0000000185153130
+			internal void _SetCustomGameLoop_b__69_15(); // 0x0000000185153130-0x0000000185153180
+			internal void _SetCustomGameLoop_b__69_16(); // 0x0000000185153180-0x00000001851531D0
+			internal void _SetCustomGameLoop_b__69_17(); // 0x00000001851531D0-0x0000000185153230
+			internal bool _SetCustomGameLoop_b__69_0(PlayerLoopSystem s); // 0x0000000186672640-0x00000001866726A0
+			internal bool _SetCustomGameLoop_b__69_1(PlayerLoopSystem s); // 0x0000000186672530-0x0000000186672590
+			internal bool _SetCustomGameLoop_b__69_2(PlayerLoopSystem h); // 0x00000001866724C0-0x0000000186672530
+			internal bool _SetCustomGameLoop_b__69_3(PlayerLoopSystem s); // 0x0000000186672460-0x00000001866724C0
+			internal bool _SetCustomGameLoop_b__69_4(PlayerLoopSystem h); // 0x00000001866726A0-0x0000000186672710
+			internal bool _SetCustomGameLoop_b__69_5(PlayerLoopSystem s); // 0x0000000186672400-0x0000000186672460
+			internal bool _SetCustomGameLoop_b__69_6(PlayerLoopSystem h); // 0x00000001866722D0-0x0000000186672340
+			internal bool _SetCustomGameLoop_b__69_7(PlayerLoopSystem s); // 0x00000001866723A0-0x0000000186672400
+			internal bool _SetCustomGameLoop_b__69_8(PlayerLoopSystem h); // 0x0000000186672590-0x0000000186672600
+			internal bool _SetCustomGameLoop_b__69_9(PlayerLoopSystem s); // 0x0000000186672340-0x00000001866723A0
+			internal bool _SetCustomGameLoop_b__69_10(PlayerLoopSystem h); // 0x0000000186AEFD80-0x0000000186AEFDF0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass70_0 // TypeDefIndex: 54994
+		private sealed class __c__DisplayClass70_0 // TypeDefIndex: 82041
 		{
 			// Fields
 			public System.Type t; // 0x10
 			public Func<PlayerLoopSystem, bool> __9__0; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass70_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass70_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _CheckRegist_b__0(PlayerLoopSystem x); // 0x00000001844E7120-0x00000001844E7160
+			internal bool _CheckRegist_b__0(PlayerLoopSystem x); // 0x00000001869AE2A0-0x00000001869AE2E0
 		}
 	
 		// Constructors
-		public MagicaPhysicsManager(); // 0x00000001846D73A0-0x00000001846D7630
+		public MagicaPhysicsManager(); // 0x0000000186BA1860-0x0000000186BA1AF0
 	
 		// Methods
-		public void SetGlobalTimeScale(float timeScale); // 0x0000000189EEA18C-0x0000000189EEA1B8
-		public float GetGlobalTimeScale(); // 0x0000000189EEA030-0x0000000189EEA050
-		protected override void Awake(); // 0x0000000184D71DC0-0x0000000184D71E00
-		protected override void InitSingleton(); // 0x0000000184A378A0-0x0000000184A37980
-		protected override void DuplicateDetection(MagicaPhysicsManager duplicate); // 0x0000000189EE9FC4-0x0000000189EEA030
-		protected void OnEnable(); // 0x0000000184D84EB0-0x0000000184D84ED0
-		protected void OnDisable(); // 0x0000000189EEA158-0x0000000189EEA18C
-		private void Update(); // 0x0000000183FF1BE0-0x0000000183FF1C10
-		private void FixedUpdate(); // 0x0000000183E626F0-0x0000000183E62720
-		protected override void OnDestroy(); // 0x0000000189EEA050-0x0000000189EEA158
-		private void AfterEarlyUpdate(); // 0x0000000183233B20-0x0000000183233B60
-		private void AfterFixedUpdate(); // 0x0000000183235170-0x00000001832352A0
-		private void AfterUpdate(); // 0x0000000183233B60-0x0000000183233BA0
-		private void BeforeLateUpdate(); // 0x0000000183233990-0x00000001832339C0
-		private void AfterLateUpdate(); // 0x00000001832339C0-0x00000001832339F0
-		private void DefaultUpdate(); // 0x0000000183235550-0x0000000183235C30
-		private void PostLateUpdate(); // 0x0000000183233A50-0x0000000183233A70
-		private void AfterRendering(); // 0x00000001832339F0-0x0000000183233A20
+		public void SetGlobalTimeScale(float timeScale); // 0x000000018C31EE64-0x000000018C31EE90
+		public float GetGlobalTimeScale(); // 0x0000000185221910-0x0000000185221930
+		protected override void Awake(); // 0x0000000187216E20-0x0000000187216E60
+		protected override void InitSingleton(); // 0x0000000186FA54F0-0x0000000186FA55D0
+		protected override void DuplicateDetection(MagicaPhysicsManager duplicate); // 0x000000018C31ECBC-0x000000018C31ED28
+		protected void OnEnable(); // 0x0000000187231420-0x0000000187231440
+		protected void OnDisable(); // 0x000000018C31EE30-0x000000018C31EE64
+		private void Update(); // 0x0000000186320FE0-0x0000000186321010
+		private void FixedUpdate(); // 0x00000001861585A0-0x00000001861585D0
+		protected override void OnDestroy(); // 0x000000018C31ED28-0x000000018C31EE30
+		private void AfterEarlyUpdate(); // 0x0000000185156F40-0x0000000185156F80
+		private void AfterFixedUpdate(); // 0x0000000185153AB0-0x0000000185153BA0
+		private void AfterUpdate(); // 0x0000000185156E20-0x0000000185156F10
+		private void BeforeLateUpdate(); // 0x0000000185152BE0-0x0000000185152C10
+		private void AfterLateUpdate(); // 0x0000000185152C10-0x0000000185152C40
+		private void DefaultUpdate(); // 0x0000000185154C90-0x0000000185155370
+		private void PostLateUpdate(); // 0x0000000185152C70-0x0000000185152C90
+		private void AfterRendering(); // 0x0000000185152C40-0x0000000185152C70
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-		private static void Init(); // 0x0000000184D7D2E0-0x0000000184D7D310
+		private static void Init(); // 0x0000000187222960-0x0000000187222990
 		[RuntimeInitializeOnLoadMethod]
-		public static void InitCustomGameLoop(); // 0x0000000183FF1C10-0x0000000183FF1CB0
-		public static void SetCustomGameLoop(ref PlayerLoopSystem playerLoop); // 0x0000000183326620-0x0000000183327FC0
-		private static bool CheckRegist(ref PlayerLoopSystem playerLoop); // 0x0000000183324CC0-0x0000000183324E50
+		public static void InitCustomGameLoop(); // 0x0000000186321010-0x00000001863210B0
+		public static void SetCustomGameLoop(ref PlayerLoopSystem playerLoop); // 0x0000000185BBCD50-0x0000000185BBE6E0
+		private static bool CheckRegist(ref PlayerLoopSystem playerLoop); // 0x0000000185BBB3F0-0x0000000185BBB590
 	}
 
-	public abstract class WindComponent : BaseComponent // TypeDefIndex: 54996
+	public abstract class WindComponent : BaseComponent // TypeDefIndex: 82043
 	{
 		// Fields
 		[Range(0f, 100f)]
@@ -517,44 +514,44 @@ namespace MagicaCloth
 		protected RuntimeStatus status; // 0x50
 	
 		// Properties
-		public float Main { get; set; } // 0x0000000184D86380-0x0000000184D86390 0x0000000189EEB830-0x0000000189EEB870
-		public float Turbulence { get; set; } // 0x0000000184D868F0-0x0000000184D86900 0x0000000189EEB870-0x0000000189EEB89C
-		public float Frequency { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x0000000189EEB750-0x0000000189EEB77C
-		public Vector3 MainDirection { get; set; } // 0x0000000189EEB57C-0x0000000189EEB600 0x0000000189EEB77C-0x0000000189EEB830
-		public float DirectionAngleX { get; set; } // 0x0000000184D8E050-0x0000000184D8E060 0x0000000189EEB6E8-0x0000000189EEB70C
-		public float DirectionAngleY { get; set; } // 0x0000000184D88360-0x0000000184D88370 0x0000000189EEB70C-0x0000000189EEB730
-		public Vector3 AreaSize { get; set; } // 0x0000000184D905E0-0x0000000184D90600 0x0000000189EEB634-0x0000000189EEB6E8
-		public float AreaRadius { get; set; } // 0x0000000184D86E20-0x0000000184D86E30 0x0000000189EEB600-0x0000000189EEB634
-		public PhysicsManagerWindData.DirectionType DirectionType { get; set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000189EEB730-0x0000000189EEB750
-		internal RuntimeStatus Status { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public float Main { get; set; } // 0x0000000187233050-0x0000000187233060 0x000000018C320520-0x000000018C320560
+		public float Turbulence { get; set; } // 0x0000000187233410-0x0000000187233420 0x000000018C320560-0x000000018C32058C
+		public float Frequency { get; set; } // 0x00000001872332C0-0x00000001872332D0 0x000000018C320440-0x000000018C32046C
+		public Vector3 MainDirection { get; set; } // 0x000000018C32026C-0x000000018C3202F0 0x000000018C32046C-0x000000018C320520
+		public float DirectionAngleX { get; set; } // 0x000000018723CEF0-0x000000018723CF00 0x000000018C3203D8-0x000000018C3203FC
+		public float DirectionAngleY { get; set; } // 0x0000000187235380-0x0000000187235390 0x000000018C3203FC-0x000000018C320420
+		public Vector3 AreaSize { get; set; } // 0x000000018723E4F0-0x000000018723E510 0x000000018C320324-0x000000018C3203D8
+		public float AreaRadius { get; set; } // 0x0000000187233870-0x0000000187233880 0x000000018C3202F0-0x000000018C320324
+		public PhysicsManagerWindData.DirectionType DirectionType { get; set; } // 0x000000018226F000-0x000000018226F010 0x000000018C320420-0x000000018C320440
+		internal RuntimeStatus Status { get; } // 0x000000018226EBD0-0x000000018226EBE0 
 	
 		// Constructors
-		protected WindComponent(); // 0x0000000189EEB4A0-0x0000000189EEB57C
+		protected WindComponent(); // 0x000000018C320188-0x000000018C32026C
 	
 		// Methods
-		public void SetAttenuation(float sval, float eval, bool useEval = true /* Metadata: 0x02346869 */, float cval = 0f /* Metadata: 0x0234686A */, bool useCval = false /* Metadata: 0x0234686E */); // 0x0000000189EEB3EC-0x0000000189EEB434
-		protected virtual void Reset(); // 0x0000000189EEB3DC-0x0000000189EEB3EC
-		protected virtual void OnValidate(); // 0x0000000189EEB278-0x0000000189EEB354
-		private void OnDidApplyAnimationProperties(); // 0x0000000189EEB0D8-0x0000000189EEB108
-		protected virtual void Start(); // 0x0000000189EEB434-0x0000000189EEB43C
-		internal virtual void OnEnable(); // 0x0000000189EEB18C-0x0000000189EEB1C4
-		internal virtual void OnDisable(); // 0x0000000189EEB108-0x0000000189EEB140
-		protected virtual void OnDestroy(); // 0x0000000189EEB0AC-0x0000000189EEB0D8
-		protected virtual void Update(); // 0x0000000189EEB43C-0x0000000189EEB4A0
-		private void Init(); // 0x0000000189EEAF58-0x0000000189EEB0A4
-		protected void OnUpdateStatus(); // 0x0000000189EEB20C-0x0000000189EEB248
-		internal virtual bool VerifyData(); // 0x0000000182FFF600-0x0000000182FFF610
-		protected virtual void OnInit(); // 0x0000000189EEB1CC-0x0000000189EEB20C
-		protected virtual void OnDispose(); // 0x0000000189EEB140-0x0000000189EEB18C
-		protected virtual void OnUpdate(); // 0x0000000189EEB248-0x0000000189EEB278
-		protected virtual void OnActive(); // 0x0000000189EEB0A4-0x0000000189EEB0AC
-		protected virtual void OnInactive(); // 0x0000000189EEB1C4-0x0000000189EEB1CC
-		protected void EnableWind(); // 0x0000000189EEAE50-0x0000000189EEAEE0
-		protected void DisableWind(); // 0x0000000189EEADA4-0x0000000189EEAE50
-		private void RemoveWind(); // 0x0000000189EEB354-0x0000000189EEB3DC
-		private void CreateWind(); // 0x0000000189EEAB7C-0x0000000189EEADA4
-		internal Vector3 GetLocalDirection(); // 0x0000000189EEAEE0-0x0000000189EEAF58
-		private void ChangeParameter(); // 0x0000000189EEA994-0x0000000189EEAB7C
+		public void SetAttenuation(float sval, float eval, bool useEval = true /* Metadata: 0x02640905 */, float cval = 0f /* Metadata: 0x02640906 */, bool useCval = false /* Metadata: 0x0264090A */); // 0x000000018C3200D4-0x000000018C32011C
+		protected virtual void Reset(); // 0x000000018C3200C4-0x000000018C3200D4
+		protected virtual void OnValidate(); // 0x000000018C31FF60-0x000000018C32003C
+		private void OnDidApplyAnimationProperties(); // 0x000000018C31FDC0-0x000000018C31FDF0
+		protected virtual void Start(); // 0x000000018C32011C-0x000000018C320124
+		internal virtual void OnEnable(); // 0x000000018C31FE74-0x000000018C31FEAC
+		internal virtual void OnDisable(); // 0x000000018C31FDF0-0x000000018C31FE28
+		protected virtual void OnDestroy(); // 0x000000018C31FD94-0x000000018C31FDC0
+		protected virtual void Update(); // 0x000000018C320124-0x000000018C320188
+		private void Init(); // 0x000000018C31FC40-0x000000018C31FD8C
+		protected void OnUpdateStatus(); // 0x000000018C31FEF4-0x000000018C31FF30
+		internal virtual bool VerifyData(); // 0x00000001851A4410-0x00000001851A4420
+		protected virtual void OnInit(); // 0x000000018C31FEB4-0x000000018C31FEF4
+		protected virtual void OnDispose(); // 0x000000018C31FE28-0x000000018C31FE74
+		protected virtual void OnUpdate(); // 0x000000018C31FF30-0x000000018C31FF60
+		protected virtual void OnActive(); // 0x000000018C31FD8C-0x000000018C31FD94
+		protected virtual void OnInactive(); // 0x000000018C31FEAC-0x000000018C31FEB4
+		protected void EnableWind(); // 0x000000018C31FB34-0x000000018C31FBC8
+		protected void DisableWind(); // 0x000000018C31FA84-0x000000018C31FB34
+		private void RemoveWind(); // 0x000000018C32003C-0x000000018C3200C4
+		private void CreateWind(); // 0x000000018C31F858-0x000000018C31FA84
+		internal Vector3 GetLocalDirection(); // 0x000000018C31FBC8-0x000000018C31FC40
+		private void ChangeParameter(); // 0x000000018C31F66C-0x000000018C31F858
 		public abstract PhysicsManagerWindData.WindType GetWindType();
 		public abstract PhysicsManagerWindData.ShapeType GetShapeType();
 		public abstract PhysicsManagerWindData.DirectionType GetDirectionType();
@@ -564,22 +561,22 @@ namespace MagicaCloth
 		public abstract float GetAreaLength();
 		protected abstract void ResetParams();
 		[CompilerGenerated]
-		private object _Init_b__49_0(); // 0x000000018464E630-0x000000018464E640
+		private object _Init_b__49_0(); // 0x0000000185BD80B0-0x0000000185BD80C0
 	}
 
-	public abstract class MagicaAvatarAccess : IDisposable // TypeDefIndex: 54997
+	public abstract class MagicaAvatarAccess : IDisposable // TypeDefIndex: 82044
 	{
 		// Fields
 		protected MagicaAvatar owner; // 0x10
 	
 		// Properties
-		protected MagicaAvatarRuntime Runtime { get; } // 0x0000000189EE69FC-0x0000000189EE6A1C 
+		protected MagicaAvatarRuntime Runtime { get; } // 0x000000018C31B66C-0x000000018C31B68C 
 	
 		// Constructors
-		protected MagicaAvatarAccess(); // 0x00000001841E1670-0x00000001841E1680
+		protected MagicaAvatarAccess(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public void SetParent(MagicaAvatar avatar); // 0x00000001853908C0-0x00000001853908D0
+		public void SetParent(MagicaAvatar avatar); // 0x0000000184FD2410-0x0000000184FD2420
 		public abstract void Create();
 		public abstract void Dispose();
 		public abstract void Active();
@@ -588,7 +585,7 @@ namespace MagicaCloth
 
 	[AddComponentMenu("MagicaCloth/MagicaAvatarParts")]
 	[HelpURL("https://magicasoft.jp/avatar-parts/")]
-	public class MagicaAvatarParts : BaseComponent, IDataVerify // TypeDefIndex: 54998
+	public class MagicaAvatarParts : BaseComponent, IDataVerify // TypeDefIndex: 82045
 	{
 		// Fields
 		private MagicaAvatar parentAvatar; // 0x18
@@ -596,27 +593,27 @@ namespace MagicaCloth
 		private List<CoreComponent> magicaComponentList; // 0x28
 	
 		// Properties
-		public MagicaAvatar ParentAvatar { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		public bool HasParent { get; } // 0x0000000189EE74D4-0x0000000189EE7524 
-		public int PartsId { get; } // 0x0000000189EE7524-0x0000000189EE752C 
+		public MagicaAvatar ParentAvatar { get; set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		public bool HasParent { get; } // 0x000000018C31C15C-0x000000018C31C1AC 
+		public int PartsId { get; } // 0x000000018C31C1AC-0x000000018C31C1B4 
 	
 		// Constructors
-		public MagicaAvatarParts(); // 0x0000000189EE7454-0x0000000189EE74D4
+		public MagicaAvatarParts(); // 0x000000018C31C0DC-0x000000018C31C15C
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3380-0x0000000184DA3390
-		private void OnDestroy(); // 0x0000000189EE73E4-0x0000000189EE73EC
-		public void Dispose(); // 0x0000000189EE6C34-0x0000000189EE6CC0
-		public List<Transform> CheckOverlappingTransform(); // 0x0000000189EE6A1C-0x0000000189EE6BE8
-		public Dictionary<string, Transform> GetBoneDict(); // 0x0000000189EE6CC0-0x0000000189EE6E80
-		public List<CoreComponent> GetMagicaComponentList(); // 0x0000000189EE7338-0x0000000189EE73E4
-		public int GetVersion(); // 0x0000000184D85B80-0x0000000184D85B90
-		public void CreateVerifyData(); // 0x0000000189EE6BE8-0x0000000189EE6C34
-		public Define.Error VerifyData(); // 0x0000000189EE73EC-0x0000000189EE7454
-		public string GetInformation(); // 0x0000000189EE6E80-0x0000000189EE7338
+		public override ComponentType GetComponentType(); // 0x0000000187250F60-0x0000000187250F70
+		private void OnDestroy(); // 0x000000018C31C06C-0x000000018C31C074
+		public void Dispose(); // 0x000000018C31B8B4-0x000000018C31B944
+		public List<Transform> CheckOverlappingTransform(); // 0x000000018C31B68C-0x000000018C31B868
+		public Dictionary<string, Transform> GetBoneDict(); // 0x000000018C31B944-0x000000018C31BB04
+		public List<CoreComponent> GetMagicaComponentList(); // 0x000000018C31BFC0-0x000000018C31C06C
+		public int GetVersion(); // 0x00000001872328C0-0x00000001872328D0
+		public void CreateVerifyData(); // 0x000000018C31B868-0x000000018C31B8B4
+		public Define.Error VerifyData(); // 0x000000018C31C074-0x000000018C31C0DC
+		public string GetInformation(); // 0x000000018C31BB04-0x000000018C31BFC0
 	}
 
-	public class MagicaAvatarRuntime : MagicaAvatarAccess // TypeDefIndex: 55000
+	public class MagicaAvatarRuntime : MagicaAvatarAccess // TypeDefIndex: 82047
 	{
 		// Fields
 		private Dictionary<string, Transform> boneDict; // 0x18
@@ -625,45 +622,45 @@ namespace MagicaCloth
 		private List<ColliderComponent> colliderList; // 0x30
 	
 		// Properties
-		public int AvatarPartsCount { get; } // 0x0000000189EE955C-0x0000000189EE959C 
+		public int AvatarPartsCount { get; } // 0x000000018C31E224-0x000000018C31E264 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 54999
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 82046
 		{
 			// Fields
 			public int partsId; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass20_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _RemoveAvatarParts_b__0(MagicaAvatarParts p); // 0x0000000189EEA7D8-0x0000000189EEA808
+			internal bool _RemoveAvatarParts_b__0(MagicaAvatarParts p); // 0x000000018C31F4B0-0x000000018C31F4E0
 		}
 	
 		// Constructors
-		public MagicaAvatarRuntime(); // 0x0000000189EE9404-0x0000000189EE955C
+		public MagicaAvatarRuntime(); // 0x000000018C31E0CC-0x000000018C31E224
 	
 		// Methods
-		public override void Create(); // 0x0000000189EE8870-0x0000000189EE8890
-		public override void Dispose(); // 0x00000001841E1670-0x00000001841E1680
-		public override void Active(); // 0x00000001841E1670-0x00000001841E1680
-		public override void Inactive(); // 0x00000001841E1670-0x00000001841E1680
-		public MagicaAvatarParts GetAvatarParts(int index); // 0x0000000189EE8890-0x0000000189EE88E4
-		private void CreateBoneDict(); // 0x0000000189EE8650-0x0000000189EE87F8
-		private void CreateColliderList(); // 0x0000000189EE87F8-0x0000000189EE8870
-		public int GetColliderCount(); // 0x0000000189EE88E4-0x0000000189EE8950
-		public List<Transform> CheckOverlappingTransform(); // 0x0000000189EE8474-0x0000000189EE8650
-		public int AddAvatarParts(MagicaAvatarParts parts); // 0x0000000189EE752C-0x0000000189EE81A8
-		private void AddBone(Transform root, Transform croot, Transform bone); // 0x0000000189EE81A8-0x0000000189EE8474
-		private void ReplaceSkinMeshRenderer(SkinnedMeshRenderer skinRenderer, Dictionary<Transform, Transform> boneReplaceDict); // 0x0000000189EE9310-0x0000000189EE9404
-		private void ReplaceMagicaComponent(CoreComponent comp, Dictionary<Transform, Transform> boneReplaceDict); // 0x0000000189EE92BC-0x0000000189EE9310
-		public void RemoveAvatarParts(MagicaAvatarParts parts); // 0x0000000189EE8950-0x0000000189EE91E0
-		public void RemoveAvatarParts(int partsId); // 0x0000000189EE91E0-0x0000000189EE92BC
+		public override void Create(); // 0x000000018C31D528-0x000000018C31D548
+		public override void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Active(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Inactive(); // 0x0000000186805BA0-0x0000000186805BB0
+		public MagicaAvatarParts GetAvatarParts(int index); // 0x000000018C31D548-0x000000018C31D59C
+		private void CreateBoneDict(); // 0x000000018C31D308-0x000000018C31D4B0
+		private void CreateColliderList(); // 0x000000018C31D4B0-0x000000018C31D528
+		public int GetColliderCount(); // 0x000000018C31D59C-0x000000018C31D608
+		public List<Transform> CheckOverlappingTransform(); // 0x000000018C31D118-0x000000018C31D308
+		public int AddAvatarParts(MagicaAvatarParts parts); // 0x000000018C31C1B4-0x000000018C31CE4C
+		private void AddBone(Transform root, Transform croot, Transform bone); // 0x000000018C31CE4C-0x000000018C31D118
+		private void ReplaceSkinMeshRenderer(SkinnedMeshRenderer skinRenderer, Dictionary<Transform, Transform> boneReplaceDict); // 0x000000018C31DFD8-0x000000018C31E0CC
+		private void ReplaceMagicaComponent(CoreComponent comp, Dictionary<Transform, Transform> boneReplaceDict); // 0x000000018C31DF84-0x000000018C31DFD8
+		public void RemoveAvatarParts(MagicaAvatarParts parts); // 0x000000018C31D608-0x000000018C31DEA8
+		public void RemoveAvatarParts(int partsId); // 0x000000018C31DEA8-0x000000018C31DF84
 	}
 
 	[Serializable]
-	public class BoneClothTarget : IDataHash, IBoneReplace // TypeDefIndex: 55002
+	public class BoneClothTarget : IDataHash, IBoneReplace // TypeDefIndex: 82049
 	{
 		// Fields
 		[SerializeField]
@@ -676,13 +673,13 @@ namespace MagicaCloth
 		private int[] parentIndexList; // 0x20
 	
 		// Properties
-		public int RootCount { get; } // 0x0000000189ED893C-0x0000000189ED897C 
-		public ConnectionMode Connection { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
-		public float SameSurfaceAngle { get; } // 0x0000000184D868F0-0x0000000184D86900 
-		public bool IsMeshConnection { get; } // 0x0000000189ED8924-0x0000000189ED893C 
+		public int RootCount { get; } // 0x000000018C30E644-0x000000018C30E684 
+		public ConnectionMode Connection { get; } // 0x00000001844AF510-0x00000001844AF520 
+		public float SameSurfaceAngle { get; } // 0x0000000187233410-0x0000000187233420 
+		public bool IsMeshConnection { get; } // 0x000000018C30E62C-0x000000018C30E644 
 	
 		// Nested types
-		public enum ConnectionMode // TypeDefIndex: 55001
+		public enum ConnectionMode // TypeDefIndex: 82048
 		{
 			Line = 0,
 			MeshAutomatic = 1,
@@ -691,28 +688,28 @@ namespace MagicaCloth
 		}
 	
 		// Constructors
-		public BoneClothTarget(); // 0x0000000189ED88CC-0x0000000189ED8924
+		public BoneClothTarget(); // 0x00000001855E03C0-0x00000001855E0420
 	
 		// Methods
-		public int GetDataHash(); // 0x0000000189ED85F8-0x0000000189ED8634
-		public Transform GetRoot(int index); // 0x0000000189ED8688-0x0000000189ED86F4
-		public int GetRootIndex(Transform root); // 0x0000000189ED8634-0x0000000189ED8688
-		public void AddParentTransform(); // 0x0000000189ED81D4-0x0000000189ED8538
-		public void RemoveParentTransform(); // 0x0000000189ED8768-0x0000000189ED881C
-		public void ResetFuturePredictionParentTransform(); // 0x0000000189ED881C-0x0000000189ED88CC
-		public void ChangeUnityPhysicsCount(bool sw); // 0x0000000189ED8538-0x0000000189ED85F8
+		public int GetDataHash(); // 0x000000018C30E404-0x000000018C30E440
+		public Transform GetRoot(int index); // 0x000000018C30E494-0x000000018C30E500
+		public int GetRootIndex(Transform root); // 0x000000018C30E440-0x000000018C30E494
+		public void AddParentTransform(); // 0x0000000185223FE0-0x00000001852244A0
+		public void RemoveParentTransform(); // 0x00000001867F6560-0x00000001867F6630
+		public void ResetFuturePredictionParentTransform(); // 0x000000018C30E574-0x000000018C30E62C
+		public void ChangeUnityPhysicsCount(bool sw); // 0x000000018C30E33C-0x000000018C30E404
 		public void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
-		public HashSet<Transform> GetUsedBones(); // 0x0000000189ED86F4-0x0000000189ED8768
+		public HashSet<Transform> GetUsedBones(); // 0x000000018C30E500-0x000000018C30E574
 	}
 
 	[Serializable]
-	public class ClothData : ShareDataObject // TypeDefIndex: 55011
+	public class ClothData : ShareDataObject // TypeDefIndex: 82058
 	{
 		// Fields
-		private const int DATA_VERSION = 5; // Metadata: 0x02346873
-		public const uint VertexFlag_End = 65536; // Metadata: 0x02346874
-		public const uint VertexFlag_TriangleRotation = 131072; // Metadata: 0x02346878
+		private const int DATA_VERSION = 5; // Metadata: 0x0264090F
+		public const uint VertexFlag_End = 65536; // Metadata: 0x02640910
+		public const uint VertexFlag_TriangleRotation = 131072; // Metadata: 0x02640914
 		public ClothParams.Algorithm triangleBendAlgorithm; // 0x20
 		public ClothParams.Algorithm restoreRotationAlgorithm; // 0x24
 		public ClothParams.Algorithm clampRotationAlgorithm; // 0x28
@@ -764,48 +761,48 @@ namespace MagicaCloth
 		public Vector3 initScale; // 0x198
 	
 		// Properties
-		public int VertexUseCount { get; } // 0x0000000189EE45A0-0x0000000189EE45BC 
-		public int StructDistanceConstraintCount { get; } // 0x0000000189EE4544-0x0000000189EE4558 
-		public int BendDistanceConstraintCount { get; } // 0x0000000189EE4420-0x0000000189EE4434 
-		public int NearDistanceConstraintCount { get; } // 0x0000000189EE44DC-0x0000000189EE44F4 
-		public int ClampDistanceConstraintCount { get; } // 0x0000000189EE444C-0x0000000189EE4464 
-		public int ClampDistance2ConstraintCount { get; } // 0x0000000189EE4434-0x0000000189EE444C 
-		public int RestoreRotationConstraintCount { get; } // 0x0000000189EE452C-0x0000000189EE4544 
-		public int ClampRotationConstraintDataCount { get; } // 0x0000000189EE4464-0x0000000189EE447C 
-		public int ClampRotationConstraintRootCount { get; } // 0x0000000189EE447C-0x0000000189EE4494 
-		public int AdjustRotationConstraintCount { get; } // 0x0000000189EE43F0-0x0000000189EE4408 
-		public int CompositeRotationCount { get; } // 0x0000000189EE4494-0x0000000189EE44AC 
-		public int TwistConstraintCount { get; } // 0x0000000189EE4588-0x0000000189EE45A0 
-		public int TriangleBendConstraintCount { get; } // 0x0000000189EE4558-0x0000000189EE4570 
-		public int EdgeCollisionConstraintCount { get; } // 0x0000000189EE44AC-0x0000000189EE44C4 
-		public int VolumeConstraintCount { get; } // 0x0000000189EE45BC-0x0000000189EE45D4 
-		public int LineRotationWorkerCount { get; } // 0x0000000189EE44C4-0x0000000189EE44DC 
-		public int TriangleRotationWorkerCount { get; } // 0x0000000189EE4570-0x0000000189EE4588 
-		public int PenetrationCount { get; } // 0x0000000189EE44F4-0x0000000189EE452C 
-		public int BaseSkinningCount { get; } // 0x0000000189EE4408-0x0000000189EE4420 
+		public int VertexUseCount { get; } // 0x00000001852234A0-0x00000001852234C0 
+		public int StructDistanceConstraintCount { get; } // 0x00000001852233D0-0x00000001852233F0 
+		public int BendDistanceConstraintCount { get; } // 0x000000018C319EF0-0x000000018C319F04 
+		public int NearDistanceConstraintCount { get; } // 0x000000018C319F7C-0x000000018C319F94 
+		public int ClampDistanceConstraintCount { get; } // 0x00000001852233B0-0x00000001852233D0 
+		public int ClampDistance2ConstraintCount { get; } // 0x000000018C319F04-0x000000018C319F1C 
+		public int RestoreRotationConstraintCount { get; } // 0x000000018C319FCC-0x000000018C319FE4 
+		public int ClampRotationConstraintDataCount { get; } // 0x000000018C319F1C-0x000000018C319F34 
+		public int ClampRotationConstraintRootCount { get; } // 0x000000018C319F34-0x000000018C319F4C 
+		public int AdjustRotationConstraintCount { get; } // 0x000000018C319EC0-0x000000018C319ED8 
+		public int CompositeRotationCount { get; } // 0x0000000185223390-0x00000001852233B0 
+		public int TwistConstraintCount { get; } // 0x0000000185223370-0x0000000185223390 
+		public int TriangleBendConstraintCount { get; } // 0x0000000186EA8340-0x0000000186EA8360 
+		public int EdgeCollisionConstraintCount { get; } // 0x000000018C319F4C-0x000000018C319F64 
+		public int VolumeConstraintCount { get; } // 0x000000018C319FFC-0x000000018C31A014 
+		public int LineRotationWorkerCount { get; } // 0x000000018C319F64-0x000000018C319F7C 
+		public int TriangleRotationWorkerCount { get; } // 0x000000018C319FE4-0x000000018C319FFC 
+		public int PenetrationCount { get; } // 0x000000018C319F94-0x000000018C319FCC 
+		public int BaseSkinningCount { get; } // 0x000000018C319ED8-0x000000018C319EF0 
 	
 		// Nested types
-		private class RestoreDistanceWork // TypeDefIndex: 55003
+		private class RestoreDistanceWork // TypeDefIndex: 82050
 		{
 			// Fields
 			public uint vertexPair; // 0x10
 			public float dist; // 0x14
 	
 			// Constructors
-			public RestoreDistanceWork(); // 0x00000001841E1670-0x00000001841E1680
+			public RestoreDistanceWork(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private class PenetrationBone // TypeDefIndex: 55004
+		private class PenetrationBone // TypeDefIndex: 82051
 		{
 			// Fields
 			public Transform bone; // 0x10
 			public Transform childBone; // 0x18
 	
 			// Constructors
-			public PenetrationBone(); // 0x00000001841E1670-0x00000001841E1680
+			public PenetrationBone(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private class PenetrationWork // TypeDefIndex: 55005
+		private class PenetrationWork // TypeDefIndex: 82052
 		{
 			// Fields
 			public Transform bone; // 0x10
@@ -815,10 +812,10 @@ namespace MagicaCloth
 			public float weight; // 0x28
 	
 			// Constructors
-			public PenetrationWork(); // 0x00000001841E1670-0x00000001841E1680
+			public PenetrationWork(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private class VertexInfo // TypeDefIndex: 55006
+		private class VertexInfo // TypeDefIndex: 82053
 		{
 			// Fields
 			public int vertexIndex; // 0x10
@@ -828,12 +825,12 @@ namespace MagicaCloth
 			public List<VertexInfo> childInfoList; // 0x28
 	
 			// Constructors
-			public VertexInfo(); // 0x0000000189EEA8D0-0x0000000189EEA994
+			public VertexInfo(); // 0x000000018C31F5A8-0x000000018C31F66C
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 55007
+		private sealed class __c // TypeDefIndex: 82054
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -842,88 +839,88 @@ namespace MagicaCloth
 			public static Comparison<PenetrationConstraint.PenetrationData> __9__108_2; // 0x18
 	
 			// Constructors
-			static __c(); // 0x0000000189EEA86C-0x0000000189EEA8D0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C31F544-0x000000018C31F5A8
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _CreateConstraintData_b__108_0(RestoreDistanceWork a, RestoreDistanceWork b); // 0x0000000189EEA3F0-0x0000000189EEA420
-			internal int _CreateConstraintData_b__108_1(RestoreDistanceWork a, RestoreDistanceWork b); // 0x0000000189EEA3F0-0x0000000189EEA420
-			internal int _CreateConstraintData_b__108_2(PenetrationConstraint.PenetrationData a, PenetrationConstraint.PenetrationData b); // 0x0000000189EEA420-0x0000000189EEA438
+			internal int _CreateConstraintData_b__108_0(RestoreDistanceWork a, RestoreDistanceWork b); // 0x000000018C31F0C8-0x000000018C31F0F8
+			internal int _CreateConstraintData_b__108_1(RestoreDistanceWork a, RestoreDistanceWork b); // 0x000000018C31F0C8-0x000000018C31F0F8
+			internal int _CreateConstraintData_b__108_2(PenetrationConstraint.PenetrationData a, PenetrationConstraint.PenetrationData b); // 0x000000018C31F0F8-0x000000018C31F110
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass110_0 // TypeDefIndex: 55008
+		private sealed class __c__DisplayClass110_0 // TypeDefIndex: 82055
 		{
 			// Fields
 			public List<float> meshVertexDepthList; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass110_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass110_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _SortTetra_b__0(int a, int b); // 0x0000000189EEA484-0x0000000189EEA520
+			internal int _SortTetra_b__0(int a, int b); // 0x000000018C31F15C-0x000000018C31F1F8
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass111_0 // TypeDefIndex: 55009
+		private sealed class __c__DisplayClass111_0 // TypeDefIndex: 82056
 		{
 			// Fields
 			public List<float> meshVertexDepthList; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass111_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass111_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _CheckTetraDirection_b__0(ulong a, ulong b); // 0x0000000189EEA520-0x0000000189EEA6CC
+			internal int _CheckTetraDirection_b__0(ulong a, ulong b); // 0x000000018C31F1F8-0x000000018C31F3A4
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass114_0 // TypeDefIndex: 55010
+		private sealed class __c__DisplayClass114_0 // TypeDefIndex: 82057
 		{
 			// Fields
 			public List<float> depthList; // 0x10
 			public List<float> nearFixedDistList; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass114_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass114_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _GetUseParentVertexList_b__0(int a, int b); // 0x0000000189EEA6CC-0x0000000189EEA7D8
+			internal int _GetUseParentVertexList_b__0(int a, int b); // 0x000000018C31F3A4-0x000000018C31F4B0
 		}
 	
 		// Constructors
-		public ClothData(); // 0x0000000189EE4298-0x0000000189EE43F0
+		public ClothData(); // 0x00000001866F1F10-0x00000001866F2070
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EE1C58-0x0000000189EE2108
-		public int GetClampRotationCount(); // 0x0000000189EE1C1C-0x0000000189EE1C58
-		public int GetRestoreRotationCount(); // 0x0000000189EE2278-0x0000000189EE22B4
-		public bool IsInvalidVertex(int vindex); // 0x0000000189EE39B4-0x0000000189EE3A0C
-		public bool IsFixedVertex(int vindex); // 0x0000000189EE3958-0x0000000189EE3984
-		public bool IsMoveVertex(int vindex); // 0x0000000189EE3A1C-0x0000000189EE3A78
-		public bool IsExtendVertex(int vindex); // 0x0000000189EE392C-0x0000000189EE3958
-		public bool IsLastLevel(int vindex); // 0x0000000189EE3A0C-0x0000000189EE3A1C
-		public bool IsFlag(int vindex, uint flag); // 0x0000000189EE3984-0x0000000189EE39B4
-		public void SetFlag(int vindex, uint flag); // 0x0000000189EE3FEC-0x0000000189EE4070
-		public int GetLevel(int vindex); // 0x0000000189EE2108-0x0000000189EE2160
-		public override int GetVersion(); // 0x0000000184D9EC50-0x0000000184D9EC60
-		public override Define.Error VerifyData(); // 0x0000000189EE41F0-0x0000000189EE4298
-		public void CreateData(PhysicsTeam team, ClothParams clothParams, PhysicsTeamData teamData, MeshData meshData, IEditorMesh editMesh, List<int> selData, Action<List<int>, List<int>, List<Vector3>, List<Vector3>, List<Vector3>, List<int>, List<int>> extensionAction = null); // 0x0000000189EE12FC-0x0000000189EE1544
-		private void CreateVertexData(int vertexCount, List<int> lineList, List<int> triangleList); // 0x0000000189EE1544-0x0000000189EE1C1C
-		private void CreateConstraintData(PhysicsTeam team, ClothParams clothParams, PhysicsTeamData teamData, int vertexCount, List<Vector3> wposList, List<Vector3> wnorList, List<Vector3> wtanList, List<int> lineList, List<int> triangleList); // 0x0000000189ED9088-0x0000000189EE12FC
-		private void RegistTriangleBend(int v0, int v1, int v2, int v3, List<Vector3> wposList, ClothParams clothParams, List<TriangleBendConstraint.TriangleBendData> triangleBendData); // 0x0000000189EE3A78-0x0000000189EE3FEC
-		private List<int> SortTetra(int v0, int v1, int v2, int v3, List<float> meshVertexDepthList); // 0x0000000189EE4070-0x0000000189EE41F0
-		private List<int> CheckTetraDirection(int v0, int v1, int v2, int v3, HashSet<ulong> trianglePackSet, List<float> meshVertexDepthList); // 0x0000000189ED8C44-0x0000000189ED9088
-		private bool CalcTriangleBendRestAngle(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, out float restAngle); // 0x0000000189ED897C-0x0000000189ED8C44
-		private List<float> GetMeshVertexDepthList(int vertexCount, List<float> depthList); // 0x0000000189EE2160-0x0000000189EE2278
-		private List<int> GetUseParentVertexList(int vertexCount, List<HashSet<int>> vlink, List<Vector3> wposList, List<float> depthList); // 0x0000000189EE22B4-0x0000000189EE314C
-		private List<int> GetUseRootVertexList(List<int> parentVertexList); // 0x0000000189EE364C-0x0000000189EE3748
-		private List<VertexInfo> GetUseVertexInfoList(List<int> parentVertexList); // 0x0000000189EE3748-0x0000000189EE392C
-		private List<List<int>> GetUseRootLineList(List<int> parentVertexList); // 0x0000000189EE314C-0x0000000189EE364C
+		public override int GetDataHash(); // 0x000000018C317994-0x000000018C317E44
+		public int GetClampRotationCount(); // 0x000000018C317958-0x000000018C317994
+		public int GetRestoreRotationCount(); // 0x000000018C317FB4-0x000000018C317FF0
+		public bool IsInvalidVertex(int vindex); // 0x000000018C31967C-0x000000018C3196D4
+		public bool IsFixedVertex(int vindex); // 0x00000001853CE440-0x00000001853CE470
+		public bool IsMoveVertex(int vindex); // 0x000000018C3196E4-0x000000018C319740
+		public bool IsExtendVertex(int vindex); // 0x00000001853CDCC0-0x00000001853CDCF0
+		public bool IsLastLevel(int vindex); // 0x000000018C3196D4-0x000000018C3196E4
+		public bool IsFlag(int vindex, uint flag); // 0x00000001853CE380-0x00000001853CE3C0
+		public void SetFlag(int vindex, uint flag); // 0x000000018C319CBC-0x000000018C319D40
+		public int GetLevel(int vindex); // 0x000000018C317E44-0x000000018C317E9C
+		public override int GetVersion(); // 0x0000000187239C70-0x0000000187239C80
+		public override Define.Error VerifyData(); // 0x00000001852233F0-0x00000001852234A0
+		public void CreateData(PhysicsTeam team, ClothParams clothParams, PhysicsTeamData teamData, MeshData meshData, IEditorMesh editMesh, List<int> selData, Action<List<int>, List<int>, List<Vector3>, List<Vector3>, List<Vector3>, List<int>, List<int>> extensionAction = null); // 0x000000018C317010-0x000000018C317264
+		private void CreateVertexData(int vertexCount, List<int> lineList, List<int> triangleList); // 0x000000018C317264-0x000000018C317958
+		private void CreateConstraintData(PhysicsTeam team, ClothParams clothParams, PhysicsTeamData teamData, int vertexCount, List<Vector3> wposList, List<Vector3> wnorList, List<Vector3> wtanList, List<int> lineList, List<int> triangleList); // 0x000000018C30ED90-0x000000018C317010
+		private void RegistTriangleBend(int v0, int v1, int v2, int v3, List<Vector3> wposList, ClothParams clothParams, List<TriangleBendConstraint.TriangleBendData> triangleBendData); // 0x000000018C319740-0x000000018C319CBC
+		private List<int> SortTetra(int v0, int v1, int v2, int v3, List<float> meshVertexDepthList); // 0x000000018C319D40-0x000000018C319EC0
+		private List<int> CheckTetraDirection(int v0, int v1, int v2, int v3, HashSet<ulong> trianglePackSet, List<float> meshVertexDepthList); // 0x000000018C30E94C-0x000000018C30ED90
+		private bool CalcTriangleBendRestAngle(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, out float restAngle); // 0x000000018C30E684-0x000000018C30E94C
+		private List<float> GetMeshVertexDepthList(int vertexCount, List<float> depthList); // 0x000000018C317E9C-0x000000018C317FB4
+		private List<int> GetUseParentVertexList(int vertexCount, List<HashSet<int>> vlink, List<Vector3> wposList, List<float> depthList); // 0x000000018C317FF0-0x000000018C318E84
+		private List<int> GetUseRootVertexList(List<int> parentVertexList); // 0x000000018C31939C-0x000000018C319498
+		private List<VertexInfo> GetUseVertexInfoList(List<int> parentVertexList); // 0x000000018C319498-0x000000018C31967C
+		private List<List<int>> GetUseRootLineList(List<int> parentVertexList); // 0x000000018C318E84-0x000000018C31939C
 	}
 
 	[Serializable]
-	public class ClothParams // TypeDefIndex: 55018
+	public class ClothParams // TypeDefIndex: 82065
 	{
 		// Fields
 		[SerializeField]
@@ -1111,74 +1108,74 @@ namespace MagicaCloth
 		private HashSet<ParamType> changeSet; // 0x220
 	
 		// Properties
-		public Algorithm AlgorithmType { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-		public bool UseGravity { get; } // 0x00000001811F33C0-0x00000001811F33D0 
-		public Vector3 GravityDirection { get; set; } // 0x0000000184D9E700-0x0000000184D9E720 0x0000000184D9DB00-0x0000000184D9DB10
-		public bool UseDrag { get; } // 0x0000000184D86A30-0x0000000184D86A40 
-		public bool UseMaxVelocity { get; } // 0x0000000184D86800-0x0000000184D86810 
-		public float MassInfluence { get; set; } // 0x0000000184D88E60-0x0000000184D88E70 0x0000000184D8E240-0x0000000184D8E250
-		public float WindInfluence { get; set; } // 0x0000000184D8FD30-0x0000000184D8FD40 0x0000000184D8FD60-0x0000000184D8FD70
-		public float WindRandomScale { get; set; } // 0x0000000184D8F070-0x0000000184D8F080 0x0000000184D8F0A0-0x0000000184D8F0B0
-		public float WindSynchronization { get; set; } // 0x0000000184D8E570-0x0000000184D8E580 0x0000000184D8E590-0x0000000184D8E5A0
-		public float MaxMoveSpeed { get; set; } // 0x0000000184D8F060-0x0000000184D8F070 0x0000000184D8F090-0x0000000184D8F0A0
-		public float MaxRotationSpeed { get; set; } // 0x0000000184DA3230-0x0000000184DA3240 0x0000000184DA3330-0x0000000184DA3340
-		public bool UseResetTeleport { get; set; } // 0x0000000184D88CC0-0x0000000184D88CD0 0x0000000184D88D20-0x0000000184D88D30
-		public float TeleportDistance { get; set; } // 0x0000000184DA32B0-0x0000000184DA32C0 0x0000000184DA3350-0x0000000184DA3360
-		public float TeleportRotation { get; set; } // 0x0000000184DA32D0-0x0000000184DA32E0 0x0000000184D87E30-0x0000000184D87E40
-		public TeleportMode TeleportResetMode { get; set; } // 0x0000000184DA32C0-0x0000000184DA32D0 0x0000000184DA3360-0x0000000184DA3370
-		public float ResetStabilizationTime { get; set; } // 0x0000000184D9DF30-0x0000000184D9DF40 0x0000000184D9DFF0-0x0000000184D9E000
-		public bool UseDistanceDisable { get; set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
-		public Transform DisableReferenceObject { get; set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000185391334-0x0000000185391348
-		public float DisableDistance { get; set; } // 0x0000000184D8E650-0x0000000184D8E660 0x0000000184D8E680-0x0000000184D8E690
-		public float DisableFadeDistance { get; set; } // 0x0000000184D8E660-0x0000000184D8E670 0x0000000184D8E690-0x0000000184D8E6A0
-		public bool UseClampDistanceRatio { get; } // 0x0000000184DA32F0-0x0000000184DA3300 
-		public float ClampDistanceMinRatio { get; } // 0x0000000189EE5BEC-0x0000000189EE5C04 
-		public float ClampDistanceMaxRatio { get; } // 0x0000000189EE5BD4-0x0000000189EE5BEC 
-		public float ClampDistanceVelocityInfluence { get; } // 0x0000000189EE5C04-0x0000000189EE5C20 
-		public bool UseClampPositionLength { get; } // 0x0000000184DA2990-0x0000000184DA29A0 
-		public Vector3 ClampPositionAxisRatio { get; } // 0x0000000184DA3210-0x0000000184DA3230 
-		public float ClampPositionVelocityInfluence { get; } // 0x0000000189EE5C20-0x0000000189EE5C3C 
-		public bool UseClampRotation { get; } // 0x0000000184D8E520-0x0000000184D8E530 
-		public float ClampRotationVelocityInfluence { get; } // 0x0000000189EE5C3C-0x0000000189EE5C58 
-		public float RestoreDistanceVelocityInfluence { get; } // 0x0000000184D8E170-0x0000000184D8E180 
-		public bool UseBendDistance { get; } // 0x0000000184D8FE70-0x0000000184D8FE80 
-		public int BendDistanceMaxCount { get; } // 0x0000000184D90A80-0x0000000184D90A90 
-		public bool UseNearDistance { get; } // 0x0000000184D92620-0x0000000184D92630 
-		public int NearDistanceMaxCount { get; } // 0x0000000184DA3240-0x0000000184DA3250 
-		public float NearDistanceMaxDepth { get; } // 0x0000000184DA3250-0x0000000184DA3260 
-		public bool UseRestoreRotation { get; } // 0x0000000184DA2F60-0x0000000184DA2F70 
-		public bool UseSpring { get; set; } // 0x0000000184D905A0-0x0000000184D905B0 0x0000000184D905B0-0x0000000184D905C0
-		public float SpringPowr { get; set; } // 0x0000000184DA3270-0x0000000184DA3280 0x0000000184DA3340-0x0000000184DA3350
-		public float SpringRadius { get; } // 0x0000000184D902D0-0x0000000184D902E0 
-		public Vector3 SpringRadiusScale { get; } // 0x0000000184DA3280-0x0000000184DA32A0 
-		public float SpringIntensity { get; } // 0x0000000184DA3260-0x0000000184DA3270 
-		public AdjustMode AdjustRotationMode { get; } // 0x0000000184DA3200-0x0000000184DA3210 
-		public Vector3 AdjustRotationVector { get; } // 0x0000000189EE5B80-0x0000000189EE5BD4 
-		public bool UseTriangleBend { get; } // 0x0000000184DA3310-0x0000000184DA3320 
-		internal float TwistRecoveryPower { get; } // 0x0000000184DA32E0-0x0000000184DA32F0 
-		public bool UseVolume { get; } // 0x0000000184DA3320-0x0000000184DA3330 
-		public bool UseCollision { get; } // 0x0000000184D91ED0-0x0000000184D91EE0 
-		public float DynamicFriction { get; } // 0x0000000184D90D10-0x0000000184D90D20 
-		public float StaticFriction { get; } // 0x0000000184DA32A0-0x0000000184DA32B0 
-		public bool UsePenetration { get; set; } // 0x0000000184D90680-0x0000000184D90690 0x0000000184D90690-0x0000000184D906A0
-		public float PenetrationMaxDepth { get; } // 0x0000000184D911D0-0x0000000184D911E0 
-		public bool UseLineAvarageRotation { get; } // 0x0000000184D8EDA0-0x0000000184D8EDB0 
-		public bool UseFixedNonRotation { get; } // 0x0000000184DA3300-0x0000000184DA3310 
+		public Algorithm AlgorithmType { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+		public bool UseGravity { get; } // 0x000000018225DF70-0x000000018225DF80 
+		public Vector3 GravityDirection { get; set; } // 0x000000018724C790-0x000000018724C7B0 0x000000018724BD80-0x000000018724BD90
+		public bool UseDrag { get; } // 0x000000018226ED80-0x000000018226ED90 
+		public bool UseMaxVelocity { get; } // 0x000000018225DFF0-0x000000018225E000 
+		public float MassInfluence { get; set; } // 0x0000000187235DB0-0x0000000187235DC0 0x000000018723B560-0x000000018723B570
+		public float WindInfluence { get; set; } // 0x000000018723DAD0-0x000000018723DAE0 0x000000018723DB10-0x000000018723DB20
+		public float WindRandomScale { get; set; } // 0x000000018723CA50-0x000000018723CA60 0x000000018723CA80-0x000000018723CA90
+		public float WindSynchronization { get; set; } // 0x000000018723B920-0x000000018723B930 0x000000018723B940-0x000000018723B950
+		public float MaxMoveSpeed { get; set; } // 0x000000018723CA40-0x000000018723CA50 0x000000018723CA70-0x000000018723CA80
+		public float MaxRotationSpeed { get; set; } // 0x0000000187250E50-0x0000000187250E60 0x0000000187250F20-0x0000000187250F30
+		public bool UseResetTeleport { get; set; } // 0x000000018225E0F0-0x000000018225E100 0x000000018225E100-0x000000018225E110
+		public float TeleportDistance { get; set; } // 0x000000018723BB10-0x000000018723BB20 0x000000018723BB60-0x000000018723BB70
+		public float TeleportRotation { get; set; } // 0x000000018723F570-0x000000018723F580 0x0000000187234DE0-0x0000000187234DF0
+		public TeleportMode TeleportResetMode { get; set; } // 0x000000018723BAF0-0x000000018723BB00 0x000000018723BB50-0x000000018723BB60
+		public float ResetStabilizationTime { get; set; } // 0x000000018723F5C0-0x000000018723F5D0 0x000000018723F6A0-0x000000018723F6B0
+		public bool UseDistanceDisable { get; set; } // 0x0000000187240E10-0x0000000187240E20 0x0000000187240E30-0x0000000187240E40
+		public Transform DisableReferenceObject { get; set; } // 0x0000000187232F60-0x0000000187232F70 0x0000000188800C88-0x0000000188800C9C
+		public float DisableDistance { get; set; } // 0x0000000187250E40-0x0000000187250E50 0x0000000187250F10-0x0000000187250F20
+		public float DisableFadeDistance { get; set; } // 0x000000018723F560-0x000000018723F570 0x000000018723F650-0x000000018723F660
+		public bool UseClampDistanceRatio { get; } // 0x000000018723BAD0-0x000000018723BAE0 
+		public float ClampDistanceMinRatio { get; } // 0x0000000185223350-0x0000000185223370 
+		public float ClampDistanceMaxRatio { get; } // 0x0000000185223330-0x0000000185223350 
+		public float ClampDistanceVelocityInfluence { get; } // 0x0000000185223310-0x0000000185223330 
+		public bool UseClampPositionLength { get; } // 0x0000000187250600-0x0000000187250610 
+		public Vector3 ClampPositionAxisRatio { get; } // 0x0000000187250E20-0x0000000187250E40 
+		public float ClampPositionVelocityInfluence { get; } // 0x000000018C31ACF8-0x000000018C31AD14 
+		public bool UseClampRotation { get; } // 0x000000018723B8D0-0x000000018723B8E0 
+		public float ClampRotationVelocityInfluence { get; } // 0x000000018C31AD14-0x000000018C31AD30 
+		public float RestoreDistanceVelocityInfluence { get; } // 0x000000018723B580-0x000000018723B590 
+		public bool UseBendDistance { get; } // 0x00000001872406E0-0x00000001872406F0 
+		public int BendDistanceMaxCount { get; } // 0x0000000187240800-0x0000000187240810 
+		public bool UseNearDistance { get; } // 0x000000018723DC60-0x000000018723DC70 
+		public int NearDistanceMaxCount { get; } // 0x0000000187250E60-0x0000000187250E70 
+		public float NearDistanceMaxDepth { get; } // 0x0000000187250E70-0x0000000187250E80 
+		public bool UseRestoreRotation { get; } // 0x0000000187250B80-0x0000000187250B90 
+		public bool UseSpring { get; set; } // 0x000000018723E4A0-0x000000018723E4B0 0x000000018723E4B0-0x000000018723E4C0
+		public float SpringPowr { get; set; } // 0x0000000187250E90-0x0000000187250EA0 0x0000000187250F30-0x0000000187250F40
+		public float SpringRadius { get; } // 0x000000018723E1C0-0x000000018723E1D0 
+		public Vector3 SpringRadiusScale { get; } // 0x0000000187250EA0-0x0000000187250EC0 
+		public float SpringIntensity { get; } // 0x0000000187250E80-0x0000000187250E90 
+		public AdjustMode AdjustRotationMode { get; } // 0x000000018723D560-0x000000018723D570 
+		public Vector3 AdjustRotationVector { get; } // 0x000000018C31ACA4-0x000000018C31ACF8 
+		public bool UseTriangleBend { get; } // 0x000000018723DFC0-0x000000018723DFD0 
+		internal float TwistRecoveryPower { get; } // 0x0000000187250ED0-0x0000000187250EE0 
+		public bool UseVolume { get; } // 0x0000000187240890-0x00000001872408A0 
+		public bool UseCollision { get; } // 0x00000001872501E0-0x00000001872501F0 
+		public float DynamicFriction { get; } // 0x000000018723EB80-0x000000018723EB90 
+		public float StaticFriction { get; } // 0x0000000187250EC0-0x0000000187250ED0 
+		public bool UsePenetration { get; set; } // 0x0000000187250F00-0x0000000187250F10 0x0000000187250F40-0x0000000187250F50
+		public float PenetrationMaxDepth { get; } // 0x000000018723F0D0-0x000000018723F0E0 
+		public bool UseLineAvarageRotation { get; } // 0x0000000187250EF0-0x0000000187250F00 
+		public bool UseFixedNonRotation { get; } // 0x0000000187250EE0-0x0000000187250EF0 
 	
 		// Nested types
-		public enum Algorithm // TypeDefIndex: 55012
+		public enum Algorithm // TypeDefIndex: 82059
 		{
 			Algorithm_1 = 0,
 			Algorithm_2 = 1
 		}
 	
-		public enum TeleportMode // TypeDefIndex: 55013
+		public enum TeleportMode // TypeDefIndex: 82060
 		{
 			Reset = 0,
 			Keep = 1
 		}
 	
-		public enum AdjustMode // TypeDefIndex: 55014
+		public enum AdjustMode // TypeDefIndex: 82061
 		{
 			Fixed = 0,
 			XYMove = 1,
@@ -1186,13 +1183,13 @@ namespace MagicaCloth
 			YZMove = 3
 		}
 	
-		public enum PenetrationMode // TypeDefIndex: 55015
+		public enum PenetrationMode // TypeDefIndex: 82062
 		{
 			SurfacePenetration = 0,
 			ColliderPenetration = 1
 		}
 	
-		public enum PenetrationAxis // TypeDefIndex: 55016
+		public enum PenetrationAxis // TypeDefIndex: 82063
 		{
 			X = 0,
 			Y = 1,
@@ -1202,7 +1199,7 @@ namespace MagicaCloth
 			InverseZ = 5
 		}
 	
-		public enum ParamType // TypeDefIndex: 55017
+		public enum ParamType // TypeDefIndex: 82064
 		{
 			Radius = 0,
 			Mass = 1,
@@ -1231,82 +1228,82 @@ namespace MagicaCloth
 		}
 	
 		// Constructors
-		public ClothParams(); // 0x0000000189EE53A0-0x0000000189EE5B80
+		public ClothParams(); // 0x00000001855E0810-0x00000001855E1080
 	
 		// Methods
-		public void SetChangeParam(ParamType ptype); // 0x0000000189EE4F08-0x0000000189EE4F60
-		public bool ChangedParam(ParamType ptype); // 0x0000000189EE45D4-0x0000000189EE462C
-		public void ClearChangeParam(); // 0x0000000189EE462C-0x0000000189EE4674
-		public int GetParamHash(BaseCloth cloth, ParamType ptype); // 0x0000000189EE4820-0x0000000189EE4E30
-		public void SetRadius(float sval, float eval); // 0x0000000189EE514C-0x0000000189EE5180
-		public float GetRadius(float depth); // 0x0000000189EE4E30-0x0000000189EE4E50
-		public BezierParam GetRadius(); // 0x000000018385B100-0x000000018385B110
-		public void SetMass(float sval, float eval, bool useEval = true /* Metadata: 0x0234687C */, float cval = 0f /* Metadata: 0x0234687D */, bool useCval = false /* Metadata: 0x02346881 */); // 0x0000000189EE50DC-0x0000000189EE5118
-		public BezierParam GetMass(); // 0x0000000184D862C0-0x0000000184D862D0
-		public void SetGravity(bool sw, float sval = -9.8f /* Metadata: 0x02346882 */, float eval = -9.8f /* Metadata: 0x02346886 */); // 0x0000000189EE50A8-0x0000000189EE50DC
-		public BezierParam GetGravity(); // 0x0000000189EE4784-0x0000000189EE47C4
-		public void SetDrag(bool sw, float sval = 0.015f /* Metadata: 0x0234688A */, float eval = 0.015f /* Metadata: 0x0234688E */); // 0x0000000189EE5074-0x0000000189EE50A8
-		public BezierParam GetDrag(); // 0x0000000189EE4744-0x0000000189EE4784
-		public void SetMaxVelocity(bool sw, float sval = 3f /* Metadata: 0x02346892 */, float eval = 3f /* Metadata: 0x02346896 */); // 0x0000000189EE5118-0x0000000189EE514C
-		public BezierParam GetMaxVelocity(); // 0x0000000189EE47C4-0x0000000189EE4808
-		public void SetExternalForce(float massInfluence, float windInfluence, float windRandomScale, float windSynchronization); // 0x0000000184DA3150-0x0000000184DA3180
-		public BezierParam GetDepthInfluence(); // 0x0000000184D861F0-0x0000000184D86200
-		public void SetWorldInfluence(float maxspeed, float moveval, float rotval); // 0x0000000189EE5350-0x0000000189EE53A0
-		public BezierParam GetWorldMoveInfluence(); // 0x0000000184D862B0-0x0000000184D862C0
-		public BezierParam GetWorldRotationInfluence(); // 0x0000000184D862A0-0x0000000184D862B0
-		public Transform GetInfluenceTarget(); // 0x0000000184D86280-0x0000000184D86290
-		public void SetInfluenceTarget(Transform t); // 0x00000001863CC164-0x00000001863CC174
-		public void SetTeleport(bool sw, float distance = 0.2f /* Metadata: 0x0234689A */, float rotation = 45f /* Metadata: 0x0234689E */, TeleportMode mode = TeleportMode.Reset /* Metadata: 0x023468A2 */); // 0x0000000184DA31D0-0x0000000184DA3200
-		public void SetDistanceDisable(bool sw, float distance = 20f /* Metadata: 0x023468A3 */, float fadeDistance = 5f /* Metadata: 0x023468A7 */, Transform referenceObject = null); // 0x0000000189EE5038-0x0000000189EE5074
-		public void SetClampDistanceRatio(bool sw, float minval = 0.1f /* Metadata: 0x023468AB */, float maxval = 1.05f /* Metadata: 0x023468AF */, float influence = 0.2f /* Metadata: 0x023468B3 */); // 0x0000000184DA3100-0x0000000184DA3130
-		public void SetClampPositionLength(bool sw, float sval = 0.03f /* Metadata: 0x023468B7 */, float eval = 0.2f /* Metadata: 0x023468BB */, float ratioX = 1f /* Metadata: 0x023468BF */, float ratioY = 1f /* Metadata: 0x023468C3 */, float ratioZ = 1f /* Metadata: 0x023468C7 */, float influence = 0.2f /* Metadata: 0x023468CB */); // 0x0000000189EE4F60-0x0000000189EE4FD0
-		public BezierParam GetClampPositionLength(); // 0x0000000184D88EF0-0x0000000184D88F00
-		public void SetClampRotationAngle(bool sw, float sval = 0f /* Metadata: 0x023468CF */, float eval = 180f /* Metadata: 0x023468D3 */, float influence = 0.2f /* Metadata: 0x023468D7 */); // 0x0000000189EE4FD0-0x0000000189EE5038
-		public BezierParam GetClampRotationAngle(Algorithm algo); // 0x0000000189EE4708-0x0000000189EE4720
-		public float GetClampRotationVelocityLimit(Algorithm algo); // 0x0000000189EE4720-0x0000000189EE4744
-		public void SetRestoreDistance(float influence = 1f /* Metadata: 0x023468DB */, float structStiffness = 1f /* Metadata: 0x023468DF */); // 0x0000000189EE5180-0x0000000189EE51BC
-		public BezierParam GetStructDistanceStiffness(); // 0x0000000184D85F80-0x0000000184D85F90
-		public BezierParam GetBendDistanceStiffness(); // 0x0000000184D8D910-0x0000000184D8D920
-		public BezierParam GetNearDistanceLength(); // 0x0000000184D8DA60-0x0000000184D8DA70
-		public BezierParam GetNearDistanceStiffness(); // 0x0000000184D8DAC0-0x0000000184D8DAD0
-		public void SetRestoreRotation(bool sw, float sval = 0.02f /* Metadata: 0x023468E3 */, float eval = 0.001f /* Metadata: 0x023468E7 */, float influence = 0.3f /* Metadata: 0x023468EB */); // 0x0000000189EE51BC-0x0000000189EE522C
-		public BezierParam GetRestoreRotationPower(Algorithm algo); // 0x0000000189EE4E50-0x0000000189EE4E68
-		public float GetRestoreRotationVelocityInfluence(Algorithm algo); // 0x0000000189EE4E68-0x0000000189EE4E80
-		public void SetSpring(bool sw, float power = 0f /* Metadata: 0x023468EF */, float r = 0f /* Metadata: 0x023468F3 */, float sclx = 1f /* Metadata: 0x023468F7 */, float scly = 1f /* Metadata: 0x023468FB */, float sclz = 1f /* Metadata: 0x023468FF */, float intensity = 1f /* Metadata: 0x02346903 */); // 0x0000000184DA3180-0x0000000184DA31D0
-		public void SetSpringDirectionAtten(float sval, float eval, float cval); // 0x0000000189EE522C-0x0000000189EE5260
-		public void SetSpringDistanceAtten(float sval, float eval, float cval); // 0x0000000189EE5260-0x0000000189EE5294
-		public float GetSpringPower(); // 0x0000000189EE4EC8-0x0000000189EE4EE0
-		public float GetSpringDirectionAtten(float ratio); // 0x0000000189EE4E80-0x0000000189EE4EA4
-		public float GetSpringDistanceAtten(float ratio); // 0x0000000189EE4EA4-0x0000000189EE4EC8
-		public void SetAdjustRotation(AdjustMode amode = AdjustMode.Fixed /* Metadata: 0x02346907 */, float power = 0f /* Metadata: 0x02346908 */); // 0x0000000184DA30F0-0x0000000184DA3100
-		public void SetTriangleBend(bool sw, float sval = 1f /* Metadata: 0x0234690C */, float eval = 1f /* Metadata: 0x02346910 */); // 0x0000000189EE5294-0x0000000189EE52EC
-		public BezierParam GetTriangleBendStiffness(Algorithm algo); // 0x0000000189EE4EE0-0x0000000189EE4EF8
-		internal bool GetUseTwistCorrection(Algorithm algo); // 0x0000000189EE4EF8-0x0000000189EE4F08
-		public void SetVolume(bool sw, float maxLength = 0.05f /* Metadata: 0x02346914 */, float stiffness = 0.5f /* Metadata: 0x02346918 */, float shear = 0.5f /* Metadata: 0x0234691C */); // 0x0000000189EE52EC-0x0000000189EE5350
-		public float GetMaxVolumeLength(); // 0x0000000189EE4808-0x0000000189EE4820
-		public BezierParam GetVolumeStretchStiffness(); // 0x0000000184D8D7B0-0x0000000184D8D7C0
-		public BezierParam GetVolumeShearStiffness(); // 0x0000000184D87870-0x0000000184D87880
-		public void SetCollision(bool sw, float dynamicFriction = 0.1f /* Metadata: 0x02346920 */, float staticFriction = 0.03f /* Metadata: 0x02346924 */); // 0x0000000184DA3130-0x0000000184DA3150
-		public PenetrationMode GetPenetrationMode(); // 0x0000000184DA23C0-0x0000000184DA23D0
-		public PenetrationAxis GetPenetrationAxis(); // 0x0000000184DA30E0-0x0000000184DA30F0
-		public BezierParam GetPenetrationConnectDistance(); // 0x0000000184D8DA40-0x0000000184D8DA50
-		public BezierParam GetPenetrationRadius(); // 0x0000000184D8D8B0-0x0000000184D8D8C0
-		public BezierParam GetPenetrationDistance(); // 0x0000000184D8D8C0-0x0000000184D8D8D0
-		public void ConvertToLatestAlgorithmParameter(); // 0x0000000189EE4674-0x0000000189EE4708
+		public void SetChangeParam(ParamType ptype); // 0x000000018C31A808-0x000000018C31A860
+		public bool ChangedParam(ParamType ptype); // 0x000000018C31A014-0x000000018C31A06C
+		public void ClearChangeParam(); // 0x000000018C31A06C-0x000000018C31A0B4
+		public int GetParamHash(BaseCloth cloth, ParamType ptype); // 0x000000018C31A184-0x000000018C31A780
+		public void SetRadius(float sval, float eval); // 0x000000018C31AA50-0x000000018C31AA84
+		public float GetRadius(float depth); // 0x0000000185D32960-0x0000000185D32980
+		public BezierParam GetRadius(); // 0x0000000182234E30-0x0000000182234E40
+		public void SetMass(float sval, float eval, bool useEval = true /* Metadata: 0x02640918 */, float cval = 0f /* Metadata: 0x02640919 */, bool useCval = false /* Metadata: 0x0264091D */); // 0x000000018C31A9E0-0x000000018C31AA1C
+		public BezierParam GetMass(); // 0x000000018225E800-0x000000018225E810
+		public void SetGravity(bool sw, float sval = -9.8f /* Metadata: 0x0264091E */, float eval = -9.8f /* Metadata: 0x02640922 */); // 0x000000018C31A9AC-0x000000018C31A9E0
+		public BezierParam GetGravity(); // 0x0000000185223260-0x00000001852232A0
+		public void SetDrag(bool sw, float sval = 0.015f /* Metadata: 0x02640926 */, float eval = 0.015f /* Metadata: 0x0264092A */); // 0x000000018C31A978-0x000000018C31A9AC
+		public BezierParam GetDrag(); // 0x0000000185223240-0x0000000185223260
+		public void SetMaxVelocity(bool sw, float sval = 3f /* Metadata: 0x0264092E */, float eval = 3f /* Metadata: 0x02640932 */); // 0x000000018C31AA1C-0x000000018C31AA50
+		public BezierParam GetMaxVelocity(); // 0x00000001852232A0-0x00000001852232F0
+		public void SetExternalForce(float massInfluence, float windInfluence, float windRandomScale, float windSynchronization); // 0x0000000187250D70-0x0000000187250DA0
+		public BezierParam GetDepthInfluence(); // 0x0000000187232F50-0x0000000187232F60
+		public void SetWorldInfluence(float maxspeed, float moveval, float rotval); // 0x000000018C31AC54-0x000000018C31ACA4
+		public BezierParam GetWorldMoveInfluence(); // 0x0000000187232FC0-0x0000000187232FD0
+		public BezierParam GetWorldRotationInfluence(); // 0x00000001829CD170-0x00000001829CD180
+		public Transform GetInfluenceTarget(); // 0x0000000187232FA0-0x0000000187232FB0
+		public void SetInfluenceTarget(Transform t); // 0x0000000188800CB0-0x0000000188800CC0
+		public void SetTeleport(bool sw, float distance = 0.2f /* Metadata: 0x02640936 */, float rotation = 45f /* Metadata: 0x0264093A */, TeleportMode mode = TeleportMode.Reset /* Metadata: 0x0264093E */); // 0x0000000187250DF0-0x0000000187250E20
+		public void SetDistanceDisable(bool sw, float distance = 20f /* Metadata: 0x0264093F */, float fadeDistance = 5f /* Metadata: 0x02640943 */, Transform referenceObject = null); // 0x000000018C31A93C-0x000000018C31A978
+		public void SetClampDistanceRatio(bool sw, float minval = 0.1f /* Metadata: 0x02640947 */, float maxval = 1.05f /* Metadata: 0x0264094B */, float influence = 0.2f /* Metadata: 0x0264094F */); // 0x0000000187250D20-0x0000000187250D50
+		public void SetClampPositionLength(bool sw, float sval = 0.03f /* Metadata: 0x02640953 */, float eval = 0.2f /* Metadata: 0x02640957 */, float ratioX = 1f /* Metadata: 0x0264095B */, float ratioY = 1f /* Metadata: 0x0264095F */, float ratioZ = 1f /* Metadata: 0x02640963 */, float influence = 0.2f /* Metadata: 0x02640967 */); // 0x000000018C31A860-0x000000018C31A8D4
+		public BezierParam GetClampPositionLength(); // 0x0000000187235E40-0x0000000187235E50
+		public void SetClampRotationAngle(bool sw, float sval = 0f /* Metadata: 0x0264096B */, float eval = 180f /* Metadata: 0x0264096F */, float influence = 0.2f /* Metadata: 0x02640973 */); // 0x000000018C31A8D4-0x000000018C31A93C
+		public BezierParam GetClampRotationAngle(Algorithm algo); // 0x0000000185223200-0x0000000185223220
+		public float GetClampRotationVelocityLimit(Algorithm algo); // 0x000000018C31A148-0x000000018C31A16C
+		public void SetRestoreDistance(float influence = 1f /* Metadata: 0x02640977 */, float structStiffness = 1f /* Metadata: 0x0264097B */); // 0x000000018C31AA84-0x000000018C31AAC0
+		public BezierParam GetStructDistanceStiffness(); // 0x0000000187232D10-0x0000000187232D20
+		public BezierParam GetBendDistanceStiffness(); // 0x000000018723B5D0-0x000000018723B5E0
+		public BezierParam GetNearDistanceLength(); // 0x000000018723BE50-0x000000018723BE60
+		public BezierParam GetNearDistanceStiffness(); // 0x000000018723BEA0-0x000000018723BEB0
+		public void SetRestoreRotation(bool sw, float sval = 0.02f /* Metadata: 0x0264097F */, float eval = 0.001f /* Metadata: 0x02640983 */, float influence = 0.3f /* Metadata: 0x02640987 */); // 0x000000018C31AAC0-0x000000018C31AB30
+		public BezierParam GetRestoreRotationPower(Algorithm algo); // 0x0000000185223220-0x0000000185223240
+		public float GetRestoreRotationVelocityInfluence(Algorithm algo); // 0x00000001852232F0-0x0000000185223310
+		public void SetSpring(bool sw, float power = 0f /* Metadata: 0x0264098B */, float r = 0f /* Metadata: 0x0264098F */, float sclx = 1f /* Metadata: 0x02640993 */, float scly = 1f /* Metadata: 0x02640997 */, float sclz = 1f /* Metadata: 0x0264099B */, float intensity = 1f /* Metadata: 0x0264099F */); // 0x0000000187250DA0-0x0000000187250DF0
+		public void SetSpringDirectionAtten(float sval, float eval, float cval); // 0x000000018C31AB30-0x000000018C31AB64
+		public void SetSpringDistanceAtten(float sval, float eval, float cval); // 0x000000018C31AB64-0x000000018C31AB98
+		public float GetSpringPower(); // 0x000000018C31A7C8-0x000000018C31A7E0
+		public float GetSpringDirectionAtten(float ratio); // 0x000000018C31A780-0x000000018C31A7A4
+		public float GetSpringDistanceAtten(float ratio); // 0x000000018C31A7A4-0x000000018C31A7C8
+		public void SetAdjustRotation(AdjustMode amode = AdjustMode.Fixed /* Metadata: 0x026409A3 */, float power = 0f /* Metadata: 0x026409A4 */); // 0x0000000187250D10-0x0000000187250D20
+		public void SetTriangleBend(bool sw, float sval = 1f /* Metadata: 0x026409A8 */, float eval = 1f /* Metadata: 0x026409AC */); // 0x000000018C31AB98-0x000000018C31ABF0
+		public BezierParam GetTriangleBendStiffness(Algorithm algo); // 0x000000018C31A7E0-0x000000018C31A7F8
+		internal bool GetUseTwistCorrection(Algorithm algo); // 0x000000018C31A7F8-0x000000018C31A808
+		public void SetVolume(bool sw, float maxLength = 0.05f /* Metadata: 0x026409B0 */, float stiffness = 0.5f /* Metadata: 0x026409B4 */, float shear = 0.5f /* Metadata: 0x026409B8 */); // 0x000000018C31ABF0-0x000000018C31AC54
+		public float GetMaxVolumeLength(); // 0x000000018C31A16C-0x000000018C31A184
+		public BezierParam GetVolumeStretchStiffness(); // 0x000000018723BC70-0x000000018723BC80
+		public BezierParam GetVolumeShearStiffness(); // 0x000000018723BCA0-0x000000018723BCB0
+		public void SetCollision(bool sw, float dynamicFriction = 0.1f /* Metadata: 0x026409BC */, float staticFriction = 0.03f /* Metadata: 0x026409C0 */); // 0x0000000187250D50-0x0000000187250D70
+		public PenetrationMode GetPenetrationMode(); // 0x00000001872500B0-0x00000001872500C0
+		public PenetrationAxis GetPenetrationAxis(); // 0x0000000187250D00-0x0000000187250D10
+		public BezierParam GetPenetrationConnectDistance(); // 0x000000018723BE40-0x000000018723BE50
+		public BezierParam GetPenetrationRadius(); // 0x0000000187234930-0x0000000187234940
+		public BezierParam GetPenetrationDistance(); // 0x0000000187234920-0x0000000187234930
+		public void ConvertToLatestAlgorithmParameter(); // 0x000000018C31A0B4-0x000000018C31A148
 	}
 
-	public class ClothSetup // TypeDefIndex: 55020
+	public class ClothSetup // TypeDefIndex: 82067
 	{
 		// Fields
 		private int teamBoneIndex; // 0x10
 		private float distanceBlendRatio; // 0x14
 	
 		// Properties
-		public float DistanceBlendRatio { get; set; } // 0x0000000184D88D40-0x0000000184D88D50 0x0000000184D88D50-0x0000000184D88D60
+		public float DistanceBlendRatio { get; set; } // 0x0000000187235C60-0x0000000187235C70 0x0000000187235C70-0x0000000187235C80
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 55019
+		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 82066
 		{
 			// Fields
 			public ClothData clothData; // 0x10
@@ -1314,36 +1311,36 @@ namespace MagicaCloth
 			public ClothParams param; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass2_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass2_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal uint _ClothInit_b__0(int i); // 0x0000000189EFC63C-0x0000000189EFC6FC
-			internal float _ClothInit_b__1(int i); // 0x0000000189EFC6FC-0x0000000189EFC728
-			internal float3 _ClothInit_b__2(int i); // 0x0000000189EFC728-0x0000000189EFC794
+			internal uint _ClothInit_b__0(int i); // 0x00000001853CEEB0-0x00000001853CEF80
+			internal float _ClothInit_b__1(int i); // 0x00000001866E7750-0x00000001866E7780
+			internal float3 _ClothInit_b__2(int i); // 0x0000000185D328E0-0x0000000185D32960
 		}
 	
 		// Constructors
-		public ClothSetup(); // 0x0000000184DA33F0-0x0000000184DA3400
+		public ClothSetup(); // 0x0000000187250FD0-0x0000000187250FE0
 	
 		// Methods
-		public void ClothInit(PhysicsTeam team, MeshData meshData, ClothData clothData, ClothParams param, Func<int, uint> funcUserFlag); // 0x0000000189EECE30-0x0000000189EEED7C
-		public void ClothDispose(PhysicsTeam team); // 0x0000000189EECCE4-0x0000000189EECD48
-		public void ClothActive(PhysicsTeam team, ClothParams param, ClothData clothData); // 0x0000000189EECBBC-0x0000000189EECCE4
-		public void ClothInactive(PhysicsTeam team); // 0x0000000189EECD48-0x0000000189EECE30
+		public void ClothInit(PhysicsTeam team, MeshData meshData, ClothData clothData, ClothParams param, Func<int, uint> funcUserFlag); // 0x00000001852221C0-0x0000000185223200
+		public void ClothDispose(PhysicsTeam team); // 0x0000000185D96D30-0x0000000185D96DA0
+		public void ClothActive(PhysicsTeam team, ClothParams param, ClothData clothData); // 0x00000001853C9FB0-0x00000001853CA0F0
+		public void ClothInactive(PhysicsTeam team); // 0x00000001853CA800-0x00000001853CA8F0
 		internal void ReplaceBone<T>(PhysicsTeam team, ClothParams param, Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
-		internal HashSet<Transform> GetUsedBones(PhysicsTeam team, ClothParams param); // 0x0000000189EEED7C-0x0000000189EEEE0C
-		public void ChangeUseUnityPhysics(bool sw); // 0x0000000189EECB50-0x0000000189EECBBC
-		public void ChangeData(PhysicsTeam team, ClothParams param, ClothData clothData); // 0x0000000189EEBF38-0x0000000189EECB50
+		internal HashSet<Transform> GetUsedBones(PhysicsTeam team, ClothParams param); // 0x000000018C3218C0-0x000000018C321950
+		public void ChangeUseUnityPhysics(bool sw); // 0x000000018C321854-0x000000018C3218C0
+		public void ChangeData(PhysicsTeam team, ClothParams param, ClothData clothData); // 0x000000018C320C2C-0x000000018C321854
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaBoneCloth")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-bone-cloth/")]
-	public class MagicaBoneCloth : BaseCloth // TypeDefIndex: 55021
+	public class MagicaBoneCloth : BaseCloth // TypeDefIndex: 82068
 	{
 		// Fields
-		private const int DATA_VERSION = 7; // Metadata: 0x02346950
-		private const int ERR_DATA_VERSION = 3; // Metadata: 0x02346951
+		private const int DATA_VERSION = 7; // Metadata: 0x026409EC
+		private const int ERR_DATA_VERSION = 3; // Metadata: 0x026409ED
 		[SerializeField]
 		private MeshData meshData; // 0xC8
 		[SerializeField]
@@ -1362,59 +1359,59 @@ namespace MagicaCloth
 		private List<Vector3> useTransformScaleList; // 0xF8
 	
 		// Properties
-		public BoneClothTarget ClothTarget { get; } // 0x0000000184D88EF0-0x0000000184D88F00 
-		public MeshData MeshData { get; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 
-		private int UseTransformCount { get; } // 0x0000000189EF1B1C-0x0000000189EF1B3C 
+		public BoneClothTarget ClothTarget { get; } // 0x0000000187235E40-0x0000000187235E50 
+		public MeshData MeshData { get; } // 0x000000018723BB00-0x000000018723BB10 
+		private int UseTransformCount { get; } // 0x0000000185B13B50-0x0000000185B13B70 
 	
 		// Constructors
-		public MagicaBoneCloth(); // 0x0000000189EF19E0-0x0000000189EF1B1C
+		public MagicaBoneCloth(); // 0x00000001855E0280-0x00000001855E03C0
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3400-0x0000000184DA3410
-		public override int GetDataHash(); // 0x0000000189EEF674-0x0000000189EEF790
-		protected override void Reset(); // 0x0000000189EF162C-0x0000000189EF1634
-		protected override void OnValidate(); // 0x0000000189EF12C0-0x0000000189EF12C8
-		protected override void ClothInit(); // 0x0000000189EEF4B8-0x0000000189EEF4EC
-		protected override void ClothDispose(); // 0x0000000189EEF494-0x0000000189EEF4B8
-		protected override void ClothActive(); // 0x0000000189EEF48C-0x0000000189EEF494
-		protected override uint UserFlag(int index); // 0x0000000189EF1634-0x0000000189EF1668
-		protected override Transform UserTransform(int index); // 0x0000000189EF1798-0x0000000189EF17A0
-		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000189EF1668-0x0000000189EF1708
-		protected override quaternion UserTransformLocalRotation(int vindex); // 0x0000000189EF1708-0x0000000189EF1798
-		public override BaseMeshDeformer GetDeformer(); // 0x00000001811EC580-0x00000001811EC590
-		protected override MeshData GetMeshData(); // 0x0000000184D8D1D0-0x0000000184D8D1E0
-		protected override void WorkerInit(); // 0x00000001841E1670-0x00000001841E1680
-		public override bool IsRequiresDeformer(); // 0x00000001812081B0-0x0000000181208610
-		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x00000001841E1670-0x00000001841E1680
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EEF444-0x0000000189EEF48C
-		protected override void OnChangeCalculation(); // 0x0000000189EF11E4-0x0000000189EF12C0
-		public List<Transform> GetTransformList(); // 0x0000000189EF0E08-0x0000000189EF1108
-		private Transform GetUseTransform(int index); // 0x0000000189EF1108-0x0000000189EF1158
-		public List<List<List<Transform>>> GetTransformGrid(out int maxLevel); // 0x0000000189EF0A64-0x0000000189EF0E08
-		public override int GetVersion(); // 0x0000000184D9BE00-0x0000000184D9BE10
-		public override int GetErrorVersion(); // 0x0000000184D8C9E0-0x0000000184D8C9F0
-		public override void CreateVerifyData(); // 0x0000000189EEF4EC-0x0000000189EEF534
-		public override Define.Error VerifyData(); // 0x0000000189EF17A0-0x0000000189EF19E0
-		public override string GetInformation(); // 0x0000000189EEFCE0-0x0000000189EF09C0
+		public override ComponentType GetComponentType(); // 0x0000000187250FE0-0x0000000187250FF0
+		public override int GetDataHash(); // 0x000000018C3220DC-0x000000018C3221F8
+		protected override void Reset(); // 0x000000018C323F8C-0x000000018C323F94
+		protected override void OnValidate(); // 0x000000018C323C20-0x000000018C323C28
+		protected override void ClothInit(); // 0x0000000185223FA0-0x0000000185223FE0
+		protected override void ClothDispose(); // 0x00000001867F6530-0x00000001867F6560
+		protected override void ClothActive(); // 0x00000001853C9960-0x00000001853C9970
+		protected override uint UserFlag(int index); // 0x00000001853CE400-0x00000001853CE440
+		protected override Transform UserTransform(int index); // 0x0000000185B17C90-0x0000000185B17CA0
+		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000185D329C0-0x0000000185D32A60
+		protected override quaternion UserTransformLocalRotation(int vindex); // 0x00000001864646B0-0x0000000186464770
+		public override BaseMeshDeformer GetDeformer(); // 0x0000000185829EC0-0x0000000185829ED0
+		protected override MeshData GetMeshData(); // 0x000000018723BB00-0x000000018723BB10
+		protected override void WorkerInit(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override bool IsRequiresDeformer(); // 0x00000001843FFFF0-0x0000000184400000
+		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C321F0C-0x000000018C321F54
+		protected override void OnChangeCalculation(); // 0x00000001853C8C30-0x00000001853C8CD0
+		public List<Transform> GetTransformList(); // 0x000000018C323870-0x000000018C323B94
+		private Transform GetUseTransform(int index); // 0x0000000185B17CA0-0x0000000185B17CF0
+		public List<List<List<Transform>>> GetTransformGrid(out int maxLevel); // 0x000000018C3234C8-0x000000018C323870
+		public override int GetVersion(); // 0x0000000187239C90-0x0000000187239CA0
+		public override int GetErrorVersion(); // 0x00000001872396E0-0x00000001872396F0
+		public override void CreateVerifyData(); // 0x000000018C321F54-0x000000018C321F9C
+		public override Define.Error VerifyData(); // 0x0000000185B15880-0x0000000185B15B90
+		public override string GetInformation(); // 0x000000018C32273C-0x000000018C323424
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EF1158-0x0000000189EF11E4
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EEF870-0x0000000189EEFC00
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EEFC00-0x0000000189EEFCE0
-		public override List<int> GetEditorLineList(); // 0x0000000189EEF790-0x0000000189EEF870
-		public override List<int> GetSelectionList(); // 0x0000000189EF09C0-0x0000000189EF0A64
-		public override List<int> GetUseList(); // 0x00000001811EC580-0x00000001811EC590
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EEF60C-0x0000000189EEF674
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EEF534-0x0000000189EEF60C
-		private void ResetParams(); // 0x0000000189EF12C8-0x0000000189EF162C
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C323B94-0x000000018C323C20
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C3222D8-0x000000018C32265C
+		public override List<int> GetEditorTriangleList(); // 0x000000018C32265C-0x000000018C32273C
+		public override List<int> GetEditorLineList(); // 0x000000018C3221F8-0x000000018C3222D8
+		public override List<int> GetSelectionList(); // 0x000000018C323424-0x000000018C3234C8
+		public override List<int> GetUseList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C322074-0x000000018C3220DC
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C321F9C-0x000000018C322074
+		private void ResetParams(); // 0x000000018C323C28-0x000000018C323F8C
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaBoneSpring")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-bone-spring/")]
-	public class MagicaBoneSpring : BaseCloth // TypeDefIndex: 55022
+	public class MagicaBoneSpring : BaseCloth // TypeDefIndex: 82069
 	{
 		// Fields
-		private const int DATA_VERSION = 7; // Metadata: 0x02346952
-		private const int ERR_DATA_VERSION = 3; // Metadata: 0x02346953
+		private const int DATA_VERSION = 7; // Metadata: 0x026409EE
+		private const int ERR_DATA_VERSION = 3; // Metadata: 0x026409EF
 		[SerializeField]
 		private MeshData meshData; // 0xC8
 		[SerializeField]
@@ -1433,58 +1430,58 @@ namespace MagicaCloth
 		private List<Vector3> useTransformScaleList; // 0xF8
 	
 		// Properties
-		public BoneClothTarget ClothTarget { get; } // 0x0000000184D88EF0-0x0000000184D88F00 
-		public MeshData MeshData { get; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 
-		private int UseTransformCount { get; } // 0x0000000189EF3930-0x0000000189EF3970 
+		public BoneClothTarget ClothTarget { get; } // 0x0000000187235E40-0x0000000187235E50 
+		public MeshData MeshData { get; } // 0x000000018723BB00-0x000000018723BB10 
+		private int UseTransformCount { get; } // 0x000000018C325E14-0x000000018C325E54 
 	
 		// Constructors
-		public MagicaBoneSpring(); // 0x0000000189EF3790-0x0000000189EF3930
+		public MagicaBoneSpring(); // 0x000000018C325C74-0x000000018C325E14
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3410-0x0000000184DA3420
-		public override int GetDataHash(); // 0x0000000189EF1D04-0x0000000189EF1E20
-		protected override void Reset(); // 0x0000000189EF32D0-0x0000000189EF32D8
-		protected override void OnValidate(); // 0x0000000189EF12C0-0x0000000189EF12C8
-		protected override void ClothInit(); // 0x0000000189EF1B3C-0x0000000189EF1BC4
-		protected override void ClothDispose(); // 0x0000000189EEF494-0x0000000189EEF4B8
-		protected override void ClothActive(); // 0x0000000189EEF48C-0x0000000189EEF494
-		protected override uint UserFlag(int index); // 0x0000000189EF1634-0x0000000189EF1668
-		protected override Transform UserTransform(int index); // 0x0000000189EF3468-0x0000000189EF3470
-		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000189EF32D8-0x0000000189EF33A8
-		protected override quaternion UserTransformLocalRotation(int vindex); // 0x0000000189EF33A8-0x0000000189EF3468
-		public override bool IsRequiresDeformer(); // 0x00000001812081B0-0x0000000181208610
-		public override BaseMeshDeformer GetDeformer(); // 0x00000001811EC580-0x00000001811EC590
-		protected override MeshData GetMeshData(); // 0x0000000184D8D1D0-0x0000000184D8D1E0
-		protected override void WorkerInit(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x00000001841E1670-0x00000001841E1680
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EEF444-0x0000000189EEF48C
-		protected override void OnChangeCalculation(); // 0x0000000189EF2E5C-0x0000000189EF2F64
-		public List<Transform> GetTransformList(); // 0x0000000189EF2A54-0x0000000189EF2B64
-		private Transform GetUseTransform(int index); // 0x0000000189EF2D4C-0x0000000189EF2DD0
-		public override int GetVersion(); // 0x0000000184D9BE00-0x0000000184D9BE10
-		public override int GetErrorVersion(); // 0x0000000184D8C9E0-0x0000000184D8C9F0
-		public override void CreateVerifyData(); // 0x0000000189EEF4EC-0x0000000189EEF534
-		public override Define.Error VerifyData(); // 0x0000000189EF3470-0x0000000189EF3790
-		public override string GetInformation(); // 0x0000000189EF2370-0x0000000189EF29B0
+		public override ComponentType GetComponentType(); // 0x0000000187250FF0-0x0000000187251000
+		public override int GetDataHash(); // 0x000000018C324184-0x000000018C3242A0
+		protected override void Reset(); // 0x000000018C32577C-0x000000018C325784
+		protected override void OnValidate(); // 0x000000018C323C20-0x000000018C323C28
+		protected override void ClothInit(); // 0x000000018C323FB8-0x000000018C324044
+		protected override void ClothDispose(); // 0x000000018C323F94-0x000000018C323FB8
+		protected override void ClothActive(); // 0x00000001853C9960-0x00000001853C9970
+		protected override uint UserFlag(int index); // 0x000000018C325784-0x000000018C3257B8
+		protected override Transform UserTransform(int index); // 0x000000018C325948-0x000000018C325950
+		protected override float3 UserTransformLocalPosition(int vindex); // 0x000000018C3257B8-0x000000018C325888
+		protected override quaternion UserTransformLocalRotation(int vindex); // 0x000000018C325888-0x000000018C325948
+		public override bool IsRequiresDeformer(); // 0x00000001843FFFF0-0x0000000184400000
+		public override BaseMeshDeformer GetDeformer(); // 0x0000000185829EC0-0x0000000185829ED0
+		protected override MeshData GetMeshData(); // 0x000000018723BB00-0x000000018723BB10
+		protected override void WorkerInit(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C321F0C-0x000000018C321F54
+		protected override void OnChangeCalculation(); // 0x000000018C3252E8-0x000000018C325410
+		public List<Transform> GetTransformList(); // 0x000000018C324ECC-0x000000018C324FDC
+		private Transform GetUseTransform(int index); // 0x000000018C3251D8-0x000000018C32525C
+		public override int GetVersion(); // 0x0000000187239C90-0x0000000187239CA0
+		public override int GetErrorVersion(); // 0x00000001872396E0-0x00000001872396F0
+		public override void CreateVerifyData(); // 0x000000018C321F54-0x000000018C321F9C
+		public override Define.Error VerifyData(); // 0x000000018C325950-0x000000018C325C74
+		public override string GetInformation(); // 0x000000018C3247E4-0x000000018C324E28
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EF2DD0-0x0000000189EF2E5C
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF1F00-0x0000000189EF2290
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EF2290-0x0000000189EF2370
-		public override List<int> GetEditorLineList(); // 0x0000000189EF1E20-0x0000000189EF1F00
-		public override List<int> GetSelectionList(); // 0x0000000189EF29B0-0x0000000189EF2A54
-		public override List<int> GetUseList(); // 0x0000000189EF2B64-0x0000000189EF2D4C
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EF1C9C-0x0000000189EF1D04
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EF1BC4-0x0000000189EF1C9C
-		private void ResetParams(); // 0x0000000189EF2F64-0x0000000189EF32D0
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C32525C-0x000000018C3252E8
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C324380-0x000000018C324704
+		public override List<int> GetEditorTriangleList(); // 0x000000018C324704-0x000000018C3247E4
+		public override List<int> GetEditorLineList(); // 0x000000018C3242A0-0x000000018C324380
+		public override List<int> GetSelectionList(); // 0x000000018C324E28-0x000000018C324ECC
+		public override List<int> GetUseList(); // 0x000000018C324FDC-0x000000018C3251D8
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C32411C-0x000000018C324184
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C324044-0x000000018C32411C
+		private void ResetParams(); // 0x000000018C325410-0x000000018C32577C
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaMeshCloth", 100)]
 	[HelpURL("https://magicasoft.jp/magica-cloth-mesh-cloth/")]
-	public class MagicaMeshCloth : BaseCloth // TypeDefIndex: 55023
+	public class MagicaMeshCloth : BaseCloth // TypeDefIndex: 82070
 	{
 		// Fields
-		private const int DATA_VERSION = 7; // Metadata: 0x02346954
-		private const int ERR_DATA_VERSION = 3; // Metadata: 0x02346955
+		private const int DATA_VERSION = 7; // Metadata: 0x026409F0
+		private const int ERR_DATA_VERSION = 3; // Metadata: 0x026409F1
 		[SerializeField]
 		private MagicaVirtualDeformer virtualDeformer; // 0xC8
 		[SerializeField]
@@ -1493,53 +1490,53 @@ namespace MagicaCloth
 		private int virtualDeformerVersion; // 0xD4
 	
 		// Properties
-		public VirtualMeshDeformer Deformer { get; } // 0x0000000189EF51C8-0x0000000189EF5240 
+		public VirtualMeshDeformer Deformer { get; } // 0x000000018C3276B8-0x000000018C327730 
 	
 		// Constructors
-		public MagicaMeshCloth(); // 0x0000000189EF51C0-0x0000000189EF51C8
+		public MagicaMeshCloth(); // 0x000000018C3276B0-0x000000018C3276B8
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3420-0x0000000184DA3430
-		public override int GetDataHash(); // 0x0000000189EF3B3C-0x0000000189EF3B7C
-		protected override void Reset(); // 0x0000000189EF4E44-0x0000000189EF4E4C
-		protected override void OnValidate(); // 0x0000000189EF12C0-0x0000000189EF12C8
-		protected override void OnInit(); // 0x0000000189EF4ADC-0x0000000189EF4AE4
-		protected override void OnActive(); // 0x0000000189EF4AC4-0x0000000189EF4ACC
-		protected override void OnInactive(); // 0x0000000189EF4AD4-0x0000000189EF4ADC
-		protected override void OnDispose(); // 0x0000000189EF4ACC-0x0000000189EF4AD4
-		protected override uint UserFlag(int index); // 0x00000001811EC580-0x00000001811EC590
-		protected override Transform UserTransform(int index); // 0x00000001811EC580-0x00000001811EC590
-		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000184DA3430-0x0000000184DA3450
-		protected override quaternion UserTransformLocalRotation(int vindex); // 0x0000000189EF4F38-0x0000000189EF4F7C
-		public override bool IsRequiresDeformer(); // 0x0000000182FFF600-0x0000000182FFF610
-		public override BaseMeshDeformer GetDeformer(); // 0x0000000189EF3B7C-0x0000000189EF3B84
-		protected override MeshData GetMeshData(); // 0x0000000189EF4724-0x0000000189EF4744
-		protected override void WorkerInit(); // 0x0000000189EF5068-0x0000000189EF51C0
-		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x0000000189EF4E4C-0x0000000189EF4F38
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EF3970-0x0000000189EF39AC
-		public override int GetVersion(); // 0x0000000184D9BE00-0x0000000184D9BE10
-		public override int GetErrorVersion(); // 0x0000000184D8C9E0-0x0000000184D8C9F0
-		public override void CreateVerifyData(); // 0x0000000189EEF4EC-0x0000000189EEF534
-		public override Define.Error VerifyData(); // 0x0000000189EF4F7C-0x0000000189EF5068
-		public override string GetInformation(); // 0x0000000189EF3C20-0x0000000189EF4724
-		public bool IsValidPointSelect(); // 0x0000000189EF4A28-0x0000000189EF4AC4
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF3BAC-0x0000000189EF3BF8
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EF3BF8-0x0000000189EF3C20
-		public override List<int> GetEditorLineList(); // 0x0000000189EF3B84-0x0000000189EF3BAC
-		public override List<int> GetSelectionList(); // 0x0000000189EF4744-0x0000000189EF4858
-		public override List<int> GetUseList(); // 0x0000000189EF4858-0x0000000189EF4A28
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EF3ABC-0x0000000189EF3B3C
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EF39AC-0x0000000189EF3ABC
-		private void ResetParams(); // 0x0000000189EF4AE4-0x0000000189EF4E44
+		public override ComponentType GetComponentType(); // 0x0000000187251000-0x0000000187251010
+		public override int GetDataHash(); // 0x000000018C326020-0x000000018C326060
+		protected override void Reset(); // 0x000000018C32732C-0x000000018C327334
+		protected override void OnValidate(); // 0x000000018C323C20-0x000000018C323C28
+		protected override void OnInit(); // 0x000000018C326FC4-0x000000018C326FCC
+		protected override void OnActive(); // 0x000000018C326FAC-0x000000018C326FB4
+		protected override void OnInactive(); // 0x000000018C326FBC-0x000000018C326FC4
+		protected override void OnDispose(); // 0x000000018C326FB4-0x000000018C326FBC
+		protected override uint UserFlag(int index); // 0x0000000185829EC0-0x0000000185829ED0
+		protected override Transform UserTransform(int index); // 0x0000000185829EC0-0x0000000185829ED0
+		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000187251010-0x0000000187251030
+		protected override quaternion UserTransformLocalRotation(int vindex); // 0x000000018C327424-0x000000018C327468
+		public override bool IsRequiresDeformer(); // 0x00000001851A4410-0x00000001851A4420
+		public override BaseMeshDeformer GetDeformer(); // 0x000000018C326060-0x000000018C326068
+		protected override MeshData GetMeshData(); // 0x000000018C326C0C-0x000000018C326C2C
+		protected override void WorkerInit(); // 0x000000018C327554-0x000000018C3276B0
+		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x000000018C327334-0x000000018C327424
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C325E54-0x000000018C325E90
+		public override int GetVersion(); // 0x0000000187239C90-0x0000000187239CA0
+		public override int GetErrorVersion(); // 0x00000001872396E0-0x00000001872396F0
+		public override void CreateVerifyData(); // 0x000000018C321F54-0x000000018C321F9C
+		public override Define.Error VerifyData(); // 0x000000018C327468-0x000000018C327554
+		public override string GetInformation(); // 0x000000018C326104-0x000000018C326C0C
+		public bool IsValidPointSelect(); // 0x000000018C326F10-0x000000018C326FAC
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C326090-0x000000018C3260DC
+		public override List<int> GetEditorTriangleList(); // 0x000000018C3260DC-0x000000018C326104
+		public override List<int> GetEditorLineList(); // 0x000000018C326068-0x000000018C326090
+		public override List<int> GetSelectionList(); // 0x000000018C326C2C-0x000000018C326D40
+		public override List<int> GetUseList(); // 0x000000018C326D40-0x000000018C326F10
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C325FA0-0x000000018C326020
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C325E90-0x000000018C325FA0
+		private void ResetParams(); // 0x000000018C326FCC-0x000000018C32732C
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaMeshSpring", 100)]
 	[HelpURL("https://magicasoft.jp/magica-cloth-mesh-spring/")]
-	public class MagicaMeshSpring : BaseCloth // TypeDefIndex: 55025
+	public class MagicaMeshSpring : BaseCloth // TypeDefIndex: 82072
 	{
 		// Fields
-		private const int DATA_VERSION = 7; // Metadata: 0x02346956
-		private const int ERR_DATA_VERSION = 3; // Metadata: 0x02346957
+		private const int DATA_VERSION = 7; // Metadata: 0x026409F2
+		private const int ERR_DATA_VERSION = 3; // Metadata: 0x026409F3
 		[SerializeField]
 		private MagicaVirtualDeformer virtualDeformer; // 0xC8
 		[SerializeField]
@@ -1558,15 +1555,15 @@ namespace MagicaCloth
 		private int springDataVersion; // 0xF4
 	
 		// Properties
-		public VirtualMeshDeformer Deformer { get; } // 0x0000000189EF67A0-0x0000000189EF6818 
-		public SpringData SpringData { get; } // 0x0000000184D88590-0x0000000184D885A0 
-		public int UseVertexCount { get; } // 0x0000000189EF6818-0x0000000189EF6890 
-		public Transform CenterTransform { get; set; } // 0x0000000184D88EF0-0x0000000184D88F00 0x0000000186902698-0x00000001869026AC
-		public Axis DirectionAxis { get; set; } // 0x0000000184D9A880-0x0000000184D9A890 0x0000000184DA3470-0x0000000184DA3480
-		public Vector3 CenterTransformDirection { get; } // 0x0000000189EF660C-0x0000000189EF67A0 
+		public VirtualMeshDeformer Deformer { get; } // 0x000000018C328CA4-0x000000018C328D1C 
+		public SpringData SpringData { get; } // 0x00000001872354B0-0x00000001872354C0 
+		public int UseVertexCount { get; } // 0x000000018C328D1C-0x000000018C328D94 
+		public Transform CenterTransform { get; set; } // 0x0000000187235E40-0x0000000187235E50 0x0000000188D62F68-0x0000000188D62F7C
+		public Axis DirectionAxis { get; set; } // 0x00000001872406F0-0x0000000187240700 0x0000000187240750-0x0000000187240760
+		public Vector3 CenterTransformDirection { get; } // 0x000000018C328B10-0x000000018C328CA4 
 	
 		// Nested types
-		public enum Axis // TypeDefIndex: 55024
+		public enum Axis // TypeDefIndex: 82071
 		{
 			X = 0,
 			Y = 1,
@@ -1577,103 +1574,103 @@ namespace MagicaCloth
 		}
 	
 		// Constructors
-		public MagicaMeshSpring(); // 0x0000000189EF51C0-0x0000000189EF51C8
+		public MagicaMeshSpring(); // 0x000000018C3276B0-0x000000018C3276B8
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3450-0x0000000184DA3460
-		public override int GetDataHash(); // 0x0000000189EF55CC-0x0000000189EF564C
-		public SpringData.DeformerData GetDeformerData(); // 0x0000000189EF564C-0x0000000189EF566C
-		protected override void Reset(); // 0x0000000189EF61C0-0x0000000189EF61C8
-		protected override void OnValidate(); // 0x0000000189EF12C0-0x0000000189EF12C8
-		protected override void ClothInit(); // 0x0000000189EF5240-0x0000000189EF541C
-		protected override void ClothActive(); // 0x0000000189EEF48C-0x0000000189EEF494
-		protected override uint UserFlag(int index); // 0x0000000184DA3460-0x0000000184DA3470
-		protected override Transform UserTransform(int index); // 0x0000000184D88EF0-0x0000000184D88F00
-		protected override float3 UserTransformLocalPosition(int vindex); // 0x0000000189EF626C-0x0000000189EF62D0
-		protected override quaternion UserTransformLocalRotation(int vindex); // 0x0000000189EF62D0-0x0000000189EF6324
-		public override bool IsRequiresDeformer(); // 0x0000000182FFF600-0x0000000182FFF610
-		public override BaseMeshDeformer GetDeformer(); // 0x0000000189EF566C-0x0000000189EF56E0
-		protected override MeshData GetMeshData(); // 0x00000001811EC580-0x00000001811EC590
-		protected override void WorkerInit(); // 0x0000000189EF6490-0x0000000189EF660C
-		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x0000000189EF61C8-0x0000000189EF626C
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EF3970-0x0000000189EF39AC
-		protected override void OnChangeCalculation(); // 0x0000000189EF5D74-0x0000000189EF5E08
-		public override int GetVersion(); // 0x0000000184D9BE00-0x0000000184D9BE10
-		public override int GetErrorVersion(); // 0x0000000184D8C9E0-0x0000000184D8C9F0
-		public override void CreateVerifyData(); // 0x0000000189EF541C-0x0000000189EF548C
-		public override Define.Error VerifyData(); // 0x0000000189EF6324-0x0000000189EF6490
-		public override string GetInformation(); // 0x0000000189EF58E4-0x0000000189EF5D0C
-		public void VerifyDeformer(); // 0x00000001841E1670-0x00000001841E1680
+		public override ComponentType GetComponentType(); // 0x0000000187251030-0x0000000187251040
+		public override int GetDataHash(); // 0x000000018C327ABC-0x000000018C327B3C
+		public SpringData.DeformerData GetDeformerData(); // 0x000000018C327B3C-0x000000018C327B5C
+		protected override void Reset(); // 0x000000018C3286BC-0x000000018C3286C4
+		protected override void OnValidate(); // 0x000000018C323C20-0x000000018C323C28
+		protected override void ClothInit(); // 0x000000018C327730-0x000000018C32790C
+		protected override void ClothActive(); // 0x00000001853C9960-0x00000001853C9970
+		protected override uint UserFlag(int index); // 0x0000000187251040-0x0000000187251050
+		protected override Transform UserTransform(int index); // 0x0000000187235E40-0x0000000187235E50
+		protected override float3 UserTransformLocalPosition(int vindex); // 0x000000018C32876C-0x000000018C3287D0
+		protected override quaternion UserTransformLocalRotation(int vindex); // 0x000000018C3287D0-0x000000018C328824
+		public override bool IsRequiresDeformer(); // 0x00000001851A4410-0x00000001851A4420
+		public override BaseMeshDeformer GetDeformer(); // 0x000000018C327B5C-0x000000018C327BD0
+		protected override MeshData GetMeshData(); // 0x0000000185829EC0-0x0000000185829ED0
+		protected override void WorkerInit(); // 0x000000018C328990-0x000000018C328B10
+		protected override void SetDeformerUseVertex(bool sw, BaseMeshDeformer deformer); // 0x000000018C3286C4-0x000000018C32876C
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C325E54-0x000000018C325E90
+		protected override void OnChangeCalculation(); // 0x000000018C328268-0x000000018C328304
+		public override int GetVersion(); // 0x0000000187239C90-0x0000000187239CA0
+		public override int GetErrorVersion(); // 0x00000001872396E0-0x00000001872396F0
+		public override void CreateVerifyData(); // 0x000000018C32790C-0x000000018C32797C
+		public override Define.Error VerifyData(); // 0x000000018C328824-0x000000018C328990
+		public override string GetInformation(); // 0x000000018C327DD4-0x000000018C328200
+		public void VerifyDeformer(); // 0x0000000186805BA0-0x0000000186805BB0
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EF5D0C-0x0000000189EF5D74
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF56E0-0x0000000189EF58E4
-		public override List<int> GetEditorTriangleList(); // 0x00000001811EC580-0x00000001811EC590
-		public override List<int> GetEditorLineList(); // 0x00000001811EC580-0x00000001811EC590
-		public override List<int> GetSelectionList(); // 0x00000001811EC580-0x00000001811EC590
-		public override List<int> GetUseList(); // 0x00000001811EC580-0x00000001811EC590
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EF5564-0x0000000189EF55CC
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EF548C-0x0000000189EF5564
-		private void ResetParams(); // 0x0000000189EF5E08-0x0000000189EF61C0
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C328200-0x000000018C328268
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C327BD0-0x000000018C327DD4
+		public override List<int> GetEditorTriangleList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override List<int> GetEditorLineList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override List<int> GetSelectionList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override List<int> GetUseList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C327A54-0x000000018C327ABC
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C32797C-0x000000018C327A54
+		private void ResetParams(); // 0x000000018C328304-0x000000018C3286BC
 	}
 
 	[Serializable]
-	public class SelectionData : ShareDataObject // TypeDefIndex: 55027
+	public class SelectionData : ShareDataObject // TypeDefIndex: 82074
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x0234695E
-		public const int Invalid = 0; // Metadata: 0x0234695F
-		public const int Move = 1; // Metadata: 0x02346960
-		public const int Fixed = 2; // Metadata: 0x02346961
-		public const int Extend = 3; // Metadata: 0x02346962
+		private const int DATA_VERSION = 2; // Metadata: 0x026409FA
+		public const int Invalid = 0; // Metadata: 0x026409FB
+		public const int Move = 1; // Metadata: 0x026409FC
+		public const int Fixed = 2; // Metadata: 0x026409FD
+		public const int Extend = 3; // Metadata: 0x026409FE
 		public List<DeformerSelection> selectionList; // 0x20
 	
 		// Properties
-		public int DeformerCount { get; } // 0x0000000189EFC5A4-0x0000000189EFC5E4 
+		public int DeformerCount { get; } // 0x000000018C32E9FC-0x000000018C32EA3C 
 	
 		// Nested types
 		[Serializable]
-		public class DeformerSelection : IDataHash // TypeDefIndex: 55026
+		public class DeformerSelection : IDataHash // TypeDefIndex: 82073
 		{
 			// Fields
 			public List<int> selectData; // 0x10
 			public List<ulong> vertexHashList; // 0x18
 	
 			// Constructors
-			public DeformerSelection(); // 0x0000000189EEF3C4-0x0000000189EEF444
+			public DeformerSelection(); // 0x00000001858E30A0-0x00000001858E3120
 	
 			// Methods
-			public int GetDataHash(); // 0x0000000189EEF388-0x0000000189EEF3C4
-			public bool Compare(DeformerSelection data); // 0x0000000189EEF234-0x0000000189EEF388
+			public int GetDataHash(); // 0x000000018C321ED0-0x000000018C321F0C
+			public bool Compare(DeformerSelection data); // 0x000000018C321D7C-0x000000018C321ED0
 		}
 	
 		// Constructors
-		public SelectionData(); // 0x0000000189EFC54C-0x0000000189EFC5A4
+		public SelectionData(); // 0x00000001866F2070-0x00000001866F20D0
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EFB50C-0x0000000189EFB548
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override Define.Error VerifyData(); // 0x0000000189EFC518-0x0000000189EFC54C
-		public bool Compare(SelectionData sel); // 0x0000000189EFB430-0x0000000189EFB50C
-		public List<int> GetSelectionData(MeshData meshData, List<MeshData> childMeshDataList); // 0x0000000189EFB548-0x0000000189EFB700
-		private int GetSelection(MeshData meshData, int vindex, Dictionary<int, List<uint>> dict, List<MeshData> childMeshDataList, List<Dictionary<ulong, int>> hashList); // 0x0000000189EFB960-0x0000000189EFBE2C
-		public void SetSelectionData(MeshData meshData, List<int> selects, List<MeshData> childMeshDataList); // 0x0000000189EFBE2C-0x0000000189EFC518
-		private List<Dictionary<ulong, int>> GetSelectionVertexHashList(); // 0x0000000189EFB700-0x0000000189EFB960
+		public override int GetDataHash(); // 0x000000018C32D9D0-0x000000018C32DA0C
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override Define.Error VerifyData(); // 0x0000000186A36FE0-0x0000000186A37020
+		public bool Compare(SelectionData sel); // 0x000000018C32D8F4-0x000000018C32D9D0
+		public List<int> GetSelectionData(MeshData meshData, List<MeshData> childMeshDataList); // 0x000000018C32DA0C-0x000000018C32DBCC
+		private int GetSelection(MeshData meshData, int vindex, Dictionary<int, List<uint>> dict, List<MeshData> childMeshDataList, List<Dictionary<ulong, int>> hashList); // 0x000000018C32DE40-0x000000018C32E30C
+		public void SetSelectionData(MeshData meshData, List<int> selects, List<MeshData> childMeshDataList); // 0x000000018C32E30C-0x000000018C32E9FC
+		private List<Dictionary<ulong, int>> GetSelectionVertexHashList(); // 0x000000018C32DBCC-0x000000018C32DE40
 	}
 
 	[Serializable]
-	public class SpringData : ShareDataObject // TypeDefIndex: 55029
+	public class SpringData : ShareDataObject // TypeDefIndex: 82076
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x02346963
+		private const int DATA_VERSION = 2; // Metadata: 0x026409FF
 		public DeformerData deformerData; // 0x20
 		public Vector3 initScale; // 0x28
 	
 		// Properties
-		public int UseVertexCount { get; } // 0x0000000189EFC620-0x0000000189EFC63C 
+		public int UseVertexCount { get; } // 0x000000018C32EA78-0x000000018C32EA94 
 	
 		// Nested types
 		[Serializable]
-		public class DeformerData : IDataHash // TypeDefIndex: 55028
+		public class DeformerData : IDataHash // TypeDefIndex: 82075
 		{
 			// Fields
 			public int deformerDataHash; // 0x10
@@ -1682,49 +1679,49 @@ namespace MagicaCloth
 			public float[] weightList; // 0x20
 	
 			// Properties
-			public int UseVertexCount { get; } // 0x0000000189EEF220-0x0000000189EEF234 
+			public int UseVertexCount { get; } // 0x000000018C321D68-0x000000018C321D7C 
 	
 			// Constructors
-			public DeformerData(); // 0x00000001841E1670-0x00000001841E1680
+			public DeformerData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public int GetDataHash(); // 0x0000000189EEF18C-0x0000000189EEF220
+			public int GetDataHash(); // 0x000000018C321CD4-0x000000018C321D68
 		}
 	
 		// Constructors
-		public SpringData(); // 0x0000000183573370-0x0000000183573380
+		public SpringData(); // 0x0000000185DD6260-0x0000000185DD6270
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EFC5E4-0x0000000189EFC604
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override Define.Error VerifyData(); // 0x0000000189EFC604-0x0000000189EFC620
+		public override int GetDataHash(); // 0x000000018C32EA3C-0x000000018C32EA5C
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override Define.Error VerifyData(); // 0x000000018C32EA5C-0x000000018C32EA78
 	}
 
-	public static class Define // TypeDefIndex: 55034
+	public static class Define // TypeDefIndex: 82081
 	{
 		// Nested types
-		public static class Compute // TypeDefIndex: 55030
+		public static class Compute // TypeDefIndex: 82077
 		{
 			// Fields
-			public const float Epsilon = 1E-06f; // Metadata: 0x02346964
-			public const float CollisionFrictionRange = 0.03f; // Metadata: 0x02346968
-			public const float FrictionDampingRate = 0.6f; // Metadata: 0x0234696C
-			public const float FrictionMoveRatio = 0.5f; // Metadata: 0x02346970
-			public const float FrictionPower = 4f; // Metadata: 0x02346974
-			public const float ClampPositionMaxVelocity = 1f; // Metadata: 0x02346978
-			public const float GlobalColliderMaxMoveDistance = 0.2f; // Metadata: 0x0234697C
-			public const float GlobalColliderMaxRotationAngle = 10f; // Metadata: 0x02346980
-			public const float ColliderExtrusionMaxPower = 0.4f; // Metadata: 0x02346984
-			public const float ColliderExtrusionDirectionPower = 0.3f; // Metadata: 0x02346988
-			public const float ColliderExtrusionDistPower = 2f; // Metadata: 0x0234698C
-			public const float ColliderExtrusionVelocityInfluence = 0.25f; // Metadata: 0x02346990
-			public const float MaxWindMain = 100f; // Metadata: 0x02346994
-			public const float ClampRotationMaxVelocity = 1f; // Metadata: 0x02346998
-			public const float ClampRotationMaxVelocity2 = 2f; // Metadata: 0x0234699C
-			public const float TriangleBendVelocityInfluence = 0.5f; // Metadata: 0x023469A0
+			public const float Epsilon = 1E-06f; // Metadata: 0x02640A00
+			public const float CollisionFrictionRange = 0.03f; // Metadata: 0x02640A04
+			public const float FrictionDampingRate = 0.6f; // Metadata: 0x02640A08
+			public const float FrictionMoveRatio = 0.5f; // Metadata: 0x02640A0C
+			public const float FrictionPower = 4f; // Metadata: 0x02640A10
+			public const float ClampPositionMaxVelocity = 1f; // Metadata: 0x02640A14
+			public const float GlobalColliderMaxMoveDistance = 0.2f; // Metadata: 0x02640A18
+			public const float GlobalColliderMaxRotationAngle = 10f; // Metadata: 0x02640A1C
+			public const float ColliderExtrusionMaxPower = 0.4f; // Metadata: 0x02640A20
+			public const float ColliderExtrusionDirectionPower = 0.3f; // Metadata: 0x02640A24
+			public const float ColliderExtrusionDistPower = 2f; // Metadata: 0x02640A28
+			public const float ColliderExtrusionVelocityInfluence = 0.25f; // Metadata: 0x02640A2C
+			public const float MaxWindMain = 100f; // Metadata: 0x02640A30
+			public const float ClampRotationMaxVelocity = 1f; // Metadata: 0x02640A34
+			public const float ClampRotationMaxVelocity2 = 2f; // Metadata: 0x02640A38
+			public const float TriangleBendVelocityInfluence = 0.5f; // Metadata: 0x02640A3C
 		}
 	
-		public enum Error // TypeDefIndex: 55031
+		public enum Error // TypeDefIndex: 82078
 		{
 			None = 0,
 			Cancel = 1,
@@ -1794,31 +1791,31 @@ namespace MagicaCloth
 			OldAlgorithm = 20003
 		}
 	
-		public static class OptimizeMesh // TypeDefIndex: 55032
+		public static class OptimizeMesh // TypeDefIndex: 82079
 		{
 			// Fields
-			public const int Unknown = 0; // Metadata: 0x02346A36
-			public const int Nothing = 1; // Metadata: 0x02346A37
-			public const int Unity2018_On = 16; // Metadata: 0x02346A38
-			public const int Unity2019_PolygonOrder = 256; // Metadata: 0x02346A39
-			public const int Unity2019_VertexOrder = 512; // Metadata: 0x02346A3B
+			public const int Unknown = 0; // Metadata: 0x02640AD2
+			public const int Nothing = 1; // Metadata: 0x02640AD3
+			public const int Unity2018_On = 16; // Metadata: 0x02640AD4
+			public const int Unity2019_PolygonOrder = 256; // Metadata: 0x02640AD5
+			public const int Unity2019_VertexOrder = 512; // Metadata: 0x02640AD7
 		}
 	
-		public static class RenderMesh // TypeDefIndex: 55033
+		public static class RenderMesh // TypeDefIndex: 82080
 		{
 			// Fields
-			public const int WorkerMultiplesOfVertexCollection = 3; // Metadata: 0x02346A3D
+			public const int WorkerMultiplesOfVertexCollection = 3; // Metadata: 0x02640AD9
 		}
 	
 		// Methods
-		public static bool IsNormal(Error err); // 0x0000000186911EF8-0x0000000186911F00
-		public static bool IsError(Error err); // 0x0000000189EEF16C-0x0000000189EEF180
-		public static bool IsWarning(Error err); // 0x0000000189EEF180-0x0000000189EEF18C
-		public static string GetErrorMessage(Error err); // 0x0000000189EEEE0C-0x0000000189EEF16C
+		public static bool IsNormal(Error err); // 0x0000000188C30D48-0x0000000188C30D50
+		public static bool IsError(Error err); // 0x000000018C321CB4-0x000000018C321CC8
+		public static bool IsWarning(Error err); // 0x000000018C321CC8-0x000000018C321CD4
+		public static string GetErrorMessage(Error err); // 0x000000018C321950-0x000000018C321CB4
 	}
 
 	[Serializable]
-	public abstract class BaseMeshDeformer : IEditorMesh, IDataVerify, IDataHash // TypeDefIndex: 55035
+	public abstract class BaseMeshDeformer : IEditorMesh, IDataVerify, IDataHash // TypeDefIndex: 82082
 	{
 		// Fields
 		[SerializeField]
@@ -1841,61 +1838,61 @@ namespace MagicaCloth
 		private int _TriangleCount_k__BackingField; // 0x44
 	
 		// Properties
-		public CoreComponent Parent { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-		public virtual MeshData MeshData { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-		public GameObject TargetObject { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-		public RuntimeStatus Status { get; } // 0x0000000184D86240-0x0000000184D86250 
-		public int MeshIndex { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
-		public int VertexCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
-		public int SkinningVertexCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D865E0-0x0000000184D865F0 0x0000000184D86610-0x0000000184D86620
-		public int TriangleCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
-		public bool IsSkinning { get; } // 0x0000000189EEBE70-0x0000000189EEBEDC 
-		public int BoneCount { get; } // 0x0000000189EEBDF8-0x0000000189EEBE70 
-		public int SaveDataHash { get; } // 0x0000000182B70F90-0x0000000182B70FA0 
-		public int SaveDataVersion { get; } // 0x00000001811F0020-0x00000001811F0030 
+		public CoreComponent Parent { get; set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+		public virtual MeshData MeshData { get; set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+		public GameObject TargetObject { get; set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+		public RuntimeStatus Status { get; } // 0x0000000182262130-0x0000000182262140 
+		public int MeshIndex { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x00000001829600C0-0x00000001829600D0 0x0000000185E3C070-0x0000000185E3C080
+		public int VertexCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x000000018226F000-0x000000018226F010 0x000000018226F010-0x000000018226F020
+		public int SkinningVertexCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000182271C50-0x0000000182271C60 0x0000000182271C70-0x0000000182271C80
+		public int TriangleCount { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000182271C40-0x0000000182271C50 0x0000000182271C60-0x0000000182271C70
+		public bool IsSkinning { get; } // 0x000000018C320B64-0x000000018C320BD0 
+		public int BoneCount { get; } // 0x000000018C320AEC-0x000000018C320B64 
+		public int SaveDataHash { get; } // 0x000000018226A850-0x000000018226A860 
+		public int SaveDataVersion { get; } // 0x0000000182A819B0-0x0000000182A819C0 
 	
 		// Constructors
-		protected BaseMeshDeformer(); // 0x0000000189EEBD8C-0x0000000189EEBDF8
+		protected BaseMeshDeformer(); // 0x000000018C320A80-0x000000018C320AEC
 	
 		// Methods
-		public virtual void Init(); // 0x0000000189EEBA2C-0x0000000189EEBB80
-		protected virtual void OnInit(); // 0x0000000189EEBBF0-0x0000000189EEBC54
-		public virtual void Dispose(); // 0x0000000189EEB8CC-0x0000000189EEB954
-		public virtual void OnEnable(); // 0x0000000189EEBBB8-0x0000000189EEBBF0
-		public virtual void OnDisable(); // 0x0000000189EEBB80-0x0000000189EEBBB8
-		public virtual void Update(); // 0x0000000189EEBC90-0x0000000189EEBCD4
+		public virtual void Init(); // 0x000000018C32071C-0x000000018C320870
+		protected virtual void OnInit(); // 0x000000018C3208E0-0x000000018C320948
+		public virtual void Dispose(); // 0x000000018C3205BC-0x000000018C320644
+		public virtual void OnEnable(); // 0x000000018C3208A8-0x000000018C3208E0
+		public virtual void OnDisable(); // 0x000000018C320870-0x000000018C3208A8
+		public virtual void Update(); // 0x000000018C320984-0x000000018C3209C8
 		internal abstract void MeshCalculation(int bufferIndex);
 		internal abstract void NormalWriting(int bufferIndex);
-		protected void OnUpdateStatus(); // 0x0000000189EEBC54-0x0000000189EEBC90
-		protected virtual void OnActive(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnInactive(); // 0x00000001841E1670-0x00000001841E1680
-		public virtual bool IsMeshUse(); // 0x00000001812081B0-0x0000000181208610
-		public virtual bool IsActiveMesh(); // 0x00000001812081B0-0x0000000181208610
-		public virtual void AddUseMesh(object parent); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void RemoveUseMesh(object parent); // 0x00000001841E1670-0x00000001841E1680
-		public virtual bool AddUseVertex(int vindex, bool fix); // 0x00000001812081B0-0x0000000181208610
-		public virtual bool RemoveUseVertex(int vindex, bool fix); // 0x00000001812081B0-0x0000000181208610
-		public virtual void ResetFuturePrediction(); // 0x00000001841E1670-0x00000001841E1680
-		public virtual void ChangeUseUnityPhysics(bool sw); // 0x00000001841E1670-0x00000001841E1680
-		public virtual int GetDataHash(); // 0x0000000189EEB954-0x0000000189EEBA00
+		protected void OnUpdateStatus(); // 0x000000018C320948-0x000000018C320984
+		protected virtual void OnActive(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnInactive(); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual bool IsMeshUse(); // 0x00000001843FFFF0-0x0000000184400000
+		public virtual bool IsActiveMesh(); // 0x00000001843FFFF0-0x0000000184400000
+		public virtual void AddUseMesh(object parent); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void RemoveUseMesh(object parent); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual bool AddUseVertex(int vindex, bool fix); // 0x00000001843FFFF0-0x0000000184400000
+		public virtual bool RemoveUseVertex(int vindex, bool fix); // 0x00000001843FFFF0-0x0000000184400000
+		public virtual void ResetFuturePrediction(); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual void ChangeUseUnityPhysics(bool sw); // 0x0000000186805BA0-0x0000000186805BB0
+		public virtual int GetDataHash(); // 0x000000018C320644-0x000000018C3206F0
 		public abstract int GetVersion();
-		public virtual Define.Error VerifyData(); // 0x0000000189EEBCD4-0x0000000189EEBD8C
-		public virtual void CreateVerifyData(); // 0x0000000189EEB89C-0x0000000189EEB8CC
-		public virtual string GetInformation(); // 0x0000000189EEBA00-0x0000000189EEBA2C
+		public virtual Define.Error VerifyData(); // 0x000000018C3209C8-0x000000018C320A80
+		public virtual void CreateVerifyData(); // 0x000000018C32058C-0x000000018C3205BC
+		public virtual string GetInformation(); // 0x000000018C3206F0-0x000000018C32071C
 		public abstract int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList);
 		public abstract List<int> GetEditorTriangleList();
 		public abstract List<int> GetEditorLineList();
 		[CompilerGenerated]
-		private object _Init_b__33_0(); // 0x00000001811F36E0-0x00000001811F36F0
+		private object _Init_b__33_0(); // 0x00000001829600D0-0x00000001829600E0
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaRenderDeformer")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-render-deformer/")]
-	public class MagicaRenderDeformer : CoreComponent // TypeDefIndex: 55036
+	public class MagicaRenderDeformer : CoreComponent // TypeDefIndex: 82083
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x02346A3E
-		private const int ERR_DATA_VERSION = 0; // Metadata: 0x02346A3F
+		private const int DATA_VERSION = 2; // Metadata: 0x02640ADA
+		private const int ERR_DATA_VERSION = 0; // Metadata: 0x02640ADB
 		[SerializeField]
 		private RenderMeshDeformer deformer; // 0x38
 		[SerializeField]
@@ -1906,48 +1903,48 @@ namespace MagicaCloth
 		private PhysicsTeam.TeamCullingMode _cullModeCash_k__BackingField; // 0x48
 	
 		// Properties
-		internal PhysicsTeam.TeamCullingMode cullModeCash { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863D0-0x0000000184D863E0 0x0000000184D86450-0x0000000184D86460
-		public RenderMeshDeformer Deformer { get; } // 0x0000000189EF7280-0x0000000189EF72AC 
+		internal PhysicsTeam.TeamCullingMode cullModeCash { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872330A0-0x00000001872330B0 0x0000000185E120B0-0x0000000185E120C0
+		public RenderMeshDeformer Deformer { get; } // 0x000000018C3297A8-0x000000018C3297D4 
 	
 		// Constructors
-		public MagicaRenderDeformer(); // 0x0000000189EF720C-0x0000000189EF7280
+		public MagicaRenderDeformer(); // 0x000000018C329730-0x000000018C3297A8
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3480-0x0000000184DA3490
-		public override int GetDataHash(); // 0x0000000189EF6A60-0x0000000189EF6A88
-		private void OnValidate(); // 0x0000000189EF6DE0-0x0000000189EF6E04
-		protected override void OnInit(); // 0x0000000189EF6D98-0x0000000189EF6DBC
-		protected override void OnDispose(); // 0x0000000189EF6D4C-0x0000000189EF6D74
-		protected override void OnUpdate(); // 0x0000000189EF6DBC-0x0000000189EF6DE0
-		protected override void OnActive(); // 0x0000000189EF6C0C-0x0000000189EF6C30
-		protected override void OnInactive(); // 0x0000000189EF6D74-0x0000000189EF6D98
-		protected void OnBecameVisible(); // 0x0000000189EF6C78-0x0000000189EF6CC0
-		protected void OnBecameInvisible(); // 0x0000000189EF6C30-0x0000000189EF6C78
-		internal override void UpdateCullingMode(CoreComponent caller); // 0x0000000189EF6E04-0x0000000189EF7170
-		protected override void OnChangeCalculation(); // 0x0000000189EF6CC0-0x0000000189EF6D4C
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override int GetErrorVersion(); // 0x00000001811EC580-0x00000001811EC590
-		public override void CreateVerifyData(); // 0x0000000189EF68C4-0x0000000189EF690C
-		public override Define.Error VerifyData(); // 0x0000000189EF7170-0x0000000189EF720C
-		public override string GetInformation(); // 0x0000000189EF6B24-0x0000000189EF6B6C
+		public override ComponentType GetComponentType(); // 0x0000000187251050-0x0000000187251060
+		public override int GetDataHash(); // 0x000000018C328F64-0x000000018C328F8C
+		private void OnValidate(); // 0x000000018C3292FC-0x000000018C329320
+		protected override void OnInit(); // 0x000000018C3292B4-0x000000018C3292D8
+		protected override void OnDispose(); // 0x000000018C329268-0x000000018C329290
+		protected override void OnUpdate(); // 0x000000018C3292D8-0x000000018C3292FC
+		protected override void OnActive(); // 0x000000018C329110-0x000000018C329134
+		protected override void OnInactive(); // 0x000000018C329290-0x000000018C3292B4
+		protected void OnBecameVisible(); // 0x000000018C32917C-0x000000018C3291C4
+		protected void OnBecameInvisible(); // 0x000000018C329134-0x000000018C32917C
+		internal override void UpdateCullingMode(CoreComponent caller); // 0x000000018C329320-0x000000018C329694
+		protected override void OnChangeCalculation(); // 0x000000018C3291C4-0x000000018C329268
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override int GetErrorVersion(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override void CreateVerifyData(); // 0x000000018C328DC8-0x000000018C328E10
+		public override Define.Error VerifyData(); // 0x000000018C329694-0x000000018C329730
+		public override string GetInformation(); // 0x000000018C329028-0x000000018C329070
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EF6B90-0x0000000189EF6C0C
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EF6890-0x0000000189EF68C4
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF6AB0-0x0000000189EF6AFC
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EF6AFC-0x0000000189EF6B24
-		public override List<int> GetEditorLineList(); // 0x0000000189EF6A88-0x0000000189EF6AB0
-		public override List<int> GetUseList(); // 0x0000000189EF6B6C-0x0000000189EF6B90
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EF69EC-0x0000000189EF6A60
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EF690C-0x0000000189EF69EC
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C329094-0x000000018C329110
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C328D94-0x000000018C328DC8
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C328FB4-0x000000018C329000
+		public override List<int> GetEditorTriangleList(); // 0x000000018C329000-0x000000018C329028
+		public override List<int> GetEditorLineList(); // 0x000000018C328F8C-0x000000018C328FB4
+		public override List<int> GetUseList(); // 0x000000018C329070-0x000000018C329094
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C328EF0-0x000000018C328F64
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C328E10-0x000000018C328EF0
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaVirtualDeformer")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-virtual-deformer/")]
-	public class MagicaVirtualDeformer : CoreComponent // TypeDefIndex: 55037
+	public class MagicaVirtualDeformer : CoreComponent // TypeDefIndex: 82084
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x02346A40
-		private const int ERR_DATA_VERSION = 0; // Metadata: 0x02346A41
+		private const int DATA_VERSION = 2; // Metadata: 0x02640ADC
+		private const int ERR_DATA_VERSION = 0; // Metadata: 0x02640ADD
 		[SerializeField]
 		private VirtualMeshDeformer deformer; // 0x38
 		[SerializeField]
@@ -1958,45 +1955,45 @@ namespace MagicaCloth
 		private PhysicsTeam.TeamCullingMode _cullModeCash_k__BackingField; // 0x48
 	
 		// Properties
-		internal PhysicsTeam.TeamCullingMode cullModeCash { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863D0-0x0000000184D863E0 0x0000000184D86450-0x0000000184D86460
-		public VirtualMeshDeformer Deformer { get; } // 0x0000000189EF7280-0x0000000189EF72AC 
+		internal PhysicsTeam.TeamCullingMode cullModeCash { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872330A0-0x00000001872330B0 0x0000000185E120B0-0x0000000185E120C0
+		public VirtualMeshDeformer Deformer { get; } // 0x000000018C3297A8-0x000000018C3297D4 
 	
 		// Constructors
-		public MagicaVirtualDeformer(); // 0x0000000189EF7C98-0x0000000189EF7D0C
+		public MagicaVirtualDeformer(); // 0x000000018C32A1D8-0x000000018C32A250
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA3490-0x0000000184DA34A0
-		public override int GetDataHash(); // 0x0000000189EF6A60-0x0000000189EF6A88
-		private void OnValidate(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnInit(); // 0x0000000189EF7810-0x0000000189EF7848
-		protected override void OnDispose(); // 0x0000000189EF77D4-0x0000000189EF7810
-		protected override void OnUpdate(); // 0x0000000189EF6DBC-0x0000000189EF6DE0
-		protected override void OnActive(); // 0x0000000189EF6C0C-0x0000000189EF6C30
-		protected override void OnInactive(); // 0x0000000189EF6D74-0x0000000189EF6D98
-		private void LinkRenderDeformerStatus(bool sw); // 0x0000000189EF76A4-0x0000000189EF77A0
-		protected override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EF72AC-0x0000000189EF7348
-		internal override void UpdateCullingMode(CoreComponent caller); // 0x0000000189EF7848-0x0000000189EF7C2C
-		protected override void OnChangeCalculation(); // 0x0000000189EF77A0-0x0000000189EF77D4
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override int GetErrorVersion(); // 0x00000001811EC580-0x00000001811EC590
-		public override void CreateVerifyData(); // 0x0000000189EF68C4-0x0000000189EF690C
-		public override Define.Error VerifyData(); // 0x0000000189EF7C2C-0x0000000189EF7C98
-		public override string GetInformation(); // 0x0000000189EF6B24-0x0000000189EF6B6C
+		public override ComponentType GetComponentType(); // 0x0000000187251060-0x0000000187251070
+		public override int GetDataHash(); // 0x000000018C328F64-0x000000018C328F8C
+		private void OnValidate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnInit(); // 0x000000018C329D48-0x000000018C329D80
+		protected override void OnDispose(); // 0x000000018C329D0C-0x000000018C329D48
+		protected override void OnUpdate(); // 0x000000018C3292D8-0x000000018C3292FC
+		protected override void OnActive(); // 0x000000018C329110-0x000000018C329134
+		protected override void OnInactive(); // 0x000000018C329290-0x000000018C3292B4
+		private void LinkRenderDeformerStatus(bool sw); // 0x000000018C329BCC-0x000000018C329CC8
+		protected override void ChangeUseUnityPhysics(bool sw); // 0x000000018C3297D4-0x000000018C329870
+		internal override void UpdateCullingMode(CoreComponent caller); // 0x000000018C329D80-0x000000018C32A16C
+		protected override void OnChangeCalculation(); // 0x000000018C329CC8-0x000000018C329D0C
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override int GetErrorVersion(); // 0x0000000185829EC0-0x0000000185829ED0
+		public override void CreateVerifyData(); // 0x000000018C328DC8-0x000000018C328E10
+		public override Define.Error VerifyData(); // 0x000000018C32A16C-0x000000018C32A1D8
+		public override string GetInformation(); // 0x000000018C329028-0x000000018C329070
 		public override void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict);
-		public override HashSet<Transform> GetUsedBones(); // 0x0000000189EF7628-0x0000000189EF76A4
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF6AB0-0x0000000189EF6AFC
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EF6AFC-0x0000000189EF6B24
-		public override List<int> GetEditorLineList(); // 0x0000000189EF6A88-0x0000000189EF6AB0
-		public override List<int> GetUseList(); // 0x0000000189EF749C-0x0000000189EF7628
-		public override List<ShareDataObject> GetAllShareDataObject(); // 0x0000000189EF7428-0x0000000189EF749C
-		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x0000000189EF7348-0x0000000189EF7428
+		public override HashSet<Transform> GetUsedBones(); // 0x000000018C329B50-0x000000018C329BCC
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C328FB4-0x000000018C329000
+		public override List<int> GetEditorTriangleList(); // 0x000000018C329000-0x000000018C329028
+		public override List<int> GetEditorLineList(); // 0x000000018C328F8C-0x000000018C328FB4
+		public override List<int> GetUseList(); // 0x000000018C3299C4-0x000000018C329B50
+		public override List<ShareDataObject> GetAllShareDataObject(); // 0x000000018C329950-0x000000018C3299C4
+		public override ShareDataObject DuplicateShareDataObject(ShareDataObject source); // 0x000000018C329870-0x000000018C329950
 	}
 
 	[Serializable]
-	public class MeshData : ShareDataObject // TypeDefIndex: 55040
+	public class MeshData : ShareDataObject // TypeDefIndex: 82087
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x02346A42
+		private const int DATA_VERSION = 2; // Metadata: 0x02640ADE
 		public bool isSkinning; // 0x20
 		public int vertexCount; // 0x24
 		public uint[] vertexInfoList; // 0x28
@@ -2014,17 +2011,17 @@ namespace MagicaCloth
 		public Vector3 baseScale; // 0x88
 	
 		// Properties
-		public int VertexCount { get; } // 0x00000001811F0020-0x00000001811F0030 
-		public int VertexHashCount { get; } // 0x0000000189EF88A8-0x0000000189EF88BC 
-		public int WeightCount { get; } // 0x0000000189EF88BC-0x0000000189EF88D0 
-		public int LineCount { get; } // 0x0000000184D863D0-0x0000000184D863E0 
-		public int TriangleCount { get; } // 0x0000000184D86570-0x0000000184D86580 
-		public int BoneCount { get; } // 0x0000000184D86CF0-0x0000000184D86D00 
-		public int ChildCount { get; } // 0x0000000189EF8868-0x0000000189EF88A8 
+		public int VertexCount { get; } // 0x0000000182A819B0-0x0000000182A819C0 
+		public int VertexHashCount { get; } // 0x000000018C32AD50-0x000000018C32AD64 
+		public int WeightCount { get; } // 0x000000018C32AD64-0x000000018C32AD78 
+		public int LineCount { get; } // 0x00000001872330A0-0x00000001872330B0 
+		public int TriangleCount { get; } // 0x00000001872331A0-0x00000001872331B0 
+		public int BoneCount { get; } // 0x0000000182271AE0-0x0000000182271AF0 
+		public int ChildCount { get; } // 0x000000018C32AD10-0x000000018C32AD50 
 	
 		// Nested types
 		[Serializable]
-		public struct VertexWeight // TypeDefIndex: 55038
+		public struct VertexWeight // TypeDefIndex: 82085
 		{
 			// Fields
 			public Vector3 localPos; // 0x00
@@ -2035,7 +2032,7 @@ namespace MagicaCloth
 		}
 	
 		[Serializable]
-		public class ChildData : IDataHash // TypeDefIndex: 55039
+		public class ChildData : IDataHash // TypeDefIndex: 82086
 		{
 			// Fields
 			public int childDataHash; // 0x10
@@ -2045,31 +2042,31 @@ namespace MagicaCloth
 			public int[] parentIndexList; // 0x28
 	
 			// Properties
-			public int VertexCount { get; } // 0x0000000184D882A0-0x0000000184D882B0 
+			public int VertexCount { get; } // 0x0000000182971EE0-0x0000000182971EF0 
 	
 			// Constructors
-			public ChildData(); // 0x00000001841E1670-0x00000001841E1680
+			public ChildData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public int GetDataHash(); // 0x0000000189EEBEDC-0x0000000189EEBF38
+			public int GetDataHash(); // 0x000000018C320BD0-0x000000018C320C2C
 		}
 	
 		// Constructors
-		public MeshData(); // 0x0000000189EF8808-0x0000000189EF8868
+		public MeshData(); // 0x00000001866F20D0-0x00000001866F2130
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EF8428-0x0000000189EF862C
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override Define.Error VerifyData(); // 0x0000000189EF87EC-0x0000000189EF8808
-		public Dictionary<int, List<uint>> GetVirtualToChildVertexDict(); // 0x0000000189EF862C-0x0000000189EF87EC
-		public List<int> ExtendSelection(List<int> originalSelection, bool extendNext, bool extendWeight); // 0x0000000189EF7D0C-0x0000000189EF8428
+		public override int GetDataHash(); // 0x000000018C32A950-0x000000018C32AB54
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override Define.Error VerifyData(); // 0x0000000186AE16B0-0x0000000186AE16D0
+		public Dictionary<int, List<uint>> GetVirtualToChildVertexDict(); // 0x000000018C32AB54-0x000000018C32AD10
+		public List<int> ExtendSelection(List<int> originalSelection, bool extendNext, bool extendWeight); // 0x000000018C32A250-0x000000018C32A950
 	}
 
 	[Serializable]
-	public class RenderMeshDeformer : BaseMeshDeformer, IBoneReplace // TypeDefIndex: 55043
+	public class RenderMeshDeformer : BaseMeshDeformer, IBoneReplace // TypeDefIndex: 82090
 	{
 		// Fields
-		private const int DATA_VERSION = 2; // Metadata: 0x02346A43
+		private const int DATA_VERSION = 2; // Metadata: 0x02640ADF
 		[SerializeField]
 		private RecalculateMode normalAndTangentUpdateMode; // 0x48
 		[SerializeField]
@@ -2106,71 +2103,71 @@ namespace MagicaCloth
 		private bool _IsFasterWrite_k__BackingField; // 0xA2
 	
 		// Properties
-		private bool IsChangePosition { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86C50-0x0000000184D86C60 0x0000000184D86C70-0x0000000184D86C80
-		private bool IsChangeNormalTangent { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA34C0-0x0000000184DA34D0 0x0000000184DA3510-0x0000000184DA3520
-		private bool IsChangeBoneWeights { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA34B0-0x0000000184DA34C0 0x0000000184DA3500-0x0000000184DA3510
-		internal bool IsWriteSkip { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
-		internal bool IsFasterWriteUpdate { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA34D0-0x0000000184DA34E0 0x0000000184DA3520-0x0000000184DA3530
-		internal bool IsWriteMeshPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA34F0-0x0000000184DA3500 0x0000000184DA3540-0x0000000184DA3550
-		internal bool IsWriteMeshBoneWeight { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA34E0-0x0000000184DA34F0 0x0000000184DA3530-0x0000000184DA3540
-		public Mesh SharedMesh { get; } // 0x0000000184D86270-0x0000000184D86280 
-		internal bool IsFasterWrite { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D90800-0x0000000184D90810 0x0000000184D90810-0x0000000184D90820
-		public bool IsRendererVisible { get; } // 0x0000000189EFB3C4-0x0000000189EFB430 
-		internal bool HasNormal { get; } // 0x0000000189EFB3B0-0x0000000189EFB3C4 
+		private bool IsChangePosition { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271B80-0x0000000182271B90 0x0000000182271B90-0x0000000182271BA0
+		private bool IsChangeNormalTangent { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187248B20-0x0000000187248B30 0x00000001872510D0-0x00000001872510E0
+		private bool IsChangeBoneWeights { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187251080-0x0000000187251090 0x00000001872510C0-0x00000001872510D0
+		internal bool IsWriteSkip { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187240E10-0x0000000187240E20 0x0000000187240E30-0x0000000187240E40
+		internal bool IsFasterWriteUpdate { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187251090-0x00000001872510A0 0x00000001872510E0-0x00000001872510F0
+		internal bool IsWriteMeshPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872510B0-0x00000001872510C0 0x0000000187251100-0x0000000187251110
+		internal bool IsWriteMeshBoneWeight { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001872510A0-0x00000001872510B0 0x00000001872510F0-0x0000000187251100
+		public Mesh SharedMesh { get; } // 0x000000018226EBD0-0x000000018226EBE0 
+		internal bool IsFasterWrite { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187243310-0x0000000187243320 0x0000000187243330-0x0000000187243360
+		public bool IsRendererVisible { get; } // 0x000000018C32D888-0x000000018C32D8F4 
+		internal bool HasNormal { get; } // 0x000000018C32D874-0x000000018C32D888 
 	
 		// Nested types
-		public enum RecalculateMode // TypeDefIndex: 55041
+		public enum RecalculateMode // TypeDefIndex: 82088
 		{
 			None = 0,
 			UpdateNormalPerFrame = 1,
 			UpdateNormalAndTangentPerFrame = 2
 		}
 	
-		public enum BoundsMode // TypeDefIndex: 55042
+		public enum BoundsMode // TypeDefIndex: 82089
 		{
 			None = 0,
 			ExpandedAtInitialization = 1
 		}
 	
 		// Constructors
-		public RenderMeshDeformer(); // 0x0000000189EFB3A0-0x0000000189EFB3B0
+		public RenderMeshDeformer(); // 0x000000018C32D864-0x000000018C32D874
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EF8F14-0x0000000189EF8F98
-		public void OnValidate(); // 0x0000000189EFAE54-0x0000000189EFAE94
-		protected override void OnInit(); // 0x0000000189EFA570-0x0000000189EFAE54
-		protected override void OnActive(); // 0x0000000189EFA36C-0x0000000189EFA47C
-		protected override void OnInactive(); // 0x0000000189EFA47C-0x0000000189EFA570
-		public override void Dispose(); // 0x0000000189EF8CD4-0x0000000189EF8DC8
-		private void SetRecalculateNormalAndTangentMode(); // 0x0000000189EFB184-0x0000000189EFB25C
-		public override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EF8C50-0x0000000189EF8CD4
-		public void ChangeCalculation(bool sw); // 0x0000000189EF8BC0-0x0000000189EF8C50
-		public override bool IsMeshUse(); // 0x0000000189EF9D88-0x0000000189EF9E00
-		public override bool IsActiveMesh(); // 0x0000000189EF9D10-0x0000000189EF9D88
-		public override void AddUseMesh(object parent); // 0x0000000189EF88D0-0x0000000189EF8BC0
-		public override void RemoveUseMesh(object parent); // 0x0000000189EFAE94-0x0000000189EFB184
-		internal override void MeshCalculation(int bufferIndex); // 0x0000000189EF9E00-0x0000000189EFA1F4
-		internal override void NormalWriting(int bufferIndex); // 0x0000000189EFA1F4-0x0000000189EFA36C
-		internal bool FasterWriting(int bufferIndex, ComputeShader compute, int kernel, int index, ref int maxVertexCount); // 0x0000000189EF8DC8-0x0000000189EF8F14
-		public void ChangeNormalTangentUpdateMode(); // 0x0000000184DA34A0-0x0000000184DA34B0
+		public override int GetDataHash(); // 0x000000018C32B3C0-0x000000018C32B444
+		public void OnValidate(); // 0x000000018C32D318-0x000000018C32D358
+		protected override void OnInit(); // 0x000000018C32CA30-0x000000018C32D318
+		protected override void OnActive(); // 0x000000018C32C828-0x000000018C32C938
+		protected override void OnInactive(); // 0x000000018C32C938-0x000000018C32CA30
+		public override void Dispose(); // 0x000000018C32B17C-0x000000018C32B270
+		private void SetRecalculateNormalAndTangentMode(); // 0x000000018C32D644-0x000000018C32D720
+		public override void ChangeUseUnityPhysics(bool sw); // 0x000000018C32B0F8-0x000000018C32B17C
+		public void ChangeCalculation(bool sw); // 0x000000018C32B064-0x000000018C32B0F8
+		public override bool IsMeshUse(); // 0x000000018C32C234-0x000000018C32C2AC
+		public override bool IsActiveMesh(); // 0x000000018C32C1BC-0x000000018C32C234
+		public override void AddUseMesh(object parent); // 0x000000018C32AD78-0x000000018C32B064
+		public override void RemoveUseMesh(object parent); // 0x000000018C32D358-0x000000018C32D644
+		internal override void MeshCalculation(int bufferIndex); // 0x000000018C32C2AC-0x000000018C32C6A0
+		internal override void NormalWriting(int bufferIndex); // 0x000000018C32C6A0-0x000000018C32C828
+		internal bool FasterWriting(int bufferIndex, ComputeShader compute, int kernel, int index, ref int maxVertexCount); // 0x000000018C32B270-0x000000018C32B3C0
+		public void ChangeNormalTangentUpdateMode(); // 0x0000000187251070-0x0000000187251080
 		public void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
-		public HashSet<Transform> GetUsedBones(); // 0x0000000189EF9C0C-0x0000000189EF9D10
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EF8F98-0x0000000189EF9328
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EF9328-0x0000000189EF93D8
-		public override List<int> GetEditorLineList(); // 0x00000001811EC580-0x00000001811EC590
-		public List<int> GetEditorUseList(); // 0x0000000189EF93D8-0x0000000189EF945C
-		public override int GetVersion(); // 0x0000000182BBE540-0x0000000182BBE550
-		public override Define.Error VerifyData(); // 0x0000000189EFB25C-0x0000000189EFB3A0
-		private Mesh GetTargetSharedMesh(); // 0x0000000189EF9AD4-0x0000000189EF9C0C
-		public override string GetInformation(); // 0x0000000189EF945C-0x0000000189EF9AD4
+		public HashSet<Transform> GetUsedBones(); // 0x000000018C32C0B8-0x000000018C32C1BC
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C32B444-0x000000018C32B7D4
+		public override List<int> GetEditorTriangleList(); // 0x000000018C32B7D4-0x000000018C32B884
+		public override List<int> GetEditorLineList(); // 0x0000000185829EC0-0x0000000185829ED0
+		public List<int> GetEditorUseList(); // 0x000000018C32B884-0x000000018C32B908
+		public override int GetVersion(); // 0x00000001845AFFB0-0x00000001845AFFC0
+		public override Define.Error VerifyData(); // 0x000000018C32D720-0x000000018C32D864
+		private Mesh GetTargetSharedMesh(); // 0x000000018C32BF80-0x000000018C32C0B8
+		public override string GetInformation(); // 0x000000018C32B908-0x000000018C32BF80
 	}
 
 	[Serializable]
-	public class VirtualMeshDeformer : BaseMeshDeformer, IBoneReplace // TypeDefIndex: 55045
+	public class VirtualMeshDeformer : BaseMeshDeformer, IBoneReplace // TypeDefIndex: 82092
 	{
 		// Fields
-		private const int DATA_VERSION = 1; // Metadata: 0x02346A49
+		private const int DATA_VERSION = 1; // Metadata: 0x02640AE5
 		[SerializeField]
 		private List<MagicaRenderDeformer> renderDeformerList; // 0x48
 		[SerializeField]
@@ -2199,64 +2196,64 @@ namespace MagicaCloth
 		private List<int> sharedChildMeshIndexList; // 0x80
 	
 		// Properties
-		public float MergeVertexDistance { get; } // 0x0000000184D91500-0x0000000184D91510 
-		public float MergeTriangleDistance { get; } // 0x0000000184D88480-0x0000000184D88490 
-		public float SameSurfaceAngle { get; } // 0x0000000184D88470-0x0000000184D88480 
-		public int MaxWeightCount { get; } // 0x0000000189EFEAC4-0x0000000189EFEAF0 
-		public float WeightPow { get; } // 0x0000000184D90610-0x0000000184D90620 
-		public int RenderDeformerCount { get; } // 0x0000000189EFEAF0-0x0000000189EFEB30 
+		public float MergeVertexDistance { get; } // 0x00000001826DD0B0-0x00000001826DD0C0 
+		public float MergeTriangleDistance { get; } // 0x00000001872352B0-0x00000001872352C0 
+		public float SameSurfaceAngle { get; } // 0x00000001872352A0-0x00000001872352B0 
+		public int MaxWeightCount { get; } // 0x000000018C330DF8-0x000000018C330E24 
+		public float WeightPow { get; } // 0x000000018723E550-0x000000018723E560 
+		public int RenderDeformerCount { get; } // 0x000000018C330E24-0x000000018C330E64 
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0 // TypeDefIndex: 55044
+		private sealed class __c__DisplayClass35_0 // TypeDefIndex: 82091
 		{
 			// Fields
 			public RenderMeshDeformer deformer; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass35_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass35_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _GetRenderMeshDeformerIndex_b__0(MagicaRenderDeformer d); // 0x0000000189F10814-0x0000000189F10844
+			internal bool _GetRenderMeshDeformerIndex_b__0(MagicaRenderDeformer d); // 0x000000018C33E534-0x000000018C33E564
 		}
 	
 		// Constructors
-		public VirtualMeshDeformer(); // 0x0000000189EFE954-0x0000000189EFEAC4
+		public VirtualMeshDeformer(); // 0x000000018C330C88-0x000000018C330DF8
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189EFCDD0-0x0000000189EFCEB8
-		protected override void OnInit(); // 0x0000000189EFDE7C-0x0000000189EFE378
-		public override void Dispose(); // 0x0000000189EFCBA8-0x0000000189EFCDD0
-		protected override void OnActive(); // 0x0000000189EFDD10-0x0000000189EFDDB8
-		protected override void OnInactive(); // 0x0000000189EFDDB8-0x0000000189EFDE7C
-		internal override void MeshCalculation(int bufferIndex); // 0x00000001841E1670-0x00000001841E1680
-		internal override void NormalWriting(int bufferIndex); // 0x00000001841E1670-0x00000001841E1680
+		public override int GetDataHash(); // 0x000000018C32F0E8-0x000000018C32F1D0
+		protected override void OnInit(); // 0x000000018C33019C-0x000000018C330698
+		public override void Dispose(); // 0x000000018C32EEBC-0x000000018C32F0E8
+		protected override void OnActive(); // 0x000000018C330030-0x000000018C3300D8
+		protected override void OnInactive(); // 0x000000018C3300D8-0x000000018C33019C
+		internal override void MeshCalculation(int bufferIndex); // 0x0000000186805BA0-0x0000000186805BB0
+		internal override void NormalWriting(int bufferIndex); // 0x0000000186805BA0-0x0000000186805BB0
 		public void ReplaceBone<T>(Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
-		public HashSet<Transform> GetUsedBones(); // 0x0000000189EFDBAC-0x0000000189EFDC20
-		public BaseMeshDeformer GetDeformer(); // 0x000000018464E630-0x000000018464E640
-		public MagicaRenderDeformer GetRenderDeformer(int index); // 0x0000000189EFDA88-0x0000000189EFDADC
-		public int GetRenderMeshDeformerIndex(RenderMeshDeformer deformer); // 0x0000000189EFDADC-0x0000000189EFDBAC
-		public List<MeshData> GetRenderDeformerMeshList(); // 0x0000000189EFD938-0x0000000189EFDA88
-		public override bool IsMeshUse(); // 0x0000000189EFDC98-0x0000000189EFDD10
-		public override bool IsActiveMesh(); // 0x0000000189EFDC20-0x0000000189EFDC98
-		public override void AddUseMesh(object parent); // 0x0000000189EFC794-0x0000000189EFC878
-		public override void RemoveUseMesh(object parent); // 0x0000000189EFE378-0x0000000189EFE45C
-		public override bool AddUseVertex(int vindex, bool fix); // 0x0000000189EFC878-0x0000000189EFC910
-		public override bool RemoveUseVertex(int vindex, bool fix); // 0x0000000189EFE45C-0x0000000189EFE4F4
-		public override void ResetFuturePrediction(); // 0x0000000189EFE4F4-0x0000000189EFE554
-		public override void ChangeUseUnityPhysics(bool sw); // 0x0000000189EFC9A0-0x0000000189EFCA24
-		public void ChangeCalculation(bool sw); // 0x0000000189EFC910-0x0000000189EFC9A0
-		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189EFCF6C-0x0000000189EFD284
-		public override List<int> GetEditorTriangleList(); // 0x0000000189EFD284-0x0000000189EFD338
-		public override List<int> GetEditorLineList(); // 0x0000000189EFCEB8-0x0000000189EFCF6C
-		public override int GetVersion(); // 0x0000000184D85B80-0x0000000184D85B90
-		public override void CreateVerifyData(); // 0x0000000189EFCA24-0x0000000189EFCBA8
-		public override Define.Error VerifyData(); // 0x0000000189EFE554-0x0000000189EFE954
-		public override string GetInformation(); // 0x0000000189EFD338-0x0000000189EFD938
+		public HashSet<Transform> GetUsedBones(); // 0x000000018C32FECC-0x000000018C32FF40
+		public BaseMeshDeformer GetDeformer(); // 0x0000000185BD80B0-0x0000000185BD80C0
+		public MagicaRenderDeformer GetRenderDeformer(int index); // 0x000000018C32FDA8-0x000000018C32FDFC
+		public int GetRenderMeshDeformerIndex(RenderMeshDeformer deformer); // 0x000000018C32FDFC-0x000000018C32FECC
+		public List<MeshData> GetRenderDeformerMeshList(); // 0x000000018C32FC58-0x000000018C32FDA8
+		public override bool IsMeshUse(); // 0x000000018C32FFB8-0x000000018C330030
+		public override bool IsActiveMesh(); // 0x000000018C32FF40-0x000000018C32FFB8
+		public override void AddUseMesh(object parent); // 0x000000018C32EA94-0x000000018C32EB78
+		public override void RemoveUseMesh(object parent); // 0x000000018C330698-0x000000018C33077C
+		public override bool AddUseVertex(int vindex, bool fix); // 0x000000018C32EB78-0x000000018C32EC14
+		public override bool RemoveUseVertex(int vindex, bool fix); // 0x000000018C33077C-0x000000018C330818
+		public override void ResetFuturePrediction(); // 0x000000018C330818-0x000000018C330878
+		public override void ChangeUseUnityPhysics(bool sw); // 0x000000018C32ECA8-0x000000018C32ED2C
+		public void ChangeCalculation(bool sw); // 0x000000018C32EC14-0x000000018C32ECA8
+		public override int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C32F284-0x000000018C32F5A0
+		public override List<int> GetEditorTriangleList(); // 0x000000018C32F5A0-0x000000018C32F654
+		public override List<int> GetEditorLineList(); // 0x000000018C32F1D0-0x000000018C32F284
+		public override int GetVersion(); // 0x00000001872328C0-0x00000001872328D0
+		public override void CreateVerifyData(); // 0x000000018C32ED2C-0x000000018C32EEBC
+		public override Define.Error VerifyData(); // 0x000000018C330878-0x000000018C330C88
+		public override string GetInformation(); // 0x000000018C32F654-0x000000018C32FC58
 	}
 
-	public class ClampDistance2Constraint : PhysicsManagerConstraint // TypeDefIndex: 55050
+	public class ClampDistance2Constraint : PhysicsManagerConstraint // TypeDefIndex: 82097
 	{
 		// Fields
 		private FixedChunkNativeArray<ClampDistance2Data> dataList; // 0x20
@@ -2266,7 +2263,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct ClampDistance2Data // TypeDefIndex: 55046
+		public struct ClampDistance2Data // TypeDefIndex: 82093
 		{
 			// Fields
 			public int vertexIndex; // 0x00
@@ -2275,14 +2272,14 @@ namespace MagicaCloth
 		}
 	
 		[Serializable]
-		public struct ClampDistance2RootInfo // TypeDefIndex: 55047
+		public struct ClampDistance2RootInfo // TypeDefIndex: 82094
 		{
 			// Fields
 			public ushort startIndex; // 0x00
 			public ushort dataLength; // 0x02
 		}
 	
-		public struct GroupData // TypeDefIndex: 55048
+		public struct GroupData // TypeDefIndex: 82095
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2295,7 +2292,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct ClampDistance2Job : IJobParallelFor // TypeDefIndex: 55049
+		private struct ClampDistance2Job : IJobParallelFor // TypeDefIndex: 82096
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2319,22 +2316,22 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0x88
 	
 			// Methods
-			public void Execute(int rootIndex); // 0x0000000189EFFC40-0x0000000189F000A0
+			public void Execute(int rootIndex); // 0x000000018C331F70-0x000000018C3323C8
 		}
 	
 		// Constructors
-		public ClampDistance2Constraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ClampDistance2Constraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x0000000189EFF51C-0x0000000189EFF674
-		public override void Release(); // 0x0000000189EFF674-0x0000000189EFF71C
-		public int AddGroup(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence, ClampDistance2Data[] dataArray, ClampDistance2RootInfo[] rootInfoArray); // 0x0000000189EFF0A8-0x0000000189EFF36C
-		public override void RemoveTeam(int teamId); // 0x0000000189EFF71C-0x0000000189EFF91C
-		public void ChangeParam(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence); // 0x0000000189EFF36C-0x0000000189EFF51C
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189EFF91C-0x0000000189EFFC40
+		public override void Create(); // 0x000000018C33184C-0x000000018C3319A4
+		public override void Release(); // 0x000000018C3319A4-0x000000018C331A4C
+		public int AddGroup(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence, ClampDistance2Data[] dataArray, ClampDistance2RootInfo[] rootInfoArray); // 0x000000018C3313D8-0x000000018C33169C
+		public override void RemoveTeam(int teamId); // 0x000000018C331A4C-0x000000018C331C4C
+		public void ChangeParam(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence); // 0x000000018C33169C-0x000000018C33184C
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x000000018C331C4C-0x000000018C331F70
 	}
 
-	public class ClampDistanceConstraint : PhysicsManagerConstraint // TypeDefIndex: 55054
+	public class ClampDistanceConstraint : PhysicsManagerConstraint // TypeDefIndex: 82101
 	{
 		// Fields
 		private FixedChunkNativeArray<ClampDistanceData> dataList; // 0x20
@@ -2343,7 +2340,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct ClampDistanceData // TypeDefIndex: 55051
+		public struct ClampDistanceData // TypeDefIndex: 82098
 		{
 			// Fields
 			public ushort vertexIndex; // 0x00
@@ -2351,10 +2348,10 @@ namespace MagicaCloth
 			public float length; // 0x04
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F00928-0x0000000189F0093C
+			public bool IsValid(); // 0x000000018C332600-0x000000018C332614
 		}
 	
-		public struct GroupData // TypeDefIndex: 55052
+		public struct GroupData // TypeDefIndex: 82099
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2367,7 +2364,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct ClampDistanceJob : IJobParallelFor // TypeDefIndex: 55053
+		private struct ClampDistanceJob : IJobParallelFor // TypeDefIndex: 82100
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2392,28 +2389,28 @@ namespace MagicaCloth
 			public NativeArray<float> frictionList; // 0x98
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F0093C-0x0000000189F00ED8
+			public void Execute(int index); // 0x000000018C332614-0x000000018C332BB0
 		}
 	
 		// Constructors
-		public ClampDistanceConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ClampDistanceConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E0A0-0x000000018442E1B0
-		public override void Release(); // 0x0000000189F00430-0x0000000189F004B8
-		public int AddGroup(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence, ClampDistanceData[] dataArray, ReferenceDataIndex[] refDataArray); // 0x0000000189F000A0-0x0000000189F00280
-		public override void RemoveTeam(int teamId); // 0x0000000189F004B8-0x0000000189F00628
-		public void ChangeParam(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence); // 0x0000000189F00280-0x0000000189F00430
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F00628-0x0000000189F00928
+		public override void Create(); // 0x0000000186937140-0x0000000186937250
+		public override void Release(); // 0x000000018C332578-0x000000018C332600
+		public int AddGroup(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence, ClampDistanceData[] dataArray, ReferenceDataIndex[] refDataArray); // 0x0000000185221FA0-0x00000001852221C0
+		public override void RemoveTeam(int teamId); // 0x000000018674A0C0-0x000000018674A240
+		public void ChangeParam(int teamId, bool active, float minRatio, float maxRatio, float velocityInfluence); // 0x000000018C3323C8-0x000000018C332578
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x00000001852202E0-0x0000000185220680
 	}
 
-	public class ClampPositionConstraint : PhysicsManagerConstraint // TypeDefIndex: 55057
+	public class ClampPositionConstraint : PhysicsManagerConstraint // TypeDefIndex: 82104
 	{
 		// Fields
 		public FixedNativeList<GroupData> groupList; // 0x20
 	
 		// Nested types
-		public struct GroupData // TypeDefIndex: 55055
+		public struct GroupData // TypeDefIndex: 82102
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2423,11 +2420,11 @@ namespace MagicaCloth
 			public float velocityInfluence; // 0x24
 	
 			// Methods
-			public bool IsAxisCheck(); // 0x0000000189F07FDC-0x0000000189F07FFC
+			public bool IsAxisCheck(); // 0x000000018C3383B0-0x000000018C3383D0
 		}
 	
 		[BurstCompile]
-		private struct ClampPositionJob : IJobParallelFor // TypeDefIndex: 55056
+		private struct ClampPositionJob : IJobParallelFor // TypeDefIndex: 82103
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2452,22 +2449,22 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0x98
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F01650-0x0000000189F01C70
+			public void Execute(int index); // 0x000000018C332EF8-0x000000018C333518
 		}
 	
 		// Constructors
-		public ClampPositionConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ClampPositionConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x0000000184D2FE20-0x0000000184D2FEA0
-		public override void Release(); // 0x0000000189F011D8-0x0000000189F01220
-		public int AddGroup(int teamId, bool active, BezierParam limitLength, float3 axisRatio, float velocityInfluence); // 0x0000000189F00ED8-0x0000000189F01004
-		public override void RemoveTeam(int teamId); // 0x0000000189F01220-0x0000000189F01304
-		public void ChangeParam(int teamId, bool active, BezierParam limitLength, float3 axisRatio, float velocityInfluence); // 0x0000000189F01004-0x0000000189F011D8
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F01304-0x0000000189F01650
+		public override void Create(); // 0x00000001871C4BF0-0x00000001871C4C70
+		public override void Release(); // 0x000000018C332EB0-0x000000018C332EF8
+		public int AddGroup(int teamId, bool active, BezierParam limitLength, float3 axisRatio, float velocityInfluence); // 0x000000018C332BB0-0x000000018C332CDC
+		public override void RemoveTeam(int teamId); // 0x000000018688C900-0x000000018688C9E0
+		public void ChangeParam(int teamId, bool active, BezierParam limitLength, float3 axisRatio, float velocityInfluence); // 0x000000018C332CDC-0x000000018C332EB0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x000000018641BC30-0x000000018641BCB0
 	}
 
-	public class ClampRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 55062
+	public class ClampRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 82109
 	{
 		// Fields
 		private FixedChunkNativeArray<ClampRotationData> dataList; // 0x20
@@ -2478,7 +2475,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct ClampRotationData // TypeDefIndex: 55058
+		public struct ClampRotationData // TypeDefIndex: 82105
 		{
 			// Fields
 			public int vertexIndex; // 0x00
@@ -2487,18 +2484,18 @@ namespace MagicaCloth
 			public quaternion localRot; // 0x14
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F02704-0x0000000189F02714
+			public bool IsValid(); // 0x000000018C333A8C-0x000000018C333A9C
 		}
 	
 		[Serializable]
-		public struct ClampRotationRootInfo // TypeDefIndex: 55059
+		public struct ClampRotationRootInfo // TypeDefIndex: 82106
 		{
 			// Fields
 			public ushort startIndex; // 0x00
 			public ushort dataLength; // 0x02
 		}
 	
-		public struct GroupData // TypeDefIndex: 55060
+		public struct GroupData // TypeDefIndex: 82107
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2510,7 +2507,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct ClampRotationJob : IJobParallelFor // TypeDefIndex: 55061
+		private struct ClampRotationJob : IJobParallelFor // TypeDefIndex: 82108
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2541,26 +2538,26 @@ namespace MagicaCloth
 			public NativeArray<float> lengthBuffer; // 0xB8
 	
 			// Methods
-			public void Execute(int rootIndex); // 0x0000000189F02714-0x0000000189F03184
+			public void Execute(int rootIndex); // 0x000000018C333A9C-0x000000018C33451C
 		}
 	
 		// Constructors
-		public ClampRotationConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ClampRotationConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E1B0-0x000000018442E350
-		public override void Release(); // 0x0000000189F02118-0x0000000189F021E4
-		public int AddGroup(int teamId, bool active, BezierParam maxAngle, float velocityInfluence, ClampRotationData[] dataArray, ClampRotationRootInfo[] rootInfoArray); // 0x0000000189F01C70-0x0000000189F01F38
-		public override void RemoveTeam(int teamId); // 0x0000000189F021E4-0x0000000189F023C0
-		public void ChangeParam(int teamId, bool active, BezierParam maxAngle, float velocityInfluence); // 0x0000000189F01F38-0x0000000189F02118
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F023C0-0x0000000189F02704
+		public override void Create(); // 0x0000000186935340-0x00000001869354E0
+		public override void Release(); // 0x000000018C3339C0-0x000000018C333A8C
+		public int AddGroup(int teamId, bool active, BezierParam maxAngle, float velocityInfluence, ClampRotationData[] dataArray, ClampRotationRootInfo[] rootInfoArray); // 0x000000018C333518-0x000000018C3337E0
+		public override void RemoveTeam(int teamId); // 0x000000018688C820-0x000000018688C900
+		public void ChangeParam(int teamId, bool active, BezierParam maxAngle, float velocityInfluence); // 0x000000018C3337E0-0x000000018C3339C0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x000000018641BBB0-0x000000018641BC30
 	}
 
-	public class ColliderCollisionConstraint : PhysicsManagerConstraint // TypeDefIndex: 55064
+	public class ColliderCollisionConstraint : PhysicsManagerConstraint // TypeDefIndex: 82111
 	{
 		// Nested types
 		[BurstCompile]
-		private struct CollisionJob : IJobParallelFor // TypeDefIndex: 55063
+		private struct CollisionJob : IJobParallelFor // TypeDefIndex: 82110
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2599,28 +2596,28 @@ namespace MagicaCloth
 			public NativeArray<float3> collisionNormalList; // 0x108
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F04348-0x0000000189F04808
-			private float SphereColliderDetection(ref float3 nextpos, float radius, int cindex, out float3 normal); // 0x0000000189F0492C-0x0000000189F04ADC
-			private float CapsuleColliderDetection(ref float3 nextpos, float radius, int cindex, float3 dir, out float3 normal); // 0x0000000189F03E94-0x0000000189F04348
-			private float PlaneColliderDetection(ref float3 nextpos, float radius, int cindex, out float3 normal); // 0x0000000189F04808-0x0000000189F0492C
+			public void Execute(int index); // 0x000000018C334EA0-0x000000018C335374
+			private float SphereColliderDetection(ref float3 nextpos, float radius, int cindex, out float3 normal); // 0x000000018C335498-0x000000018C335648
+			private float CapsuleColliderDetection(ref float3 nextpos, float radius, int cindex, float3 dir, out float3 normal); // 0x000000018C3349EC-0x000000018C334EA0
+			private float PlaneColliderDetection(ref float3 nextpos, float radius, int cindex, out float3 normal); // 0x000000018C335374-0x000000018C335498
 		}
 	
 		// Constructors
-		public ColliderCollisionConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ColliderCollisionConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x00000001841E1670-0x00000001841E1680
-		public override void RemoveTeam(int teamId); // 0x00000001841E1670-0x00000001841E1680
-		public void ChangeParam(int teamId, bool useCollision); // 0x0000000189F03184-0x0000000189F031D4
-		public override void Release(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F031D4-0x0000000189F036AC
+		public override void Create(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void RemoveTeam(int teamId); // 0x0000000186805BA0-0x0000000186805BB0
+		public void ChangeParam(int teamId, bool useCollision); // 0x000000018C33451C-0x000000018C334570
+		public override void Release(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000185156060-0x00000001851565E0
 	}
 
-	public class ColliderExtrusionConstraint : PhysicsManagerConstraint // TypeDefIndex: 55066
+	public class ColliderExtrusionConstraint : PhysicsManagerConstraint // TypeDefIndex: 82113
 	{
 		// Nested types
 		[BurstCompile]
-		private struct CollisionExtrusionJob : IJobParallelFor // TypeDefIndex: 55065
+		private struct CollisionExtrusionJob : IJobParallelFor // TypeDefIndex: 82112
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2645,20 +2642,20 @@ namespace MagicaCloth
 			public NativeArray<PhysicsManagerTeamData.TeamData> teamDataList; // 0x98
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F03A18-0x0000000189F03E94
+			public void Execute(int index); // 0x000000018C334570-0x000000018C3349EC
 		}
 	
 		// Constructors
-		public ColliderExtrusionConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public ColliderExtrusionConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x00000001841E1670-0x00000001841E1680
-		public override void RemoveTeam(int teamId); // 0x00000001841E1670-0x00000001841E1680
-		public override void Release(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F036AC-0x0000000189F03A18
+		public override void Create(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void RemoveTeam(int teamId); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Release(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000185156A00-0x0000000185156E20
 	}
 
-	public class CompositeRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 55071
+	public class CompositeRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 82118
 	{
 		// Fields
 		private FixedChunkNativeArray<RotationData> dataList; // 0x20
@@ -2669,7 +2666,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct RotationData // TypeDefIndex: 55067
+		public struct RotationData // TypeDefIndex: 82114
 		{
 			// Fields
 			public int vertexIndex; // 0x00
@@ -2678,18 +2675,18 @@ namespace MagicaCloth
 			public quaternion localRot; // 0x14
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F02704-0x0000000189F02714
+			public bool IsValid(); // 0x000000018C333A8C-0x000000018C333A9C
 		}
 	
 		[Serializable]
-		public struct RootInfo // TypeDefIndex: 55068
+		public struct RootInfo // TypeDefIndex: 82115
 		{
 			// Fields
 			public ushort startIndex; // 0x00
 			public ushort dataLength; // 0x02
 		}
 	
-		public struct GroupData // TypeDefIndex: 55069
+		public struct GroupData // TypeDefIndex: 82116
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2703,7 +2700,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct RotationRootLineJob : IJobParallelFor // TypeDefIndex: 55070
+		private struct RotationRootLineJob : IJobParallelFor // TypeDefIndex: 82117
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -2741,23 +2738,23 @@ namespace MagicaCloth
 			public NativeArray<float> lengthBuffer; // 0xF0
 	
 			// Methods
-			public void Execute(int rootIndex); // 0x0000000189F0BC5C-0x0000000189F0D324
-			private float GetRotRatio(float3 tv, float3 gravityVector, float gravity, float minRatio = 0.25f /* Metadata: 0x02346A4A */, float maxRatio = 0.45f /* Metadata: 0x02346A4E */); // 0x0000000189EFEFD4-0x0000000189EFF0A8
+			public void Execute(int rootIndex); // 0x000000018C33A7C0-0x000000018C33BE94
+			private float GetRotRatio(float3 tv, float3 gravityVector, float gravity, float minRatio = 0.25f /* Metadata: 0x02640AE6 */, float maxRatio = 0.45f /* Metadata: 0x02640AEA */); // 0x000000018C331308-0x000000018C3313D8
 		}
 	
 		// Constructors
-		public CompositeRotationConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public CompositeRotationConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E350-0x000000018442E4F0
-		public override void Release(); // 0x0000000189F04F28-0x0000000189F04FF4
-		public int AddGroup(int teamId, bool useClamp, BezierParam maxAngle, bool useRestore, BezierParam restorePower, float velocityInfluence, RotationData[] dataArray, RootInfo[] rootInfoArray); // 0x0000000189F04ADC-0x0000000189F04D24
-		public override void RemoveTeam(int teamId); // 0x0000000189F04FF4-0x0000000189F05194
-		public void ChangeParam(int teamId, bool useClamp, BezierParam maxAngle, bool useRestore, BezierParam restorePower, float velocityInfluence); // 0x0000000189F04D24-0x0000000189F04F28
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F05194-0x0000000189F05564
+		public override void Create(); // 0x00000001869354E0-0x0000000186935680
+		public override void Release(); // 0x000000018C33584C-0x000000018C335918
+		public int AddGroup(int teamId, bool useClamp, BezierParam maxAngle, bool useRestore, BezierParam restorePower, float velocityInfluence, RotationData[] dataArray, RootInfo[] rootInfoArray); // 0x00000001852237F0-0x0000000185223A90
+		public override void RemoveTeam(int teamId); // 0x00000001866F5830-0x00000001866F59F0
+		public void ChangeParam(int teamId, bool useClamp, BezierParam maxAngle, bool useRestore, BezierParam restorePower, float velocityInfluence); // 0x000000018C335648-0x000000018C33584C
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000185220680-0x0000000185220B00
 	}
 
-	public class EdgeCollisionConstraint : PhysicsManagerConstraint // TypeDefIndex: 55076
+	public class EdgeCollisionConstraint : PhysicsManagerConstraint // TypeDefIndex: 82123
 	{
 		// Fields
 		private FixedChunkNativeArray<EdgeCollisionData> dataList; // 0x20
@@ -2768,7 +2765,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct EdgeCollisionData // TypeDefIndex: 55072
+		public struct EdgeCollisionData // TypeDefIndex: 82119
 		{
 			// Fields
 			public ushort vindex0; // 0x00
@@ -2777,10 +2774,10 @@ namespace MagicaCloth
 			public int writeIndex1; // 0x08
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F07C84-0x0000000189F07C98
+			public bool IsValid(); // 0x000000018C338058-0x000000018C33806C
 		}
 	
-		public struct GroupData // TypeDefIndex: 55073
+		public struct GroupData // TypeDefIndex: 82120
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2793,7 +2790,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct EdgeCollisionCalcJob : IJobParallelFor // TypeDefIndex: 55074
+		private struct EdgeCollisionCalcJob : IJobParallelFor // TypeDefIndex: 82121
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -2831,13 +2828,13 @@ namespace MagicaCloth
 			public NativeArray<float3> writeBuffer; // 0xE8
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F063F0-0x0000000189F068C4
-			private bool SphereColliderDetection(float3 nextpos0, float3 nextpos1, ref float3 corr0, ref float3 corr1, float radius, int cindex); // 0x0000000189F068C4-0x0000000189F06C0C
-			private bool CapsuleColliderDetection(float3 nextpos0, float3 nextpos1, ref float3 corr0, ref float3 corr1, float radius, int cindex, float3 dir); // 0x0000000189F05D5C-0x0000000189F063F0
+			public void Execute(int index); // 0x000000018C3367B4-0x000000018C336C94
+			private bool SphereColliderDetection(float3 nextpos0, float3 nextpos1, ref float3 corr0, ref float3 corr1, float radius, int cindex); // 0x000000018C336C94-0x000000018C336FDC
+			private bool CapsuleColliderDetection(float3 nextpos0, float3 nextpos1, ref float3 corr0, ref float3 corr1, float radius, int cindex, float3 dir); // 0x000000018C336120-0x000000018C3367B4
 		}
 	
 		[BurstCompile]
-		private struct EdgeCollisionSumJob : IJobParallelFor // TypeDefIndex: 55075
+		private struct EdgeCollisionSumJob : IJobParallelFor // TypeDefIndex: 82122
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2857,22 +2854,22 @@ namespace MagicaCloth
 			public NativeArray<float> frictionList; // 0x78
 	
 			// Methods
-			public void Execute(int pindex); // 0x0000000189F07C98-0x0000000189F07FDC
+			public void Execute(int pindex); // 0x000000018C33806C-0x000000018C3383B0
 		}
 	
 		// Constructors
-		public EdgeCollisionConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public EdgeCollisionConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x0000000189F070D4-0x0000000189F07278
-		public override void Release(); // 0x0000000189F07278-0x0000000189F07344
-		public int AddGroup(int teamId, bool active, float edgeRadius, EdgeCollisionData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x0000000189F06C0C-0x0000000189F06F40
-		public override void RemoveTeam(int teamId); // 0x0000000189F07344-0x0000000189F07590
-		public void ChangeParam(int teamId, bool active, float edgeRadius); // 0x0000000189F06F40-0x0000000189F070D4
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F07590-0x0000000189F07C84
+		public override void Create(); // 0x000000018C3374A8-0x000000018C33764C
+		public override void Release(); // 0x000000018C33764C-0x000000018C337718
+		public int AddGroup(int teamId, bool active, float edgeRadius, EdgeCollisionData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x000000018C336FDC-0x000000018C337314
+		public override void RemoveTeam(int teamId); // 0x000000018C337718-0x000000018C337964
+		public void ChangeParam(int teamId, bool active, float edgeRadius); // 0x000000018C337314-0x000000018C3374A8
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x000000018C337964-0x000000018C338058
 	}
 
-	public class PenetrationConstraint : PhysicsManagerConstraint // TypeDefIndex: 55080
+	public class PenetrationConstraint : PhysicsManagerConstraint // TypeDefIndex: 82127
 	{
 		// Fields
 		private FixedChunkNativeArray<PenetrationData> dataList; // 0x20
@@ -2882,7 +2879,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct PenetrationData // TypeDefIndex: 55077
+		public struct PenetrationData // TypeDefIndex: 82124
 		{
 			// Fields
 			public short vertexIndex; // 0x00
@@ -2892,10 +2889,10 @@ namespace MagicaCloth
 			public float distance; // 0x1C
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F08C44-0x0000000189F08C50
+			public bool IsValid(); // 0x000000018C338940-0x000000018C33894C
 		}
 	
-		public struct GroupData // TypeDefIndex: 55078
+		public struct GroupData // TypeDefIndex: 82125
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -2910,7 +2907,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct PenetrationJob : IJobParallelFor // TypeDefIndex: 55079
+		private struct PenetrationJob : IJobParallelFor // TypeDefIndex: 82126
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -2955,37 +2952,37 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0x138
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F08C50-0x0000000189F097D0
-			private float3 InverseSpherePosition(ref PenetrationData data, float teamScale, float3 scaleDirection, float distance, int cindex, float cr); // 0x0000000189F098F0-0x0000000189F09ACC
-			private float3 InverseSpherePenetration(float3 c, float cr, float3 nextpos); // 0x0000000189F097D0-0x0000000189F098F0
+			public void Execute(int index); // 0x000000018C33894C-0x000000018C3394CC
+			private float3 InverseSpherePosition(ref PenetrationData data, float teamScale, float3 scaleDirection, float distance, int cindex, float cr); // 0x000000018C3395EC-0x000000018C3397C8
+			private float3 InverseSpherePenetration(float3 c, float cr, float3 nextpos); // 0x000000018C3394CC-0x000000018C3395EC
 		}
 	
 		// Constructors
-		public PenetrationConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public PenetrationConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E4F0-0x000000018442E650
-		public override void Release(); // 0x0000000189F084C4-0x0000000189F0856C
-		public int AddGroup(int teamId, bool active, ClothParams.PenetrationMode mode, BezierParam distance, BezierParam radius, float maxDepth, PenetrationData[] moveLimitDataList, ReferenceDataIndex[] refDataArray, float3[] bonePenetrationDataArray); // 0x0000000189F07FFC-0x0000000189F082CC
-		public override void RemoveTeam(int teamId); // 0x0000000189F0856C-0x0000000189F086F4
-		public void ChangeParam(int teamId, bool active, BezierParam distance, BezierParam radius, float maxDepth); // 0x0000000189F082CC-0x0000000189F084C4
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F086F4-0x0000000189F08C44
+		public override void Create(); // 0x0000000186935680-0x00000001869357E0
+		public override void Release(); // 0x000000018C338898-0x000000018C338940
+		public int AddGroup(int teamId, bool active, ClothParams.PenetrationMode mode, BezierParam distance, BezierParam radius, float maxDepth, PenetrationData[] moveLimitDataList, ReferenceDataIndex[] refDataArray, float3[] bonePenetrationDataArray); // 0x000000018C3383D0-0x000000018C3386A0
+		public override void RemoveTeam(int teamId); // 0x000000018688C740-0x000000018688C820
+		public void ChangeParam(int teamId, bool active, BezierParam distance, BezierParam radius, float maxDepth); // 0x000000018C3386A0-0x000000018C338898
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000186436E60-0x0000000186436EE0
 	}
 
-	public class RestoreDistanceConstraint : PhysicsManagerConstraint // TypeDefIndex: 55084
+	public class RestoreDistanceConstraint : PhysicsManagerConstraint // TypeDefIndex: 82131
 	{
 		// Fields
-		public const int StructType = 0; // Metadata: 0x02346A52
-		public const int BendType = 1; // Metadata: 0x02346A53
-		public const int NearType = 2; // Metadata: 0x02346A54
-		public const int TypeCount = 3; // Metadata: 0x02346A55
+		public const int StructType = 0; // Metadata: 0x02640AEE
+		public const int BendType = 1; // Metadata: 0x02640AEF
+		public const int NearType = 2; // Metadata: 0x02640AF0
+		public const int TypeCount = 3; // Metadata: 0x02640AF1
 		private FixedChunkNativeArray<RestoreDistanceData>[] dataList; // 0x20
 		private FixedChunkNativeArray<ReferenceDataIndex>[] refDataList; // 0x28
 		public FixedNativeList<RestoreDistanceGroupData> groupList; // 0x30
 	
 		// Nested types
 		[Serializable]
-		public struct RestoreDistanceData // TypeDefIndex: 55081
+		public struct RestoreDistanceData // TypeDefIndex: 82128
 		{
 			// Fields
 			public ushort vertexIndex; // 0x00
@@ -2993,10 +2990,10 @@ namespace MagicaCloth
 			public float length; // 0x04
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F00928-0x0000000189F0093C
+			public bool IsValid(); // 0x000000018C332600-0x000000018C332614
 		}
 	
-		public struct RestoreDistanceGroupData // TypeDefIndex: 55082
+		public struct RestoreDistanceGroupData // TypeDefIndex: 82129
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3015,14 +3012,14 @@ namespace MagicaCloth
 			public ChunkData nearRefChunk; // 0xA0
 	
 			// Methods
-			public bool IsValid(int type); // 0x0000000189F0AAE0-0x0000000189F0AAFC
-			public CurveParam GetStiffness(int type); // 0x0000000189F0AAB8-0x0000000189F0AAE0
-			public ChunkData GetDataChunk(int type); // 0x0000000189F0AA68-0x0000000189F0AA90
-			public ChunkData GetRefChunk(int type); // 0x0000000189F0AA90-0x0000000189F0AAB8
+			public bool IsValid(int type); // 0x000000018C339B84-0x000000018C339BA0
+			public CurveParam GetStiffness(int type); // 0x000000018C339B5C-0x000000018C339B84
+			public ChunkData GetDataChunk(int type); // 0x0000000185221F70-0x0000000185221FA0
+			public ChunkData GetRefChunk(int type); // 0x0000000185221F40-0x0000000185221F70
 		}
 	
 		[BurstCompile]
-		private struct DistanceJob : IJobParallelFor // TypeDefIndex: 55083
+		private struct DistanceJob : IJobParallelFor // TypeDefIndex: 82130
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3053,23 +3050,23 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0xC0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F05564-0x0000000189F05D5C
+			public void Execute(int index); // 0x000000018C335918-0x000000018C336120
 		}
 	
 		// Constructors
-		public RestoreDistanceConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public RestoreDistanceConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E870-0x000000018442EA50
-		public override void Release(); // 0x0000000189F0A2B8-0x0000000189F0A39C
-		public int AddGroup(int teamId, BezierParam mass, float velocityInfluence, BezierParam structStiffness, RestoreDistanceData[] structDataArray, ReferenceDataIndex[] structRefDataArray, bool useBend, BezierParam bendStiffness, RestoreDistanceData[] bendDataArray, ReferenceDataIndex[] bendRefDataArray, bool useNear, BezierParam nearStiffness, RestoreDistanceData[] nearDataArray, ReferenceDataIndex[] nearRefDataArray); // 0x0000000189F09ACC-0x0000000189F0A01C
-		public override void RemoveTeam(int teamId); // 0x0000000189F0A39C-0x0000000189F0A5F0
-		public void ChangeParam(int teamId, BezierParam mass, float velocityInfluence, BezierParam structStiffness, bool useBend, BezierParam bendStiffness, bool useNear, BezierParam nearStiffness); // 0x0000000189F0A01C-0x0000000189F0A2B8
-		public override int GetIterationCount(); // 0x0000000182B2E2D0-0x0000000182B2E2E0
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F0A5F0-0x0000000189F0AA68
+		public override void Create(); // 0x0000000186936F50-0x0000000186937140
+		public override void Release(); // 0x000000018C339A64-0x000000018C339B5C
+		public int AddGroup(int teamId, BezierParam mass, float velocityInfluence, BezierParam structStiffness, RestoreDistanceData[] structDataArray, ReferenceDataIndex[] structRefDataArray, bool useBend, BezierParam bendStiffness, RestoreDistanceData[] bendDataArray, ReferenceDataIndex[] bendRefDataArray, bool useNear, BezierParam nearStiffness, RestoreDistanceData[] nearDataArray, ReferenceDataIndex[] nearRefDataArray); // 0x0000000185221950-0x0000000185221C60
+		public override void RemoveTeam(int teamId); // 0x0000000185221C60-0x0000000185221F40
+		public void ChangeParam(int teamId, BezierParam mass, float velocityInfluence, BezierParam structStiffness, bool useBend, BezierParam bendStiffness, bool useNear, BezierParam nearStiffness); // 0x000000018C3397C8-0x000000018C339A64
+		public override int GetIterationCount(); // 0x00000001828BC2B0-0x00000001828BC2C0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000185220B00-0x0000000185221040
 	}
 
-	public class RestoreRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 55088
+	public class RestoreRotationConstraint : PhysicsManagerConstraint // TypeDefIndex: 82135
 	{
 		// Fields
 		private FixedChunkNativeArray<RotationData> dataList; // 0x20
@@ -3078,7 +3075,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct RotationData // TypeDefIndex: 55085
+		public struct RotationData // TypeDefIndex: 82132
 		{
 			// Fields
 			public ushort vertexIndex; // 0x00
@@ -3086,10 +3083,10 @@ namespace MagicaCloth
 			public float3 localPos; // 0x04
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F00928-0x0000000189F0093C
+			public bool IsValid(); // 0x000000018C332600-0x000000018C332614
 		}
 	
-		public struct GroupData // TypeDefIndex: 55086
+		public struct GroupData // TypeDefIndex: 82133
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3101,7 +3098,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct RotationJob : IJobParallelFor // TypeDefIndex: 55087
+		private struct RotationJob : IJobParallelFor // TypeDefIndex: 82134
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3131,28 +3128,28 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0xB8
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F0B524-0x0000000189F0BC5C
+			public void Execute(int index); // 0x000000018C33A084-0x000000018C33A7C0
 		}
 	
 		// Constructors
-		public RestoreRotationConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public RestoreRotationConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E650-0x000000018442E760
-		public override void Release(); // 0x0000000189F0AF58-0x0000000189F0AFE0
-		public int AddGroup(int teamId, bool active, BezierParam power, float velocityInfluence, RotationData[] dataArray, ReferenceDataIndex[] refDataArray); // 0x0000000189F0AAFC-0x0000000189F0AD78
-		public override void RemoveTeam(int teamId); // 0x0000000189F0AFE0-0x0000000189F0B160
-		public void ChangeParam(int teamId, bool active, BezierParam power, float velocityInfluence); // 0x0000000189F0AD78-0x0000000189F0AF58
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F0B160-0x0000000189F0B524
+		public override void Create(); // 0x00000001869357E0-0x00000001869358F0
+		public override void Release(); // 0x000000018C339FFC-0x000000018C33A084
+		public int AddGroup(int teamId, bool active, BezierParam power, float velocityInfluence, RotationData[] dataArray, ReferenceDataIndex[] refDataArray); // 0x000000018C339BA0-0x000000018C339E1C
+		public override void RemoveTeam(int teamId); // 0x000000018688C660-0x000000018688C740
+		public void ChangeParam(int teamId, bool active, BezierParam power, float velocityInfluence); // 0x000000018C339E1C-0x000000018C339FFC
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000186436FC0-0x0000000186437030
 	}
 
-	public class SpringConstraint : PhysicsManagerConstraint // TypeDefIndex: 55091
+	public class SpringConstraint : PhysicsManagerConstraint // TypeDefIndex: 82138
 	{
 		// Fields
 		public FixedNativeList<GroupData> groupList; // 0x20
 	
 		// Nested types
-		public struct GroupData // TypeDefIndex: 55089
+		public struct GroupData // TypeDefIndex: 82136
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3161,7 +3158,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct SpringJob : IJobParallelFor // TypeDefIndex: 55090
+		private struct SpringJob : IJobParallelFor // TypeDefIndex: 82137
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3179,22 +3176,22 @@ namespace MagicaCloth
 			public NativeArray<float3> nextPosList; // 0x58
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F0D8C8-0x0000000189F0DB30
+			public void Execute(int index); // 0x000000018C33C108-0x000000018C33C350
 		}
 	
 		// Constructors
-		public SpringConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public SpringConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x0000000184D2DE20-0x0000000184D2DEA0
-		public override void Release(); // 0x0000000189F0D550-0x0000000189F0D598
-		public int AddGroup(int teamId, bool active, float spring); // 0x0000000189F0D324-0x0000000189F0D3F0
-		public override void RemoveTeam(int teamId); // 0x0000000189F0D598-0x0000000189F0D67C
-		public void ChangeParam(int teamId, bool active, float spring); // 0x0000000189F0D3F0-0x0000000189F0D550
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F0D67C-0x0000000189F0D8C8
+		public override void Create(); // 0x00000001871C24F0-0x00000001871C2570
+		public override void Release(); // 0x000000018C33C0C0-0x000000018C33C108
+		public int AddGroup(int teamId, bool active, float spring); // 0x000000018C33BE94-0x000000018C33BF60
+		public override void RemoveTeam(int teamId); // 0x000000018688C580-0x000000018688C660
+		public void ChangeParam(int teamId, bool active, float spring); // 0x000000018C33BF60-0x000000018C33C0C0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000186436F50-0x0000000186436FC0
 	}
 
-	public class TriangleBendConstraint : PhysicsManagerConstraint // TypeDefIndex: 55096
+	public class TriangleBendConstraint : PhysicsManagerConstraint // TypeDefIndex: 82143
 	{
 		// Fields
 		private FixedChunkNativeArray<TriangleBendData> dataList; // 0x20
@@ -3205,7 +3202,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct TriangleBendData // TypeDefIndex: 55092
+		public struct TriangleBendData // TypeDefIndex: 82139
 		{
 			// Fields
 			public int vindex0; // 0x00
@@ -3221,11 +3218,11 @@ namespace MagicaCloth
 			public int writeIndex3; // 0x28
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F0F454-0x0000000189F0F464
-			public bool IsPositionBend(); // 0x0000000189F0F44C-0x0000000189F0F454
+			public bool IsValid(); // 0x000000018C33D67C-0x000000018C33D68C
+			public bool IsPositionBend(); // 0x000000018C33D674-0x000000018C33D67C
 		}
 	
-		public struct TriangleBendGroupData // TypeDefIndex: 55093
+		public struct TriangleBendGroupData // TypeDefIndex: 82140
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3239,7 +3236,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct TriangleBendCalcJob : IJobParallelFor // TypeDefIndex: 55094
+		private struct TriangleBendCalcJob : IJobParallelFor // TypeDefIndex: 82141
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3261,11 +3258,11 @@ namespace MagicaCloth
 			public NativeArray<float3> writeBuffer; // 0x68
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F0DB30-0x0000000189F0E824
+			public void Execute(int index); // 0x000000018C33C350-0x000000018C33D044
 		}
 	
 		[BurstCompile]
-		private struct TriangleBendSumJob : IJobParallelFor // TypeDefIndex: 55095
+		private struct TriangleBendSumJob : IJobParallelFor // TypeDefIndex: 82142
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -3285,22 +3282,22 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0x78
 	
 			// Methods
-			public void Execute(int pindex); // 0x0000000189F0F464-0x0000000189F0F828
+			public void Execute(int pindex); // 0x000000018C33D68C-0x000000018C33DA50
 		}
 	
 		// Constructors
-		public TriangleBendConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public TriangleBendConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442EA50-0x000000018442EBF0
-		public override void Release(); // 0x0000000189F0ED88-0x0000000189F0EE54
-		public int AddGroup(int teamId, bool active, ClothParams.Algorithm algorithm, BezierParam stiffness, TriangleBendData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x0000000189F0E824-0x0000000189F0EB8C
-		public override void RemoveTeam(int teamId); // 0x0000000189F0EE54-0x0000000189F0F030
-		public void ChangeParam(int teamId, bool active, BezierParam stiffness); // 0x0000000189F0EB8C-0x0000000189F0ED88
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F0F030-0x0000000189F0F44C
+		public override void Create(); // 0x00000001869358F0-0x0000000186935A90
+		public override void Release(); // 0x000000018C33D5A8-0x000000018C33D674
+		public int AddGroup(int teamId, bool active, ClothParams.Algorithm algorithm, BezierParam stiffness, TriangleBendData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x000000018C33D044-0x000000018C33D3AC
+		public override void RemoveTeam(int teamId); // 0x000000018688C2D0-0x000000018688C3C0
+		public void ChangeParam(int teamId, bool active, BezierParam stiffness); // 0x000000018C33D3AC-0x000000018C33D5A8
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000186436DD0-0x0000000186436E60
 	}
 
-	public class TwistConstraint : PhysicsManagerConstraint // TypeDefIndex: 55100
+	public class TwistConstraint : PhysicsManagerConstraint // TypeDefIndex: 82147
 	{
 		// Fields
 		private FixedChunkNativeArray<TwistData> dataList; // 0x20
@@ -3309,17 +3306,17 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct TwistData // TypeDefIndex: 55097
+		public struct TwistData // TypeDefIndex: 82144
 		{
 			// Fields
 			public ushort vertexIndex0; // 0x00
 			public ushort vertexIndex1; // 0x02
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F00928-0x0000000189F0093C
+			public bool IsValid(); // 0x000000018C332600-0x000000018C332614
 		}
 	
-		public struct GroupData // TypeDefIndex: 55098
+		public struct GroupData // TypeDefIndex: 82145
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3330,7 +3327,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct TwistJob2 : IJobParallelFor // TypeDefIndex: 55099
+		private struct TwistJob2 : IJobParallelFor // TypeDefIndex: 82146
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -3358,22 +3355,22 @@ namespace MagicaCloth
 			public NativeArray<float3> posList; // 0xA8
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F10120-0x0000000189F10814
+			public void Execute(int index); // 0x000000018C33DE40-0x000000018C33E534
 		}
 	
 		// Constructors
-		public TwistConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public TwistConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x000000018442E760-0x000000018442E870
-		public override void Release(); // 0x0000000189F0FB90-0x0000000189F0FC18
-		public int AddGroup(int teamId, bool active, float recoveryPower, TwistData[] dataArray, ReferenceDataIndex[] refArray); // 0x0000000189F0F828-0x0000000189F0FA10
-		public override void RemoveTeam(int teamId); // 0x0000000189F0FC18-0x0000000189F0FD98
-		public void ChangeParam(int teamId, bool active, float recoveryPower); // 0x0000000189F0FA10-0x0000000189F0FB90
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F0FD98-0x0000000189F10120
+		public override void Create(); // 0x0000000186936E40-0x0000000186936F50
+		public override void Release(); // 0x000000018C33DDB8-0x000000018C33DE40
+		public int AddGroup(int teamId, bool active, float recoveryPower, TwistData[] dataArray, ReferenceDataIndex[] refArray); // 0x000000018C33DA50-0x000000018C33DC38
+		public override void RemoveTeam(int teamId); // 0x000000018688C3C0-0x000000018688C4A0
+		public void ChangeParam(int teamId, bool active, float recoveryPower); // 0x000000018C33DC38-0x000000018C33DDB8
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000186436EE0-0x0000000186436F50
 	}
 
-	public class VolumeConstraint : PhysicsManagerConstraint // TypeDefIndex: 55105
+	public class VolumeConstraint : PhysicsManagerConstraint // TypeDefIndex: 82152
 	{
 		// Fields
 		private FixedChunkNativeArray<VolumeData> dataList; // 0x20
@@ -3384,7 +3381,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct VolumeData // TypeDefIndex: 55101
+		public struct VolumeData // TypeDefIndex: 82148
 		{
 			// Fields
 			public int vindex0; // 0x00
@@ -3400,10 +3397,10 @@ namespace MagicaCloth
 			public int writeIndex3; // 0x48
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F0F454-0x0000000189F0F464
+			public bool IsValid(); // 0x000000018C33D67C-0x000000018C33D68C
 		}
 	
-		public struct GroupData // TypeDefIndex: 55102
+		public struct GroupData // TypeDefIndex: 82149
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -3417,7 +3414,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct VolumeCalcJob : IJobParallelFor // TypeDefIndex: 55103
+		private struct VolumeCalcJob : IJobParallelFor // TypeDefIndex: 82150
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3437,11 +3434,11 @@ namespace MagicaCloth
 			public NativeArray<float3> writeBuffer; // 0x58
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F10844-0x0000000189F11690
+			public void Execute(int index); // 0x000000018C33E564-0x000000018C33F384
 		}
 	
 		[BurstCompile]
-		private struct VolumeSumJob : IJobParallelFor // TypeDefIndex: 55104
+		private struct VolumeSumJob : IJobParallelFor // TypeDefIndex: 82151
 		{
 			// Fields
 			public int runCount; // 0x00
@@ -3460,23 +3457,23 @@ namespace MagicaCloth
 			public NativeArray<float3> inoutNextPosList; // 0x68
 	
 			// Methods
-			public void Execute(int pindex); // 0x0000000189F20DCC-0x0000000189F21104
+			public void Execute(int pindex); // 0x000000018C34AD2C-0x000000018C34B064
 		}
 	
 		// Constructors
-		public VolumeConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		public VolumeConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public override void Create(); // 0x0000000189F11C18-0x0000000189F11DBC
-		public override void Release(); // 0x0000000189F11DBC-0x0000000189F11E88
-		public int AddGroup(int teamId, bool active, BezierParam stretchStiffness, BezierParam shearStiffness, VolumeData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x0000000189F11690-0x0000000189F11A04
-		public override void RemoveTeam(int teamId); // 0x0000000189F11E88-0x0000000189F120C4
-		public void ChangeParam(int teamId, bool active, BezierParam stretchStiffness, BezierParam shearStiffness); // 0x0000000189F11A04-0x0000000189F11C18
-		public override int GetIterationCount(); // 0x0000000182B2E2D0-0x0000000182B2E2E0
-		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x0000000189F120C4-0x0000000189F1260C
+		public override void Create(); // 0x000000018C33F90C-0x000000018C33FAB0
+		public override void Release(); // 0x000000018C33FAB0-0x000000018C33FB7C
+		public int AddGroup(int teamId, bool active, BezierParam stretchStiffness, BezierParam shearStiffness, VolumeData[] dataArray, ReferenceDataIndex[] refDataArray, int writeBufferCount); // 0x000000018C33F384-0x000000018C33F6F8
+		public override void RemoveTeam(int teamId); // 0x000000018C33FB7C-0x000000018C33FDB8
+		public void ChangeParam(int teamId, bool active, BezierParam stretchStiffness, BezierParam shearStiffness); // 0x000000018C33F6F8-0x000000018C33F90C
+		public override int GetIterationCount(); // 0x00000001828BC2B0-0x00000001828BC2C0
+		public override JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle); // 0x000000018C33FDB8-0x000000018C340300
 	}
 
-	public struct CurveParam // TypeDefIndex: 55106
+	public struct CurveParam // TypeDefIndex: 82153
 	{
 		// Fields
 		public float sval; // 0x00
@@ -3485,25 +3482,25 @@ namespace MagicaCloth
 		public int useCurve; // 0x0C
 	
 		// Constructors
-		public CurveParam(float value); // 0x0000000184DA3640-0x0000000184DA3650
-		public CurveParam(float svalue, float evalue); // 0x0000000184DA3650-0x0000000184DA3660
-		public CurveParam(BezierParam bezier); // 0x0000000189F12A90-0x0000000189F12AA4
+		public CurveParam(float value); // 0x0000000187251200-0x0000000187251210
+		public CurveParam(float svalue, float evalue); // 0x0000000187251210-0x0000000187251220
+		public CurveParam(BezierParam bezier); // 0x0000000187835648-0x000000018783565C
 	
 		// Methods
-		public void Setup(BezierParam bezier); // 0x0000000189F129F0-0x0000000189F12A90
-		public float Evaluate(float t); // 0x0000000189F12988-0x0000000189F129F0
+		public void Setup(BezierParam bezier); // 0x0000000185D326D0-0x0000000185D327A0
+		public float Evaluate(float t); // 0x000000018C34067C-0x000000018C3406E4
 	}
 
-	public abstract class BaseComponent : MonoBehaviour // TypeDefIndex: 55107
+	public abstract class BaseComponent : MonoBehaviour // TypeDefIndex: 82154
 	{
 		// Constructors
-		protected BaseComponent(); // 0x0000000185393520-0x0000000185393538
+		protected BaseComponent(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
 		public abstract ComponentType GetComponentType();
 	}
 
-	public enum ComponentType // TypeDefIndex: 55108
+	public enum ComponentType // TypeDefIndex: 82155
 	{
 		None = 0,
 		SphereCollider = 100,
@@ -3521,36 +3518,36 @@ namespace MagicaCloth
 		AvatarParts = 4001
 	}
 
-	public abstract class PhysicsManagerAccess : IDisposable // TypeDefIndex: 55109
+	public abstract class PhysicsManagerAccess : IDisposable // TypeDefIndex: 82156
 	{
 		// Fields
 		protected MagicaPhysicsManager manager; // 0x10
 	
 		// Properties
-		public UpdateTimeManager UpdateTime { get; } // 0x000000018861D7BC-0x000000018861D7D8 
-		protected PhysicsManagerParticleData Particle { get; } // 0x0000000189ED14C0-0x0000000189ED14E0 
-		protected PhysicsManagerBoneData Bone { get; } // 0x0000000183233920-0x0000000183233960 
-		protected PhysicsManagerMeshData Mesh { get; } // 0x00000001832353B0-0x0000000183235430 
-		protected PhysicsManagerTeamData Team { get; } // 0x0000000183235330-0x00000001832353B0 
-		protected PhysicsManagerWindData Wind { get; } // 0x0000000189EE69FC-0x0000000189EE6A1C 
-		protected PhysicsManagerComponent Component { get; } // 0x0000000189F13E98-0x0000000189F13EB8 
-		protected PhysicsManagerCompute Compute { get; } // 0x0000000189F13EB8-0x0000000189F13ED8 
+		public UpdateTimeManager UpdateTime { get; } // 0x00000001852202C0-0x00000001852202E0 
+		protected PhysicsManagerParticleData Particle { get; } // 0x0000000185154A80-0x0000000185154B00 
+		protected PhysicsManagerBoneData Bone { get; } // 0x00000001851537E0-0x0000000185153860 
+		protected PhysicsManagerMeshData Mesh { get; } // 0x0000000185154B80-0x0000000185154C00 
+		protected PhysicsManagerTeamData Team { get; } // 0x0000000185154B00-0x0000000185154B80 
+		protected PhysicsManagerWindData Wind { get; } // 0x0000000185220250-0x0000000185220290 
+		protected PhysicsManagerComponent Component { get; } // 0x000000018C341AE4-0x000000018C341B04 
+		protected PhysicsManagerCompute Compute { get; } // 0x0000000185220210-0x0000000185220250 
 	
 		// Constructors
-		protected PhysicsManagerAccess(); // 0x00000001841E1670-0x00000001841E1680
+		protected PhysicsManagerAccess(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public void SetParent(MagicaPhysicsManager manager); // 0x00000001853908C0-0x00000001853908D0
+		public void SetParent(MagicaPhysicsManager manager); // 0x0000000184FD2410-0x0000000184FD2420
 		public abstract void Create();
 		public abstract void Dispose();
 	}
 
-	public class PhysicsManagerBoneData : PhysicsManagerAccess // TypeDefIndex: 55118
+	public class PhysicsManagerBoneData : PhysicsManagerAccess // TypeDefIndex: 82165
 	{
 		// Fields
-		public const byte Flag_Reset = 1; // Metadata: 0x02346A74
-		public const byte Flag_Restore = 16; // Metadata: 0x02346A75
-		public const byte Flag_Write = 32; // Metadata: 0x02346A76
+		public const byte Flag_Reset = 1; // Metadata: 0x02640B10
+		public const byte Flag_Restore = 16; // Metadata: 0x02640B11
+		public const byte Flag_Write = 32; // Metadata: 0x02640B12
 		public FixedTransformAccessArray boneList; // 0x18
 		public FixedNativeList<byte> boneFlagList; // 0x20
 		public FixedNativeList<float3> bonePosList; // 0x28
@@ -3578,15 +3575,15 @@ namespace MagicaCloth
 		private CustomSampler _SamplerReadBoneScale_k__BackingField; // 0xC8
 	
 		// Properties
-		public bool hasBoneChanged { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D91920-0x0000000184D91930 0x0000000184D91990-0x0000000184D919A0
-		private CustomSampler SamplerReadBoneScale { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
-		public int RestoreBoneCount { get; } // 0x0000000189F155E8-0x0000000189F15608 
-		public int ReadBoneCount { get; } // 0x0000000189F155C8-0x0000000189F155E8 
-		public int WriteBoneCount { get; } // 0x0000000183233870-0x00000001832338A0 
+		public bool hasBoneChanged { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184F560B0-0x0000000184F560C0 0x0000000184F56110-0x0000000184F56120
+		private CustomSampler SamplerReadBoneScale { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723BB00-0x000000018723BB10 0x0000000188D9C9D0-0x0000000188D9C9E4
+		public int RestoreBoneCount { get; } // 0x000000018521E590-0x000000018521E5B0 
+		public int ReadBoneCount { get; } // 0x000000018521ECA0-0x000000018521ECC0 
+		public int WriteBoneCount { get; } // 0x0000000185152B90-0x0000000185152BC0 
 	
 		// Nested types
 		[BurstCompile]
-		private struct RestoreBoneJob : IJobParallelForTransform // TypeDefIndex: 55110
+		private struct RestoreBoneJob : IJobParallelForTransform // TypeDefIndex: 82157
 		{
 			// Fields
 			public bool fixedUpdate; // 0x00
@@ -3602,11 +3599,11 @@ namespace MagicaCloth
 			public NativeArray<int> restoreBoneIndexList; // 0x48
 	
 			// Methods
-			public void Execute(int index, TransformAccess transform); // 0x0000000189F20C10-0x0000000189F20CF8
+			public void Execute(int index, TransformAccess transform); // 0x000000018C34AB70-0x000000018C34AC58
 		}
 	
 		[BurstCompile]
-		private struct ReadBoneJob0 : IJobParallelForTransform // TypeDefIndex: 55111
+		private struct ReadBoneJob0 : IJobParallelForTransform // TypeDefIndex: 82158
 		{
 			// Fields
 			public int fixedUpdateCount; // 0x00
@@ -3627,11 +3624,11 @@ namespace MagicaCloth
 			public NativeArray<byte> boneFlagList; // 0x88
 	
 			// Methods
-			public void Execute(int index, TransformAccess transform); // 0x0000000189F201C0-0x0000000189F2051C
+			public void Execute(int index, TransformAccess transform); // 0x000000018C34A13C-0x000000018C34A48C
 		}
 	
 		[BurstCompile]
-		private struct ReadBoneJob1 : IJobParallelForTransform // TypeDefIndex: 55112
+		private struct ReadBoneJob1 : IJobParallelForTransform // TypeDefIndex: 82159
 		{
 			// Fields
 			public int fixedUpdateCount; // 0x00
@@ -3654,11 +3651,11 @@ namespace MagicaCloth
 			public NativeArray<byte> boneFlagList; // 0x98
 	
 			// Methods
-			public void Execute(int index, TransformAccess transform); // 0x0000000189F2051C-0x0000000189F20A30
+			public void Execute(int index, TransformAccess transform); // 0x000000018C34A48C-0x000000018C34A9A8
 		}
 	
 		[BurstCompile]
-		private struct ConvertWorldToLocalJob : IJobParallelFor // TypeDefIndex: 55113
+		private struct ConvertWorldToLocalJob : IJobParallelFor // TypeDefIndex: 82160
 		{
 			// Fields
 			[ReadOnly]
@@ -3679,11 +3676,11 @@ namespace MagicaCloth
 			public NativeArray<quaternion> writeBoneRotList; // 0x70
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F126D0-0x0000000189F12988
+			public void Execute(int index); // 0x000000018C3403C4-0x000000018C34067C
 		}
 	
 		[BurstCompile]
-		private struct WriteBontToTransformJob2 : IJobParallelForTransform // TypeDefIndex: 55114
+		private struct WriteBontToTransformJob2 : IJobParallelForTransform // TypeDefIndex: 82161
 		{
 			// Fields
 			public int fixedUpdateCount; // 0x00
@@ -3701,11 +3698,11 @@ namespace MagicaCloth
 			public NativeArray<short> boneUnityPhysicsList; // 0x58
 	
 			// Methods
-			public void Execute(int index, TransformAccess transform); // 0x0000000189F21104-0x0000000189F21260
+			public void Execute(int index, TransformAccess transform); // 0x000000018C34B064-0x000000018C34B1C0
 		}
 	
 		[BurstCompile]
-		private struct CopyBoneJob0 : IJobParallelFor // TypeDefIndex: 55115
+		private struct CopyBoneJob0 : IJobParallelFor // TypeDefIndex: 82162
 		{
 			// Fields
 			[ReadOnly]
@@ -3718,11 +3715,11 @@ namespace MagicaCloth
 			public NativeArray<quaternion> backBoneRotList; // 0x30
 	
 			// Methods
-			public void Execute(int index); // 0x0000000184DA3550-0x0000000184DA35A0
+			public void Execute(int index); // 0x0000000187251110-0x0000000187251160
 		}
 	
 		[BurstCompile]
-		private struct CopyBoneJob1 : IJobParallelFor // TypeDefIndex: 55116
+		private struct CopyBoneJob1 : IJobParallelFor // TypeDefIndex: 82163
 		{
 			// Fields
 			[ReadOnly]
@@ -3731,11 +3728,11 @@ namespace MagicaCloth
 			public NativeArray<int> backWriteBoneIndexList; // 0x10
 	
 			// Methods
-			public void Execute(int index); // 0x0000000184DA35A0-0x0000000184DA35C0
+			public void Execute(int index); // 0x0000000187251160-0x0000000187251180
 		}
 	
 		[BurstCompile]
-		private struct CopyBoneJob2 : IJobParallelFor // TypeDefIndex: 55117
+		private struct CopyBoneJob2 : IJobParallelFor // TypeDefIndex: 82164
 		{
 			// Fields
 			[ReadOnly]
@@ -3744,53 +3741,53 @@ namespace MagicaCloth
 			public NativeArray<byte> backBoneFlagList; // 0x10
 	
 			// Methods
-			public void Execute(int index); // 0x0000000184DA35C0-0x0000000184DA35E0
+			public void Execute(int index); // 0x0000000187251180-0x00000001872511A0
 		}
 	
 		// Constructors
-		public PhysicsManagerBoneData(); // 0x00000001846D7630-0x00000001846D76B0
+		public PhysicsManagerBoneData(); // 0x0000000186BA1AF0-0x0000000186BA1B70
 	
 		// Methods
-		public override void Create(); // 0x0000000183E876D0-0x0000000183E87C20
-		public override void Dispose(); // 0x0000000189F14958-0x0000000189F14BB0
-		public int AddRestoreBone(Transform target, float3 lpos, quaternion lrot, int boneIndex); // 0x0000000189F14348-0x0000000189F1443C
-		public void RemoveRestoreBone(int restoreBoneIndex); // 0x0000000189F1533C-0x0000000189F153D8
-		public int AddBone(Transform target, int pindex = -1 /* Metadata: 0x02346A71 */, bool addParent = false /* Metadata: 0x02346A72 */); // 0x0000000189F13ED8-0x0000000189F14348
-		public bool RemoveBone(int boneIndex, int pindex = -1 /* Metadata: 0x02346A73 */); // 0x0000000189F1508C-0x0000000189F1533C
-		public void ChangeUnityPhysicsCount(int boneIndex, bool sw); // 0x0000000189F1443C-0x0000000189F144B4
-		public void ResetFuturePrediction(int boneIndex); // 0x0000000189F15560-0x0000000189F155C8
-		public void ResetBoneFromTransform(bool fixedUpdate); // 0x0000000189F153D8-0x0000000189F15560
-		public void ReadBoneFromTransform(); // 0x0000000189F14BB0-0x0000000189F1508C
-		public void ConvertWorldToLocal(); // 0x0000000189F144B4-0x0000000189F146A4
-		public void WriteBoneToTransform(int bufferIndex); // 0x0000000183233800-0x0000000183233870
-		public void CopyBoneBuffer(); // 0x0000000189F146A4-0x0000000189F14958
+		public override void Create(); // 0x0000000185D929B0-0x0000000185D92F00
+		public override void Dispose(); // 0x000000018C341E34-0x000000018C34208C
+		public int AddRestoreBone(Transform target, float3 lpos, quaternion lrot, int boneIndex); // 0x00000001853CE8E0-0x00000001853CE9D0
+		public void RemoveRestoreBone(int restoreBoneIndex); // 0x00000001853CE2E0-0x00000001853CE380
+		public int AddBone(Transform target, int pindex = -1 /* Metadata: 0x02640B0D */, bool addParent = false /* Metadata: 0x02640B0E */); // 0x0000000185484DC0-0x0000000185485230
+		public bool RemoveBone(int boneIndex, int pindex = -1 /* Metadata: 0x02640B0F */); // 0x0000000185484AF0-0x0000000185484DC0
+		public void ChangeUnityPhysicsCount(int boneIndex, bool sw); // 0x000000018C341B04-0x000000018C341B7C
+		public void ResetFuturePrediction(int boneIndex); // 0x000000018C34208C-0x000000018C3420F4
+		public void ResetBoneFromTransform(bool fixedUpdate); // 0x000000018521ECC0-0x000000018521EEC0
+		public void ReadBoneFromTransform(); // 0x000000018521EEC0-0x000000018521F180
+		public void ConvertWorldToLocal(); // 0x000000018521F180-0x000000018521F3D0
+		public void WriteBoneToTransform(int bufferIndex); // 0x0000000185152920-0x0000000185152B90
+		public void CopyBoneBuffer(); // 0x000000018C341B7C-0x000000018C341E34
 	}
 
-	public class PhysicsManagerComponent : PhysicsManagerAccess // TypeDefIndex: 55119
+	public class PhysicsManagerComponent : PhysicsManagerAccess // TypeDefIndex: 82166
 	{
 		// Fields
 		private readonly HashSet<CoreComponent> componentSet; // 0x18
 		private HashSet<ParticleComponent> dataUpdateParticleSet; // 0x20
 	
 		// Properties
-		public int ComponentCount { get; } // 0x0000000189F159FC-0x0000000189F15A3C 
+		public int ComponentCount { get; } // 0x000000018C342490-0x000000018C3424D0 
 	
 		// Constructors
-		public PhysicsManagerComponent(); // 0x00000001846D7730-0x00000001846D77F0
+		public PhysicsManagerComponent(); // 0x0000000186BA1BF0-0x0000000186BA1CB0
 	
 		// Methods
-		public override void Create(); // 0x00000001841E1670-0x00000001841E1680
-		public override void Dispose(); // 0x00000001841E1670-0x00000001841E1680
-		public List<CoreComponent> GetComponentList(); // 0x0000000189F1577C-0x0000000189F157F0
-		public void ComponentAction(Action<CoreComponent> act); // 0x0000000189F1562C-0x0000000189F1577C
-		public void UpdateComponentStatus(); // 0x0000000189F15898-0x0000000189F159FC
-		public void AddComponent(CoreComponent comp); // 0x0000000189F15608-0x0000000189F1562C
-		public void RemoveComponent(CoreComponent comp); // 0x0000000189F157F0-0x0000000189F15844
-		internal void ReserveDataUpdateParticleComponent(ParticleComponent comp); // 0x0000000189F15844-0x0000000189F15898
-		internal void DataUpdateParticleComponent(); // 0x0000000183233710-0x0000000183233800
+		public override void Create(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+		public List<CoreComponent> GetComponentList(); // 0x000000018C342254-0x000000018C3422C8
+		public void ComponentAction(Action<CoreComponent> act); // 0x000000018C3420F4-0x000000018C342254
+		public void UpdateComponentStatus(); // 0x000000018C34231C-0x000000018C342490
+		public void AddComponent(CoreComponent comp); // 0x00000001853CA8F0-0x00000001853CA920
+		public void RemoveComponent(CoreComponent comp); // 0x0000000186855790-0x00000001868557F0
+		internal void ReserveDataUpdateParticleComponent(ParticleComponent comp); // 0x000000018C3422C8-0x000000018C34231C
+		internal void DataUpdateParticleComponent(); // 0x0000000186190140-0x0000000186190240
 	}
 
-	public class PhysicsManagerCompute : PhysicsManagerAccess // TypeDefIndex: 55123
+	public class PhysicsManagerCompute : PhysicsManagerAccess // TypeDefIndex: 82170
 	{
 		// Fields
 		private int solverIteration; // 0x18
@@ -3845,34 +3842,34 @@ namespace MagicaCloth
 		private CustomSampler _SamplerWriteMesh_k__BackingField; // 0xF0
 	
 		// Properties
-		public ClampPositionConstraint ClampPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public ClampDistanceConstraint ClampDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-		public ClampRotationConstraint ClampRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
-		public SpringConstraint Spring { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
-		public RestoreDistanceConstraint RestoreDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
-		public RestoreRotationConstraint RestoreRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
-		public TriangleBendConstraint TriangleBend { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
-		public ColliderCollisionConstraint Collision { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
-		public PenetrationConstraint Penetration { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
-		public ColliderExtrusionConstraint ColliderExtrusion { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
-		public TwistConstraint Twist { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
-		public CompositeRotationConstraint CompositeRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
-		public RenderMeshWorker RenderMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86220-0x0000000184D86230 0x0000000186402330-0x0000000186402344
-		public VirtualMeshWorker VirtualMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85EE0-0x0000000184D85EF0 0x0000000186352D0C-0x0000000186352D20
-		public MeshParticleWorker MeshParticleWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000185391334-0x0000000185391348
-		public SpringMeshWorker SpringMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86290-0x0000000184D862A0 0x0000000184D84CC0-0x0000000184D84CE0
-		public AdjustRotationWorker AdjustRotationWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86250-0x0000000184D86260 0x0000000184D84CE0-0x0000000184D84D00
-		public LineWorker LineWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85EF0-0x0000000184D85F00 0x0000000186AC5AF4-0x0000000186AC5B08
-		public TriangleWorker TriangleWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
-		public BaseSkinningWorker BaseSkinningWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
-		public CustomSampler SamplerCalcMesh { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
-		public CustomSampler SamplerWriteMesh { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1A0-0x0000000184D8D1B0 0x0000000186AC5AE0-0x0000000186AC5AF4
-		public JobHandle MasterJob { get; set; } // 0x0000000184D9E7C0-0x0000000184D9E7D0 0x0000000184DA12C0-0x0000000184DA12D0
-		public int SwapIndex { get; } // 0x0000000184DA3670-0x0000000184DA3680 
+		public ClampPositionConstraint ClampPosition { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public ClampDistanceConstraint ClampDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+		public ClampRotationConstraint ClampRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182986470-0x0000000182986480 0x0000000186AB5C00-0x0000000186AB5C10
+		public SpringConstraint Spring { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EEA0-0x000000018226EEB0 0x00000001870EAAD0-0x00000001870EAAE0
+		public RestoreDistanceConstraint RestoreDistance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EE80-0x000000018226EE90 0x0000000185B68F50-0x0000000185B68F60
+		public RestoreRotationConstraint RestoreRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBD0-0x000000018226EBE0 0x00000001869E1E00-0x00000001869E1E10
+		public TriangleBendConstraint TriangleBend { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F70-0x0000000187232F80 0x00000001856B9750-0x00000001856B9760
+		public ColliderCollisionConstraint Collision { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232FA0-0x0000000187232FB0 0x0000000188800CB0-0x0000000188800CC0
+		public PenetrationConstraint Penetration { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F80-0x0000000187232F90 0x0000000186B19440-0x0000000186B19450
+		public ColliderExtrusionConstraint ColliderExtrusion { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232FC0-0x0000000187232FD0 0x0000000188800CD0-0x0000000188800CE0
+		public TwistConstraint Twist { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829CD170-0x00000001829CD180 0x0000000188800CC0-0x0000000188800CD0
+		public CompositeRotationConstraint CompositeRotation { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828D49D0-0x00000001828D49E0 0x00000001870EAAE0-0x00000001870EAAF0
+		public RenderMeshWorker RenderMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271B70-0x0000000182271B80 0x0000000188800C9C-0x0000000188800CB0
+		public VirtualMeshWorker VirtualMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232C70-0x0000000187232C80 0x00000001887DE51C-0x00000001887DE530
+		public MeshParticleWorker MeshParticleWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F60-0x0000000187232F70 0x0000000188800C88-0x0000000188800C9C
+		public SpringMeshWorker SpringMeshWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232FB0-0x0000000187232FC0 0x0000000185017110-0x0000000185017130
+		public AdjustRotationWorker AdjustRotationWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232F90-0x0000000187232FA0 0x0000000185017130-0x0000000185017150
+		public LineWorker LineWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187232C80-0x0000000187232C90 0x0000000188D80C28-0x0000000188D80C3C
+		public TriangleWorker TriangleWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187236200-0x0000000187236210 0x0000000188D95540-0x0000000188D95554
+		public BaseSkinningWorker BaseSkinningWorker { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723BB00-0x000000018723BB10 0x0000000188D9C9D0-0x0000000188D9C9E4
+		public CustomSampler SamplerCalcMesh { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872354B0-0x00000001872354C0 0x0000000188D62F7C-0x0000000188D62F90
+		public CustomSampler SamplerWriteMesh { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723C070-0x000000018723C080 0x0000000188DC4AE8-0x0000000188DC4AFC
+		public JobHandle MasterJob { get; set; } // 0x000000018724C890-0x000000018724C8A0 0x0000000187233B40-0x0000000187233B50
+		public int SwapIndex { get; } // 0x00000001872406B0-0x00000001872406C0 
 	
 		// Nested types
 		[BurstCompile]
-		private struct ForceAndVelocityJob : IJobParallelFor // TypeDefIndex: 55120
+		private struct ForceAndVelocityJob : IJobParallelFor // TypeDefIndex: 82167
 		{
 			// Fields
 			public float updateDeltaTime; // 0x00
@@ -3928,12 +3925,12 @@ namespace MagicaCloth
 			public NativeArray<quaternion> boneRotList; // 0x1A0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F132A0-0x0000000189F13CA8
-			private float3 Wind(int teamId, [IsReadOnly] in PhysicsManagerTeamData.TeamData teamData, [IsReadOnly] in float3 pos); // 0x0000000189F13CA8-0x0000000189F13E98
+			public void Execute(int index); // 0x000000018C340EE0-0x000000018C3418F0
+			private float3 Wind(int teamId, [IsReadOnly] in PhysicsManagerTeamData.TeamData teamData, [IsReadOnly] in float3 pos); // 0x000000018C3418F0-0x000000018C341AE4
 		}
 	
 		[BurstCompile]
-		private struct FixPositionJob : IJobParallelFor // TypeDefIndex: 55121
+		private struct FixPositionJob : IJobParallelFor // TypeDefIndex: 82168
 		{
 			// Fields
 			public float updatePower; // 0x00
@@ -3968,11 +3965,11 @@ namespace MagicaCloth
 			public NativeArray<float> staticFrictionList; // 0x100
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F12AA4-0x0000000189F132A0
+			public void Execute(int index); // 0x000000018C3406E4-0x000000018C340EE0
 		}
 	
 		[BurstCompile]
-		private struct PostUpdatePhysicsJob : IJobParallelFor // TypeDefIndex: 55122
+		private struct PostUpdatePhysicsJob : IJobParallelFor // TypeDefIndex: 82169
 		{
 			// Fields
 			public float updateDeltaTime; // 0x00
@@ -4011,36 +4008,36 @@ namespace MagicaCloth
 			public NativeArray<float3> oldSlowPosList; // 0x118
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F1FC24-0x0000000189F201C0
+			public void Execute(int index); // 0x000000018C349BA0-0x000000018C34A13C
 		}
 	
 		// Constructors
-		public PhysicsManagerCompute(); // 0x00000001846D77F0-0x00000001846D78C0
+		public PhysicsManagerCompute(); // 0x0000000186BA1CB0-0x0000000186BA1D80
 	
 		// Methods
-		public override void Create(); // 0x0000000183B92860-0x0000000183B93E60
-		public override void Dispose(); // 0x0000000189F15A3C-0x0000000189F15C60
-		public void RemoveTeam(int teamId); // 0x0000000189F16098-0x0000000189F162C4
-		internal void UpdateRestoreBone(PhysicsTeam.TeamUpdateMode updateMode); // 0x0000000189F17034-0x0000000189F17088
-		internal void UpdateReadBone(); // 0x0000000183233CB0-0x0000000183233D00
-		internal void UpdateTeamAlways(); // 0x0000000183233D00-0x0000000183233D40
-		internal void UpdateStartSimulation(UpdateTimeManager update); // 0x0000000183233D40-0x0000000183233E50
-		internal void UpdateCompleteSimulation(); // 0x0000000183233C10-0x0000000183233CB0
-		internal void UpdateWriteBone(); // 0x00000001832338C0-0x0000000183233920
-		internal void MeshCalculation(); // 0x00000001832352A0-0x0000000183235330
-		internal void NormalWritingMesh(); // 0x0000000183233BA0-0x0000000183233C10
-		internal void UpdateReadWriteBone(); // 0x0000000189F16FB4-0x0000000189F17034
-		internal void UpdateSyncBuffer(); // 0x0000000189F17204-0x0000000189F17330
-		internal void UpdateSwapBuffer(); // 0x0000000189F17088-0x0000000189F17204
-		public void InitJob(); // 0x0000000184DA3660-0x0000000184DA3670
-		public void ScheduleJob(); // 0x0000000189F162C4-0x0000000189F162CC
-		public void CompleteJob(); // 0x00000001835BC9F0-0x00000001835BCA40
-		private void UpdatePhysics(int updateCount, int runCount, float updatePower, float updateDeltaTime); // 0x0000000189F162CC-0x0000000189F16FB4
-		private void PostUpdatePhysics(float updateDeltaTime); // 0x0000000189F15C60-0x0000000189F16098
-		private void WarmupWorker(); // 0x0000000189F17330-0x0000000189F173A0
+		public override void Create(); // 0x0000000185D959B0-0x0000000185D96BD0
+		public override void Dispose(); // 0x000000018C3424D0-0x000000018C3426FC
+		public void RemoveTeam(int teamId); // 0x0000000185D96F10-0x0000000185D97140
+		internal void UpdateRestoreBone(PhysicsTeam.TeamUpdateMode updateMode); // 0x000000018521E530-0x000000018521E590
+		internal void UpdateReadBone(); // 0x0000000185152E20-0x0000000185152E80
+		internal void UpdateTeamAlways(); // 0x0000000185152E80-0x0000000185152EC0
+		internal void UpdateStartSimulation(UpdateTimeManager update); // 0x0000000185153290-0x00000001851537E0
+		internal void UpdateCompleteSimulation(); // 0x0000000185677D90-0x0000000185677E30
+		internal void UpdateWriteBone(); // 0x0000000185152DC0-0x0000000185152E20
+		internal void MeshCalculation(); // 0x0000000185153A20-0x0000000185153AB0
+		internal void NormalWritingMesh(); // 0x0000000185152D50-0x0000000185152DC0
+		internal void UpdateReadWriteBone(); // 0x000000018C342704-0x000000018C342784
+		internal void UpdateSyncBuffer(); // 0x000000018C342900-0x000000018C342A2C
+		internal void UpdateSwapBuffer(); // 0x000000018C342784-0x000000018C342900
+		public void InitJob(); // 0x0000000187251220-0x0000000187251230
+		public void ScheduleJob(); // 0x000000018C3426FC-0x000000018C342704
+		public void CompleteJob(); // 0x0000000185677E60-0x0000000185677EB0
+		private void UpdatePhysics(int updateCount, int runCount, float updatePower, float updateDeltaTime); // 0x0000000185153BA0-0x0000000185154A80
+		private void PostUpdatePhysics(float updateDeltaTime); // 0x00000001852210C0-0x0000000185221520
+		private void WarmupWorker(); // 0x00000001862A44C0-0x00000001862A4540
 	}
 
-	public abstract class PhysicsManagerConstraint // TypeDefIndex: 55124
+	public abstract class PhysicsManagerConstraint // TypeDefIndex: 82171
 	{
 		// Fields
 		[Range(1f, 4f)]
@@ -4049,35 +4046,35 @@ namespace MagicaCloth
 		private MagicaPhysicsManager _Manager_k__BackingField; // 0x18
 	
 		// Properties
-		public MagicaPhysicsManager Manager { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public MagicaPhysicsManager Manager { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
 	
 		// Constructors
-		protected PhysicsManagerConstraint(); // 0x0000000184D89110-0x0000000184D89120
+		protected PhysicsManagerConstraint(); // 0x0000000187236030-0x0000000187236040
 	
 		// Methods
-		public void Init(MagicaPhysicsManager manager); // 0x0000000183B93E60-0x0000000183B93E90
+		public void Init(MagicaPhysicsManager manager); // 0x0000000185D96BD0-0x0000000185D96C00
 		public abstract void Create();
 		public abstract void RemoveTeam(int teamId);
 		public abstract void Release();
-		public virtual int GetIterationCount(); // 0x0000000182B2E2D0-0x0000000182B2E2E0
+		public virtual int GetIterationCount(); // 0x00000001828BC2B0-0x00000001828BC2C0
 		public abstract JobHandle SolverConstraint(int runCount, float dtime, float updatePower, int iteration, JobHandle jobHandle);
 	}
 
-	public class PhysicsManagerMeshData : PhysicsManagerAccess // TypeDefIndex: 55133
+	public class PhysicsManagerMeshData : PhysicsManagerAccess // TypeDefIndex: 82180
 	{
 		// Fields
-		public const uint MeshFlag_Active = 1; // Metadata: 0x02346A77
-		public const uint MeshFlag_Skinning = 4; // Metadata: 0x02346A78
-		public const uint Meshflag_CalcNormal = 8; // Metadata: 0x02346A79
-		public const uint Meshflag_CalcTangent = 16; // Metadata: 0x02346A7A
-		public const uint Meshflag_Pause = 32; // Metadata: 0x02346A7B
-		public const uint MeshFlag_ExistNormals = 65536; // Metadata: 0x02346A7C
-		public const uint MeshFlag_ExistTangents = 131072; // Metadata: 0x02346A80
-		public const uint MeshFlag_ExistWeights = 262144; // Metadata: 0x02346A84
-		public const uint MeshFlag_UpdateUseVertexFront = 16777216; // Metadata: 0x02346A88
-		public const uint MeshFlag_UpdateUseVertexBack = 33554432; // Metadata: 0x02346A8C
-		public const uint MeshFlag_FasterWrite = 67108864; // Metadata: 0x02346A90
-		public const uint MeshFlag_MeshLink = 268435456; // Metadata: 0x02346A94
+		public const uint MeshFlag_Active = 1; // Metadata: 0x02640B13
+		public const uint MeshFlag_Skinning = 4; // Metadata: 0x02640B14
+		public const uint Meshflag_CalcNormal = 8; // Metadata: 0x02640B15
+		public const uint Meshflag_CalcTangent = 16; // Metadata: 0x02640B16
+		public const uint Meshflag_Pause = 32; // Metadata: 0x02640B17
+		public const uint MeshFlag_ExistNormals = 65536; // Metadata: 0x02640B18
+		public const uint MeshFlag_ExistTangents = 131072; // Metadata: 0x02640B1C
+		public const uint MeshFlag_ExistWeights = 262144; // Metadata: 0x02640B20
+		public const uint MeshFlag_UpdateUseVertexFront = 16777216; // Metadata: 0x02640B24
+		public const uint MeshFlag_UpdateUseVertexBack = 33554432; // Metadata: 0x02640B28
+		public const uint MeshFlag_FasterWrite = 67108864; // Metadata: 0x02640B2C
+		public const uint MeshFlag_MeshLink = 268435456; // Metadata: 0x02640B30
 		public FixedNativeList<SharedVirtualMeshInfo> sharedVirtualMeshInfoList; // 0x18
 		public Dictionary<int, int> sharedVirtualMeshIdToIndexDict; // 0x20
 		public FixedChunkNativeArray<float2> sharedVirtualUvList; // 0x28
@@ -4086,7 +4083,7 @@ namespace MagicaCloth
 		public FixedChunkNativeArray<int> sharedVirtualTriangleList; // 0x40
 		public FixedChunkNativeArray<uint> sharedVirtualVertexToTriangleInfoList; // 0x48
 		public FixedChunkNativeArray<int> sharedVirtualVertexToTriangleIndexList; // 0x50
-		public const byte VirtualVertexFlag_Use = 1; // Metadata: 0x02346A98
+		public const byte VirtualVertexFlag_Use = 1; // Metadata: 0x02640B34
 		public FixedNativeList<VirtualMeshInfo> virtualMeshInfoList; // 0x58
 		public FixedChunkNativeArray<short> virtualVertexMeshIndexList; // 0x60
 		public FixedChunkNativeArray<byte> virtualVertexUseList; // 0x68
@@ -4110,14 +4107,14 @@ namespace MagicaCloth
 		public FixedChunkNativeArray<byte> sharedBonesPerVertexList; // 0xF8
 		public FixedChunkNativeArray<int> sharedBonesPerVertexStartList; // 0x100
 		public FixedChunkNativeArray<BoneWeight1> sharedBoneWeightList; // 0x108
-		public const uint RenderVertexFlag_Use = 65536; // Metadata: 0x02346A99
-		public const int MaxRenderMeshLinkCount = 4; // Metadata: 0x02346A9D
+		public const uint RenderVertexFlag_Use = 65536; // Metadata: 0x02640B35
+		public const int MaxRenderMeshLinkCount = 4; // Metadata: 0x02640B39
 		public FixedNativeList<RenderMeshInfo> renderMeshInfoList; // 0x110
-		public const uint RenderStateFlag_Use = 1; // Metadata: 0x02346A9E
-		public const uint RenderStateFlag_ExistNormal = 2; // Metadata: 0x02346A9F
-		public const uint RenderStateFlag_ExistTangent = 4; // Metadata: 0x02346AA0
-		public const uint RenderStateFlag_FasterWrite = 8; // Metadata: 0x02346AA1
-		public const uint RenderStateFlag_DelayedCalculated = 256; // Metadata: 0x02346AA2
+		public const uint RenderStateFlag_Use = 1; // Metadata: 0x02640B3A
+		public const uint RenderStateFlag_ExistNormal = 2; // Metadata: 0x02640B3B
+		public const uint RenderStateFlag_ExistTangent = 4; // Metadata: 0x02640B3C
+		public const uint RenderStateFlag_FasterWrite = 8; // Metadata: 0x02640B3D
+		public const uint RenderStateFlag_DelayedCalculated = 256; // Metadata: 0x02640B3E
 		public Dictionary<int, RenderMeshState> renderMeshStateDict; // 0x118
 		public FixedChunkNativeArray<uint> renderVertexFlagList; // 0x120
 		public FixedChunkNativeArray<float3> renderPosList; // 0x128
@@ -4134,23 +4131,23 @@ namespace MagicaCloth
 		private List<RenderMeshDeformer> fasterWritePositionNormalList; // 0x180
 	
 		// Properties
-		public int SharedVirtualMeshCount { get; } // 0x0000000189F1DC8C-0x0000000189F1DCD4 
-		public int VirtualMeshCount { get; } // 0x0000000183233AC0-0x0000000183233AF0 
-		public int VirtualMeshVertexCount { get; } // 0x0000000189F1DE68-0x0000000189F1DEE4 
-		public int VirtualMeshTriangleCount { get; } // 0x0000000189F1DD78-0x0000000189F1DDF4 
-		public int VirtualMeshVertexUseCount { get; } // 0x0000000189F1DEE4-0x0000000189F1DF6C 
-		public int VirtualMeshUseCount { get; } // 0x0000000189F1DDF4-0x0000000189F1DE68 
-		public int VirtualMeshPauseCount { get; } // 0x0000000189F1DCD4-0x0000000189F1DD78 
-		public int SharedRenderMeshCount { get; } // 0x0000000189F1DC44-0x0000000189F1DC8C 
-		public int SharedChildMeshCount { get; } // 0x0000000189F1DBFC-0x0000000189F1DC44 
-		public int RenderMeshCount { get; } // 0x0000000189F1D6F4-0x0000000189F1D73C 
-		public int RenderMeshVertexCount { get; } // 0x0000000189F1D9E0-0x0000000189F1DAB8 
-		public int RenderMeshUseCount { get; } // 0x0000000189F1D888-0x0000000189F1D9E0 
-		public int RenderMeshVertexUseCount { get; } // 0x0000000189F1DAB8-0x0000000189F1DBFC 
-		public int RenderMeshPauseCount { get; } // 0x0000000189F1D73C-0x0000000189F1D888 
+		public int SharedVirtualMeshCount { get; } // 0x000000018C349380-0x000000018C3493C8 
+		public int VirtualMeshCount { get; } // 0x0000000185152D20-0x0000000185152D50 
+		public int VirtualMeshVertexCount { get; } // 0x000000018C3494E8-0x000000018C349564 
+		public int VirtualMeshTriangleCount { get; } // 0x000000018C34946C-0x000000018C3494E8 
+		public int VirtualMeshVertexUseCount { get; } // 0x000000018C349564-0x000000018C3495EC 
+		public int VirtualMeshUseCount { get; } // 0x000000018603D770-0x000000018603D7D0 
+		public int VirtualMeshPauseCount { get; } // 0x000000018C3493C8-0x000000018C34946C 
+		public int SharedRenderMeshCount { get; } // 0x000000018C349338-0x000000018C349380 
+		public int SharedChildMeshCount { get; } // 0x000000018C3492F0-0x000000018C349338 
+		public int RenderMeshCount { get; } // 0x000000018C348DD8-0x000000018C348E20 
+		public int RenderMeshVertexCount { get; } // 0x000000018C3490D4-0x000000018C3491AC 
+		public int RenderMeshUseCount { get; } // 0x000000018C348F6C-0x000000018C3490D4 
+		public int RenderMeshVertexUseCount { get; } // 0x000000018C3491AC-0x000000018C3492F0 
+		public int RenderMeshPauseCount { get; } // 0x000000018C348E20-0x000000018C348F6C 
 	
 		// Nested types
-		public struct SharedVirtualMeshInfo // TypeDefIndex: 55125
+		public struct SharedVirtualMeshInfo // TypeDefIndex: 82172
 		{
 			// Fields
 			public int uid; // 0x00
@@ -4163,7 +4160,7 @@ namespace MagicaCloth
 			public ChunkData vertexToTriangleChunk; // 0x40
 		}
 	
-		public struct VirtualMeshInfo // TypeDefIndex: 55126
+		public struct VirtualMeshInfo // TypeDefIndex: 82173
 		{
 			// Fields
 			public uint flag; // 0x00
@@ -4176,14 +4173,14 @@ namespace MagicaCloth
 			public int transformIndex; // 0x40
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x0000000189F20B04-0x0000000189F20B0C
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20BE4-0x0000000189F20BF8
-			public bool IsActive(); // 0x0000000189F20AF0-0x0000000189F20AF8
-			public bool IsUse(); // 0x0000000189F20DB4-0x0000000189F20DCC
-			public bool IsPause(); // 0x0000000189F20B24-0x0000000189F20B2C
+			public bool IsFlag(uint flag); // 0x000000018C34AA6C-0x000000018C34AA74
+			public void SetFlag(uint flag, bool sw); // 0x000000018C34AB44-0x000000018C34AB58
+			public bool IsActive(); // 0x000000018783988C-0x0000000187839894
+			public bool IsUse(); // 0x000000018C34AD14-0x000000018C34AD2C
+			public bool IsPause(); // 0x0000000188A29B90-0x0000000188A29B98
 		}
 	
-		public struct SharedChildMeshInfo // TypeDefIndex: 55127
+		public struct SharedChildMeshInfo // TypeDefIndex: 82174
 		{
 			// Fields
 			public long cuid; // 0x00
@@ -4194,7 +4191,7 @@ namespace MagicaCloth
 			public ChunkData weightChunk; // 0x24
 		}
 	
-		public struct SharedRenderMeshInfo // TypeDefIndex: 55128
+		public struct SharedRenderMeshInfo // TypeDefIndex: 82175
 		{
 			// Fields
 			public int uid; // 0x00
@@ -4206,12 +4203,12 @@ namespace MagicaCloth
 			public int rendererBoneIndex; // 0x3C
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x0000000189F20CF8-0x0000000189F20D00
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20D08-0x0000000189F20D20
-			public bool IsSkinning(); // 0x0000000189F20D00-0x0000000189F20D08
+			public bool IsFlag(uint flag); // 0x000000018C34AC58-0x000000018C34AC60
+			public void SetFlag(uint flag, bool sw); // 0x000000018C34AC68-0x000000018C34AC80
+			public bool IsSkinning(); // 0x000000018C34AC60-0x000000018C34AC68
 		}
 	
-		public struct RenderMeshInfo // TypeDefIndex: 55129
+		public struct RenderMeshInfo // TypeDefIndex: 82176
 		{
 			// Fields
 			public uint flag; // 0x00
@@ -4229,19 +4226,19 @@ namespace MagicaCloth
 			public float baseScale; // 0x84
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x0000000189F20B04-0x0000000189F20B0C
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20BE4-0x0000000189F20BF8
-			public bool IsActive(); // 0x0000000189F20AF0-0x0000000189F20AF8
-			public bool IsUse(); // 0x0000000189F20B34-0x0000000189F20B44
-			public bool IsLinkMesh(int index); // 0x0000000189F20B0C-0x0000000189F20B24
-			public bool IsPause(); // 0x0000000189F20B24-0x0000000189F20B2C
-			public bool IsFasterWrite(); // 0x0000000189F20AF8-0x0000000189F20B04
-			public bool IsSkinning(); // 0x0000000189F20B2C-0x0000000189F20B34
-			public bool AddLinkMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x0000000189F20A30-0x0000000189F20AF0
-			public bool RemoveLinkMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x0000000189F20B44-0x0000000189F20BE4
+			public bool IsFlag(uint flag); // 0x000000018C34AA6C-0x000000018C34AA74
+			public void SetFlag(uint flag, bool sw); // 0x000000018C34AB44-0x000000018C34AB58
+			public bool IsActive(); // 0x000000018783988C-0x0000000187839894
+			public bool IsUse(); // 0x000000018C34AA8C-0x000000018C34AA9C
+			public bool IsLinkMesh(int index); // 0x000000018C34AA74-0x000000018C34AA8C
+			public bool IsPause(); // 0x0000000188A29B90-0x0000000188A29B98
+			public bool IsFasterWrite(); // 0x000000018C34AA60-0x000000018C34AA6C
+			public bool IsSkinning(); // 0x0000000188A29B88-0x0000000188A29B90
+			public bool AddLinkMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x000000018C34A9A8-0x000000018C34AA60
+			public bool RemoveLinkMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x000000018C34AA9C-0x000000018C34AB44
 		}
 	
-		public class RenderMeshState // TypeDefIndex: 55130
+		public class RenderMeshState // TypeDefIndex: 82177
 		{
 			// Fields
 			public uint flag; // 0x10
@@ -4253,15 +4250,15 @@ namespace MagicaCloth
 			public int BoneWeightChunkLength; // 0x28
 	
 			// Constructors
-			public RenderMeshState(); // 0x00000001841E1670-0x00000001841E1680
+			public RenderMeshState(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x000000018709EC80-0x000000018709EC88
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20BF8-0x0000000189F20C10
+			public bool IsFlag(uint flag); // 0x0000000189255A10-0x0000000189255A18
+			public void SetFlag(uint flag, bool sw); // 0x000000018C34AB58-0x000000018C34AB70
 		}
 	
 		[BurstCompile]
-		private struct CopyRenderBuffer : IJobParallelFor // TypeDefIndex: 55131
+		private struct CopyRenderBuffer : IJobParallelFor // TypeDefIndex: 82178
 		{
 			// Fields
 			[ReadOnly]
@@ -4274,113 +4271,113 @@ namespace MagicaCloth
 			public NativeArray<float3> renderNormalArray; // 0x30
 	
 			// Methods
-			public void Execute(int index); // 0x0000000184DA35E0-0x0000000184DA3640
+			public void Execute(int index); // 0x00000001872511A0-0x0000000187251200
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 55132
+		private sealed class __c // TypeDefIndex: 82179
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<RenderMeshDeformer> __9__158_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189F20D50-0x0000000189F20DB4
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C34ACB0-0x000000018C34AD14
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _DispatchWriting_b__158_0(RenderMeshDeformer a, RenderMeshDeformer b); // 0x0000000189F20D20-0x0000000189F20D50
+			internal int _DispatchWriting_b__158_0(RenderMeshDeformer a, RenderMeshDeformer b); // 0x000000018C34AC80-0x000000018C34ACB0
 		}
 	
 		// Constructors
-		public PhysicsManagerMeshData(); // 0x00000001846D78C0-0x00000001846D7B30
+		public PhysicsManagerMeshData(); // 0x0000000186BA1D80-0x0000000186BA1FF0
 	
 		// Methods
-		public override void Create(); // 0x000000018442EE60-0x000000018442F840
-		public override void Dispose(); // 0x0000000189F19D4C-0x0000000189F1A210
-		public void AddMesh(BaseMeshDeformer bmesh); // 0x0000000189F173A0-0x0000000189F17418
-		public void RemoveMesh(BaseMeshDeformer bmesh); // 0x0000000189F1AECC-0x0000000189F1AF50
-		public int AddVirtualMesh(int uid, int vertexCount, int weightCount, int boneCount, int triangleCount, int vertexToTriangleIndexCount, Transform transform); // 0x0000000189F18438-0x0000000189F189E0
-		public bool IsEmptySharedVirtualMesh(int uid); // 0x0000000189F1A728-0x0000000189F1A780
-		public void SetSharedVirtualMeshData(int virtualMeshIndex, uint[] sharedVertexInfoList, MeshData.VertexWeight[] sharedWeightList, Vector2[] sharedUv, int[] sharedTriangles, uint[] vertexToTriangleInfoList, int[] vertexToTriangleIndexList); // 0x0000000189F1CD04-0x0000000189F1CFA4
-		public void RemoveVirtualMesh(int virtualMeshIndex); // 0x0000000189F1BCC8-0x0000000189F1C194
-		public bool ExistsVirtualMesh(int virtualMeshIndex); // 0x0000000189F1A210-0x0000000189F1A264
-		public VirtualMeshInfo GetVirtualMeshInfo(int virtualMeshIndex); // 0x0000000189F1A4D4-0x0000000189F1A55C
-		public bool IsUseVirtualMesh(int virtualMeshIndex); // 0x0000000189F1A8DC-0x0000000189F1A96C
-		public bool IsActiveVirtualMesh(int virtualMeshIndex); // 0x0000000189F1A618-0x0000000189F1A674
-		public void SetVirtualMeshActive(int virtualMeshIndex, bool sw); // 0x0000000189F1CFA4-0x0000000189F1D08C
-		public void AddUseVirtualMesh(int virtualMeshIndex); // 0x0000000189F17FF8-0x0000000189F180D4
-		public void RemoveUseVirtualMesh(int virtualMeshIndex); // 0x0000000189F1B888-0x0000000189F1B964
-		public bool AddUseVirtualVertex(int virtualMeshIndex, int vindex, bool fix); // 0x0000000189F180D4-0x0000000189F18248
-		public bool RemoveUseVirtualVertex(int virtualMeshIndex, int vindex, bool fix); // 0x0000000189F1B964-0x0000000189F1BAD8
-		public void CopyToVirtualMeshWorldData(int virtualMeshIndex, Vector3[] vertices, Vector3[] normals, Vector3[] tangents); // 0x0000000189F19688-0x0000000189F198E4
-		public void AddVirtualMeshBone(int virtualMeshIndex, List<Transform> boneList); // 0x0000000189F18248-0x0000000189F18438
-		public void RemoveVirtualMeshBone(int virtualMeshIndex); // 0x0000000189F1BAD8-0x0000000189F1BCC8
-		public void ResetFuturePredictionVirtualMeshBone(int virtualMeshIndex); // 0x0000000189F1C194-0x0000000189F1C294
-		public void ChangeVirtualMeshUseUnityPhysics(int virtualMeshIndex, bool sw); // 0x0000000189F18B1C-0x0000000189F18C68
-		public void SetVirtualMeshFlag(int virtualMeshIndex, uint flag, bool sw); // 0x0000000189F1D08C-0x0000000189F1D180
-		public int AddSharedChildMesh(long cuid, int virtualMeshIndex, int vertexCount, int weightCount); // 0x0000000189F17BA8-0x0000000189F17E38
-		public bool IsEmptySharedChildMesh(long cuid); // 0x0000000189F1A674-0x0000000189F1A6D0
-		public void SetSharedChildMeshData(int sharedMeshIndex, uint[] sharedVertexInfoList, MeshData.VertexWeight[] sharedVertexWeightList); // 0x0000000189F1CBEC-0x0000000189F1CD04
-		public void RemoveSharedChildMesh(int sharedChildMeshIndex); // 0x0000000189F1B554-0x0000000189F1B6C8
-		public int AddRenderMesh(int uid, bool isSkinning, bool isFasterWrite, Vector3 baseScale, int vertexCount, int rendererBoneIndex, int boneWeightCount); // 0x0000000189F17588-0x0000000189F17BA8
-		public void UpdateMeshState(int renderMeshIndex); // 0x0000000189F1D3B0-0x0000000189F1D468
-		public void AddRenderMeshBone(int renderMeshIndex, Transform rendererTransform); // 0x0000000189F17418-0x0000000189F17588
-		public bool IsEmptySharedRenderMesh(int uid); // 0x0000000189F1A6D0-0x0000000189F1A728
-		public void SetRenderSharedMeshData(int renderMeshIndex, bool isSkinning, Vector3[] sharedVertices, Vector3[] sharedNormals, Vector4[] sharedTangents, NativeArray<byte> sharedBonesPerVertex, NativeArray<BoneWeight1> sharedBoneWeights); // 0x0000000189F1C770-0x0000000189F1CBEC
-		public void RemoveRenderMesh(int renderMeshIndex); // 0x0000000189F1B0B4-0x0000000189F1B554
-		public void RemoveRenderMeshBone(int renderMeshIndex); // 0x0000000189F1AF50-0x0000000189F1B0B4
-		public void ChangeRenderMeshUseUnityPhysics(int renderMeshIndex, bool sw); // 0x0000000189F189E0-0x0000000189F18B1C
-		public bool IsUseRenderMesh(int renderMeshIndex); // 0x0000000189F1A878-0x0000000189F1A8DC
-		public bool IsActiveRenderMesh(int renderMeshIndex); // 0x0000000189F1A55C-0x0000000189F1A618
-		public void SetRenderMeshFlag(int renderMeshIndex, uint flag, bool sw); // 0x0000000189F1C5F0-0x0000000189F1C770
-		public bool IsRenderMeshFlag(int renderMeshIndex, uint flag); // 0x0000000189F1A780-0x0000000189F1A878
-		public void SetRenderMeshActive(int renderMeshIndex, bool sw); // 0x0000000189F1C3FC-0x0000000189F1C5F0
-		public void AddUseRenderMesh(int renderMeshIndex); // 0x0000000189F17E38-0x0000000189F17FF8
-		public void RemoveUseRenderMesh(int renderMeshIndex); // 0x0000000189F1B6C8-0x0000000189F1B888
-		public void LinkRenderMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x0000000189F1A96C-0x0000000189F1AB70
-		public void UnlinkRenderMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x0000000189F1D180-0x0000000189F1D3B0
-		internal void CopyToRenderMeshLocalPositionData(int renderMeshIndex, Mesh mesh, int bufferIndex); // 0x0000000189F18F80-0x0000000189F19070
-		internal void CopyToRenderMeshLocalNormalTangentData(int renderMeshIndex, Mesh mesh, int bufferIndex, bool normal, bool tangent); // 0x0000000189F18DEC-0x0000000189F18F80
-		internal void CopyToRenderMeshBoneWeightData(int renderMeshIndex, Mesh mesh, Mesh sharedMesh, int bufferIndex); // 0x0000000189F18C68-0x0000000189F18DEC
-		internal void CopyToRenderMeshWorldData(int renderMeshIndex, Transform target, Vector3[] vertices, Vector3[] normals, Vector3[] tangents); // 0x0000000189F19070-0x0000000189F193E0
-		internal List<int> GetVertexUseList(int renderMeshIndex); // 0x0000000189F1A308-0x0000000189F1A4D4
-		internal void SetDelayedCalculatedFlag(); // 0x0000000189F1C294-0x0000000189F1C3FC
-		internal void ClearWritingList(); // 0x0000000183233470-0x0000000183233710
-		internal void MeshCalculation(int bufferIndex); // 0x0000000189F1AB70-0x0000000189F1AD64
-		internal void NormalWriting(int bufferIndex); // 0x0000000189F1AD64-0x0000000189F1AECC
-		internal void CopyToRenderVertexBuffer(int renderMeshIndex, int bufferIndex, GraphicsBuffer vertexBuffer, bool normal, ComputeShader compute, int kernel, int index); // 0x0000000189F193E0-0x0000000189F19688
-		internal void UpdateVertexBuffer(); // 0x0000000189F1D468-0x0000000189F1D6F4
-		internal void FinishVertexBuffer(); // 0x0000000183233A20-0x0000000183233A50
-		internal void FasterWriting(int bufferIndex); // 0x0000000189F1A264-0x0000000189F1A308
-		private void DispatchWriting(int kernel, List<RenderMeshDeformer> rlist, int bufferIndex); // 0x0000000189F198E4-0x0000000189F19D4C
+		public override void Create(); // 0x0000000186935D00-0x00000001869366E0
+		public override void Dispose(); // 0x000000018C3453E8-0x000000018C3458AC
+		public void AddMesh(BaseMeshDeformer bmesh); // 0x000000018C342A2C-0x000000018C342AA4
+		public void RemoveMesh(BaseMeshDeformer bmesh); // 0x000000018C346590-0x000000018C346614
+		public int AddVirtualMesh(int uid, int vertexCount, int weightCount, int boneCount, int triangleCount, int vertexToTriangleIndexCount, Transform transform); // 0x000000018C343AD0-0x000000018C34407C
+		public bool IsEmptySharedVirtualMesh(int uid); // 0x000000018C345DC8-0x000000018C345E20
+		public void SetSharedVirtualMeshData(int virtualMeshIndex, uint[] sharedVertexInfoList, MeshData.VertexWeight[] sharedWeightList, Vector2[] sharedUv, int[] sharedTriangles, uint[] vertexToTriangleInfoList, int[] vertexToTriangleIndexList); // 0x000000018C3483E4-0x000000018C348684
+		public void RemoveVirtualMesh(int virtualMeshIndex); // 0x000000018C34738C-0x000000018C347858
+		public bool ExistsVirtualMesh(int virtualMeshIndex); // 0x000000018C3458AC-0x000000018C345900
+		public VirtualMeshInfo GetVirtualMeshInfo(int virtualMeshIndex); // 0x000000018C345B74-0x000000018C345BFC
+		public bool IsUseVirtualMesh(int virtualMeshIndex); // 0x000000018C345F7C-0x000000018C34600C
+		public bool IsActiveVirtualMesh(int virtualMeshIndex); // 0x000000018C345CB8-0x000000018C345D14
+		public void SetVirtualMeshActive(int virtualMeshIndex, bool sw); // 0x000000018C348684-0x000000018C34876C
+		public void AddUseVirtualMesh(int virtualMeshIndex); // 0x000000018C343690-0x000000018C34376C
+		public void RemoveUseVirtualMesh(int virtualMeshIndex); // 0x000000018C346F4C-0x000000018C347028
+		public bool AddUseVirtualVertex(int virtualMeshIndex, int vindex, bool fix); // 0x000000018C34376C-0x000000018C3438E0
+		public bool RemoveUseVirtualVertex(int virtualMeshIndex, int vindex, bool fix); // 0x000000018C347028-0x000000018C34719C
+		public void CopyToVirtualMeshWorldData(int virtualMeshIndex, Vector3[] vertices, Vector3[] normals, Vector3[] tangents); // 0x000000018C344D28-0x000000018C344F80
+		public void AddVirtualMeshBone(int virtualMeshIndex, List<Transform> boneList); // 0x000000018C3438E0-0x000000018C343AD0
+		public void RemoveVirtualMeshBone(int virtualMeshIndex); // 0x000000018C34719C-0x000000018C34738C
+		public void ResetFuturePredictionVirtualMeshBone(int virtualMeshIndex); // 0x000000018C347858-0x000000018C347958
+		public void ChangeVirtualMeshUseUnityPhysics(int virtualMeshIndex, bool sw); // 0x000000018C3441B8-0x000000018C344304
+		public void SetVirtualMeshFlag(int virtualMeshIndex, uint flag, bool sw); // 0x000000018C34876C-0x000000018C348860
+		public int AddSharedChildMesh(long cuid, int virtualMeshIndex, int vertexCount, int weightCount); // 0x000000018C34323C-0x000000018C3434D0
+		public bool IsEmptySharedChildMesh(long cuid); // 0x000000018C345D14-0x000000018C345D70
+		public void SetSharedChildMeshData(int sharedMeshIndex, uint[] sharedVertexInfoList, MeshData.VertexWeight[] sharedVertexWeightList); // 0x000000018C3482CC-0x000000018C3483E4
+		public void RemoveSharedChildMesh(int sharedChildMeshIndex); // 0x000000018C346C18-0x000000018C346D8C
+		public int AddRenderMesh(int uid, bool isSkinning, bool isFasterWrite, Vector3 baseScale, int vertexCount, int rendererBoneIndex, int boneWeightCount); // 0x000000018C342C18-0x000000018C34323C
+		public void UpdateMeshState(int renderMeshIndex); // 0x000000018C348A94-0x000000018C348B4C
+		public void AddRenderMeshBone(int renderMeshIndex, Transform rendererTransform); // 0x000000018C342AA4-0x000000018C342C18
+		public bool IsEmptySharedRenderMesh(int uid); // 0x000000018C345D70-0x000000018C345DC8
+		public void SetRenderSharedMeshData(int renderMeshIndex, bool isSkinning, Vector3[] sharedVertices, Vector3[] sharedNormals, Vector4[] sharedTangents, NativeArray<byte> sharedBonesPerVertex, NativeArray<BoneWeight1> sharedBoneWeights); // 0x000000018C347E4C-0x000000018C3482CC
+		public void RemoveRenderMesh(int renderMeshIndex); // 0x000000018C346778-0x000000018C346C18
+		public void RemoveRenderMeshBone(int renderMeshIndex); // 0x000000018C346614-0x000000018C346778
+		public void ChangeRenderMeshUseUnityPhysics(int renderMeshIndex, bool sw); // 0x000000018C34407C-0x000000018C3441B8
+		public bool IsUseRenderMesh(int renderMeshIndex); // 0x000000018C345F18-0x000000018C345F7C
+		public bool IsActiveRenderMesh(int renderMeshIndex); // 0x000000018C345BFC-0x000000018C345CB8
+		public void SetRenderMeshFlag(int renderMeshIndex, uint flag, bool sw); // 0x000000018C347CCC-0x000000018C347E4C
+		public bool IsRenderMeshFlag(int renderMeshIndex, uint flag); // 0x000000018C345E20-0x000000018C345F18
+		public void SetRenderMeshActive(int renderMeshIndex, bool sw); // 0x000000018C347AD8-0x000000018C347CCC
+		public void AddUseRenderMesh(int renderMeshIndex); // 0x000000018C3434D0-0x000000018C343690
+		public void RemoveUseRenderMesh(int renderMeshIndex); // 0x000000018C346D8C-0x000000018C346F4C
+		public void LinkRenderMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x000000018C34600C-0x000000018C346214
+		public void UnlinkRenderMesh(int renderMeshIndex, int childMeshVertexStart, int childMeshWeightStart, int virtualMeshVertexStart, int sharedVirtualMeshVertexStart); // 0x000000018C348860-0x000000018C348A94
+		internal void CopyToRenderMeshLocalPositionData(int renderMeshIndex, Mesh mesh, int bufferIndex); // 0x000000018C34461C-0x000000018C34470C
+		internal void CopyToRenderMeshLocalNormalTangentData(int renderMeshIndex, Mesh mesh, int bufferIndex, bool normal, bool tangent); // 0x000000018C344488-0x000000018C34461C
+		internal void CopyToRenderMeshBoneWeightData(int renderMeshIndex, Mesh mesh, Mesh sharedMesh, int bufferIndex); // 0x000000018C344304-0x000000018C344488
+		internal void CopyToRenderMeshWorldData(int renderMeshIndex, Transform target, Vector3[] vertices, Vector3[] normals, Vector3[] tangents); // 0x000000018C34470C-0x000000018C344A7C
+		internal List<int> GetVertexUseList(int renderMeshIndex); // 0x000000018C3459A8-0x000000018C345B74
+		internal void SetDelayedCalculatedFlag(); // 0x000000018C347958-0x000000018C347AD8
+		internal void ClearWritingList(); // 0x0000000185152680-0x0000000185152920
+		internal void MeshCalculation(int bufferIndex); // 0x000000018C346214-0x000000018C346418
+		internal void NormalWriting(int bufferIndex); // 0x000000018C346418-0x000000018C346590
+		internal void CopyToRenderVertexBuffer(int renderMeshIndex, int bufferIndex, GraphicsBuffer vertexBuffer, bool normal, ComputeShader compute, int kernel, int index); // 0x000000018C344A7C-0x000000018C344D28
+		internal void UpdateVertexBuffer(); // 0x000000018C348B4C-0x000000018C348DD8
+		internal void FinishVertexBuffer(); // 0x0000000185677E30-0x0000000185677E60
+		internal void FasterWriting(int bufferIndex); // 0x000000018C345900-0x000000018C3459A8
+		private void DispatchWriting(int kernel, List<RenderMeshDeformer> rlist, int bufferIndex); // 0x000000018C344F80-0x000000018C3453E8
 	}
 
-	public class PhysicsManagerParticleData : PhysicsManagerAccess // TypeDefIndex: 55138
+	public class PhysicsManagerParticleData : PhysicsManagerAccess // TypeDefIndex: 82185
 	{
 		// Fields
-		public const uint Flag_Enable = 1; // Metadata: 0x02346AA4
-		public const uint Flag_Kinematic = 2; // Metadata: 0x02346AA5
-		public const uint Flag_Hold = 4; // Metadata: 0x02346AA6
-		public const uint Flag_Collider = 16; // Metadata: 0x02346AA7
-		public const uint Flag_Plane = 32; // Metadata: 0x02346AA8
-		public const uint Flag_CapsuleX = 64; // Metadata: 0x02346AA9
-		public const uint Flag_CapsuleY = 128; // Metadata: 0x02346AAA
-		public const uint Flag_CapsuleZ = 256; // Metadata: 0x02346AAC
-		public const uint Flag_Box = 512; // Metadata: 0x02346AAE
-		public const uint Flag_TriangleRotation = 1024; // Metadata: 0x02346AB0
-		public const uint Flag_Transform_Read_Pos = 4096; // Metadata: 0x02346AB2
-		public const uint Flag_Transform_Read_Rot = 8192; // Metadata: 0x02346AB4
-		public const uint Flag_Transform_Read_Base = 16384; // Metadata: 0x02346AB6
-		public const uint Flag_Transform_Read_Local = 32768; // Metadata: 0x02346ABA
-		public const uint Flag_Transform_Read_Scl = 65536; // Metadata: 0x02346ABE
-		public const uint Flag_Transform_Write = 131072; // Metadata: 0x02346AC2
-		public const uint Flag_Transform_Restore = 262144; // Metadata: 0x02346AC6
-		public const uint Flag_Transform_UnityPhysics = 524288; // Metadata: 0x02346ACA
-		public const uint Flag_Transform_Parent = 1048576; // Metadata: 0x02346ACE
-		public const uint Flag_Step_Update = 16777216; // Metadata: 0x02346AD2
-		public const uint Flag_Reset_Position = 33554432; // Metadata: 0x02346AD6
+		public const uint Flag_Enable = 1; // Metadata: 0x02640B40
+		public const uint Flag_Kinematic = 2; // Metadata: 0x02640B41
+		public const uint Flag_Hold = 4; // Metadata: 0x02640B42
+		public const uint Flag_Collider = 16; // Metadata: 0x02640B43
+		public const uint Flag_Plane = 32; // Metadata: 0x02640B44
+		public const uint Flag_CapsuleX = 64; // Metadata: 0x02640B45
+		public const uint Flag_CapsuleY = 128; // Metadata: 0x02640B46
+		public const uint Flag_CapsuleZ = 256; // Metadata: 0x02640B48
+		public const uint Flag_Box = 512; // Metadata: 0x02640B4A
+		public const uint Flag_TriangleRotation = 1024; // Metadata: 0x02640B4C
+		public const uint Flag_Transform_Read_Pos = 4096; // Metadata: 0x02640B4E
+		public const uint Flag_Transform_Read_Rot = 8192; // Metadata: 0x02640B50
+		public const uint Flag_Transform_Read_Base = 16384; // Metadata: 0x02640B52
+		public const uint Flag_Transform_Read_Local = 32768; // Metadata: 0x02640B56
+		public const uint Flag_Transform_Read_Scl = 65536; // Metadata: 0x02640B5A
+		public const uint Flag_Transform_Write = 131072; // Metadata: 0x02640B5E
+		public const uint Flag_Transform_Restore = 262144; // Metadata: 0x02640B62
+		public const uint Flag_Transform_UnityPhysics = 524288; // Metadata: 0x02640B66
+		public const uint Flag_Transform_Parent = 1048576; // Metadata: 0x02640B6A
+		public const uint Flag_Step_Update = 16777216; // Metadata: 0x02640B6E
+		public const uint Flag_Reset_Position = 33554432; // Metadata: 0x02640B72
 		public FixedChunkNativeArray<ParticleFlag> flagList; // 0x18
 		public FixedChunkNativeArray<int> teamIdList; // 0x20
 		public FixedChunkNativeArray<float3> posList; // 0x28
@@ -4413,43 +4410,43 @@ namespace MagicaCloth
 		private int colliderCount; // 0xFC
 	
 		// Properties
-		public int Count { get; } // 0x0000000189F1FB70-0x0000000189F1FBA0 
-		public int Length { get; } // 0x0000000189F1FBD8-0x0000000189F1FBEC 
-		public int ColliderCount { get; } // 0x0000000184D8F940-0x0000000184D8F950 
-		public FixedChunkNativeArray<float3> InNextPosList { get; } // 0x0000000189F1FBA0-0x0000000189F1FBBC 
-		public FixedChunkNativeArray<float3> OutNextPosList { get; } // 0x0000000189F1FBEC-0x0000000189F1FC08 
-		public FixedChunkNativeArray<quaternion> InNextRotList { get; } // 0x0000000189F1FBBC-0x0000000189F1FBD8 
-		public FixedChunkNativeArray<quaternion> OutNextRotList { get; } // 0x0000000189F1FC08-0x0000000189F1FC24 
+		public int Count { get; } // 0x000000018521EC70-0x000000018521ECA0 
+		public int Length { get; } // 0x00000001852210A0-0x00000001852210C0 
+		public int ColliderCount { get; } // 0x000000018723D570-0x000000018723D580 
+		public FixedChunkNativeArray<float3> InNextPosList { get; } // 0x0000000185221040-0x0000000185221060 
+		public FixedChunkNativeArray<float3> OutNextPosList { get; } // 0x0000000185221060-0x0000000185221080 
+		public FixedChunkNativeArray<quaternion> InNextRotList { get; } // 0x0000000185221080-0x00000001852210A0 
+		public FixedChunkNativeArray<quaternion> OutNextRotList { get; } // 0x000000018C349B84-0x000000018C349BA0 
 	
 		// Nested types
-		public struct ParticleFlag // TypeDefIndex: 55134
+		public struct ParticleFlag // TypeDefIndex: 82181
 		{
 			// Fields
 			public uint flag; // 0x00
 	
 			// Constructors
-			public ParticleFlag(params uint[] flags); // 0x0000000184430530-0x0000000184430570
+			public ParticleFlag(params uint[] flags); // 0x00000001853CE3C0-0x00000001853CE400
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x0000000189F20B04-0x0000000189F20B0C
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20BE4-0x0000000189F20BF8
-			public bool IsValid(); // 0x0000000189F2A3F0-0x0000000189F2A3F8
-			public void SetEnable(bool sw); // 0x0000000184430680-0x00000001844306A0
-			public bool IsFixed(); // 0x0000000189F2A3B4-0x0000000189F2A3BC
-			public bool IsMove(); // 0x0000000189F2A3C4-0x0000000189F2A3CC
-			public bool IsKinematic(); // 0x0000000189F2A3BC-0x0000000189F2A3C4
-			public bool IsHold(); // 0x0000000189F20B2C-0x0000000189F20B34
-			public bool IsCollider(); // 0x0000000184430520-0x0000000184430530
-			public bool IsReadTransform(); // 0x0000000184430660-0x0000000184430670
-			public bool IsWriteTransform(); // 0x0000000189F2A3F8-0x0000000189F2A404
-			public bool IsRestoreTransform(); // 0x0000000184430670-0x0000000184430680
-			public bool IsUnityPhysics(); // 0x0000000189F2A3E4-0x0000000189F2A3F0
-			public bool IsReadSclTransform(); // 0x0000000189F2A3D8-0x0000000189F2A3E4
-			public bool IsParentTransform(); // 0x0000000189F2A3CC-0x0000000189F2A3D8
+			public bool IsFlag(uint flag); // 0x000000018C34AA6C-0x000000018C34AA74
+			public void SetFlag(uint flag, bool sw); // 0x00000001853CEE90-0x00000001853CEEB0
+			public bool IsValid(); // 0x000000018C351D48-0x000000018C351D50
+			public void SetEnable(bool sw); // 0x00000001853CEE40-0x00000001853CEE60
+			public bool IsFixed(); // 0x000000018C351D2C-0x000000018C351D34
+			public bool IsMove(); // 0x000000018C351D34-0x000000018C351D3C
+			public bool IsKinematic(); // 0x0000000188A5B578-0x0000000188A5B580
+			public bool IsHold(); // 0x0000000188A29B88-0x0000000188A29B90
+			public bool IsCollider(); // 0x00000001853CE8D0-0x00000001853CE8E0
+			public bool IsReadTransform(); // 0x00000001853CEE20-0x00000001853CEE30
+			public bool IsWriteTransform(); // 0x00000001853CEE60-0x00000001853CEE70
+			public bool IsRestoreTransform(); // 0x00000001853CEE30-0x00000001853CEE40
+			public bool IsUnityPhysics(); // 0x00000001853CEE70-0x00000001853CEE80
+			public bool IsReadSclTransform(); // 0x000000018C351D3C-0x000000018C351D48
+			public bool IsParentTransform(); // 0x00000001853CEE80-0x00000001853CEE90
 		}
 	
 		[BurstCompile]
-		private struct CopyBoneToParticleJob : IJobParallelFor // TypeDefIndex: 55135
+		private struct CopyBoneToParticleJob : IJobParallelFor // TypeDefIndex: 82182
 		{
 			// Fields
 			[ReadOnly]
@@ -4489,11 +4486,11 @@ namespace MagicaCloth
 			public NativeArray<float3> nextPosList; // 0x140
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F25B74-0x0000000189F26484
+			public void Execute(int index); // 0x000000018C34ECEC-0x000000018C34F604
 		}
 	
 		[BurstCompile]
-		private struct ResetParticleJob : IJobParallelFor // TypeDefIndex: 55136
+		private struct ResetParticleJob : IJobParallelFor // TypeDefIndex: 82183
 		{
 			// Fields
 			[ReadOnly]
@@ -4533,11 +4530,11 @@ namespace MagicaCloth
 			public NativeArray<float3> localPosList; // 0x110
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F337CC-0x0000000189F339B0
+			public void Execute(int index); // 0x000000018C357AD0-0x000000018C357CB4
 		}
 	
 		[BurstCompile]
-		private struct CopyParticleToBoneJob : IJobParallelFor // TypeDefIndex: 55137
+		private struct CopyParticleToBoneJob : IJobParallelFor // TypeDefIndex: 82184
 		{
 			// Fields
 			[ReadOnly]
@@ -4566,48 +4563,48 @@ namespace MagicaCloth
 			public NativeArray<quaternion> boneRotList; // 0xA0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F26484-0x0000000189F267FC
+			public void Execute(int index); // 0x000000018C34F604-0x000000018C34F980
 		}
 	
 		// Constructors
-		public PhysicsManagerParticleData(); // 0x00000001841E1670-0x00000001841E1680
+		public PhysicsManagerParticleData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x000000018442F840-0x000000018442FFA0
-		public override void Dispose(); // 0x0000000189F1E87C-0x0000000189F1EB98
-		public ChunkData CreateParticle(uint flag, int team, float3 wpos, quaternion wrot, float depth, float3 radius, float3 targetLocalPos); // 0x000000018442FFA0-0x0000000184430520
-		public ChunkData CreateParticle(int team, int count, Func<int, uint> funcFlag, Func<int, float3> funcWpos, Func<int, quaternion> funcWrot, Func<int, float> funcDepth, Func<int, float3> funcRadius, Func<int, float3> funcTargetLocalPos); // 0x0000000189F1DF6C-0x0000000189F1E87C
-		public void RemoveParticle(ChunkData c); // 0x0000000189F1EC50-0x0000000189F1F004
-		public void SetEnable(ChunkData c, bool sw, Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x0000000184430570-0x0000000184430660
-		public void SetRadius(int index, float3 radius); // 0x0000000189F1F158-0x0000000189F1F1C8
-		public void SetLocalPos(int index, Vector3 lpos); // 0x0000000189F1F0C4-0x0000000189F1F158
-		public bool IsValid(int index); // 0x0000000189F1EBE8-0x0000000189F1EC50
-		public int GetTeamId(int index); // 0x0000000189F1EB98-0x0000000189F1EBE8
-		public void ResetFuturePredictionTransform(int index); // 0x0000000189F1F054-0x0000000189F1F0C4
-		public void ResetFuturePredictionTransform(ChunkData c); // 0x0000000189F1F004-0x0000000189F1F054
-		public void SwitchingNextPosList(); // 0x0000000184DA3680-0x0000000184DA36A0
-		public void SwitchingNextRotList(); // 0x0000000184DA36A0-0x0000000184DA36C0
-		public void UpdateBoneToParticle(); // 0x0000000189F1F1C8-0x0000000189F1F570
-		public void UpdateResetParticle(); // 0x0000000189F1F878-0x0000000189F1FB70
-		public bool UpdateParticleToBone(); // 0x0000000189F1F570-0x0000000189F1F878
+		public override void Create(); // 0x00000001869366E0-0x0000000186936E40
+		public override void Dispose(); // 0x000000018C3495EC-0x000000018C349908
+		public ChunkData CreateParticle(uint flag, int team, float3 wpos, quaternion wrot, float depth, float3 radius, float3 targetLocalPos); // 0x00000001853CD220-0x00000001853CD970
+		public ChunkData CreateParticle(int team, int count, Func<int, uint> funcFlag, Func<int, float3> funcWpos, Func<int, quaternion> funcWrot, Func<int, float> funcDepth, Func<int, float3> funcRadius, Func<int, float3> funcTargetLocalPos); // 0x00000001853CEF80-0x00000001853CF8D0
+		public void RemoveParticle(ChunkData c); // 0x00000001853CE470-0x00000001853CE8D0
+		public void SetEnable(ChunkData c, bool sw, Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x00000001853CE9D0-0x00000001853CEE20
+		public void SetRadius(int index, float3 radius); // 0x000000018C349B14-0x000000018C349B84
+		public void SetLocalPos(int index, Vector3 lpos); // 0x000000018C349A80-0x000000018C349B14
+		public bool IsValid(int index); // 0x000000018C349958-0x000000018C3499C0
+		public int GetTeamId(int index); // 0x000000018C349908-0x000000018C349958
+		public void ResetFuturePredictionTransform(int index); // 0x000000018C349A10-0x000000018C349A80
+		public void ResetFuturePredictionTransform(ChunkData c); // 0x000000018C3499C0-0x000000018C349A10
+		public void SwitchingNextPosList(); // 0x0000000187251230-0x0000000187251250
+		public void SwitchingNextRotList(); // 0x0000000187251250-0x0000000187251270
+		public void UpdateBoneToParticle(); // 0x000000018521F3D0-0x000000018521F7A0
+		public void UpdateResetParticle(); // 0x000000018521F7A0-0x000000018521FAD0
+		public bool UpdateParticleToBone(); // 0x000000018521FAD0-0x000000018521FE00
 	}
 
-	public class PhysicsManagerTeamData : PhysicsManagerAccess // TypeDefIndex: 55146
+	public class PhysicsManagerTeamData : PhysicsManagerAccess // TypeDefIndex: 82193
 	{
 		// Fields
-		public const uint Flag_Enable = 1; // Metadata: 0x02346ADE
-		public const uint Flag_Interpolate = 2; // Metadata: 0x02346ADF
-		public const uint Flag_FixedNonRotation = 4; // Metadata: 0x02346AE0
-		public const uint Flag_AnimatedPose = 8; // Metadata: 0x02346AE1
-		public const uint Flag_IgnoreClampPositionVelocity = 16; // Metadata: 0x02346AE2
-		public const uint Flag_Collision = 32; // Metadata: 0x02346AE3
-		public const uint Flag_AfterCollision = 64; // Metadata: 0x02346AE4
-		public const uint Flag_UpdatePhysics = 128; // Metadata: 0x02346AE5
-		public const uint Flag_Pause = 256; // Metadata: 0x02346AE7
-		public const uint Flag_Reset_WorldInfluence = 65536; // Metadata: 0x02346AE9
-		public const uint Flag_Reset_Position = 131072; // Metadata: 0x02346AED
-		public const uint Flag_Reset_Keep = 524288; // Metadata: 0x02346AF1
-		public const uint Flag_Wind = 1048576; // Metadata: 0x02346AF5
+		public const uint Flag_Enable = 1; // Metadata: 0x02640B7A
+		public const uint Flag_Interpolate = 2; // Metadata: 0x02640B7B
+		public const uint Flag_FixedNonRotation = 4; // Metadata: 0x02640B7C
+		public const uint Flag_AnimatedPose = 8; // Metadata: 0x02640B7D
+		public const uint Flag_IgnoreClampPositionVelocity = 16; // Metadata: 0x02640B7E
+		public const uint Flag_Collision = 32; // Metadata: 0x02640B7F
+		public const uint Flag_AfterCollision = 64; // Metadata: 0x02640B80
+		public const uint Flag_UpdatePhysics = 128; // Metadata: 0x02640B81
+		public const uint Flag_Pause = 256; // Metadata: 0x02640B83
+		public const uint Flag_Reset_WorldInfluence = 65536; // Metadata: 0x02640B85
+		public const uint Flag_Reset_Position = 131072; // Metadata: 0x02640B89
+		public const uint Flag_Reset_Keep = 524288; // Metadata: 0x02640B8D
+		public const uint Flag_Wind = 1048576; // Metadata: 0x02640B91
 		public FixedNativeList<TeamData> teamDataList; // 0x18
 		public FixedNativeList<CurveParam> teamMassList; // 0x20
 		public FixedNativeList<CurveParam> teamGravityList; // 0x28
@@ -4624,16 +4621,16 @@ namespace MagicaCloth
 		private int physicsUpdateCount; // 0x78
 	
 		// Properties
-		public int TeamCount { get; } // 0x0000000189F2E5F4-0x0000000189F2E63C 
-		public int TeamLength { get; } // 0x0000000189F2E63C-0x0000000189F2E67C 
-		public int ActiveTeamCount { get; } // 0x0000000184D868A0-0x0000000184D868B0 
-		public int ColliderCount { get; } // 0x0000000189F2E4B0-0x0000000189F2E4FC 
-		public int NormalUpdateCount { get; } // 0x0000000184D868B0-0x0000000184D868C0 
-		public int PhysicsUpdateCount { get; } // 0x0000000184D863C0-0x0000000184D863D0 
-		public int PauseCount { get; } // 0x0000000189F2E4FC-0x0000000189F2E5F4 
+		public int TeamCount { get; } // 0x000000018C354070-0x000000018C3540B8 
+		public int TeamLength { get; } // 0x000000018C3540B8-0x000000018C3540F8 
+		public int ActiveTeamCount { get; } // 0x0000000187233370-0x0000000187233380 
+		public int ColliderCount { get; } // 0x000000018C353F2C-0x000000018C353F78 
+		public int NormalUpdateCount { get; } // 0x0000000187233390-0x00000001872333A0 
+		public int PhysicsUpdateCount { get; } // 0x0000000187233090-0x00000001872330A0 
+		public int PauseCount { get; } // 0x000000018C353F78-0x000000018C354070 
 	
 		// Nested types
-		public enum ForceMode // TypeDefIndex: 55139
+		public enum ForceMode // TypeDefIndex: 82186
 		{
 			None = 0,
 			VelocityAdd = 1,
@@ -4642,7 +4639,7 @@ namespace MagicaCloth
 			VelocityChangeWithoutMass = 11
 		}
 	
-		public struct TeamData // TypeDefIndex: 55140
+		public struct TeamData // TypeDefIndex: 82187
 		{
 			// Fields
 			public ChunkData particleChunk; // 0x00
@@ -4698,18 +4695,18 @@ namespace MagicaCloth
 			public short compositeRotationGroupIndex; // 0xFC
 	
 			// Methods
-			public bool IsActive(); // 0x0000000189F34424-0x0000000189F3442C
-			public bool IsRunning(); // 0x0000000189F34460-0x0000000189F3446C
-			public bool IsUpdate(int runCount); // 0x0000000189F3446C-0x0000000189F34478
-			public bool IsInterpolate(); // 0x0000000189F34434-0x0000000189F3443C
-			public bool IsPhysicsUpdate(); // 0x0000000189F34448-0x0000000189F34454
-			public bool IsFlag(uint flag); // 0x0000000189F3442C-0x0000000189F34434
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F34478-0x0000000189F34490
-			public bool IsReset(); // 0x0000000189F34454-0x0000000189F34460
-			public bool IsPause(); // 0x0000000189F3443C-0x0000000189F34448
+			public bool IsActive(); // 0x000000018C35826C-0x000000018C358274
+			public bool IsRunning(); // 0x000000018C3582A8-0x000000018C3582B4
+			public bool IsUpdate(int runCount); // 0x000000018C3582B4-0x000000018C3582C0
+			public bool IsInterpolate(); // 0x000000018C35827C-0x000000018C358284
+			public bool IsPhysicsUpdate(); // 0x000000018C358290-0x000000018C35829C
+			public bool IsFlag(uint flag); // 0x000000018C358274-0x000000018C35827C
+			public void SetFlag(uint flag, bool sw); // 0x000000018C3582C0-0x000000018C3582D8
+			public bool IsReset(); // 0x000000018C35829C-0x000000018C3582A8
+			public bool IsPause(); // 0x000000018C358284-0x000000018C358290
 		}
 	
-		public struct WorldInfluence // TypeDefIndex: 55141
+		public struct WorldInfluence // TypeDefIndex: 82188
 		{
 			// Fields
 			public CurveParam moveInfluence; // 0x00
@@ -4732,7 +4729,7 @@ namespace MagicaCloth
 			public float clampRotationLimit; // 0x98
 		}
 	
-		public struct WindInfo // TypeDefIndex: 55142
+		public struct WindInfo // TypeDefIndex: 82189
 		{
 			// Fields
 			public int windCount; // 0x00
@@ -4742,7 +4739,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct PreProcessTeamDataJob : IJobParallelFor // TypeDefIndex: 55143
+		private struct PreProcessTeamDataJob : IJobParallelFor // TypeDefIndex: 82190
 		{
 			// Fields
 			public float deltaTime; // 0x00
@@ -4766,13 +4763,13 @@ namespace MagicaCloth
 			public NativeArray<PhysicsManagerWindData.WindData> windData; // 0x88
 	
 			// Methods
-			public void Execute(int teamId); // 0x0000000189F2FEFC-0x0000000189F30DA0
-			private void UpdateTime(ref TeamData tdata, bool reset, float dtime); // 0x0000000189F30DA0-0x0000000189F30E94
-			private void Wind(ref TeamData tdata, float3 pos, int teamId); // 0x0000000189F30E94-0x0000000189F31370
+			public void Execute(int teamId); // 0x000000018C35503C-0x000000018C355EFC
+			private void UpdateTime(ref TeamData tdata, bool reset, float dtime); // 0x000000018C355EFC-0x000000018C355FEC
+			private void Wind(ref TeamData tdata, float3 pos, int teamId); // 0x000000018C355FEC-0x000000018C3564DC
 		}
 	
 		[BurstCompile]
-		private struct PostProcessTeamDataJob : IJobParallelFor // TypeDefIndex: 55144
+		private struct PostProcessTeamDataJob : IJobParallelFor // TypeDefIndex: 82191
 		{
 			// Fields
 			public int fixedUpdateCount; // 0x00
@@ -4780,113 +4777,113 @@ namespace MagicaCloth
 			public NativeArray<WorldInfluence> teamWorldInfluenceList; // 0x18
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F2FBF8-0x0000000189F2FEFC
+			public void Execute(int index); // 0x000000018C354D34-0x000000018C35503C
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 55145
+		private sealed class __c // TypeDefIndex: 82192
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Action<int> __9__76_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189F3526C-0x0000000189F352D0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C358CBC-0x000000018C358D20
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _ResetFuturePredictionCollidere_b__76_0(int pindex); // 0x0000000189F35210-0x0000000189F3526C
+			internal void _ResetFuturePredictionCollidere_b__76_0(int pindex); // 0x000000018C358C60-0x000000018C358CBC
 		}
 	
 		// Constructors
-		public PhysicsManagerTeamData(); // 0x00000001846D76B0-0x00000001846D7730
+		public PhysicsManagerTeamData(); // 0x0000000186BA1B70-0x0000000186BA1BF0
 	
 		// Methods
-		public override void Create(); // 0x0000000182FC1070-0x0000000182FC1330
-		public override void Dispose(); // 0x0000000189F2B738-0x0000000189F2B8AC
-		public int CreateTeam(PhysicsTeam team, uint flag); // 0x0000000182FC1330-0x0000000182FC18F0
-		public void RemoveTeam(int teamId); // 0x0000000189F2C534-0x0000000189F2C63C
-		public void SetEnable(int teamId, bool sw); // 0x0000000189F2D238-0x0000000189F2D260
-		public bool IsValid(int teamId); // 0x0000000189F2BC68-0x0000000189F2BC74
-		public bool IsValidData(int teamId); // 0x0000000189F2BC38-0x0000000189F2BC68
-		public bool IsActive(int teamId); // 0x0000000189F2BAE0-0x0000000189F2BBA4
-		public void SetFlag(int teamId, uint flag, bool sw); // 0x0000000189F2D38C-0x0000000189F2D4CC
-		public bool IsFlag(int teamId, uint flag); // 0x0000000189F2BBA4-0x0000000189F2BC38
-		public void SetParticleChunk(int teamId, ChunkData chunk); // 0x0000000189F2DAD4-0x0000000189F2DBD8
-		public void SetFriction(int teamId, float dynamicFriction, float staticFriction); // 0x0000000189F2D4CC-0x0000000189F2D5CC
-		public void SetMass(int teamId, BezierParam mass); // 0x0000000189F2D91C-0x0000000189F2D974
-		public void SetGravity(int teamId, BezierParam gravity); // 0x0000000189F2D764-0x0000000189F2D7BC
-		public void SetGravityDirection(int teamId, float3 dir); // 0x0000000189F2D5CC-0x0000000189F2D764
-		public void SetDrag(int teamId, BezierParam drag); // 0x0000000189F2D1E0-0x0000000189F2D238
-		public void SetMaxVelocity(int teamId, BezierParam maxVelocity); // 0x0000000189F2D974-0x0000000189F2D9CC
-		public void SetExternalForce(int teamId, float massInfluence, float windInfluence, float windRandomScale, float windSynchronization); // 0x0000000189F2D260-0x0000000189F2D38C
-		public void SetDepthInfluence(int teamId, BezierParam depthInfluence); // 0x0000000189F2D188-0x0000000189F2D1E0
-		public void SetWorldInfluence(int teamId, float maxSpeed, float maxRotatinSpeed, BezierParam moveInfluence, BezierParam rotInfluence, bool resetTeleport, float teleportDistance, float teleportRotation, float resetStabilizationTime, ClothParams.TeleportMode teleportMode, bool useClampRotation, BezierParam clampRotation); // 0x0000000189F2E10C-0x0000000189F2E2E8
-		private float CalcClampRotationLimit(bool useClampRotation, BezierParam clampRotation); // 0x0000000189F2AE20-0x0000000189F2AE7C
-		public void SetWorldInfluence(int teamId, float maxSpeed, float maxRotationSpeed, BezierParam moveInfluence, BezierParam rotInfluence); // 0x0000000189F2E2E8-0x0000000189F2E4B0
-		public void SetAfterTeleport(int teamId, bool resetTeleport, float teleportDistance, float teleportRotation, ClothParams.TeleportMode teleportMode); // 0x0000000189F2CC08-0x0000000189F2CD9C
-		public void SetStabilizationTime(int teamId, float resetStabilizationTime); // 0x0000000189F2DD18-0x0000000189F2DE78
-		public void ResetWorldInfluenceTarget(int teamId, Transform target); // 0x0000000189F2CA04-0x0000000189F2CC08
-		public void SetClampRotation(int teamId, bool useClampRotation, BezierParam clampRotation); // 0x0000000189F2D000-0x0000000189F2D188
-		public void SetSelfCollisionRange(int teamId, float range); // 0x0000000189F2DBD8-0x0000000189F2DD18
-		public void SetBoneIndex(int teamId, int boneIndex, Vector3 initScale); // 0x0000000189F2CEA4-0x0000000189F2D000
-		internal void AddColliderParticle(int teamId, int particleIndex); // 0x0000000189F2A838-0x0000000189F2AA2C
-		internal void RemoveColliderParticle(int teamId, int particleIndex); // 0x0000000189F2C078-0x0000000189F2C240
-		internal void RemoveCollider(int teamId, ColliderComponent collider); // 0x0000000189F2C240-0x0000000189F2C30C
-		public void ResetFuturePredictionCollidere(int teamId); // 0x0000000189F2C63C-0x0000000189F2C810
-		public void AddSkinningBoneIndex(int teamId, List<Transform> boneList); // 0x0000000189F2AA2C-0x0000000189F2AE20
-		public void RemoveSkinningBoneIndex(int teamId); // 0x0000000189F2C30C-0x0000000189F2C534
-		public void SetTimeScale(int teamId, float timeScale); // 0x0000000189F2DE78-0x0000000189F2DFC0
-		public float GetTimeScale(int teamId); // 0x0000000189F2BA24-0x0000000189F2BAE0
-		public void SetBlendRatio(int teamId, float blendRatio); // 0x0000000189F2CD9C-0x0000000189F2CEA4
-		public float GetBlendRatio(int teamId); // 0x0000000189F2B8AC-0x0000000189F2B968
-		public void SetOutPhysicsPoseBlendRatio(int teamId, float blendRatio); // 0x0000000189F2D9CC-0x0000000189F2DAD4
-		public float GetOutPhysicsPoseBlendRatio(int teamId); // 0x0000000189F2B968-0x0000000189F2BA24
-		public void SetImpactForce(int teamId, float3 force, ForceMode mode); // 0x0000000189F2D7BC-0x0000000189F2D91C
-		public void ResetStabilizationTime(int teamId, float resetStabilizationTime = -1f /* Metadata: 0x02346ADA */); // 0x0000000189F2C810-0x0000000189F2CA04
-		public void SetUpdateMode(int teamId, PhysicsTeam.TeamUpdateMode updateMode); // 0x0000000189F2DFC0-0x0000000189F2E10C
-		public void ChangeUseUnityPhysics(int teamId, bool sw); // 0x0000000189F2B524-0x0000000189F2B738
-		private void ChangeParticleUseUnityPhysics(int pindex, bool unityPhysics); // 0x0000000189F2B408-0x0000000189F2B524
-		internal void ChangeBoneFlag(int teamId, PhysicsTeam.TeamCullingMode cullingMode, bool isCalculation); // 0x0000000189F2B1F8-0x0000000189F2B408
-		internal void EarlyUpdateTeamAlways(); // 0x00000001833362D0-0x00000001833364E0
-		internal void PreUpdateTeamAlways(); // 0x00000001833364E0-0x0000000183336A30
-		internal int CalcMaxUpdateCount(int ups, float deltaTime, float physicsDeltaTime, float updateDeltaTime); // 0x0000000189F2AE7C-0x0000000189F2B1F8
-		internal void PreUpdateTeamData(float deltaTime, float physicsDeltaTime, float updateDeltaTime, int ups, int maxUpdateCount); // 0x0000000189F2BD94-0x0000000189F2C078
-		internal void PostUpdateTeamData(); // 0x0000000189F2BC74-0x0000000189F2BD94
+		public override void Create(); // 0x0000000186D3F350-0x0000000186D3F610
+		public override void Dispose(); // 0x000000018C3528A4-0x000000018C352A18
+		public int CreateTeam(PhysicsTeam team, uint flag); // 0x00000001853C8D60-0x00000001853C9310
+		public void RemoveTeam(int teamId); // 0x0000000185D96E00-0x0000000185D96F10
+		public void SetEnable(int teamId, bool sw); // 0x00000001853CA540-0x00000001853CA570
+		public bool IsValid(int teamId); // 0x000000018C352D10-0x000000018C352D1C
+		public bool IsValidData(int teamId); // 0x0000000185D97140-0x0000000185D97170
+		public bool IsActive(int teamId); // 0x000000018C352C4C-0x000000018C352D10
+		public void SetFlag(int teamId, uint flag, bool sw); // 0x00000001853CA570-0x00000001853CA6D0
+		public bool IsFlag(int teamId, uint flag); // 0x00000001853CCC40-0x00000001853CCCE0
+		public void SetParticleChunk(int teamId, ChunkData chunk); // 0x00000001867DC2B0-0x00000001867DC3C0
+		public void SetFriction(int teamId, float dynamicFriction, float staticFriction); // 0x00000001867C6FF0-0x00000001867C7100
+		public void SetMass(int teamId, BezierParam mass); // 0x0000000185223C80-0x0000000185223CE0
+		public void SetGravity(int teamId, BezierParam gravity); // 0x0000000185223C20-0x0000000185223C80
+		public void SetGravityDirection(int teamId, float3 dir); // 0x00000001867343C0-0x00000001867345B0
+		public void SetDrag(int teamId, BezierParam drag); // 0x0000000185223BC0-0x0000000185223C20
+		public void SetMaxVelocity(int teamId, BezierParam maxVelocity); // 0x0000000185223CE0-0x0000000185223D40
+		public void SetExternalForce(int teamId, float massInfluence, float windInfluence, float windRandomScale, float windSynchronization); // 0x0000000186798130-0x0000000186798270
+		public void SetDepthInfluence(int teamId, BezierParam depthInfluence); // 0x0000000185223B60-0x0000000185223BC0
+		public void SetWorldInfluence(int teamId, float maxSpeed, float maxRotatinSpeed, BezierParam moveInfluence, BezierParam rotInfluence, bool resetTeleport, float teleportDistance, float teleportRotation, float resetStabilizationTime, ClothParams.TeleportMode teleportMode, bool useClampRotation, BezierParam clampRotation); // 0x0000000185223D40-0x0000000185223F30
+		private float CalcClampRotationLimit(bool useClampRotation, BezierParam clampRotation); // 0x0000000185223F30-0x0000000185223FA0
+		public void SetWorldInfluence(int teamId, float maxSpeed, float maxRotationSpeed, BezierParam moveInfluence, BezierParam rotInfluence); // 0x000000018C353D64-0x000000018C353F2C
+		public void SetAfterTeleport(int teamId, bool resetTeleport, float teleportDistance, float teleportRotation, ClothParams.TeleportMode teleportMode); // 0x000000018C3533B4-0x000000018C353548
+		public void SetStabilizationTime(int teamId, float resetStabilizationTime); // 0x000000018C353970-0x000000018C353AD0
+		public void ResetWorldInfluenceTarget(int teamId, Transform target); // 0x000000018C3531B0-0x000000018C3533B4
+		public void SetClampRotation(int teamId, bool useClampRotation, BezierParam clampRotation); // 0x000000018C353548-0x000000018C3536D0
+		public void SetSelfCollisionRange(int teamId, float range); // 0x000000018C353830-0x000000018C353970
+		public void SetBoneIndex(int teamId, int boneIndex, Vector3 initScale); // 0x00000001853CA0F0-0x00000001853CA230
+		internal void AddColliderParticle(int teamId, int particleIndex); // 0x00000001853CC090-0x00000001853CC2B0
+		internal void RemoveColliderParticle(int teamId, int particleIndex); // 0x00000001853CC2B0-0x00000001853CC490
+		internal void RemoveCollider(int teamId, ColliderComponent collider); // 0x000000018C352D1C-0x000000018C352DE8
+		public void ResetFuturePredictionCollidere(int teamId); // 0x000000018C352DE8-0x000000018C352FBC
+		public void AddSkinningBoneIndex(int teamId, List<Transform> boneList); // 0x000000018C352188-0x000000018C352580
+		public void RemoveSkinningBoneIndex(int teamId); // 0x00000001853CAAD0-0x00000001853CAC10
+		public void SetTimeScale(int teamId, float timeScale); // 0x000000018C353AD0-0x000000018C353C18
+		public float GetTimeScale(int teamId); // 0x000000018C352B90-0x000000018C352C4C
+		public void SetBlendRatio(int teamId, float blendRatio); // 0x00000001853C9E90-0x00000001853C9FB0
+		public float GetBlendRatio(int teamId); // 0x000000018C352A18-0x000000018C352AD4
+		public void SetOutPhysicsPoseBlendRatio(int teamId, float blendRatio); // 0x00000001853C9D20-0x00000001853C9E40
+		public float GetOutPhysicsPoseBlendRatio(int teamId); // 0x000000018C352AD4-0x000000018C352B90
+		public void SetImpactForce(int teamId, float3 force, ForceMode mode); // 0x000000018C3536D0-0x000000018C353830
+		public void ResetStabilizationTime(int teamId, float resetStabilizationTime = -1f /* Metadata: 0x02640B76 */); // 0x000000018C352FBC-0x000000018C3531B0
+		public void SetUpdateMode(int teamId, PhysicsTeam.TeamUpdateMode updateMode); // 0x000000018C353C18-0x000000018C353D64
+		public void ChangeUseUnityPhysics(int teamId, bool sw); // 0x000000018C352690-0x000000018C3528A4
+		private void ChangeParticleUseUnityPhysics(int pindex, bool unityPhysics); // 0x000000018C352580-0x000000018C352690
+		internal void ChangeBoneFlag(int teamId, PhysicsTeam.TeamCullingMode cullingMode, bool isCalculation); // 0x000000018521D6C0-0x000000018521D8A0
+		internal void EarlyUpdateTeamAlways(); // 0x0000000185158E00-0x0000000185159070
+		internal void PreUpdateTeamAlways(); // 0x0000000185159070-0x0000000185159600
+		internal int CalcMaxUpdateCount(int ups, float deltaTime, float physicsDeltaTime, float updateDeltaTime); // 0x0000000185221520-0x0000000185221910
+		internal void PreUpdateTeamData(float deltaTime, float physicsDeltaTime, float updateDeltaTime, int ups, int maxUpdateCount); // 0x000000018521FF40-0x0000000185220210
+		internal void PostUpdateTeamData(); // 0x000000018521FE00-0x000000018521FF40
 	}
 
-	public class PhysicsManagerWindData : PhysicsManagerAccess // TypeDefIndex: 55151
+	public class PhysicsManagerWindData : PhysicsManagerAccess // TypeDefIndex: 82198
 	{
 		// Fields
-		public const uint Flag_Enable = 1; // Metadata: 0x02346AFE
-		public const uint Flag_Addition = 2; // Metadata: 0x02346AFF
+		public const uint Flag_Enable = 1; // Metadata: 0x02640B9A
+		public const uint Flag_Addition = 2; // Metadata: 0x02640B9B
 		public FixedNativeList<WindData> windDataList; // 0x18
 	
 		// Properties
-		public int Count { get; } // 0x0000000189F2EEB4-0x0000000189F2EF00 
+		public int Count { get; } // 0x000000018C354928-0x000000018C354974 
 	
 		// Nested types
-		public enum WindType // TypeDefIndex: 55147
+		public enum WindType // TypeDefIndex: 82194
 		{
 			None = 0,
 			Direction = 1,
 			Area = 2
 		}
 	
-		public enum ShapeType // TypeDefIndex: 55148
+		public enum ShapeType // TypeDefIndex: 82195
 		{
 			Box = 0,
 			Sphere = 1
 		}
 	
-		public enum DirectionType // TypeDefIndex: 55149
+		public enum DirectionType // TypeDefIndex: 82196
 		{
 			OneDirection = 0,
 			Radial = 1
 		}
 	
-		public struct WindData // TypeDefIndex: 55150
+		public struct WindData // TypeDefIndex: 82197
 		{
 			// Fields
 			public uint flag; // 0x00
@@ -4904,42 +4901,42 @@ namespace MagicaCloth
 			public CurveParam attenuation; // 0x40
 	
 			// Methods
-			public bool IsFlag(uint flag); // 0x0000000189F20B04-0x0000000189F20B0C
-			public void SetFlag(uint flag, bool sw); // 0x0000000189F20BE4-0x0000000189F20BF8
-			public void SetEnable(bool sw); // 0x0000000189F35448-0x0000000189F35460
-			public bool IsActive(); // 0x0000000189F2A3F0-0x0000000189F2A3F8
+			public bool IsFlag(uint flag); // 0x000000018C34AA6C-0x000000018C34AA74
+			public void SetFlag(uint flag, bool sw); // 0x000000018C34AB44-0x000000018C34AB58
+			public void SetEnable(bool sw); // 0x00000001853CEE40-0x00000001853CEE60
+			public bool IsActive(); // 0x000000018C351D48-0x000000018C351D50
 		}
 	
 		// Constructors
-		public PhysicsManagerWindData(); // 0x00000001841E1670-0x00000001841E1680
+		public PhysicsManagerWindData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x0000000184D2EDA0-0x0000000184D2EE20
-		public override void Dispose(); // 0x0000000189F2E9F4-0x0000000189F2EA38
-		public int CreateWind(WindType windType, ShapeType shapeType, float3 areaSize, bool addition, float main, float turbulence, float frequency, float3 direction, DirectionType directinType, float areaVolume, float areaLength, BezierParam attenuation); // 0x0000000189F2E8B8-0x0000000189F2E9F4
-		public void RemoveWind(int windId); // 0x0000000189F2EA9C-0x0000000189F2EAF4
-		public void SetEnable(int windId, bool sw, Transform target); // 0x0000000189F2EAF4-0x0000000189F2EC70
-		public bool IsActive(int windId); // 0x0000000189F2EA38-0x0000000189F2EA9C
-		public void SetFlag(int windId, uint flag, bool sw); // 0x0000000189F2EC70-0x0000000189F2ED44
-		public void SetParameter(int windId, float3 areaSize, bool addition, float main, float turbulence, float frequency, float3 direction, float areaVolume, float areaLength, BezierParam attenuation); // 0x0000000189F2ED44-0x0000000189F2EEB4
-		internal static float3 CalcWindForce(float time, float2 noiseBasePos, float3 mainDir, float main, float turbulence, float frequency, float randomScale); // 0x0000000189F2E67C-0x0000000189F2E8B8
+		public override void Create(); // 0x00000001871C2D70-0x00000001871C2DF0
+		public override void Dispose(); // 0x000000018C354464-0x000000018C3544A8
+		public int CreateWind(WindType windType, ShapeType shapeType, float3 areaSize, bool addition, float main, float turbulence, float frequency, float3 direction, DirectionType directinType, float areaVolume, float areaLength, BezierParam attenuation); // 0x000000018C354324-0x000000018C354464
+		public void RemoveWind(int windId); // 0x000000018C35450C-0x000000018C354564
+		public void SetEnable(int windId, bool sw, Transform target); // 0x000000018C354564-0x000000018C3546E4
+		public bool IsActive(int windId); // 0x000000018C3544A8-0x000000018C35450C
+		public void SetFlag(int windId, uint flag, bool sw); // 0x000000018C3546E4-0x000000018C3547B8
+		public void SetParameter(int windId, float3 areaSize, bool addition, float main, float turbulence, float frequency, float3 direction, float areaVolume, float areaLength, BezierParam attenuation); // 0x000000018C3547B8-0x000000018C354928
+		internal static float3 CalcWindForce(float time, float2 noiseBasePos, float3 mainDir, float main, float turbulence, float frequency, float randomScale); // 0x000000018C3540F8-0x000000018C354324
 	}
 
-	public abstract class PhysicsManagerWorker // TypeDefIndex: 55152
+	public abstract class PhysicsManagerWorker // TypeDefIndex: 82199
 	{
 		// Fields
 		[CompilerGenerated]
 		private MagicaPhysicsManager _Manager_k__BackingField; // 0x10
 	
 		// Properties
-		public MagicaPhysicsManager Manager { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public MagicaPhysicsManager Manager { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		protected PhysicsManagerWorker(); // 0x00000001841E1670-0x00000001841E1680
+		protected PhysicsManagerWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		protected virtual void Start(); // 0x00000001841E1670-0x00000001841E1680
-		public void Init(MagicaPhysicsManager manager); // 0x0000000183B93E90-0x0000000183B93EC0
+		protected virtual void Start(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void Init(MagicaPhysicsManager manager); // 0x0000000185D97170-0x0000000185D971A0
 		public abstract void Create();
 		public abstract void RemoveGroup(int group);
 		public abstract void Release();
@@ -4948,7 +4945,7 @@ namespace MagicaCloth
 		public abstract JobHandle PostUpdate(JobHandle jobHandle);
 	}
 
-	public abstract class ColliderComponent : ParticleComponent // TypeDefIndex: 55153
+	public abstract class ColliderComponent : ParticleComponent // TypeDefIndex: 82200
 	{
 		// Fields
 		[SerializeField]
@@ -4957,26 +4954,26 @@ namespace MagicaCloth
 		private Vector3 center; // 0x2C
 	
 		// Properties
-		public Vector3 Center { get; set; } // 0x0000000184D90540-0x0000000184D90560 0x0000000189F25B5C-0x0000000189F25B74
+		public Vector3 Center { get; set; } // 0x0000000187233AD0-0x0000000187233AF0 0x000000018C34ECD4-0x000000018C34ECEC
 	
 		// Constructors
-		protected ColliderComponent(); // 0x00000001853982BC-0x00000001853982C4
+		protected ColliderComponent(); // 0x0000000186AC0130-0x0000000186AC0140
 	
 		// Methods
-		protected override void OnInit(); // 0x0000000184D84ED0-0x0000000184D84EF0
-		protected override void OnDispose(); // 0x0000000189F25834-0x0000000189F25A70
-		public override int GetDataHash(); // 0x0000000189F257E8-0x0000000189F25834
+		protected override void OnInit(); // 0x0000000186D440C0-0x0000000186D440E0
+		protected override void OnDispose(); // 0x00000001853CB4C0-0x00000001853CB980
+		public override int GetDataHash(); // 0x000000018C34EC88-0x000000018C34ECD4
 		public abstract bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning);
-		public Vector3 CalcLocalPos(Vector3 pos); // 0x0000000189F2564C-0x0000000189F2575C
-		public Vector3 CalcLocalDir(Vector3 dir); // 0x0000000189F255E0-0x0000000189F2564C
-		public ChunkData CreateColliderParticle(int teamId); // 0x0000000189F2575C-0x0000000189F257E8
-		public void RemoveColliderParticle(int teamId); // 0x0000000189F25A70-0x0000000189F25B5C
+		public Vector3 CalcLocalPos(Vector3 pos); // 0x000000018C34EB78-0x000000018C34EC88
+		public Vector3 CalcLocalDir(Vector3 dir); // 0x000000018C34EB0C-0x000000018C34EB78
+		public ChunkData CreateColliderParticle(int teamId); // 0x00000001853CC000-0x00000001853CC090
+		public void RemoveColliderParticle(int teamId); // 0x00000001853CCF40-0x00000001853CD030
 		protected abstract ChunkData CreateColliderParticleReal(int teamId);
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaCapsuleCollider")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-capsule-collider/")]
-	public class MagicaCapsuleCollider : ColliderComponent // TypeDefIndex: 55155
+	public class MagicaCapsuleCollider : ColliderComponent // TypeDefIndex: 82202
 	{
 		// Fields
 		[SerializeField]
@@ -4992,13 +4989,13 @@ namespace MagicaCloth
 		private float endRadius; // 0x44
 	
 		// Properties
-		public Axis AxisMode { get; set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000189F2859C-0x0000000189F285A8
-		public float Length { get; set; } // 0x0000000184D863E0-0x0000000184D863F0 0x0000000189F285B4-0x0000000189F285C0
-		public float StartRadius { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000189F285C0-0x0000000189F285CC
-		public float EndRadius { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000189F285A8-0x0000000189F285B4
+		public Axis AxisMode { get; set; } // 0x00000001829600C0-0x00000001829600D0 0x000000018C350FF0-0x000000018C350FFC
+		public float Length { get; set; } // 0x00000001872330B0-0x00000001872330C0 0x000000018C351008-0x000000018C351014
+		public float StartRadius { get; set; } // 0x00000001872330C0-0x00000001872330D0 0x000000018C351014-0x000000018C351020
+		public float EndRadius { get; set; } // 0x00000001872330D0-0x00000001872330E0 0x000000018C350FFC-0x000000018C351008
 	
 		// Nested types
-		public enum Axis // TypeDefIndex: 55154
+		public enum Axis // TypeDefIndex: 82201
 		{
 			X = 0,
 			Y = 1,
@@ -5006,39 +5003,39 @@ namespace MagicaCloth
 		}
 	
 		// Constructors
-		public MagicaCapsuleCollider(); // 0x0000000184D778B0-0x0000000184D778D0
+		public MagicaCapsuleCollider(); // 0x0000000186AC0140-0x0000000186AC0210
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA36C0-0x0000000184DA36D0
-		private void OnValidate(); // 0x0000000189F28570-0x0000000189F2859C
-		internal override void DataUpdate(); // 0x0000000189F28040-0x0000000189F28370
-		public override int GetDataHash(); // 0x0000000189F28390-0x0000000189F28494
-		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x0000000189F27F0C-0x0000000189F28040
-		private uint GetCapsuleFlag(); // 0x0000000189F28370-0x0000000189F28390
-		public Vector3 GetLocalDir(); // 0x0000000189F28494-0x0000000189F284D8
-		public Vector3 GetLocalUp(); // 0x0000000189F284D8-0x0000000189F28514
-		public float GetScale(); // 0x0000000189F28514-0x0000000189F28570
-		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x0000000189F27790-0x0000000189F27F0C
+		public override ComponentType GetComponentType(); // 0x000000018723AE30-0x000000018723AE40
+		private void OnValidate(); // 0x000000018C350FC4-0x000000018C350FF0
+		internal override void DataUpdate(); // 0x000000018C350AB0-0x000000018C350DE4
+		public override int GetDataHash(); // 0x000000018C350DE4-0x000000018C350EE8
+		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x00000001853CB0E0-0x00000001853CB1E0
+		private uint GetCapsuleFlag(); // 0x00000001853CB1E0-0x00000001853CB200
+		public Vector3 GetLocalDir(); // 0x000000018C350EE8-0x000000018C350F2C
+		public Vector3 GetLocalUp(); // 0x000000018C350F2C-0x000000018C350F68
+		public float GetScale(); // 0x000000018C350F68-0x000000018C350FC4
+		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x000000018C350334-0x000000018C350AB0
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaPlaneCollider")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-plane-collider/")]
-	public class MagicaPlaneCollider : ColliderComponent // TypeDefIndex: 55156
+	public class MagicaPlaneCollider : ColliderComponent // TypeDefIndex: 82203
 	{
 		// Constructors
-		public MagicaPlaneCollider(); // 0x00000001853982BC-0x00000001853982C4
+		public MagicaPlaneCollider(); // 0x0000000186AC0130-0x0000000186AC0140
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184DA36D0-0x0000000184DA36E0
-		private void OnValidate(); // 0x0000000189F28570-0x0000000189F2859C
-		internal override void DataUpdate(); // 0x0000000189F288C4-0x0000000189F28A90
-		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x0000000189F28798-0x0000000189F288C4
-		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x0000000189F285CC-0x0000000189F28798
+		public override ComponentType GetComponentType(); // 0x000000018723AE50-0x000000018723AE60
+		private void OnValidate(); // 0x000000018C350FC4-0x000000018C350FF0
+		internal override void DataUpdate(); // 0x000000018C3511EC-0x000000018C3513C8
+		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x0000000186D480B0-0x0000000186D481C0
+		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x000000018C351020-0x000000018C3511EC
 	}
 
 	[AddComponentMenu("MagicaCloth/MagicaSphereCollider")]
 	[HelpURL("https://magicasoft.jp/magica-cloth-sphere-collider/")]
-	public class MagicaSphereCollider : ColliderComponent // TypeDefIndex: 55157
+	public class MagicaSphereCollider : ColliderComponent // TypeDefIndex: 82204
 	{
 		// Fields
 		[Range(0.001f, 0.5f)]
@@ -5046,66 +5043,66 @@ namespace MagicaCloth
 		private float radius; // 0x38
 	
 		// Properties
-		public float Radius { get; set; } // 0x0000000184D88360-0x0000000184D88370 0x0000000189F29054-0x0000000189F29060
+		public float Radius { get; set; } // 0x0000000187235380-0x0000000187235390 0x000000018C351964-0x000000018C351970
 	
 		// Constructors
-		public MagicaSphereCollider(); // 0x0000000189F29044-0x0000000189F29054
+		public MagicaSphereCollider(); // 0x000000018C351954-0x000000018C351964
 	
 		// Methods
-		public override ComponentType GetComponentType(); // 0x0000000184D91C30-0x0000000184D91C40
-		private void OnValidate(); // 0x0000000189F28570-0x0000000189F2859C
-		internal override void DataUpdate(); // 0x0000000189F28D70-0x0000000189F28FAC
-		public override int GetDataHash(); // 0x0000000189F28FAC-0x0000000189F29014
-		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x0000000189F28C48-0x0000000189F28D70
-		public float GetScale(); // 0x0000000189F29014-0x0000000189F29044
-		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x0000000189F28A90-0x0000000189F28C48
+		public override ComponentType GetComponentType(); // 0x000000018723AE10-0x000000018723AE20
+		private void OnValidate(); // 0x000000018C350FC4-0x000000018C350FF0
+		internal override void DataUpdate(); // 0x000000018C3516AC-0x000000018C3518EC
+		public override int GetDataHash(); // 0x000000018C3518EC-0x000000018C351954
+		protected override ChunkData CreateColliderParticleReal(int teamId); // 0x000000018C351580-0x000000018C3516AC
+		public float GetScale(); // 0x00000001889D4FA8-0x00000001889D4FD8
+		public override bool CalcNearPoint(Vector3 pos, out Vector3 p, out Vector3 dir, out Vector3 d, bool skinning); // 0x000000018C3513C8-0x000000018C351580
 	}
 
-	public abstract class ParticleComponent : BaseComponent, IDataHash // TypeDefIndex: 55158
+	public abstract class ParticleComponent : BaseComponent, IDataHash // TypeDefIndex: 82205
 	{
 		// Fields
 		protected Dictionary<int, ChunkData> particleDict; // 0x18
 		protected RuntimeStatus status; // 0x20
 	
 		// Properties
-		public RuntimeStatus Status { get; } // 0x0000000184D862C0-0x0000000184D862D0 
-		public int CenterParticleIndex { get; } // 0x0000000189F2A33C-0x0000000189F2A3B4 
+		public RuntimeStatus Status { get; } // 0x000000018225E800-0x000000018225E810 
+		public int CenterParticleIndex { get; } // 0x000000018C351CB4-0x000000018C351D2C 
 	
 		// Constructors
-		protected ParticleComponent(); // 0x00000001849E11B0-0x00000001849E1240
+		protected ParticleComponent(); // 0x00000001855E0620-0x00000001855E06C0
 	
 		// Methods
 		public abstract int GetDataHash();
-		protected virtual void Start(); // 0x00000001847FE3A0-0x00000001847FE3B0
-		public virtual void OnEnable(); // 0x00000001847FE350-0x00000001847FE380
-		public virtual void OnDisable(); // 0x0000000189EE648C-0x0000000189EE64C4
-		protected virtual void OnDestroy(); // 0x0000000189F29F90-0x0000000189F29FC0
-		private void Init(); // 0x00000001847FE3B0-0x00000001847FE4C0
-		protected void OnUpdateStatus(); // 0x0000000184D396C0-0x0000000184D39700
-		public virtual bool VerifyData(); // 0x0000000182FFF600-0x0000000182FFF610
-		protected virtual void OnInit(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnDispose(); // 0x0000000189F29FC0-0x0000000189F29FF0
-		protected virtual void OnUpdate(); // 0x00000001841E1670-0x00000001841E1680
-		protected virtual void OnActive(); // 0x000000018539824C-0x0000000185398254
-		protected virtual void OnInactive(); // 0x0000000189F29FF0-0x0000000189F29FF8
-		protected void EnableParticle(); // 0x0000000184CA5CE0-0x0000000184CA5E40
-		protected void DisableParticle(); // 0x0000000189F29C18-0x0000000189F29D20
-		protected void EnableTeamParticle(int teamId); // 0x0000000189F29E58-0x0000000189F29F90
-		protected void DisableTeamParticle(int teamId); // 0x0000000189F29D20-0x0000000189F29E58
-		protected void ReserveDataUpdate(); // 0x0000000189F2A1D8-0x0000000189F2A254
-		internal virtual void DataUpdate(); // 0x00000001841E1670-0x00000001841E1680
-		internal void UpdateStatus(); // 0x0000000189F2A254-0x0000000189F2A274
-		protected ChunkData CreateParticle(uint flag, int teamId, float depth, float3 radius, float3 localPos); // 0x0000000189F299E8-0x0000000189F29C18
-		protected void RemoveTeamParticle(int teamId); // 0x0000000189F2A128-0x0000000189F2A1D8
-		protected void RemoveParticle(); // 0x0000000189F29FF8-0x0000000189F2A128
-		protected Transform UserTransform(int vindex); // 0x00000001853953F4-0x00000001853953FC
-		protected float3 UserTransformLocalPosition(int vindex); // 0x0000000189F2A274-0x0000000189F2A2E0
-		protected quaternion UserTransformLocalRotation(int vindex); // 0x0000000189F2A2E0-0x0000000189F2A33C
+		protected virtual void Start(); // 0x00000001853CAC10-0x00000001853CAC20
+		public virtual void OnEnable(); // 0x00000001853CB200-0x00000001853CB230
+		public virtual void OnDisable(); // 0x00000001853CB230-0x00000001853CB260
+		protected virtual void OnDestroy(); // 0x0000000186AFE6A0-0x0000000186AFE6D0
+		private void Init(); // 0x00000001853CAC20-0x00000001853CAD30
+		protected void OnUpdateStatus(); // 0x00000001853CCBC0-0x00000001853CCC00
+		public virtual bool VerifyData(); // 0x00000001851A4410-0x00000001851A4420
+		protected virtual void OnInit(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnDispose(); // 0x00000001853CAD40-0x00000001853CAD70
+		protected virtual void OnUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected virtual void OnActive(); // 0x000000018C351B60-0x000000018C351B68
+		protected virtual void OnInactive(); // 0x000000018C351B68-0x000000018C351B70
+		protected void EnableParticle(); // 0x00000001853CAD70-0x00000001853CAEE0
+		protected void DisableParticle(); // 0x00000001853CB980-0x00000001853CBB00
+		protected void EnableTeamParticle(int teamId); // 0x00000001853CD030-0x00000001853CD170
+		protected void DisableTeamParticle(int teamId); // 0x00000001853CDAE0-0x00000001853CDC20
+		protected void ReserveDataUpdate(); // 0x000000018C351B70-0x000000018C351BEC
+		internal virtual void DataUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		internal void UpdateStatus(); // 0x00000001853CCC20-0x00000001853CCC40
+		protected ChunkData CreateParticle(uint flag, int teamId, float depth, float3 radius, float3 localPos); // 0x00000001853CCCE0-0x00000001853CCF40
+		protected void RemoveTeamParticle(int teamId); // 0x00000001853CD170-0x00000001853CD220
+		protected void RemoveParticle(); // 0x00000001853CAEE0-0x00000001853CB0E0
+		protected Transform UserTransform(int vindex); // 0x0000000186EB8B50-0x0000000186EB8B60
+		protected float3 UserTransformLocalPosition(int vindex); // 0x000000018C351BEC-0x000000018C351C58
+		protected quaternion UserTransformLocalRotation(int vindex); // 0x000000018C351C58-0x000000018C351CB4
 		[CompilerGenerated]
-		private object _Init_b__11_0(); // 0x000000018464E630-0x000000018464E640
+		private object _Init_b__11_0(); // 0x0000000185BD80B0-0x0000000185BD80C0
 	}
 
-	public abstract class PhysicsTeam : CoreComponent // TypeDefIndex: 55162
+	public abstract class PhysicsTeam : CoreComponent // TypeDefIndex: 82209
 	{
 		// Fields
 		[SerializeField]
@@ -5129,60 +5126,60 @@ namespace MagicaCloth
 		protected Transform influenceTarget; // 0x70
 	
 		// Properties
-		public int TeamId { get; } // 0x0000000184D86560-0x0000000184D86570 
-		public PhysicsTeamData TeamData { get; } // 0x0000000184D85A50-0x0000000184D85A60 
-		public ChunkData ParticleChunk { get; } // 0x0000000184DA1280-0x0000000184DA1290 
-		public Transform InfluenceTarget { get; set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
-		public float UserBlendWeight { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000189EC1054-0x0000000189EC106C
-		public float UserPhysicsBlendWeight { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000189F2FBE0-0x0000000189F2FBF8
-		public bool SyncBlendWeightToPoseBlendWeight { get; set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
-		public float UserCloseThreshold { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000189F2FBC8-0x0000000189F2FBE0
-		public TeamUpdateMode UpdateMode { get; protected set; } // 0x0000000184D86550-0x0000000184D86560 0x0000000184D865A0-0x0000000184D865B0
-		public TeamCullingMode CullingMode { get; set; } // 0x0000000184D86540-0x0000000184D86550 0x0000000184D86590-0x0000000184D865A0
-		public TeamSkinningMode SkinningMode { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000184D865D0-0x0000000184D865E0
-		internal bool UseAnimatedPose { get; } // 0x0000000189F2FBC0-0x0000000189F2FBC8 
+		public int TeamId { get; } // 0x0000000187233600-0x0000000187233610 
+		public PhysicsTeamData TeamData { get; } // 0x0000000182986470-0x0000000182986480 
+		public ChunkData ParticleChunk { get; } // 0x000000018724F4E0-0x000000018724F4F0 
+		public Transform InfluenceTarget { get; set; } // 0x0000000187232FC0-0x0000000187232FD0 0x0000000188800CD0-0x0000000188800CE0
+		public float UserBlendWeight { get; set; } // 0x00000001872330C0-0x00000001872330D0 0x0000000187839DAC-0x0000000187839DC4
+		public float UserPhysicsBlendWeight { get; set; } // 0x00000001872330D0-0x00000001872330E0 0x000000018C354D1C-0x000000018C354D34
+		public bool SyncBlendWeightToPoseBlendWeight { get; set; } // 0x000000018223CB60-0x000000018223CB70 0x000000018223CB70-0x000000018223CB80
+		public float UserCloseThreshold { get; set; } // 0x0000000187234790-0x00000001872347A0 0x000000018C354D04-0x000000018C354D1C
+		public TeamUpdateMode UpdateMode { get; protected set; } // 0x0000000187233280-0x0000000187233290 0x00000001854CCF30-0x00000001854CCF40
+		public TeamCullingMode CullingMode { get; set; } // 0x00000001872336F0-0x0000000187233700 0x0000000187233700-0x0000000187233710
+		public TeamSkinningMode SkinningMode { get; set; } // 0x00000001872331A0-0x00000001872331B0 0x0000000185B8E8A0-0x0000000185B8EB10
+		internal bool UseAnimatedPose { get; } // 0x00000001853C9D10-0x00000001853C9D20 
 	
 		// Nested types
-		public enum TeamUpdateMode // TypeDefIndex: 55159
+		public enum TeamUpdateMode // TypeDefIndex: 82206
 		{
 			Normal = 0,
 			UnityPhysics = 1
 		}
 	
-		public enum TeamCullingMode // TypeDefIndex: 55160
+		public enum TeamCullingMode // TypeDefIndex: 82207
 		{
 			Reset = 0,
 			Pause = 10,
 			Off = 100
 		}
 	
-		public enum TeamSkinningMode // TypeDefIndex: 55161
+		public enum TeamSkinningMode // TypeDefIndex: 82208
 		{
 			None = 0,
 			UserAnimation = 1
 		}
 	
 		// Constructors
-		protected PhysicsTeam(); // 0x0000000189F2FB4C-0x0000000189F2FBC0
+		protected PhysicsTeam(); // 0x00000001855E0530-0x00000001855E05B0
 	
 		// Methods
-		public override int GetDataHash(); // 0x0000000189F2F85C-0x0000000189F2F87C
-		protected override void OnInit(); // 0x0000000189F2FA88-0x0000000189F2FAE4
-		protected override void OnDispose(); // 0x0000000189F2F9C0-0x0000000189F2FA30
-		protected override void OnUpdate(); // 0x00000001841E1670-0x00000001841E1680
-		protected override void OnActive(); // 0x0000000189F2F978-0x0000000189F2F9C0
-		protected override void OnInactive(); // 0x0000000189F2FA30-0x0000000189F2FA88
-		public bool IsActive(); // 0x0000000189F2F87C-0x0000000189F2F8FC
-		public bool IsValid(); // 0x0000000189F2F8FC-0x0000000189F2F978
-		public ChunkData CreateParticle(int team, int count, Func<int, uint> funcFlag, Func<int, float3> funcWpos, Func<int, quaternion> funcWrot, Func<int, float> funcDepth, Func<int, float3> funcRadius, Func<int, float3> funcTargetLocalPos); // 0x0000000189F2F65C-0x0000000189F2F73C
-		public void RemoveAllParticle(); // 0x0000000189F2FAE4-0x0000000189F2FB44
-		public void EnableParticle(Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x0000000189F2F7D4-0x0000000189F2F85C
-		public void DisableParticle(Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x0000000189F2F73C-0x0000000189F2F7D4
-		public override Define.Error VerifyData(); // 0x0000000189F2FB44-0x0000000189F2FB4C
+		public override int GetDataHash(); // 0x000000018C354BE8-0x000000018C354C08
+		protected override void OnInit(); // 0x00000001853C8D00-0x00000001853C8D60
+		protected override void OnDispose(); // 0x0000000185D96C20-0x0000000185D96CA0
+		protected override void OnUpdate(); // 0x0000000186805BA0-0x0000000186805BB0
+		protected override void OnActive(); // 0x00000001853CA4F0-0x00000001853CA540
+		protected override void OnInactive(); // 0x00000001853CA490-0x00000001853CA4F0
+		public bool IsActive(); // 0x000000018C354C08-0x000000018C354C88
+		public bool IsValid(); // 0x000000018C354C88-0x000000018C354D04
+		public ChunkData CreateParticle(int team, int count, Func<int, uint> funcFlag, Func<int, float3> funcWpos, Func<int, quaternion> funcWrot, Func<int, float> funcDepth, Func<int, float3> funcRadius, Func<int, float3> funcTargetLocalPos); // 0x00000001852234C0-0x00000001852235B0
+		public void RemoveAllParticle(); // 0x0000000185D96DA0-0x0000000185D96E00
+		public void EnableParticle(Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x00000001853CA6D0-0x00000001853CA760
+		public void DisableParticle(Func<int, Transform> funcTarget, Func<int, float3> funcLpos, Func<int, quaternion> funcLrot); // 0x00000001853CA760-0x00000001853CA800
+		public override Define.Error VerifyData(); // 0x000000018783C578-0x000000018783C580
 	}
 
 	[Serializable]
-	public class PhysicsTeamData : IDataHash // TypeDefIndex: 55163
+	public class PhysicsTeamData : IDataHash // TypeDefIndex: 82210
 	{
 		// Fields
 		[SerializeField]
@@ -5194,38 +5191,38 @@ namespace MagicaCloth
 		private List<ColliderComponent> addColliderList; // 0x28
 	
 		// Properties
-		public int ColliderCount { get; } // 0x0000000189F2F61C-0x0000000189F2F65C 
-		public List<ColliderComponent> ColliderList { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
-		public List<ColliderComponent> PenetrationIgnoreColliderList { get; } // 0x000000018385B100-0x000000018385B110 
-		public bool MergeAvatarCollider { get; } // 0x0000000184D866B0-0x0000000184D866C0 
+		public int ColliderCount { get; } // 0x000000018C354BA8-0x000000018C354BE8 
+		public List<ColliderComponent> ColliderList { get; } // 0x00000001829260F0-0x0000000182926100 
+		public List<ColliderComponent> PenetrationIgnoreColliderList { get; } // 0x0000000182234E30-0x0000000182234E40 
+		public bool MergeAvatarCollider { get; } // 0x0000000182246E50-0x0000000182246E60 
 	
 		// Constructors
-		public PhysicsTeamData(); // 0x0000000189F2F564-0x0000000189F2F61C
+		public PhysicsTeamData(); // 0x00000001855E0750-0x00000001855E0810
 	
 		// Methods
-		public int GetDataHash(); // 0x0000000189F2F1D8-0x0000000189F2F214
-		public void Init(int teamId); // 0x0000000189F2F214-0x0000000189F2F31C
-		public void Dispose(int teamId); // 0x0000000189F2EFA4-0x0000000189F2F1D8
-		public void AddCollider(ColliderComponent collider); // 0x0000000189F2EF00-0x0000000189F2EFA4
-		public void RemoveCollider(ColliderComponent collider); // 0x0000000189F2F31C-0x0000000189F2F434
-		internal void UpdateStatus(); // 0x0000000189F2F434-0x0000000189F2F528
-		public void ValidateColliderList(); // 0x0000000189F2F528-0x0000000189F2F564
+		public int GetDataHash(); // 0x000000018C354A18-0x000000018C354A54
+		public void Init(int teamId); // 0x00000001853CBC10-0x00000001853CBD90
+		public void Dispose(int teamId); // 0x00000001853CBD90-0x00000001853CC000
+		public void AddCollider(ColliderComponent collider); // 0x000000018C354974-0x000000018C354A18
+		public void RemoveCollider(ColliderComponent collider); // 0x000000018C354A54-0x000000018C354B6C
+		internal void UpdateStatus(); // 0x00000001853CBB00-0x00000001853CBC10
+		public void ValidateColliderList(); // 0x000000018C354B6C-0x000000018C354BA8
 	}
 
-	public class AdjustRotationWorker : PhysicsManagerWorker // TypeDefIndex: 55167
+	public class AdjustRotationWorker : PhysicsManagerWorker // TypeDefIndex: 82214
 	{
 		// Fields
-		private const int AdjustMode_Fixed = 0; // Metadata: 0x02346B12
-		private const int AdjustMode_XYMove = 1; // Metadata: 0x02346B13
-		private const int AdjustMode_XZMove = 2; // Metadata: 0x02346B14
-		private const int AdjustMode_YZMove = 3; // Metadata: 0x02346B15
+		private const int AdjustMode_Fixed = 0; // Metadata: 0x02640BAE
+		private const int AdjustMode_XYMove = 1; // Metadata: 0x02640BAF
+		private const int AdjustMode_XZMove = 2; // Metadata: 0x02640BB0
+		private const int AdjustMode_YZMove = 3; // Metadata: 0x02640BB1
 		private FixedChunkNativeArray<AdjustRotationData> dataList; // 0x18
 		public FixedNativeList<GroupData> groupList; // 0x20
 		private ExNativeMultiHashMap<int, int> particleMap; // 0x28
 	
 		// Nested types
 		[Serializable]
-		public struct AdjustRotationData // TypeDefIndex: 55164
+		public struct AdjustRotationData // TypeDefIndex: 82211
 		{
 			// Fields
 			public int keyIndex; // 0x00
@@ -5233,10 +5230,10 @@ namespace MagicaCloth
 			public float3 localPos; // 0x08
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F228AC-0x0000000189F228BC
+			public bool IsValid(); // 0x000000018C34C804-0x000000018C34C814
 		}
 	
-		public struct GroupData // TypeDefIndex: 55165
+		public struct GroupData // TypeDefIndex: 82212
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -5247,7 +5244,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct AdjustRotationJob : IJobParallelFor // TypeDefIndex: 55166
+		private struct AdjustRotationJob : IJobParallelFor // TypeDefIndex: 82213
 		{
 			// Fields
 			[ReadOnly]
@@ -5272,24 +5269,24 @@ namespace MagicaCloth
 			public NativeArray<quaternion> rotList; // 0x90
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F228BC-0x0000000189F22D08
+			public void Execute(int index); // 0x000000018C34C814-0x000000018C34CC60
 		}
 	
 		// Constructors
-		public AdjustRotationWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public AdjustRotationWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x0000000183E87400-0x0000000183E87510
-		public override void Release(); // 0x0000000189F2340C-0x0000000189F23494
-		public int AddGroup(int teamId, bool active, int adjustMode, float3 axisRotationPower, AdjustRotationData[] dataArray); // 0x0000000189F22D08-0x0000000189F22F94
-		public override void RemoveGroup(int teamId); // 0x0000000189F23494-0x0000000189F2371C
-		public void ChangeParam(int teamId, bool active, int adjustMode, float3 axisRotationPower); // 0x0000000189F22F94-0x0000000189F23128
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F23128-0x0000000189F2340C
+		public override void Create(); // 0x0000000186D45E00-0x0000000186D45F10
+		public override void Release(); // 0x000000018C34D08C-0x000000018C34D114
+		public int AddGroup(int teamId, bool active, int adjustMode, float3 axisRotationPower, AdjustRotationData[] dataArray); // 0x000000018C34CC60-0x000000018C34CEF8
+		public override void RemoveGroup(int teamId); // 0x000000018679B3B0-0x000000018679B4B0
+		public void ChangeParam(int teamId, bool active, int adjustMode, float3 axisRotationPower); // 0x000000018C34CEF8-0x000000018C34D08C
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D320-0x000000018603D380
 	}
 
-	public class BaseSkinningWorker : PhysicsManagerWorker // TypeDefIndex: 55171
+	public class BaseSkinningWorker : PhysicsManagerWorker // TypeDefIndex: 82218
 	{
 		// Fields
 		private FixedChunkNativeArray<BaseSkinningData> dataList; // 0x18
@@ -5298,7 +5295,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct BaseSkinningData // TypeDefIndex: 55168
+		public struct BaseSkinningData // TypeDefIndex: 82215
 		{
 			// Fields
 			public float3 localPos; // 0x00
@@ -5309,10 +5306,10 @@ namespace MagicaCloth
 			public short weightCount; // 0x44
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F2371C-0x0000000189F23728
+			public bool IsValid(); // 0x000000018C34D114-0x000000018C34D120
 		}
 	
-		public struct GroupData // TypeDefIndex: 55169
+		public struct GroupData // TypeDefIndex: 82216
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -5323,7 +5320,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct BaseSkinningJob : IJobParallelFor // TypeDefIndex: 55170
+		private struct BaseSkinningJob : IJobParallelFor // TypeDefIndex: 82217
 		{
 			// Fields
 			[ReadOnly]
@@ -5352,24 +5349,24 @@ namespace MagicaCloth
 			public NativeArray<quaternion> snapBaseRotList; // 0xB0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F23728-0x0000000189F240F4
+			public void Execute(int index); // 0x000000018C34D120-0x000000018C34DAF4
 		}
 	
 		// Constructors
-		public BaseSkinningWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public BaseSkinningWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x0000000184B4E220-0x0000000184B4E330
-		public override void Release(); // 0x0000000189F24784-0x0000000189F2480C
-		public int AddGroup(int teamId, bool active, bool updateFixed, BaseSkinningData[] skinningDataList, float4x4[] skinningBindPoseList); // 0x0000000189F240F4-0x0000000189F242D8
-		public override void RemoveGroup(int teamId); // 0x0000000189F2480C-0x0000000189F24994
-		public void ChangeParam(int teamId, bool updateFixed); // 0x0000000189F242D8-0x0000000189F24430
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000189F24430-0x0000000189F24784
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
+		public override void Create(); // 0x0000000186FCBAC0-0x0000000186FCBBD0
+		public override void Release(); // 0x000000018C34DE30-0x000000018C34DEB8
+		public int AddGroup(int teamId, bool active, bool updateFixed, BaseSkinningData[] skinningDataList, float4x4[] skinningBindPoseList); // 0x000000018C34DAF4-0x000000018C34DCD8
+		public override void RemoveGroup(int teamId); // 0x000000018688C9E0-0x000000018688CAC0
+		public void ChangeParam(int teamId, bool updateFixed); // 0x000000018C34DCD8-0x000000018C34DE30
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x000000018603D2C0-0x000000018603D320
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
 	}
 
-	public class LineWorker : PhysicsManagerWorker // TypeDefIndex: 55176
+	public class LineWorker : PhysicsManagerWorker // TypeDefIndex: 82223
 	{
 		// Fields
 		private FixedChunkNativeArray<LineRotationData> dataList; // 0x18
@@ -5379,7 +5376,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct LineRotationData // TypeDefIndex: 55172
+		public struct LineRotationData // TypeDefIndex: 82219
 		{
 			// Fields
 			public int vertexIndex; // 0x00
@@ -5390,14 +5387,14 @@ namespace MagicaCloth
 		}
 	
 		[Serializable]
-		public struct LineRotationRootInfo // TypeDefIndex: 55173
+		public struct LineRotationRootInfo // TypeDefIndex: 82220
 		{
 			// Fields
 			public ushort startIndex; // 0x00
 			public ushort dataLength; // 0x02
 		}
 	
-		public struct GroupData // TypeDefIndex: 55174
+		public struct GroupData // TypeDefIndex: 82221
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -5407,7 +5404,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct LineRotationJob : IJobParallelFor // TypeDefIndex: 55175
+		private struct LineRotationJob : IJobParallelFor // TypeDefIndex: 82222
 		{
 			// Fields
 			public int fixedUpdateCount; // 0x00
@@ -5429,24 +5426,24 @@ namespace MagicaCloth
 			public NativeArray<quaternion> rotList; // 0x78
 	
 			// Methods
-			public void Execute(int rootIndex); // 0x0000000189F267FC-0x0000000189F26FA0
+			public void Execute(int rootIndex); // 0x000000018C34F980-0x000000018C35012C
 		}
 	
 		// Constructors
-		public LineWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public LineWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x000000018442EBF0-0x000000018442ED50
-		public override void Release(); // 0x0000000189F27548-0x0000000189F275F0
-		public int AddGroup(int teamId, bool avarage, LineRotationData[] dataArray, LineRotationRootInfo[] rootInfoArray); // 0x0000000189F26FA0-0x0000000189F27194
-		public override void RemoveGroup(int teamId); // 0x0000000189F275F0-0x0000000189F27790
-		public void ChangeParam(int teamId, bool avarage); // 0x0000000189F27194-0x0000000189F272F4
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F272F4-0x0000000189F27548
+		public override void Create(); // 0x0000000186935A90-0x0000000186935BF0
+		public override void Release(); // 0x000000018C35028C-0x000000018C350334
+		public int AddGroup(int teamId, bool avarage, LineRotationData[] dataArray, LineRotationRootInfo[] rootInfoArray); // 0x00000001852235B0-0x00000001852237F0
+		public override void RemoveGroup(int teamId); // 0x000000018670D3F0-0x000000018670D590
+		public void ChangeParam(int teamId, bool avarage); // 0x000000018C35012C-0x000000018C35028C
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D500-0x000000018603D770
 	}
 
-	public class MeshParticleWorker : PhysicsManagerWorker // TypeDefIndex: 55180
+	public class MeshParticleWorker : PhysicsManagerWorker // TypeDefIndex: 82227
 	{
 		// Fields
 		private ExNativeMultiHashMap<int, int> vertexToParticleMap; // 0x18
@@ -5454,7 +5451,7 @@ namespace MagicaCloth
 		private Dictionary<int, List<CreateData>> groupCreateDict; // 0x28
 	
 		// Nested types
-		private struct CreateData // TypeDefIndex: 55177
+		private struct CreateData // TypeDefIndex: 82224
 		{
 			// Fields
 			public int vertexIndex; // 0x00
@@ -5462,7 +5459,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct VertexToParticleJob : IJobParallelFor // TypeDefIndex: 55178
+		private struct VertexToParticleJob : IJobParallelFor // TypeDefIndex: 82225
 		{
 			// Fields
 			[ReadOnly]
@@ -5486,11 +5483,11 @@ namespace MagicaCloth
 			private NativeParallelMultiHashMapIterator<int> iterator; // 0x80
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F352D0-0x0000000189F35448
+			public void Execute(int index); // 0x000000018C358D20-0x000000018C358E9C
 		}
 	
 		[BurstCompile]
-		private struct ParticleToVertexJob : IJobParallelFor // TypeDefIndex: 55179
+		private struct ParticleToVertexJob : IJobParallelFor // TypeDefIndex: 82226
 		{
 			// Fields
 			[ReadOnly]
@@ -5523,27 +5520,27 @@ namespace MagicaCloth
 			private NativeParallelMultiHashMapIterator<int> iterator; // 0xC0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F2A404-0x0000000189F2A838
+			public void Execute(int index); // 0x000000018C351D50-0x000000018C352188
 		}
 	
 		// Constructors
-		public MeshParticleWorker(); // 0x0000000183B927E0-0x0000000183B92860
+		public MeshParticleWorker(); // 0x0000000185D974C0-0x0000000185D97540
 	
 		// Methods
-		public override void Create(); // 0x0000000183E87510-0x0000000183E875F0
-		public override void Release(); // 0x0000000189F297E8-0x0000000189F29850
-		public void Add(int group, int vindex, int pindex); // 0x0000000189F29060-0x0000000189F291E8
-		public override void RemoveGroup(int group); // 0x0000000189F29850-0x0000000189F299E8
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000189F29560-0x0000000189F297E8
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F291E8-0x0000000189F29560
+		public override void Create(); // 0x0000000186D45F10-0x0000000186D45FF0
+		public override void Release(); // 0x000000018C351AF8-0x000000018C351B60
+		public void Add(int group, int vindex, int pindex); // 0x000000018C351970-0x000000018C351AF8
+		public override void RemoveGroup(int group); // 0x0000000186A86940-0x0000000186A86AC0
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x000000018603D260-0x000000018603D2C0
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D200-0x000000018603D260
 	}
 
-	public class RenderMeshWorker : PhysicsManagerWorker // TypeDefIndex: 55184
+	public class RenderMeshWorker : PhysicsManagerWorker // TypeDefIndex: 82231
 	{
 		// Nested types
 		[BurstCompile]
-		private struct CalcVertexUseFlagJob : IJobParallelFor // TypeDefIndex: 55181
+		private struct CalcVertexUseFlagJob : IJobParallelFor // TypeDefIndex: 82228
 		{
 			// Fields
 			public uint updateFlag; // 0x00
@@ -5592,11 +5589,11 @@ namespace MagicaCloth
 			public NativeArray<float3> renderNormalArray; // 0x128
 	
 			// Methods
-			public void Execute(int rmindex); // 0x0000000189F24994-0x0000000189F24F30
+			public void Execute(int rmindex); // 0x000000018C34DEB8-0x000000018C34E44C
 		}
 	
 		[BurstCompile]
-		private struct CollectLocalPositionNormalTangentForEachMeshJob : IJobParallelFor // TypeDefIndex: 55182
+		private struct CollectLocalPositionNormalTangentForEachMeshJob : IJobParallelFor // TypeDefIndex: 82229
 		{
 			// Fields
 			[ReadOnly]
@@ -5634,11 +5631,11 @@ namespace MagicaCloth
 			public NativeArray<float3> renderNormalArray; // 0xD0
 	
 			// Methods
-			public void Execute(int rmindex); // 0x0000000189F24F30-0x0000000189F2528C
+			public void Execute(int rmindex); // 0x000000018C34E44C-0x000000018C34E7B0
 		}
 	
 		[BurstCompile]
-		private struct CollectLocalPositionNormalTangentForEachVertexJob : IJobParallelFor // TypeDefIndex: 55183
+		private struct CollectLocalPositionNormalTangentForEachVertexJob : IJobParallelFor // TypeDefIndex: 82230
 		{
 			// Fields
 			[ReadOnly]
@@ -5676,24 +5673,24 @@ namespace MagicaCloth
 			public NativeArray<float3> renderNormalArray; // 0xD0
 	
 			// Methods
-			public void Execute(int vindex); // 0x0000000189F2528C-0x0000000189F255E0
+			public void Execute(int vindex); // 0x000000018C34E7B0-0x000000018C34EB0C
 		}
 	
 		// Constructors
-		public RenderMeshWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public RenderMeshWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x00000001841E1670-0x00000001841E1680
-		public override void Release(); // 0x00000001841E1670-0x00000001841E1680
-		public override void RemoveGroup(int group); // 0x00000001841E1670-0x00000001841E1680
-		private bool IsPerformMeshProcessForEachParticle(); // 0x0000000189F328E8-0x0000000189F32970
-		public override void Warmup(); // 0x0000000189F331C0-0x0000000189F337CC
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F32970-0x0000000189F331C0
-		private static void CollectionVertex([IsReadOnly] in PhysicsManagerMeshData.RenderMeshInfo r_minfo, [IsReadOnly] in NativeArray<uint> sharedChildVertexInfoList, [IsReadOnly] in NativeArray<MeshData.VertexWeight> sharedChildVertexWeightList, [IsReadOnly] in NativeArray<float3> virtualPosList, [IsReadOnly] in NativeArray<quaternion> virtualRotList, [IsReadOnly] in float3 tpos, [IsReadOnly] in quaternion trot, [IsReadOnly] in float3 tscl, [IsReadOnly] in quaternion itrot, float scaleRatio, [IsReadOnly] in float3 scaleDirection, bool calcNormal, bool calcTangent, int vindex, int i, uint flag, bool isFasterWrite, ref NativeArray<float3> renderPosList, ref NativeArray<float3> renderNormalList, ref NativeArray<float3> renderPosArray, ref NativeArray<float3> renderNomalArray, ref NativeArray<float4> renderTangentList); // 0x0000000189F31370-0x0000000189F328E8
+		public override void Create(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Release(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void RemoveGroup(int group); // 0x0000000186805BA0-0x0000000186805BB0
+		private bool IsPerformMeshProcessForEachParticle(); // 0x000000018C357A48-0x000000018C357AD0
+		public override void Warmup(); // 0x000000018603D0C0-0x000000018603D140
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D470-0x000000018603D500
+		private static void CollectionVertex([IsReadOnly] in PhysicsManagerMeshData.RenderMeshInfo r_minfo, [IsReadOnly] in NativeArray<uint> sharedChildVertexInfoList, [IsReadOnly] in NativeArray<MeshData.VertexWeight> sharedChildVertexWeightList, [IsReadOnly] in NativeArray<float3> virtualPosList, [IsReadOnly] in NativeArray<quaternion> virtualRotList, [IsReadOnly] in float3 tpos, [IsReadOnly] in quaternion trot, [IsReadOnly] in float3 tscl, [IsReadOnly] in quaternion itrot, float scaleRatio, [IsReadOnly] in float3 scaleDirection, bool calcNormal, bool calcTangent, int vindex, int i, uint flag, bool isFasterWrite, ref NativeArray<float3> renderPosList, ref NativeArray<float3> renderNormalList, ref NativeArray<float3> renderPosArray, ref NativeArray<float3> renderNomalArray, ref NativeArray<float4> renderTangentList); // 0x000000018C3564DC-0x000000018C357A48
 	}
 
-	public class SpringMeshWorker : PhysicsManagerWorker // TypeDefIndex: 55187
+	public class SpringMeshWorker : PhysicsManagerWorker // TypeDefIndex: 82234
 	{
 		// Fields
 		private ExNativeMultiHashMap<int, SpringData> springMap; // 0x18
@@ -5701,7 +5698,7 @@ namespace MagicaCloth
 		private Dictionary<int, List<int>> groupIndexDict; // 0x28
 	
 		// Nested types
-		public struct SpringData // TypeDefIndex: 55185
+		public struct SpringData // TypeDefIndex: 82232
 		{
 			// Fields
 			public int particleIndex; // 0x00
@@ -5709,7 +5706,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct SpringJob : IJobParallelFor // TypeDefIndex: 55186
+		private struct SpringJob : IJobParallelFor // TypeDefIndex: 82233
 		{
 			// Fields
 			[ReadOnly]
@@ -5738,23 +5735,23 @@ namespace MagicaCloth
 			private NativeParallelMultiHashMapIterator<int> iterator; // 0xB0
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F339B0-0x0000000189F33D6C
+			public void Execute(int index); // 0x000000018C357CB4-0x000000018C358074
 		}
 	
 		// Constructors
-		public SpringMeshWorker(); // 0x0000000183B92760-0x0000000183B927E0
+		public SpringMeshWorker(); // 0x00000001855DB800-0x00000001855DB880
 	
 		// Methods
-		public override void Create(); // 0x0000000183E875F0-0x0000000183E876D0
-		public override void Release(); // 0x0000000189F34230-0x0000000189F34298
-		public void Add(int group, int vertexIndex, int particleIndex, float weight); // 0x0000000189F33D6C-0x0000000189F33EFC
-		public override void RemoveGroup(int group); // 0x0000000189F34298-0x0000000189F34424
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F33EFC-0x0000000189F34230
+		public override void Create(); // 0x0000000186D45FF0-0x0000000186D460D0
+		public override void Release(); // 0x000000018C358204-0x000000018C35826C
+		public void Add(int group, int vertexIndex, int particleIndex, float weight); // 0x000000018C358074-0x000000018C358204
+		public override void RemoveGroup(int group); // 0x0000000186A86AC0-0x0000000186A86C30
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D1A0-0x000000018603D200
 	}
 
-	public class TriangleWorker : PhysicsManagerWorker // TypeDefIndex: 55191
+	public class TriangleWorker : PhysicsManagerWorker // TypeDefIndex: 82238
 	{
 		// Fields
 		private FixedChunkNativeArray<TriangleRotationData> triangleDataList; // 0x18
@@ -5763,7 +5760,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public struct TriangleRotationData // TypeDefIndex: 55188
+		public struct TriangleRotationData // TypeDefIndex: 82235
 		{
 			// Fields
 			public int targetIndex; // 0x00
@@ -5772,10 +5769,10 @@ namespace MagicaCloth
 			public quaternion localRot; // 0x0C
 	
 			// Methods
-			public bool IsValid(); // 0x0000000189F34490-0x0000000189F34498
+			public bool IsValid(); // 0x0000000185B1CEC0-0x0000000185B1CED0
 		}
 	
-		public struct GroupData // TypeDefIndex: 55189
+		public struct GroupData // TypeDefIndex: 82236
 		{
 			// Fields
 			public int teamId; // 0x00
@@ -5784,7 +5781,7 @@ namespace MagicaCloth
 		}
 	
 		[BurstCompile]
-		private struct TriangleRotationJob : IJobParallelFor // TypeDefIndex: 55190
+		private struct TriangleRotationJob : IJobParallelFor // TypeDefIndex: 82237
 		{
 			// Fields
 			[ReadOnly]
@@ -5805,27 +5802,27 @@ namespace MagicaCloth
 			public NativeArray<quaternion> rotList; // 0x70
 	
 			// Methods
-			public void Execute(int index); // 0x0000000189F34498-0x0000000189F34B74
+			public void Execute(int index); // 0x000000018C3582D8-0x000000018C3589B4
 		}
 	
 		// Constructors
-		public TriangleWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public TriangleWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x000000018442ED50-0x000000018442EE60
-		public override void Release(); // 0x0000000189F35018-0x0000000189F350A0
-		public int AddGroup(int teamId, TriangleRotationData[] dataArray, int[] indexArray); // 0x0000000189F34B74-0x0000000189F34D98
-		public override void RemoveGroup(int teamId); // 0x0000000189F350A0-0x0000000189F35210
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000184D9A8E0-0x0000000184D9A8F0
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F34D98-0x0000000189F35018
+		public override void Create(); // 0x0000000186935BF0-0x0000000186935D00
+		public override void Release(); // 0x000000018C358BD8-0x000000018C358C60
+		public int AddGroup(int teamId, TriangleRotationData[] dataArray, int[] indexArray); // 0x000000018C3589B4-0x000000018C358BD8
+		public override void RemoveGroup(int teamId); // 0x000000018688C4A0-0x000000018688C580
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000187233D20-0x0000000187233D30
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D140-0x000000018603D1A0
 	}
 
-	public class VirtualMeshWorker : PhysicsManagerWorker // TypeDefIndex: 55196
+	public class VirtualMeshWorker : PhysicsManagerWorker // TypeDefIndex: 82243
 	{
 		// Nested types
 		[BurstCompile]
-		private struct ReadMeshPositionJob : IJobParallelFor // TypeDefIndex: 55192
+		private struct ReadMeshPositionJob : IJobParallelFor // TypeDefIndex: 82239
 		{
 			// Fields
 			[ReadOnly]
@@ -5856,11 +5853,11 @@ namespace MagicaCloth
 			public NativeArray<byte> virtualVertexFlagList; // 0xC0
 	
 			// Methods
-			public void Execute(int vindex); // 0x0000000189F474E0-0x0000000189F47E7C
+			public void Execute(int vindex); // 0x000000018C36AC0C-0x000000018C36B5A8
 		}
 	
 		[BurstCompile]
-		private struct CalcMeshTriangleNormalTangentJob : IJobParallelFor // TypeDefIndex: 55193
+		private struct CalcMeshTriangleNormalTangentJob : IJobParallelFor // TypeDefIndex: 82240
 		{
 			// Fields
 			[ReadOnly]
@@ -5885,11 +5882,11 @@ namespace MagicaCloth
 			public NativeArray<float3> transformSclList; // 0x90
 	
 			// Methods
-			public void Execute(int tindex); // 0x0000000189F364E0-0x0000000189F36ACC
+			public void Execute(int tindex); // 0x000000018C359DF0-0x000000018C35A3DC
 		}
 	
 		[BurstCompile]
-		private struct CalcVertexNormalTangentFromTriangleJob : IJobParallelFor // TypeDefIndex: 55194
+		private struct CalcVertexNormalTangentFromTriangleJob : IJobParallelFor // TypeDefIndex: 82241
 		{
 			// Fields
 			[ReadOnly]
@@ -5914,11 +5911,11 @@ namespace MagicaCloth
 			public NativeArray<quaternion> virtualRotList; // 0x90
 	
 			// Methods
-			public void Execute(int vindex); // 0x0000000189F36ACC-0x0000000189F36DB8
+			public void Execute(int vindex); // 0x000000018C35A3DC-0x000000018C35A6C8
 		}
 	
 		[BurstCompile]
-		private struct CalcMeshTriangleNormalTangentForEachMeshJob : IJobParallelFor // TypeDefIndex: 55195
+		private struct CalcMeshTriangleNormalTangentForEachMeshJob : IJobParallelFor // TypeDefIndex: 82242
 		{
 			// Fields
 			[ReadOnly]
@@ -5950,23 +5947,23 @@ namespace MagicaCloth
 			public NativeArray<quaternion> virtualRotList; // 0xC0
 	
 			// Methods
-			public void Execute(int mindex); // 0x0000000189F35BA4-0x0000000189F364E0
+			public void Execute(int mindex); // 0x000000018C3594B4-0x000000018C359DF0
 		}
 	
 		// Constructors
-		public VirtualMeshWorker(); // 0x00000001841E1670-0x00000001841E1680
+		public VirtualMeshWorker(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public override void Create(); // 0x00000001841E1670-0x00000001841E1680
-		public override void Release(); // 0x00000001841E1670-0x00000001841E1680
-		public override void RemoveGroup(int group); // 0x00000001841E1670-0x00000001841E1680
-		private bool IsPerformMeshProcessForEachParticle(); // 0x0000000189F4A15C-0x0000000189F4A1E4
-		public override void Warmup(); // 0x00000001841E1670-0x00000001841E1680
-		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x0000000189F4ABB8-0x0000000189F4AFBC
-		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x0000000189F4A1E4-0x0000000189F4ABB8
+		public override void Create(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void Release(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override void RemoveGroup(int group); // 0x0000000186805BA0-0x0000000186805BB0
+		private bool IsPerformMeshProcessForEachParticle(); // 0x000000018C36D838-0x000000018C36D8C0
+		public override void Warmup(); // 0x0000000186805BA0-0x0000000186805BB0
+		public override JobHandle PreUpdate(JobHandle jobHandle); // 0x000000018603D380-0x000000018603D3F0
+		public override JobHandle PostUpdate(JobHandle jobHandle); // 0x000000018603D3F0-0x000000018603D470
 	}
 
-	public class AutoMove : MonoBehaviour // TypeDefIndex: 55197
+	public class AutoMove : MonoBehaviour // TypeDefIndex: 82244
 	{
 		// Fields
 		[SerializeField]
@@ -5980,15 +5977,15 @@ namespace MagicaCloth
 		private float time; // 0x38
 	
 		// Constructors
-		public AutoMove(); // 0x0000000189F3571C-0x0000000189F3575C
+		public AutoMove(); // 0x000000018C3590CC-0x000000018C35910C
 	
 		// Methods
-		private void Start(); // 0x0000000189F35584-0x0000000189F355C4
-		private void Update(); // 0x0000000189F355C4-0x0000000189F3571C
-		public void OnMoveButton(); // 0x0000000189F3555C-0x0000000189F35584
+		private void Start(); // 0x000000018C358F34-0x000000018C358F74
+		private void Update(); // 0x000000018C358F74-0x000000018C3590CC
+		public void OnMoveButton(); // 0x000000018C358F0C-0x000000018C358F34
 	}
 
-	public class AutoRotate : MonoBehaviour // TypeDefIndex: 55198
+	public class AutoRotate : MonoBehaviour // TypeDefIndex: 82245
 	{
 		// Fields
 		[SerializeField]
@@ -5999,15 +5996,15 @@ namespace MagicaCloth
 		private float time; // 0x28
 	
 		// Constructors
-		public AutoRotate(); // 0x0000000189F35818-0x0000000189F35848
+		public AutoRotate(); // 0x000000018C3591C8-0x000000018C3591F8
 	
 		// Methods
-		private void Start(); // 0x00000001841E1670-0x00000001841E1680
-		private void Update(); // 0x0000000189F3575C-0x0000000189F35818
-		public void OnMoveButton(); // 0x0000000189F3555C-0x0000000189F35584
+		private void Start(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void Update(); // 0x000000018C35910C-0x000000018C3591C8
+		public void OnMoveButton(); // 0x000000018C358F0C-0x000000018C358F34
 	}
 
-	public class BlastWaveController : MonoBehaviour // TypeDefIndex: 55200
+	public class BlastWaveController : MonoBehaviour // TypeDefIndex: 82247
 	{
 		// Fields
 		public MagicaAreaWind wind; // 0x18
@@ -6016,7 +6013,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Start_d__3 : IEnumerator<object> // TypeDefIndex: 55199
+		private sealed class _Start_d__3 : IEnumerator<object> // TypeDefIndex: 82246
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6026,30 +6023,30 @@ namespace MagicaCloth
 			private float _time_5__3; // 0x2C
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__3(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _Start_d__3(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189F49C0C-0x0000000189F49D9C
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C36D2DC-0x000000018C36D478
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189F49D9C-0x0000000189F49DE8
+			void IEnumerator.Reset(); // 0x000000018C36D478-0x000000018C36D4C4
 		}
 	
 		// Constructors
-		public BlastWaveController(); // 0x0000000184D848C0-0x0000000184D848F0
+		public BlastWaveController(); // 0x000000018722E6C0-0x000000018722E6F0
 	
 		// Methods
 		[IteratorStateMachine(typeof(_Start_d__3))]
-		private IEnumerator Start(); // 0x0000000189F35B48-0x0000000189F35BA4
+		private IEnumerator Start(); // 0x000000018C359458-0x000000018C3594B4
 	}
 
-	public class CameraOrbit : MonoBehaviour // TypeDefIndex: 55202
+	public class CameraOrbit : MonoBehaviour // TypeDefIndex: 82249
 	{
 		// Fields
 		[SerializeField]
@@ -6098,7 +6095,7 @@ namespace MagicaCloth
 		private float cameraYawVelocity; // 0x90
 	
 		// Nested types
-		public enum MoveMode // TypeDefIndex: 55201
+		public enum MoveMode // TypeDefIndex: 82248
 		{
 			None = 0,
 			UpDown = 1,
@@ -6106,23 +6103,23 @@ namespace MagicaCloth
 		}
 	
 		// Constructors
-		public CameraOrbit(); // 0x0000000189F37490-0x0000000189F374F8
+		public CameraOrbit(); // 0x000000018C35ADA0-0x000000018C35AE08
 	
 		// Methods
-		private void Start(); // 0x0000000189F37398-0x0000000189F37490
-		private void OnEnable(); // 0x0000000189F37070-0x0000000189F372B0
-		private void OnDisable(); // 0x0000000189F36DC0-0x0000000189F37000
-		private void LateUpdate(); // 0x0000000189F36DB8-0x0000000189F36DC0
-		private void updateCamera(); // 0x0000000189F374F8-0x0000000189F377D4
-		private void updatePitchYaw(Vector2 speed); // 0x0000000189F379B0-0x0000000189F37A1C
-		private void updateOffset(Vector2 speed); // 0x0000000189F377D4-0x0000000189F379B0
-		private void updateZoom(float speed); // 0x0000000189F37A1C-0x0000000189F37A94
-		private void OnTouchMove(int fid, Vector2 screenPos, Vector2 screenVelocity, Vector2 cmVelocity); // 0x0000000189F372B0-0x0000000189F3732C
-		private void OnDoubleTouchMove(int fid, Vector2 screenPos, Vector2 screenVelocity, Vector2 cmVelocity); // 0x0000000189F37000-0x0000000189F37070
-		private void OnTouchPinch(float speedscr, float speedcm); // 0x0000000189F3732C-0x0000000189F37398
+		private void Start(); // 0x000000018C35ACA8-0x000000018C35ADA0
+		private void OnEnable(); // 0x000000018C35A980-0x000000018C35ABC0
+		private void OnDisable(); // 0x000000018C35A6D0-0x000000018C35A910
+		private void LateUpdate(); // 0x000000018C35A6C8-0x000000018C35A6D0
+		private void updateCamera(); // 0x000000018C35AE08-0x000000018C35B0E4
+		private void updatePitchYaw(Vector2 speed); // 0x000000018C35B2C0-0x000000018C35B32C
+		private void updateOffset(Vector2 speed); // 0x000000018C35B0E4-0x000000018C35B2C0
+		private void updateZoom(float speed); // 0x000000018C35B32C-0x000000018C35B3A4
+		private void OnTouchMove(int fid, Vector2 screenPos, Vector2 screenVelocity, Vector2 cmVelocity); // 0x000000018C35ABC0-0x000000018C35AC3C
+		private void OnDoubleTouchMove(int fid, Vector2 screenPos, Vector2 screenVelocity, Vector2 cmVelocity); // 0x000000018C35A910-0x000000018C35A980
+		private void OnTouchPinch(float speedscr, float speedcm); // 0x000000018C35AC3C-0x000000018C35ACA8
 	}
 
-	public class CopyObject : MonoBehaviour // TypeDefIndex: 55204
+	public class CopyObject : MonoBehaviour // TypeDefIndex: 82251
 	{
 		// Fields
 		public int seed; // 0x18
@@ -6133,7 +6130,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _CreateObject_d__7 : IEnumerator<object> // TypeDefIndex: 55203
+		private sealed class _CreateObject_d__7 : IEnumerator<object> // TypeDefIndex: 82250
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -6143,32 +6140,32 @@ namespace MagicaCloth
 			private int _j_5__3; // 0x2C
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CreateObject_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
+			public _CreateObject_d__7(int __1__state); // 0x0000000182234E90-0x0000000182234EA0
 	
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x0000000189F499DC-0x0000000189F49BC0
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018C36D0A8-0x000000018C36D290
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x0000000189F49BC0-0x0000000189F49C0C
+			void IEnumerator.Reset(); // 0x000000018C36D290-0x000000018C36D2DC
 		}
 	
 		// Constructors
-		public CopyObject(); // 0x0000000189F37CB0-0x0000000189F37CD4
+		public CopyObject(); // 0x000000018C35B5C0-0x000000018C35B5E4
 	
 		// Methods
-		private void Awake(); // 0x00000001841E1670-0x00000001841E1680
-		private void Start(); // 0x0000000189F37C8C-0x0000000189F37CB0
+		private void Awake(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void Start(); // 0x000000018C35B59C-0x000000018C35B5C0
 		[IteratorStateMachine(typeof(_CreateObject_d__7))]
-		private IEnumerator CreateObject(); // 0x0000000189F37C30-0x0000000189F37C8C
+		private IEnumerator CreateObject(); // 0x000000018C35B540-0x000000018C35B59C
 	}
 
-	public class DressUpControl : MonoBehaviour // TypeDefIndex: 55206
+	public class DressUpControl : MonoBehaviour // TypeDefIndex: 82253
 	{
 		// Fields
 		[SerializeField]
@@ -6183,7 +6180,7 @@ namespace MagicaCloth
 	
 		// Nested types
 		[Serializable]
-		public class AvatarPartsGroup // TypeDefIndex: 55205
+		public class AvatarPartsGroup // TypeDefIndex: 82252
 		{
 			// Fields
 			public string groupName; // 0x10
@@ -6196,24 +6193,24 @@ namespace MagicaCloth
 			public int index; // 0x28
 	
 			// Constructors
-			public AvatarPartsGroup(); // 0x0000000189F35848-0x0000000189F358C0
+			public AvatarPartsGroup(); // 0x000000018C3591F8-0x000000018C359270
 		}
 	
 		// Constructors
-		public DressUpControl(); // 0x0000000189F38740-0x0000000189F387C0
+		public DressUpControl(); // 0x000000018C35C05C-0x000000018C35C0DC
 	
 		// Methods
-		private void Start(); // 0x0000000189F38730-0x0000000189F38738
-		private void Update(); // 0x00000001841E1670-0x00000001841E1680
-		private void OnDestroy(); // 0x0000000189F386F8-0x0000000189F38730
-		private void Init(); // 0x0000000189F38504-0x0000000189F386F8
-		private void ChangeParts(int id, int dir); // 0x0000000189F382C4-0x0000000189F383C0
-		public void Clear(); // 0x0000000189F383C0-0x0000000189F38504
+		private void Start(); // 0x000000018C35C04C-0x000000018C35C054
+		private void Update(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void OnDestroy(); // 0x000000018C35C014-0x000000018C35C04C
+		private void Init(); // 0x000000018C35BE1C-0x000000018C35C014
+		private void ChangeParts(int id, int dir); // 0x000000018C35BBD4-0x000000018C35BCD0
+		public void Clear(); // 0x000000018C35BCD0-0x000000018C35BE1C
 		[CompilerGenerated]
-		private void _Init_b__8_0(int id, int dir); // 0x0000000189F38738-0x0000000189F38740
+		private void _Init_b__8_0(int id, int dir); // 0x000000018C35C054-0x000000018C35C05C
 	}
 
-	public class ModelController : MonoBehaviour // TypeDefIndex: 55209
+	public class ModelController : MonoBehaviour // TypeDefIndex: 82256
 	{
 		// Fields
 		[SerializeField]
@@ -6225,7 +6222,7 @@ namespace MagicaCloth
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 55207
+		private sealed class __c // TypeDefIndex: 82254
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -6234,56 +6231,56 @@ namespace MagicaCloth
 			public static Action<BaseCloth> __9__10_0; // 0x18
 	
 			// Constructors
-			static __c(); // 0x0000000189F49F84-0x0000000189F49FE8
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C36D660-0x000000018C36D6C4
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _OnNextButton_b__7_0(Animator ani); // 0x0000000189F49E8C-0x0000000189F49ED4
-			internal void _OnBackButton_b__8_0(Animator ani); // 0x0000000189F49E44-0x0000000189F49E8C
-			internal void _OnActiveButton_b__10_0(BaseCloth cloth); // 0x0000000189F49DE8-0x0000000189F49E44
+			internal void _OnNextButton_b__7_0(Animator ani); // 0x000000018C36D568-0x000000018C36D5B0
+			internal void _OnBackButton_b__8_0(Animator ani); // 0x000000018C36D520-0x000000018C36D568
+			internal void _OnActiveButton_b__10_0(BaseCloth cloth); // 0x000000018C36D4C4-0x000000018C36D520
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 55208
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 82255
 		{
 			// Fields
 			public float timeScale; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass9_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _OnSlowButton_b__0(Animator ani); // 0x0000000189F49F3C-0x0000000189F49F60
-			internal void _OnSlowButton_b__1(BaseCloth cloth); // 0x0000000189F49F60-0x0000000189F49F84
+			internal void _OnSlowButton_b__0(Animator ani); // 0x000000018C36D618-0x000000018C36D63C
+			internal void _OnSlowButton_b__1(BaseCloth cloth); // 0x000000018C36D63C-0x000000018C36D660
 		}
 	
 		// Constructors
-		public ModelController(); // 0x0000000189F45DFC-0x0000000189F45E84
+		public ModelController(); // 0x000000018C3694EC-0x000000018C369574
 	
 		// Methods
-		private void Start(); // 0x00000001841E1670-0x00000001841E1680
-		private void Update(); // 0x00000001841E1670-0x00000001841E1680
-		private void AnimatorAction(Action<Animator> act); // 0x0000000189F4569C-0x0000000189F45840
-		private void ClothAction(Action<BaseCloth> act); // 0x0000000189F45840-0x0000000189F459EC
-		public void OnNextButton(); // 0x0000000189F45BE4-0x0000000189F45CE0
-		public void OnBackButton(); // 0x0000000189F45AE8-0x0000000189F45BE4
-		public void OnSlowButton(); // 0x0000000189F45CE0-0x0000000189F45DFC
-		public void OnActiveButton(); // 0x0000000189F459EC-0x0000000189F45AE8
+		private void Start(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void Update(); // 0x0000000186805BA0-0x0000000186805BB0
+		private void AnimatorAction(Action<Animator> act); // 0x000000018C368D84-0x000000018C368F2C
+		private void ClothAction(Action<BaseCloth> act); // 0x000000018C368F2C-0x000000018C3690DC
+		public void OnNextButton(); // 0x000000018C3692D4-0x000000018C3693D0
+		public void OnBackButton(); // 0x000000018C3691D8-0x000000018C3692D4
+		public void OnSlowButton(); // 0x000000018C3693D0-0x000000018C3694EC
+		public void OnActiveButton(); // 0x000000018C3690DC-0x000000018C3691D8
 	}
 
-	public static class ObjectUtility // TypeDefIndex: 55210
+	public static class ObjectUtility // TypeDefIndex: 82257
 	{
 		// Methods
-		public static GameObject[] PlaceRandomCubes(int count, Vector3 center, float radius); // 0x0000000189F47188-0x0000000189F4732C
-		public static GameObject[] PlaceRandomCubes(int count); // 0x0000000189F4732C-0x0000000189F47358
-		public static GameObject MakeStrippedCube(); // 0x0000000189F470DC-0x0000000189F47188
-		public static GameObject[] PlaceRandomGameObject(int count, Vector3 center, float radius, GameObject prefab); // 0x0000000189F47358-0x0000000189F474E0
+		public static GameObject[] PlaceRandomCubes(int count, Vector3 center, float radius); // 0x000000018C36A8B4-0x000000018C36AA58
+		public static GameObject[] PlaceRandomCubes(int count); // 0x000000018C36AA58-0x000000018C36AA84
+		public static GameObject MakeStrippedCube(); // 0x000000018C36A808-0x000000018C36A8B4
+		public static GameObject[] PlaceRandomGameObject(int count, Vector3 center, float radius, GameObject prefab); // 0x000000018C36AA84-0x000000018C36AC0C
 	}
 
-	public class SimpleInputManager : CreateSingleton<MagicaCloth.SimpleInputManager> // TypeDefIndex: 55211
+	public class SimpleInputManager : CreateSingleton<MagicaCloth.SimpleInputManager> // TypeDefIndex: 82258
 	{
 		// Fields
-		private const int MaxFinger = 3; // Metadata: 0x02346B19
+		private const int MaxFinger = 3; // Metadata: 0x02640BB5
 		public float tapRadiusCm; // 0x18
 		public float flickRangeCm; // 0x1C
 		public float flickCheckSpeed; // 0x20
@@ -6311,28 +6308,28 @@ namespace MagicaCloth
 		public static UnityAction OnBackButton; // 0x40
 	
 		// Properties
-		public static float ScreenDpi { get; } // 0x0000000189F496E8-0x0000000189F4972C 
-		public static float ScreenDpc { get; } // 0x0000000189F496A4-0x0000000189F496E8 
+		public static float ScreenDpi { get; } // 0x000000018C36CDB4-0x000000018C36CDF8 
+		public static float ScreenDpc { get; } // 0x000000018C36CD70-0x000000018C36CDB4 
 	
 		// Constructors
-		public SimpleInputManager(); // 0x0000000189F49644-0x0000000189F496A4
+		public SimpleInputManager(); // 0x000000018C36CD10-0x000000018C36CD70
 	
 		// Methods
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-		private static void Init(); // 0x0000000184D7CA40-0x0000000184D7CA70
-		protected override void InitSingleton(); // 0x0000000189F4838C-0x0000000189F484A0
-		private void Update(); // 0x0000000189F49624-0x0000000189F49644
-		private void CalcScreenDpi(); // 0x0000000189F48158-0x0000000189F48198
-		private void AllResetTouchInfo(); // 0x0000000189F48118-0x0000000189F48158
-		public int GetTouchCount(); // 0x0000000189F48384-0x0000000189F4838C
-		public bool IsUI(); // 0x0000000189F484A0-0x0000000189F4853C
-		private void UpdateMobile(); // 0x0000000189F4853C-0x0000000189F48DC8
-		private Vector2 CalcScreenRatioVector(Vector2 vec); // 0x0000000189F48198-0x0000000189F481E8
-		private bool CheckFlic(int fid, Vector2 oldpos, Vector2 nowpos, Vector2 downpos, float flicktime); // 0x0000000189F481E8-0x0000000189F48384
-		private void UpdateMouse(); // 0x0000000189F48DC8-0x0000000189F49624
+		private static void Init(); // 0x0000000187222570-0x00000001872225A0
+		protected override void InitSingleton(); // 0x000000018C36BAB4-0x000000018C36BBC8
+		private void Update(); // 0x000000018C36CCF0-0x000000018C36CD10
+		private void CalcScreenDpi(); // 0x000000018C36B864-0x000000018C36B8A4
+		private void AllResetTouchInfo(); // 0x000000018C36B820-0x000000018C36B864
+		public int GetTouchCount(); // 0x000000018C36BAAC-0x000000018C36BAB4
+		public bool IsUI(); // 0x000000018C36BBC8-0x000000018C36BC64
+		private void UpdateMobile(); // 0x000000018C36BC64-0x000000018C36C510
+		private Vector2 CalcScreenRatioVector(Vector2 vec); // 0x000000018C36B8A4-0x000000018C36B8F4
+		private bool CheckFlic(int fid, Vector2 oldpos, Vector2 nowpos, Vector2 downpos, float flicktime); // 0x000000018C36B8F4-0x000000018C36BAAC
+		private void UpdateMouse(); // 0x000000018C36C510-0x000000018C36CCF0
 	}
 
-	public class SliderStart : MonoBehaviour // TypeDefIndex: 55212
+	public class SliderStart : MonoBehaviour // TypeDefIndex: 82259
 	{
 		// Fields
 		[SerializeField]
@@ -6344,14 +6341,14 @@ namespace MagicaCloth
 		private string formatString; // 0x30
 	
 		// Constructors
-		public SliderStart(); // 0x0000000189F49974-0x0000000189F499DC
+		public SliderStart(); // 0x000000018C36D040-0x000000018C36D0A8
 	
 		// Methods
-		private void Start(); // 0x0000000189F497F8-0x0000000189F49974
-		private void OnChangeValue(float value); // 0x0000000189F4972C-0x0000000189F497F8
+		private void Start(); // 0x000000018C36CEC4-0x000000018C36D040
+		private void OnChangeValue(float value); // 0x000000018C36CDF8-0x000000018C36CEC4
 	}
 
-	public class UIPartsItem : MonoBehaviour // TypeDefIndex: 55214
+	public class UIPartsItem : MonoBehaviour // TypeDefIndex: 82261
 	{
 		// Fields
 		public UnityEngine.UI.Text text; // 0x18
@@ -6361,29 +6358,29 @@ namespace MagicaCloth
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 55213
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 82260
 		{
 			// Fields
 			public Action<int, int> onClick; // 0x10
 			public UIPartsItem __4__this; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass5_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal void _Init_b__0(); // 0x0000000189F49ED4-0x0000000189F49F08
-			internal void _Init_b__1(); // 0x0000000189F49F08-0x0000000189F49F3C
+			internal void _Init_b__0(); // 0x000000018C36D5B0-0x000000018C36D5E4
+			internal void _Init_b__1(); // 0x000000018C36D5E4-0x000000018C36D618
 		}
 	
 		// Constructors
-		public UIPartsItem(); // 0x0000000185393520-0x0000000185393538
+		public UIPartsItem(); // 0x00000001878364A0-0x00000001878364B8
 	
 		// Methods
-		private void Start(); // 0x00000001841E1670-0x00000001841E1680
-		public void Init(string title, int id, Action<int, int> onClick); // 0x0000000189F49FE8-0x0000000189F4A15C
+		private void Start(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void Init(string title, int id, Action<int, int> onClick); // 0x000000018C36D6C4-0x000000018C36D838
 	}
 
-	public class WindController : MonoBehaviour // TypeDefIndex: 55215
+	public class WindController : MonoBehaviour // TypeDefIndex: 82262
 	{
 		// Fields
 		[SerializeField]
@@ -6404,24 +6401,24 @@ namespace MagicaCloth
 		private float angleX; // 0x50
 	
 		// Properties
-		private MagicaDirectionalWind Wind { get; } // 0x0000000189F4B574-0x0000000189F4B5B0 
+		private MagicaDirectionalWind Wind { get; } // 0x000000018C36DE80-0x000000018C36DEBC 
 	
 		// Constructors
-		public WindController(); // 0x0000000189F4B4AC-0x0000000189F4B574
+		public WindController(); // 0x000000018C36DDB8-0x000000018C36DE80
 	
 		// Methods
-		private void Start(); // 0x00000001841E1670-0x00000001841E1680
-		public void OnDirectionY(float value); // 0x0000000189F4B108-0x0000000189F4B114
-		public void OnDirectionX(float value); // 0x0000000189F4B0FC-0x0000000189F4B108
-		public void OnMain(float value); // 0x0000000189F4B14C-0x0000000189F4B294
-		public void OnTurbulence(float value); // 0x0000000189F4B294-0x0000000189F4B2CC
-		public void OnFrequency(float value); // 0x0000000189F4B114-0x0000000189F4B14C
-		public void OnBlastWave(); // 0x0000000189F4AFBC-0x0000000189F4B0FC
-		private void UpdateDirection(); // 0x0000000189F4B2CC-0x0000000189F4B4AC
+		private void Start(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void OnDirectionY(float value); // 0x000000018C36DA10-0x000000018C36DA1C
+		public void OnDirectionX(float value); // 0x000000018C36DA04-0x000000018C36DA10
+		public void OnMain(float value); // 0x000000018C36DA54-0x000000018C36DB9C
+		public void OnTurbulence(float value); // 0x000000018C36DB9C-0x000000018C36DBD4
+		public void OnFrequency(float value); // 0x000000018C36DA1C-0x000000018C36DA54
+		public void OnBlastWave(); // 0x000000018C36D8C0-0x000000018C36DA04
+		private void UpdateDirection(); // 0x000000018C36DBD4-0x000000018C36DDB8
 	}
 
 	[Serializable]
-	public class BezierParam : IDataHash // TypeDefIndex: 55216
+	public class BezierParam : IDataHash // TypeDefIndex: 82263
 	{
 		// Fields
 		[SerializeField]
@@ -6436,26 +6433,26 @@ namespace MagicaCloth
 		private bool useCurveValue; // 0x20
 	
 		// Properties
-		public float StartValue { get; } // 0x0000000184D85F70-0x0000000184D85F80 
-		public float EndValue { get; } // 0x0000000189F35B24-0x0000000189F35B38 
-		public float CurveValue { get; } // 0x0000000189F35B0C-0x0000000189F35B24 
-		public bool UseCurve { get; } // 0x0000000189F35B38-0x0000000189F35B48 
+		public float StartValue { get; } // 0x0000000187232D00-0x0000000187232D10 
+		public float EndValue { get; } // 0x0000000185D327A0-0x0000000185D327C0 
+		public float CurveValue { get; } // 0x0000000185D327C0-0x0000000185D327E0 
+		public bool UseCurve { get; } // 0x0000000185D327E0-0x0000000185D327F0 
 	
 		// Constructors
-		public BezierParam(); // 0x00000001841E1670-0x00000001841E1680
-		public BezierParam(float val); // 0x0000000184DA3710-0x0000000184DA3730
-		public BezierParam(float sval, float eval); // 0x0000000184DA3730-0x0000000184DA3750
-		public BezierParam(float sval, float eval, bool useEval, float cval, bool useCval); // 0x0000000184DA36E0-0x0000000184DA3710
+		public BezierParam(); // 0x0000000186805BA0-0x0000000186805BB0
+		public BezierParam(float val); // 0x00000001872512A0-0x00000001872512C0
+		public BezierParam(float sval, float eval); // 0x00000001872512C0-0x00000001872512E0
+		public BezierParam(float sval, float eval, bool useEval, float cval, bool useCval); // 0x0000000187251270-0x00000001872512A0
 	
 		// Methods
-		public void SetParam(float sval, float eval, bool useEval = true /* Metadata: 0x02346B1A */, float cval = 0f /* Metadata: 0x02346B1B */, bool useCval = false /* Metadata: 0x02346B1F */); // 0x0000000184DA36E0-0x0000000184DA3710
-		public float Evaluate(float x); // 0x0000000189F35998-0x0000000189F359F0
-		public BezierParam AutoSetup(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02346B20 */); // 0x0000000189F358C0-0x0000000189F35924
-		public int GetDataHash(); // 0x0000000189F359F0-0x0000000189F35B0C
-		public BezierParam Clone(); // 0x0000000189F35924-0x0000000189F35998
+		public void SetParam(float sval, float eval, bool useEval = true /* Metadata: 0x02640BB6 */, float cval = 0f /* Metadata: 0x02640BB7 */, bool useCval = false /* Metadata: 0x02640BBB */); // 0x0000000187251270-0x00000001872512A0
+		public float Evaluate(float x); // 0x0000000185D327F0-0x0000000185D328E0
+		public BezierParam AutoSetup(float startVal, float endVal, float curveVal = 0f /* Metadata: 0x02640BBC */); // 0x000000018C359270-0x000000018C3592D4
+		public int GetDataHash(); // 0x000000018C35933C-0x000000018C359458
+		public BezierParam Clone(); // 0x000000018C3592D4-0x000000018C35933C
 	}
 
-	public interface IBoneReplace // TypeDefIndex: 55217
+	public interface IBoneReplace // TypeDefIndex: 82264
 	{
 		// Methods
 		HashSet<Transform> GetUsedBones();
@@ -6463,7 +6460,7 @@ namespace MagicaCloth
 			where T : class;
 	}
 
-	public interface IDataVerify // TypeDefIndex: 55218
+	public interface IDataVerify // TypeDefIndex: 82265
 	{
 		// Methods
 		int GetVersion();
@@ -6472,14 +6469,14 @@ namespace MagicaCloth
 		string GetInformation();
 	}
 
-	public interface IEditorCloth // TypeDefIndex: 55219
+	public interface IEditorCloth // TypeDefIndex: 82266
 	{
 		// Methods
 		List<int> GetSelectionList();
 		List<int> GetUseList();
 	}
 
-	public interface IEditorMesh // TypeDefIndex: 55220
+	public interface IEditorMesh // TypeDefIndex: 82267
 	{
 		// Methods
 		int GetEditorPositionNormalTangent(out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList);
@@ -6487,7 +6484,7 @@ namespace MagicaCloth
 		List<int> GetEditorLineList();
 	}
 
-	public class RuntimeStatus // TypeDefIndex: 55221
+	public class RuntimeStatus // TypeDefIndex: 82268
 	{
 		// Fields
 		private bool initStart; // 0x10
@@ -6508,88 +6505,88 @@ namespace MagicaCloth
 		internal Func<object> OwnerFunc; // 0x40
 	
 		// Properties
-		internal HashSet<RuntimeStatus> parentStatusSet { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-		internal HashSet<RuntimeStatus> childStatusSet { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-		public bool IsActive { get; } // 0x0000000184D39700-0x0000000184D39720 
-		public bool IsInitStart { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
-		public bool IsInitComplete { get; } // 0x0000000184D88380-0x0000000184D88390 
-		public bool IsInitSuccess { get; } // 0x0000000189F48104-0x0000000189F48118 
-		public bool IsInitError { get; } // 0x00000001847FE4C0-0x00000001847FE4D0 
-		public bool IsDispose { get; } // 0x0000000184DA2FA0-0x0000000184DA2FB0 
-		public bool IsDirty { get; } // 0x0000000184D86340-0x0000000184D86350 
+		internal HashSet<RuntimeStatus> parentStatusSet { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+		internal HashSet<RuntimeStatus> childStatusSet { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+		public bool IsActive { get; } // 0x00000001853CCC00-0x00000001853CCC20 
+		public bool IsInitStart { get; } // 0x00000001829D0800-0x00000001829D0810 
+		public bool IsInitComplete { get; } // 0x0000000187235410-0x0000000187235420 
+		public bool IsInitSuccess { get; } // 0x00000001853CCB30-0x00000001853CCB50 
+		public bool IsInitError { get; } // 0x00000001853CAD30-0x00000001853CAD40 
+		public bool IsDispose { get; } // 0x0000000187251390-0x00000001872513A0 
+		public bool IsDirty { get; } // 0x000000018225E050-0x000000018225E060 
 	
 		// Constructors
-		public RuntimeStatus(); // 0x00000001849E1240-0x00000001849E12D0
+		public RuntimeStatus(); // 0x00000001855E06C0-0x00000001855E0750
 	
 		// Methods
-		public void SetInitStart(); // 0x00000001815EFCD0-0x00000001815EFCE0
-		public void SetInitComplete(); // 0x0000000184D8ECC0-0x0000000184D8ECD0
-		public void SetInitError(); // 0x0000000184D99700-0x0000000184D99710
-		public bool SetEnable(bool sw); // 0x00000001847FE380-0x00000001847FE3A0
-		public bool SetUserEnable(bool sw); // 0x0000000189F480B8-0x0000000189F480C8
-		public bool SetRuntimeError(bool sw); // 0x0000000189F480A8-0x0000000189F480B8
-		public void SetDispose(); // 0x0000000184DA37F0-0x0000000184DA3800
-		public void SetDirty(); // 0x0000000184D8EB60-0x0000000184D8EB70
-		public void ClearDirty(); // 0x0000000184D91AA0-0x0000000184D91AB0
-		public bool UpdateStatus(); // 0x00000001847FE4D0-0x00000001847FE620
-		public void AddParentStatus(RuntimeStatus status); // 0x0000000189F47ED0-0x0000000189F47F24
-		public void RemoveParentStatus(RuntimeStatus status); // 0x0000000189F48004-0x0000000189F480A8
-		public void AddChildStatus(RuntimeStatus status); // 0x0000000189F47E7C-0x0000000189F47ED0
-		public void RemoveChildStatus(RuntimeStatus status); // 0x0000000189F47F60-0x0000000189F48004
-		public void LinkParentStatus(RuntimeStatus parent); // 0x0000000189F47F24-0x0000000189F47F60
-		public void UnlinkParentStatus(RuntimeStatus parent); // 0x0000000189F480C8-0x0000000189F48104
-		private bool IsParentStatusActive(); // 0x00000001847FE620-0x00000001847FE700
+		public void SetInitStart(); // 0x00000001829D07F0-0x00000001829D0800
+		public void SetInitComplete(); // 0x000000018723CE80-0x000000018723CE90
+		public void SetInitError(); // 0x0000000187247950-0x0000000187247960
+		public bool SetEnable(bool sw); // 0x00000001853CB260-0x00000001853CB280
+		public bool SetUserEnable(bool sw); // 0x00000001853C9E80-0x00000001853C9E90
+		public bool SetRuntimeError(bool sw); // 0x000000018C36B7D4-0x000000018C36B7E4
+		public void SetDispose(); // 0x0000000187251380-0x0000000187251390
+		public void SetDirty(); // 0x0000000187233970-0x0000000187233980
+		public void ClearDirty(); // 0x000000018723F9D0-0x000000018723F9E0
+		public bool UpdateStatus(); // 0x00000001853CB280-0x00000001853CB3D0
+		public void AddParentStatus(RuntimeStatus status); // 0x000000018C36B5FC-0x000000018C36B650
+		public void RemoveParentStatus(RuntimeStatus status); // 0x000000018C36B730-0x000000018C36B7D4
+		public void AddChildStatus(RuntimeStatus status); // 0x000000018C36B5A8-0x000000018C36B5FC
+		public void RemoveChildStatus(RuntimeStatus status); // 0x000000018C36B68C-0x000000018C36B730
+		public void LinkParentStatus(RuntimeStatus parent); // 0x000000018C36B650-0x000000018C36B68C
+		public void UnlinkParentStatus(RuntimeStatus parent); // 0x000000018C36B7E4-0x000000018C36B820
+		private bool IsParentStatusActive(); // 0x00000001853CB3D0-0x00000001853CB4C0
 	}
 
-	public static class DataHashExtensions // TypeDefIndex: 55222
+	public static class DataHashExtensions // TypeDefIndex: 82269
 	{
 		// Fields
-		public const int NullHash = 397610387; // Metadata: 0x02346B24
-		public const int NumberHash = 932781045; // Metadata: 0x02346B29
+		public const int NullHash = 397610387; // Metadata: 0x02640BC0
+		public const int NumberHash = 932781045; // Metadata: 0x02640BC5
 	
 		// Methods
-		public static ulong GetVectorDataHash(Vector3 v); // 0x0000000189F37F20-0x0000000189F37FC4
+		public static ulong GetVectorDataHash(Vector3 v); // 0x000000018C35B830-0x000000018C35B8D4
 	
 		// Extension methods
-		public static int GetDataHash(this object data); // 0x0000000189F37CD4-0x0000000189F37F08
-		public static int GetDataHash(this IDataHash data); // 0x0000000189F37F08-0x0000000189F37F20
+		public static int GetDataHash(this object data); // 0x000000018C35B5E4-0x000000018C35B818
+		public static int GetDataHash(this IDataHash data); // 0x000000018C35B818-0x000000018C35B830
 		public static int GetDataHash<T>(this T[] data);
 		public static int GetDataHash<T>(this List<T> data);
 		public static int GetDataCountHash<T>(this T[] data);
 		public static int GetDataCountHash<T>(this List<T> data);
 	}
 
-	public class GridHash // TypeDefIndex: 55224
+	public class GridHash // TypeDefIndex: 82271
 	{
 		// Fields
 		protected Dictionary<uint, List<Point>> gridMap; // 0x10
 		protected float gridSize; // 0x18
 	
 		// Nested types
-		public class Point // TypeDefIndex: 55223
+		public class Point // TypeDefIndex: 82270
 		{
 			// Fields
 			public int id; // 0x10
 			public float3 pos; // 0x14
 	
 			// Constructors
-			public Point(); // 0x00000001841E1670-0x00000001841E1680
+			public Point(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		public GridHash(); // 0x0000000184D8D240-0x0000000184D8D250
+		public GridHash(); // 0x0000000187240EF0-0x0000000187240F00
 	
 		// Methods
-		public virtual void Create(float gridSize = 0.1f /* Metadata: 0x02346B2E */); // 0x0000000189F3AA3C-0x0000000189F3AAC4
-		public virtual void AddPoint(float3 pos, int id); // 0x0000000189F3A86C-0x0000000189F3A9F4
-		public virtual void Remove(float3 pos, int id); // 0x0000000189F3ABAC-0x0000000189F3ACF4
-		public void Clear(); // 0x0000000189F3A9F4-0x0000000189F3AA3C
-		public static int3 GetGridPos(float3 pos, float gridSize); // 0x0000000189F3AB28-0x0000000189F3ABAC
-		public static uint GetGridHash(int3 pos); // 0x0000000184DA37C0-0x0000000184DA37F0
-		public static uint GetGridHash(float3 pos, float gridSize); // 0x0000000189F3AAC4-0x0000000189F3AB28
+		public virtual void Create(float gridSize = 0.1f /* Metadata: 0x02640BCA */); // 0x000000018C35DFC4-0x000000018C35E04C
+		public virtual void AddPoint(float3 pos, int id); // 0x000000018C35DDF4-0x000000018C35DF7C
+		public virtual void Remove(float3 pos, int id); // 0x000000018C35E134-0x000000018C35E27C
+		public void Clear(); // 0x000000018C35DF7C-0x000000018C35DFC4
+		public static int3 GetGridPos(float3 pos, float gridSize); // 0x000000018C35E0B0-0x000000018C35E134
+		public static uint GetGridHash(int3 pos); // 0x0000000187251350-0x0000000187251380
+		public static uint GetGridHash(float3 pos, float gridSize); // 0x000000018C35E04C-0x000000018C35E0B0
 	}
 
-	public class NearPointSearch : GridHash // TypeDefIndex: 55225
+	public class NearPointSearch : GridHash // TypeDefIndex: 82272
 	{
 		// Fields
 		private float radius; // 0x20
@@ -6598,21 +6595,21 @@ namespace MagicaCloth
 		private HashSet<uint> lockPairSet; // 0x38
 	
 		// Constructors
-		public NearPointSearch(); // 0x0000000189F46FC8-0x0000000189F470DC
+		public NearPointSearch(); // 0x000000018C36A6F4-0x000000018C36A808
 	
 		// Methods
-		public void Create(float3[] positionList, float radius); // 0x0000000189F45F1C-0x0000000189F45FA8
-		public void SearchNearPointAll(); // 0x0000000189F462D8-0x0000000189F46558
-		public void SearchNearPoint(int id, float3 pos); // 0x0000000189F46558-0x0000000189F46A24
-		public void SearchNearPoint(float3 pos, float r); // 0x0000000189F46A24-0x0000000189F46D80
-		public override void AddPoint(float3 pos, int id); // 0x0000000189F45EF4-0x0000000189F45F1C
-		public override void Remove(float3 pos, int id); // 0x0000000189F46208-0x0000000189F462D8
-		public void AddLockPair(int id1, int id2); // 0x0000000189F45E84-0x0000000189F45EF4
-		public bool GetNearPointPair(out int id1, out int id2); // 0x0000000189F45FA8-0x0000000189F46208
-		public override string ToString(); // 0x0000000189F46D80-0x0000000189F46FC8
+		public void Create(float3[] positionList, float radius); // 0x000000018C36960C-0x000000018C369698
+		public void SearchNearPointAll(); // 0x000000018C3699DC-0x000000018C369C74
+		public void SearchNearPoint(int id, float3 pos); // 0x000000018C369C74-0x000000018C36A13C
+		public void SearchNearPoint(float3 pos, float r); // 0x000000018C36A13C-0x000000018C36A49C
+		public override void AddPoint(float3 pos, int id); // 0x000000018C3695E4-0x000000018C36960C
+		public override void Remove(float3 pos, int id); // 0x000000018C36990C-0x000000018C3699DC
+		public void AddLockPair(int id1, int id2); // 0x000000018C369574-0x000000018C3695E4
+		public bool GetNearPointPair(out int id1, out int id2); // 0x000000018C369698-0x000000018C36990C
+		public override string ToString(); // 0x000000018C36A49C-0x000000018C36A6F4
 	}
 
-	public struct ChunkData // TypeDefIndex: 55226
+	public struct ChunkData // TypeDefIndex: 82273
 	{
 		// Fields
 		public int chunkNo; // 0x00
@@ -6621,12 +6618,12 @@ namespace MagicaCloth
 		public int useLength; // 0x0C
 	
 		// Methods
-		public void Clear(); // 0x0000000184DA3750-0x0000000184DA3760
-		public bool IsValid(); // 0x000000018423A5F0-0x000000018423A600
-		public override string ToString(); // 0x0000000189F37A94-0x0000000189F37C30
+		public void Clear(); // 0x00000001872512E0-0x00000001872512F0
+		public bool IsValid(); // 0x00000001853CC6D0-0x00000001853CC6E0
+		public override string ToString(); // 0x000000018C35B3A4-0x000000018C35B540
 	}
 
-	public class DoubleComputeBuffer<T> : IDisposable // TypeDefIndex: 55227
+	public class DoubleComputeBuffer<T> : IDisposable // TypeDefIndex: 82274
 		where T : struct
 	{
 		// Fields
@@ -6650,10 +6647,10 @@ namespace MagicaCloth
 		public void BeginWrite(int length);
 		public void EndWrite(int length);
 		public NativeArray<T> GetNativeArray();
-		public ComputeBuffer GetBuffer(int bufferIndex = 0 /* Metadata: 0x02346B32 */);
+		public ComputeBuffer GetBuffer(int bufferIndex = 0 /* Metadata: 0x02640BCE */);
 	}
 
-	public class ExNativeHashMap<TKey, TValue> // TypeDefIndex: 55228
+	public class ExNativeHashMap<TKey, TValue> // TypeDefIndex: 82275
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -6681,7 +6678,7 @@ namespace MagicaCloth
 		public void Clear();
 	}
 
-	public class ExNativeMultiHashMap<TKey, TValue> // TypeDefIndex: 55229
+	public class ExNativeMultiHashMap<TKey, TValue> // TypeDefIndex: 82276
 		where TKey : struct, IEquatable<TKey>
 		where TValue : struct
 	{
@@ -6713,7 +6710,7 @@ namespace MagicaCloth
 		public void Clear();
 	}
 
-	public class FixedChunkNativeArray<T> : IDisposable // TypeDefIndex: 55230
+	public class FixedChunkNativeArray<T> : IDisposable // TypeDefIndex: 82277
 		where T : struct
 	{
 		// Fields
@@ -6750,7 +6747,7 @@ namespace MagicaCloth
 		public override string ToString();
 	}
 
-	public class FixedMultiNativeList<T> : IDisposable // TypeDefIndex: 55231
+	public class FixedMultiNativeList<T> : IDisposable // TypeDefIndex: 82278
 		where T : struct
 	{
 		// Fields
@@ -6786,7 +6783,7 @@ namespace MagicaCloth
 		public override string ToString();
 	}
 
-	public class FixedNativeList<T> : IDisposable // TypeDefIndex: 55232
+	public class FixedNativeList<T> : IDisposable // TypeDefIndex: 82279
 		where T : struct
 	{
 		// Fields
@@ -6816,7 +6813,7 @@ namespace MagicaCloth
 		public void SyncBuffer();
 	}
 
-	public class FixedNativeListWithCount<T> : IDisposable // TypeDefIndex: 55233
+	public class FixedNativeListWithCount<T> : IDisposable // TypeDefIndex: 82280
 		where T : struct
 	{
 		// Fields
@@ -6849,7 +6846,7 @@ namespace MagicaCloth
 		public NativeArray<T> ToJobArray();
 	}
 
-	public class FixedTransformAccessArray : IDisposable // TypeDefIndex: 55234
+	public class FixedTransformAccessArray : IDisposable // TypeDefIndex: 82281
 	{
 		// Fields
 		private TransformAccessArray transformArray; // 0x10
@@ -6860,26 +6857,26 @@ namespace MagicaCloth
 		private Dictionary<int, int> referenceDict; // 0x38
 	
 		// Properties
-		public int Count { get; } // 0x00000001832338A0-0x00000001832338C0 
-		public int Length { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
-		public Transform this[int index] { get => default; } // 0x0000000189F38F88-0x0000000189F38F94 
+		public int Count { get; } // 0x0000000185152BC0-0x0000000185152BE0 
+		public int Length { get; } // 0x00000001844AF510-0x00000001844AF520 
+		public Transform this[int index] { get => default; } // 0x0000000188A6BC64-0x0000000188A6BC74 
 	
 		// Constructors
-		public FixedTransformAccessArray(int desiredJobCount = -1 /* Metadata: 0x02346B33 */); // 0x0000000183E87C20-0x0000000183E87D80
-		public FixedTransformAccessArray(int capacity, int desiredJobCount); // 0x0000000189F38E14-0x0000000189F38F88
+		public FixedTransformAccessArray(int desiredJobCount = -1 /* Metadata: 0x02640BCF */); // 0x0000000185D93030-0x0000000185D93190
+		public FixedTransformAccessArray(int capacity, int desiredJobCount); // 0x000000018C35C388-0x000000018C35C500
 	
 		// Methods
-		public int Add(Transform element); // 0x0000000189F387C0-0x0000000189F38940
-		public void Remove(int index); // 0x0000000189F38CEC-0x0000000189F38E14
-		public bool Exist(int index); // 0x0000000189F38C40-0x0000000189F38C64
-		public bool Exist(Transform element); // 0x0000000189F38BD4-0x0000000189F38C40
-		public int GetIndex(Transform element); // 0x0000000189F38C64-0x0000000189F38CEC
-		public void Clear(); // 0x0000000189F38940-0x0000000189F38B2C
-		public void Dispose(); // 0x0000000189F38B2C-0x0000000189F38BD4
-		public TransformAccessArray GetTransformAccessArray(); // 0x0000000182B2ECC0-0x0000000182B2ECD0
+		public int Add(Transform element); // 0x0000000185485610-0x0000000185485800
+		public void Remove(int index); // 0x0000000185485800-0x0000000185485990
+		public bool Exist(int index); // 0x00000001854853C0-0x00000001854853F0
+		public bool Exist(Transform element); // 0x00000001854853F0-0x00000001854854A0
+		public int GetIndex(Transform element); // 0x00000001863B2AD0-0x00000001863B2BA0
+		public void Clear(); // 0x000000018C35C0DC-0x000000018C35C2DC
+		public void Dispose(); // 0x000000018C35C2DC-0x000000018C35C388
+		public TransformAccessArray GetTransformAccessArray(); // 0x00000001829260F0-0x0000000182926100
 	}
 
-	public static class NativeArrayExtension // TypeDefIndex: 55235
+	public static class NativeArrayExtension // TypeDefIndex: 82282
 	{
 		// Extension methods
 		public static void CopyToFast<T, T2>(this NativeArray<T> nativeArray, int startIndex, T2[] array)
@@ -6898,7 +6895,7 @@ namespace MagicaCloth
 			where T : struct;
 	}
 
-	public abstract class CreateSingleton<T> : MonoBehaviour // TypeDefIndex: 55236
+	public abstract class CreateSingleton<T> : MonoBehaviour // TypeDefIndex: 82283
 		where T : MonoBehaviour
 	{
 		// Fields
@@ -6922,37 +6919,37 @@ namespace MagicaCloth
 		protected abstract void InitSingleton();
 	}
 
-	public static class DataUtility // TypeDefIndex: 55237
+	public static class DataUtility // TypeDefIndex: 82284
 	{
 		// Methods
-		public static uint PackPair(int v0, int v1); // 0x000000018677F488-0x000000018677F4A0
-		public static void UnpackPair(uint pack, out int v0, out int v1); // 0x0000000184DA3080-0x0000000184DA3090
-		public static uint Pack16(int hi, int low); // 0x0000000184D874D0-0x0000000184D874E0
-		public static int Unpack16Hi(uint pack); // 0x0000000184D875B0-0x0000000184D875C0
-		public static int Unpack16Low(uint pack); // 0x0000000184D875C0-0x0000000184D875D0
-		public static uint Pack4_28(int hi, int low); // 0x0000000184DA3760-0x0000000184DA3770
-		public static int Unpack4_28Hi(uint pack); // 0x0000000184DA3780-0x0000000184DA3790
-		public static int Unpack4_28Low(uint pack); // 0x0000000184DA3790-0x0000000184DA37A0
-		public static uint Pack8_24(int hi, int low); // 0x0000000184DA3770-0x0000000184DA3780
-		public static int Unpack8_24Hi(uint pack); // 0x0000000184DA37A0-0x0000000184DA37B0
-		public static int Unpack8_24Low(uint pack); // 0x0000000184DA37B0-0x0000000184DA37C0
-		public static ulong Pack32(int hi, int low); // 0x0000000184D91CF0-0x0000000184D91D00
-		public static int Unpack32Hi(ulong pack); // 0x0000000184D9D8A0-0x0000000184D9D8B0
-		public static int Unpack32Low(ulong pack); // 0x0000000184D88BE0-0x0000000184D88BF0
-		public static ulong PackTriple(int v0, int v1, int v2); // 0x0000000189F3813C-0x0000000189F38278
-		public static void UnpackTriple(ulong pack, out int v0, out int v1, out int v2); // 0x0000000184DA30C0-0x0000000184DA30E0
-		public static ulong PackQuater(int v0, int v1, int v2, int v3); // 0x0000000189F37FC4-0x0000000189F3813C
-		public static void UnpackQuater(ulong pack, out int v0, out int v1, out int v2, out int v3); // 0x0000000184DA3090-0x0000000184DA30C0
+		public static uint PackPair(int v0, int v1); // 0x0000000188A6045C-0x0000000188A60474
+		public static void UnpackPair(uint pack, out int v0, out int v1); // 0x0000000187250CA0-0x0000000187250CB0
+		public static uint Pack16(int hi, int low); // 0x0000000187234120-0x0000000187234130
+		public static int Unpack16Hi(uint pack); // 0x0000000187234200-0x0000000187234210
+		public static int Unpack16Low(uint pack); // 0x0000000187234210-0x0000000187234220
+		public static uint Pack4_28(int hi, int low); // 0x00000001872512F0-0x0000000187251300
+		public static int Unpack4_28Hi(uint pack); // 0x0000000187251310-0x0000000187251320
+		public static int Unpack4_28Low(uint pack); // 0x0000000187251320-0x0000000187251330
+		public static uint Pack8_24(int hi, int low); // 0x0000000187251300-0x0000000187251310
+		public static int Unpack8_24Hi(uint pack); // 0x0000000187251330-0x0000000187251340
+		public static int Unpack8_24Low(uint pack); // 0x0000000187251340-0x0000000187251350
+		public static ulong Pack32(int hi, int low); // 0x000000018723FC20-0x000000018723FC30
+		public static int Unpack32Hi(ulong pack); // 0x000000018724B9A0-0x000000018724B9B0
+		public static int Unpack32Low(ulong pack); // 0x0000000187235A70-0x0000000187235A80
+		public static ulong PackTriple(int v0, int v1, int v2); // 0x000000018C35BA4C-0x000000018C35BB88
+		public static void UnpackTriple(ulong pack, out int v0, out int v1, out int v2); // 0x0000000187250CE0-0x0000000187250D00
+		public static ulong PackQuater(int v0, int v1, int v2, int v3); // 0x000000018C35B8D4-0x000000018C35BA4C
+		public static void UnpackQuater(ulong pack, out int v0, out int v1, out int v2, out int v3); // 0x0000000187250CB0-0x0000000187250CE0
 	}
 
-	public static class Develop // TypeDefIndex: 55238
+	public static class Develop // TypeDefIndex: 82285
 	{
 		// Methods
 		[Conditional("MAGICACLOTH_DEBUG")]
-		public static void Log(string str); // 0x0000000189F38278-0x0000000189F382C4
+		public static void Log(string str); // 0x000000018C35BB88-0x000000018C35BBD4
 	}
 
-	public static class GizmoUtility // TypeDefIndex: 55239
+	public static class GizmoUtility // TypeDefIndex: 82286
 	{
 		// Fields
 		public static readonly UnityEngine.Color ColorDynamic; // 0x00
@@ -6978,82 +6975,82 @@ namespace MagicaCloth
 		public static readonly UnityEngine.Color ColorWind; // 0x140
 	
 		// Constructors
-		static GizmoUtility(); // 0x0000000189F3A608-0x0000000189F3A86C
+		static GizmoUtility(); // 0x000000018C35DB90-0x000000018C35DDF4
 	
 		// Methods
-		public static void DrawWireCapsule(Vector3 pos, Quaternion rot, Vector3 scl, Vector3 ldir, Vector3 lup, float length, float startRadius, float endRadius, bool resetMatrix = true /* Metadata: 0x02346B34 */); // 0x0000000189F399C4-0x0000000189F39E38
-		public static void DrawWireSphere(Vector3 pos, Quaternion rot, Vector3 scl, float radius, bool drawSphere, bool drawAxis, bool resetMatrix = true /* Metadata: 0x02346B35 */); // 0x0000000189F3A36C-0x0000000189F3A608
-		public static void DrawWireCube(Vector3 pos, Quaternion rot, Vector3 size, bool resetMatrix = true /* Metadata: 0x02346B36 */); // 0x0000000189F3A24C-0x0000000189F3A36C
-		public static void DrawWireCone(Vector3 pos, Quaternion rot, float length, float radius, int div = 8 /* Metadata: 0x02346B37 */); // 0x0000000189F39E38-0x0000000189F3A24C
-		public static void DrawWireArrow(Vector3 pos, Quaternion rot, Vector3 size, bool cross = false /* Metadata: 0x02346B38 */); // 0x0000000189F39640-0x0000000189F399C4
-		public static void DrawAxis(Vector3 pos, Quaternion rot, float size, bool resetMatrix = true /* Metadata: 0x02346B39 */); // 0x0000000189F38F94-0x0000000189F391F0
-		public static void DrawBone(Vector3 pos, Vector3 tpos, float size); // 0x0000000189F391F0-0x0000000189F39640
+		public static void DrawWireCapsule(Vector3 pos, Quaternion rot, Vector3 scl, Vector3 ldir, Vector3 lup, float length, float startRadius, float endRadius, bool resetMatrix = true /* Metadata: 0x02640BD0 */); // 0x000000018C35CF3C-0x000000018C35D3B4
+		public static void DrawWireSphere(Vector3 pos, Quaternion rot, Vector3 scl, float radius, bool drawSphere, bool drawAxis, bool resetMatrix = true /* Metadata: 0x02640BD1 */); // 0x000000018C35D8F0-0x000000018C35DB90
+		public static void DrawWireCube(Vector3 pos, Quaternion rot, Vector3 size, bool resetMatrix = true /* Metadata: 0x02640BD2 */); // 0x000000018C35D7CC-0x000000018C35D8F0
+		public static void DrawWireCone(Vector3 pos, Quaternion rot, float length, float radius, int div = 8 /* Metadata: 0x02640BD3 */); // 0x000000018C35D3B4-0x000000018C35D7CC
+		public static void DrawWireArrow(Vector3 pos, Quaternion rot, Vector3 size, bool cross = false /* Metadata: 0x02640BD4 */); // 0x000000018C35CBB4-0x000000018C35CF3C
+		public static void DrawAxis(Vector3 pos, Quaternion rot, float size, bool resetMatrix = true /* Metadata: 0x02640BD5 */); // 0x000000018C35C500-0x000000018C35C760
+		public static void DrawBone(Vector3 pos, Vector3 tpos, float size); // 0x000000018C35C760-0x000000018C35CBB4
 	}
 
-	public static class MathUtility // TypeDefIndex: 55240
+	public static class MathUtility // TypeDefIndex: 82287
 	{
 		// Methods
-		public static float Clamp1(float a); // 0x00000001866AD86C-0x00000001866AD884
-		public static float Clamp01(float a); // 0x0000000189F3AE20-0x0000000189F3AE30
-		public static float3 Project(float3 v, float3 n); // 0x0000000189EFEF5C-0x0000000189EFEFD4
-		public static float Angle(float3 v1, float3 v2); // 0x00000001866A85BC-0x00000001866A868C
-		public static float3 ClampVector(float3 v, float minlength, float maxlength); // 0x0000000189EFEB30-0x0000000189EFEC04
-		public static float3 ClampVector(float3 v, float maxlength); // 0x0000000189F3B148-0x0000000189F3B1F4
-		public static float3 ClampDistance(float3 from, float3 to, float maxlength); // 0x0000000189F1260C-0x0000000189F126D0
-		public static bool ClampAngle(float3 dir, float3 basedir, float maxAngle, out float3 outdir); // 0x0000000189F3AE30-0x0000000189F3B0B0
-		public static quaternion FromToRotation(float3 from, float3 to, float t = 1f /* Metadata: 0x02346B3A */); // 0x0000000189F3BF44-0x0000000189F3C184
-		public static quaternion FromToRotation(quaternion from, quaternion to); // 0x00000001866AEEC4-0x00000001866AEF20
-		public static float Angle(quaternion a, quaternion b); // 0x0000000189F3ACF4-0x0000000189F3AD58
-		public static quaternion ClampAngle(quaternion from, quaternion to, float maxAngle); // 0x0000000189F3B0B0-0x0000000189F3B148
-		public static float3 AxisToEuler(float3 axis); // 0x0000000189F3AD58-0x0000000189F3AE20
-		public static quaternion AxisQuaternion(float3 dir); // 0x0000000189F21260-0x0000000189F228AC
-		public static float ClosestPtPointSegmentRatio(float3 c, float3 a, float3 b); // 0x0000000189EFEC04-0x0000000189EFECEC
-		public static float ClosestPtPointSegmentRatioNoClamp(float3 c, float3 a, float3 b); // 0x0000000189F3B33C-0x0000000189F3B418
-		public static float3 ClosestPtPointSegment(float3 c, float3 a, float3 b); // 0x0000000189ED7F24-0x0000000189ED8080
-		public static float3 ClosestPtPointSegmentNoClamp(float3 c, float3 a, float3 b); // 0x0000000189F3B1F4-0x0000000189F3B33C
-		public static bool IntersectPointPlane(float3 planePos, float3 planeDir, float3 pos, out float3 outpos); // 0x0000000189EFEE4C-0x0000000189EFEF5C
-		public static float IntersectPointPlaneDist(float3 planePos, float3 planeDir, float3 pos, out float3 outPos); // 0x0000000189EFECEC-0x0000000189EFEE4C
-		public static bool IntersectSegmentPlane(float3 a, float3 b, float3 p, float3 pn, out float3 opos); // 0x0000000189F3DE04-0x0000000189F3DF80
-		public static bool IntersectPointSphere(float3 sc, float sr, float3 pos, out float3 outPos); // 0x0000000189F3D5A0-0x0000000189F3D6F0
-		public static bool IntersectPointSphere(float3 p, float3 sc, float sr); // 0x0000000189F354EC-0x0000000189F3555C
-		public static bool IntersectRaySphere(float3 p, float3 d, float3 sc, float sr, out float3 q, out float t); // 0x0000000189F3DC68-0x0000000189F3DE04
-		public static bool IntersectLineSphare(float3 a, float3 b, float3 sc, float sr, out float3 q); // 0x0000000189F3CFE0-0x0000000189F3D190
-		public static bool IntersectRayCone(float3 o, float3 d, float3 c, float3 v, float cost, out float t, out float3 p); // 0x0000000189F3D6F0-0x0000000189F3DC68
-		public static bool IntersectLineConeSurface(float3 a, float3 b, float3 d, float dlen, float3 c, float3 v, float cost, float3 c1, float3 c2, out float3 p); // 0x0000000189F3C53C-0x0000000189F3C6F8
-		public static bool IntersectLineCylinderSurface(float3 sa, float3 sb, float3 p, float3 q, float r, out float t); // 0x0000000189F3CBC8-0x0000000189F3CFE0
-		public static bool IntersectLineCylinderSurface(float3 a, float3 b, float3 c1, float3 c2, float r1, float r2, out float3 p); // 0x0000000189F3C6F8-0x0000000189F3CBC8
-		public static bool IntersectLineCapsule(float3 a, float3 b, float3 c1, float3 c2, float r1, float r2, out float3 p); // 0x0000000189F3C1DC-0x0000000189F3C53C
-		public static bool IntersectTrianglePointDistance(float3 p, float3 p0, float3 p1, float3 p2, float restDist, float compressionStiffness, float stretchStiffness, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x0000000189F3F3E8-0x0000000189F3FDBC
-		public static bool IntersectTrianglePointDistanceSide(float3 p, float3 p0, float3 p1, float3 p2, float restDist, float compressionStiffness, float stretchStiffness, float side, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x0000000189F3E95C-0x0000000189F3F3E8
-		public static bool IntersectTrianglePointDistanceSide2(float3 p, float3 p0, float3 p1, float3 p2, float radius, float restDist, float compressionStiffness, float stretchStiffness, float side, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x0000000189F3DF80-0x0000000189F3E95C
-		public static float DistanceTrianglePoint(float3 p, float3 p0, float3 p1, float3 p2); // 0x0000000189F3B904-0x0000000189F3BF44
-		public static float3 TriangleCenter(float3 p0, float3 p1, float3 p2); // 0x00000001866B2454-0x00000001866B2508
-		public static float3 TriangleNormal(float3 p0, float3 p1, float3 p2); // 0x0000000189ED8080-0x0000000189ED815C
-		public static quaternion TriangleRotation(float3 p0, float3 p1, float3 p2); // 0x0000000189F3FF60-0x0000000189F400BC
-		public static quaternion TriangleCenterRotation(float3 p0, float3 p1, float3 p2, float3 p3); // 0x0000000189F3FDBC-0x0000000189F3FF60
-		public static float DistanceTriangleCenter(float3 p, float3 p0, float3 p1, float3 p2); // 0x00000001866AEDF8-0x00000001866AEEC4
-		public static float DirectionPointTriangle(float3 p, float3 a, float3 b, float3 c); // 0x00000001866AECDC-0x00000001866AEDF8
-		public static bool IntersectLineTriangle(float3 p, float3 q, float3 a, float3 b, float3 c, out float3 hitpos, out float t, out float3 n); // 0x0000000189F3D190-0x0000000189F3D5A0
-		public static float ClosestPtSegmentSegment(float3 p1, float3 q1, float3 p2, float3 q2, out float s, out float t, out float3 c1, out float3 c2); // 0x0000000189F3B418-0x0000000189F3B904
-		public static float GetBezierValue(BezierParam bparam, float t); // 0x0000000189F3C184-0x0000000189F3C1DC
-		public static float GetBezierValue(float sval, float eval, float curve, float t); // 0x0000000189F35460-0x0000000189F354EC
+		public static float Clamp1(float a); // 0x0000000188A629AC-0x0000000188A629C4
+		public static float Clamp01(float a); // 0x000000018C35E3AC-0x000000018C35E3BC
+		public static float3 Project(float3 v, float3 n); // 0x000000018C331290-0x000000018C331308
+		public static float Angle(float3 v1, float3 v2); // 0x00000001889EBE34-0x00000001889EBF04
+		public static float3 ClampVector(float3 v, float minlength, float maxlength); // 0x000000018C330E64-0x000000018C330F38
+		public static float3 ClampVector(float3 v, float maxlength); // 0x000000018C35E6D4-0x000000018C35E780
+		public static float3 ClampDistance(float3 from, float3 to, float maxlength); // 0x000000018C340300-0x000000018C3403C4
+		public static bool ClampAngle(float3 dir, float3 basedir, float maxAngle, out float3 outdir); // 0x000000018C35E3BC-0x000000018C35E63C
+		public static quaternion FromToRotation(float3 from, float3 to, float t = 1f /* Metadata: 0x02640BD6 */); // 0x000000018C35F4EC-0x000000018C35F72C
+		public static quaternion FromToRotation(quaternion from, quaternion to); // 0x0000000188A1B76C-0x0000000188A1BBE4
+		public static float Angle(quaternion a, quaternion b); // 0x000000018C35E27C-0x000000018C35E2E0
+		public static quaternion ClampAngle(quaternion from, quaternion to, float maxAngle); // 0x000000018C35E63C-0x000000018C35E6D4
+		public static float3 AxisToEuler(float3 axis); // 0x000000018C35E2E0-0x000000018C35E3AC
+		public static quaternion AxisQuaternion(float3 dir); // 0x000000018C34B1C0-0x000000018C34C804
+		public static float ClosestPtPointSegmentRatio(float3 c, float3 a, float3 b); // 0x000000018C330F38-0x000000018C331020
+		public static float ClosestPtPointSegmentRatioNoClamp(float3 c, float3 a, float3 b); // 0x000000018C35E8C8-0x000000018C35E9A4
+		public static float3 ClosestPtPointSegment(float3 c, float3 a, float3 b); // 0x000000018C30E08C-0x000000018C30E1E8
+		public static float3 ClosestPtPointSegmentNoClamp(float3 c, float3 a, float3 b); // 0x000000018C35E780-0x000000018C35E8C8
+		public static bool IntersectPointPlane(float3 planePos, float3 planeDir, float3 pos, out float3 outpos); // 0x000000018C331180-0x000000018C331290
+		public static float IntersectPointPlaneDist(float3 planePos, float3 planeDir, float3 pos, out float3 outPos); // 0x000000018C331020-0x000000018C331180
+		public static bool IntersectSegmentPlane(float3 a, float3 b, float3 p, float3 pn, out float3 opos); // 0x000000018C361488-0x000000018C361604
+		public static bool IntersectPointSphere(float3 sc, float sr, float3 pos, out float3 outPos); // 0x000000018C360C08-0x000000018C360D58
+		public static bool IntersectPointSphere(float3 p, float3 sc, float sr); // 0x000000018C358E9C-0x000000018C358F0C
+		public static bool IntersectRaySphere(float3 p, float3 d, float3 sc, float sr, out float3 q, out float t); // 0x000000018C3612E0-0x000000018C361488
+		public static bool IntersectLineSphare(float3 a, float3 b, float3 sc, float sr, out float3 q); // 0x000000018C360638-0x000000018C3607F0
+		public static bool IntersectRayCone(float3 o, float3 d, float3 c, float3 v, float cost, out float t, out float3 p); // 0x000000018C360D58-0x000000018C3612E0
+		public static bool IntersectLineConeSurface(float3 a, float3 b, float3 d, float dlen, float3 c, float3 v, float cost, float3 c1, float3 c2, out float3 p); // 0x000000018C35FB78-0x000000018C35FD3C
+		public static bool IntersectLineCylinderSurface(float3 sa, float3 sb, float3 p, float3 q, float r, out float t); // 0x000000018C36021C-0x000000018C360638
+		public static bool IntersectLineCylinderSurface(float3 a, float3 b, float3 c1, float3 c2, float r1, float r2, out float3 p); // 0x000000018C35FD3C-0x000000018C36021C
+		public static bool IntersectLineCapsule(float3 a, float3 b, float3 c1, float3 c2, float r1, float r2, out float3 p); // 0x000000018C35F810-0x000000018C35FB78
+		public static bool IntersectTrianglePointDistance(float3 p, float3 p0, float3 p1, float3 p2, float restDist, float compressionStiffness, float stretchStiffness, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x000000018C362A80-0x000000018C363460
+		public static bool IntersectTrianglePointDistanceSide(float3 p, float3 p0, float3 p1, float3 p2, float restDist, float compressionStiffness, float stretchStiffness, float side, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x000000018C361FEC-0x000000018C362A80
+		public static bool IntersectTrianglePointDistanceSide2(float3 p, float3 p0, float3 p1, float3 p2, float radius, float restDist, float compressionStiffness, float stretchStiffness, float side, out float3 corr, out float3 corr0, out float3 corr1, out float3 corr2); // 0x000000018C361604-0x000000018C361FEC
+		public static float DistanceTrianglePoint(float3 p, float3 p0, float3 p1, float3 p2); // 0x000000018C35EEA4-0x000000018C35F4EC
+		public static float3 TriangleCenter(float3 p0, float3 p1, float3 p2); // 0x0000000188A66070-0x0000000188A66124
+		public static float3 TriangleNormal(float3 p0, float3 p1, float3 p2); // 0x000000018C30E1E8-0x000000018C30E2C4
+		public static quaternion TriangleRotation(float3 p0, float3 p1, float3 p2); // 0x000000018C363604-0x000000018C363760
+		public static quaternion TriangleCenterRotation(float3 p0, float3 p1, float3 p2, float3 p3); // 0x000000018C363460-0x000000018C363604
+		public static float DistanceTriangleCenter(float3 p, float3 p0, float3 p1, float3 p2); // 0x0000000188A636C0-0x0000000188A6378C
+		public static float DirectionPointTriangle(float3 p, float3 a, float3 b, float3 c); // 0x0000000188A635A4-0x0000000188A636C0
+		public static bool IntersectLineTriangle(float3 p, float3 q, float3 a, float3 b, float3 c, out float3 hitpos, out float t, out float3 n); // 0x000000018C3607F0-0x000000018C360C08
+		public static float ClosestPtSegmentSegment(float3 p1, float3 q1, float3 p2, float3 q2, out float s, out float t, out float3 c1, out float3 c2); // 0x000000018C35E9A4-0x000000018C35EEA4
+		public static float GetBezierValue(BezierParam bparam, float t); // 0x000000018C35F72C-0x000000018C35F784
+		public static float GetBezierValue(float sval, float eval, float curve, float t); // 0x000000018C35F784-0x000000018C35F810
 	}
 
-	public static class MeshUtility // TypeDefIndex: 55243
+	public static class MeshUtility // TypeDefIndex: 82290
 	{
 		// Nested types
-		private class TetraVertex // TypeDefIndex: 55241
+		private class TetraVertex // TypeDefIndex: 82288
 		{
 			// Fields
 			public int index; // 0x10
 			public Vector3 pos; // 0x14
 	
 			// Constructors
-			public TetraVertex(); // 0x00000001841E1670-0x00000001841E1680
-			public TetraVertex(Vector3 pos, int index); // 0x0000000184DA3830-0x0000000184DA3850
+			public TetraVertex(); // 0x0000000186805BA0-0x0000000186805BB0
+			public TetraVertex(Vector3 pos, int index); // 0x00000001872513D0-0x00000001872513F0
 		}
 	
-		private class Tetra // TypeDefIndex: 55242
+		private class Tetra // TypeDefIndex: 82289
 		{
 			// Fields
 			public List<TetraVertex> vertexList; // 0x10
@@ -7063,64 +7060,64 @@ namespace MagicaCloth
 			public float tetraSize; // 0x34
 	
 			// Constructors
-			public Tetra(); // 0x0000000189F4C934-0x0000000189F4C9AC
-			public Tetra(TetraVertex a, TetraVertex b, TetraVertex c, TetraVertex d); // 0x0000000189F4C818-0x0000000189F4C934
+			public Tetra(); // 0x000000018C36F268-0x000000018C36F2E0
+			public Tetra(TetraVertex a, TetraVertex b, TetraVertex c, TetraVertex d); // 0x000000018C36F14C-0x000000018C36F268
 	
 			// Methods
-			public ulong GetTetraHash(); // 0x0000000189F4C4CC-0x0000000189F4C5C0
-			public void CalcCircumcircle(); // 0x0000000189F4BA9C-0x0000000189F4C104
-			public bool IntersectCircumcircle(Vector3 pos); // 0x0000000189ED4E1C-0x0000000189ED4E68
-			public bool CheckSame(Tetra tri); // 0x0000000189ED4B88-0x0000000189ED4C08
-			public bool ContainsPoint(TetraVertex p1); // 0x0000000189F4C478-0x0000000189F4C4CC
-			public bool ContainsPoint(TetraVertex p1, TetraVertex p2, TetraVertex p3, TetraVertex p4); // 0x0000000189F4C3AC-0x0000000189F4C478
-			public void CalcSize(); // 0x0000000189F4C104-0x0000000189F4C3AC
-			public bool Verification(); // 0x0000000189F4C5C0-0x0000000189F4C818
+			public ulong GetTetraHash(); // 0x000000018C36EDFC-0x000000018C36EEF4
+			public void CalcCircumcircle(); // 0x000000018C36E3CC-0x000000018C36EA34
+			public bool IntersectCircumcircle(Vector3 pos); // 0x000000018C30AEC4-0x000000018C30AF10
+			public bool CheckSame(Tetra tri); // 0x000000018C30AC2C-0x000000018C30ACAC
+			public bool ContainsPoint(TetraVertex p1); // 0x000000018C36EDA8-0x000000018C36EDFC
+			public bool ContainsPoint(TetraVertex p1, TetraVertex p2, TetraVertex p3, TetraVertex p4); // 0x000000018C36ECDC-0x000000018C36EDA8
+			public void CalcSize(); // 0x000000018C36EA34-0x000000018C36ECDC
+			public bool Verification(); // 0x000000018C36EEF4-0x000000018C36F14C
 		}
 	
 		// Methods
-		public static GameObject ReplaceSkinnedMeshRendererToMeshRenderer(SkinnedMeshRenderer sren, bool replaceSkinnedMeshRenderer); // 0x0000000189F45224-0x0000000189F45508
-		public static bool CalcMeshWorldPositionNormalTangent(MeshData meshData, List<Transform> boneList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189F40E84-0x0000000189F414C4
-		public static bool CalcMeshWorldPositionNormalTangent(Renderer ren, Mesh mesh, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x0000000189F414C4-0x0000000189F41F40
-		public static bool CalcMeshLocalNormalTangent(List<int> selectList, Vector3[] vlist, Vector2[] uvlist, int[] triangles, out List<Vector3> lnorList, out List<Vector3> ltanList); // 0x0000000189F401DC-0x0000000189F40E84
-		public static List<HashSet<int>> GetTriangleToVertexLinkList(int vcnt, List<int> lineList, List<int> triangleList); // 0x0000000189F446EC-0x0000000189F44A60
-		public static List<HashSet<int>> GetVertexLinkList(int vcnt, HashSet<uint> lineSet); // 0x0000000189F44E00-0x0000000189F45080
-		public static Dictionary<int, HashSet<int>> GetVertexToTriangles(List<int> triangleList); // 0x0000000189F45080-0x0000000189F45224
-		public static int RestTriangleVertex(int tindex, int v0, int v1, List<int> triangleList); // 0x0000000189F4560C-0x0000000189F4569C
-		public static void RestTriangleVertex(int tindex, int v0, List<int> triangleList, out int v1, out int v2); // 0x0000000189F45508-0x0000000189F4560C
-		public static bool CheckAdjacentTriangle(int tindex0, int tindex1, List<int> triangleList); // 0x0000000189F440DC-0x0000000189F441A0
-		public static Dictionary<uint, List<int>> GetTriangleEdgePair(List<int> triangleList); // 0x0000000189F44444-0x0000000189F445B0
-		private static void AddTriangleEdge(int v0, int v1, int tindex, Dictionary<uint, List<int>> triangleEdgeDict); // 0x0000000189F400BC-0x0000000189F401DC
-		public static List<ulong> GetTrianglePackList(List<int> triangleList); // 0x0000000189F445B0-0x0000000189F446EC
-		public static float ClosestPtBoneLine(Vector3 pos, Transform bone, float lineWidth, out Vector3 d); // 0x0000000189F441A0-0x0000000189F44444
-		public static List<Transform> GetUseBoneTransformList(Transform[] bones, Mesh mesh); // 0x0000000189F44A60-0x0000000189F44E00
-		public static void CalcTetraMesh(List<Vector3> posList, out int tetraCount, out List<int> tetraIndexList, out List<float> tetraSizeList); // 0x0000000189F41F40-0x0000000189F440DC
+		public static GameObject ReplaceSkinnedMeshRendererToMeshRenderer(SkinnedMeshRenderer sren, bool replaceSkinnedMeshRenderer); // 0x000000018C36890C-0x000000018C368BF0
+		public static bool CalcMeshWorldPositionNormalTangent(MeshData meshData, List<Transform> boneList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C364548-0x000000018C364B94
+		public static bool CalcMeshWorldPositionNormalTangent(Renderer ren, Mesh mesh, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector3> wtanList); // 0x000000018C364B94-0x000000018C365670
+		public static bool CalcMeshLocalNormalTangent(List<int> selectList, Vector3[] vlist, Vector2[] uvlist, int[] triangles, out List<Vector3> lnorList, out List<Vector3> ltanList); // 0x000000018C363880-0x000000018C364548
+		public static List<HashSet<int>> GetTriangleToVertexLinkList(int vcnt, List<int> lineList, List<int> triangleList); // 0x000000018C367DC0-0x000000018C368134
+		public static List<HashSet<int>> GetVertexLinkList(int vcnt, HashSet<uint> lineSet); // 0x000000018C3684D8-0x000000018C368768
+		public static Dictionary<int, HashSet<int>> GetVertexToTriangles(List<int> triangleList); // 0x000000018C368768-0x000000018C36890C
+		public static int RestTriangleVertex(int tindex, int v0, int v1, List<int> triangleList); // 0x000000018C368CF4-0x000000018C368D84
+		public static void RestTriangleVertex(int tindex, int v0, List<int> triangleList, out int v1, out int v2); // 0x000000018C368BF0-0x000000018C368CF4
+		public static bool CheckAdjacentTriangle(int tindex0, int tindex1, List<int> triangleList); // 0x000000018C3677A8-0x000000018C36786C
+		public static Dictionary<uint, List<int>> GetTriangleEdgePair(List<int> triangleList); // 0x000000018C367B10-0x000000018C367C84
+		private static void AddTriangleEdge(int v0, int v1, int tindex, Dictionary<uint, List<int>> triangleEdgeDict); // 0x000000018C363760-0x000000018C363880
+		public static List<ulong> GetTrianglePackList(List<int> triangleList); // 0x000000018C367C84-0x000000018C367DC0
+		public static float ClosestPtBoneLine(Vector3 pos, Transform bone, float lineWidth, out Vector3 d); // 0x000000018C36786C-0x000000018C367B10
+		public static List<Transform> GetUseBoneTransformList(Transform[] bones, Mesh mesh); // 0x000000018C368134-0x000000018C3684D8
+		public static void CalcTetraMesh(List<Vector3> posList, out int tetraCount, out List<int> tetraIndexList, out List<float> tetraSizeList); // 0x000000018C365670-0x000000018C3677A8
 		public static Transform GetReplaceBone<T>(Transform now, Dictionary<T, Transform> boneReplaceDict)
 			where T : class;
 	}
 
-	public class StaticStringBuilder // TypeDefIndex: 55244
+	public class StaticStringBuilder // TypeDefIndex: 82291
 	{
 		// Fields
 		private static StringBuilder stringBuilder; // 0x00
 	
 		// Properties
-		public static StringBuilder Instance { get; } // 0x0000000189F4BA0C-0x0000000189F4BA5C 
+		public static StringBuilder Instance { get; } // 0x000000018C36E33C-0x000000018C36E38C 
 	
 		// Constructors
-		public StaticStringBuilder(); // 0x00000001841E1670-0x00000001841E1680
-		static StaticStringBuilder(); // 0x0000000189F4B988-0x0000000189F4BA0C
+		public StaticStringBuilder(); // 0x0000000186805BA0-0x0000000186805BB0
+		static StaticStringBuilder(); // 0x000000018C36E2B8-0x000000018C36E33C
 	
 		// Methods
-		public static void Clear(); // 0x0000000189F4B8D8-0x0000000189F4B930
-		public static StringBuilder Append(params object[] args); // 0x0000000189F4B838-0x0000000189F4B8D8
-		public static StringBuilder AppendLine(params object[] args); // 0x0000000189F4B60C-0x0000000189F4B6E0
-		public static StringBuilder AppendLine(); // 0x0000000189F4B6E0-0x0000000189F4B75C
-		public static string AppendToString(params object[] args); // 0x0000000189F4B75C-0x0000000189F4B838
-		public static new string ToString(); // 0x0000000189F4B930-0x0000000189F4B988
+		public static void Clear(); // 0x000000018C36E208-0x000000018C36E260
+		public static StringBuilder Append(params object[] args); // 0x000000018C36E15C-0x000000018C36E208
+		public static StringBuilder AppendLine(params object[] args); // 0x000000018C36DF18-0x000000018C36DFF8
+		public static StringBuilder AppendLine(); // 0x000000018C36DFF8-0x000000018C36E074
+		public static string AppendToString(params object[] args); // 0x000000018C36E074-0x000000018C36E15C
+		public static new string ToString(); // 0x000000018C36E260-0x000000018C36E2B8
 	}
 
 	[Serializable]
-	public class UpdateTimeManager // TypeDefIndex: 55248
+	public class UpdateTimeManager // TypeDefIndex: 82295
 	{
 		// Fields
 		[SerializeField]
@@ -7138,22 +7135,22 @@ namespace MagicaCloth
 		private int fixedUpdateCount; // 0x28
 	
 		// Properties
-		public int FixedUpdateCount { get; } // 0x00000001811F2A90-0x00000001811F2AA0 
-		public int UpdatePerSecond { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
-		public float UpdateIntervalTime { get; } // 0x0000000184DA3880-0x0000000184DA38A0 
-		public float UpdatePower { get; } // 0x0000000184DA38A0-0x0000000184DA38C0 
-		public float TimeScale { get; set; } // 0x0000000184D868F0-0x0000000184D86900 0x0000000189F4C9E8-0x0000000189F4CA00
-		public float DeltaTime { get; } // 0x0000000185391A8C-0x0000000185391A94 
-		public float PhysicsDeltaTime { get; } // 0x0000000183233AF0-0x0000000183233B20 
-		public float AverageDeltaTime { get; } // 0x0000000189F4C9AC-0x0000000189F4C9B4 
-		public bool IsUnscaledUpdate { get; } // 0x0000000189F4C9B4-0x0000000189F4C9C8 
-		public bool IsDelay { get; } // 0x0000000183233A70-0x0000000183233A80 
-		public float FuturePredictionRate { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x0000000189F4C9D0-0x0000000189F4C9E8
-		public bool UpdateBoneScale { get; set; } // 0x0000000184D86870-0x0000000184D86880 0x0000000184D86880-0x0000000184D86890
-		public int WorkerMaximumCount { get; } // 0x0000000189F4C9C8-0x0000000189F4C9D0 
+		public int FixedUpdateCount { get; } // 0x0000000182271A60-0x0000000182271A70 
+		public int UpdatePerSecond { get; } // 0x00000001828BC2B0-0x00000001828BC2C0 
+		public float UpdateIntervalTime { get; } // 0x0000000187251420-0x0000000187251440 
+		public float UpdatePower { get; } // 0x0000000187251440-0x0000000187251460 
+		public float TimeScale { get; set; } // 0x0000000187233410-0x0000000187233420 0x000000018C36F308-0x000000018C36F320
+		public float DeltaTime { get; } // 0x0000000187834D7C-0x0000000187834D84 
+		public float PhysicsDeltaTime { get; } // 0x0000000185152C90-0x0000000185152CE0 
+		public float AverageDeltaTime { get; } // 0x000000018C36F2E0-0x000000018C36F2E8 
+		public bool IsUnscaledUpdate { get; } // 0x0000000185221930-0x0000000185221950 
+		public bool IsDelay { get; } // 0x000000018521E5B0-0x000000018521EA30 
+		public float FuturePredictionRate { get; set; } // 0x00000001872332C0-0x00000001872332D0 0x000000018C36F2F0-0x000000018C36F308
+		public bool UpdateBoneScale { get; set; } // 0x000000018223FE80-0x000000018223FE90 0x000000018223FE90-0x000000018223FEA0
+		public int WorkerMaximumCount { get; } // 0x000000018C36F2E8-0x000000018C36F2F0 
 	
 		// Nested types
-		public enum UpdateCount // TypeDefIndex: 55245
+		public enum UpdateCount // TypeDefIndex: 82292
 		{
 			_60 = 60,
 			_90_Default = 90,
@@ -7162,33 +7159,33 @@ namespace MagicaCloth
 			_180 = 180
 		}
 	
-		public enum UpdateMode // TypeDefIndex: 55246
+		public enum UpdateMode // TypeDefIndex: 82293
 		{
 			UnscaledTime = 0,
 			OncePerFrame = 1,
 			DelayUnscaledTime = 10
 		}
 	
-		public enum UpdateLocation // TypeDefIndex: 55247
+		public enum UpdateLocation // TypeDefIndex: 82294
 		{
 			AfterLateUpdate = 0,
 			BeforeLateUpdate = 1
 		}
 	
 		// Constructors
-		public UpdateTimeManager(); // 0x0000000184DA3860-0x0000000184DA3880
+		public UpdateTimeManager(); // 0x0000000187251400-0x0000000187251420
 	
 		// Methods
-		public void ResetFixedUpdateCount(); // 0x0000000184DA3850-0x0000000184DA3860
-		public void AddFixedUpdateCount(); // 0x0000000184D9EBD0-0x0000000184D9EBE0
-		public UpdateMode GetUpdateMode(); // 0x0000000184D882A0-0x0000000184D882B0
-		public void SetUpdateMode(UpdateMode mode); // 0x0000000184D8F540-0x0000000184D8F550
-		public UpdateLocation GetUpdateLocation(); // 0x00000001811EF5B0-0x00000001811EF5C0
-		public void SetUpdateLocation(UpdateLocation location); // 0x00000001811EF9B0-0x00000001811EF9C0
-		public void SetUpdatePerSecond(UpdateCount ucount); // 0x00000001814F51F0-0x00000001814F5220
+		public void ResetFixedUpdateCount(); // 0x00000001872513F0-0x0000000187251400
+		public void AddFixedUpdateCount(); // 0x000000018724CCC0-0x000000018724CCD0
+		public UpdateMode GetUpdateMode(); // 0x0000000182971EE0-0x0000000182971EF0
+		public void SetUpdateMode(UpdateMode mode); // 0x000000018275FD70-0x000000018275FD80
+		public UpdateLocation GetUpdateLocation(); // 0x00000001844AF510-0x00000001844AF520
+		public void SetUpdateLocation(UpdateLocation location); // 0x000000018442F470-0x000000018442F480
+		public void SetUpdatePerSecond(UpdateCount ucount); // 0x0000000182234E90-0x0000000182234EA0
 	}
 
-	public class ReferenceDataBuilder<T> // TypeDefIndex: 55249
+	public class ReferenceDataBuilder<T> // TypeDefIndex: 82296
 		where T : struct
 	{
 		// Fields
@@ -7208,20 +7205,20 @@ namespace MagicaCloth
 	}
 
 	[Serializable]
-	public struct ReferenceDataIndex // TypeDefIndex: 55250
+	public struct ReferenceDataIndex // TypeDefIndex: 82297
 	{
 		// Fields
 		public int startIndex; // 0x00
 		public int count; // 0x04
 	}
 
-	public interface IDataHash // TypeDefIndex: 55251
+	public interface IDataHash // TypeDefIndex: 82298
 	{
 		// Methods
 		int GetDataHash();
 	}
 
-	public interface IShareDataObject // TypeDefIndex: 55252
+	public interface IShareDataObject // TypeDefIndex: 82299
 	{
 		// Methods
 		List<ShareDataObject> GetAllShareDataObject();
@@ -7229,7 +7226,7 @@ namespace MagicaCloth
 	}
 
 	[Serializable]
-	public abstract class ShareDataObject : ScriptableObject, IDataVerify, IDataHash // TypeDefIndex: 55253
+	public abstract class ShareDataObject : ScriptableObject, IDataVerify, IDataHash // TypeDefIndex: 82300
 	{
 		// Fields
 		[SerializeField]
@@ -7238,18 +7235,18 @@ namespace MagicaCloth
 		protected int dataVersion; // 0x1C
 	
 		// Properties
-		public int SaveDataHash { get; set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x00000001811EF9B0-0x00000001811EF9C0
-		public int SaveDataVersion { get; set; } // 0x0000000184D86310-0x0000000184D86320 0x0000000184D86320-0x0000000184D86330
+		public int SaveDataHash { get; set; } // 0x00000001844AF510-0x00000001844AF520 0x000000018442F470-0x000000018442F480
+		public int SaveDataVersion { get; set; } // 0x0000000187233000-0x0000000187233010 0x0000000187233010-0x0000000187233020
 	
 		// Constructors
-		protected ShareDataObject(); // 0x0000000183573370-0x0000000183573380
+		protected ShareDataObject(); // 0x0000000185DD6260-0x0000000185DD6270
 	
 		// Methods
 		public abstract int GetDataHash();
 		public abstract int GetVersion();
 		public abstract Define.Error VerifyData();
-		public virtual void CreateVerifyData(); // 0x0000000189F4B5B0-0x0000000189F4B5E0
-		public virtual string GetInformation(); // 0x0000000189F4B5E0-0x0000000189F4B60C
+		public virtual void CreateVerifyData(); // 0x000000018C36DEBC-0x000000018C36DEEC
+		public virtual string GetInformation(); // 0x000000018C36DEEC-0x000000018C36DF18
 		public static T CreateShareData<T>(string dataName)
 			where T : ShareDataObject;
 		public static bool RemoveNullAndDuplication<T>(List<T> data);
@@ -7257,28 +7254,28 @@ namespace MagicaCloth
 			where T : ShareDataObject;
 	}
 
-	public class StopWatch // TypeDefIndex: 55254
+	public class StopWatch // TypeDefIndex: 82301
 	{
 		// Fields
 		private float startTime; // 0x10
 		private float endTime; // 0x14
 	
 		// Properties
-		public float ElapsedSeconds { get; } // 0x0000000184DA3820-0x0000000184DA3830 
-		public float ElapsedMilliseconds { get; } // 0x0000000184DA3800-0x0000000184DA3820 
+		public float ElapsedSeconds { get; } // 0x00000001872513C0-0x00000001872513D0 
+		public float ElapsedMilliseconds { get; } // 0x00000001872513A0-0x00000001872513C0 
 	
 		// Constructors
-		public StopWatch(); // 0x00000001841E1670-0x00000001841E1680
+		public StopWatch(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public StopWatch Start(); // 0x0000000189F4BA5C-0x0000000189F4BA7C
-		public StopWatch Stop(); // 0x0000000189F4BA7C-0x0000000189F4BA9C
+		public StopWatch Start(); // 0x000000018C36E38C-0x000000018C36E3AC
+		public StopWatch Stop(); // 0x000000018C36E3AC-0x000000018C36E3CC
 	}
 }
 
 namespace MagicaReductionMesh
 {
-	public class ReductionMesh // TypeDefIndex: 54951
+	public class ReductionMesh // TypeDefIndex: 81998
 	{
 		// Fields
 		[CompilerGenerated]
@@ -7288,13 +7285,13 @@ namespace MagicaReductionMesh
 		private DebugData debugData; // 0x28
 	
 		// Properties
-		public ReductionWeightMode WeightMode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-		public MeshData MeshData { get; } // 0x0000000189ED1A44-0x0000000189ED1A70 
-		public ReductionData ReductionData { get; } // 0x0000000184A379B0-0x0000000184A379E0 
-		public DebugData DebugData { get; } // 0x0000000189ED1A18-0x0000000189ED1A44 
+		public ReductionWeightMode WeightMode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+		public MeshData MeshData { get; } // 0x000000018C307AD8-0x000000018C307B04 
+		public ReductionData ReductionData { get; } // 0x000000018C307B04-0x000000018C307B30 
+		public DebugData DebugData { get; } // 0x000000018C307AAC-0x000000018C307AD8 
 	
 		// Nested types
-		public enum ReductionWeightMode // TypeDefIndex: 54950
+		public enum ReductionWeightMode // TypeDefIndex: 81997
 		{
 			Distance = 0,
 			Average = 1,
@@ -7302,47 +7299,47 @@ namespace MagicaReductionMesh
 		}
 	
 		// Constructors
-		public ReductionMesh(); // 0x0000000189ED1960-0x0000000189ED1A18
+		public ReductionMesh(); // 0x000000018C3079F4-0x000000018C307AAC
 	
 		// Methods
-		public int AddMesh(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList); // 0x0000000189ED17D0-0x0000000189ED1838
-		public int AddMesh(Renderer ren); // 0x0000000189ED1554-0x0000000189ED17D0
-		public int AddMesh(Transform root, List<Vector3> posList, List<Vector3> norList = null, List<Vector4> tanList = null, List<Vector2> uvList = null, List<int> triangleList = null); // 0x0000000189ED14E0-0x0000000189ED1554
-		public void Reduction(float zeroRadius, float radius, float polygonLength, bool createTetra); // 0x0000000189ED1868-0x0000000189ED1960
-		public FinalData GetFinalData(Transform root); // 0x0000000189ED1838-0x0000000189ED1868
+		public int AddMesh(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList); // 0x000000018C307874-0x000000018C3078CC
+		public int AddMesh(Renderer ren); // 0x000000018C3075EC-0x000000018C307874
+		public int AddMesh(Transform root, List<Vector3> posList, List<Vector3> norList = null, List<Vector4> tanList = null, List<Vector2> uvList = null, List<int> triangleList = null); // 0x000000018C307594-0x000000018C3075EC
+		public void Reduction(float zeroRadius, float radius, float polygonLength, bool createTetra); // 0x000000018C3078FC-0x000000018C3079F4
+		public FinalData GetFinalData(Transform root); // 0x000000018C3078CC-0x000000018C3078FC
 	}
 
-	public abstract class ReductionMeshAccess // TypeDefIndex: 54952
+	public abstract class ReductionMeshAccess // TypeDefIndex: 81999
 	{
 		// Fields
 		protected ReductionMesh parent; // 0x10
 	
 		// Properties
-		protected MeshData MeshData { get; } // 0x0000000189ED14A0-0x0000000189ED14C0 
-		protected ReductionData ReductionData { get; } // 0x0000000189ED14C0-0x0000000189ED14E0 
-		protected DebugData DebugData { get; } // 0x0000000189ED1480-0x0000000189ED14A0 
+		protected MeshData MeshData { get; } // 0x000000018C307554-0x000000018C307574 
+		protected ReductionData ReductionData { get; } // 0x000000018C307574-0x000000018C307594 
+		protected DebugData DebugData { get; } // 0x000000018C307534-0x000000018C307554 
 	
 		// Constructors
-		protected ReductionMeshAccess(); // 0x00000001841E1670-0x00000001841E1680
+		protected ReductionMeshAccess(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public virtual void SetParent(ReductionMesh parent); // 0x00000001853908C0-0x00000001853908D0
+		public virtual void SetParent(ReductionMesh parent); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 
-	public class DebugData : ReductionMeshAccess // TypeDefIndex: 54953
+	public class DebugData : ReductionMeshAccess // TypeDefIndex: 82000
 	{
 		// Constructors
-		public DebugData(); // 0x00000001841E1670-0x00000001841E1680
+		public DebugData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public void DispMeshInfo(string header = "" /* Metadata: 0x02346817 */); // 0x0000000189EC2B90-0x0000000189EC2E3C
-		public static void DebugDrawShared(FinalData final, bool drawTriangle = true /* Metadata: 0x02346818 */, bool drawLine = true /* Metadata: 0x02346819 */, bool drawTetra = true /* Metadata: 0x0234681A */, bool drawVertexNormal = true /* Metadata: 0x0234681B */, bool drawVertexTangent = true /* Metadata: 0x0234681C */, bool drawNumber = false /* Metadata: 0x0234681D */, int maxPolygonCount = 2147483647 /* Metadata: 0x0234681E */, int layer = -1 /* Metadata: 0x0234681F */, int tetraIndex = -1 /* Metadata: 0x02346820 */, float tetraSize = 1f /* Metadata: 0x02346821 */, List<int> drawNumberList = null, float axisSize = 0.01f /* Metadata: 0x02346825 */); // 0x0000000189EC1FCC-0x0000000189EC2B90
-		private static void DrawTetra(FinalData final, int tetraIndex, List<Vector3> wposList, float tetraSize); // 0x0000000189EC2E3C-0x0000000189EC30E4
-		public static void DebugDrawChild(FinalData final, bool drawPosition = false /* Metadata: 0x02346829 */, bool drawNormal = false /* Metadata: 0x0234682A */, bool drawTriangle = false /* Metadata: 0x0234682B */, bool drawNumber = false /* Metadata: 0x0234682C */, int maxVertexCount = 2147483647 /* Metadata: 0x0234682D */, float positionSize = 0.001f /* Metadata: 0x0234682E */, float axisSize = 0.01f /* Metadata: 0x02346832 */); // 0x0000000189EC1B24-0x0000000189EC1FCC
+		public void DispMeshInfo(string header = "" /* Metadata: 0x026408B3 */); // 0x000000018C2F8B84-0x000000018C2F8E30
+		public static void DebugDrawShared(FinalData final, bool drawTriangle = true /* Metadata: 0x026408B4 */, bool drawLine = true /* Metadata: 0x026408B5 */, bool drawTetra = true /* Metadata: 0x026408B6 */, bool drawVertexNormal = true /* Metadata: 0x026408B7 */, bool drawVertexTangent = true /* Metadata: 0x026408B8 */, bool drawNumber = false /* Metadata: 0x026408B9 */, int maxPolygonCount = 2147483647 /* Metadata: 0x026408BA */, int layer = -1 /* Metadata: 0x026408BB */, int tetraIndex = -1 /* Metadata: 0x026408BC */, float tetraSize = 1f /* Metadata: 0x026408BD */, List<int> drawNumberList = null, float axisSize = 0.01f /* Metadata: 0x026408C1 */); // 0x000000018C2F7FBC-0x000000018C2F8B84
+		private static void DrawTetra(FinalData final, int tetraIndex, List<Vector3> wposList, float tetraSize); // 0x000000018C2F8E30-0x000000018C2F90D8
+		public static void DebugDrawChild(FinalData final, bool drawPosition = false /* Metadata: 0x026408C5 */, bool drawNormal = false /* Metadata: 0x026408C6 */, bool drawTriangle = false /* Metadata: 0x026408C7 */, bool drawNumber = false /* Metadata: 0x026408C8 */, int maxVertexCount = 2147483647 /* Metadata: 0x026408C9 */, float positionSize = 0.001f /* Metadata: 0x026408CA */, float axisSize = 0.01f /* Metadata: 0x026408CE */); // 0x000000018C2F7B00-0x000000018C2F7FBC
 	}
 
 	[Serializable]
-	public class FinalData // TypeDefIndex: 54956
+	public class FinalData // TypeDefIndex: 82003
 	{
 		// Fields
 		public List<Vector3> vertices; // 0x10
@@ -7364,28 +7361,28 @@ namespace MagicaReductionMesh
 		public List<MeshInfo> meshList; // 0x90
 	
 		// Properties
-		public bool IsValid { get; } // 0x0000000189EC35C4-0x0000000189EC3608 
-		public int VertexCount { get; } // 0x0000000189EC3720-0x0000000189EC3760 
-		public int LineCount { get; } // 0x0000000189EC3608-0x0000000189EC364C 
-		public int TriangleCount { get; } // 0x0000000189EC36D4-0x0000000189EC3720 
-		public int TetraCount { get; } // 0x0000000189EC368C-0x0000000189EC36D4 
-		public int BoneCount { get; } // 0x0000000189EC3584-0x0000000189EC35C4 
-		public bool IsSkinning { get; } // 0x0000000182FFF600-0x0000000182FFF610 
-		public int MeshCount { get; } // 0x0000000189EC364C-0x0000000189EC368C 
+		public bool IsValid { get; } // 0x000000018C2F95B8-0x000000018C2F95FC 
+		public int VertexCount { get; } // 0x000000018C2F9714-0x000000018C2F9754 
+		public int LineCount { get; } // 0x000000018C2F95FC-0x000000018C2F9640 
+		public int TriangleCount { get; } // 0x000000018C2F96C8-0x000000018C2F9714 
+		public int TetraCount { get; } // 0x000000018C2F9680-0x000000018C2F96C8 
+		public int BoneCount { get; } // 0x000000018C2F9578-0x000000018C2F95B8 
+		public bool IsSkinning { get; } // 0x00000001851A4410-0x00000001851A4420 
+		public int MeshCount { get; } // 0x000000018C2F9640-0x000000018C2F9680 
 	
 		// Nested types
 		[Serializable]
-		public class MeshIndexData // TypeDefIndex: 54954
+		public class MeshIndexData // TypeDefIndex: 82001
 		{
 			// Fields
 			public List<uint> meshIndexPackList; // 0x10
 	
 			// Constructors
-			public MeshIndexData(); // 0x0000000189ECE46C-0x0000000189ECE4E4
+			public MeshIndexData(); // 0x000000018C3044C4-0x000000018C30453C
 		}
 	
 		[Serializable]
-		public class MeshInfo // TypeDefIndex: 54955
+		public class MeshInfo // TypeDefIndex: 82002
 		{
 			// Fields
 			public int meshIndex; // 0x10
@@ -7397,17 +7394,17 @@ namespace MagicaReductionMesh
 			public List<int> parents; // 0x40
 	
 			// Properties
-			public int VertexCount { get; } // 0x0000000189ECE6E8-0x0000000189ECE728 
+			public int VertexCount { get; } // 0x000000018C304740-0x000000018C304780 
 	
 			// Constructors
-			public MeshInfo(); // 0x0000000189ECE4E4-0x0000000189ECE670
+			public MeshInfo(); // 0x000000018C30453C-0x000000018C3046C8
 		}
 	
 		// Constructors
-		public FinalData(); // 0x0000000189EC30E4-0x0000000189EC3584
+		public FinalData(); // 0x000000018C2F90D8-0x000000018C2F9578
 	}
 
-	public class MeshData : ReductionMeshAccess // TypeDefIndex: 54976
+	public class MeshData : ReductionMeshAccess // TypeDefIndex: 82023
 	{
 		// Fields
 		public List<Vertex> originalVertexList; // 0x18
@@ -7424,29 +7421,29 @@ namespace MagicaReductionMesh
 		private float removeSameTrianglePairAngle; // 0x60
 	
 		// Properties
-		public int VertexCount { get; } // 0x0000000189ECE42C-0x0000000189ECE46C 
-		public int LineCount { get; } // 0x0000000189ECE32C-0x0000000189ECE36C 
-		public int TriangleCount { get; } // 0x0000000189ECE3EC-0x0000000189ECE42C 
-		public int TetraCount { get; } // 0x0000000189ECE3AC-0x0000000189ECE3EC 
-		public int MeshCount { get; } // 0x0000000189ECE36C-0x0000000189ECE3AC 
-		public float WeightPow { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
-		public int MaxWeightCount { get; set; } // 0x0000000184D86540-0x0000000184D86550 0x0000000184D86590-0x0000000184D865A0
-		public float SameSurfaceAngle { get; set; } // 0x0000000184D88400-0x0000000184D88410 0x0000000184D88430-0x0000000184D88440
-		public bool RemoveSameTrianglePair { get; set; } // 0x0000000184D86D90-0x0000000184D86DA0 0x0000000184D86DB0-0x0000000184D86DC0
-		public float RemoveSameTrianglePairAngle { get; set; } // 0x0000000184D88480-0x0000000184D88490 0x0000000184D884A0-0x0000000184D884B0
+		public int VertexCount { get; } // 0x000000018C304484-0x000000018C3044C4 
+		public int LineCount { get; } // 0x000000018C304384-0x000000018C3043C4 
+		public int TriangleCount { get; } // 0x000000018C304444-0x000000018C304484 
+		public int TetraCount { get; } // 0x000000018C304404-0x000000018C304444 
+		public int MeshCount { get; } // 0x000000018C3043C4-0x000000018C304404 
+		public float WeightPow { get; set; } // 0x000000018226EE90-0x000000018226EEA0 0x000000018226EF10-0x000000018226EF20
+		public int MaxWeightCount { get; set; } // 0x00000001872336F0-0x0000000187233700 0x0000000187233700-0x0000000187233710
+		public float SameSurfaceAngle { get; set; } // 0x00000001872353B0-0x00000001872353C0 0x00000001872353E0-0x00000001872353F0
+		public bool RemoveSameTrianglePair { get; set; } // 0x000000018225DF90-0x000000018225DFA0 0x000000018225DFA0-0x000000018225DFB0
+		public float RemoveSameTrianglePairAngle { get; set; } // 0x00000001872352B0-0x00000001872352C0 0x00000001872352D0-0x00000001872352E0
 	
 		// Nested types
-		public class WeightData // TypeDefIndex: 54957
+		public class WeightData // TypeDefIndex: 82004
 		{
 			// Fields
 			public int boneIndex; // 0x10
 			public float boneWeight; // 0x14
 	
 			// Constructors
-			public WeightData(); // 0x00000001841E1670-0x00000001841E1680
+			public WeightData(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		public class Vertex // TypeDefIndex: 54958
+		public class Vertex // TypeDefIndex: 82005
 		{
 			// Fields
 			public int meshIndex; // 0x10
@@ -7460,10 +7457,10 @@ namespace MagicaReductionMesh
 			public List<WeightData> boneWeightList; // 0x50
 	
 			// Constructors
-			public Vertex(); // 0x0000000189ED7C38-0x0000000189ED7F24
+			public Vertex(); // 0x000000018C30DD6C-0x000000018C30E08C
 		}
 	
-		public class MeshInfo // TypeDefIndex: 54959
+		public class MeshInfo // TypeDefIndex: 82006
 		{
 			// Fields
 			public int index; // 0x10
@@ -7472,10 +7469,10 @@ namespace MagicaReductionMesh
 			public List<Vertex> vertexList; // 0x28
 	
 			// Constructors
-			public MeshInfo(); // 0x0000000189ECE670-0x0000000189ECE6E8
+			public MeshInfo(); // 0x000000018C3046C8-0x000000018C304740
 		}
 	
-		public class ShareVertex // TypeDefIndex: 54964
+		public class ShareVertex // TypeDefIndex: 82011
 		{
 			// Fields
 			public int sindex; // 0x10
@@ -7493,21 +7490,21 @@ namespace MagicaReductionMesh
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass20_0 // TypeDefIndex: 54960
+			private sealed class __c__DisplayClass20_0 // TypeDefIndex: 82007
 			{
 				// Fields
 				public WeightData w; // 0x10
 	
 				// Constructors
-				public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
+				public __c__DisplayClass20_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal bool _CalcBoneWeight_DistanceAverage_b__1(WeightData wdata); // 0x0000000189ED609C-0x0000000189ED60C4
+				internal bool _CalcBoneWeight_DistanceAverage_b__1(WeightData wdata); // 0x000000018C30C15C-0x000000018C30C184
 			}
 	
 			[Serializable]
 			[CompilerGenerated]
-			private sealed class __c // TypeDefIndex: 54961
+			private sealed class __c // TypeDefIndex: 82008
 			{
 				// Fields
 				public static readonly __c __9; // 0x00
@@ -7516,61 +7513,61 @@ namespace MagicaReductionMesh
 				public static Comparison<WeightData> __9__23_0; // 0x18
 	
 				// Constructors
-				static __c(); // 0x0000000189ED61C0-0x0000000189ED6224
-				public __c(); // 0x00000001841E1670-0x00000001841E1680
+				static __c(); // 0x000000018C30C280-0x000000018C30C2E4
+				public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal int _CalcBoneWeight_DistanceAverage_b__20_0(WeightData a, WeightData b); // 0x0000000189ED6034-0x0000000189ED606C
-				internal int _CalcBoneWeight_Average_b__21_0(WeightData a, WeightData b); // 0x0000000189ED6034-0x0000000189ED606C
-				internal int _CalcBoneWeight_Distance_b__23_0(WeightData a, WeightData b); // 0x0000000189ED6034-0x0000000189ED606C
+				internal int _CalcBoneWeight_DistanceAverage_b__20_0(WeightData a, WeightData b); // 0x000000018C30C0F4-0x000000018C30C12C
+				internal int _CalcBoneWeight_Average_b__21_0(WeightData a, WeightData b); // 0x000000018C30C0F4-0x000000018C30C12C
+				internal int _CalcBoneWeight_Distance_b__23_0(WeightData a, WeightData b); // 0x000000018C30C0F4-0x000000018C30C12C
 			}
 	
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass21_0 // TypeDefIndex: 54962
+			private sealed class __c__DisplayClass21_0 // TypeDefIndex: 82009
 			{
 				// Fields
 				public WeightData w; // 0x10
 	
 				// Constructors
-				public __c__DisplayClass21_0(); // 0x00000001841E1670-0x00000001841E1680
+				public __c__DisplayClass21_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal bool _CalcBoneWeight_Average_b__1(WeightData wdata); // 0x0000000189ED609C-0x0000000189ED60C4
+				internal bool _CalcBoneWeight_Average_b__1(WeightData wdata); // 0x000000018C30C15C-0x000000018C30C184
 			}
 	
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass23_0 // TypeDefIndex: 54963
+			private sealed class __c__DisplayClass23_0 // TypeDefIndex: 82010
 			{
 				// Fields
 				public WeightData w; // 0x10
 	
 				// Constructors
-				public __c__DisplayClass23_0(); // 0x00000001841E1670-0x00000001841E1680
+				public __c__DisplayClass23_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal bool _CalcBoneWeight_Distance_b__1(WeightData wdata); // 0x0000000189ED609C-0x0000000189ED60C4
+				internal bool _CalcBoneWeight_Distance_b__1(WeightData wdata); // 0x000000018C30C15C-0x000000018C30C184
 			}
 	
 			// Constructors
-			public ShareVertex(); // 0x0000000189ED3F08-0x0000000189ED4078
+			public ShareVertex(); // 0x000000018C309FAC-0x000000018C30A11C
 	
 			// Methods
-			public void AddLink(ShareVertex mv); // 0x0000000189ED1A70-0x0000000189ED1AC8
-			public void ReplaseLink(ShareVertex old, ShareVertex mv); // 0x0000000189ED3E50-0x0000000189ED3F08
-			public void RecalcCoordinate(); // 0x0000000189ED3B68-0x0000000189ED3E50
-			public void CalcNormalTangentFromTriangle(); // 0x0000000189ED3728-0x0000000189ED3964
-			public Vector3 CalcLocalPos(Vector3 pos); // 0x0000000189ED3634-0x0000000189ED3728
-			public Vector3 CalcLocalDir(Vector3 dir); // 0x0000000189ED3584-0x0000000189ED3634
-			public Matrix4x4 CalcWorldToLocalMatrix(); // 0x0000000189ED3964-0x0000000189ED3A78
-			public void CalcBoneWeight(ReductionMesh.ReductionWeightMode weightMode, float weightPow); // 0x0000000189ED3548-0x0000000189ED3584
-			private void CalcBoneWeight_DistanceAverage(float weightPow); // 0x0000000189ED236C-0x0000000189ED2D54
-			private void CalcBoneWeight_Average(); // 0x0000000189ED1CF8-0x0000000189ED236C
-			private void AdjustWeight(List<WeightData> sumlist); // 0x0000000189ED1AC8-0x0000000189ED1CF8
-			private void CalcBoneWeight_Distance(float weightPow); // 0x0000000189ED2D54-0x0000000189ED3548
-			public BoneWeight GetBoneWeight(); // 0x0000000189ED3A78-0x0000000189ED3B68
+			public void AddLink(ShareVertex mv); // 0x000000018C307B30-0x000000018C307B88
+			public void ReplaseLink(ShareVertex old, ShareVertex mv); // 0x000000018C309EF4-0x000000018C309FAC
+			public void RecalcCoordinate(); // 0x000000018C309C14-0x000000018C309EF4
+			public void CalcNormalTangentFromTriangle(); // 0x000000018C3097C4-0x000000018C309A0C
+			public Vector3 CalcLocalPos(Vector3 pos); // 0x000000018C3096D0-0x000000018C3097C4
+			public Vector3 CalcLocalDir(Vector3 dir); // 0x000000018C309620-0x000000018C3096D0
+			public Matrix4x4 CalcWorldToLocalMatrix(); // 0x000000018C309A0C-0x000000018C309B24
+			public void CalcBoneWeight(ReductionMesh.ReductionWeightMode weightMode, float weightPow); // 0x000000018C3095E4-0x000000018C309620
+			private void CalcBoneWeight_DistanceAverage(float weightPow); // 0x000000018C308434-0x000000018C308DE8
+			private void CalcBoneWeight_Average(); // 0x000000018C307DBC-0x000000018C308434
+			private void AdjustWeight(List<WeightData> sumlist); // 0x000000018C307B88-0x000000018C307DBC
+			private void CalcBoneWeight_Distance(float weightPow); // 0x000000018C308DE8-0x000000018C3095E4
+			public BoneWeight GetBoneWeight(); // 0x000000018C309B24-0x000000018C309C14
 		}
 	
-		public class Triangle // TypeDefIndex: 54966
+		public class Triangle // TypeDefIndex: 82013
 		{
 			// Fields
 			public int tindex; // 0x10
@@ -7581,49 +7578,49 @@ namespace MagicaReductionMesh
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass9_0 // TypeDefIndex: 54965
+			private sealed class __c__DisplayClass9_0 // TypeDefIndex: 82012
 			{
 				// Fields
 				public int edgev0; // 0x10
 				public int edgev1; // 0x14
 	
 				// Constructors
-				public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
+				public __c__DisplayClass9_0(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 				// Methods
-				internal bool _GetNonEdgeVertex_b__0(ShareVertex sv); // 0x0000000189ED6130-0x0000000189ED615C
+				internal bool _GetNonEdgeVertex_b__0(ShareVertex sv); // 0x000000018C30C1F0-0x000000018C30C21C
 			}
 	
 			// Constructors
-			public Triangle(); // 0x0000000189ED5FBC-0x0000000189ED6034
+			public Triangle(); // 0x000000018C30C07C-0x000000018C30C0F4
 	
 			// Methods
-			public void GetEdge(out uint edge0, out uint edge1, out uint edge2); // 0x0000000189ED5A0C-0x0000000189ED5B78
-			public Vector3 CalcTriangleNormal(); // 0x0000000189ED5254-0x0000000189ED55A0
-			public void Flip(); // 0x0000000189ED5914-0x0000000189ED5A0C
-			public Vector3 CalcTriangleTangent(); // 0x0000000189ED55A0-0x0000000189ED5914
-			public ShareVertex GetNonEdgeVertex(int edgev0, int edgev1); // 0x0000000189ED5B78-0x0000000189ED5C4C
-			public ulong GetTriangleHash(); // 0x0000000189ED5D34-0x0000000189ED5DE8
-			public static float GetTriangleArea(ShareVertex sv0, ShareVertex sv1, ShareVertex sv2); // 0x0000000189ED5C4C-0x0000000189ED5D34
-			public override string ToString(); // 0x0000000189ED5DE8-0x0000000189ED5FBC
+			public void GetEdge(out uint edge0, out uint edge1, out uint edge2); // 0x000000018C30BACC-0x000000018C30BC38
+			public Vector3 CalcTriangleNormal(); // 0x000000018C30B2FC-0x000000018C30B650
+			public void Flip(); // 0x000000018C30B9D4-0x000000018C30BACC
+			public Vector3 CalcTriangleTangent(); // 0x000000018C30B650-0x000000018C30B9D4
+			public ShareVertex GetNonEdgeVertex(int edgev0, int edgev1); // 0x000000018C30BC38-0x000000018C30BD0C
+			public ulong GetTriangleHash(); // 0x000000018C30BDF4-0x000000018C30BEA8
+			public static float GetTriangleArea(ShareVertex sv0, ShareVertex sv1, ShareVertex sv2); // 0x000000018C30BD0C-0x000000018C30BDF4
+			public override string ToString(); // 0x000000018C30BEA8-0x000000018C30C07C
 		}
 	
-		private class Line // TypeDefIndex: 54967
+		private class Line // TypeDefIndex: 82014
 		{
 			// Fields
 			public List<ShareVertex> shareVertexList; // 0x10
 	
 			// Constructors
-			public Line(); // 0x0000000189EC3760-0x0000000189EC37D8
+			public Line(); // 0x000000018C2F9754-0x000000018C2F97CC
 		}
 	
-		public enum UvWrapMode // TypeDefIndex: 54968
+		public enum UvWrapMode // TypeDefIndex: 82015
 		{
 			None = 0,
 			Sphere = 1
 		}
 	
-		public class Square // TypeDefIndex: 54969
+		public class Square // TypeDefIndex: 82016
 		{
 			// Fields
 			public ulong shash; // 0x10
@@ -7631,13 +7628,13 @@ namespace MagicaReductionMesh
 			public float angle; // 0x20
 	
 			// Constructors
-			public Square(); // 0x0000000189ED4200-0x0000000189ED4278
+			public Square(); // 0x000000018C30A2A4-0x000000018C30A31C
 	
 			// Methods
-			public override string ToString(); // 0x0000000189ED4078-0x0000000189ED4200
+			public override string ToString(); // 0x000000018C30A11C-0x000000018C30A2A4
 		}
 	
-		public class Tetra // TypeDefIndex: 54970
+		public class Tetra // TypeDefIndex: 82017
 		{
 			// Fields
 			public List<ShareVertex> shareVertexList; // 0x10
@@ -7647,21 +7644,21 @@ namespace MagicaReductionMesh
 			public float tetraSize; // 0x34
 	
 			// Constructors
-			public Tetra(); // 0x0000000189ED50C0-0x0000000189ED5138
-			public Tetra(ShareVertex a, ShareVertex b, ShareVertex c, ShareVertex d); // 0x0000000189ED5138-0x0000000189ED5254
+			public Tetra(); // 0x000000018C30B168-0x000000018C30B1E0
+			public Tetra(ShareVertex a, ShareVertex b, ShareVertex c, ShareVertex d); // 0x000000018C30B1E0-0x000000018C30B2FC
 	
 			// Methods
-			public ulong GetTetraHash(); // 0x0000000189ED4D28-0x0000000189ED4E1C
-			public void CalcCircumcircle(); // 0x0000000189ED4278-0x0000000189ED48E0
-			public bool IntersectCircumcircle(Vector3 pos); // 0x0000000189ED4E1C-0x0000000189ED4E68
-			public bool CheckSame(Tetra tri); // 0x0000000189ED4B88-0x0000000189ED4C08
-			public bool ContainsPoint(ShareVertex p1); // 0x0000000189ED4C08-0x0000000189ED4C5C
-			public bool ContainsPoint(ShareVertex p1, ShareVertex p2, ShareVertex p3, ShareVertex p4); // 0x0000000189ED4C5C-0x0000000189ED4D28
-			public void CalcSize(); // 0x0000000189ED48E0-0x0000000189ED4B88
-			public bool Verification(); // 0x0000000189ED4E68-0x0000000189ED50C0
+			public ulong GetTetraHash(); // 0x000000018C30ADCC-0x000000018C30AEC4
+			public void CalcCircumcircle(); // 0x000000018C30A31C-0x000000018C30A984
+			public bool IntersectCircumcircle(Vector3 pos); // 0x000000018C30AEC4-0x000000018C30AF10
+			public bool CheckSame(Tetra tri); // 0x000000018C30AC2C-0x000000018C30ACAC
+			public bool ContainsPoint(ShareVertex p1); // 0x000000018C30ACAC-0x000000018C30AD00
+			public bool ContainsPoint(ShareVertex p1, ShareVertex p2, ShareVertex p3, ShareVertex p4); // 0x000000018C30AD00-0x000000018C30ADCC
+			public void CalcSize(); // 0x000000018C30A984-0x000000018C30AC2C
+			public bool Verification(); // 0x000000018C30AF10-0x000000018C30B168
 		}
 	
-		private class LinkInfo // TypeDefIndex: 54971
+		private class LinkInfo // TypeDefIndex: 82018
 		{
 			// Fields
 			public ShareVertex sv; // 0x10
@@ -7669,101 +7666,101 @@ namespace MagicaReductionMesh
 			public int count; // 0x1C
 	
 			// Constructors
-			public LinkInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public LinkInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
-		private class VertexLengthInfo // TypeDefIndex: 54972
+		private class VertexLengthInfo // TypeDefIndex: 82019
 		{
 			// Fields
 			public ShareVertex sv; // 0x10
 			public float length; // 0x18
 	
 			// Constructors
-			public VertexLengthInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public VertexLengthInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0 // TypeDefIndex: 54973
+		private sealed class __c__DisplayClass65_0 // TypeDefIndex: 82020
 		{
 			// Fields
 			public float weightLength; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass65_0(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass65_0(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_1 // TypeDefIndex: 54974
+		private sealed class __c__DisplayClass65_1 // TypeDefIndex: 82021
 		{
 			// Fields
 			public Vertex vt; // 0x10
 			public __c__DisplayClass65_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass65_1(); // 0x00000001841E1670-0x00000001841E1680
+			public __c__DisplayClass65_1(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal bool _CreateOriginalMeshInfo_b__0(ShareVertex sv); // 0x0000000189ED60C4-0x0000000189ED6130
+			internal bool _CreateOriginalMeshInfo_b__0(ShareVertex sv); // 0x000000018C30C184-0x000000018C30C1F0
 		}
 	
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c // TypeDefIndex: 54975
+		private sealed class __c // TypeDefIndex: 82022
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<VertexLengthInfo> __9__69_0; // 0x08
 	
 			// Constructors
-			static __c(); // 0x0000000189ED615C-0x0000000189ED61C0
-			public __c(); // 0x00000001841E1670-0x00000001841E1680
+			static __c(); // 0x000000018C30C21C-0x000000018C30C280
+			public __c(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			internal int _SearchNearPointList_b__69_0(VertexLengthInfo a, VertexLengthInfo b); // 0x0000000189ED606C-0x0000000189ED609C
+			internal int _SearchNearPointList_b__69_0(VertexLengthInfo a, VertexLengthInfo b); // 0x000000018C30C12C-0x000000018C30C15C
 		}
 	
 		// Constructors
-		public MeshData(); // 0x0000000189ECE0CC-0x0000000189ECE32C
+		public MeshData(); // 0x000000018C304124-0x000000018C304384
 	
 		// Methods
-		public int AddMesh(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList); // 0x0000000189EC3F38-0x0000000189EC4BE4
-		public int AddMesh(Transform root, List<Vector3> posList, List<Vector3> norList = null, List<Vector4> tanList = null, List<Vector2> uvList = null, List<int> triangleList = null); // 0x0000000189EC37D8-0x0000000189EC3F38
-		public void CombineVertex(ShareVertex sv0, ShareVertex sv1); // 0x0000000189EC6F7C-0x0000000189EC72AC
-		public void UpdateMeshData(bool createTetra); // 0x0000000189ECE064-0x0000000189ECE0CC
-		private void CalcVertexIndex(); // 0x0000000189EC6B7C-0x0000000189EC6D24
-		private void CalcUV(UvWrapMode wrapMode); // 0x0000000189EC67A4-0x0000000189EC6B7C
-		private void CreateTriangleAndLine(); // 0x0000000189EC9C54-0x0000000189ECB04C
-		private void CalcShareVertexWeight(); // 0x0000000189EC63C0-0x0000000189EC64F8
-		private void AdjustTriangleNormal(); // 0x0000000189EC4C7C-0x0000000189EC5728
-		private bool CheckTwoTriangleOpen(Triangle tri1, Triangle tri2, uint edge); // 0x0000000189EC6E38-0x0000000189EC6F7C
-		private float CalcTwoTriangleAngle(Triangle tri1, Triangle tri2, uint edge); // 0x0000000189EC64F8-0x0000000189EC67A4
-		private Dictionary<uint, List<ulong>> GetEdgeToTriangleDict(); // 0x0000000189ECB04C-0x0000000189ECB574
-		private void CalcVertexNormalFromTriangle(); // 0x0000000189EC6D24-0x0000000189EC6E38
-		private void RemoveTriangle(ulong thash); // 0x0000000189ECD6D4-0x0000000189ECD8EC
-		private Dictionary<ulong, List<Square>> GetSquareDict(); // 0x0000000189ECCD54-0x0000000189ECD5C4
-		private void RemoveOverlappingSquareTriangles(); // 0x0000000189ECD5C4-0x0000000189ECD6D4
-		private void CreateTetraMesh(); // 0x0000000189EC83A8-0x0000000189EC9C54
-		private Bounds CalcBounding(); // 0x0000000189EC5728-0x0000000189EC593C
-		public FinalData GetFinalData(Transform root); // 0x0000000189ECB574-0x0000000189ECCD54
-		private void CreateOriginalMeshInfo(FinalData final, Transform root, float weightLength); // 0x0000000189EC72AC-0x0000000189EC83A8
-		private void AddVertexToMeshIndexData(FinalData final, int sindex, int meshIndex, int meshVertexIndex); // 0x0000000189EC4BE4-0x0000000189EC4C7C
-		private List<ShareVertex> SearchNearPointList(Vector3 basePos, ShareVertex sv, float weightLength, int maxCount); // 0x0000000189ECD8EC-0x0000000189ECE064
-		public void CalcMeshWorldPositionNormalTangent(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x0000000189EC593C-0x0000000189EC63C0
+		public int AddMesh(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList); // 0x000000018C2F9F2C-0x000000018C2FAC04
+		public int AddMesh(Transform root, List<Vector3> posList, List<Vector3> norList = null, List<Vector4> tanList = null, List<Vector2> uvList = null, List<int> triangleList = null); // 0x000000018C2F97CC-0x000000018C2F9F2C
+		public void CombineVertex(ShareVertex sv0, ShareVertex sv1); // 0x000000018C2FD01C-0x000000018C2FD350
+		public void UpdateMeshData(bool createTetra); // 0x000000018C3040BC-0x000000018C304124
+		private void CalcVertexIndex(); // 0x000000018C2FCC18-0x000000018C2FCDC0
+		private void CalcUV(UvWrapMode wrapMode); // 0x000000018C2FC840-0x000000018C2FCC18
+		private void CreateTriangleAndLine(); // 0x000000018C2FFC28-0x000000018C30100C
+		private void CalcShareVertexWeight(); // 0x000000018C2FC458-0x000000018C2FC594
+		private void AdjustTriangleNormal(); // 0x000000018C2FAC9C-0x000000018C2FB768
+		private bool CheckTwoTriangleOpen(Triangle tri1, Triangle tri2, uint edge); // 0x000000018C2FCED8-0x000000018C2FD01C
+		private float CalcTwoTriangleAngle(Triangle tri1, Triangle tri2, uint edge); // 0x000000018C2FC594-0x000000018C2FC840
+		private Dictionary<uint, List<ulong>> GetEdgeToTriangleDict(); // 0x000000018C30100C-0x000000018C30154C
+		private void CalcVertexNormalFromTriangle(); // 0x000000018C2FCDC0-0x000000018C2FCED8
+		private void RemoveTriangle(ulong thash); // 0x000000018C303728-0x000000018C303940
+		private Dictionary<ulong, List<Square>> GetSquareDict(); // 0x000000018C302D78-0x000000018C303604
+		private void RemoveOverlappingSquareTriangles(); // 0x000000018C303604-0x000000018C303728
+		private void CreateTetraMesh(); // 0x000000018C2FE3D8-0x000000018C2FFC28
+		private Bounds CalcBounding(); // 0x000000018C2FB768-0x000000018C2FB980
+		public FinalData GetFinalData(Transform root); // 0x000000018C30154C-0x000000018C302D78
+		private void CreateOriginalMeshInfo(FinalData final, Transform root, float weightLength); // 0x000000018C2FD350-0x000000018C2FE3D8
+		private void AddVertexToMeshIndexData(FinalData final, int sindex, int meshIndex, int meshVertexIndex); // 0x000000018C2FAC04-0x000000018C2FAC9C
+		private List<ShareVertex> SearchNearPointList(Vector3 basePos, ShareVertex sv, float weightLength, int maxCount); // 0x000000018C303940-0x000000018C3040BC
+		public void CalcMeshWorldPositionNormalTangent(bool isSkinning, Mesh mesh, List<Transform> bones, Matrix4x4[] bindPoseList, BoneWeight[] boneWeightList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x000000018C2FB980-0x000000018C2FC458
 	}
 
-	public class ReductionData : ReductionMeshAccess // TypeDefIndex: 54977
+	public class ReductionData : ReductionMeshAccess // TypeDefIndex: 82024
 	{
 		// Constructors
-		public ReductionData(); // 0x00000001841E1670-0x00000001841E1680
+		public ReductionData(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public void ReductionZeroDistance(float radius = 0.0001f /* Metadata: 0x02346838 */); // 0x0000000189ED13F4-0x0000000189ED1480
-		public void ReductionRadius(float radius); // 0x0000000189ED1368-0x0000000189ED13F4
-		public void ReductionPolygonLink(float length); // 0x0000000189ED12DC-0x0000000189ED1368
-		public void ReductionBone(); // 0x0000000189ED0E10-0x0000000189ED12DC
+		public void ReductionZeroDistance(float radius = 0.0001f /* Metadata: 0x026408D4 */); // 0x000000018C3074A8-0x000000018C307534
+		public void ReductionRadius(float radius); // 0x000000018C30741C-0x000000018C3074A8
+		public void ReductionPolygonLink(float length); // 0x000000018C307390-0x000000018C30741C
+		public void ReductionBone(); // 0x000000018C306E9C-0x000000018C307390
 	}
 
-	public class NearPointReduction // TypeDefIndex: 54979
+	public class NearPointReduction // TypeDefIndex: 82026
 	{
 		// Fields
 		protected MeshData meshData; // 0x10
@@ -7774,10 +7771,10 @@ namespace MagicaReductionMesh
 		private Dictionary<Point, List<Point>> nearPointDict; // 0x30
 	
 		// Properties
-		public int PointCount { get; } // 0x0000000189ECFEA8-0x0000000189ECFEE8 
+		public int PointCount { get; } // 0x000000018C305F34-0x000000018C305F74 
 	
 		// Nested types
-		public class Point // TypeDefIndex: 54978
+		public class Point // TypeDefIndex: 82025
 		{
 			// Fields
 			public MeshData.ShareVertex shareVertex; // 0x10
@@ -7787,27 +7784,27 @@ namespace MagicaReductionMesh
 			public float nearDist; // 0x38
 	
 			// Constructors
-			public Point(); // 0x00000001841E1670-0x00000001841E1680
+			public Point(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		public NearPointReduction(float radius = 0.05f /* Metadata: 0x0234683C */); // 0x0000000189ECFD7C-0x0000000189ECFEA8
+		public NearPointReduction(float radius = 0.05f /* Metadata: 0x026408D8 */); // 0x000000018C305E08-0x000000018C305F34
 	
 		// Methods
-		public void Create(MeshData meshData); // 0x0000000189ECE974-0x0000000189ECEAE8
-		public void Reduction(); // 0x0000000189ECED18-0x0000000189ECF25C
-		private Point AddPoint(MeshData.ShareVertex sv, Vector3 pos); // 0x0000000189ECE8B8-0x0000000189ECE974
-		private void AddGrid(Point p); // 0x0000000189ECE728-0x0000000189ECE8B8
-		private void RemoveGrid(Point p); // 0x0000000189ECF25C-0x0000000189ECF3DC
-		private void Move(Point p, Vector3 newpos); // 0x0000000189ECECC0-0x0000000189ECED18
-		private void Remove(Point p); // 0x0000000189ECF3DC-0x0000000189ECF440
-		protected Vector3Int GetGridPos(Vector3 pos); // 0x0000000189ECEAE8-0x0000000189ECEB60
-		private void SearchNearPointAll(); // 0x0000000189ECF440-0x0000000189ECF6D4
-		private void SearchNearPoint(Point p, float radius, Point ignorePoint); // 0x0000000189ECF6D4-0x0000000189ECFD7C
-		private Point GetNearPointPair(); // 0x0000000189ECEB60-0x0000000189ECECC0
+		public void Create(MeshData meshData); // 0x000000018C3049CC-0x000000018C304B44
+		public void Reduction(); // 0x000000018C304D74-0x000000018C3052D4
+		private Point AddPoint(MeshData.ShareVertex sv, Vector3 pos); // 0x000000018C304910-0x000000018C3049CC
+		private void AddGrid(Point p); // 0x000000018C304780-0x000000018C304910
+		private void RemoveGrid(Point p); // 0x000000018C3052D4-0x000000018C305454
+		private void Move(Point p, Vector3 newpos); // 0x000000018C304D1C-0x000000018C304D74
+		private void Remove(Point p); // 0x000000018C305454-0x000000018C3054B8
+		protected Vector3Int GetGridPos(Vector3 pos); // 0x000000018C304B44-0x000000018C304BBC
+		private void SearchNearPointAll(); // 0x000000018C3054B8-0x000000018C305760
+		private void SearchNearPoint(Point p, float radius, Point ignorePoint); // 0x000000018C305760-0x000000018C305E08
+		private Point GetNearPointPair(); // 0x000000018C304BBC-0x000000018C304D1C
 	}
 
-	public class PolygonLinkReduction // TypeDefIndex: 54981
+	public class PolygonLinkReduction // TypeDefIndex: 82028
 	{
 		// Fields
 		protected MeshData meshData; // 0x10
@@ -7816,10 +7813,10 @@ namespace MagicaReductionMesh
 		private Dictionary<MeshData.ShareVertex, Point> pointDict; // 0x28
 	
 		// Properties
-		public int PointCount { get; } // 0x0000000189ED0DD0-0x0000000189ED0E10 
+		public int PointCount { get; } // 0x000000018C306E5C-0x000000018C306E9C 
 	
 		// Nested types
-		public class Point // TypeDefIndex: 54980
+		public class Point // TypeDefIndex: 82027
 		{
 			// Fields
 			public MeshData.ShareVertex shareVertex; // 0x10
@@ -7827,44 +7824,44 @@ namespace MagicaReductionMesh
 			public float nearDist; // 0x20
 	
 			// Constructors
-			public Point(); // 0x00000001841E1670-0x00000001841E1680
+			public Point(); // 0x0000000186805BA0-0x0000000186805BB0
 		}
 	
 		// Constructors
-		public PolygonLinkReduction(float length); // 0x0000000189ED0D00-0x0000000189ED0DD0
+		public PolygonLinkReduction(float length); // 0x000000018C306D8C-0x000000018C306E5C
 	
 		// Methods
-		public void Create(MeshData meshData); // 0x0000000189ECFF9C-0x0000000189ED00E8
-		public void Reduction(); // 0x0000000189ED02CC-0x0000000189ED0904
-		private void AddPoint(MeshData.ShareVertex sv); // 0x0000000189ECFEE8-0x0000000189ECFF9C
-		private Point GetPoint(MeshData.ShareVertex sv); // 0x0000000189ED0248-0x0000000189ED02CC
-		private void Remove(Point p); // 0x0000000189ED0904-0x0000000189ED0984
-		private void SearchNearPointAll(); // 0x0000000189ED0984-0x0000000189ED0A98
-		private void SearchNearPoint(Point p); // 0x0000000189ED0A98-0x0000000189ED0D00
-		private Point GetNearPointPair(); // 0x0000000189ED00E8-0x0000000189ED0248
+		public void Create(MeshData meshData); // 0x000000018C306028-0x000000018C306178
+		public void Reduction(); // 0x000000018C30635C-0x000000018C306998
+		private void AddPoint(MeshData.ShareVertex sv); // 0x000000018C305F74-0x000000018C306028
+		private Point GetPoint(MeshData.ShareVertex sv); // 0x000000018C3062D8-0x000000018C30635C
+		private void Remove(Point p); // 0x000000018C306998-0x000000018C306A18
+		private void SearchNearPointAll(); // 0x000000018C306A18-0x000000018C306B30
+		private void SearchNearPoint(Point p); // 0x000000018C306B30-0x000000018C306D8C
+		private Point GetNearPointPair(); // 0x000000018C306178-0x000000018C3062D8
 	}
 
-	public class Utility // TypeDefIndex: 54982
+	public class Utility // TypeDefIndex: 82029
 	{
 		// Constructors
-		public Utility(); // 0x00000001841E1670-0x00000001841E1680
+		public Utility(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static uint PackPair(int v0, int v1); // 0x000000018677F488-0x000000018677F4A0
-		public static void UnpackPair(uint pack, out int v0, out int v1); // 0x0000000184DA3080-0x0000000184DA3090
-		public static ulong PackTriple(int v0, int v1, int v2); // 0x0000000189ED7AFC-0x0000000189ED7C38
-		public static void UnpackTriple(ulong pack, out int v0, out int v1, out int v2); // 0x0000000184DA30C0-0x0000000184DA30E0
-		public static ulong PackQuater(int v0, int v1, int v2, int v3); // 0x0000000189ED7984-0x0000000189ED7AFC
-		public static void UnpackQuater(ulong pack, out int v0, out int v1, out int v2, out int v3); // 0x0000000184DA3090-0x0000000184DA30C0
-		public static uint Pack16(int hi, int low); // 0x0000000184D874D0-0x0000000184D874E0
-		public static int Unpack16Hi(uint pack); // 0x0000000184D875B0-0x0000000184D875C0
-		public static int Unpack16Low(uint pack); // 0x0000000184D875C0-0x0000000184D875D0
-		public static ulong Pack32(int hi, int low); // 0x0000000184D91CF0-0x0000000184D91D00
-		public static int Unpack32Hi(ulong pack); // 0x0000000184D9D8A0-0x0000000184D9D8B0
-		public static int Unpack32Low(ulong pack); // 0x0000000184D88BE0-0x0000000184D88BF0
-		public static void CalcFinalDataWorldPositionNormalTangent(FinalData final, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x0000000189ED6D78-0x0000000189ED770C
-		public static void CalcFinalDataChildWorldPositionNormalTangent(FinalData final, int meshIndex, List<Vector3> sposList, List<Vector3> snorList, List<Vector4> stanList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x0000000189ED6224-0x0000000189ED6D78
-		public static void CalcLocalPositionNormalTangent(Transform root, List<Vector3> wposList, List<Vector3> wnorList, List<Vector4> wtanList); // 0x0000000189ED770C-0x0000000189ED7984
+		public static uint PackPair(int v0, int v1); // 0x0000000188A6045C-0x0000000188A60474
+		public static void UnpackPair(uint pack, out int v0, out int v1); // 0x0000000187250CA0-0x0000000187250CB0
+		public static ulong PackTriple(int v0, int v1, int v2); // 0x000000018C30DC30-0x000000018C30DD6C
+		public static void UnpackTriple(ulong pack, out int v0, out int v1, out int v2); // 0x0000000187250CE0-0x0000000187250D00
+		public static ulong PackQuater(int v0, int v1, int v2, int v3); // 0x000000018C30DAB8-0x000000018C30DC30
+		public static void UnpackQuater(ulong pack, out int v0, out int v1, out int v2, out int v3); // 0x0000000187250CB0-0x0000000187250CE0
+		public static uint Pack16(int hi, int low); // 0x0000000187234120-0x0000000187234130
+		public static int Unpack16Hi(uint pack); // 0x0000000187234200-0x0000000187234210
+		public static int Unpack16Low(uint pack); // 0x0000000187234210-0x0000000187234220
+		public static ulong Pack32(int hi, int low); // 0x000000018723FC20-0x000000018723FC30
+		public static int Unpack32Hi(ulong pack); // 0x000000018724B9A0-0x000000018724B9B0
+		public static int Unpack32Low(ulong pack); // 0x0000000187235A70-0x0000000187235A80
+		public static void CalcFinalDataWorldPositionNormalTangent(FinalData final, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x000000018C30CE74-0x000000018C30D840
+		public static void CalcFinalDataChildWorldPositionNormalTangent(FinalData final, int meshIndex, List<Vector3> sposList, List<Vector3> snorList, List<Vector4> stanList, out List<Vector3> wposList, out List<Vector3> wnorList, out List<Vector4> wtanList); // 0x000000018C30C2E4-0x000000018C30CE74
+		public static void CalcLocalPositionNormalTangent(Transform root, List<Vector3> wposList, List<Vector3> wnorList, List<Vector4> wtanList); // 0x000000018C30D840-0x000000018C30DAB8
 	}
 }
 
@@ -7872,10 +7869,10 @@ namespace Microsoft.CodeAnalysis
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 54948
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 81995
 	{
 		// Constructors
-		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public EmbeddedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
@@ -7883,9 +7880,9 @@ namespace System.Runtime.CompilerServices
 {
 	[CompilerGenerated]
 	[Embedded]
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 54949
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 81996
 	{
 		// Constructors
-		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public IsUnmanagedAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }

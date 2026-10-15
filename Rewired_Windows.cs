@@ -34,23 +34,9 @@ using Rewired.Utils.Classes.Data;
 using Rewired.Utils.Classes.Utility;
 using UnityEngine;
 
-// Image 20: Rewired_Windows.dll - Assembly: Rewired_Windows, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 53583-54040
-[assembly: AssemblyCompany("Guavaman Enterprises")]
-[assembly: AssemblyConfiguration("Release")]
-[assembly: AssemblyCopyright("Copyright \u00A9  2014 Augie R. Maddox. All rights reserved.")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyProduct("Rewired")]
-[assembly: AssemblyTitle("Rewired Windows")]
-[assembly: AssemblyTrademark("Augie R. Maddox")]
-[assembly: CompilationRelaxations(8)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Guid("a41ebc23-ec97-4fd2-81ae-f39afc75854a")]
-[assembly: NeutralResourcesLanguage("en-us")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 19: Rewired_Windows.dll - Assembly: Rewired_Windows, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 78827-79284
 
-internal static class dyJcqkkCOKdlMMAdfeedYNMzbGXXA // TypeDefIndex: 53584
+internal static class dyJcqkkCOKdlMMAdfeedYNMzbGXXA // TypeDefIndex: 78828
 {
 	// Fields
 	private static int sFHzEXczlQftnxMyKDbAEQUqaEru; // 0x00
@@ -58,17 +44,17 @@ internal static class dyJcqkkCOKdlMMAdfeedYNMzbGXXA // TypeDefIndex: 53584
 	private static Rewired.Utils.Classes.Utility.ThreadHelper NBDOUCIIoivGAysRGEjIQKudSxbs; // 0x10
 
 	// Properties
-	public static int aYBDnbKBUwDPQhvmrEtmsCcZckGhA { get; } // 0x000000018AB84B20-0x000000018AB84B58 
-	public static Rewired.Utils.Classes.Utility.ThreadHelper cTxRcNWsabfeQbArXKTRMnXgyGOH { get; } // 0x000000018AB84AE8-0x000000018AB84B20 
-	public static Rewired.Utils.Classes.Utility.ThreadHelper TPitKbsNfKADGeLlzNukKPValncl { get; } // 0x000000018AB84B58-0x000000018AB84B90 
+	public static int aYBDnbKBUwDPQhvmrEtmsCcZckGhA { get; } // 0x000000018CD78AF8-0x000000018CD78B30 
+	public static Rewired.Utils.Classes.Utility.ThreadHelper cTxRcNWsabfeQbArXKTRMnXgyGOH { get; } // 0x000000018CD78AC0-0x000000018CD78AF8 
+	public static Rewired.Utils.Classes.Utility.ThreadHelper TPitKbsNfKADGeLlzNukKPValncl { get; } // 0x000000018CD78B30-0x000000018CD78B68 
 
 	// Methods
-	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(bool param_000733a0); // 0x0000000183B258B0-0x0000000183B25A70
-	private static void dVKAHzfNnsDImjkdkSOKGbRvTaBzA(UpdateLoopType param_000733a1); // 0x000000018381BE70-0x000000018381BED0
-	public static void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018AB84B90-0x000000018AB84CF8
+	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(bool param_000a9d07); // 0x0000000185BB5030-0x0000000185BB51F0
+	private static void dVKAHzfNnsDImjkdkSOKGbRvTaBzA(UpdateLoopType param_000a9d08); // 0x0000000185B702E0-0x0000000185B70510
+	public static void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018CD78B68-0x000000018CD78CD8
 }
 
-internal sealed class xPfnLVIvrLrDqEyvvAFdcLgWKpGQ : IElementIdentifierTool // TypeDefIndex: 53585
+internal sealed class xPfnLVIvrLrDqEyvvAFdcLgWKpGQ : IElementIdentifierTool // TypeDefIndex: 78829
 {
 	// Fields
 	private GUIText uRpgQQxkIcZfgCnnzeNmUzeYStDl; // 0x10
@@ -86,24 +72,24 @@ internal sealed class xPfnLVIvrLrDqEyvvAFdcLgWKpGQ : IElementIdentifierTool // T
 	private TimerRealTime SbbJtQJZzisMWHKxmkfcVZWdUHGH; // 0x60
 
 	// Constructors
-	public xPfnLVIvrLrDqEyvvAFdcLgWKpGQ(); // 0x00000001841E1670-0x00000001841E1680
+	public xPfnLVIvrLrDqEyvvAFdcLgWKpGQ(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void Initialize(GUIText text); // 0x00000001853908C0-0x00000001853908D0
-	public void Start(); // 0x000000018AB8883C-0x000000018AB88AA4
-	public void Update(); // 0x000000018AB88AA4-0x000000018AB89F80
-	private void aWaeGTWYwaFywDnKiBtMWOmRrRnH(); // 0x000000018AB8A084-0x000000018AB8A128
-	private void GSrquDvozUzyEGPNfYYEmeMOjkZC(); // 0x000000018AB8880C-0x000000018AB88828
-	private void WoKfjAhvbFeccwjyTNFktBBccyQd(); // 0x000000018AB8880C-0x000000018AB88828
-	private void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(); // 0x000000018AB8880C-0x000000018AB88828
-	private void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB8A128-0x000000018AB8A1A0
-	private void XEajjyPDjlIbYMTFoxxgPNPwjNmf(string param_000733a3, object param_000733a4); // 0x000000018AB89F80-0x000000018AB8A084
-	private int DYxtgWHqYudqjBhVQJKzjymElHwy(DirectInputAxis param_000733a5, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000733a6); // 0x000000018AB884BC-0x000000018AB8880C
-	private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000733a7); // 0x000000018AB7AE68-0x000000018AB7AECC
-	public void OnDestroy(); // 0x000000018AB88828-0x000000018AB8883C
+	public void Initialize(GUIText text); // 0x0000000184FD2410-0x0000000184FD2420
+	public void Start(); // 0x000000018CD7C94C-0x000000018CD7CBB4
+	public void Update(); // 0x000000018CD7CBB4-0x000000018CD7E0B8
+	private void aWaeGTWYwaFywDnKiBtMWOmRrRnH(); // 0x000000018CD7E1BC-0x000000018CD7E260
+	private void GSrquDvozUzyEGPNfYYEmeMOjkZC(); // 0x000000018CD7C91C-0x000000018CD7C938
+	private void WoKfjAhvbFeccwjyTNFktBBccyQd(); // 0x000000018CD7C91C-0x000000018CD7C938
+	private void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(); // 0x000000018CD7C91C-0x000000018CD7C938
+	private void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD7E260-0x000000018CD7E2F4
+	private void XEajjyPDjlIbYMTFoxxgPNPwjNmf(string param_000a9d0a, object param_000a9d0b); // 0x000000018CD7E0B8-0x000000018CD7E1BC
+	private int DYxtgWHqYudqjBhVQJKzjymElHwy(DirectInputAxis param_000a9d0c, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9d0d); // 0x000000018CD7C5BC-0x000000018CD7C91C
+	private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000a9d0e); // 0x000000018CD6EB58-0x000000018CD6EBBC
+	public void OnDestroy(); // 0x000000018CD7C938-0x000000018CD7C94C
 }
 
-internal sealed class BzHDsnGnVFDdDBcIlNNKFiBXbjzHb : IElementIdentifierTool // TypeDefIndex: 53586
+internal sealed class BzHDsnGnVFDdDBcIlNNKFiBXbjzHb : IElementIdentifierTool // TypeDefIndex: 78830
 {
 	// Fields
 	private GUIText uRpgQQxkIcZfgCnnzeNmUzeYStDl; // 0x10
@@ -120,25 +106,25 @@ internal sealed class BzHDsnGnVFDdDBcIlNNKFiBXbjzHb : IElementIdentifierTool // 
 	private int[] idtBmUHjFaBXkGQyOoBfYzCXBJkX; // 0x60
 
 	// Constructors
-	public BzHDsnGnVFDdDBcIlNNKFiBXbjzHb(); // 0x00000001841E1670-0x00000001841E1680
+	public BzHDsnGnVFDdDBcIlNNKFiBXbjzHb(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void Initialize(GUIText text); // 0x000000018AB78B38-0x000000018AB78C28
-	public void Start(); // 0x000000018AB78D40-0x000000018AB78F54
-	public void Update(); // 0x000000018AB78F54-0x000000018AB7ACA8
-	public void OnDestroy(); // 0x000000018AB78D2C-0x000000018AB78D40
-	private void aWaeGTWYwaFywDnKiBtMWOmRrRnH(); // 0x000000018AB7ADAC-0x000000018AB7AE00
-	private void GSrquDvozUzyEGPNfYYEmeMOjkZC(); // 0x000000018AB78B1C-0x000000018AB78B38
-	private void WoKfjAhvbFeccwjyTNFktBBccyQd(); // 0x000000018AB78B1C-0x000000018AB78B38
-	private void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(); // 0x000000018AB78B1C-0x000000018AB78B38
-	private void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB7AE00-0x000000018AB7AE68
-	private void XEajjyPDjlIbYMTFoxxgPNPwjNmf(string param_000733a9, object param_000733aa); // 0x000000018AB7ACA8-0x000000018AB7ADAC
-	private void LaLijTZWRWsoVIMAprAIkNSApaPx(string param_000733ab, object param_000733ac); // 0x000000018AB78C28-0x000000018AB78D2C
-	private int DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_000733ad, int param_000733ae, MlriOiaGsGcNChpISALUGlIRPxwK param_000733af); // 0x000000018AB78AF8-0x000000018AB78B1C
-	private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000733b0); // 0x000000018AB7AE68-0x000000018AB7AECC
+	public void Initialize(GUIText text); // 0x000000018CD6C7FC-0x000000018CD6C8EC
+	public void Start(); // 0x000000018CD6CA04-0x000000018CD6CC18
+	public void Update(); // 0x000000018CD6CC18-0x000000018CD6E984
+	public void OnDestroy(); // 0x000000018CD6C9F0-0x000000018CD6CA04
+	private void aWaeGTWYwaFywDnKiBtMWOmRrRnH(); // 0x000000018CD6EA88-0x000000018CD6EADC
+	private void GSrquDvozUzyEGPNfYYEmeMOjkZC(); // 0x000000018CD6C7E0-0x000000018CD6C7FC
+	private void WoKfjAhvbFeccwjyTNFktBBccyQd(); // 0x000000018CD6C7E0-0x000000018CD6C7FC
+	private void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(); // 0x000000018CD6C7E0-0x000000018CD6C7FC
+	private void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD6EADC-0x000000018CD6EB58
+	private void XEajjyPDjlIbYMTFoxxgPNPwjNmf(string param_000a9d10, object param_000a9d11); // 0x000000018CD6E984-0x000000018CD6EA88
+	private void LaLijTZWRWsoVIMAprAIkNSApaPx(string param_000a9d12, object param_000a9d13); // 0x000000018CD6C8EC-0x000000018CD6C9F0
+	private int DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_000a9d14, int param_000a9d15, MlriOiaGsGcNChpISALUGlIRPxwK param_000a9d16); // 0x000000018CD6C7BC-0x000000018CD6C7E0
+	private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000a9d17); // 0x000000018CD6EB58-0x000000018CD6EBBC
 }
 
-internal class sSeXfAxAAxiXLAtqyIfJrJTcdaQh : IDisposable // TypeDefIndex: 53592
+internal class sSeXfAxAAxiXLAtqyIfJrJTcdaQh : IDisposable // TypeDefIndex: 78836
 {
 	// Fields
 	private readonly List<OzOCKacbuZbJtdiFDEBKjZTEEESIc> BfBuWWbeLNGmHCRVgPnYcSPcYaFfB; // 0x10
@@ -166,31 +152,31 @@ internal class sSeXfAxAAxiXLAtqyIfJrJTcdaQh : IDisposable // TypeDefIndex: 53592
 
 	// Events
 	public event Action FMRGOqcWNMqVYKduzIJTfcfHoEhTb {
-		add; // 0x000000018AB85DF8-0x000000018AB85E90
-		remove; // 0x000000018AB86AA4-0x000000018AB86B3C
+		add; // 0x000000018CD79E64-0x000000018CD79EFC
+		remove; // 0x000000018CD7AB44-0x000000018CD7ABDC
 	}
 
 	// Nested types
-	private abstract class tlUQiPQblRXSDPZRekgoAcezDjtcA : IPoolableObject_Internal // TypeDefIndex: 53588
+	private abstract class tlUQiPQblRXSDPZRekgoAcezDjtcA : IPoolableObject_Internal // TypeDefIndex: 78832
 	{
 		// Fields
 		[CompilerGenerated]
 		private IObjectPool vWbRXonvaOawNZrwYLpzdBGtsepG; // 0x10
 
 		// Properties
-		IObjectPool IPoolableObject_Internal.pool { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		IObjectPool IPoolableObject_Internal.pool { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
 
 		// Constructors
-		protected tlUQiPQblRXSDPZRekgoAcezDjtcA(); // 0x00000001841E1670-0x00000001841E1680
+		protected tlUQiPQblRXSDPZRekgoAcezDjtcA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
 		protected abstract void Clear();
-		void IPoolableObject_Internal.Clear(); // 0x00000001873629EC-0x00000001873629FC
-		void IDisposable.Dispose(); // 0x000000018AB882AC-0x000000018AB882B4
-		public void Return(); // 0x000000018AB88254-0x000000018AB882AC
+		void IPoolableObject_Internal.Clear(); // 0x000000018783BBB0-0x000000018783BBC0
+		void IDisposable.Dispose(); // 0x000000018CD7C3A0-0x000000018CD7C3A8
+		public void Return(); // 0x000000018CD7C348-0x000000018CD7C3A0
 	}
 
-	private class WNPovYgfKDJLlaUCUcqWKPslkcSM : tlUQiPQblRXSDPZRekgoAcezDjtcA // TypeDefIndex: 53589
+	private class WNPovYgfKDJLlaUCUcqWKPslkcSM : tlUQiPQblRXSDPZRekgoAcezDjtcA // TypeDefIndex: 78833
 	{
 		// Fields
 		public xTONizpynmfsfmMGjoZKtugyxXqB aGZTLRceVCiwjwmKKFfUanjFlXyt; // 0x18
@@ -198,28 +184,28 @@ internal class sSeXfAxAAxiXLAtqyIfJrJTcdaQh : IDisposable // TypeDefIndex: 53592
 		public double jKarPwkwSXrEognwvLrOcdRHcNeA; // 0x60
 
 		// Constructors
-		public WNPovYgfKDJLlaUCUcqWKPslkcSM(); // 0x00000001841E1670-0x00000001841E1680
+		public WNPovYgfKDJLlaUCUcqWKPslkcSM(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		protected override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB7DDD8-0x000000018AB7DE10
+		protected override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD71B60-0x000000018CD71B98
 	}
 
-	private sealed class sSmmaYETUaIRsQptpKzWiDLxIFPZ : tlUQiPQblRXSDPZRekgoAcezDjtcA // TypeDefIndex: 53590
+	private sealed class sSmmaYETUaIRsQptpKzWiDLxIFPZ : tlUQiPQblRXSDPZRekgoAcezDjtcA // TypeDefIndex: 78834
 	{
 		// Fields
 		public xTONizpynmfsfmMGjoZKtugyxXqB aGZTLRceVCiwjwmKKFfUanjFlXyt; // 0x18
 		public JaQnnRxPcWCJXAnpNCxpObeGFfZ AQwStVeKIwCRGaZPubvpRItBKTIFb; // 0x20
 
 		// Constructors
-		public sSmmaYETUaIRsQptpKzWiDLxIFPZ(); // 0x00000001841E1670-0x00000001841E1680
+		public sSmmaYETUaIRsQptpKzWiDLxIFPZ(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		protected override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB88228-0x000000018AB88254
+		protected override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD7C31C-0x000000018CD7C348
 	}
 
 	[Serializable]
 	[CompilerGenerated]
-	private sealed class pMpGBKygEUozxUxcDyDCCdxUCKK // TypeDefIndex: 53591
+	private sealed class pMpGBKygEUozxUxcDyDCCdxUCKK // TypeDefIndex: 78835
 	{
 		// Fields
 		public static readonly pMpGBKygEUozxUxcDyDCCdxUCKK __9; // 0x00
@@ -227,39 +213,39 @@ internal class sSeXfAxAAxiXLAtqyIfJrJTcdaQh : IDisposable // TypeDefIndex: 53592
 		public static Func<sSmmaYETUaIRsQptpKzWiDLxIFPZ> __9__19_1; // 0x10
 
 		// Constructors
-		static pMpGBKygEUozxUxcDyDCCdxUCKK(); // 0x000000018AB85C1C-0x000000018AB85C80
-		public pMpGBKygEUozxUxcDyDCCdxUCKK(); // 0x00000001841E1670-0x00000001841E1680
+		static pMpGBKygEUozxUxcDyDCCdxUCKK(); // 0x000000018CD79C7C-0x000000018CD79CE0
+		public pMpGBKygEUozxUxcDyDCCdxUCKK(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal WNPovYgfKDJLlaUCUcqWKPslkcSM eLhwaxiGDsDKYbyavaQkgMImIsXfb(); // 0x000000018AB85C80-0x000000018AB85CBC
-		internal sSmmaYETUaIRsQptpKzWiDLxIFPZ wHWMpONJdiaELGltwoClaVawGGEOA(); // 0x000000018AB85CBC-0x000000018AB85CF8
+		internal WNPovYgfKDJLlaUCUcqWKPslkcSM eLhwaxiGDsDKYbyavaQkgMImIsXfb(); // 0x000000018CD79CE0-0x000000018CD79D1C
+		internal sSmmaYETUaIRsQptpKzWiDLxIFPZ wHWMpONJdiaELGltwoClaVawGGEOA(); // 0x000000018CD79D1C-0x000000018CD79D58
 	}
 
 	// Constructors
-	public sSeXfAxAAxiXLAtqyIfJrJTcdaQh(Func<int> param_000733b5); // 0x000000018AB86D44-0x000000018AB874DC
-	static sSeXfAxAAxiXLAtqyIfJrJTcdaQh(); // 0x000000018AB86BB0-0x000000018AB86D44
+	public sSeXfAxAAxiXLAtqyIfJrJTcdaQh(Func<int> param_000a9d1c); // 0x000000018CD7ADE8-0x000000018CD7B580
+	static sSeXfAxAAxiXLAtqyIfJrJTcdaQh(); // 0x000000018CD7AC54-0x000000018CD7ADE8
 
 	// Methods
-	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018AB869BC-0x000000018AB86AA4
-	public void lMJJIQInRrgXAznDPfJphjvZbHZmA(); // 0x000000018AB87F24-0x000000018AB88128
-	private void dIynDsLKbxaDRBsYLuwSquvHCLOcA(xTONizpynmfsfmMGjoZKtugyxXqB param_000733b6, JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733b7); // 0x000000018AB87D90-0x000000018AB87F24
-	public IList<OzOCKacbuZbJtdiFDEBKjZTEEESIc> enWrmPEeSZfdoBIXgaeNFsgyFeVm(); // 0x000000018385B100-0x000000018385B110
-	private void coQJkvlkhzIzrgfqiMgtGMvUOoYQA(); // 0x000000018AB877C8-0x000000018AB87D90
-	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000733b8); // 0x000000018AB85CF8-0x000000018AB85DF8
-	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000733b9); // 0x000000018AB88128-0x000000018AB88228
-	private void OEUiepMJOLOxlvyKFlBdMfSwBByE(); // 0x000000018AB85F38-0x000000018AB86198
-	private void bQByUaaPbcTUdwegxMgjeATLizYD(); // 0x000000018AB875B4-0x000000018AB877C8
-	private void RFZFqrCkqbaEfgIYkBuPofcBTYuob(xTONizpynmfsfmMGjoZKtugyxXqB param_000733ba); // 0x000000018AB863B8-0x000000018AB86490
-	private void bGKzDUzVMfBNXFzlSlKPkVqBxzWB(xTONizpynmfsfmMGjoZKtugyxXqB param_000733bb); // 0x000000018AB874DC-0x000000018AB875B4
-	public void Dispose(); // 0x000000018AB85E90-0x000000018AB85EE0
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB86B3C-0x000000018AB86BB0
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000733bc); // 0x000000018AB86490-0x000000018AB869BC
-	private static bool JbHKGHuKYWuEknRHVEICrXICEbMR(IList<xTONizpynmfsfmMGjoZKtugyxXqB> param_000733bd, xTONizpynmfsfmMGjoZKtugyxXqB param_000733be); // 0x000000018AB85EE0-0x000000018AB85F38
-	private static int PAAHqPJeiyimprjSbjbBBdnBTcrPA(IList<OzOCKacbuZbJtdiFDEBKjZTEEESIc> param_000733bf, xTONizpynmfsfmMGjoZKtugyxXqB param_000733c0); // 0x000000018AB862B4-0x000000018AB863B8
-	private static int PAAHqPJeiyimprjSbjbBBdnBTcrPA(IList<xTONizpynmfsfmMGjoZKtugyxXqB> param_000733c1, xTONizpynmfsfmMGjoZKtugyxXqB param_000733c2); // 0x000000018AB86198-0x000000018AB862B4
+	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018CD7AA50-0x000000018CD7AB44
+	public void lMJJIQInRrgXAznDPfJphjvZbHZmA(); // 0x000000018CD7BFFC-0x000000018CD7C210
+	private void dIynDsLKbxaDRBsYLuwSquvHCLOcA(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d1d, JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d1e); // 0x000000018CD7BE5C-0x000000018CD7BFFC
+	public IList<OzOCKacbuZbJtdiFDEBKjZTEEESIc> enWrmPEeSZfdoBIXgaeNFsgyFeVm(); // 0x0000000182234E30-0x0000000182234E40
+	private void coQJkvlkhzIzrgfqiMgtGMvUOoYQA(); // 0x000000018CD7B884-0x000000018CD7BE5C
+	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000a9d1f); // 0x000000018CD79D58-0x000000018CD79E64
+	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000a9d20); // 0x000000018CD7C210-0x000000018CD7C31C
+	private void OEUiepMJOLOxlvyKFlBdMfSwBByE(); // 0x000000018CD79FA4-0x000000018CD7A214
+	private void bQByUaaPbcTUdwegxMgjeATLizYD(); // 0x000000018CD7B664-0x000000018CD7B884
+	private void RFZFqrCkqbaEfgIYkBuPofcBTYuob(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d21); // 0x000000018CD7A434-0x000000018CD7A518
+	private void bGKzDUzVMfBNXFzlSlKPkVqBxzWB(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d22); // 0x000000018CD7B580-0x000000018CD7B664
+	public void Dispose(); // 0x000000018CD79EFC-0x000000018CD79F4C
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD7ABDC-0x000000018CD7AC54
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9d23); // 0x000000018CD7A518-0x000000018CD7AA50
+	private static bool JbHKGHuKYWuEknRHVEICrXICEbMR(IList<xTONizpynmfsfmMGjoZKtugyxXqB> param_000a9d24, xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d25); // 0x000000018CD79F4C-0x000000018CD79FA4
+	private static int PAAHqPJeiyimprjSbjbBBdnBTcrPA(IList<OzOCKacbuZbJtdiFDEBKjZTEEESIc> param_000a9d26, xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d27); // 0x000000018CD7A330-0x000000018CD7A434
+	private static int PAAHqPJeiyimprjSbjbBBdnBTcrPA(IList<xTONizpynmfsfmMGjoZKtugyxXqB> param_000a9d28, xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d29); // 0x000000018CD7A214-0x000000018CD7A330
 }
 
-internal interface eNfvpwLBlcLZrDwMSAAKYmquIOpc : IDisposable // TypeDefIndex: 53593
+internal interface eNfvpwLBlcLZrDwMSAAKYmquIOpc : IDisposable // TypeDefIndex: 78837
 {
 	// Properties
 	InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; }
@@ -282,84 +268,84 @@ internal interface eNfvpwLBlcLZrDwMSAAKYmquIOpc : IDisposable // TypeDefIndex: 5
 	// Methods
 	void SetVibration(int motorIndex, float amount, bool stopOtherMotors);
 	void StopVibration();
-	bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000733c7);
-	float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000733c8);
-	int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_000733c9);
-	void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000733ca);
-	void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000733cb);
+	bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000a9d2e);
+	float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000a9d2f);
+	int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_000a9d30);
+	void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000a9d31);
+	void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000a9d32);
 	void rtVwRpwCmfbNsKOJOmhtvzHenwRDA();
 }
 
-internal static class QCXAdrYeoiIaDhgwJbqhSbdCgmWt // TypeDefIndex: 53596
+internal static class QCXAdrYeoiIaDhgwJbqhSbdCgmWt // TypeDefIndex: 78840
 {
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	public delegate void qsUaWnaOTfbdEUpSLXGSWhXhItCBb(plwsmfqnWbhsWAUbGQRUXipBtMde pGamepad); // TypeDefIndex: 53594; 0x0000000182B46B90-0x0000000182B46BA0
+	public delegate void qsUaWnaOTfbdEUpSLXGSWhXhItCBb(plwsmfqnWbhsWAUbGQRUXipBtMde pGamepad); // TypeDefIndex: 78838; 0x0000000185B78EA0-0x0000000185B78EB0
 
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	public delegate void CZdmTuZTZgzBZpuotKhclUJfgIwC(plwsmfqnWbhsWAUbGQRUXipBtMde pGamepad); // TypeDefIndex: 53595; 0x0000000182B46B90-0x0000000182B46BA0
+	public delegate void CZdmTuZTZgzBZpuotKhclUJfgIwC(plwsmfqnWbhsWAUbGQRUXipBtMde pGamepad); // TypeDefIndex: 78839; 0x0000000185B78EA0-0x0000000185B78EB0
 
 	// Methods
-	private static extern ulong qkUPVdQQExZbWbEYNmjfACrvbnXz(IntPtr param_000733cc); // 0x000000018AB7C38C-0x000000018AB7C404
-	public static ulong zVyBDEPNlVrPxMoiPzqJVBogWCAM(IntPtr param_000733cd); // 0x000000018AB7C6D4-0x000000018AB7C6F0
-	private static extern ulong uaSTyiwEMlIHazMOrNJkvxRkNmTi(IntPtr param_000733ce); // 0x000000018AB7C65C-0x000000018AB7C6D4
-	public static ulong oLfxZkFoUcIjeZOZhfdxCtCvClvrA(IntPtr param_000733cf); // 0x000000018AB7C370-0x000000018AB7C38C
-	public static extern bool ZcoVpvzMmLZOXNtbUxpkmmBvPHAj(); // 0x000000018AB7BE7C-0x000000018AB7BEE8
-	private static extern IntPtr fUTOWpASUlmIZfPOrLwGKlaEabJt(); // 0x000000018AB7BFA8-0x000000018AB7C010
-	public static string gheqiqOXVVurAdelNkYSKsLZQcDS(); // 0x000000018AB7C010-0x000000018AB7C060
-	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde LyNXuymqchfyMHbKPzhLkknAoUWx(); // 0x000000018AB7BC74-0x000000018AB7BCDC
-	public static extern uint qsrppLnMrChUNpkbhdzwxIRUJVnP(IntPtr param_000733d0); // 0x000000018AB7C404-0x000000018AB7C47C
-	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde huhWIPmoKUnKxSCiTFuuGcWdmZmk(IntPtr param_000733d1, uint param_000733d2); // 0x000000018AB7C060-0x000000018AB7C0E0
-	public static extern bool uXpuWnjdHQCYXLhWEMwLNkcpTpxo(IntPtr param_000733d3, ref CbTgNHFFAIhPqyQzSkOQWxDxpAFbA param_000733d4); // 0x000000018AB7C5D4-0x000000018AB7C65C
-	public static extern void kWjhLkyGSxCKpwDimnssiEzdRkIT(IntPtr param_000733d5, in JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733d6); // 0x000000018AB7C138-0x000000018AB7C1D0
-	public static extern void dseGZnliktiAdJiOKkxIOcEybndR(); // 0x000000018AB7BEE8-0x000000018AB7BF50
-	public static extern void tUhxtCBYhzDOtrHKdgrSwNqCzlPT(); // 0x000000018AB7C56C-0x000000018AB7C5D4
-	public static extern void kkZATgLfdNebsKxcLBkQYdlorzab(qsUaWnaOTfbdEUpSLXGSWhXhItCBb param_000733d7); // 0x000000018AB7C1D0-0x000000018AB7C24C
-	public static extern void PpncbbCxciIJxHCaLCMjNFmKoLBib(CZdmTuZTZgzBZpuotKhclUJfgIwC param_000733d8); // 0x000000018AB7BCDC-0x000000018AB7BD58
-	public static extern bool szphOnhBCjCdPAoaDJMgUUdxmxhKA(IntPtr param_000733d9); // 0x000000018AB7C4F4-0x000000018AB7C56C
-	public static extern int WQFZqACcRmytIipdBRjINQQokWpV(IntPtr param_000733da); // 0x000000018AB7BDD0-0x000000018AB7BE04
-	public static extern int ncisDyYFVfqABdYykBDZRMxvlSHL(IntPtr param_000733db); // 0x000000018AB7C33C-0x000000018AB7C370
-	public static extern int DEIbNKSfsDIFmsLQfviRFkztfHXFA(IntPtr param_000733dc); // 0x000000018AB7BBFC-0x000000018AB7BC74
-	private static extern IntPtr mLsPElIYekXWgJQBUMLsohGoyPpE(IntPtr param_000733dd); // 0x000000018AB7C2C4-0x000000018AB7C33C
-	public static string idoTBwRHsKhntLELrqfVFIKuPuCb(IntPtr param_000733de); // 0x000000018AB7C0E0-0x000000018AB7C138
-	public static extern ushort swjEKOjObbkSbcAfGpfhnnreJMqc(IntPtr param_000733df); // 0x000000018AB7C47C-0x000000018AB7C4F4
-	public static extern ushort SJSYQsUTxrniSctldepXhvrdflSn(IntPtr param_000733e0); // 0x000000018AB7BD58-0x000000018AB7BDD0
-	public static extern IntPtr lwtqpwrkNbcQMsopmoVFccrRtckk(IntPtr param_000733e1); // 0x000000018AB7C24C-0x000000018AB7C2C4
-	public static string etZTYmFKTSxHhYhhhenHhTZwsBRn(IntPtr param_000733e2); // 0x000000018AB7BF50-0x000000018AB7BFA8
-	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde YjQrHwSlNxhlikZFFweYqeVtxpIM(IntPtr param_000733e3); // 0x000000018AB7BE04-0x000000018AB7BE7C
+	private static extern ulong qkUPVdQQExZbWbEYNmjfACrvbnXz(IntPtr param_000a9d33); // 0x000000018CD70098-0x000000018CD70110
+	public static ulong zVyBDEPNlVrPxMoiPzqJVBogWCAM(IntPtr param_000a9d34); // 0x000000018CD703E0-0x000000018CD703FC
+	private static extern ulong uaSTyiwEMlIHazMOrNJkvxRkNmTi(IntPtr param_000a9d35); // 0x000000018CD70368-0x000000018CD703E0
+	public static ulong oLfxZkFoUcIjeZOZhfdxCtCvClvrA(IntPtr param_000a9d36); // 0x000000018CD7007C-0x000000018CD70098
+	public static extern bool ZcoVpvzMmLZOXNtbUxpkmmBvPHAj(); // 0x000000018CD6FB8C-0x000000018CD6FBF4
+	private static extern IntPtr fUTOWpASUlmIZfPOrLwGKlaEabJt(); // 0x000000018CD6FCB4-0x000000018CD6FD1C
+	public static string gheqiqOXVVurAdelNkYSKsLZQcDS(); // 0x000000018CD6FD1C-0x000000018CD6FD6C
+	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde LyNXuymqchfyMHbKPzhLkknAoUWx(); // 0x000000018CD6F984-0x000000018CD6F9EC
+	public static extern uint qsrppLnMrChUNpkbhdzwxIRUJVnP(IntPtr param_000a9d37); // 0x000000018CD70110-0x000000018CD70188
+	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde huhWIPmoKUnKxSCiTFuuGcWdmZmk(IntPtr param_000a9d38, uint param_000a9d39); // 0x000000018CD6FD6C-0x000000018CD6FDEC
+	public static extern bool uXpuWnjdHQCYXLhWEMwLNkcpTpxo(IntPtr param_000a9d3a, ref CbTgNHFFAIhPqyQzSkOQWxDxpAFbA param_000a9d3b); // 0x000000018CD702E0-0x000000018CD70368
+	public static extern void kWjhLkyGSxCKpwDimnssiEzdRkIT(IntPtr param_000a9d3c, in JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d3d); // 0x000000018CD6FE44-0x000000018CD6FEDC
+	public static extern void dseGZnliktiAdJiOKkxIOcEybndR(); // 0x000000018CD6FBF4-0x000000018CD6FC5C
+	public static extern void tUhxtCBYhzDOtrHKdgrSwNqCzlPT(); // 0x000000018CD70278-0x000000018CD702E0
+	public static extern void kkZATgLfdNebsKxcLBkQYdlorzab(qsUaWnaOTfbdEUpSLXGSWhXhItCBb param_000a9d3e); // 0x000000018CD6FEDC-0x000000018CD6FF58
+	public static extern void PpncbbCxciIJxHCaLCMjNFmKoLBib(CZdmTuZTZgzBZpuotKhclUJfgIwC param_000a9d3f); // 0x000000018CD6F9EC-0x000000018CD6FA68
+	public static extern bool szphOnhBCjCdPAoaDJMgUUdxmxhKA(IntPtr param_000a9d40); // 0x000000018CD70200-0x000000018CD70278
+	public static extern int WQFZqACcRmytIipdBRjINQQokWpV(IntPtr param_000a9d41); // 0x000000018CD6FAE0-0x000000018CD6FB14
+	public static extern int ncisDyYFVfqABdYykBDZRMxvlSHL(IntPtr param_000a9d42); // 0x000000018CD70048-0x000000018CD7007C
+	public static extern int DEIbNKSfsDIFmsLQfviRFkztfHXFA(IntPtr param_000a9d43); // 0x000000018CD6F90C-0x000000018CD6F984
+	private static extern IntPtr mLsPElIYekXWgJQBUMLsohGoyPpE(IntPtr param_000a9d44); // 0x000000018CD6FFD0-0x000000018CD70048
+	public static string idoTBwRHsKhntLELrqfVFIKuPuCb(IntPtr param_000a9d45); // 0x000000018CD6FDEC-0x000000018CD6FE44
+	public static extern ushort swjEKOjObbkSbcAfGpfhnnreJMqc(IntPtr param_000a9d46); // 0x000000018CD70188-0x000000018CD70200
+	public static extern ushort SJSYQsUTxrniSctldepXhvrdflSn(IntPtr param_000a9d47); // 0x000000018CD6FA68-0x000000018CD6FAE0
+	public static extern IntPtr lwtqpwrkNbcQMsopmoVFccrRtckk(IntPtr param_000a9d48); // 0x000000018CD6FF58-0x000000018CD6FFD0
+	public static string etZTYmFKTSxHhYhhhenHhTZwsBRn(IntPtr param_000a9d49); // 0x000000018CD6FC5C-0x000000018CD6FCB4
+	public static extern plwsmfqnWbhsWAUbGQRUXipBtMde YjQrHwSlNxhlikZFFweYqeVtxpIM(IntPtr param_000a9d4a); // 0x000000018CD6FB14-0x000000018CD6FB8C
 }
 
-internal struct plwsmfqnWbhsWAUbGQRUXipBtMde // TypeDefIndex: 53597
+internal struct plwsmfqnWbhsWAUbGQRUXipBtMde // TypeDefIndex: 78841
 {
 	// Fields
 	private IntPtr LhxRtdKyhADHwatXDTXvylxWqMgT; // 0x00
 
 	// Properties
-	public IntPtr ttbSJgeKdiAPRlyxoAEMHoJrTGyI { get; } // 0x0000000182B76770-0x0000000182B76780 
-	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x00000001830CFC40-0x00000001830CFC50 
+	public IntPtr ttbSJgeKdiAPRlyxoAEMHoJrTGyI { get; } // 0x0000000184431970-0x0000000184431980 
+	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x00000001853AE700-0x00000001853AE710 
 }
 
-internal struct YWCaxKCjNDTdBLTDZNSJtTHiIMnk : IEquatable<YWCaxKCjNDTdBLTDZNSJtTHiIMnk> // TypeDefIndex: 53598
+internal struct YWCaxKCjNDTdBLTDZNSJtTHiIMnk : IEquatable<YWCaxKCjNDTdBLTDZNSJtTHiIMnk> // TypeDefIndex: 78842
 {
 	// Fields
 	public IntPtr FNMJsIYcymsJuahkrckLTjpCWbrd; // 0x00
 
 	// Properties
-	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x00000001830CFC40-0x00000001830CFC50 
+	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x00000001853AE700-0x00000001853AE710 
 
 	// Constructors
-	public YWCaxKCjNDTdBLTDZNSJtTHiIMnk(plwsmfqnWbhsWAUbGQRUXipBtMde param_000733ea); // 0x0000000184D88B60-0x0000000184D88B70
+	public YWCaxKCjNDTdBLTDZNSJtTHiIMnk(plwsmfqnWbhsWAUbGQRUXipBtMde param_000a9d51); // 0x000000018561B5B0-0x000000018561B5C0
 
 	// Methods
-	public void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x000000018AB8141C-0x000000018AB81444
-	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000733eb); // 0x000000018464E630-0x000000018464E640
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000733ec); // 0x000000018AB81444-0x000000018AB814A4
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018AB813CC-0x000000018AB8141C
-	public bool Equals(YWCaxKCjNDTdBLTDZNSJtTHiIMnk other); // 0x0000000182EECF30-0x0000000182EECF40
-	public static bool pqIWMXtLRfrLeVQnvBQsHmpvyOwL(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000733ee, YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000733ef); // 0x0000000182FB1840-0x0000000182FB1850
+	public void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x000000018CD75284-0x000000018CD752AC
+	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9d52); // 0x0000000185BD80B0-0x0000000185BD80C0
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000a9d53); // 0x000000018CD752AC-0x000000018CD7530C
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018CD75234-0x000000018CD75284
+	public bool Equals(YWCaxKCjNDTdBLTDZNSJtTHiIMnk other); // 0x000000018502F140-0x000000018502FC50
+	public static bool pqIWMXtLRfrLeVQnvBQsHmpvyOwL(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9d55, YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9d56); // 0x0000000184F9DDF0-0x0000000184F9DE00
 }
 
-internal sealed class OzOCKacbuZbJtdiFDEBKjZTEEESIc : kRyYZXvVecLRzJlIrixXarXRkjAGb // TypeDefIndex: 53600
+internal sealed class OzOCKacbuZbJtdiFDEBKjZTEEESIc : kRyYZXvVecLRzJlIrixXarXRkjAGb // TypeDefIndex: 78844
 {
 	// Fields
 	private xTONizpynmfsfmMGjoZKtugyxXqB XClabGCGqUysxygjhfOJzpCkkKck; // 0x90
@@ -371,31 +357,31 @@ internal sealed class OzOCKacbuZbJtdiFDEBKjZTEEESIc : kRyYZXvVecLRzJlIrixXarXRkj
 	private Action<xTONizpynmfsfmMGjoZKtugyxXqB, JaQnnRxPcWCJXAnpNCxpObeGFfZ> uwdWwYXIIhEOCUzfdDhFBNTaFKMQ; // 0xF0
 
 	// Properties
-	public xTONizpynmfsfmMGjoZKtugyxXqB aGZTLRceVCiwjwmKKFfUanjFlXyt { get; } // 0x0000000184D86220-0x0000000184D86230 
-	public override bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x0000000182FFF600-0x0000000182FFF610 
-	public override int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x0000000184D882B0-0x0000000184D882C0 
+	public xTONizpynmfsfmMGjoZKtugyxXqB aGZTLRceVCiwjwmKKFfUanjFlXyt { get; } // 0x0000000182271B70-0x0000000182271B80 
+	public override bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x00000001851A4410-0x00000001851A4420 
+	public override int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x00000001845BA780-0x00000001845BA790 
 
 	// Constructors
-	public OzOCKacbuZbJtdiFDEBKjZTEEESIc(xTONizpynmfsfmMGjoZKtugyxXqB param_000733f0, int param_000733f1, Action<xTONizpynmfsfmMGjoZKtugyxXqB, JaQnnRxPcWCJXAnpNCxpObeGFfZ> param_000733f2); // 0x000000018AB7B908-0x000000018AB7BA80
+	public OzOCKacbuZbJtdiFDEBKjZTEEESIc(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9d57, int param_000a9d58, Action<xTONizpynmfsfmMGjoZKtugyxXqB, JaQnnRxPcWCJXAnpNCxpObeGFfZ> param_000a9d59); // 0x000000018CD6F614-0x000000018CD6F790
 
 	// Methods
-	public void EtIibDtUhxvFOcDQBfvZunDPNman(CbTgNHFFAIhPqyQzSkOQWxDxpAFbA param_000733f3, double param_000733f4); // 0x000000018AB7B380-0x000000018AB7B6C0
-	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000733f5); // 0x000000018AB7B874-0x000000018AB7B894
-	public override void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000733f6); // 0x000000018AB7BB78-0x000000018AB7BBE8
-	public override void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_000733f7, float param_000733f8, bool param_000733f9); // 0x000000018AB7BAD0-0x000000018AB7BB78
-	public override void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018AB7BAA8-0x000000018AB7BAD0
-	private void cbJpAWKVtCgvFtIikgPssDjoPxht(); // 0x000000018AB7BA80-0x000000018AB7BAA8
-	private void NIxaCWDZMjMBnhrHHfjBzuFxLWeLA(); // 0x000000018AB7B6C0-0x000000018AB7B73C
-	private void xTimvBZRWJdKfVfeeBPYgxOlHdGq(bool param_000733fa); // 0x000000018AB7BBE8-0x000000018AB7BBFC
-	private void ZozcRgeaVRNMRbRTPKeaqXlAkzSX(); // 0x000000018AB7B894-0x000000018AB7B908
-	private void DXtdzhBNMxMaGgNIIiPTFzyyqagoA(); // 0x000000018AB7B288-0x000000018AB7B380
-	private bool QTMlFBnealhycdDsWHhlspySoJlU(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733fb); // 0x000000018AB7B73C-0x000000018AB7B770
-	private void nqabqRtHrrvynCNJypHmNKlllcLr(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733fc); // 0x0000000184DA86C0-0x0000000184DA86E0
-	private void jGJVOJHrAZNeacGSrLEXlKVmALZ(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733fd, ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000733fe); // 0x0000000184DA86A0-0x0000000184DA86C0
-	protected override bool SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000733ff); // 0x000000018AB7B770-0x000000018AB7B874
+	public void EtIibDtUhxvFOcDQBfvZunDPNman(CbTgNHFFAIhPqyQzSkOQWxDxpAFbA param_000a9d5a, double param_000a9d5b); // 0x000000018CD6F08C-0x000000018CD6F3CC
+	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000a9d5c); // 0x000000018CD6F580-0x000000018CD6F5A0
+	public override void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000a9d5d); // 0x000000018CD6F888-0x000000018CD6F8F8
+	public override void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_000a9d5e, float param_000a9d5f, bool param_000a9d60); // 0x000000018CD6F7E0-0x000000018CD6F888
+	public override void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018CD6F7B8-0x000000018CD6F7E0
+	private void cbJpAWKVtCgvFtIikgPssDjoPxht(); // 0x000000018CD6F790-0x000000018CD6F7B8
+	private void NIxaCWDZMjMBnhrHHfjBzuFxLWeLA(); // 0x000000018CD6F3CC-0x000000018CD6F448
+	private void xTimvBZRWJdKfVfeeBPYgxOlHdGq(bool param_000a9d61); // 0x000000018CD6F8F8-0x000000018CD6F90C
+	private void ZozcRgeaVRNMRbRTPKeaqXlAkzSX(); // 0x000000018CD6F5A0-0x000000018CD6F614
+	private void DXtdzhBNMxMaGgNIIiPTFzyyqagoA(); // 0x000000018CD6EF94-0x000000018CD6F08C
+	private bool QTMlFBnealhycdDsWHhlspySoJlU(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d62); // 0x000000018CD6F448-0x000000018CD6F47C
+	private void nqabqRtHrrvynCNJypHmNKlllcLr(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d63); // 0x00000001872567C0-0x00000001872567E0
+	private void jGJVOJHrAZNeacGSrLEXlKVmALZ(ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d64, ref JaQnnRxPcWCJXAnpNCxpObeGFfZ param_000a9d65); // 0x00000001872567A0-0x00000001872567C0
+	protected override bool SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9d66); // 0x000000018CD6F47C-0x000000018CD6F580
 }
 
-internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefIndex: 53606
+internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefIndex: 78850
 {
 	// Fields
 	private QxTmNwfleGAUlOPloekweCICSBLE wxrsQxIdcVBTqAgHMwBTcqMmdEUOA; // 0x38
@@ -412,17 +398,17 @@ internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefInd
 
 	// Properties
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x0000000184D863D0-0x0000000184D863E0 
+	public override int deviceCount { get; } // 0x00000001872330A0-0x00000001872330B0 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x0000000184D862B0-0x0000000184D862C0 
+	public override PlatformInputManager primaryInputManager { get; } // 0x0000000187232FC0-0x0000000187232FD0 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+	public override IInputSource inputSource { get; } // 0x0000000182986470-0x0000000182986480 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x0000000184DA77E0-0x0000000184DA77F0 
-	protected QxTmNwfleGAUlOPloekweCICSBLE lWfJISnECaZrRWGEYyVbdMtABwBdA { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+	public override InputSource inputSourceType { get; } // 0x000000018723A470-0x000000018723A480 
+	protected QxTmNwfleGAUlOPloekweCICSBLE lWfJISnECaZrRWGEYyVbdMtABwBdA { get; } // 0x0000000182986470-0x0000000182986480 
 
 	// Nested types
-	private class dNsssvxJNFrLApzRfgonqfmlEPBbA : IDisposable, IInputManagerJoystick // TypeDefIndex: 53601
+	private class dNsssvxJNFrLApzRfgonqfmlEPBbA : IDisposable, IInputManagerJoystick // TypeDefIndex: 78845
 	{
 		// Fields
 		private int SAwUWSkGKioQPDUaFBSUbXjjqYIM; // 0x10
@@ -456,76 +442,76 @@ internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefInd
 
 		// Properties
 		[CustomObfuscation(rename = false)]
-		public int rewiredId { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public int rewiredId { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
 		[CustomObfuscation(rename = false)]
-		public int inputManagerId { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int inputManagerId { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 		[CustomObfuscation(rename = false)]
-		public string name { get; } // 0x000000018AB83EE4-0x000000018AB83F30 
+		public string name { get; } // 0x000000018CD77E78-0x000000018CD77EC4 
 		[CustomObfuscation(rename = false)]
-		public long? systemId { get; } // 0x000000018AB83FC8-0x000000018AB84028 
+		public long? systemId { get; } // 0x000000018CD77F68-0x000000018CD77FC8 
 		[CustomObfuscation(rename = false)]
-		public int unityId { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public int unityId { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 		[CustomObfuscation(rename = false)]
-		public Guid instanceGuid { get; } // 0x0000000184D8FD50-0x0000000184D8FD60 
+		public Guid instanceGuid { get; } // 0x000000018723DAF0-0x000000018723DB00 
 		[CustomObfuscation(rename = false)]
-		public Guid persistentGuid { get; } // 0x000000018AB83F30-0x000000018AB83FC8 
+		public Guid persistentGuid { get; } // 0x000000018CD77EC4-0x000000018CD77F68 
 		[CustomObfuscation(rename = false)]
-		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
+		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187236200-0x0000000187236210 0x0000000188D95540-0x0000000188D95554
 
 		// Constructors
-		public dNsssvxJNFrLApzRfgonqfmlEPBbA(Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_0007342a); // 0x000000018AB83EBC-0x000000018AB83EE4
+		public dNsssvxJNFrLApzRfgonqfmlEPBbA(Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9d91); // 0x000000018CD77E50-0x000000018CD77E78
 
 		// Methods
 		[CustomObfuscation(rename = false)]
-		public void SetVibration(float amount, int motorIndex); // 0x000000018AB83B04-0x000000018AB83B30
+		public void SetVibration(float amount, int motorIndex); // 0x000000018CD77A8C-0x000000018CD77AB8
 		[CustomObfuscation(rename = false)]
-		public void StopVibration(); // 0x000000018AB83C08-0x000000018AB83C5C
-		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018AB8467C-0x000000018AB848DC
-		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(dNsssvxJNFrLApzRfgonqfmlEPBbA param_0007342b); // 0x000000018AB84994-0x000000018AB84AE8
+		public void StopVibration(); // 0x000000018CD77B90-0x000000018CD77BE4
+		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018CD7862C-0x000000018CD788A0
+		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9d92); // 0x000000018CD78968-0x000000018CD78AC0
 		[CustomObfuscation(rename = false)]
-		public void Update(); // 0x000000018AB83D94-0x000000018AB83DB4
+		public void Update(); // 0x000000018CD77D20-0x000000018CD77D40
 		[CustomObfuscation(rename = false)]
-		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018AB82F94-0x000000018AB83144
-		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(dNsssvxJNFrLApzRfgonqfmlEPBbA param_0007342d); // 0x000000018AB83144-0x000000018AB83200
-		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018AB83A3C-0x000000018AB83A9C
+		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018CD76E8C-0x000000018CD77030
+		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9d94); // 0x000000018CD77030-0x000000018CD77140
+		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018CD779C4-0x000000018CD77A24
 		[CustomObfuscation(rename = false)]
-		public BridgedController ToBridgedController(); // 0x000000018AB83C5C-0x000000018AB83CBC
+		public BridgedController ToBridgedController(); // 0x000000018CD77BE4-0x000000018CD77C44
 		[CustomObfuscation(rename = false)]
-		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018AB83CBC-0x000000018AB83D20
-		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018AB833CC-0x000000018AB83484
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018AB848DC-0x000000018AB84994
-		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_WindowsWGI_Base.Axis param_0007342e, int param_0007342f); // 0x000000018AB83DB4-0x000000018AB83E8C
-		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_WindowsWGI_Base.Button param_00073430, int param_00073431); // 0x000000018AB83B30-0x000000018AB83C08
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_WindowsWGI_Base.Axis param_00073432); // 0x000000018AB82E14-0x000000018AB82F44
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_00073433); // 0x000000018AB82D94-0x000000018AB82E14
-		private float lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_WindowsWGI_Base.Button param_00073434); // 0x000000018AB84028-0x000000018AB842E0
-		private float nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_00073435, int param_00073436, HatType param_00073437); // 0x000000018AB8432C-0x000000018AB843D0
-		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_00073438, Rewired.Data.Mapping.AxisDirection param_00073439); // 0x000000018AB842E0-0x000000018AB8432C
-		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018AB83484-0x000000018AB83A3C
-		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018AB83200-0x000000018AB833CC
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_0007343a); // 0x000000018AB843D0-0x000000018AB84528
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_0007343b); // 0x000000018AB84528-0x000000018AB8467C
-		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018AB82BD4-0x000000018AB82D94
-		public void Dispose(); // 0x000000018AB82F44-0x000000018AB82F94
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB83D20-0x000000018AB83D94
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007343c); // 0x000000018AB83A9C-0x000000018AB83B04
-		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(dNsssvxJNFrLApzRfgonqfmlEPBbA param_0007343d, dNsssvxJNFrLApzRfgonqfmlEPBbA param_0007343e); // 0x000000018AB0699C-0x000000018AB069CC
-		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(dNsssvxJNFrLApzRfgonqfmlEPBbA param_0007343f, dNsssvxJNFrLApzRfgonqfmlEPBbA param_00073440); // 0x000000018AB83E8C-0x000000018AB83EBC
+		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018CD77C44-0x000000018CD77CA8
+		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018CD77310-0x000000018CD773D8
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018CD788A0-0x000000018CD78968
+		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_WindowsWGI_Base.Axis param_000a9d95, int param_000a9d96); // 0x000000018CD77D40-0x000000018CD77E18
+		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_WindowsWGI_Base.Button param_000a9d97, int param_000a9d98); // 0x000000018CD77AB8-0x000000018CD77B90
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_WindowsWGI_Base.Axis param_000a9d99); // 0x000000018CD76D0C-0x000000018CD76E3C
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000a9d9a); // 0x000000018CD76C8C-0x000000018CD76D0C
+		private float lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_WindowsWGI_Base.Button param_000a9d9b); // 0x000000018CD77FC8-0x000000018CD78290
+		private float nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_000a9d9c, int param_000a9d9d, HatType param_000a9d9e); // 0x000000018CD782DC-0x000000018CD78380
+		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_000a9d9f, Rewired.Data.Mapping.AxisDirection param_000a9da0); // 0x000000018CD78290-0x000000018CD782DC
+		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018CD773D8-0x000000018CD779C4
+		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018CD77140-0x000000018CD77310
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000a9da1); // 0x000000018CD78380-0x000000018CD784D8
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000a9da2); // 0x000000018CD784D8-0x000000018CD7862C
+		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018CD76ACC-0x000000018CD76C8C
+		public void Dispose(); // 0x000000018CD76E3C-0x000000018CD76E8C
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD77CA8-0x000000018CD77D20
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9da3); // 0x000000018CD77A24-0x000000018CD77A8C
+		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da4, dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da5); // 0x000000018CCF98EC-0x000000018CCF9924
+		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da6, dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da7); // 0x000000018CD77E18-0x000000018CD77E50
 	}
 
-	private class VOIUdgfvFOcBkklESphisBeETZCF // TypeDefIndex: 53605
+	private class VOIUdgfvFOcBkklESphisBeETZCF // TypeDefIndex: 78849
 	{
 		// Fields
 		private List<oxFErcZrDolxlHjiZWMcPhWuilFC> kfYfqEcEuytPhEMEULSfGPpdWoee; // 0x10
 
 		// Nested types
-		public enum BkyQQTfkaoDdOdkdePBMBSEcOvYC // TypeDefIndex: 53602
+		public enum BkyQQTfkaoDdOdkdePBMBSEcOvYC // TypeDefIndex: 78846
 		{
 			Exact = 0,
 			Approximate = 1
 		}
 
-		public class oxFErcZrDolxlHjiZWMcPhWuilFC // TypeDefIndex: 53603
+		public class oxFErcZrDolxlHjiZWMcPhWuilFC // TypeDefIndex: 78847
 		{
 			// Fields
 			public int ZewBubFBTMGdguZhicDjJwXDMzqL; // 0x10
@@ -539,14 +525,14 @@ internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefInd
 			public int leCIWodzSMNIJlvlcmjWenntrvEL; // 0x48
 
 			// Constructors
-			public oxFErcZrDolxlHjiZWMcPhWuilFC(); // 0x00000001841E1670-0x00000001841E1680
+			public oxFErcZrDolxlHjiZWMcPhWuilFC(); // 0x0000000186805BA0-0x0000000186805BB0
 
 			// Methods
-			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(dNsssvxJNFrLApzRfgonqfmlEPBbA param_00073447, BkyQQTfkaoDdOdkdePBMBSEcOvYC param_00073448); // 0x000000018AB85B1C-0x000000018AB85C1C
+			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9dae, BkyQQTfkaoDdOdkdePBMBSEcOvYC param_000a9daf); // 0x000000018CD79B18-0x000000018CD79C7C
 		}
 
 		[CompilerGenerated]
-		private sealed class tuUvGepKTNboGNzzxHNDifnoEWZDA : IEnumerable<oxFErcZrDolxlHjiZWMcPhWuilFC>, IEnumerator<oxFErcZrDolxlHjiZWMcPhWuilFC> // TypeDefIndex: 53604
+		private sealed class tuUvGepKTNboGNzzxHNDifnoEWZDA : IEnumerable<oxFErcZrDolxlHjiZWMcPhWuilFC>, IEnumerator<oxFErcZrDolxlHjiZWMcPhWuilFC> // TypeDefIndex: 78848
 		{
 			// Fields
 			private int fYQgehhaxgmucoHwUcKeBQGOPxQf; // 0x10
@@ -561,78 +547,78 @@ internal class ZvFOVHtMPPFSKMXvcEpBjwvCmYwe : PlatformInputManager // TypeDefInd
 			private int JbCuPbQlPJerRbkBryzmjprgTJnI; // 0x4C
 
 			// Properties
-			oxFErcZrDolxlHjiZWMcPhWuilFC IEnumerator<Rewired.Platforms.Microsoft.WindowsGamingInput.WGIInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			oxFErcZrDolxlHjiZWMcPhWuilFC IEnumerator<Rewired.Platforms.Microsoft.WindowsGamingInput.WGIInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 
 			// Constructors
 			[DebuggerHidden]
-			public tuUvGepKTNboGNzzxHNDifnoEWZDA(int param_00073449); // 0x00000001891B1F10-0x00000001891B1F44
+			public tuUvGepKTNboGNzzxHNDifnoEWZDA(int param_000a9db0); // 0x000000018B707D6C-0x000000018B707DA0
 
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AB882B4-0x000000018AB883AC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CD7C3A8-0x000000018CD7C4AC
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AB88470-0x000000018AB884BC
+			void IEnumerator.Reset(); // 0x000000018CD7C570-0x000000018CD7C5BC
 			[DebuggerHidden]
-			IEnumerator<oxFErcZrDolxlHjiZWMcPhWuilFC> System.Collections.Generic.IEnumerable<Rewired.Platforms.Microsoft.WindowsGamingInput.WGIInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018AB883AC-0x000000018AB88468
+			IEnumerator<oxFErcZrDolxlHjiZWMcPhWuilFC> System.Collections.Generic.IEnumerable<Rewired.Platforms.Microsoft.WindowsGamingInput.WGIInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018CD7C4AC-0x000000018CD7C568
 			[DebuggerHidden]
-			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AB88468-0x000000018AB88470
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018CD7C568-0x000000018CD7C570
 		}
 
 		// Constructors
-		public VOIUdgfvFOcBkklESphisBeETZCF(); // 0x000000018AB7D9D0-0x000000018AB7DA48
+		public VOIUdgfvFOcBkklESphisBeETZCF(); // 0x000000018CD71754-0x000000018CD717CC
 
 		// Methods
-		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(dNsssvxJNFrLApzRfgonqfmlEPBbA param_00073441); // 0x000000018AB7DA48-0x000000018AB7DD40
-		public IEnumerable<oxFErcZrDolxlHjiZWMcPhWuilFC> rPEMzZmJunpFkQUNyRKTxEVSsvJu(dNsssvxJNFrLApzRfgonqfmlEPBbA param_00073442, BkyQQTfkaoDdOdkdePBMBSEcOvYC param_00073443); // 0x000000018AB7DD40-0x000000018AB7DDD8
-		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_00073444, Guid param_00073445, int param_00073446); // 0x000000018AB7D8A8-0x000000018AB7D9D0
+		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da8); // 0x000000018CD717CC-0x000000018CD71AC8
+		public IEnumerable<oxFErcZrDolxlHjiZWMcPhWuilFC> rPEMzZmJunpFkQUNyRKTxEVSsvJu(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9da9, BkyQQTfkaoDdOdkdePBMBSEcOvYC param_000a9daa); // 0x000000018CD71AC8-0x000000018CD71B60
+		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_000a9dab, Guid param_000a9dac, int param_000a9dad); // 0x000000018CD71608-0x000000018CD71754
 	}
 
 	// Constructors
-	public ZvFOVHtMPPFSKMXvcEpBjwvCmYwe(ConfigVars param_00073400, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_00073401, Func<int> param_00073402, Func<PidVid, bool> param_00073403); // 0x000000018AB82428-0x000000018AB82644
+	public ZvFOVHtMPPFSKMXvcEpBjwvCmYwe(ConfigVars param_000a9d67, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9d68, Func<int> param_000a9d69, Func<PidVid, bool> param_000a9d6a); // 0x000000018CD762F8-0x000000018CD76518
 
 	// Methods
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x000000018AB81840-0x000000018AB818C0
+	public override void Initialize(); // 0x000000018CD756E8-0x000000018CD75768
 	[CustomObfuscation(rename = false)]
-	public override void Update(UpdateLoopType updateLoop); // 0x000000018AB82138-0x000000018AB821A8
+	public override void Update(UpdateLoopType updateLoop); // 0x000000018CD76000-0x000000018CD76070
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018AB81AF8-0x000000018AB81BB8
+	public override void OnDestroy(); // 0x000000018CD759C0-0x000000018CD75A80
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000184D86230-0x0000000184D86240
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000187232F80-0x0000000187232F90
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018AB82038-0x000000018AB82138
+	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018CD75F00-0x000000018CD76000
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x000000018AB82008-0x000000018AB82020
+	public override void SystemDeviceConnected(); // 0x000000018CD75ED0-0x000000018CD75EE8
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x000000018AB82020-0x000000018AB82038
+	public override void SystemDeviceDisconnected(); // 0x000000018CD75EE8-0x000000018CD75F00
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x000000018AB81828-0x000000018AB81840
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x000000018CD756D0-0x000000018CD756E8
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x000000018AB81828-0x000000018AB81840
-	protected bool bExEtJRMyxGvZHyIQvbjmTimVEXKA(PidVid param_00073409); // 0x000000018AB82644-0x000000018AB82670
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x000000018AB81FE4-0x000000018AB82008
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_0007340a); // 0x000000018AB81BB8-0x000000018AB81FE4
-	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018AB82ABC-0x000000018AB82B2C
-	private IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x000000018AB814A4-0x000000018AB814EC
-	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_0007340b, int param_0007340c, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_0007340d, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_0007340e); // 0x000000018AB814EC-0x000000018AB816F4
-	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_0007340f, int param_00073410); // 0x000000018AB82B2C-0x000000018AB82BD4
-	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073411); // 0x000000018AB82670-0x000000018AB82718
-	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073412, int param_00073413); // 0x000000018AB82778-0x000000018AB827FC
-	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_00073414, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073415, int param_00073416, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073417, VOIUdgfvFOcBkklESphisBeETZCF.BkyQQTfkaoDdOdkdePBMBSEcOvYC param_00073418); // 0x000000018AB819B4-0x000000018AB81AF8
-	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_00073419, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_0007341a, VOIUdgfvFOcBkklESphisBeETZCF.BkyQQTfkaoDdOdkdePBMBSEcOvYC param_0007341b); // 0x000000018AB821A8-0x000000018AB82428
-	private void pjAprbCReXGeXpuaPApVlCDMgEk(); // 0x000000018AB827FC-0x000000018AB8285C
-	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_0007341c); // 0x000000018AB8285C-0x000000018AB829D8
-	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_0007341d); // 0x000000018AB829D8-0x000000018AB82ABC
-	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_0007341e, Guid param_0007341f); // 0x000000018AB818C0-0x000000018AB819B4
-	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073420, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_00073421, bool param_00073422); // 0x000000018AB816F4-0x000000018AB81828
-	private void iEEFlbFDszRppifBFnwpNApzASvF(dNsssvxJNFrLApzRfgonqfmlEPBbA param_00073423, bool param_00073424); // 0x000000018AB82718-0x000000018AB82778
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x000000018CD756D0-0x000000018CD756E8
+	protected bool bExEtJRMyxGvZHyIQvbjmTimVEXKA(PidVid param_000a9d70); // 0x000000018CD76518-0x000000018CD76544
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x000000018CD75EAC-0x000000018CD75ED0
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_000a9d71); // 0x000000018CD75A80-0x000000018CD75EAC
+	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018CD769B4-0x000000018CD76A24
+	private IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x000000018CD7530C-0x000000018CD75354
+	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_000a9d72, int param_000a9d73, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d74, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d75); // 0x000000018CD75354-0x000000018CD7556C
+	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d76, int param_000a9d77); // 0x000000018CD76A24-0x000000018CD76ACC
+	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d78); // 0x000000018CD76544-0x000000018CD765EC
+	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d79, int param_000a9d7a); // 0x000000018CD7664C-0x000000018CD766D0
+	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_000a9d7b, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d7c, int param_000a9d7d, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d7e, VOIUdgfvFOcBkklESphisBeETZCF.BkyQQTfkaoDdOdkdePBMBSEcOvYC param_000a9d7f); // 0x000000018CD75880-0x000000018CD759C0
+	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_000a9d80, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d81, VOIUdgfvFOcBkklESphisBeETZCF.BkyQQTfkaoDdOdkdePBMBSEcOvYC param_000a9d82); // 0x000000018CD76070-0x000000018CD762F8
+	private void pjAprbCReXGeXpuaPApVlCDMgEk(); // 0x000000018CD766D0-0x000000018CD76730
+	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_000a9d83); // 0x000000018CD76730-0x000000018CD768AC
+	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_000a9d84); // 0x000000018CD768AC-0x000000018CD769B4
+	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<eNfvpwLBlcLZrDwMSAAKYmquIOpc> param_000a9d85, Guid param_000a9d86); // 0x000000018CD75768-0x000000018CD75880
+	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d87, List<dNsssvxJNFrLApzRfgonqfmlEPBbA> param_000a9d88, bool param_000a9d89); // 0x000000018CD7556C-0x000000018CD756D0
+	private void iEEFlbFDszRppifBFnwpNApzASvF(dNsssvxJNFrLApzRfgonqfmlEPBbA param_000a9d8a, bool param_000a9d8b); // 0x000000018CD765EC-0x000000018CD7664C
 }
 
-internal class QxTmNwfleGAUlOPloekweCICSBLE : IInputSource // TypeDefIndex: 53607
+internal class QxTmNwfleGAUlOPloekweCICSBLE : IInputSource // TypeDefIndex: 78851
 {
 	// Fields
 	private static sSeXfAxAAxiXLAtqyIfJrJTcdaQh CDfqZkcaEYxbetBerABYaOrzklRMA; // 0x00
@@ -654,43 +640,43 @@ internal class QxTmNwfleGAUlOPloekweCICSBLE : IInputSource // TypeDefIndex: 5360
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x41
 
 	// Properties
-	public IUnifiedKeyboardSource DAKrDXiLhyBpnKTEDsnKpBNhcGcL { get; } // 0x00000001811EC580-0x00000001811EC590 
-	public IUnifiedMouseSource biKlLsDpPRJnAQPptDMBvDdWKqLK { get; } // 0x00000001811EC580-0x00000001811EC590 
+	public IUnifiedKeyboardSource DAKrDXiLhyBpnKTEDsnKpBNhcGcL { get; } // 0x0000000185829EC0-0x0000000185829ED0 
+	public IUnifiedMouseSource biKlLsDpPRJnAQPptDMBvDdWKqLK { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 
 	// Events
 	private event Action dxnTatXHsETEvJsuYRfCNkvGrAxy {
-		add; // 0x000000018AB7C778-0x000000018AB7C80C
-		remove; // 0x000000018AB7C8A8-0x000000018AB7C93C
+		add; // 0x000000018CD70484-0x000000018CD70518
+		remove; // 0x000000018CD705B4-0x000000018CD70648
 	}
 	public event Action DpsleWpZupQSExUUeoaqxQrXkiab {
-		add; // 0x000000018AB7D888-0x000000018AB7D890
-		remove; // 0x000000018AB7D890-0x000000018AB7D898
+		add; // 0x000000018CD715E8-0x000000018CD715F0
+		remove; // 0x000000018CD715F0-0x000000018CD715F8
 	}
 
 	// Constructors
-	public QxTmNwfleGAUlOPloekweCICSBLE(ConfigVars param_0007344c, bool param_0007344d, bool param_0007344e, bool param_0007344f); // 0x000000018AB7D1E4-0x000000018AB7D888
-	static QxTmNwfleGAUlOPloekweCICSBLE(); // 0x000000018AB7D184-0x000000018AB7D1E4
+	public QxTmNwfleGAUlOPloekweCICSBLE(ConfigVars param_000a9db3, bool param_000a9db4, bool param_000a9db5, bool param_000a9db6); // 0x000000018CD70F48-0x000000018CD715E8
+	static QxTmNwfleGAUlOPloekweCICSBLE(); // 0x000000018CD70EE8-0x000000018CD70F48
 
 	// Methods
-	public void zqSkLmupRiXSvinHfYCcdyyKpYwJ(); // 0x000000018AB7D898-0x000000018AB7D8A8
-	public bool PRajVZFjkThVyEtmdfNgoHAJuyoe(PidVid param_00073450); // 0x000000018AB7C824-0x000000018AB7C88C
-	public void SystemDeviceDisconnected(); // 0x000000018AB7CED8-0x000000018AB7CEE0
-	public void SystemDeviceConnected(); // 0x000000018AB7CED8-0x000000018AB7CEE0
-	public void Update(); // 0x000000018AB7D114-0x000000018AB7D184
-	public void UpdateDevices(UpdateLoopType updateLoop); // 0x000000018AB7CF54-0x000000018AB7D068
-	public void UpdateFinished(); // 0x000000018AB7D068-0x000000018AB7D114
+	public void zqSkLmupRiXSvinHfYCcdyyKpYwJ(); // 0x000000018CD715F8-0x000000018CD71608
+	public bool PRajVZFjkThVyEtmdfNgoHAJuyoe(PidVid param_000a9db7); // 0x000000018CD70530-0x000000018CD70598
+	public void SystemDeviceDisconnected(); // 0x000000018CD70C38-0x000000018CD70C40
+	public void SystemDeviceConnected(); // 0x000000018CD70C38-0x000000018CD70C40
+	public void Update(); // 0x000000018CD70E78-0x000000018CD70EE8
+	public void UpdateDevices(UpdateLoopType updateLoop); // 0x000000018CD70CB8-0x000000018CD70DCC
+	public void UpdateFinished(); // 0x000000018CD70DCC-0x000000018CD70E78
 	public IList<T> GetJoysticks<T>()
 		where T : class;
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(bool param_00073454); // 0x000000018AB7C93C-0x000000018AB7CD58
-	private void QcNqgYIEBECjeindYsOwxaBNNylR(); // 0x000000018AB7C88C-0x000000018AB7C8A8
-	private int GfyCUpLbRVSoLyvlZFXnudRcZyHo(); // 0x000000018AB7C80C-0x000000018AB7C824
-	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_00073455); // 0x000000018AB7C718-0x000000018AB7C728
-	public void Dispose(); // 0x000000018AB7C728-0x000000018AB7C778
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB7CEE0-0x000000018AB7CF54
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073456); // 0x000000018AB7CD58-0x000000018AB7CED8
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(bool param_000a9dbb); // 0x000000018CD70648-0x000000018CD70AB8
+	private void QcNqgYIEBECjeindYsOwxaBNNylR(); // 0x000000018CD70598-0x000000018CD705B4
+	private int GfyCUpLbRVSoLyvlZFXnudRcZyHo(); // 0x000000018CD70518-0x000000018CD70530
+	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000a9dbc); // 0x000000018CD70424-0x000000018CD70434
+	public void Dispose(); // 0x000000018CD70434-0x000000018CD70484
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD70C40-0x000000018CD70CB8
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9dbd); // 0x000000018CD70AB8-0x000000018CD70C38
 }
 
-internal abstract class kRyYZXvVecLRzJlIrixXarXRkjAGb : eNfvpwLBlcLZrDwMSAAKYmquIOpc // TypeDefIndex: 53610
+internal abstract class kRyYZXvVecLRzJlIrixXarXRkjAGb : eNfvpwLBlcLZrDwMSAAKYmquIOpc // TypeDefIndex: 78854
 {
 	// Fields
 	protected readonly WGIDeviceType FMzRoXctgKLenpvIAfMtMnMnbNBk; // 0x10
@@ -715,25 +701,25 @@ internal abstract class kRyYZXvVecLRzJlIrixXarXRkjAGb : eNfvpwLBlcLZrDwMSAAKYmqu
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x8A
 
 	// Properties
-	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000184DA77E0-0x0000000184DA77F0 
-	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000184D882A0-0x0000000184D882B0 
-	public string cJMYRUIePewENzlebCoKsxxPfeZBA { get; } // 0x0000000184D85A60-0x0000000184D85A70 
-	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x0000000184D890C0-0x0000000184D890D0 
-	public PidVid eabRFvqklxoYMJPbeMmtEYziJBbB { get; } // 0x000000018AB856AC-0x000000018AB856C0 
-	public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { get; } // 0x0000000184DA86F0-0x0000000184DA8700 
-	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { get; } // 0x0000000184DA86E0-0x0000000184DA86F0 
-	public Guid aNgaHbYRnoeDOKekCLvIxDjDiTpgA { get; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x000000018AB84E9C-0x000000018AB84EB8 
-	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x000000018AB84DEC-0x000000018AB84E08 
-	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x0000000184D863A0-0x0000000184D863B0 
+	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x000000018723A470-0x000000018723A480 
+	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000182971EE0-0x0000000182971EF0 
+	public string cJMYRUIePewENzlebCoKsxxPfeZBA { get; } // 0x000000018226EEA0-0x000000018226EEB0 
+	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x00000001845C28E0-0x00000001845C28F0 
+	public PidVid eabRFvqklxoYMJPbeMmtEYziJBbB { get; } // 0x000000018CD796A8-0x000000018CD796BC 
+	public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { get; } // 0x00000001872567F0-0x0000000187256800 
+	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { get; } // 0x00000001872567E0-0x00000001872567F0 
+	public Guid aNgaHbYRnoeDOKekCLvIxDjDiTpgA { get; } // 0x000000018723D770-0x000000018723D780 
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x000000018CD78E80-0x000000018CD78E9C 
+	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x000000018CD78DD0-0x000000018CD78DEC 
+	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x0000000187233080-0x0000000187233090 
 	public abstract bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; }
 	public abstract int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; }
-	public WGIDeviceType FeydSgDjtypCTgePURUdNlOclvVRA { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
-	public bool DMJqTpZTwOTOujCqZfgHNmEThhfJ { get; } // 0x0000000182A80FA0-0x0000000182A80FB0 
-	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x0000000184D86280-0x0000000184D86290 
+	public WGIDeviceType FeydSgDjtypCTgePURUdNlOclvVRA { get; } // 0x00000001828BC2B0-0x00000001828BC2C0 
+	public bool DMJqTpZTwOTOujCqZfgHNmEThhfJ { get; } // 0x000000018224EFC0-0x000000018224EFD0 
+	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x0000000187232FA0-0x0000000187232FB0 
 
 	// Nested types
-	protected abstract class POiSXKWqpBngEMPJrSMlukiUOCu<u0001> // TypeDefIndex: 53608
+	protected abstract class POiSXKWqpBngEMPJrSMlukiUOCu<u0001> // TypeDefIndex: 78852
 	{
 		// Fields
 		public u0001 IaOjDqjXmTvIEPrVtSrrcPlQvkii;
@@ -742,36 +728,36 @@ internal abstract class kRyYZXvVecLRzJlIrixXarXRkjAGb : eNfvpwLBlcLZrDwMSAAKYmqu
 		public POiSXKWqpBngEMPJrSMlukiUOCu();
 	}
 
-	protected class QZBgpNcZHxUIdcYbGYxykIMrQHufA : POiSXKWqpBngEMPJrSMlukiUOCu<float> // TypeDefIndex: 53609
+	protected class QZBgpNcZHxUIdcYbGYxykIMrQHufA : POiSXKWqpBngEMPJrSMlukiUOCu<float> // TypeDefIndex: 78853
 	{
 		// Constructors
-		public QZBgpNcZHxUIdcYbGYxykIMrQHufA(); // 0x000000018AB7C6F0-0x000000018AB7C718
+		public QZBgpNcZHxUIdcYbGYxykIMrQHufA(); // 0x000000018CD703FC-0x000000018CD70424
 	}
 
 	// Constructors
-	public kRyYZXvVecLRzJlIrixXarXRkjAGb(WGIDeviceType param_00073457, WRqiFiMABvxEeukPytmLAZrDMfeI param_00073458, int param_00073459, int param_0007345a, int param_0007345b, int param_0007345c); // 0x000000018AB84F9C-0x000000018AB85624
+	public kRyYZXvVecLRzJlIrixXarXRkjAGb(WGIDeviceType param_000a9dbe, WRqiFiMABvxEeukPytmLAZrDMfeI param_000a9dbf, int param_000a9dc0, int param_000a9dc1, int param_000a9dc2, int param_000a9dc3); // 0x000000018CD78F84-0x000000018CD79620
 
 	// Methods
 	public abstract void SetVibration(int motorIndex, float amount, bool stopOtherMotors);
 	public abstract void StopVibration();
-	public bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_00073460); // 0x000000018AB85624-0x000000018AB856AC
-	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_00073461); // 0x000000018AB84E08-0x000000018AB84E4C
-	public int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_00073462); // 0x0000000184DA2BB0-0x0000000184DA2BC0
-	public virtual void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_00073463); // 0x000000018AB856C0-0x000000018AB85728
-	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073464); // 0x000000018AB84ED0-0x000000018AB84F24
-	public virtual void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018AB85728-0x000000018AB8577C
-	public void Dispose(); // 0x000000018AB84E4C-0x000000018AB84E9C
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB84F24-0x000000018AB84F9C
-	protected virtual bool SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073465); // 0x000000018AB84EB8-0x000000018AB84ED0
+	public bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000a9dc7); // 0x000000018CD79620-0x000000018CD796A8
+	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000a9dc8); // 0x000000018CD78DEC-0x000000018CD78E30
+	public int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_000a9dc9); // 0x0000000184E58B60-0x0000000184E58B70
+	public virtual void pklLTaWbvSXZvwSHNrAPLnwqJXoO(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000a9dca); // 0x000000018CD796BC-0x000000018CD79724
+	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000a9dcb); // 0x000000018CD78EB4-0x000000018CD78F08
+	public virtual void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CD79724-0x000000018CD79778
+	public void Dispose(); // 0x000000018CD78E30-0x000000018CD78E80
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD78F08-0x000000018CD78F84
+	protected virtual bool SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9dcc); // 0x000000018CD78E9C-0x000000018CD78EB4
 }
 
-internal abstract class WRqiFiMABvxEeukPytmLAZrDMfeI : gfOsPGwCBWApLANJUASJsoWlYrzbA // TypeDefIndex: 53613
+internal abstract class WRqiFiMABvxEeukPytmLAZrDMfeI : gfOsPGwCBWApLANJUASJsoWlYrzbA // TypeDefIndex: 78857
 {
 	// Constructors
-	protected WRqiFiMABvxEeukPytmLAZrDMfeI(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_0007346b); // 0x0000000184D88BF0-0x0000000184D88C00
+	protected WRqiFiMABvxEeukPytmLAZrDMfeI(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9dd2); // 0x000000018561B5A0-0x000000018561B5B0
 }
 
-internal class xTONizpynmfsfmMGjoZKtugyxXqB : WRqiFiMABvxEeukPytmLAZrDMfeI // TypeDefIndex: 53614
+internal class xTONizpynmfsfmMGjoZKtugyxXqB : WRqiFiMABvxEeukPytmLAZrDMfeI // TypeDefIndex: 78858
 {
 	// Fields
 	private static bool aQtLoqtxsekSGSGCyIhPxJnYfoIdA; // 0x00
@@ -782,62 +768,62 @@ internal class xTONizpynmfsfmMGjoZKtugyxXqB : WRqiFiMABvxEeukPytmLAZrDMfeI // Ty
 	private static Action<xTONizpynmfsfmMGjoZKtugyxXqB> KsMjFASygbTssqeXdUMuOsJqcSDl; // 0x18
 
 	// Properties
-	public JaQnnRxPcWCJXAnpNCxpObeGFfZ AzTKzpcpepoHyqkrIKIAosuSVoBx { set; } // 0x000000018AB8ACE0-0x000000018AB8AD14
+	public JaQnnRxPcWCJXAnpNCxpObeGFfZ AzTKzpcpepoHyqkrIKIAosuSVoBx { set; } // 0x000000018CD7EE44-0x000000018CD7EE78
 
 	// Events
 	public static event Action<xTONizpynmfsfmMGjoZKtugyxXqB> fEPGZKBRlEFKhQtGAmlIjpeijsZLc {
-		add; // 0x000000018AB8A1A0-0x000000018AB8A268
-		remove; // 0x000000018AB8A600-0x000000018AB8A6C8
+		add; // 0x000000018CD7E2F4-0x000000018CD7E3BC
+		remove; // 0x000000018CD7E754-0x000000018CD7E81C
 	}
 	public static event Action<xTONizpynmfsfmMGjoZKtugyxXqB> KsMjFASygbTssqeXdUMuOsJqcSDl {
-		add; // 0x000000018AB8A918-0x000000018AB8A9E0
-		remove; // 0x000000018AB8A518-0x000000018AB8A5E0
+		add; // 0x000000018CD7EA6C-0x000000018CD7EB34
+		remove; // 0x000000018CD7E66C-0x000000018CD7E734
 	}
 
 	// Constructors
-	public xTONizpynmfsfmMGjoZKtugyxXqB(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_0007347c); // 0x0000000184D88BF0-0x0000000184D88C00
-	static xTONizpynmfsfmMGjoZKtugyxXqB(); // 0x000000018AB8A884-0x000000018AB8A918
+	public xTONizpynmfsfmMGjoZKtugyxXqB(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9de3); // 0x000000018561B5A0-0x000000018561B5B0
+	static xTONizpynmfsfmMGjoZKtugyxXqB(); // 0x000000018CD7E9D8-0x000000018CD7EA6C
 
 	// Methods
-	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x000000018AB8A268-0x000000018AB8A518
-	public static void gVdBeQJURtaltdSYjxAtasRcQkfZB(); // 0x000000018AB8A9E0-0x000000018AB8ABE4
-	public static void sWJOnfxPBadazuczZMVzMdnWxuMF(List<xTONizpynmfsfmMGjoZKtugyxXqB> param_00073470); // 0x000000018AB8AD14-0x000000018AB8AEA4
-	public static bool NvTKiYhpNyHCiHSqumMZdTDfGGMqb(ushort param_00073471, ushort param_00073472); // 0x000000018AB8A708-0x000000018AB8A884
-	private static bool mvfAKmMmnTfexhBoeWLcDVABFJFcb(ushort param_00073473, ushort param_00073474, ltvMIJQDOVahJxMogBIqJomZcAyGb param_00073475); // 0x000000018AB8ABE4-0x000000018AB8ACCC
-	private static bool yrUeUxjCTMlGIIeSkBbTLyUTCgex(ushort param_00073476, ushort param_00073477, ushort param_00073478, ushort param_00073479); // 0x000000018AB8B0B8-0x000000018AB8B200
+	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x000000018CD7E3BC-0x000000018CD7E66C
+	public static void gVdBeQJURtaltdSYjxAtasRcQkfZB(); // 0x000000018CD7EB34-0x000000018CD7ED40
+	public static void sWJOnfxPBadazuczZMVzMdnWxuMF(List<xTONizpynmfsfmMGjoZKtugyxXqB> param_000a9dd7); // 0x000000018CD7EE78-0x000000018CD7F00C
+	public static bool NvTKiYhpNyHCiHSqumMZdTDfGGMqb(ushort param_000a9dd8, ushort param_000a9dd9); // 0x000000018CD7E85C-0x000000018CD7E9D8
+	private static bool mvfAKmMmnTfexhBoeWLcDVABFJFcb(ushort param_000a9dda, ushort param_000a9ddb, ltvMIJQDOVahJxMogBIqJomZcAyGb param_000a9ddc); // 0x000000018CD7ED40-0x000000018CD7EE30
+	private static bool yrUeUxjCTMlGIIeSkBbTLyUTCgex(ushort param_000a9ddd, ushort param_000a9dde, ushort param_000a9ddf, ushort param_000a9de0); // 0x000000018CD7F220-0x000000018CD7F36C
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(QCXAdrYeoiIaDhgwJbqhSbdCgmWt.qsUaWnaOTfbdEUpSLXGSWhXhItCBb))]
-	private static void wwLgwEQUiKEHyzLXrSFGwhRSuwrQ(plwsmfqnWbhsWAUbGQRUXipBtMde param_0007347a); // 0x000000018AB8B028-0x000000018AB8B0B8
+	private static void wwLgwEQUiKEHyzLXrSFGwhRSuwrQ(plwsmfqnWbhsWAUbGQRUXipBtMde param_000a9de1); // 0x000000018CD7F190-0x000000018CD7F220
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(QCXAdrYeoiIaDhgwJbqhSbdCgmWt.CZdmTuZTZgzBZpuotKhclUJfgIwC))]
-	private static void tngfjEbSnLeRaHbzeSADyWdcHAiJA(plwsmfqnWbhsWAUbGQRUXipBtMde param_0007347b); // 0x000000018AB8AEA4-0x000000018AB8AF34
-	public CbTgNHFFAIhPqyQzSkOQWxDxpAFbA LanptfCarJGFsSnHOBSkeKNpGhuNA(); // 0x000000018AB8A6C8-0x000000018AB8A708
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_0007347e); // 0x000000018AB8AFAC-0x000000018AB8B028
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x0000000184D87100-0x0000000184D87110
-	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(xTONizpynmfsfmMGjoZKtugyxXqB param_0007347f); // 0x000000018AB8AF34-0x000000018AB8AFAC
-	public static bool pqIWMXtLRfrLeVQnvBQsHmpvyOwL(xTONizpynmfsfmMGjoZKtugyxXqB param_00073480, xTONizpynmfsfmMGjoZKtugyxXqB param_00073481); // 0x000000018AB8ACCC-0x000000018AB8ACE0
-	public static bool FUeRCYeZMdcUMzwOCDzlKtPuAvXS(xTONizpynmfsfmMGjoZKtugyxXqB param_00073482, xTONizpynmfsfmMGjoZKtugyxXqB param_00073483); // 0x000000018AB8A5E0-0x000000018AB8A600
+	private static void tngfjEbSnLeRaHbzeSADyWdcHAiJA(plwsmfqnWbhsWAUbGQRUXipBtMde param_000a9de2); // 0x000000018CD7F00C-0x000000018CD7F09C
+	public CbTgNHFFAIhPqyQzSkOQWxDxpAFbA LanptfCarJGFsSnHOBSkeKNpGhuNA(); // 0x000000018CD7E81C-0x000000018CD7E85C
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000a9de5); // 0x000000018CD7F114-0x000000018CD7F190
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x0000000187235B50-0x0000000187235B60
+	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9de6); // 0x000000018CD7F09C-0x000000018CD7F114
+	public static bool pqIWMXtLRfrLeVQnvBQsHmpvyOwL(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9de7, xTONizpynmfsfmMGjoZKtugyxXqB param_000a9de8); // 0x000000018CD7EE30-0x000000018CD7EE44
+	public static bool FUeRCYeZMdcUMzwOCDzlKtPuAvXS(xTONizpynmfsfmMGjoZKtugyxXqB param_000a9de9, xTONizpynmfsfmMGjoZKtugyxXqB param_000a9dea); // 0x000000018CD7E734-0x000000018CD7E754
 }
 
-internal class ltvMIJQDOVahJxMogBIqJomZcAyGb : WRqiFiMABvxEeukPytmLAZrDMfeI, IhnkQXvfiVqodZkZlCKfERgAixYb // TypeDefIndex: 53615
+internal class ltvMIJQDOVahJxMogBIqJomZcAyGb : WRqiFiMABvxEeukPytmLAZrDMfeI, IhnkQXvfiVqodZkZlCKfERgAixYb // TypeDefIndex: 78859
 {
 	// Properties
-	public bool PtgvDgVGDSoFpSyoAQWGUVadHpyG { get; } // 0x000000018AB85A88-0x000000018AB85AA8 
-	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x000000018AB8577C-0x000000018AB8579C 
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x000000018AB85928-0x000000018AB85948 
-	public ushort UJzRyOlVLEWSgNGuEUZhOEUtcBgO { get; } // 0x000000018AB85A68-0x000000018AB85A88 
-	public ushort LtCoVbQhCtrFFQMdQhulKASuRWqL { get; } // 0x000000018AB85AA8-0x000000018AB85AC8 
-	public int VkIkNerOTMGSqrYXSFRxDHAwPdtD { get; } // 0x000000018AB85908-0x000000018AB85928 
-	public string DmgOnrfsrdJveAtMBYLlduRkGcQv { get; } // 0x000000018AB85948-0x000000018AB8599C 
-	public string dVBWLIqvdJjCTQUVQqSaJdTIAzsR { get; } // 0x000000018AB85AC8-0x000000018AB85B1C 
+	public bool PtgvDgVGDSoFpSyoAQWGUVadHpyG { get; } // 0x000000018CD79A84-0x000000018CD79AA4 
+	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x000000018CD79778-0x000000018CD79798 
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x000000018CD79924-0x000000018CD79944 
+	public ushort UJzRyOlVLEWSgNGuEUZhOEUtcBgO { get; } // 0x000000018CD79A64-0x000000018CD79A84 
+	public ushort LtCoVbQhCtrFFQMdQhulKASuRWqL { get; } // 0x000000018CD79AA4-0x000000018CD79AC4 
+	public int VkIkNerOTMGSqrYXSFRxDHAwPdtD { get; } // 0x000000018CD79904-0x000000018CD79924 
+	public string DmgOnrfsrdJveAtMBYLlduRkGcQv { get; } // 0x000000018CD79944-0x000000018CD79998 
+	public string dVBWLIqvdJjCTQUVQqSaJdTIAzsR { get; } // 0x000000018CD79AC4-0x000000018CD79B18 
 
 	// Constructors
-	public ltvMIJQDOVahJxMogBIqJomZcAyGb(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_00073485); // 0x0000000184D88BF0-0x0000000184D88C00
+	public ltvMIJQDOVahJxMogBIqJomZcAyGb(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9dec); // 0x000000018561B5A0-0x000000018561B5B0
 
 	// Methods
-	public static ltvMIJQDOVahJxMogBIqJomZcAyGb jBsIGPfNQdQlCWuDQfJzCKcJZXDGB(WRqiFiMABvxEeukPytmLAZrDMfeI param_00073484); // 0x000000018AB8599C-0x000000018AB85A68
-	public bool DMJqTpZTwOTOujCqZfgHNmEThhfJ(out PidVid param_00073486); // 0x000000018AB8579C-0x000000018AB85908
+	public static ltvMIJQDOVahJxMogBIqJomZcAyGb jBsIGPfNQdQlCWuDQfJzCKcJZXDGB(WRqiFiMABvxEeukPytmLAZrDMfeI param_000a9deb); // 0x000000018CD79998-0x000000018CD79A64
+	public bool DMJqTpZTwOTOujCqZfgHNmEThhfJ(out PidVid param_000a9ded); // 0x000000018CD79798-0x000000018CD79904
 }
 
-internal struct JaQnnRxPcWCJXAnpNCxpObeGFfZ // TypeDefIndex: 53616
+internal struct JaQnnRxPcWCJXAnpNCxpObeGFfZ // TypeDefIndex: 78860
 {
 	// Fields
 	public double bnVCUMRPyGNZCBSBfoFOWqsyoSiD; // 0x00
@@ -846,10 +832,10 @@ internal struct JaQnnRxPcWCJXAnpNCxpObeGFfZ // TypeDefIndex: 53616
 	public double vJTvjiVXyLpJFjfATeIPFcgKcshx; // 0x18
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB7B184-0x000000018AB7B288
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD6EE8C-0x000000018CD6EF94
 }
 
-internal struct CbTgNHFFAIhPqyQzSkOQWxDxpAFbA // TypeDefIndex: 53617
+internal struct CbTgNHFFAIhPqyQzSkOQWxDxpAFbA // TypeDefIndex: 78861
 {
 	// Fields
 	public GamepadButtons PlahzMFUWWFVTEjviHdVVhgEfBVTb; // 0x00
@@ -862,16 +848,16 @@ internal struct CbTgNHFFAIhPqyQzSkOQWxDxpAFbA // TypeDefIndex: 53617
 	public ulong yarsNCqpAJyntJMkiHvyHqhuMcsT; // 0x38
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB7AECC-0x000000018AB7B0E4
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD6EBBC-0x000000018CD6EDEC
 }
 
-internal interface IhnkQXvfiVqodZkZlCKfERgAixYb // TypeDefIndex: 53619
+internal interface IhnkQXvfiVqodZkZlCKfERgAixYb // TypeDefIndex: 78863
 {
 	// Properties
 	bool PtgvDgVGDSoFpSyoAQWGUVadHpyG { get; }
 }
 
-internal interface dgxxfOXDTLCjaOlmsbBKVcVTHAcO // TypeDefIndex: 53620
+internal interface dgxxfOXDTLCjaOlmsbBKVcVTHAcO // TypeDefIndex: 78864
 {
 	// Properties
 	bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; }
@@ -880,34 +866,34 @@ internal interface dgxxfOXDTLCjaOlmsbBKVcVTHAcO // TypeDefIndex: 53620
 	void IYsALPEzKUpSHjMlchBUFTjZCkvr();
 }
 
-internal abstract class gfOsPGwCBWApLANJUASJsoWlYrzbA : IDisposable, dgxxfOXDTLCjaOlmsbBKVcVTHAcO // TypeDefIndex: 53621
+internal abstract class gfOsPGwCBWApLANJUASJsoWlYrzbA : IDisposable, dgxxfOXDTLCjaOlmsbBKVcVTHAcO // TypeDefIndex: 78865
 {
 	// Fields
 	protected YWCaxKCjNDTdBLTDZNSJtTHiIMnk HmjIMgrvlgIJozHXDOXofnrdHqTk; // 0x10
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x18
 
 	// Properties
-	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x0000000183CF6CB0-0x0000000183CF6CC0 
-	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x00000001859F5640-0x00000001859F5650 
+	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x00000001829260F0-0x0000000182926100 
 
 	// Constructors
-	protected gfOsPGwCBWApLANJUASJsoWlYrzbA(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_00073487); // 0x0000000184D88BF0-0x0000000184D88C00
+	protected gfOsPGwCBWApLANJUASJsoWlYrzbA(YWCaxKCjNDTdBLTDZNSJtTHiIMnk param_000a9dee); // 0x000000018561B5A0-0x000000018561B5B0
 
 	// Methods
-	public virtual void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x000000018AB84D48-0x000000018AB84D54
-	public virtual void Dispose(); // 0x000000018AB84CF8-0x000000018AB84D48
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB84D78-0x000000018AB84DEC
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073488); // 0x000000018AB84D54-0x000000018AB84D78
+	public virtual void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x000000018CD78D28-0x000000018CD78D34
+	public virtual void Dispose(); // 0x000000018CD78CD8-0x000000018CD78D28
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD78D58-0x000000018CD78DD0
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9def); // 0x000000018CD78D34-0x000000018CD78D58
 }
 
-internal enum DKfdSpPOsWGnACTRAulCFEVLxkQk // TypeDefIndex: 53622
+internal enum DKfdSpPOsWGnACTRAulCFEVLxkQk // TypeDefIndex: 78866
 {
 	None = 0,
 	LostFocus = 1,
 	GainedFocus = 2
 }
 
-internal enum ZmIGzJfowxKiyvJARuzfVHOOhwvO // TypeDefIndex: 53623
+internal enum ZmIGzJfowxKiyvJARuzfVHOOhwvO // TypeDefIndex: 78867
 {
 	None = 0,
 	RawInput = 1,
@@ -916,7 +902,7 @@ internal enum ZmIGzJfowxKiyvJARuzfVHOOhwvO // TypeDefIndex: 53623
 	ManualHID = 4
 }
 
-internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 53636
+internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 78880
 {
 	// Fields
 	private IntPtr jhGooCbTTXmgjsKnAiicIgjWqgcZ; // 0x38
@@ -940,18 +926,18 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 	private Func<int> bMdbmKyqgyUaZuaPJHLNCqnGNHeDb; // 0xC0
 
 	// Properties
-	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
+	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x0000000187232F80-0x0000000187232F90 0x0000000186B19440-0x0000000186B19450
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x0000000184D86550-0x0000000184D86560 
+	public override int deviceCount { get; } // 0x0000000187233280-0x0000000187233290 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x0000000184D86260-0x0000000184D86270 
+	public override PlatformInputManager primaryInputManager { get; } // 0x00000001828D49D0-0x00000001828D49E0 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x000000018AB7FBB8-0x000000018AB7FC2C 
+	public override IInputSource inputSource { get; } // 0x000000018CD739B0-0x000000018CD73A24 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+	public override InputSource inputSourceType { get; } // 0x00000001872328C0-0x00000001872328D0 
 
 	// Nested types
-	private class SulfOtFmRZnbMqygEpLarHhEkBqj : IInputManagerJoystick // TypeDefIndex: 53624
+	private class SulfOtFmRZnbMqygEpLarHhEkBqj : IInputManagerJoystick // TypeDefIndex: 78868
 	{
 		// Fields
 		private int SAwUWSkGKioQPDUaFBSUbXjjqYIM; // 0x10
@@ -988,69 +974,69 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 
 		// Properties
 		[CustomObfuscation(rename = false)]
-		public int rewiredId { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public int rewiredId { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
 		[CustomObfuscation(rename = false)]
-		public int inputManagerId { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int inputManagerId { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 		[CustomObfuscation(rename = false)]
-		public string name { get; } // 0x000000018AB92A40-0x000000018AB92AA8 
+		public string name { get; } // 0x000000018CD86DB4-0x000000018CD86E1C 
 		[CustomObfuscation(rename = false)]
-		public long? systemId { get; } // 0x000000018AB92AA8-0x000000018AB92B08 
+		public long? systemId { get; } // 0x000000018CD86E1C-0x000000018CD86E7C 
 		[CustomObfuscation(rename = false)]
-		public int unityId { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public int unityId { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 		[CustomObfuscation(rename = false)]
-		public Rewired.Controller.Extension extension { get; } // 0x0000000184D892F0-0x0000000184D89300 
+		public Rewired.Controller.Extension extension { get; } // 0x0000000187236200-0x0000000187236210 
 		[CustomObfuscation(rename = false)]
-		public Guid instanceGuid { get; } // 0x0000000184DA8720-0x0000000184DA8730 
+		public Guid instanceGuid { get; } // 0x0000000187256820-0x0000000187256830 
 		[CustomObfuscation(rename = false)]
-		public Guid persistentGuid { get; } // 0x0000000184DA8720-0x0000000184DA8730 
+		public Guid persistentGuid { get; } // 0x0000000187256820-0x0000000187256830 
 
 		// Constructors
-		public SulfOtFmRZnbMqygEpLarHhEkBqj(gDyOnIMLNWnkqgMmQAeBaAvbdhUC param_000734b9, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000734ba); // 0x000000018AB929B4-0x000000018AB929EC
+		public SulfOtFmRZnbMqygEpLarHhEkBqj(gDyOnIMLNWnkqgMmQAeBaAvbdhUC param_000a9e20, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9e21); // 0x000000018CD86D28-0x000000018CD86D60
 
 		// Methods
 		[CustomObfuscation(rename = false)]
-		public void SetVibration(float amount, int motorIndex); // 0x00000001841E1670-0x00000001841E1680
+		public void SetVibration(float amount, int motorIndex); // 0x0000000186805BA0-0x0000000186805BB0
 		[CustomObfuscation(rename = false)]
-		public void StopVibration(); // 0x00000001841E1670-0x00000001841E1680
-		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018AB9328C-0x000000018AB9342C
-		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(SulfOtFmRZnbMqygEpLarHhEkBqj param_000734bb); // 0x000000018AB935E0-0x000000018AB936E4
+		public void StopVibration(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018CD87608-0x000000018CD877B4
+		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e22); // 0x000000018CD87970-0x000000018CD87A78
 		[CustomObfuscation(rename = false)]
-		public void Update(); // 0x000000018AB92838-0x000000018AB928CC
+		public void Update(); // 0x000000018CD86BA8-0x000000018CD86C3C
 		[CustomObfuscation(rename = false)]
-		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018AB91BF8-0x000000018AB91D4C
-		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(SulfOtFmRZnbMqygEpLarHhEkBqj param_000734bd); // 0x000000018AB91D4C-0x000000018AB91E18
-		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018AB92474-0x000000018AB924D4
+		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018CD85F00-0x000000018CD86050
+		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e24); // 0x000000018CD86050-0x000000018CD8616C
+		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018CD867CC-0x000000018CD8682C
 		[CustomObfuscation(rename = false)]
-		public BridgedController ToBridgedController(); // 0x000000018AB9266C-0x000000018AB926CC
+		public BridgedController ToBridgedController(); // 0x000000018CD869D8-0x000000018CD86A38
 		[CustomObfuscation(rename = false)]
-		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018AB926CC-0x000000018AB92730
-		public bool TxMOcAAtBTbnmMNVgaFjIETLvxVv(); // 0x000000018AB92730-0x000000018AB927C4
-		public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x000000018AB92170-0x000000018AB92214
-		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_000734be, int[] param_000734bf); // 0x000000018AB92214-0x000000018AB923C8
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_000734c0, int[] param_000734c1); // 0x000000018AB9342C-0x000000018AB935E0
-		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000734c2, int param_000734c3, bool[] param_000734c4, int[] param_000734c5); // 0x000000018AB928CC-0x000000018AB929B4
-		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000734c6, int param_000734c7, bool[] param_000734c8, int[] param_000734c9); // 0x000000018AB92590-0x000000018AB9266C
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000734ca, bool[] param_000734cb, int[] param_000734cc); // 0x000000018AB913D4-0x000000018AB9165C
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(DirectInputAxis param_000734cd); // 0x000000018AB9165C-0x000000018AB91BF8
-		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000734ce, bool[] param_000734cf, int[] param_000734d0); // 0x000000018AB92B08-0x000000018AB92F6C
-		private bool nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_000734d1, int param_000734d2, HatType param_000734d3); // 0x000000018AB92FB0-0x000000018AB9304C
-		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_000734d4, Rewired.Data.Mapping.AxisDirection param_000734d5); // 0x000000018AB842E0-0x000000018AB8432C
-		private bool ayhGxgprMQKavcwPaVdDMAlZHPYJA(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000734d6, bool[] param_000734d7, out bool param_000734d8); // 0x000000018AB929EC-0x000000018AB92A40
-		private bool HzedpnOvqgcpdOxXJbSnaXeBYtlB(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000734d9, out float param_000734da); // 0x000000018AB91E18-0x000000018AB91F6C
-		private ControlDeviceType mRMKKTqBmJNLoCLdURVGuIhgRmpE(juBleaBZMyhfoVXqEhTgtytcTBnB param_000734db); // 0x000000018AB92F6C-0x000000018AB92FB0
-		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018AB923C8-0x000000018AB92474
-		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018AB91F6C-0x000000018AB92170
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000734dc); // 0x000000018AB9304C-0x000000018AB93184
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000734dd); // 0x000000018AB93184-0x000000018AB9328C
-		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018AB91214-0x000000018AB913D4
-		public void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018AB92540-0x000000018AB92590
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB927C4-0x000000018AB92838
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000734de); // 0x000000018AB92508-0x000000018AB92540
-		public static int vATpGYCXLZLqQShJNcjRGtWeNRypA(SulfOtFmRZnbMqygEpLarHhEkBqj param_000734df, SulfOtFmRZnbMqygEpLarHhEkBqj param_000734e0); // 0x000000018AB0699C-0x000000018AB069CC
-		public static int SRDjGGcGcwXogDrwOelaYcDKFPcp(SulfOtFmRZnbMqygEpLarHhEkBqj param_000734e1, SulfOtFmRZnbMqygEpLarHhEkBqj param_000734e2); // 0x000000018AB924D4-0x000000018AB92508
+		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018CD86A38-0x000000018CD86A9C
+		public bool TxMOcAAtBTbnmMNVgaFjIETLvxVv(); // 0x000000018CD86A9C-0x000000018CD86B30
+		public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x000000018CD864C0-0x000000018CD86564
+		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_000a9e25, int[] param_000a9e26); // 0x000000018CD86564-0x000000018CD86720
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_000a9e27, int[] param_000a9e28); // 0x000000018CD877B4-0x000000018CD87970
+		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000a9e29, int param_000a9e2a, bool[] param_000a9e2b, int[] param_000a9e2c); // 0x000000018CD86C3C-0x000000018CD86D28
+		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000a9e2d, int param_000a9e2e, bool[] param_000a9e2f, int[] param_000a9e30); // 0x000000018CD868F8-0x000000018CD869D8
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000a9e31, bool[] param_000a9e32, int[] param_000a9e33); // 0x000000018CD856C0-0x000000018CD85944
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(DirectInputAxis param_000a9e34); // 0x000000018CD85944-0x000000018CD85F00
+		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000a9e35, bool[] param_000a9e36, int[] param_000a9e37); // 0x000000018CD86E7C-0x000000018CD872E4
+		private bool nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_000a9e38, int param_000a9e39, HatType param_000a9e3a); // 0x000000018CD87328-0x000000018CD873C4
+		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_000a9e3b, Rewired.Data.Mapping.AxisDirection param_000a9e3c); // 0x000000018CD78290-0x000000018CD782DC
+		private bool ayhGxgprMQKavcwPaVdDMAlZHPYJA(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000a9e3d, bool[] param_000a9e3e, out bool param_000a9e3f); // 0x000000018CD86D60-0x000000018CD86DB4
+		private bool HzedpnOvqgcpdOxXJbSnaXeBYtlB(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000a9e40, out float param_000a9e41); // 0x000000018CD8616C-0x000000018CD862B4
+		private ControlDeviceType mRMKKTqBmJNLoCLdURVGuIhgRmpE(juBleaBZMyhfoVXqEhTgtytcTBnB param_000a9e42); // 0x000000018CD872E4-0x000000018CD87328
+		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018CD86720-0x000000018CD867CC
+		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018CD862B4-0x000000018CD864C0
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000a9e43); // 0x000000018CD873C4-0x000000018CD87500
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000a9e44); // 0x000000018CD87500-0x000000018CD87608
+		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018CD85500-0x000000018CD856C0
+		public void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018CD868A8-0x000000018CD868F8
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD86B30-0x000000018CD86BA8
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9e45); // 0x000000018CD86870-0x000000018CD868A8
+		public static int vATpGYCXLZLqQShJNcjRGtWeNRypA(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e46, SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e47); // 0x000000018CCF98EC-0x000000018CCF9924
+		public static int SRDjGGcGcwXogDrwOelaYcDKFPcp(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e48, SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e49); // 0x000000018CD8682C-0x000000018CD86870
 	}
 
-	private class gDyOnIMLNWnkqgMmQAeBaAvbdhUC : IDisposable // TypeDefIndex: 53626
+	private class gDyOnIMLNWnkqgMmQAeBaAvbdhUC : IDisposable // TypeDefIndex: 78870
 	{
 		// Fields
 		private readonly int mcjmovIdelhuuidgbQwUjRMuilVGb; // 0x10
@@ -1066,11 +1052,11 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x60
 
 		// Properties
-		public bool[] QfHOjFpcoFlpvJKhBRdhaliAhqPO { get; } // 0x000000018AB9508C-0x000000018AB950E0 
-		public qPadcpTaLfEnMsbAwBoWLDhhGLwL jGYEuXwlDjgLJhkmWOHijeiHfcyj { get; } // 0x0000000182E56440-0x0000000182E56460 
+		public bool[] QfHOjFpcoFlpvJKhBRdhaliAhqPO { get; } // 0x000000018CD8951C-0x000000018CD89570 
+		public qPadcpTaLfEnMsbAwBoWLDhhGLwL jGYEuXwlDjgLJhkmWOHijeiHfcyj { get; } // 0x0000000187232F70-0x0000000187232F80 
 
 		// Nested types
-		public class qPadcpTaLfEnMsbAwBoWLDhhGLwL // TypeDefIndex: 53625
+		public class qPadcpTaLfEnMsbAwBoWLDhhGLwL // TypeDefIndex: 78869
 		{
 			// Fields
 			public float sURegOJXrVrzsRbkTLhQVBuqJVbJ; // 0x10
@@ -1105,35 +1091,35 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 			public readonly float[] McibGxihWCRUpJxuGDWxQiSiYGsr; // 0x98
 
 			// Constructors
-			public qPadcpTaLfEnMsbAwBoWLDhhGLwL(); // 0x000000018AB964F4-0x000000018AB965F0
+			public qPadcpTaLfEnMsbAwBoWLDhhGLwL(); // 0x000000018CD8A98C-0x000000018CD8AA88
 
 			// Methods
-			public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB9699C-0x000000018AB97020
-			public void OSNJxVibfKbltujYHkKMLuczmano(qPadcpTaLfEnMsbAwBoWLDhhGLwL param_000734ec); // 0x000000018AB96238-0x000000018AB964F4
-			public void OSNJxVibfKbltujYHkKMLuczmano(ref LowLevelInputEvent param_000734ed); // 0x000000018AB95FBC-0x000000018AB96238
-			public static void dBLvMPXvSuyuuiBuXDrcyADZkqTA(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000734ee, double param_000734ef, LowLevelInputEvent param_000734f0); // 0x000000018AB965F0-0x000000018AB9699C
+			public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD8AE78-0x000000018CD8B508
+			public void OSNJxVibfKbltujYHkKMLuczmano(qPadcpTaLfEnMsbAwBoWLDhhGLwL param_000a9e53); // 0x000000018CD8A6E0-0x000000018CD8A98C
+			public void OSNJxVibfKbltujYHkKMLuczmano(ref LowLevelInputEvent param_000a9e54); // 0x000000018CD8A438-0x000000018CD8A6E0
+			public static void dBLvMPXvSuyuuiBuXDrcyADZkqTA(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9e55, double param_000a9e56, LowLevelInputEvent param_000a9e57); // 0x000000018CD8AA88-0x000000018CD8AE78
 		}
 
 		// Constructors
-		public gDyOnIMLNWnkqgMmQAeBaAvbdhUC(uiNBFFkTpfqYYBjzPgxoiyKQNigQA param_000734e3, UpdateLoopSetting param_000734e4); // 0x000000018AB94D70-0x000000018AB94FC8
+		public gDyOnIMLNWnkqgMmQAeBaAvbdhUC(uiNBFFkTpfqYYBjzPgxoiyKQNigQA param_000a9e4a, UpdateLoopSetting param_000a9e4b); // 0x000000018CD891FC-0x000000018CD89458
 
 		// Methods
-		public void ZdcGgynytMPTLdLAaWDBvAvTrhqr(); // 0x000000018AB94CF4-0x000000018AB94D70
-		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018AB95038-0x000000018AB9508C
-		public void NpMOgLjaQKghKbXenFQXBkoChQfCA(); // 0x000000018AB94AB4-0x000000018AB94AD0
-		public void eTDWPSgpXIMtpgNDkBPsaHTWXrZjA(); // 0x000000018AB94FC8-0x000000018AB94FD4
-		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(gDyOnIMLNWnkqgMmQAeBaAvbdhUC param_000734e5); // 0x000000018AB950E0-0x000000018AB95314
-		public void MDeYcbIyMBSalXbTMtlcMhwDSLzN(int param_000734e6, int param_000734e7, int param_000734e8, float param_000734e9); // 0x000000018AB94698-0x000000018AB947F8
-		private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018AB947F8-0x000000018AB94AB4
-		private void QbndUmpgRhLuwkYVaWbOLhdwDFmn(); // 0x000000018AB94AD0-0x000000018AB94BB0
-		private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018AB94544-0x000000018AB94648
-		public void Dispose(); // 0x000000018AB94648-0x000000018AB94698
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB94C80-0x000000018AB94CF4
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000734ea); // 0x000000018AB94BB0-0x000000018AB94C80
-		private static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000734eb); // 0x000000018AB94FD4-0x000000018AB95038
+		public void ZdcGgynytMPTLdLAaWDBvAvTrhqr(); // 0x000000018CD89180-0x000000018CD891FC
+		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CD894C8-0x000000018CD8951C
+		public void NpMOgLjaQKghKbXenFQXBkoChQfCA(); // 0x000000018CD88F28-0x000000018CD88F44
+		public void eTDWPSgpXIMtpgNDkBPsaHTWXrZjA(); // 0x000000018CD89458-0x000000018CD89464
+		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(gDyOnIMLNWnkqgMmQAeBaAvbdhUC param_000a9e4c); // 0x000000018CD89570-0x000000018CD897C0
+		public void MDeYcbIyMBSalXbTMtlcMhwDSLzN(int param_000a9e4d, int param_000a9e4e, int param_000a9e4f, float param_000a9e50); // 0x000000018CD88B04-0x000000018CD88C68
+		private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018CD88C68-0x000000018CD88F28
+		private void QbndUmpgRhLuwkYVaWbOLhdwDFmn(); // 0x000000018CD88F44-0x000000018CD89038
+		private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018CD889A4-0x000000018CD88AB4
+		public void Dispose(); // 0x000000018CD88AB4-0x000000018CD88B04
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD89108-0x000000018CD89180
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9e51); // 0x000000018CD89038-0x000000018CD89108
+		private static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000a9e52); // 0x000000018CD89464-0x000000018CD894C8
 	}
 
-	private class BxvBxbtXoUKMZoXIzwiATBygTUHp // TypeDefIndex: 53627
+	private class BxvBxbtXoUKMZoXIzwiATBygTUHp // TypeDefIndex: 78871
 	{
 		// Fields
 		private GPkbBxELmYMSjUedRXbWrnFhNjKFb ZVvGefazKFEfJvZhrrVWcRvWCdYfA; // 0x10
@@ -1144,18 +1130,18 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 		private float OgWYqWCTenLEOpjhNZRIuPHrfedk; // 0x2C
 
 		// Constructors
-		public BxvBxbtXoUKMZoXIzwiATBygTUHp(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000734f3, int param_000734f4, int param_000734f5, int param_000734f6, float param_000734f7); // 0x000000018AB8BB20-0x000000018AB8BBF4
-		private BxvBxbtXoUKMZoXIzwiATBygTUHp(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000734f8, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000734f9); // 0x000000018AB8BAC0-0x000000018AB8BB20
-		private BxvBxbtXoUKMZoXIzwiATBygTUHp(int param_000734fa, int param_000734fb, int param_000734fc, float param_000734fd); // 0x0000000184DA8700-0x0000000184DA8720
+		public BxvBxbtXoUKMZoXIzwiATBygTUHp(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9e5a, int param_000a9e5b, int param_000a9e5c, int param_000a9e5d, float param_000a9e5e); // 0x000000018CD7FCAC-0x000000018CD7FD80
+		private BxvBxbtXoUKMZoXIzwiATBygTUHp(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000a9e5f, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9e60); // 0x000000018CD7FC48-0x000000018CD7FCAC
+		private BxvBxbtXoUKMZoXIzwiATBygTUHp(int param_000a9e61, int param_000a9e62, int param_000a9e63, float param_000a9e64); // 0x0000000187256800-0x0000000187256820
 
 		// Methods
-		public static BxvBxbtXoUKMZoXIzwiATBygTUHp IrXHgUrWSsnIQwaPDrwiBSQGtsqb(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000734f1, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000734f2); // 0x000000018AB8B230-0x000000018AB8B2B0
-		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_000734fe); // 0x000000018AB8B318-0x000000018AB8BAC0
-		public void OSNJxVibfKbltujYHkKMLuczmano(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000734ff); // 0x000000018AB8B2B0-0x000000018AB8B318
-		private int CRxcrYSXdAeIdGaifRNOnInpBBEEA(int param_00073500); // 0x000000018AB8B200-0x000000018AB8B230
+		public static BxvBxbtXoUKMZoXIzwiATBygTUHp IrXHgUrWSsnIQwaPDrwiBSQGtsqb(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000a9e58, GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9e59); // 0x000000018CD7F39C-0x000000018CD7F41C
+		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_000a9e65); // 0x000000018CD7F484-0x000000018CD7FC48
+		public void OSNJxVibfKbltujYHkKMLuczmano(BxvBxbtXoUKMZoXIzwiATBygTUHp param_000a9e66); // 0x000000018CD7F41C-0x000000018CD7F484
+		private int CRxcrYSXdAeIdGaifRNOnInpBBEEA(int param_000a9e67); // 0x000000018CD7F36C-0x000000018CD7F39C
 	}
 
-	private class moYfWaYUXKQPVKButWaFqbkILmWJ // TypeDefIndex: 53628
+	private class moYfWaYUXKQPVKButWaFqbkILmWJ // TypeDefIndex: 78872
 	{
 		// Fields
 		private double lUAEUUoQpUIYpeenjLbmfhEDiAseB; // 0x10
@@ -1166,33 +1152,33 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 		private double yZiqePwjyFulOwEtSggCjghUPpyL; // 0x38
 
 		// Properties
-		public GPkbBxELmYMSjUedRXbWrnFhNjKFb gRjaLAtCMVhjzRWBefGJYFKGFtTz { get; } // 0x000000018385B100-0x000000018385B110 
-		public GPkbBxELmYMSjUedRXbWrnFhNjKFb SfpFEPnmFBoJXZGGXdxZoGVgfNdE { get; } // 0x0000000184D86240-0x0000000184D86250 
-		public bool dEQNDwTYiSUzaQMhKLcGEyebeMjl { get; } // 0x0000000184D865F0-0x0000000184D86600 
-		public double BumMEmxOGEdtDHGHnQLUdlAZFtbfb { get; } // 0x0000000184D869C0-0x0000000184D869D0 
+		public GPkbBxELmYMSjUedRXbWrnFhNjKFb gRjaLAtCMVhjzRWBefGJYFKGFtTz { get; } // 0x0000000182234E30-0x0000000182234E40 
+		public GPkbBxELmYMSjUedRXbWrnFhNjKFb SfpFEPnmFBoJXZGGXdxZoGVgfNdE { get; } // 0x0000000182262130-0x0000000182262140 
+		public bool dEQNDwTYiSUzaQMhKLcGEyebeMjl { get; } // 0x00000001822434B0-0x00000001822434C0 
+		public double BumMEmxOGEdtDHGHnQLUdlAZFtbfb { get; } // 0x00000001872331D0-0x00000001872331E0 
 
 		// Constructors
-		public moYfWaYUXKQPVKButWaFqbkILmWJ(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_00073501); // 0x000000018AB95F1C-0x000000018AB95FBC
+		public moYfWaYUXKQPVKButWaFqbkILmWJ(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000a9e68); // 0x000000018CD8A398-0x000000018CD8A438
 
 		// Methods
-		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_00073502); // 0x000000018AB9536C-0x000000018AB95C10
-		public void OSNJxVibfKbltujYHkKMLuczmano(moYfWaYUXKQPVKButWaFqbkILmWJ param_00073503); // 0x000000018AB95314-0x000000018AB9536C
-		private bool YyFArKHbNSGOJhHdaZgQVmwMGXIIA(); // 0x000000018AB95C10-0x000000018AB95F1C
+		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_000a9e69); // 0x000000018CD89818-0x000000018CD8A074
+		public void OSNJxVibfKbltujYHkKMLuczmano(moYfWaYUXKQPVKButWaFqbkILmWJ param_000a9e6a); // 0x000000018CD897C0-0x000000018CD89818
+		private bool YyFArKHbNSGOJhHdaZgQVmwMGXIIA(); // 0x000000018CD8A074-0x000000018CD8A398
 	}
 
-	private class eChiVyLsHBuxgtuOcCaBRldtIBrcA // TypeDefIndex: 53632
+	private class eChiVyLsHBuxgtuOcCaBRldtIBrcA // TypeDefIndex: 78876
 	{
 		// Fields
 		private List<czRBwkLAZVbFdHFxSnZUYWeXWvaw> kfYfqEcEuytPhEMEULSfGPpdWoee; // 0x10
 
 		// Nested types
-		public enum EwgWwCtiGlBzuRFyRHkKucTGHLnd // TypeDefIndex: 53629
+		public enum EwgWwCtiGlBzuRFyRHkKucTGHLnd // TypeDefIndex: 78873
 		{
 			Exact = 0,
 			Approximate = 1
 		}
 
-		public class czRBwkLAZVbFdHFxSnZUYWeXWvaw // TypeDefIndex: 53630
+		public class czRBwkLAZVbFdHFxSnZUYWeXWvaw // TypeDefIndex: 78874
 		{
 			// Fields
 			public int ZewBubFBTMGdguZhicDjJwXDMzqL; // 0x10
@@ -1204,15 +1190,15 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 			public int GLSLJeVDquUKRLDTtYNqebBYfdCK; // 0x40
 
 			// Constructors
-			public czRBwkLAZVbFdHFxSnZUYWeXWvaw(); // 0x00000001841E1670-0x00000001841E1680
+			public czRBwkLAZVbFdHFxSnZUYWeXWvaw(); // 0x0000000186805BA0-0x0000000186805BB0
 
 			// Methods
-			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(SulfOtFmRZnbMqygEpLarHhEkBqj param_0007350a, EwgWwCtiGlBzuRFyRHkKucTGHLnd param_0007350b); // 0x000000018AB93C14-0x000000018AB93D00
-			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB93D00-0x000000018AB93EF0
+			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e71, EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000a9e72); // 0x000000018CD87FB4-0x000000018CD88104
+			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD88104-0x000000018CD88320
 		}
 
 		[CompilerGenerated]
-		private sealed class EDqyHJiteSUNyQddlqqKeGsULmmu : IEnumerable<czRBwkLAZVbFdHFxSnZUYWeXWvaw>, IEnumerator<czRBwkLAZVbFdHFxSnZUYWeXWvaw> // TypeDefIndex: 53631
+		private sealed class EDqyHJiteSUNyQddlqqKeGsULmmu : IEnumerable<czRBwkLAZVbFdHFxSnZUYWeXWvaw>, IEnumerator<czRBwkLAZVbFdHFxSnZUYWeXWvaw> // TypeDefIndex: 78875
 		{
 			// Fields
 			private int fYQgehhaxgmucoHwUcKeBQGOPxQf; // 0x10
@@ -1227,52 +1213,52 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 			private int JbCuPbQlPJerRbkBryzmjprgTJnI; // 0x4C
 
 			// Properties
-			czRBwkLAZVbFdHFxSnZUYWeXWvaw IEnumerator<Rewired.Platforms.Windows.DirectInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			czRBwkLAZVbFdHFxSnZUYWeXWvaw IEnumerator<Rewired.Platforms.Windows.DirectInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 
 			// Constructors
 			[DebuggerHidden]
-			public EDqyHJiteSUNyQddlqqKeGsULmmu(int param_0007350c); // 0x00000001891B1F10-0x00000001891B1F44
+			public EDqyHJiteSUNyQddlqqKeGsULmmu(int param_000a9e73); // 0x000000018B707D6C-0x000000018B707DA0
 
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AB8C630-0x000000018AB8C728
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CD80800-0x000000018CD80904
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AB8C7EC-0x000000018AB8C838
+			void IEnumerator.Reset(); // 0x000000018CD809C8-0x000000018CD80A14
 			[DebuggerHidden]
-			IEnumerator<czRBwkLAZVbFdHFxSnZUYWeXWvaw> System.Collections.Generic.IEnumerable<Rewired.Platforms.Windows.DirectInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018AB8C728-0x000000018AB8C7E4
+			IEnumerator<czRBwkLAZVbFdHFxSnZUYWeXWvaw> System.Collections.Generic.IEnumerable<Rewired.Platforms.Windows.DirectInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018CD80904-0x000000018CD809C0
 			[DebuggerHidden]
-			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AB8C7E4-0x000000018AB8C7EC
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018CD809C0-0x000000018CD809C8
 		}
 
 		// Constructors
-		public eChiVyLsHBuxgtuOcCaBRldtIBrcA(); // 0x000000018AB94018-0x000000018AB94090
+		public eChiVyLsHBuxgtuOcCaBRldtIBrcA(); // 0x000000018CD8846C-0x000000018CD884E4
 
 		// Methods
-		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(SulfOtFmRZnbMqygEpLarHhEkBqj param_00073504); // 0x000000018AB94090-0x000000018AB9433C
-		public IEnumerable<czRBwkLAZVbFdHFxSnZUYWeXWvaw> rPEMzZmJunpFkQUNyRKTxEVSsvJu(SulfOtFmRZnbMqygEpLarHhEkBqj param_00073505, EwgWwCtiGlBzuRFyRHkKucTGHLnd param_00073506); // 0x000000018AB9433C-0x000000018AB943D4
-		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_00073507, Guid param_00073508, int param_00073509); // 0x000000018AB93EF0-0x000000018AB94018
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB943D4-0x000000018AB94544
+		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e6b); // 0x000000018CD884E4-0x000000018CD88794
+		public IEnumerable<czRBwkLAZVbFdHFxSnZUYWeXWvaw> rPEMzZmJunpFkQUNyRKTxEVSsvJu(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e6c, EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000a9e6d); // 0x000000018CD88794-0x000000018CD8882C
+		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_000a9e6e, Guid param_000a9e6f, int param_000a9e70); // 0x000000018CD88320-0x000000018CD8846C
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD8882C-0x000000018CD889A4
 	}
 
-	private class CWHceIMuggmodXXlPmEbtsWTclpk // TypeDefIndex: 53633
+	private class CWHceIMuggmodXXlPmEbtsWTclpk // TypeDefIndex: 78877
 	{
 		// Fields
 		public SulfOtFmRZnbMqygEpLarHhEkBqj MiuPDXtHjMqEUmptccKlmIrdlHeg; // 0x10
 		public asJwVBrSeOWneGuTCmUUKaDTCXQW xzpxpHzCMniucFvRNnKzdwDjbwZm; // 0x18
 
 		// Properties
-		public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018AB8BD08-0x000000018AB8BD1C 
+		public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CD7FE94-0x000000018CD7FEA8 
 
 		// Constructors
-		public CWHceIMuggmodXXlPmEbtsWTclpk(SulfOtFmRZnbMqygEpLarHhEkBqj param_0007350d, asJwVBrSeOWneGuTCmUUKaDTCXQW param_0007350e); // 0x00000001832AF420-0x00000001832AF450
+		public CWHceIMuggmodXXlPmEbtsWTclpk(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e74, asJwVBrSeOWneGuTCmUUKaDTCXQW param_000a9e75); // 0x0000000185381AC0-0x0000000185381AF0
 
 		// Methods
-		public static List<asJwVBrSeOWneGuTCmUUKaDTCXQW> JaBTQnjSbBBdpmjdCKychqOaCHIv(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_0007350f); // 0x000000018AB8BBF4-0x000000018AB8BD08
+		public static List<asJwVBrSeOWneGuTCmUUKaDTCXQW> JaBTQnjSbBBdpmjdCKychqOaCHIv(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_000a9e76); // 0x000000018CD7FD80-0x000000018CD7FE94
 	}
 
-	private class VtHAKVjbpOKKtQGWBbdqHjKCvTZNc // TypeDefIndex: 53634
+	private class VtHAKVjbpOKKtQGWBbdqHjKCvTZNc // TypeDefIndex: 78878
 	{
 		// Fields
 		private yqCthwNGAZgagjDBQbkNEzFfVZWu.AInQCDdqSLTTWRljCHGQhayircJNA fulvxOsuIgQbWVavtVKkciNxaCOk; // 0x10
@@ -1281,15 +1267,15 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 		private int MKTmWllStazkhRAJmTOHnpRlzbHA; // 0x70
 
 		// Constructors
-		public VtHAKVjbpOKKtQGWBbdqHjKCvTZNc(); // 0x000000018AB93AC4-0x000000018AB93C14
+		public VtHAKVjbpOKKtQGWBbdqHjKCvTZNc(); // 0x000000018CD87E60-0x000000018CD87FB4
 
 		// Methods
-		public bool ZDbedOgIzcfMpbVdeWUGCHDtqMPpA(); // 0x000000018AB93AA0-0x000000018AB93AC4
-		public void nClbpvjBChWOpZxTrbJuOGSLeVeV(int param_00073510); // 0x0000000184D868D0-0x0000000184D868E0
-		private int HAlcbAPlpAGCjaHUimzYPmYgHkkwA(); // 0x000000018AB939E0-0x000000018AB93AA0
+		public bool ZDbedOgIzcfMpbVdeWUGCHDtqMPpA(); // 0x000000018CD87E3C-0x000000018CD87E60
+		public void nClbpvjBChWOpZxTrbJuOGSLeVeV(int param_000a9e77); // 0x00000001872333D0-0x00000001872333E0
+		private int HAlcbAPlpAGCjaHUimzYPmYgHkkwA(); // 0x000000018CD87D80-0x000000018CD87E3C
 	}
 
-	private enum juBleaBZMyhfoVXqEhTgtytcTBnB // TypeDefIndex: 53635
+	private enum juBleaBZMyhfoVXqEhTgtytcTBnB // TypeDefIndex: 78879
 	{
 		Device = 17,
 		Mouse = 18,
@@ -1306,64 +1292,64 @@ internal class WtJzdNLrJHyRaJJmBqtOoHCrGIsI : PlatformInputManager, rcTfTYAszdSL
 	}
 
 	// Constructors
-	public WtJzdNLrJHyRaJJmBqtOoHCrGIsI(UpdateLoopSetting param_0007348a, hohNsNaAhdJOLmrreLGwwtWoRfkL param_0007348b, IntPtr param_0007348c, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_0007348d, Func<int> param_0007348e); // 0x000000018AB7F6F0-0x000000018AB7FA64
+	public WtJzdNLrJHyRaJJmBqtOoHCrGIsI(UpdateLoopSetting param_000a9df1, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000a9df2, IntPtr param_000a9df3, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9df4, Func<int> param_000a9df5); // 0x000000018CD734E8-0x000000018CD7385C
 
 	// Methods
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x000000018AB7EC1C-0x000000018AB7ECDC
+	public override void Initialize(); // 0x000000018CD729E0-0x000000018CD72AA0
 	[CustomObfuscation(rename = false)]
-	public override void Update(UpdateLoopType updateLoop); // 0x000000018AB7F444-0x000000018AB7F470
+	public override void Update(UpdateLoopType updateLoop); // 0x000000018CD73234-0x000000018CD73260
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018AB7F044-0x000000018AB7F1E4
+	public override void OnDestroy(); // 0x000000018CD72E24-0x000000018CD72FD0
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000184D862A0-0x0000000184D862B0
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x00000001829CD170-0x00000001829CD180
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018AB7F2C4-0x000000018AB7F444
+	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018CD730B0-0x000000018CD73234
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x000000018AB7F1E4-0x000000018AB7F220
+	public override void SystemDeviceConnected(); // 0x000000018CD72FD0-0x000000018CD7300C
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x000000018AB7F220-0x000000018AB7F25C
+	public override void SystemDeviceDisconnected(); // 0x000000018CD7300C-0x000000018CD73048
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x00000001811EC580-0x00000001811EC590
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000185829EC0-0x0000000185829ED0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x00000001811EC580-0x00000001811EC590
-	private void DEPfegiyDWufXpFoXVnbVBNfCCAaA(); // 0x000000018AB7E33C-0x000000018AB7E478
-	private List<CWHceIMuggmodXXlPmEbtsWTclpk> rJoeVQehMPBDLoUINyZoQAIRnqPaA(); // 0x000000018AB8006C-0x000000018AB80E38
-	private void jCFYFjuTFHbeymqccTbonOFCiYhaA(); // 0x000000018AB7FD10-0x000000018AB7FD34
-	private void IPsKeuhUudiiGzcWoCODIHfxGMbI(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_00073494); // 0x000000018AB7E7C8-0x000000018AB7EC1C
-	private void lLDOaYnxEcAvAnjHdbBVPmqDLGQV(SulfOtFmRZnbMqygEpLarHhEkBqj param_00073495, BxcPeTIqLZsfHyGzFAombgJBgOBgA param_00073496, out string param_00073497); // 0x000000018AB7FD54-0x000000018AB7FF44
-	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018AB811AC-0x000000018AB81324
-	private IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> mxPGGEbDGwrHhMYjlSXReOlvKYceA(); // 0x000000018AB7FF44-0x000000018AB8006C
-	private void kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x000000018AB7FD34-0x000000018AB7FD54
-	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_00073498, int param_00073499, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_0007349a, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_0007349b); // 0x000000018AB7E480-0x000000018AB7E64C
-	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_0007349c, int param_0007349d); // 0x000000018AB81324-0x000000018AB813CC
-	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_0007349e); // 0x000000018AB7FB10-0x000000018AB7FBB8
-	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_0007349f, int param_000734a0); // 0x000000018AB7FC8C-0x000000018AB7FD10
-	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_000734a1, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734a2, int param_000734a3, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734a4, eChiVyLsHBuxgtuOcCaBRldtIBrcA.EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000734a5); // 0x000000018AB7EF00-0x000000018AB7F044
-	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_000734a6, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734a7, eChiVyLsHBuxgtuOcCaBRldtIBrcA.EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000734a8); // 0x000000018AB7F470-0x000000018AB7F6F0
-	private void aHkOdhJXptAoBHaAPdXpbfyfxpNg(); // 0x000000018AB7FA64-0x000000018AB7FB10
-	private void MlGkGyByutorfoeNATowscMEHlCc(); // 0x000000018AB7EE88-0x000000018AB7EF00
-	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_000734a9); // 0x000000018AB7E780-0x000000018AB7E7C8
-	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> param_000734aa); // 0x000000018AB80E38-0x000000018AB81038
-	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_000734ab); // 0x000000018AB81038-0x000000018AB811AC
-	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> param_000734ac, Guid param_000734ad); // 0x000000018AB7EDB0-0x000000018AB7EE88
-	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734ae, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734af, bool param_000734b0); // 0x000000018AB7E64C-0x000000018AB7E780
-	private void iEEFlbFDszRppifBFnwpNApzASvF(SulfOtFmRZnbMqygEpLarHhEkBqj param_000734b1, bool param_000734b2); // 0x000000018AB7FC2C-0x000000018AB7FC8C
-	private bool UXZDQIcBhgpFIozsnuFnGIIstaSK(); // 0x000000018AB7F25C-0x000000018AB7F2C4
-	private void KXngRhiuZCfLPeTPuDzRMuTRmSkg(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734b3, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000734b4); // 0x000000018AB7ECDC-0x000000018AB7EDB0
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000185829EC0-0x0000000185829ED0
+	private void DEPfegiyDWufXpFoXVnbVBNfCCAaA(); // 0x000000018CD720C4-0x000000018CD72200
+	private List<CWHceIMuggmodXXlPmEbtsWTclpk> rJoeVQehMPBDLoUINyZoQAIRnqPaA(); // 0x000000018CD73E64-0x000000018CD74C68
+	private void jCFYFjuTFHbeymqccTbonOFCiYhaA(); // 0x000000018CD73B08-0x000000018CD73B2C
+	private void IPsKeuhUudiiGzcWoCODIHfxGMbI(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_000a9dfb); // 0x000000018CD7258C-0x000000018CD729E0
+	private void lLDOaYnxEcAvAnjHdbBVPmqDLGQV(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9dfc, BxcPeTIqLZsfHyGzFAombgJBgOBgA param_000a9dfd, out string param_000a9dfe); // 0x000000018CD73B4C-0x000000018CD73D3C
+	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018CD75010-0x000000018CD7518C
+	private IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> mxPGGEbDGwrHhMYjlSXReOlvKYceA(); // 0x000000018CD73D3C-0x000000018CD73E64
+	private void kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x000000018CD73B2C-0x000000018CD73B4C
+	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_000a9dff, int param_000a9e00, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e01, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e02); // 0x000000018CD72208-0x000000018CD723E0
+	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e03, int param_000a9e04); // 0x000000018CD7518C-0x000000018CD75234
+	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e05); // 0x000000018CD73908-0x000000018CD739B0
+	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e06, int param_000a9e07); // 0x000000018CD73A84-0x000000018CD73B08
+	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_000a9e08, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e09, int param_000a9e0a, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e0b, eChiVyLsHBuxgtuOcCaBRldtIBrcA.EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000a9e0c); // 0x000000018CD72CE4-0x000000018CD72E24
+	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_000a9e0d, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e0e, eChiVyLsHBuxgtuOcCaBRldtIBrcA.EwgWwCtiGlBzuRFyRHkKucTGHLnd param_000a9e0f); // 0x000000018CD73260-0x000000018CD734E8
+	private void aHkOdhJXptAoBHaAPdXpbfyfxpNg(); // 0x000000018CD7385C-0x000000018CD73908
+	private void MlGkGyByutorfoeNATowscMEHlCc(); // 0x000000018CD72C6C-0x000000018CD72CE4
+	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(List<CWHceIMuggmodXXlPmEbtsWTclpk> param_000a9e10); // 0x000000018CD72544-0x000000018CD7258C
+	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> param_000a9e11); // 0x000000018CD74C68-0x000000018CD74E6C
+	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_000a9e12); // 0x000000018CD74E6C-0x000000018CD75010
+	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> param_000a9e13, Guid param_000a9e14); // 0x000000018CD72B74-0x000000018CD72C6C
+	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e15, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e16, bool param_000a9e17); // 0x000000018CD723E0-0x000000018CD72544
+	private void iEEFlbFDszRppifBFnwpNApzASvF(SulfOtFmRZnbMqygEpLarHhEkBqj param_000a9e18, bool param_000a9e19); // 0x000000018CD73A24-0x000000018CD73A84
+	private bool UXZDQIcBhgpFIozsnuFnGIIstaSK(); // 0x000000018CD73048-0x000000018CD730B0
+	private void KXngRhiuZCfLPeTPuDzRMuTRmSkg(List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e1a, List<SulfOtFmRZnbMqygEpLarHhEkBqj> param_000a9e1b); // 0x000000018CD72AA0-0x000000018CD72B74
 	[CompilerGenerated]
-	private List<CWHceIMuggmodXXlPmEbtsWTclpk> FCKqoVPyZlClyKkxbkNXALERJWyi(); // 0x000000018AB7E478-0x000000018AB7E480
+	private List<CWHceIMuggmodXXlPmEbtsWTclpk> FCKqoVPyZlClyKkxbkNXALERJWyi(); // 0x000000018CD72200-0x000000018CD72208
 }
 
-internal interface rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 53637
+internal interface rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 78881
 {
 	// Properties
 	hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; }
 }
 
-internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 53643
+internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSLhBATSedVHksZNKpU // TypeDefIndex: 78887
 {
 	// Fields
 	private szduZeeDEtcYluGujxaTriOejwKbA raDdjPAASMcdHBzQALvvcmPWsFgHA; // 0x38
@@ -1389,18 +1375,18 @@ internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSL
 	private readonly Func<int> kSPXKdIyXsnUpjQGNfNppmWhLHBd; // 0xC0
 
 	// Properties
-	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x0000000184D861F0-0x0000000184D86200 0x000000018AB8C2E4-0x000000018AB8C318
+	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x0000000187232F50-0x0000000187232F60 0x000000018CD80490-0x000000018CD804C4
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x0000000184D863D0-0x0000000184D863E0 
+	public override int deviceCount { get; } // 0x00000001872330A0-0x00000001872330B0 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x0000000184D85EE0-0x0000000184D85EF0 
+	public override PlatformInputManager primaryInputManager { get; } // 0x0000000187232C70-0x0000000187232C80 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+	public override IInputSource inputSource { get; } // 0x0000000182986470-0x0000000182986480 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x0000000184D9EC50-0x0000000184D9EC60 
+	public override InputSource inputSourceType { get; } // 0x0000000187239C70-0x0000000187239C80 
 
 	// Nested types
-	private class PxbGPiifPxCrzMdPLgUvczDVlANfb : IInputManagerJoystick // TypeDefIndex: 53638
+	private class PxbGPiifPxCrzMdPLgUvczDVlANfb : IInputManagerJoystick // TypeDefIndex: 78882
 	{
 		// Fields
 		private int SAwUWSkGKioQPDUaFBSUbXjjqYIM; // 0x10
@@ -1440,88 +1426,88 @@ internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSL
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0xF0
 
 		// Properties
-		public bool VBrZBfLiMVfMwGbjjNpXHBaikpHtA { get; } // 0x000000018AB8DCC8-0x000000018AB8DCEC 
+		public bool VBrZBfLiMVfMwGbjjNpXHBaikpHtA { get; } // 0x000000018CD81F1C-0x000000018CD81F40 
 		[CustomObfuscation(rename = false)]
-		public int rewiredId { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public int rewiredId { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
 		[CustomObfuscation(rename = false)]
-		public int inputManagerId { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int inputManagerId { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 		[CustomObfuscation(rename = false)]
-		public string name { get; } // 0x000000018AB8E584-0x000000018AB8E5E8 
+		public string name { get; } // 0x000000018CD827F8-0x000000018CD8285C 
 		[CustomObfuscation(rename = false)]
-		public long? systemId { get; } // 0x000000018AB8E5E8-0x000000018AB8E648 
+		public long? systemId { get; } // 0x000000018CD8285C-0x000000018CD828BC 
 		[CustomObfuscation(rename = false)]
-		public int unityId { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public int unityId { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 		[CustomObfuscation(rename = false)]
-		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
+		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001872354B0-0x00000001872354C0 0x0000000188D62F7C-0x0000000188D62F90
 		[CustomObfuscation(rename = false)]
-		public Guid instanceGuid { get; } // 0x0000000184DA1280-0x0000000184DA1290 
+		public Guid instanceGuid { get; } // 0x000000018724F4E0-0x000000018724F4F0 
 		[CustomObfuscation(rename = false)]
-		public Guid persistentGuid { get; } // 0x0000000184DA1280-0x0000000184DA1290 
-		public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018AB8F5F8-0x000000018AB8F654 
+		public Guid persistentGuid { get; } // 0x000000018724F4E0-0x000000018724F4F0 
+		public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CD83898-0x000000018CD838F4 
 
 		// Constructors
-		public PxbGPiifPxCrzMdPLgUvczDVlANfb(xLiBDACQHMkUJDONyqwWiGgepFzkA param_00073543, Rewired.Platforms.Windows.RawInput.DeviceType param_00073544, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_00073545); // 0x000000018AB8E254-0x000000018AB8E290
+		public PxbGPiifPxCrzMdPLgUvczDVlANfb(xLiBDACQHMkUJDONyqwWiGgepFzkA param_000a9eaa, Rewired.Platforms.Windows.RawInput.DeviceType param_000a9eab, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9eac); // 0x000000018CD824C4-0x000000018CD82500
 
 		// Methods
 		[CustomObfuscation(rename = false)]
-		public void SetVibration(float amount, int motorIndex); // 0x000000018AB8DDB0-0x000000018AB8DDB8
+		public void SetVibration(float amount, int motorIndex); // 0x000000018CD82004-0x000000018CD8200C
 		[CustomObfuscation(rename = false)]
-		public void StopVibration(); // 0x000000018AB8DDB0-0x000000018AB8DDB8
-		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018AB8EE68-0x000000018AB8F210
-		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(PxbGPiifPxCrzMdPLgUvczDVlANfb param_00073546); // 0x000000018AB8F494-0x000000018AB8F5F8
+		public void StopVibration(); // 0x000000018CD82004-0x000000018CD8200C
+		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018CD830DC-0x000000018CD834A0
+		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ead); // 0x000000018CD83730-0x000000018CD83898
 		[CustomObfuscation(rename = false)]
-		public void Update(); // 0x000000018AB8DFD8-0x000000018AB8E050
+		public void Update(); // 0x000000018CD82230-0x000000018CD822A8
 		[CustomObfuscation(rename = false)]
-		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018AB8D14C-0x000000018AB8D320
-		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(PxbGPiifPxCrzMdPLgUvczDVlANfb param_00073548); // 0x000000018AB8D76C-0x000000018AB8D87C
-		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018AB8DCEC-0x000000018AB8DD4C
+		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018CD81388-0x000000018CD81550
+		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9eaf); // 0x000000018CD81974-0x000000018CD81AD0
+		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018CD81F40-0x000000018CD81FA0
 		[CustomObfuscation(rename = false)]
-		public BridgedController ToBridgedController(); // 0x000000018AB8DEA0-0x000000018AB8DF14
+		public BridgedController ToBridgedController(); // 0x000000018CD820F8-0x000000018CD8216C
 		[CustomObfuscation(rename = false)]
-		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018AB8DF14-0x000000018AB8DF78
-		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_00073549, int[] param_0007354a); // 0x000000018AB8D9CC-0x000000018AB8DC1C
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_0007354b, int[] param_0007354c); // 0x000000018AB8F244-0x000000018AB8F494
-		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_0007354d, int param_0007354e, bool[] param_0007354f, int[] param_00073550); // 0x000000018AB8E050-0x000000018AB8E138
-		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_00073551, int param_00073552, bool[] param_00073553, int[] param_00073554); // 0x000000018AB8DDB8-0x000000018AB8DEA0
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_00073555, bool[] param_00073556, int[] param_00073557); // 0x000000018AB8CE9C-0x000000018AB8D14C
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_00073558, int param_00073559); // 0x000000018AB8CE00-0x000000018AB8CE9C
-		private float lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_0007355a, bool[] param_0007355b, int[] param_0007355c); // 0x000000018AB8E648-0x000000018AB8EAF4
-		private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_0007355d); // 0x000000018AB7AE68-0x000000018AB7AECC
-		private float nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_0007355e, int param_0007355f, HatType param_00073560); // 0x000000018AB8EAF4-0x000000018AB8EB98
-		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_00073561, Rewired.Data.Mapping.AxisDirection param_00073562); // 0x000000018AB842E0-0x000000018AB8432C
-		private bool ayhGxgprMQKavcwPaVdDMAlZHPYJA(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_00073563, bool[] param_00073564, out bool param_00073565); // 0x000000018AB8E290-0x000000018AB8E2E4
-		private bool HzedpnOvqgcpdOxXJbSnaXeBYtlB(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_00073566, out float param_00073567); // 0x000000018AB8D87C-0x000000018AB8D9CC
-		private ControlDeviceType tbUQUTrHHWYRlFppEIFXxsXtwdjj(Rewired.Platforms.Windows.RawInput.DeviceType param_00073568); // 0x000000018AB8F210-0x000000018AB8F244
-		private void YgVreXzRuVMyEnzJNolFgafTdbgi(HardwareJoystickMap.Platform_InternalDriver_Base.Axis param_00073569, int param_0007356a, bool[] param_0007356b, int[] param_0007356c); // 0x000000018AB8E138-0x000000018AB8E220
-		private void dtpcfzcngDzdaNFxelIKbvnHWQClB(HardwareJoystickMap.Platform_InternalDriver_Base.Button param_0007356d, int param_0007356e, bool[] param_0007356f, int[] param_00073570); // 0x000000018AB8E2E4-0x000000018AB8E3CC
-		private float ffZfMlwjEvamNEuFvkRdqoFSmZcB(HardwareJoystickMap.Platform_InternalDriver_Base.Axis param_00073571, bool[] param_00073572, int[] param_00073573); // 0x000000018AB8E3CC-0x000000018AB8E510
-		private float ffZfMlwjEvamNEuFvkRdqoFSmZcB(int param_00073574); // 0x000000018AB8E510-0x000000018AB8E584
-		private float HImmtwjBFrEzqRHITHaMZgiqcwJj(HardwareJoystickMap.Platform_InternalDriver_Base.Button param_00073575, bool[] param_00073576, int[] param_00073577); // 0x000000018AB8D514-0x000000018AB8D76C
-		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018AB8DC1C-0x000000018AB8DCC8
-		private string GjijczTURIgZZpyFRyfwxQetRhHD(); // 0x000000018AB8D320-0x000000018AB8D514
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_00073578); // 0x000000018AB8ED04-0x000000018AB8EE68
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_00073579); // 0x000000018AB8EB98-0x000000018AB8ED04
-		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018AB8CC40-0x000000018AB8CE00
-		public void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018AB8DD4C-0x000000018AB8DD9C
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB8DF78-0x000000018AB8DFD8
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007357a); // 0x000000018AB8DD9C-0x000000018AB8DDB0
-		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007357b, PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007357c); // 0x000000018AB0699C-0x000000018AB069CC
-		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007357d, PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007357e); // 0x000000018AB8E220-0x000000018AB8E254
+		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018CD8216C-0x000000018CD821D0
+		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_000a9eb0, int[] param_000a9eb1); // 0x000000018CD81C14-0x000000018CD81E70
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_000a9eb2, int[] param_000a9eb3); // 0x000000018CD834D4-0x000000018CD83730
+		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000a9eb4, int param_000a9eb5, bool[] param_000a9eb6, int[] param_000a9eb7); // 0x000000018CD822A8-0x000000018CD82394
+		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000a9eb8, int param_000a9eb9, bool[] param_000a9eba, int[] param_000a9ebb); // 0x000000018CD8200C-0x000000018CD820F8
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_RawOrDirectInput.Axis_Base param_000a9ebc, bool[] param_000a9ebd, int[] param_000a9ebe); // 0x000000018CD810D4-0x000000018CD81388
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_000a9ebf, int param_000a9ec0); // 0x000000018CD81038-0x000000018CD810D4
+		private float lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_RawOrDirectInput.Button_Base param_000a9ec1, bool[] param_000a9ec2, int[] param_000a9ec3); // 0x000000018CD828BC-0x000000018CD82D64
+		private float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000a9ec4); // 0x000000018CD6EB58-0x000000018CD6EBBC
+		private float nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_000a9ec5, int param_000a9ec6, HatType param_000a9ec7); // 0x000000018CD82D64-0x000000018CD82E08
+		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_000a9ec8, Rewired.Data.Mapping.AxisDirection param_000a9ec9); // 0x000000018CD78290-0x000000018CD782DC
+		private bool ayhGxgprMQKavcwPaVdDMAlZHPYJA(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000a9eca, bool[] param_000a9ecb, out bool param_000a9ecc); // 0x000000018CD82500-0x000000018CD82554
+		private bool HzedpnOvqgcpdOxXJbSnaXeBYtlB(HardwareJoystickMap.Platform_RawOrDirectInput.CustomCalculationSourceData param_000a9ecd, out float param_000a9ece); // 0x000000018CD81AD0-0x000000018CD81C14
+		private ControlDeviceType tbUQUTrHHWYRlFppEIFXxsXtwdjj(Rewired.Platforms.Windows.RawInput.DeviceType param_000a9ecf); // 0x000000018CD834A0-0x000000018CD834D4
+		private void YgVreXzRuVMyEnzJNolFgafTdbgi(HardwareJoystickMap.Platform_InternalDriver_Base.Axis param_000a9ed0, int param_000a9ed1, bool[] param_000a9ed2, int[] param_000a9ed3); // 0x000000018CD82394-0x000000018CD82480
+		private void dtpcfzcngDzdaNFxelIKbvnHWQClB(HardwareJoystickMap.Platform_InternalDriver_Base.Button param_000a9ed4, int param_000a9ed5, bool[] param_000a9ed6, int[] param_000a9ed7); // 0x000000018CD82554-0x000000018CD82640
+		private float ffZfMlwjEvamNEuFvkRdqoFSmZcB(HardwareJoystickMap.Platform_InternalDriver_Base.Axis param_000a9ed8, bool[] param_000a9ed9, int[] param_000a9eda); // 0x000000018CD82640-0x000000018CD82784
+		private float ffZfMlwjEvamNEuFvkRdqoFSmZcB(int param_000a9edb); // 0x000000018CD82784-0x000000018CD827F8
+		private float HImmtwjBFrEzqRHITHaMZgiqcwJj(HardwareJoystickMap.Platform_InternalDriver_Base.Button param_000a9edc, bool[] param_000a9edd, int[] param_000a9ede); // 0x000000018CD81748-0x000000018CD81974
+		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018CD81E70-0x000000018CD81F1C
+		private string GjijczTURIgZZpyFRyfwxQetRhHD(); // 0x000000018CD81550-0x000000018CD81748
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000a9edf); // 0x000000018CD82F74-0x000000018CD830DC
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000a9ee0); // 0x000000018CD82E08-0x000000018CD82F74
+		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018CD80E78-0x000000018CD81038
+		public void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018CD81FA0-0x000000018CD81FF0
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD821D0-0x000000018CD82230
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9ee1); // 0x000000018CD81FF0-0x000000018CD82004
+		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee2, PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee3); // 0x000000018CCF98EC-0x000000018CCF9924
+		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee4, PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee5); // 0x000000018CD82480-0x000000018CD824C4
 	}
 
-	private class RKNUDawKxmBeyGORMNgHaWXmcsFA // TypeDefIndex: 53642
+	private class RKNUDawKxmBeyGORMNgHaWXmcsFA // TypeDefIndex: 78886
 	{
 		// Fields
 		private List<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> kfYfqEcEuytPhEMEULSfGPpdWoee; // 0x10
 
 		// Nested types
-		public enum FmTWaQOirJtdWziXjRJqyKFwvqKM // TypeDefIndex: 53639
+		public enum FmTWaQOirJtdWziXjRJqyKFwvqKM // TypeDefIndex: 78883
 		{
 			Exact = 0,
 			Approximate = 1
 		}
 
-		public class ErZxzAZcIFIVCGSUxzwfPTRZoOVFb // TypeDefIndex: 53640
+		public class ErZxzAZcIFIVCGSUxzwfPTRZoOVFb // TypeDefIndex: 78884
 		{
 			// Fields
 			public int ZewBubFBTMGdguZhicDjJwXDMzqL; // 0x10
@@ -1536,15 +1522,15 @@ internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSL
 			public bool VBrZBfLiMVfMwGbjjNpXHBaikpHtA; // 0x4C
 
 			// Constructors
-			public ErZxzAZcIFIVCGSUxzwfPTRZoOVFb(); // 0x00000001841E1670-0x00000001841E1680
+			public ErZxzAZcIFIVCGSUxzwfPTRZoOVFb(); // 0x0000000186805BA0-0x0000000186805BB0
 
 			// Methods
-			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(PxbGPiifPxCrzMdPLgUvczDVlANfb param_00073585, FmTWaQOirJtdWziXjRJqyKFwvqKM param_00073586); // 0x000000018AB8C838-0x000000018AB8C984
-			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB8C984-0x000000018AB8CC40
+			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9eec, FmTWaQOirJtdWziXjRJqyKFwvqKM param_000a9eed); // 0x000000018CD80A14-0x000000018CD80BA4
+			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD80BA4-0x000000018CD80E78
 		}
 
 		[CompilerGenerated]
-		private sealed class UIHORvOvhYWHLbqIdGNdwtFeejlF : IEnumerable<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb>, IEnumerator<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> // TypeDefIndex: 53641
+		private sealed class UIHORvOvhYWHLbqIdGNdwtFeejlF : IEnumerable<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb>, IEnumerator<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> // TypeDefIndex: 78885
 		{
 			// Fields
 			private int fYQgehhaxgmucoHwUcKeBQGOPxQf; // 0x10
@@ -1559,85 +1545,85 @@ internal class CglnwxVZWlSCbdZbtvQjaQfcgbwC : PlatformInputManager, rcTfTYAszdSL
 			private int JbCuPbQlPJerRbkBryzmjprgTJnI; // 0x4C
 
 			// Properties
-			ErZxzAZcIFIVCGSUxzwfPTRZoOVFb IEnumerator<Rewired.Platforms.Windows.RawInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			ErZxzAZcIFIVCGSUxzwfPTRZoOVFb IEnumerator<Rewired.Platforms.Windows.RawInputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 
 			// Constructors
 			[DebuggerHidden]
-			public UIHORvOvhYWHLbqIdGNdwtFeejlF(int param_00073587); // 0x00000001891B1F10-0x00000001891B1F44
+			public UIHORvOvhYWHLbqIdGNdwtFeejlF(int param_000a9eee); // 0x000000018B707D6C-0x000000018B707DA0
 
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018AB936E4-0x000000018AB937DC
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CD87A78-0x000000018CD87B7C
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018AB938A0-0x000000018AB938EC
+			void IEnumerator.Reset(); // 0x000000018CD87C40-0x000000018CD87C8C
 			[DebuggerHidden]
-			IEnumerator<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> System.Collections.Generic.IEnumerable<Rewired.Platforms.Windows.RawInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018AB937DC-0x000000018AB93898
+			IEnumerator<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> System.Collections.Generic.IEnumerable<Rewired.Platforms.Windows.RawInputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018CD87B7C-0x000000018CD87C38
 			[DebuggerHidden]
-			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AB93898-0x000000018AB938A0
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018CD87C38-0x000000018CD87C40
 		}
 
 		// Constructors
-		public RKNUDawKxmBeyGORMNgHaWXmcsFA(); // 0x00000001841D2A20-0x00000001841D2AA0
+		public RKNUDawKxmBeyGORMNgHaWXmcsFA(); // 0x0000000186483570-0x00000001864835F0
 
 		// Methods
-		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007357f); // 0x000000018AB908F0-0x000000018AB90C50
-		public IEnumerable<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> rPEMzZmJunpFkQUNyRKTxEVSsvJu(PxbGPiifPxCrzMdPLgUvczDVlANfb param_00073580, FmTWaQOirJtdWziXjRJqyKFwvqKM param_00073581); // 0x000000018AB90C50-0x000000018AB90CE8
-		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_00073582, Guid param_00073583, int param_00073584); // 0x000000018AB907C8-0x000000018AB908F0
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB90CE8-0x000000018AB90E58
+		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee6); // 0x000000018CD84BC4-0x000000018CD84F28
+		public IEnumerable<ErZxzAZcIFIVCGSUxzwfPTRZoOVFb> rPEMzZmJunpFkQUNyRKTxEVSsvJu(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ee7, FmTWaQOirJtdWziXjRJqyKFwvqKM param_000a9ee8); // 0x000000018CD84F28-0x000000018CD84FC0
+		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_000a9ee9, Guid param_000a9eea, int param_000a9eeb); // 0x000000018CD84A78-0x000000018CD84BC4
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD84FC0-0x000000018CD85138
 	}
 
 	// Constructors
-	public CglnwxVZWlSCbdZbtvQjaQfcgbwC(ConfigVars param_00073513, hohNsNaAhdJOLmrreLGwwtWoRfkL param_00073514, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_00073515, Func<int> param_00073516, bool param_00073517, bool param_00073518, bool param_00073519, bool param_0007351a); // 0x0000000183B22E60-0x0000000183B231F0
+	public CglnwxVZWlSCbdZbtvQjaQfcgbwC(ConfigVars param_000a9e7a, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000a9e7b, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9e7c, Func<int> param_000a9e7d, bool param_000a9e7e, bool param_000a9e7f, bool param_000a9e80, bool param_000a9e81); // 0x0000000185BB21D0-0x0000000185BB2550
 
 	// Methods
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x00000001841D2820-0x00000001841D28F0
+	public override void Initialize(); // 0x0000000186483370-0x0000000186483440
 	[CustomObfuscation(rename = false)]
-	public override void Update(UpdateLoopType updateLoop); // 0x0000000183302D30-0x0000000183303040
+	public override void Update(UpdateLoopType updateLoop); // 0x00000001851DF750-0x00000001851DFC70
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018AB8BF54-0x000000018AB8C080
+	public override void OnDestroy(); // 0x000000018CD80100-0x000000018CD8022C
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000184D86220-0x0000000184D86230
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000182271B70-0x0000000182271B80
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018AB8C1D0-0x000000018AB8C2D8
+	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018CD8037C-0x000000018CD80484
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x000000018AB8C080-0x000000018AB8C128
+	public override void SystemDeviceConnected(); // 0x000000018CD8022C-0x000000018CD802D4
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x000000018AB8C128-0x000000018AB8C1D0
+	public override void SystemDeviceDisconnected(); // 0x000000018CD802D4-0x000000018CD8037C
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000184D86210-0x0000000184D86220
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000187232F60-0x0000000187232F70
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000184D86290-0x0000000184D862A0
-	public void AHVmwAdwlooYvXMzczUiicdmJSfj(pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_00073520, DKfdSpPOsWGnACTRAulCFEVLxkQk param_00073521); // 0x00000001841E1670-0x00000001841E1680
-	private void DEPfegiyDWufXpFoXVnbVBNfCCAaA(); // 0x0000000183303E50-0x0000000183303F70
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x00000001841D28F0-0x00000001841D2920
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_00073522); // 0x00000001841D2EC0-0x00000001841D3100
-	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x0000000183303040-0x0000000183303070
-	private IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x00000001841D2980-0x00000001841D29D0
-	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_00073523, int param_00073524, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073525, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073526); // 0x00000001841D3190-0x00000001841D32A0
-	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073527, int param_00073528); // 0x000000018AB8C588-0x000000018AB8C630
-	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073529); // 0x000000018AB8C318-0x000000018AB8C3C0
-	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_0007352a, int param_0007352b); // 0x000000018AB8C420-0x000000018AB8C4A4
-	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_0007352c, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_0007352d, int param_0007352e, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_0007352f, RKNUDawKxmBeyGORMNgHaWXmcsFA.FmTWaQOirJtdWziXjRJqyKFwvqKM param_00073530); // 0x000000018AB8BE10-0x000000018AB8BF54
-	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_00073531, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073532, RKNUDawKxmBeyGORMNgHaWXmcsFA.FmTWaQOirJtdWziXjRJqyKFwvqKM param_00073533); // 0x00000001841D32A0-0x00000001841D3590
-	private void wuwoBlIQSdpATYAkogxOgHQdPIGeb(); // 0x0000000183303810-0x00000001833038A0
-	private void uRznQxjfiWWMZRqOxDNKGnVpQTMc(); // 0x0000000184CC8380-0x0000000184CC8400
-	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(); // 0x00000001841D2920-0x00000001841D2980
-	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_00073534); // 0x00000001841D2AA0-0x00000001841D2B70
-	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_00073535); // 0x000000018AB8C4A4-0x000000018AB8C588
-	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_00073536, Guid param_00073537); // 0x000000018AB8BD1C-0x000000018AB8BE10
-	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073538, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_00073539, bool param_0007353a); // 0x00000001841D3100-0x00000001841D3190
-	private void iEEFlbFDszRppifBFnwpNApzASvF(PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007353b, bool param_0007353c); // 0x000000018AB8C3C0-0x000000018AB8C420
-	private bool UXZDQIcBhgpFIozsnuFnGIIstaSK(); // 0x00000001836A84D0-0x00000001836A8550
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000187232FB0-0x0000000187232FC0
+	public void AHVmwAdwlooYvXMzczUiicdmJSfj(pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_000a9e87, DKfdSpPOsWGnACTRAulCFEVLxkQk param_000a9e88); // 0x0000000186805BA0-0x0000000186805BB0
+	private void DEPfegiyDWufXpFoXVnbVBNfCCAaA(); // 0x00000001851DFE30-0x00000001851DFF90
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x0000000186483440-0x0000000186483470
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000a9e89); // 0x0000000186483A00-0x0000000186483C40
+	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x00000001851DFC70-0x00000001851DFCA0
+	private IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x00000001864834D0-0x0000000186483520
+	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_000a9e8a, int param_000a9e8b, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e8c, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e8d); // 0x0000000186483CE0-0x0000000186483DF0
+	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e8e, int param_000a9e8f); // 0x000000018CD80758-0x000000018CD80800
+	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e90); // 0x000000018CD804C4-0x000000018CD8056C
+	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e91, int param_000a9e92); // 0x000000018CD805CC-0x000000018CD80650
+	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_000a9e93, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e94, int param_000a9e95, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e96, RKNUDawKxmBeyGORMNgHaWXmcsFA.FmTWaQOirJtdWziXjRJqyKFwvqKM param_000a9e97); // 0x000000018CD7FFC0-0x000000018CD80100
+	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_000a9e98, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e99, RKNUDawKxmBeyGORMNgHaWXmcsFA.FmTWaQOirJtdWziXjRJqyKFwvqKM param_000a9e9a); // 0x0000000186483DF0-0x00000001864840E0
+	private void wuwoBlIQSdpATYAkogxOgHQdPIGeb(); // 0x00000001851DFD90-0x00000001851DFE20
+	private void uRznQxjfiWWMZRqOxDNKGnVpQTMc(); // 0x0000000186353870-0x00000001863538F0
+	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(); // 0x0000000186483470-0x00000001864834D0
+	private bool uRdbjqOsEkXqUsbrHdKhfkfmEUboA(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000a9e9b); // 0x00000001864835F0-0x00000001864836C0
+	private bool xcIOtxcgNETqciTqWuRjukkZMnEj(Guid param_000a9e9c); // 0x000000018CD80650-0x000000018CD80758
+	private bool MUMDpCDwdurISJEJjKWLquYbZQvaA(IList<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000a9e9d, Guid param_000a9e9e); // 0x000000018CD7FEA8-0x000000018CD7FFC0
+	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9e9f, List<PxbGPiifPxCrzMdPLgUvczDVlANfb> param_000a9ea0, bool param_000a9ea1); // 0x0000000186483C40-0x0000000186483CE0
+	private void iEEFlbFDszRppifBFnwpNApzASvF(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ea2, bool param_000a9ea3); // 0x000000018CD8056C-0x000000018CD805CC
+	private bool UXZDQIcBhgpFIozsnuFnGIIstaSK(); // 0x000000018521EB30-0x000000018521EBB0
 	[CompilerGenerated]
-	private void XdapwZNFbbGysrosccuORCsvJbzL(PxbGPiifPxCrzMdPLgUvczDVlANfb param_0007353d); // 0x000000018AB8C2D8-0x000000018AB8C2E4
+	private void XdapwZNFbbGysrosccuORCsvJbzL(PxbGPiifPxCrzMdPLgUvczDVlANfb param_000a9ea4); // 0x000000018CD80484-0x000000018CD80490
 }
 
-internal class SFgaCJttxzkGcFYzwaMzNZCZlvVR : IDisposable, JtAgsvgsGMTkkHyzazJahvxjADso // TypeDefIndex: 53646
+internal class SFgaCJttxzkGcFYzwaMzNZCZlvVR : IDisposable, JtAgsvgsGMTkkHyzazJahvxjADso // TypeDefIndex: 78890
 {
 	// Fields
 	private Action<EventArgs> hmPKQquIKQcgDqSZKWmeysdWPrIQ; // 0x10
@@ -1652,24 +1638,24 @@ internal class SFgaCJttxzkGcFYzwaMzNZCZlvVR : IDisposable, JtAgsvgsGMTkkHyzazJah
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x50
 
 	// Properties
-	public IntPtr jhGooCbTTXmgjsKnAiicIgjWqgcZ { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+	public IntPtr jhGooCbTTXmgjsKnAiicIgjWqgcZ { get; } // 0x00000001829600D0-0x00000001829600E0 
 
 	// Events
 	public event Action<EventArgs> vrsKYxMgJTEgnNvuckTBQHVDBKDX {
-		add; // 0x0000000184D28DE0-0x0000000184D28E60
-		remove; // 0x000000018AB90EA8-0x000000018AB90F1C
+		add; // 0x000000018718EB10-0x000000018718EB90
+		remove; // 0x000000018CD85188-0x000000018CD851FC
 	}
 	public event Action<EventArgs> cquFiigoGXXxfjEUDiFhIXaBAHsbc {
-		add; // 0x0000000184D28E60-0x0000000184D28EE0
-		remove; // 0x000000018AB91088-0x000000018AB910FC
+		add; // 0x000000018718EB90-0x000000018718EC10
+		remove; // 0x000000018CD85370-0x000000018CD853E4
 	}
 	public event Action<pHOXMyaEVxLmIeQfiMyGgXRiPlXo, DKfdSpPOsWGnACTRAulCFEVLxkQk> JROnXTQaaJtvBkshGaaOAimJzdDF {
-		add; // 0x00000001842B3840-0x00000001842B38C0
-		remove; // 0x000000018AB911A0-0x000000018AB91214
+		add; // 0x0000000185BB2BD0-0x0000000185BB2C50
+		remove; // 0x000000018CD8548C-0x000000018CD85500
 	}
 
 	// Nested types
-	private static class UJCWqnlSpSvfQHdvPoivYjJYtQHW // TypeDefIndex: 53645
+	private static class UJCWqnlSpSvfQHdvPoivYjJYtQHW // TypeDefIndex: 78889
 	{
 		// Fields
 		private static readonly Guid EAIQbJjDzNjcGpNCLRjxJueXlHCA; // 0x00
@@ -1677,7 +1663,7 @@ internal class SFgaCJttxzkGcFYzwaMzNZCZlvVR : IDisposable, JtAgsvgsGMTkkHyzazJah
 		private static bool DBdtoiVyEGkaNDgREajgdtJVFTel; // 0x18
 
 		// Nested types
-		private struct GvYoLHQmSORCWetxVpMnfROwMpIc // TypeDefIndex: 53644
+		private struct GvYoLHQmSORCWetxVpMnfROwMpIc // TypeDefIndex: 78888
 		{
 			// Fields
 			internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -1688,40 +1674,40 @@ internal class SFgaCJttxzkGcFYzwaMzNZCZlvVR : IDisposable, JtAgsvgsGMTkkHyzazJah
 		}
 
 		// Constructors
-		static UJCWqnlSpSvfQHdvPoivYjJYtQHW(); // 0x0000000184D34880-0x0000000184D348F0
+		static UJCWqnlSpSvfQHdvPoivYjJYtQHW(); // 0x00000001871D3CA0-0x00000001871D3D10
 
 		// Methods
-		public static void tscEVGhIvqCFhbiZeiWxJXMsRhMpc(IntPtr param_0007359b); // 0x0000000183BFB6A0-0x0000000183BFB810
-		public static void VQMkIkdFLlhIXJamcwSQuVuyGEHAA(); // 0x000000018AB93968-0x000000018AB939E0
-		private static extern IntPtr xfalHHTnWKkVEbZkQDHVEtChhLEd(IntPtr param_0007359c, IntPtr param_0007359d, int param_0007359e); // 0x0000000183826940-0x00000001838269F0
-		private static extern bool RVmlmapDJpsIVotlwQOKvDxYEDPx(IntPtr param_0007359f); // 0x000000018AB938EC-0x000000018AB93968
+		public static void tscEVGhIvqCFhbiZeiWxJXMsRhMpc(IntPtr param_000a9f02); // 0x0000000185B75960-0x0000000185B75AD0
+		public static void VQMkIkdFLlhIXJamcwSQuVuyGEHAA(); // 0x000000018CD87D08-0x000000018CD87D80
+		private static extern IntPtr xfalHHTnWKkVEbZkQDHVEtChhLEd(IntPtr param_000a9f03, IntPtr param_000a9f04, int param_000a9f05); // 0x0000000185AFB8E0-0x0000000185AFB990
+		private static extern bool RVmlmapDJpsIVotlwQOKvDxYEDPx(IntPtr param_000a9f06); // 0x000000018CD87C8C-0x000000018CD87D08
 	}
 
 	// Constructors
-	public SFgaCJttxzkGcFYzwaMzNZCZlvVR(); // 0x0000000183BF5480-0x0000000183BF54E0
+	public SFgaCJttxzkGcFYzwaMzNZCZlvVR(); // 0x0000000185B75B70-0x0000000185B75BD0
 
 	// Methods
-	public void hoAhQOJWtqQFplfEKzOAsAgxjDsK(); // 0x000000018AB91198-0x000000018AB911A0
-	private void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x0000000183BF54E0-0x0000000183BF5550
-	public void Dispose(); // 0x000000018AB90E58-0x000000018AB90EA8
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB90FD4-0x000000018AB91048
-	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007358e); // 0x000000018AB90F1C-0x000000018AB90FD4
-	private void tscEVGhIvqCFhbiZeiWxJXMsRhMpc(); // 0x0000000183BF5550-0x0000000183BF55A0
-	private void VQMkIkdFLlhIXJamcwSQuVuyGEHAA(); // 0x000000018AB91048-0x000000018AB91088
-	private void gHAhDhvboplanFMdirgphWMRDVvf(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_0007358f, pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_00073590, uint param_00073591, IntPtr param_00073592); // 0x0000000184701490-0x00000001847014E0
-	private void adICXhsRwpmheobRAgzuZkLsiSDgA(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_00073593, pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_00073594, uint param_00073595, IntPtr param_00073596); // 0x000000018AB910FC-0x000000018AB91198
-	private void gRrCsHGsATbPYlAbVLUMxHXddIOO(); // 0x0000000183BF55A0-0x0000000183BF56F0
-	private IntPtr CUiCXilpJQfklcGwLpIgKHqaNvEaA(IntPtr param_00073597, uint param_00073598, IntPtr param_00073599, IntPtr param_0007359a); // 0x00000001847013B0-0x0000000184701490
+	public void hoAhQOJWtqQFplfEKzOAsAgxjDsK(); // 0x000000018CD85484-0x000000018CD8548C
+	private void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x0000000185B75BD0-0x0000000185B75C40
+	public void Dispose(); // 0x000000018CD85138-0x000000018CD85188
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD852B8-0x000000018CD85330
+	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9ef5); // 0x000000018CD851FC-0x000000018CD852B8
+	private void tscEVGhIvqCFhbiZeiWxJXMsRhMpc(); // 0x0000000185B75C40-0x0000000185B75C90
+	private void VQMkIkdFLlhIXJamcwSQuVuyGEHAA(); // 0x000000018CD85330-0x000000018CD85370
+	private void gHAhDhvboplanFMdirgphWMRDVvf(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_000a9ef6, pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_000a9ef7, uint param_000a9ef8, IntPtr param_000a9ef9); // 0x0000000186BB8F00-0x0000000186BB8F50
+	private void adICXhsRwpmheobRAgzuZkLsiSDgA(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_000a9efa, pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_000a9efb, uint param_000a9efc, IntPtr param_000a9efd); // 0x000000018CD853E4-0x000000018CD85484
+	private void gRrCsHGsATbPYlAbVLUMxHXddIOO(); // 0x0000000185B75C90-0x0000000185B75DE0
+	private IntPtr CUiCXilpJQfklcGwLpIgKHqaNvEaA(IntPtr param_000a9efe, uint param_000a9eff, IntPtr param_000a9f00, IntPtr param_000a9f01); // 0x0000000186BB8E20-0x0000000186BB8F00
 }
 
-internal enum TIWOKdoJCWhTsnGfcCDaEsbLDNXvA // TypeDefIndex: 53647
+internal enum TIWOKdoJCWhTsnGfcCDaEsbLDNXvA // TypeDefIndex: 78891
 {
 	None = 0,
 	XInput = 1,
 	WindowsGamingInput = 2
 }
 
-internal class QMheRbslqkBZlcuHvVkfPGPGEfzr : PlatformInputManager, INativePlatformHelper // TypeDefIndex: 53655
+internal class QMheRbslqkBZlcuHvVkfPGPGEfzr : PlatformInputManager, INativePlatformHelper // TypeDefIndex: 78899
 {
 	// Fields
 	private bool YcrITPRQcuWnqpkOKTEheFfNkewS; // 0x38
@@ -1736,28 +1722,28 @@ internal class QMheRbslqkBZlcuHvVkfPGPGEfzr : PlatformInputManager, INativePlatf
 	private Func<PidVid, bool> EghWguErCSSlckfDqyUkzauWdIqGA; // 0x80
 
 	// Properties
-	bool INativePlatformHelper.isApplicationFocused { get; } // 0x000000018AB8FA4C-0x000000018AB8FAA0 
+	bool INativePlatformHelper.isApplicationFocused { get; } // 0x000000018CD83CF0-0x000000018CD83D44 
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x000000018AB903E4-0x000000018AB90404 
+	public override int deviceCount { get; } // 0x000000018CD84690-0x000000018CD846B0 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x0000000184D86230-0x0000000184D86240 
+	public override PlatformInputManager primaryInputManager { get; } // 0x0000000187232F80-0x0000000187232F90 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x000000018AB9042C-0x000000018AB90450 
+	public override IInputSource inputSource { get; } // 0x000000018CD846D8-0x000000018CD846FC 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x000000018AB90404-0x000000018AB9042C 
+	public override InputSource inputSourceType { get; } // 0x000000018CD846B0-0x000000018CD846D8 
 
 	// Nested types
-	private class OjhuiYfsQLjmDSLAdjapFDDYOHRBb // TypeDefIndex: 53651
+	private class OjhuiYfsQLjmDSLAdjapFDDYOHRBb // TypeDefIndex: 78895
 	{
 		// Fields
 		private List<efXfIrYwGgwWZENBhiBIZMlcwsPL> JRjGAFFeszLfkxHmZNROumymdhzab; // 0x10
 		private List<efXfIrYwGgwWZENBhiBIZMlcwsPL> vtZNTrudViWSRdoVTYWrGMXPdKWH; // 0x18
 
 		// Properties
-		public int PccjpnFaoYhHAJKoTXLipsqIJYbNA { get; } // 0x000000018AB9C748-0x000000018AB9C788 
+		public int PccjpnFaoYhHAJKoTXLipsqIJYbNA { get; } // 0x000000018CD90CA8-0x000000018CD90CE8 
 
 		// Nested types
-		private class efXfIrYwGgwWZENBhiBIZMlcwsPL // TypeDefIndex: 53648
+		private class efXfIrYwGgwWZENBhiBIZMlcwsPL // TypeDefIndex: 78892
 		{
 			// Fields
 			public int TeGggniDTQNkpisBJPYzTqcoaVTac; // 0x10
@@ -1766,15 +1752,15 @@ internal class QMheRbslqkBZlcuHvVkfPGPGEfzr : PlatformInputManager, INativePlatf
 			public InputSource FNMJsIYcymsJuahkrckLTjpCWbrd; // 0x1C
 
 			// Constructors
-			public efXfIrYwGgwWZENBhiBIZMlcwsPL(int param_000735ca, int param_000735cb, int param_000735cc, InputSource param_000735cd); // 0x0000000184D8B5C0-0x0000000184D8B5E0
+			public efXfIrYwGgwWZENBhiBIZMlcwsPL(int param_000a9f31, int param_000a9f32, int param_000a9f33, InputSource param_000a9f34); // 0x0000000187238300-0x0000000187238320
 
 			// Methods
-			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(int param_000735ce); // 0x0000000184D8F540-0x0000000184D8F550
-			public JmOnMqPORAhpavOGVQqoHmIzbKer DlvAJqBRaezRrHrnhRqNeBSpMxlcb(); // 0x0000000184DA8780-0x0000000184DA87A0
-			public static int vAOObLSXCKvyKsGRHaITynPBIZMDA(efXfIrYwGgwWZENBhiBIZMlcwsPL param_000735cf, efXfIrYwGgwWZENBhiBIZMlcwsPL param_000735d0); // 0x000000018AB9DF64-0x000000018AB9DF94
+			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(int param_000a9f35); // 0x000000018275FD70-0x000000018275FD80
+			public JmOnMqPORAhpavOGVQqoHmIzbKer DlvAJqBRaezRrHrnhRqNeBSpMxlcb(); // 0x0000000187256880-0x00000001872568A0
+			public static int vAOObLSXCKvyKsGRHaITynPBIZMDA(efXfIrYwGgwWZENBhiBIZMlcwsPL param_000a9f36, efXfIrYwGgwWZENBhiBIZMlcwsPL param_000a9f37); // 0x000000018CD924DC-0x000000018CD92514
 		}
 
-		public struct JmOnMqPORAhpavOGVQqoHmIzbKer // TypeDefIndex: 53649
+		public struct JmOnMqPORAhpavOGVQqoHmIzbKer // TypeDefIndex: 78893
 		{
 			// Fields
 			public int TeGggniDTQNkpisBJPYzTqcoaVTac; // 0x00
@@ -1782,132 +1768,132 @@ internal class QMheRbslqkBZlcuHvVkfPGPGEfzr : PlatformInputManager, INativePlatf
 			public InputSource FNMJsIYcymsJuahkrckLTjpCWbrd; // 0x08
 
 			// Constructors
-			public JmOnMqPORAhpavOGVQqoHmIzbKer(int param_000735d1, int param_000735d2, InputSource param_000735d3); // 0x0000000184D85D60-0x0000000184D85D70
+			public JmOnMqPORAhpavOGVQqoHmIzbKer(int param_000a9f38, int param_000a9f39, InputSource param_000a9f3a); // 0x0000000187232A60-0x0000000187232A70
 		}
 
-		public enum WpYNjEPAKakeDWMSOucJXqQlqdLd // TypeDefIndex: 53650
+		public enum WpYNjEPAKakeDWMSOucJXqQlqdLd // TypeDefIndex: 78894
 		{
 			Connected = 0,
 			Disconnected = 1
 		}
 
 		// Constructors
-		public OjhuiYfsQLjmDSLAdjapFDDYOHRBb(); // 0x00000001849C6EA0-0x00000001849C6F50
+		public OjhuiYfsQLjmDSLAdjapFDDYOHRBb(); // 0x0000000186E24600-0x0000000186E246B0
 
 		// Methods
-		public void OZCBlnzMtFganGWISuWvvUlyprPC(BridgedController param_000735bb); // 0x000000018AB9C240-0x000000018AB9C50C
-		public void tBTioINkucxScUwASwBBarBdIFSj(ControllerDisconnectedEventArgs param_000735bc); // 0x000000018AB9C82C-0x000000018AB9C910
-		public void NXaZKluUuIoYHzLyQyTRqDfQVaZf(int param_000735bd, int param_000735be); // 0x000000018AB9C1A8-0x000000018AB9C240
-		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_000735bf, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000735c0); // 0x000000018AB9C50C-0x000000018AB9C5F4
-		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_000735c1, InputSource param_000735c2, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000735c3); // 0x000000018AB9C5F4-0x000000018AB9C748
-		public JmOnMqPORAhpavOGVQqoHmIzbKer DlvAJqBRaezRrHrnhRqNeBSpMxlcb(int param_000735c4, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000735c5); // 0x000000018AB9BF1C-0x000000018AB9C064
-		public int inFWSzNpuekzleFvGRxGWwlgpcud(int param_000735c6, InputSource param_000735c7, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000735c8); // 0x000000018AB9C788-0x000000018AB9C82C
-		private int KiTfWzJBJqzNIuIFWrKfUsLPQmMi(int param_000735c9); // 0x000000018AB9C064-0x000000018AB9C108
-		private int KiTfWzJBJqzNIuIFWrKfUsLPQmMi(); // 0x000000018AB9C108-0x000000018AB9C1A8
+		public void OZCBlnzMtFganGWISuWvvUlyprPC(BridgedController param_000a9f22); // 0x000000018CD907A0-0x000000018CD90A6C
+		public void tBTioINkucxScUwASwBBarBdIFSj(ControllerDisconnectedEventArgs param_000a9f23); // 0x000000018CD90D90-0x000000018CD90E74
+		public void NXaZKluUuIoYHzLyQyTRqDfQVaZf(int param_000a9f24, int param_000a9f25); // 0x000000018CD90708-0x000000018CD907A0
+		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_000a9f26, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000a9f27); // 0x000000018CD90A6C-0x000000018CD90B54
+		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_000a9f28, InputSource param_000a9f29, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000a9f2a); // 0x000000018CD90B54-0x000000018CD90CA8
+		public JmOnMqPORAhpavOGVQqoHmIzbKer DlvAJqBRaezRrHrnhRqNeBSpMxlcb(int param_000a9f2b, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000a9f2c); // 0x000000018CD9047C-0x000000018CD905C4
+		public int inFWSzNpuekzleFvGRxGWwlgpcud(int param_000a9f2d, InputSource param_000a9f2e, WpYNjEPAKakeDWMSOucJXqQlqdLd param_000a9f2f); // 0x000000018CD90CE8-0x000000018CD90D90
+		private int KiTfWzJBJqzNIuIFWrKfUsLPQmMi(int param_000a9f30); // 0x000000018CD905C4-0x000000018CD90668
+		private int KiTfWzJBJqzNIuIFWrKfUsLPQmMi(); // 0x000000018CD90668-0x000000018CD90708
 	}
 
-	private class MOICKaGpxhWtyBLVQTNrFLXoTHai : IInputManagerJoystickPublic, ITryGetLocalizedName // TypeDefIndex: 53652
+	private class MOICKaGpxhWtyBLVQTNrFLXoTHai : IInputManagerJoystickPublic, ITryGetLocalizedName // TypeDefIndex: 78896
 	{
 		// Fields
 		private IInputManagerJoystickPublic boNDKtEvtQnFljhvyLYTzMMSWoS; // 0x10
 		private int bbeMguIoqGgoxHrJvkGVmHAhtZzd; // 0x18
 
 		// Properties
-		public int rewiredId { get; } // 0x000000018AB9B9C0-0x000000018AB9B9E0 
-		public int inputManagerId { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
-		public string name { get; } // 0x000000018AB9B978-0x000000018AB9B998 
-		public long? systemId { get; } // 0x000000018AB9B9E0-0x000000018AB9BA14 
-		public int unityId { get; } // 0x000000018AB9BA14-0x000000018AB9BA34 
-		public Guid instanceGuid { get; } // 0x000000018AB9B944-0x000000018AB9B978 
-		public Guid persistentGuid { get; } // 0x000000018AB9B998-0x000000018AB9B9C0 
-		public Rewired.Controller.Extension extension { get; } // 0x000000018AB9B924-0x000000018AB9B944 
+		public int rewiredId { get; } // 0x000000018CD8FF24-0x000000018CD8FF44 
+		public int inputManagerId { get; } // 0x00000001844AF510-0x00000001844AF520 
+		public string name { get; } // 0x000000018CD8FEDC-0x000000018CD8FEFC 
+		public long? systemId { get; } // 0x000000018CD8FF44-0x000000018CD8FF78 
+		public int unityId { get; } // 0x000000018CD8FF78-0x000000018CD8FF98 
+		public Guid instanceGuid { get; } // 0x000000018CD8FEA8-0x000000018CD8FEDC 
+		public Guid persistentGuid { get; } // 0x000000018CD8FEFC-0x000000018CD8FF24 
+		public Rewired.Controller.Extension extension { get; } // 0x000000018CD8FE88-0x000000018CD8FEA8 
 
 		// Constructors
-		public MOICKaGpxhWtyBLVQTNrFLXoTHai(IInputManagerJoystickPublic param_000735d4, int param_000735d5); // 0x0000000183B46FF0-0x0000000183B47040
+		public MOICKaGpxhWtyBLVQTNrFLXoTHai(IInputManagerJoystickPublic param_000a9f3b, int param_000a9f3c); // 0x00000001856B50C0-0x00000001856B50E0
 
 		// Methods
-		public void SetVibration(float amount, int motorIndex); // 0x000000018AB9B8E4-0x000000018AB9B904
-		public void StopVibration(); // 0x000000018AB9B904-0x000000018AB9B924
-		bool ITryGetLocalizedName.TryGetLocalizedName(out string value); // 0x000000018AB9B878-0x000000018AB9B8E4
+		public void SetVibration(float amount, int motorIndex); // 0x000000018CD8FE48-0x000000018CD8FE68
+		public void StopVibration(); // 0x000000018CD8FE68-0x000000018CD8FE88
+		bool ITryGetLocalizedName.TryGetLocalizedName(out string value); // 0x000000018CD8FDDC-0x000000018CD8FE48
 	}
 
 	[Serializable]
 	[CompilerGenerated]
-	private sealed class xDaNoTWqRzaXePepUJIfmnHocbzE // TypeDefIndex: 53653
+	private sealed class xDaNoTWqRzaXePepUJIfmnHocbzE // TypeDefIndex: 78897
 	{
 		// Fields
 		public static readonly xDaNoTWqRzaXePepUJIfmnHocbzE __9; // 0x00
 		public static Func<PidVid, bool> __9__17_0; // 0x08
 
 		// Constructors
-		static xDaNoTWqRzaXePepUJIfmnHocbzE(); // 0x0000000184D3E710-0x0000000184D3E770
-		public xDaNoTWqRzaXePepUJIfmnHocbzE(); // 0x00000001841E1670-0x00000001841E1680
+		static xDaNoTWqRzaXePepUJIfmnHocbzE(); // 0x00000001871E42E0-0x00000001871E4340
+		public xDaNoTWqRzaXePepUJIfmnHocbzE(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal bool lcdMiOnjTsbvXlAFgCwAjwxkKGhl(PidVid param_000735d9); // 0x00000001812081B0-0x0000000181208610
+		internal bool lcdMiOnjTsbvXlAFgCwAjwxkKGhl(PidVid param_000a9f40); // 0x00000001843FFFF0-0x0000000184400000
 	}
 
 	[CompilerGenerated]
-	private sealed class GsijRuvKOdohGPGwIUDMBGivUqZT // TypeDefIndex: 53654
+	private sealed class GsijRuvKOdohGPGwIUDMBGivUqZT // TypeDefIndex: 78898
 	{
 		// Fields
 		public int JMfmsMjVGQYxGgCzcDcKvsjFwVVL; // 0x10
 
 		// Constructors
-		public GsijRuvKOdohGPGwIUDMBGivUqZT(); // 0x00000001841E1670-0x00000001841E1680
+		public GsijRuvKOdohGPGwIUDMBGivUqZT(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal int cLSxpZjiwLJISBrvozGPqmqxDyxE(); // 0x0000000184DA8760-0x0000000184DA8770
+		internal int cLSxpZjiwLJISBrvozGPqmqxDyxE(); // 0x0000000187256860-0x0000000187256870
 	}
 
 	// Constructors
-	public QMheRbslqkBZlcuHvVkfPGPGEfzr(ConfigVars param_000735a0, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000735a1, Func<int> param_000735a2); // 0x000000018381B2A0-0x000000018381B800
+	public QMheRbslqkBZlcuHvVkfPGPGEfzr(ConfigVars param_000a9f07, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9f08, Func<int> param_000a9f09); // 0x0000000185B6FC80-0x0000000185B701E0
 
 	// Methods
-	private bool aHosPjIAvHmlXZuwUhZPsSekcjGC(ConfigVars param_000735a3, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000735a4, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000735a5); // 0x000000018AB8FF5C-0x000000018AB903E4
-	private bool UeLqBvBNkQlZqKYlUUKRAMtSJomV(ConfigVars param_000735a6, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000735a7, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000735a8); // 0x00000001842B45E0-0x00000001842B4890
-	private bool LyWQtJmOztptvRAPOQWGRyIvAPoe(ConfigVars param_000735a9, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000735aa); // 0x000000018AB8F654-0x000000018AB8F978
-	private bool MZKABNiBJRYKtiMMxZrpaOzxECViA(ConfigVars param_000735ab, bool param_000735ac, out PlatformInputManager param_000735ad); // 0x00000001842B4890-0x00000001842B4AE0
-	private bool THoyCDdceDgpdfDtwcEICnaxGnAjA(ConfigVars param_000735ae, bool param_000735af, out PlatformInputManager param_000735b0); // 0x000000018AB8FAA0-0x000000018AB8FEA4
+	private bool aHosPjIAvHmlXZuwUhZPsSekcjGC(ConfigVars param_000a9f0a, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000a9f0b, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000a9f0c); // 0x000000018CD84208-0x000000018CD84690
+	private bool UeLqBvBNkQlZqKYlUUKRAMtSJomV(ConfigVars param_000a9f0d, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000a9f0e, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000a9f0f); // 0x0000000185BB2550-0x0000000185BB2800
+	private bool LyWQtJmOztptvRAPOQWGRyIvAPoe(ConfigVars param_000a9f10, SFgaCJttxzkGcFYzwaMzNZCZlvVR param_000a9f11); // 0x000000018CD838F4-0x000000018CD83C18
+	private bool MZKABNiBJRYKtiMMxZrpaOzxECViA(ConfigVars param_000a9f12, bool param_000a9f13, out PlatformInputManager param_000a9f14); // 0x0000000185BB2800-0x0000000185BB2A50
+	private bool THoyCDdceDgpdfDtwcEICnaxGnAjA(ConfigVars param_000a9f15, bool param_000a9f16, out PlatformInputManager param_000a9f17); // 0x000000018CD83D44-0x000000018CD84148
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x00000001849C6DD0-0x00000001849C6EA0
-	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000735b1); // 0x00000001830B7700-0x00000001830B7790
+	public override void Initialize(); // 0x0000000186E24530-0x0000000186E24600
+	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000a9f18); // 0x00000001851E08D0-0x00000001851E0980
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018AB8F978-0x000000018AB8FA4C
+	public override void OnDestroy(); // 0x000000018CD83C18-0x000000018CD83CF0
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000182E56440-0x0000000182E56460
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000187232F70-0x0000000187232F80
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int controllerId, ControllerDataUpdater data); // 0x000000018AB8FEA4-0x000000018AB8FF5C
+	public override void UpdateControllerData(int controllerId, ControllerDataUpdater data); // 0x000000018CD84148-0x000000018CD84208
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x00000001841E1670-0x00000001841E1680
+	public override void SystemDeviceConnected(); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x00000001841E1670-0x00000001841E1680
+	public override void SystemDeviceDisconnected(); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000184B42130-0x0000000184B421D0
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000186FBAC90-0x0000000186FBAD30
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000184B421D0-0x0000000184B42270
-	private void pMEAxuEYXhMFAnjSlfHeNgrlPxPQ(BridgedController param_000735b6); // 0x000000018AB90650-0x000000018AB906A0
-	private void mRRUFjhBSbdxngjjjaZbeCubOwOob(ControllerDisconnectedEventArgs param_000735b7); // 0x000000018AB90450-0x000000018AB904A0
-	private void pVubgwsVcdumuxrmvbYGNdAkPVuS(EventArgs param_000735b8); // 0x000000018AB906A0-0x000000018AB90734
-	private void weZgfCbYdBhDovOdzNTiongPhvVH(EventArgs param_000735b9); // 0x000000018AB90734-0x000000018AB907C8
-	private void nMqlgvXSvtazHPVhciVXWubctSPu(UpdateControllerInfoEventArgs param_000735ba); // 0x000000018AB904A0-0x000000018AB90650
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000186FBAD30-0x0000000186FBADD0
+	private void pMEAxuEYXhMFAnjSlfHeNgrlPxPQ(BridgedController param_000a9f1d); // 0x000000018CD84900-0x000000018CD84950
+	private void mRRUFjhBSbdxngjjjaZbeCubOwOob(ControllerDisconnectedEventArgs param_000a9f1e); // 0x000000018CD846FC-0x000000018CD8474C
+	private void pVubgwsVcdumuxrmvbYGNdAkPVuS(EventArgs param_000a9f1f); // 0x000000018CD84950-0x000000018CD849E4
+	private void weZgfCbYdBhDovOdzNTiongPhvVH(EventArgs param_000a9f20); // 0x000000018CD849E4-0x000000018CD84A78
+	private void nMqlgvXSvtazHPVhciVXWubctSPu(UpdateControllerInfoEventArgs param_000a9f21); // 0x000000018CD8474C-0x000000018CD84900
 }
 
-internal class psTbmShznQqLMMRKqcocsAdKgKFTA : ZvFOVHtMPPFSKMXvcEpBjwvCmYwe, hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 53656
+internal class psTbmShznQqLMMRKqcocsAdKgKFTA : ZvFOVHtMPPFSKMXvcEpBjwvCmYwe, hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 78900
 {
 	// Properties
-	private TIWOKdoJCWhTsnGfcCDaEsbLDNXvA XQoKuCErZNQlQGpBnaJDCkjnsajJA { get; } // 0x0000000182BBE540-0x0000000182BBE550 
+	private TIWOKdoJCWhTsnGfcCDaEsbLDNXvA XQoKuCErZNQlQGpBnaJDCkjnsajJA { get; } // 0x00000001845AFFB0-0x00000001845AFFC0 
 
 	// Constructors
-	public psTbmShznQqLMMRKqcocsAdKgKFTA(ConfigVars param_000735da, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000735db, Func<int> param_000735dc, Func<PidVid, bool> param_000735dd); // 0x000000018AB9F904-0x000000018AB9F914
+	public psTbmShznQqLMMRKqcocsAdKgKFTA(ConfigVars param_000a9f41, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9f42, Func<int> param_000a9f43, Func<PidVid, bool> param_000a9f44); // 0x000000018CD93E90-0x000000018CD93EA0
 
 	// Methods
-	private bool PCrJskquNxmwAdpvwnSVoFFxcbDG(string param_000735de, string param_000735df, string param_000735e0, PidVid param_000735e1); // 0x000000018AB9F8C0-0x000000018AB9F904
+	private bool PCrJskquNxmwAdpvwnSVoFFxcbDG(string param_000a9f45, string param_000a9f46, string param_000a9f47, PidVid param_000a9f48); // 0x000000018CD93E4C-0x000000018CD93E90
 }
 
-internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 53663
+internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 78907
 {
 	// Fields
 	private BFABnUirdfafqrsPBWQiwdmSoNCAA[] wObDbzgCSPpmrkNUEKYXvWjJbeFJA; // 0x38
@@ -1933,17 +1919,17 @@ internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJO
 
 	// Properties
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x000000018ABA013C-0x000000018ABA01A4 
+	public override int deviceCount { get; } // 0x000000018CD946CC-0x000000018CD94744 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x000000018464E630-0x000000018464E640 
+	public override PlatformInputManager primaryInputManager { get; } // 0x0000000185BD80B0-0x0000000185BD80C0 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x00000001811EC580-0x00000001811EC590 
+	public override IInputSource inputSource { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x0000000182BBE540-0x0000000182BBE550 
-	private TIWOKdoJCWhTsnGfcCDaEsbLDNXvA XQoKuCErZNQlQGpBnaJDCkjnsajJA { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+	public override InputSource inputSourceType { get; } // 0x00000001845AFFB0-0x00000001845AFFC0 
+	private TIWOKdoJCWhTsnGfcCDaEsbLDNXvA XQoKuCErZNQlQGpBnaJDCkjnsajJA { get; } // 0x00000001872328C0-0x00000001872328D0 
 
 	// Nested types
-	private class BFABnUirdfafqrsPBWQiwdmSoNCAA : IDisposable, IInputManagerJoystick, ITryGetLocalizedName // TypeDefIndex: 53657
+	private class BFABnUirdfafqrsPBWQiwdmSoNCAA : IDisposable, IInputManagerJoystick, ITryGetLocalizedName // TypeDefIndex: 78901
 	{
 		// Fields
 		private bool pmClilickqOIDTOtWREPApCiJeqq; // 0x10
@@ -1975,76 +1961,76 @@ internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJO
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0xAA
 
 		// Properties
-		public string rTDvBtbCVHvoCFneOcKfGwPSCvaeA { get; } // 0x000000018AB97E00-0x000000018AB97EA8 
-		public string ZFMfPPlGsRclaQOlhEcmxjLIUoNw { get; } // 0x000000018AB97728-0x000000018AB977A8 
-		public bool oyacANaeyTJvtKtdJsdYmnqAekUQ { get; } // 0x0000000183303BD0-0x0000000183303C00 
+		public string rTDvBtbCVHvoCFneOcKfGwPSCvaeA { get; } // 0x000000018CD8C2FC-0x000000018CD8C3A4 
+		public string ZFMfPPlGsRclaQOlhEcmxjLIUoNw { get; } // 0x000000018CD8BC0C-0x000000018CD8BC8C 
+		public bool oyacANaeyTJvtKtdJsdYmnqAekUQ { get; } // 0x00000001851E0400-0x00000001851E0430 
 		[CustomObfuscation(rename = false)]
-		public int rewiredId { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int rewiredId { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 		[CustomObfuscation(rename = false)]
-		public int inputManagerId { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
+		public int inputManagerId { get; } // 0x00000001844AF510-0x00000001844AF520 
 		[CustomObfuscation(rename = false)]
-		public string name { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+		public string name { get; } // 0x0000000182986470-0x0000000182986480 
 		[CustomObfuscation(rename = false)]
-		public long? systemId { get; } // 0x000000018AB97EC4-0x000000018AB97F10 
+		public long? systemId { get; } // 0x000000018CD8C3C0-0x000000018CD8C40C 
 		[CustomObfuscation(rename = false)]
-		public int unityId { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public int unityId { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 		[CustomObfuscation(rename = false)]
-		public Rewired.Controller.Extension extension { get; } // 0x000000018AB97EA8-0x000000018AB97EC4 
+		public Rewired.Controller.Extension extension { get; } // 0x000000018CD8C3A4-0x000000018CD8C3C0 
 		[CustomObfuscation(rename = false)]
-		public Guid instanceGuid { get; } // 0x0000000184D905C0-0x0000000184D905D0 
+		public Guid instanceGuid { get; } // 0x000000018723E4C0-0x000000018723E4D0 
 		[CustomObfuscation(rename = false)]
-		public Guid persistentGuid { get; } // 0x0000000184D905C0-0x0000000184D905D0 
+		public Guid persistentGuid { get; } // 0x000000018723E4C0-0x000000018723E4D0 
 
 		// Constructors
-		public BFABnUirdfafqrsPBWQiwdmSoNCAA(int param_000735fc, bool param_000735fd, glrnucEUzNoToJLBWReJKJsCbnHKA param_000735fe, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000735ff, Action param_00073600); // 0x0000000183A421A0-0x0000000183A42300
+		public BFABnUirdfafqrsPBWQiwdmSoNCAA(int param_000a9f63, bool param_000a9f64, glrnucEUzNoToJLBWReJKJsCbnHKA param_000a9f65, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9f66, Action param_000a9f67); // 0x0000000185BAFD20-0x0000000185BAFE80
 
 		// Methods
 		[CustomObfuscation(rename = false)]
-		public void SetVibration(float amount, int motorIndex); // 0x000000018AB97BE8-0x000000018AB97C0C
+		public void SetVibration(float amount, int motorIndex); // 0x000000018CD8C0E0-0x000000018CD8C104
 		[CustomObfuscation(rename = false)]
-		public void StopVibration(); // 0x000000018AB97C0C-0x000000018AB97C30
-		bool ITryGetLocalizedName.TryGetLocalizedName(out string value); // 0x000000018AB97A9C-0x000000018AB97B88
+		public void StopVibration(); // 0x000000018CD8C104-0x000000018CD8C128
+		bool ITryGetLocalizedName.TryGetLocalizedName(out string value); // 0x000000018CD8BF90-0x000000018CD8C080
 		[CustomObfuscation(rename = false)]
-		public void Update(); // 0x000000018AB97D68-0x000000018AB97E00
-		public void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(bool param_00073601); // 0x0000000183302660-0x0000000183302670
-		public bool ZYycJocImHWXmdvdEbkVgAimMvlC(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_00073602); // 0x0000000183A423C0-0x0000000183A423E0
-		public bool UQpmPGKmikGKxcatkbzmcAWdDhSZb(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_00073603); // 0x00000001836A8220-0x00000001836A8290
-		public void JbOaOhivkuMSQVdgFdshyYgCESEab(bool param_00073604); // 0x0000000184D90750-0x0000000184D90760
-		public void tcaCVfnFuTmEDkyraDEYvlHdxLyd(); // 0x000000018AB9845C-0x000000018AB984B0
-		public void QYLSZuxgfwkPUJKRbVNZXWIehHjP(); // 0x000000018AB979D4-0x000000018AB97A3C
+		public void Update(); // 0x000000018CD8C264-0x000000018CD8C2FC
+		public void EwkcAaHOpQOleCWgbsCvmKHkjzAoA(bool param_000a9f68); // 0x00000001863D6AA0-0x00000001863D6AB0
+		public bool ZYycJocImHWXmdvdEbkVgAimMvlC(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_000a9f69); // 0x0000000185BAFF40-0x0000000185BAFF60
+		public bool UQpmPGKmikGKxcatkbzmcAWdDhSZb(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_000a9f6a); // 0x0000000185BAFF60-0x0000000185BB0080
+		public void JbOaOhivkuMSQVdgFdshyYgCESEab(bool param_000a9f6b); // 0x000000018225E120-0x000000018225E130
+		public void tcaCVfnFuTmEDkyraDEYvlHdxLyd(); // 0x000000018CD8C960-0x000000018CD8C9B4
+		public void QYLSZuxgfwkPUJKRbVNZXWIehHjP(); // 0x000000018CD8BEC8-0x000000018CD8BF30
 		[CustomObfuscation(rename = false)]
-		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018AB97408-0x000000018AB97540
-		public BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018AB97A3C-0x000000018AB97A9C
+		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018CD8B8F0-0x000000018CD8BA24
+		public BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018CD8BF30-0x000000018CD8BF90
 		[CustomObfuscation(rename = false)]
-		public BridgedController ToBridgedController(); // 0x000000018AB97C30-0x000000018AB97C90
+		public BridgedController ToBridgedController(); // 0x000000018CD8C128-0x000000018CD8C188
 		[CustomObfuscation(rename = false)]
-		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018AB97C90-0x000000018AB97CF4
-		private void EIgZIsAaXKSOIBvpwmqjiRutRAOm(); // 0x0000000183A42300-0x0000000183A423C0
-		private bool oGHJymPhAxdTsXntdBelIXozhnGg(); // 0x000000018AB98364-0x000000018AB9841C
-		private void YLHoWZyzMtRNKjCsBcqKObjyZmOf(); // 0x0000000184DA8730-0x0000000184DA8740
-		private void pWtGFOOyGmNdsZkKgBiSaJeOQZqq(); // 0x000000018AB9841C-0x000000018AB9845C
-		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_00073606, ref noccVtHfezXkLCsIalwenvYFTJemA param_00073607); // 0x000000018AB977A8-0x000000018AB9792C
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_00073608, ref noccVtHfezXkLCsIalwenvYFTJemA param_00073609); // 0x000000018AB984B0-0x000000018AB98628
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_XInput_Base.Axis param_0007360a, bool[] param_0007360b, ref noccVtHfezXkLCsIalwenvYFTJemA param_0007360c); // 0x000000018AB97344-0x000000018AB973B8
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(XInputAxis param_0007360d, ref noccVtHfezXkLCsIalwenvYFTJemA param_0007360e); // 0x000000018AB972DC-0x000000018AB97344
-		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_XInput_Base.Button param_0007360f, bool[] param_00073610, ref noccVtHfezXkLCsIalwenvYFTJemA param_00073611); // 0x000000018AB9810C-0x000000018AB98198
-		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(XInputButton param_00073612, bool[] param_00073613); // 0x000000018AB97F10-0x000000018AB9810C
-		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018AB9792C-0x000000018AB979D4
-		private string GjijczTURIgZZpyFRyfwxQetRhHD(); // 0x000000018AB97540-0x000000018AB97728
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_00073614); // 0x000000018AB982C8-0x000000018AB98364
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_00073615); // 0x000000018AB98198-0x000000018AB982C8
-		public void Dispose(); // 0x000000018AB973B8-0x000000018AB97408
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB97CF4-0x000000018AB97D68
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073616); // 0x000000018AB97B88-0x000000018AB97BE8
+		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018CD8C188-0x000000018CD8C1EC
+		private void EIgZIsAaXKSOIBvpwmqjiRutRAOm(); // 0x0000000185BAFE80-0x0000000185BAFF40
+		private bool oGHJymPhAxdTsXntdBelIXozhnGg(); // 0x000000018CD8C868-0x000000018CD8C920
+		private void YLHoWZyzMtRNKjCsBcqKObjyZmOf(); // 0x0000000187256830-0x0000000187256840
+		private void pWtGFOOyGmNdsZkKgBiSaJeOQZqq(); // 0x000000018CD8C920-0x000000018CD8C960
+		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(bool[] param_000a9f6d, ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f6e); // 0x000000018CD8BC8C-0x000000018CD8BE20
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(bool[] param_000a9f6f, ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f70); // 0x000000018CD8C9B4-0x000000018CD8CB3C
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_XInput_Base.Axis param_000a9f71, bool[] param_000a9f72, ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f73); // 0x000000018CD8B82C-0x000000018CD8B8A0
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(XInputAxis param_000a9f74, ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f75); // 0x000000018CD8B7C4-0x000000018CD8B82C
+		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_XInput_Base.Button param_000a9f76, bool[] param_000a9f77, ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f78); // 0x000000018CD8C60C-0x000000018CD8C698
+		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(XInputButton param_000a9f79, bool[] param_000a9f7a); // 0x000000018CD8C40C-0x000000018CD8C60C
+		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018CD8BE20-0x000000018CD8BEC8
+		private string GjijczTURIgZZpyFRyfwxQetRhHD(); // 0x000000018CD8BA24-0x000000018CD8BC0C
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000a9f7b); // 0x000000018CD8C7C8-0x000000018CD8C868
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000a9f7c); // 0x000000018CD8C698-0x000000018CD8C7C8
+		public void Dispose(); // 0x000000018CD8B8A0-0x000000018CD8B8F0
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD8C1EC-0x000000018CD8C264
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9f7d); // 0x000000018CD8C080-0x000000018CD8C0E0
 	}
 
-	private class GlvatcZimdinLZLBgGCImLeEgkWE // TypeDefIndex: 53659
+	private class GlvatcZimdinLZLBgGCImLeEgkWE // TypeDefIndex: 78903
 	{
 		// Fields
 		private List<QtEhwSYenAhCEaatXydRqrNqMPWQ> kfYfqEcEuytPhEMEULSfGPpdWoee; // 0x10
 
 		// Nested types
-		private class QtEhwSYenAhCEaatXydRqrNqMPWQ // TypeDefIndex: 53658
+		private class QtEhwSYenAhCEaatXydRqrNqMPWQ // TypeDefIndex: 78902
 		{
 			// Fields
 			public bool eizjJaGCKAKSoNOSxqlnFnYoOcZR; // 0x10
@@ -2052,25 +2038,25 @@ internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJO
 			public XInputDeviceSubType rqtDrJdpfGPOHZrczXFKuqiesRVDA; // 0x18
 
 			// Constructors
-			public QtEhwSYenAhCEaatXydRqrNqMPWQ(int param_00073626, XInputDeviceSubType param_00073627); // 0x0000000184DA8770-0x0000000184DA8780
+			public QtEhwSYenAhCEaatXydRqrNqMPWQ(int param_000a9f8d, XInputDeviceSubType param_000a9f8e); // 0x0000000187256870-0x0000000187256880
 
 			// Methods
-			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(BFABnUirdfafqrsPBWQiwdmSoNCAA param_00073624, bool param_00073625); // 0x000000018AB9C910-0x000000018AB9C934
+			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(BFABnUirdfafqrsPBWQiwdmSoNCAA param_000a9f8b, bool param_000a9f8c); // 0x000000018CD90E74-0x000000018CD90E98
 		}
 
 		// Constructors
-		public GlvatcZimdinLZLBgGCImLeEgkWE(); // 0x0000000183A41020-0x0000000183A410A0
+		public GlvatcZimdinLZLBgGCImLeEgkWE(); // 0x0000000185BB1260-0x0000000185BB12E0
 
 		// Methods
-		public void gYvpQOgpgbFrJowabFJErvEiPAXo(BFABnUirdfafqrsPBWQiwdmSoNCAA param_00073617, bool param_00073618); // 0x000000018AB98A34-0x000000018AB98AF0
-		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(int param_00073619, BFABnUirdfafqrsPBWQiwdmSoNCAA param_0007361a, bool param_0007361b); // 0x000000018AB988C0-0x000000018AB98960
-		public int elnKOjwEVBHvNZiNAyIzpUHIdlfG(XInputDeviceSubType param_0007361c, bool param_0007361d); // 0x000000018AB98960-0x000000018AB98A34
-		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_0007361e, XInputDeviceSubType param_0007361f, bool param_00073620); // 0x000000018AB987C0-0x000000018AB988C0
-		public int NecciTpRMLDvaQKUHRNiCLoQaSfI(int param_00073621); // 0x000000018AB9870C-0x000000018AB987C0
-		public void qFqZRDTdTLyOsoBpkaudedvGIpXgA(int param_00073622, bool param_00073623); // 0x000000018AB98AF0-0x000000018AB98B74
+		public void gYvpQOgpgbFrJowabFJErvEiPAXo(BFABnUirdfafqrsPBWQiwdmSoNCAA param_000a9f7e, bool param_000a9f7f); // 0x000000018CD8CF30-0x000000018CD8CFF0
+		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(int param_000a9f80, BFABnUirdfafqrsPBWQiwdmSoNCAA param_000a9f81, bool param_000a9f82); // 0x000000018CD8CDBC-0x000000018CD8CE5C
+		public int elnKOjwEVBHvNZiNAyIzpUHIdlfG(XInputDeviceSubType param_000a9f83, bool param_000a9f84); // 0x000000018CD8CE5C-0x000000018CD8CF30
+		public int PAAHqPJeiyimprjSbjbBBdnBTcrPA(int param_000a9f85, XInputDeviceSubType param_000a9f86, bool param_000a9f87); // 0x000000018CD8CCBC-0x000000018CD8CDBC
+		public int NecciTpRMLDvaQKUHRNiCLoQaSfI(int param_000a9f88); // 0x000000018CD8CC08-0x000000018CD8CCBC
+		public void qFqZRDTdTLyOsoBpkaudedvGIpXgA(int param_000a9f89, bool param_000a9f8a); // 0x000000018CD8CFF0-0x000000018CD8D074
 	}
 
-	private class LzizGTYpZCgQCElPpfEDRfvDvWXpA // TypeDefIndex: 53660
+	private class LzizGTYpZCgQCElPpfEDRfvDvWXpA // TypeDefIndex: 78904
 	{
 		// Fields
 		public bool TTXjKzYcAtbhzXxLtgiAhZXbLUMuA; // 0x10
@@ -2078,14 +2064,14 @@ internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJO
 		public float trSIhajCPEUvjAretroNiVctrZmT; // 0x20
 
 		// Constructors
-		public LzizGTYpZCgQCElPpfEDRfvDvWXpA(float param_00073628); // 0x00000001811EC9E0-0x00000001811EC9F0
+		public LzizGTYpZCgQCElPpfEDRfvDvWXpA(float param_000a9f8f); // 0x00000001872332D0-0x00000001872332E0
 
 		// Methods
-		public void AUIECoEHQdHwzaapCcIAhFHhHsro(); // 0x0000000183302230-0x0000000183302290
-		public bool TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x0000000183303DF0-0x0000000183303E50
+		public void AUIECoEHQdHwzaapCcIAhFHhHsro(); // 0x0000000185BB1360-0x0000000185BB13C0
+		public bool TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x00000001851E0610-0x00000001851E0670
 	}
 
-	public class glrnucEUzNoToJLBWReJKJsCbnHKA : IDisposable // TypeDefIndex: 53661
+	public class glrnucEUzNoToJLBWReJKJsCbnHKA : IDisposable // TypeDefIndex: 78905
 	{
 		// Fields
 		public readonly nKmzDjyDAHhaWGWNaeRKraijtxEk zyjJJQMDNLgGTgOwMILoGjYyQstBA; // 0x10
@@ -2106,88 +2092,88 @@ internal class rBZGQBZwTiSiuHITZSaJgTFuMivb : PlatformInputManager, hohNsNaAhdJO
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x88
 
 		// Properties
-		public Rewired.Controller.Extension NdFyOmsmaWBAIhHebklaYJBWUZfE { get; } // 0x000000018385B100-0x000000018385B110 
-		public bool[] QfHOjFpcoFlpvJKhBRdhaliAhqPO { get; } // 0x000000018AB9F27C-0x000000018AB9F2D0 
+		public Rewired.Controller.Extension NdFyOmsmaWBAIhHebklaYJBWUZfE { get; } // 0x0000000182234E30-0x0000000182234E40 
+		public bool[] QfHOjFpcoFlpvJKhBRdhaliAhqPO { get; } // 0x000000018CD9381C-0x000000018CD93870 
 
 		// Constructors
-		public glrnucEUzNoToJLBWReJKJsCbnHKA(int param_00073629, UpdateLoopSetting param_0007362a); // 0x0000000183A423E0-0x0000000183A42690
+		public glrnucEUzNoToJLBWReJKJsCbnHKA(int param_000a9f90, UpdateLoopSetting param_000a9f91); // 0x0000000185BB04F0-0x0000000185BB07A0
 
 		// Methods
-		public void ZdcGgynytMPTLdLAaWDBvAvTrhqr(); // 0x000000018AB9EE10-0x000000018AB9EE90
-		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018AB9F21C-0x000000018AB9F27C
-		public void NpMOgLjaQKghKbXenFQXBkoChQfCA(); // 0x000000018AB9EB58-0x000000018AB9EB8C
-		public void eTDWPSgpXIMtpgNDkBPsaHTWXrZjA(); // 0x000000018AB9F028-0x000000018AB9F038
-		public bool UQpmPGKmikGKxcatkbzmcAWdDhSZb(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_0007362b); // 0x00000001836A8290-0x00000001836A82E0
-		public void hJVWdluocTccqfVOELDXAeXkkPPlA(float param_0007362c, int param_0007362d); // 0x000000018AB9F038-0x000000018AB9F094
-		public void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018AB9F01C-0x000000018AB9F028
-		public void DCzoBWVbDQflAenKageEgwKrZlkR(); // 0x000000018AB9E7F8-0x000000018AB9E950
-		public void OEUiepMJOLOxlvyKFlBdMfSwBByE(); // 0x0000000183617460-0x0000000183617710
-		public void bQByUaaPbcTUdwegxMgjeATLizYD(); // 0x0000000183617710-0x0000000183617880
-		private void cbJpAWKVtCgvFtIikgPssDjoPxht(); // 0x000000018AB9EF60-0x000000018AB9EF68
-		private void NIxaCWDZMjMBnhrHHfjBzuFxLWeLA(); // 0x000000018AB9EA58-0x000000018AB9EB58
-		private void dIynDsLKbxaDRBsYLuwSquvHCLOcA(); // 0x000000018AB9EF68-0x000000018AB9F01C
-		private static void klxLesivsoDcuFJPjuyxNnKqNker(RingBuffer<MjfRFftkTcBeBOoxrCKsCyjeiVkX> param_0007362e, nKmzDjyDAHhaWGWNaeRKraijtxEk param_0007362f, ref double param_00073630); // 0x000000018AB9F0F8-0x000000018AB9F198
-		private static void WHQkUusMnfMdEtkmpklkwvEzfSLF(nKmzDjyDAHhaWGWNaeRKraijtxEk param_00073631, MjfRFftkTcBeBOoxrCKsCyjeiVkX param_00073632, ref double param_00073633); // 0x000000018AB9ED30-0x000000018AB9EE10
-		private void ZhaMfegKEcaYTTYtJFlVhwccVqcl(ref noccVtHfezXkLCsIalwenvYFTJemA param_00073634); // 0x000000018AB9EE90-0x000000018AB9EF60
-		private void OAlzeOtIpuBNzMKxqoYYRwJHNjLL(ref noccVtHfezXkLCsIalwenvYFTJemA param_00073635, double param_00073636, LowLevelInputEvent param_00073637); // 0x000000018AB9EB8C-0x000000018AB9EC80
-		private void xUVWOijUKuiOeHeHcSoMxqOoodhs(ref noccVtHfezXkLCsIalwenvYFTJemA param_00073638, ref LowLevelInputEvent param_00073639); // 0x000000018AB9F2D0-0x000000018AB9F3DC
-		private static bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_0007363a, int param_0007363b); // 0x000000018AB9F1FC-0x000000018AB9F21C
-		private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018AB9E950-0x000000018AB9EA08
-		public void Dispose(); // 0x000000018AB9EA08-0x000000018AB9EA58
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB9ECBC-0x000000018AB9ED30
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007363c); // 0x000000018AB9EC80-0x000000018AB9ECBC
-		public static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_0007363d); // 0x000000018AB9F198-0x000000018AB9F1FC
-		public static float hdZcXCdRxvHmMmvVsrzbNtfbjBMXA(int param_0007363e); // 0x000000018AB9F094-0x000000018AB9F0F8
-		private static bool CuDoEPEJQapgbkINSuEJLwmbaAbd(noccVtHfezXkLCsIalwenvYFTJemA param_0007363f, noccVtHfezXkLCsIalwenvYFTJemA param_00073640); // 0x000000018AB9E7B0-0x000000018AB9E7F8
+		public void ZdcGgynytMPTLdLAaWDBvAvTrhqr(); // 0x000000018CD933B0-0x000000018CD93430
+		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CD937BC-0x000000018CD9381C
+		public void NpMOgLjaQKghKbXenFQXBkoChQfCA(); // 0x000000018CD930F4-0x000000018CD93128
+		public void eTDWPSgpXIMtpgNDkBPsaHTWXrZjA(); // 0x000000018CD935CC-0x000000018CD935DC
+		public bool UQpmPGKmikGKxcatkbzmcAWdDhSZb(bFsHvvhHIXsuHKEjfGsxBfqmGTgAA param_000a9f92); // 0x0000000185BB0080-0x0000000185BB0180
+		public void hJVWdluocTccqfVOELDXAeXkkPPlA(float param_000a9f93, int param_000a9f94); // 0x000000018CD935DC-0x000000018CD93638
+		public void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018CD935C0-0x000000018CD935CC
+		public void DCzoBWVbDQflAenKageEgwKrZlkR(); // 0x000000018CD92D8C-0x000000018CD92EE8
+		public void OEUiepMJOLOxlvyKFlBdMfSwBByE(); // 0x0000000185848460-0x0000000185848710
+		public void bQByUaaPbcTUdwegxMgjeATLizYD(); // 0x0000000185848710-0x0000000185848880
+		private void cbJpAWKVtCgvFtIikgPssDjoPxht(); // 0x000000018CD93500-0x000000018CD93508
+		private void NIxaCWDZMjMBnhrHHfjBzuFxLWeLA(); // 0x000000018CD92FF4-0x000000018CD930F4
+		private void dIynDsLKbxaDRBsYLuwSquvHCLOcA(); // 0x000000018CD93508-0x000000018CD935C0
+		private static void klxLesivsoDcuFJPjuyxNnKqNker(RingBuffer<MjfRFftkTcBeBOoxrCKsCyjeiVkX> param_000a9f95, nKmzDjyDAHhaWGWNaeRKraijtxEk param_000a9f96, ref double param_000a9f97); // 0x000000018CD9369C-0x000000018CD9373C
+		private static void WHQkUusMnfMdEtkmpklkwvEzfSLF(nKmzDjyDAHhaWGWNaeRKraijtxEk param_000a9f98, MjfRFftkTcBeBOoxrCKsCyjeiVkX param_000a9f99, ref double param_000a9f9a); // 0x000000018CD932D0-0x000000018CD933B0
+		private void ZhaMfegKEcaYTTYtJFlVhwccVqcl(ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f9b); // 0x000000018CD93430-0x000000018CD93500
+		private void OAlzeOtIpuBNzMKxqoYYRwJHNjLL(ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f9c, double param_000a9f9d, LowLevelInputEvent param_000a9f9e); // 0x000000018CD93128-0x000000018CD9321C
+		private void xUVWOijUKuiOeHeHcSoMxqOoodhs(ref noccVtHfezXkLCsIalwenvYFTJemA param_000a9f9f, ref LowLevelInputEvent param_000a9fa0); // 0x000000018CD93870-0x000000018CD9397C
+		private static bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000a9fa1, int param_000a9fa2); // 0x000000018CD937A0-0x000000018CD937BC
+		private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018CD92EE8-0x000000018CD92FA4
+		public void Dispose(); // 0x000000018CD92FA4-0x000000018CD92FF4
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD93258-0x000000018CD932D0
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9fa3); // 0x000000018CD9321C-0x000000018CD93258
+		public static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000a9fa4); // 0x000000018CD9373C-0x000000018CD937A0
+		public static float hdZcXCdRxvHmMmvVsrzbNtfbjBMXA(int param_000a9fa5); // 0x000000018CD93638-0x000000018CD9369C
+		private static bool CuDoEPEJQapgbkINSuEJLwmbaAbd(noccVtHfezXkLCsIalwenvYFTJemA param_000a9fa6, noccVtHfezXkLCsIalwenvYFTJemA param_000a9fa7); // 0x000000018CD92D44-0x000000018CD92D8C
 	}
 
-	public enum bFsHvvhHIXsuHKEjfGsxBfqmGTgAA // TypeDefIndex: 53662
+	public enum bFsHvvhHIXsuHKEjfGsxBfqmGTgAA // TypeDefIndex: 78906
 	{
 		Synchronous = 0,
 		Asynchronous = 1
 	}
 
 	// Constructors
-	public rBZGQBZwTiSiuHITZSaJgTFuMivb(bool param_000735e2, UpdateLoopSetting param_000735e3, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000735e4, Func<int> param_000735e5, Func<PidVid, bool> param_000735e6); // 0x0000000183B22470-0x0000000183B22E60
-	static rBZGQBZwTiSiuHITZSaJgTFuMivb(); // 0x00000001849E5980-0x00000001849E5B50
+	public rBZGQBZwTiSiuHITZSaJgTFuMivb(bool param_000a9f49, UpdateLoopSetting param_000a9f4a, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000a9f4b, Func<int> param_000a9f4c, Func<PidVid, bool> param_000a9f4d); // 0x0000000185BB16B0-0x0000000185BB21D0
+	static rBZGQBZwTiSiuHITZSaJgTFuMivb(); // 0x00000001869FF580-0x00000001869FF750
 
 	// Methods
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x0000000183A41D80-0x0000000183A42080
+	public override void Initialize(); // 0x0000000185BAF850-0x0000000185BAFB60
 	[CustomObfuscation(rename = false)]
-	public override void Update(UpdateLoopType currentUpdateLoop); // 0x0000000183303A20-0x0000000183303BD0
+	public override void Update(UpdateLoopType currentUpdateLoop); // 0x00000001851E0230-0x00000001851E0400
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018AB9FD9C-0x000000018AB9FF9C
+	public override void OnDestroy(); // 0x000000018CD94338-0x000000018CD9452C
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000184D86260-0x0000000184D86270
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x00000001828D49D0-0x00000001828D49E0
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int assignedControllerId, ControllerDataUpdater data); // 0x000000018ABA00FC-0x000000018ABA013C
+	public override void UpdateControllerData(int assignedControllerId, ControllerDataUpdater data); // 0x000000018CD9468C-0x000000018CD946CC
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x000000018ABA008C-0x000000018ABA00C4
+	public override void SystemDeviceConnected(); // 0x000000018CD9461C-0x000000018CD94654
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x000000018ABA00C4-0x000000018ABA00FC
+	public override void SystemDeviceDisconnected(); // 0x000000018CD94654-0x000000018CD9468C
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x00000001811EC580-0x00000001811EC590
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000185829EC0-0x0000000185829ED0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x00000001811EC580-0x00000001811EC590
-	private bool PCrJskquNxmwAdpvwnSVoFFxcbDG(string param_000735ec, string param_000735ed, string param_000735ee, PidVid param_000735ef); // 0x000000018AB9FF9C-0x000000018ABA008C
-	private bool JRwSwwfbydOlsmRZOPQMAGESBIheA(); // 0x0000000183303D40-0x0000000183303DF0
-	private void frddIMHcKFiaYzcdcavbZJHdTsPcA(bool param_000735f0); // 0x0000000183302200-0x0000000183302230
-	private void pCTHHdiYlWAANgEcGswtLRIAYggsD(); // 0x0000000184D549E0-0x0000000184D54A30
-	private void kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x000000018ABA0384-0x000000018ABA03D0
-	private void aHkOdhJXptAoBHaAPdXpbfyfxpNg(); // 0x0000000183303C00-0x0000000183303D40
-	private void MlGkGyByutorfoeNATowscMEHlCc(); // 0x0000000183302290-0x00000001833022D0
-	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(); // 0x0000000183301CE0-0x0000000183302110
-	private bool nLZEuKasgqDlEKGIuPILWtzyapiib(); // 0x00000001836A7330-0x00000001836A8220
-	private bool[] tyENmsjcxkgcMIvcqEetyfdRkfNu(); // 0x00000001849D3010-0x00000001849D30E0
-	private void BkZDOWMnPEbtOhNopUvkrbRhFRoT(bool[] param_000735f1); // 0x00000001833038B0-0x0000000183303A20
-	private bool iEEFlbFDszRppifBFnwpNApzASvF(BFABnUirdfafqrsPBWQiwdmSoNCAA param_000735f2, bool param_000735f3); // 0x000000018ABA01A4-0x000000018ABA0384
-	public static bool GlkAWXDUNvdQsCbMaLLQgGXTXAddA(string param_000735f4, string param_000735f5, string param_000735f6, Guid param_000735f7); // 0x000000018AB9FB58-0x000000018AB9FD9C
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000185829EC0-0x0000000185829ED0
+	private bool PCrJskquNxmwAdpvwnSVoFFxcbDG(string param_000a9f53, string param_000a9f54, string param_000a9f55, PidVid param_000a9f56); // 0x000000018CD9452C-0x000000018CD9461C
+	private bool JRwSwwfbydOlsmRZOPQMAGESBIheA(); // 0x00000001851E0570-0x00000001851E0610
+	private void frddIMHcKFiaYzcdcavbZJHdTsPcA(bool param_000a9f57); // 0x0000000185BB12E0-0x0000000185BB1360
+	private void pCTHHdiYlWAANgEcGswtLRIAYggsD(); // 0x00000001871F2090-0x00000001871F20E0
+	private void kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x000000018CD9492C-0x000000018CD94978
+	private void aHkOdhJXptAoBHaAPdXpbfyfxpNg(); // 0x00000001851E0430-0x00000001851E0570
+	private void MlGkGyByutorfoeNATowscMEHlCc(); // 0x00000001863538F0-0x0000000186353930
+	private void HrafxVEiJeftPMWeXgAkqYHrGJCJA(); // 0x0000000186273BC0-0x0000000186273FF0
+	private bool nLZEuKasgqDlEKGIuPILWtzyapiib(); // 0x00000001851DFF90-0x00000001851E00B0
+	private bool[] tyENmsjcxkgcMIvcqEetyfdRkfNu(); // 0x0000000185BAFC80-0x0000000185BAFD20
+	private void BkZDOWMnPEbtOhNopUvkrbRhFRoT(bool[] param_000a9f58); // 0x00000001851E00B0-0x00000001851E0230
+	private bool iEEFlbFDszRppifBFnwpNApzASvF(BFABnUirdfafqrsPBWQiwdmSoNCAA param_000a9f59, bool param_000a9f5a); // 0x000000018CD94744-0x000000018CD9492C
+	public static bool GlkAWXDUNvdQsCbMaLLQgGXTXAddA(string param_000a9f5b, string param_000a9f5c, string param_000a9f5d, Guid param_000a9f5e); // 0x000000018CD940E4-0x000000018CD94338
 }
 
-internal interface JtAgsvgsGMTkkHyzazJahvxjADso // TypeDefIndex: 53664
+internal interface JtAgsvgsGMTkkHyzazJahvxjADso // TypeDefIndex: 78908
 {
 	// Events
 	event Action<EventArgs> vrsKYxMgJTEgnNvuckTBQHVDBKDX {
@@ -2203,19 +2189,19 @@ internal interface JtAgsvgsGMTkkHyzazJahvxjADso // TypeDefIndex: 53664
 	void hoAhQOJWtqQFplfEKzOAsAgxjDsK();
 }
 
-internal interface hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 53665
+internal interface hohNsNaAhdJOLmrreLGwwtWoRfkL // TypeDefIndex: 78909
 {
 	// Properties
 	TIWOKdoJCWhTsnGfcCDaEsbLDNXvA NidrKPPiVPTdrLJKDNQKBcjoOCUb { get; }
 
 	// Methods
-	bool PRajVZFjkThVyEtmdfNgoHAJuyoe(string param_00073645, string param_00073646, string param_00073647, PidVid param_00073648);
+	bool PRajVZFjkThVyEtmdfNgoHAJuyoe(string param_000a9fac, string param_000a9fad, string param_000a9fae, PidVid param_000a9faf);
 }
 
-internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
+internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 78915
 {
 	// Nested types
-	public struct AInQCDdqSLTTWRljCHGQhayircJNA // TypeDefIndex: 53666
+	public struct AInQCDdqSLTTWRljCHGQhayircJNA // TypeDefIndex: 78910
 	{
 		// Fields
 		public uint BAOrtdveeFJDDIIhfyXvlubcLkGj; // 0x00
@@ -2228,10 +2214,10 @@ internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
 		public IntPtr nbzpBjCSRAdsnmaaZLqUpzzJIQIL; // 0x10
 
 		// Methods
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB97020-0x000000018AB972DC
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD8B508-0x000000018CD8B7C4
 	}
 
-	public struct ygRJphukthbSeHYUTNVFxMSmRNEw // TypeDefIndex: 53667
+	public struct ygRJphukthbSeHYUTNVFxMSmRNEw // TypeDefIndex: 78911
 	{
 		// Fields
 		public uint BAOrtdveeFJDDIIhfyXvlubcLkGj; // 0x00
@@ -2245,11 +2231,11 @@ internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
 		public string jluGTEJSZCQcwybKVMvTKULuHVATA; // 0x38
 
 		// Methods
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABA1E18-0x000000018ABA20FC
-		public static ygRJphukthbSeHYUTNVFxMSmRNEw XchWqxgmUvhSvDLAYlZyAXmMcTYy(); // 0x0000000183A434E0-0x0000000183A43590
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD96638-0x000000018CD9691C
+		public static ygRJphukthbSeHYUTNVFxMSmRNEw XchWqxgmUvhSvDLAYlZyAXmMcTYy(); // 0x0000000185B72E30-0x0000000185B72EE0
 	}
 
-	public struct ZxkAWJEvROErAlVLuJWMIEjURgkS // TypeDefIndex: 53668
+	public struct ZxkAWJEvROErAlVLuJWMIEjURgkS // TypeDefIndex: 78912
 	{
 		// Fields
 		public ushort pZRZthsmOxjeYdtwcDFxHJvwdWYw; // 0x00
@@ -2262,10 +2248,10 @@ internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
 		public ushort eqfKruxKkTetMLnItDGIglqlbozR; // 0x0E
 
 		// Methods
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB9D684-0x000000018AB9D8C4
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD91C24-0x000000018CD91E64
 	}
 
-	public struct zjqYgNShDGWqApAIcTMzTZjxpPXO // TypeDefIndex: 53669
+	public struct zjqYgNShDGWqApAIcTMzTZjxpPXO // TypeDefIndex: 78913
 	{
 		// Fields
 		public byte MJfNnWCIhWaUuhcmAosZaKTloplDb; // 0x00
@@ -2282,11 +2268,11 @@ internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
 		public byte gqKAsdfXpIXoddzOfUqcZgzDPzJi; // 0x0B
 
 		// Methods
-		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABA3158-0x000000018ABA3390
-		public bool ZekLfWolLuPxVcKiHUPtpCzfkSpD(ref qouLffTOBqCNRYJTtvCdYqzmFTjY param_00073652); // 0x000000018ABA3120-0x000000018ABA3158
+		public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD979CC-0x000000018CD97C0C
+		public bool ZekLfWolLuPxVcKiHUPtpCzfkSpD(ref qouLffTOBqCNRYJTtvCdYqzmFTjY param_000a9fb9); // 0x000000018CD97994-0x000000018CD979CC
 	}
 
-	public struct qouLffTOBqCNRYJTtvCdYqzmFTjY // TypeDefIndex: 53670
+	public struct qouLffTOBqCNRYJTtvCdYqzmFTjY // TypeDefIndex: 78914
 	{
 		// Fields
 		private static byte[] mAJEeYRLWzFnlGELTpvuOFNjEPtGA; // 0x00
@@ -2298,21 +2284,21 @@ internal static class yqCthwNGAZgagjDBQbkNEzFfVZWu // TypeDefIndex: 53671
 		public byte XlYFrHeUqHxpckiEYcQZyhlwgWZs; // 0x05
 
 		// Constructors
-		static qouLffTOBqCNRYJTtvCdYqzmFTjY(); // 0x000000018AB9FAF0-0x000000018AB9FB58
+		static qouLffTOBqCNRYJTtvCdYqzmFTjY(); // 0x000000018CD9407C-0x000000018CD940E4
 
 		// Methods
-		public static qouLffTOBqCNRYJTtvCdYqzmFTjY OHXABKpcRQEyVCVNYSxyCIeRDFxC(string param_00073653, out bool param_00073654); // 0x000000018AB9F914-0x000000018AB9FAF0
+		public static qouLffTOBqCNRYJTtvCdYqzmFTjY OHXABKpcRQEyVCVNYSxyCIeRDFxC(string param_000a9fba, out bool param_000a9fbb); // 0x000000018CD93EA0-0x000000018CD9407C
 	}
 
 	// Methods
-	public static extern IntPtr WxQDbcBewOHVDjYIJHPdWjPxllS(ref AInQCDdqSLTTWRljCHGQhayircJNA param_00073649, ref ygRJphukthbSeHYUTNVFxMSmRNEw param_0007364a); // 0x000000018ABA2D8C-0x000000018ABA2EF8
-	public static extern IntPtr WxQDbcBewOHVDjYIJHPdWjPxllS(ref AInQCDdqSLTTWRljCHGQhayircJNA param_0007364b, IntPtr param_0007364c); // 0x0000000183A44BD0-0x0000000183A44C90
-	public static extern bool mQssrJgjUbCvONGNlAAVBhZNgoOU(IntPtr param_0007364d, ref ygRJphukthbSeHYUTNVFxMSmRNEw param_0007364e); // 0x000000018ABA2F78-0x000000018ABA3090
-	public static extern bool mQssrJgjUbCvONGNlAAVBhZNgoOU(IntPtr param_0007364f, IntPtr param_00073650); // 0x000000018ABA3090-0x000000018ABA3120
-	public static extern bool bEWDUdFfIpgjwkQndYcSZOhUkjbh(IntPtr param_00073651); // 0x000000018ABA2EF8-0x000000018ABA2F78
+	public static extern IntPtr WxQDbcBewOHVDjYIJHPdWjPxllS(ref AInQCDdqSLTTWRljCHGQhayircJNA param_000a9fb0, ref ygRJphukthbSeHYUTNVFxMSmRNEw param_000a9fb1); // 0x000000018CD975F8-0x000000018CD97764
+	public static extern IntPtr WxQDbcBewOHVDjYIJHPdWjPxllS(ref AInQCDdqSLTTWRljCHGQhayircJNA param_000a9fb2, IntPtr param_000a9fb3); // 0x0000000185B72CF0-0x0000000185B72DB0
+	public static extern bool mQssrJgjUbCvONGNlAAVBhZNgoOU(IntPtr param_000a9fb4, ref ygRJphukthbSeHYUTNVFxMSmRNEw param_000a9fb5); // 0x000000018CD977E8-0x000000018CD97904
+	public static extern bool mQssrJgjUbCvONGNlAAVBhZNgoOU(IntPtr param_000a9fb6, IntPtr param_000a9fb7); // 0x000000018CD97904-0x000000018CD97994
+	public static extern bool bEWDUdFfIpgjwkQndYcSZOhUkjbh(IntPtr param_000a9fb8); // 0x000000018CD97764-0x000000018CD977E8
 }
 
-internal class VAmVuDvNsSbewEPAcnmMyxvuGlBo : IDisposable // TypeDefIndex: 53675
+internal class VAmVuDvNsSbewEPAcnmMyxvuGlBo : IDisposable // TypeDefIndex: 78919
 {
 	// Fields
 	private readonly ushort RyVzcDOUsGFwekBwZgSPqLWbSQzA; // 0x10
@@ -2325,13 +2311,13 @@ internal class VAmVuDvNsSbewEPAcnmMyxvuGlBo : IDisposable // TypeDefIndex: 53675
 	private kHNwxQmQEdrtRthvkmZVuYphaaTJ EGGuNRAbCiKCXVvQLKSRMjVfeoCKA; // 0x40
 
 	// Properties
-	public IntPtr PUEzmrlElSKlZtsHOOIRnENkNBKo { get; } // 0x0000000184D86240-0x0000000184D86250 
+	public IntPtr PUEzmrlElSKlZtsHOOIRnENkNBKo { get; } // 0x0000000182262130-0x0000000182262140 
 
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	public delegate IntPtr kHNwxQmQEdrtRthvkmZVuYphaaTJ(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 53672; 0x00000001814D0D00-0x00000001814D0D20
+	public delegate IntPtr kHNwxQmQEdrtRthvkmZVuYphaaTJ(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 78916; 0x00000001811CDB70-0x00000001811CDB90
 
-	private struct JLzqcoYPpoPdErdUrOgqAeuRLnyW // TypeDefIndex: 53673
+	private struct JLzqcoYPpoPdErdUrOgqAeuRLnyW // TypeDefIndex: 78917
 	{
 		// Fields
 		public uint tgBeGGbIPzrXuKbbJMcBbDIQQGSM; // 0x00
@@ -2346,7 +2332,7 @@ internal class VAmVuDvNsSbewEPAcnmMyxvuGlBo : IDisposable // TypeDefIndex: 53675
 		public string sEKbQbCwVLQYSMgrcWnoDEZDPNyVA; // 0x40
 	}
 
-	private struct etvIfgZlCvHnuOCaylGJIKTqfXqQ // TypeDefIndex: 53674
+	private struct etvIfgZlCvHnuOCaylGJIKTqfXqQ // TypeDefIndex: 78918
 	{
 		// Fields
 		public IntPtr sHpWOkHeJRHcTWucdVnlHxOrpOnQ; // 0x00
@@ -2364,25 +2350,25 @@ internal class VAmVuDvNsSbewEPAcnmMyxvuGlBo : IDisposable // TypeDefIndex: 53675
 	}
 
 	// Constructors
-	public VAmVuDvNsSbewEPAcnmMyxvuGlBo(string param_0007366a, bool param_0007366b, kHNwxQmQEdrtRthvkmZVuYphaaTJ param_0007366c); // 0x0000000183BF71B0-0x0000000183BF7390
+	public VAmVuDvNsSbewEPAcnmMyxvuGlBo(string param_000a9fd1, bool param_000a9fd2, kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000a9fd3); // 0x0000000185B76910-0x0000000185B76B00
 
 	// Methods
-	private static extern ushort VlEDOckYBQeVQiVtPbzHODxpPDqFb(in JLzqcoYPpoPdErdUrOgqAeuRLnyW param_00073655); // 0x0000000183BF7120-0x0000000183BF71B0
-	private static extern bool DRllTtQhZYldGsKJwviGSzfmygMC(string param_00073656, IntPtr param_00073657); // 0x000000018AB9D0A4-0x000000018AB9D138
-	private static extern IntPtr ervBAZBzpueRpQeCxpGWOIjcFiEsA(uint param_00073658, string param_00073659, string param_0007365a, uint param_0007365b, int param_0007365c, int param_0007365d, int param_0007365e, int param_0007365f, IntPtr param_00073660, IntPtr param_00073661, IntPtr param_00073662, IntPtr param_00073663); // 0x0000000183BF7530-0x0000000183BF7620
-	private static extern IntPtr mShTuwnDkNEssGVztjGrAZHLNLwXA(IntPtr param_00073664, uint param_00073665, IntPtr param_00073666, IntPtr param_00073667); // 0x00000001835AC9A0-0x00000001835ACA20
-	private static extern bool YdCeZwZrvmgNBtyOBvtuQpaIJRaE(IntPtr param_00073668); // 0x000000018AB9D27C-0x000000018AB9D2FC
-	public void Dispose(); // 0x000000018AB9D138-0x000000018AB9D188
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB9D208-0x000000018AB9D27C
-	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073669); // 0x000000018AB9D188-0x000000018AB9D208
-	private IntPtr yIZoZTXrSGdjkMnanAKqHTfoBXrc(string param_0007366d, IntPtr param_0007366e); // 0x000000018AB9D2FC-0x000000018AB9D388
-	private IntPtr svtjyZxQguJEqsRYyrtwCzhqhquf(string param_0007366f, IntPtr param_00073670); // 0x0000000183BF7460-0x0000000183BF7530
+	private static extern ushort VlEDOckYBQeVQiVtPbzHODxpPDqFb(in JLzqcoYPpoPdErdUrOgqAeuRLnyW param_000a9fbc); // 0x0000000185B775F0-0x0000000185B77680
+	private static extern bool DRllTtQhZYldGsKJwviGSzfmygMC(string param_000a9fbd, IntPtr param_000a9fbe); // 0x000000018CD9160C-0x000000018CD916A4
+	private static extern IntPtr ervBAZBzpueRpQeCxpGWOIjcFiEsA(uint param_000a9fbf, string param_000a9fc0, string param_000a9fc1, uint param_000a9fc2, int param_000a9fc3, int param_000a9fc4, int param_000a9fc5, int param_000a9fc6, IntPtr param_000a9fc7, IntPtr param_000a9fc8, IntPtr param_000a9fc9, IntPtr param_000a9fca); // 0x0000000185B76CA0-0x0000000185B76D90
+	private static extern IntPtr mShTuwnDkNEssGVztjGrAZHLNLwXA(IntPtr param_000a9fcb, uint param_000a9fcc, IntPtr param_000a9fcd, IntPtr param_000a9fce); // 0x000000018519C5B0-0x000000018519C630
+	private static extern bool YdCeZwZrvmgNBtyOBvtuQpaIJRaE(IntPtr param_000a9fcf); // 0x000000018CD917EC-0x000000018CD91870
+	public void Dispose(); // 0x000000018CD916A4-0x000000018CD916F4
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD91774-0x000000018CD917EC
+	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000a9fd0); // 0x000000018CD916F4-0x000000018CD91774
+	private IntPtr yIZoZTXrSGdjkMnanAKqHTfoBXrc(string param_000a9fd4, IntPtr param_000a9fd5); // 0x000000018CD91870-0x000000018CD91914
+	private IntPtr svtjyZxQguJEqsRYyrtwCzhqhquf(string param_000a9fd6, IntPtr param_000a9fd7); // 0x0000000185B76BD0-0x0000000185B76CA0
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(kHNwxQmQEdrtRthvkmZVuYphaaTJ))]
-	private static IntPtr qbeGbfdGZqFKOzogqBfhESidVyvkc(IntPtr param_00073671, uint param_00073672, IntPtr param_00073673, IntPtr param_00073674); // 0x00000001835AC810-0x00000001835AC9A0
-	public void QVAyCDWtLDCZVmdXEbRmtGNJsDnj(kHNwxQmQEdrtRthvkmZVuYphaaTJ param_00073675); // 0x00000001842B4AE0-0x00000001842B4AF0
+	private static IntPtr qbeGbfdGZqFKOzogqBfhESidVyvkc(IntPtr param_000a9fd8, uint param_000a9fd9, IntPtr param_000a9fda, IntPtr param_000a9fdb); // 0x000000018519C420-0x000000018519C5B0
+	public void QVAyCDWtLDCZVmdXEbRmtGNJsDnj(kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000a9fdc); // 0x00000001870EAAD0-0x00000001870EAAE0
 }
 
-internal class WVJmIOuiHfoHGzSrfIOlgfYfJWHl // TypeDefIndex: 53677
+internal class WVJmIOuiHfoHGzSrfIOlgfYfJWHl // TypeDefIndex: 78921
 {
 	// Fields
 	public static IntPtr XDEfqDDBnOJTggmIOXdhEWdulorq; // 0x00
@@ -2478,7 +2464,7 @@ internal class WVJmIOuiHfoHGzSrfIOlgfYfJWHl // TypeDefIndex: 53677
 	public static uint xaXUWsQPnGgNHUjfwzjcOiNfvZGH; // 0x16C
 
 	// Nested types
-	public enum WRERAPCBXnkbbRNoLOLIJyYkhFAo // TypeDefIndex: 53676
+	public enum WRERAPCBXnkbbRNoLOLIJyYkhFAo // TypeDefIndex: 78920
 	{
 		Arabic_101 = 1025,
 		Bulgarian_Typewriter = 1026,
@@ -2684,51 +2670,51 @@ internal class WVJmIOuiHfoHGzSrfIOlgfYfJWHl // TypeDefIndex: 53677
 	}
 
 	// Constructors
-	static WVJmIOuiHfoHGzSrfIOlgfYfJWHl(); // 0x000000018478F3F0-0x000000018478FC40
+	static WVJmIOuiHfoHGzSrfIOlgfYfJWHl(); // 0x0000000186C22C20-0x0000000186C23470
 }
 
-internal static class eBbUmnmEZFTGwXhzRnIfDMLGelxl // TypeDefIndex: 53678
+internal static class eBbUmnmEZFTGwXhzRnIfDMLGelxl // TypeDefIndex: 78922
 {
 	// Fields
 	private static IntPtr jhGooCbTTXmgjsKnAiicIgjWqgcZ; // 0x00
 	private static int djdcjYgrGoQGLvNWbUgdAvzXkFsb; // 0x08
 
 	// Constructors
-	static eBbUmnmEZFTGwXhzRnIfDMLGelxl(); // 0x0000000184D79610-0x0000000184D79650
+	static eBbUmnmEZFTGwXhzRnIfDMLGelxl(); // 0x000000018721F570-0x000000018721F5B0
 
 	// Methods
-	public static extern IntPtr mVblMjPRjsUetvUoUmcLNFVJSEDf(); // 0x000000018AB9DD48-0x000000018AB9DDB0
-	public static extern bool YpreMWhlQDtsLaQhjKBdzKOTcKFUA(IntPtr param_0007367c, out bool param_0007367d); // 0x000000018AB9DAF4-0x000000018AB9DB90
-	internal static extern bool mtSaPCodCIAqAUkfFPZjykoitoKn(IntPtr param_0007367e, IntPtr param_0007367f, out uint param_00073680, bool param_00073681); // 0x000000018AB9DDB0-0x000000018AB9DE5C
-	private static extern IntPtr aINYIkNGKjgQIePoEHPemiHSXijL(); // 0x0000000183827D50-0x0000000183827D80
-	public static extern IntPtr ZUoaHEftkulQoYGMaACresswCinLA(); // 0x000000018381EC20-0x000000018381EC50
-	public static IntPtr kZUgUEiEIyfFGHxEceelvhObUcBoc(IntPtr param_00073682, int param_00073683); // 0x00000001835AC770-0x00000001835AC7D0
-	private static extern IntPtr WmEBbdHCmIkBFeSzenoaYkCQibeJB(IntPtr param_00073684, int param_00073685); // 0x000000018AB9DA74-0x000000018AB9DAF4
-	private static extern IntPtr MOXnhZhygCYADfqDpxIHjSOlMTwC(IntPtr param_00073686, int param_00073687); // 0x00000001835AC7D0-0x00000001835AC810
-	public static IntPtr XaklGCfEzDmqVaMUgSfIbZQAQQNO(IntPtr param_00073688, int param_00073689, IntPtr param_0007368a); // 0x0000000184D4F580-0x0000000184D4F5F0
-	private static extern IntPtr wjSkeGElkCyagEEYBfiJpTZetwFD(IntPtr param_0007368b, int param_0007368c, IntPtr param_0007368d); // 0x0000000183826A80-0x0000000183826B20
-	private static extern IntPtr uASAIjqNUPqHtfYKwpybaegkZxCk(IntPtr param_0007368e, int param_0007368f, IntPtr param_00073690); // 0x000000018AB9DED4-0x000000018AB9DF64
-	public static extern uint QGORlCUYiiKgAzLxpdAHdjnrahLU(IntPtr param_00073691, ref uint param_00073692, uint param_00073693); // 0x0000000183826100-0x0000000183826150
-	public static extern uint iIeFvfbrvrhiakPoCdEUVroOLDrjA(IntPtr param_00073694, ref uint param_00073695, uint param_00073696); // 0x00000001833021B0-0x0000000183302200
-	public static extern int WApiiNqDPGoIKAKMKgRcADYUEbYIb(IntPtr param_00073697, ref uint param_00073698, uint param_00073699); // 0x0000000183125750-0x00000001831257A0
-	public static extern bool aIJpRxEUveMkAIzAQksntrJeKZMO(uint param_0007369a, uint param_0007369b, ref int param_0007369c, uint param_0007369d); // 0x000000018AB9DB90-0x000000018AB9DC30
-	public static extern int fJwuwuvwwrmjuhvIfnKQmmolYpJi(int param_0007369e); // 0x0000000183826210-0x0000000183826240
-	public static extern bool MqdZpLPUVBfOfQdIdfgzsLVVqfih(out KcRercaTvoYLPFdZzeDXDMmffaMZB param_0007369f); // 0x000000018381EE30-0x000000018381EE70
-	public static extern IntPtr RebJItCveBVpJKqaodwdZPKilOWfA(uint param_000736a0, bool param_000736a1, uint param_000736a2); // 0x000000018381EDE0-0x000000018381EE30
-	public static extern short rfuzROnRasHNdEgqYTqCgOKwLKWA(int param_000736a3); // 0x000000018AB9DE5C-0x000000018AB9DED4
-	public static extern short IOFqRHsvTosiCIcxKSBgPhrGcGLv(int param_000736a4); // 0x000000018AB9D9FC-0x000000018AB9DA74
-	public static extern bool vXgltdkmbVXoHdcwURXyTbWyGSot(IntPtr param_000736a5); // 0x0000000183826240-0x0000000183826280
-	public static extern bool UonCDnEqsFcEEdAjbiNEJDwzQoHTA(IntPtr param_000736a6, out KcRercaTvoYLPFdZzeDXDMmffaMZB param_000736a7); // 0x000000018381EEC0-0x000000018381EF10
-	public static extern bool hItvGDbfGUBtFEhJcavuBXpHRnMFA(IntPtr param_000736a8, out VQEiCdnEbwGfohyMCMuyTfTNFUbCA param_000736a9); // 0x000000018381EE70-0x000000018381EEC0
-	public static extern bool HDFmbmIZhkaUynASZHmIWMrSPwPR(IntPtr param_000736aa, out VQEiCdnEbwGfohyMCMuyTfTNFUbCA param_000736ab); // 0x000000018AB9D9B4-0x000000018AB9D9FC
-	public static extern uint CdqMrhMtLwkHECFDINmClLVuMcKg(uint param_000736ac, uint param_000736ad); // 0x000000018381E910-0x000000018381E950
-	public static extern IntPtr EBhNoGhmucqztNTmsDDLTVAaUCbb(int param_000736ae); // 0x000000018381EBA0-0x000000018381EBD0
-	public static extern bool lrEincuMGLSvnKLPsrIwshYmAdwA(IntPtr param_000736af); // 0x00000001838269F0-0x0000000183826A80
-	public static IntPtr WDfRYgPumOULOLJgJQmVbQrIGFcB(); // 0x000000018381CA30-0x000000018381CAD0
-	public static bool buvZNiUIUGRrscMpoIFAmpdCtSlD(); // 0x000000018AB9DC30-0x000000018AB9DD48
+	public static extern IntPtr mVblMjPRjsUetvUoUmcLNFVJSEDf(); // 0x000000018CD922F4-0x000000018CD92320
+	public static extern bool YpreMWhlQDtsLaQhjKBdzKOTcKFUA(IntPtr param_000a9fe3, out bool param_000a9fe4); // 0x000000018CD92098-0x000000018CD9213C
+	internal static extern bool mtSaPCodCIAqAUkfFPZjykoitoKn(IntPtr param_000a9fe5, IntPtr param_000a9fe6, out uint param_000a9fe7, bool param_000a9fe8); // 0x000000018CD92320-0x000000018CD923D0
+	private static extern IntPtr aINYIkNGKjgQIePoEHPemiHSXijL(); // 0x0000000185B720F0-0x0000000185B72120
+	public static extern IntPtr ZUoaHEftkulQoYGMaACresswCinLA(); // 0x0000000185AFDC00-0x0000000185AFDC30
+	public static IntPtr kZUgUEiEIyfFGHxEceelvhObUcBoc(IntPtr param_000a9fe9, int param_000a9fea); // 0x000000018519C380-0x000000018519C3E0
+	private static extern IntPtr WmEBbdHCmIkBFeSzenoaYkCQibeJB(IntPtr param_000a9feb, int param_000a9fec); // 0x000000018CD92014-0x000000018CD92098
+	private static extern IntPtr MOXnhZhygCYADfqDpxIHjSOlMTwC(IntPtr param_000a9fed, int param_000a9fee); // 0x000000018519C3E0-0x000000018519C420
+	public static IntPtr XaklGCfEzDmqVaMUgSfIbZQAQQNO(IntPtr param_000a9fef, int param_000a9ff0, IntPtr param_000a9ff1); // 0x0000000185AFE0D0-0x0000000185AFE140
+	private static extern IntPtr wjSkeGElkCyagEEYBfiJpTZetwFD(IntPtr param_000a9ff2, int param_000a9ff3, IntPtr param_000a9ff4); // 0x0000000185AFD350-0x0000000185AFD3F0
+	private static extern IntPtr uASAIjqNUPqHtfYKwpybaegkZxCk(IntPtr param_000a9ff5, int param_000a9ff6, IntPtr param_000a9ff7); // 0x000000018CD92448-0x000000018CD924DC
+	public static extern uint QGORlCUYiiKgAzLxpdAHdjnrahLU(IntPtr param_000a9ff8, ref uint param_000a9ff9, uint param_000a9ffa); // 0x0000000185B749B0-0x0000000185B74A00
+	public static extern uint iIeFvfbrvrhiakPoCdEUVroOLDrjA(IntPtr param_000a9ffb, ref uint param_000a9ffc, uint param_000a9ffd); // 0x0000000185705370-0x00000001857053C0
+	public static extern int WApiiNqDPGoIKAKMKgRcADYUEbYIb(IntPtr param_000a9ffe, ref uint param_000a9fff, uint param_000aa000); // 0x0000000185296A00-0x0000000185296A50
+	public static extern bool aIJpRxEUveMkAIzAQksntrJeKZMO(uint param_000aa001, uint param_000aa002, ref int param_000aa003, uint param_000aa004); // 0x000000018CD9213C-0x000000018CD921DC
+	public static extern int fJwuwuvwwrmjuhvIfnKQmmolYpJi(int param_000aa005); // 0x0000000185BB2F60-0x0000000185BB2F90
+	public static extern bool MqdZpLPUVBfOfQdIdfgzsLVVqfih(out KcRercaTvoYLPFdZzeDXDMmffaMZB param_000aa006); // 0x000000018644B420-0x000000018644B460
+	public static extern IntPtr RebJItCveBVpJKqaodwdZPKilOWfA(uint param_000aa007, bool param_000aa008, uint param_000aa009); // 0x000000018644B3D0-0x000000018644B420
+	public static extern short rfuzROnRasHNdEgqYTqCgOKwLKWA(int param_000aa00a); // 0x000000018CD923D0-0x000000018CD92448
+	public static extern short IOFqRHsvTosiCIcxKSBgPhrGcGLv(int param_000aa00b); // 0x000000018CD91F9C-0x000000018CD92014
+	public static extern bool vXgltdkmbVXoHdcwURXyTbWyGSot(IntPtr param_000aa00c); // 0x0000000186190280-0x00000001861902C0
+	public static extern bool UonCDnEqsFcEEdAjbiNEJDwzQoHTA(IntPtr param_000aa00d, out KcRercaTvoYLPFdZzeDXDMmffaMZB param_000aa00e); // 0x000000018644B4B0-0x000000018644B500
+	public static extern bool hItvGDbfGUBtFEhJcavuBXpHRnMFA(IntPtr param_000aa00f, out VQEiCdnEbwGfohyMCMuyTfTNFUbCA param_000aa010); // 0x000000018644B460-0x000000018644B4B0
+	public static extern bool HDFmbmIZhkaUynASZHmIWMrSPwPR(IntPtr param_000aa011, out VQEiCdnEbwGfohyMCMuyTfTNFUbCA param_000aa012); // 0x000000018CD91F54-0x000000018CD91F9C
+	public static extern uint CdqMrhMtLwkHECFDINmClLVuMcKg(uint param_000aa013, uint param_000aa014); // 0x0000000185705CD0-0x0000000185705D10
+	public static extern IntPtr EBhNoGhmucqztNTmsDDLTVAaUCbb(int param_000aa015); // 0x0000000185705F60-0x0000000185705F90
+	public static extern bool lrEincuMGLSvnKLPsrIwshYmAdwA(IntPtr param_000aa016); // 0x0000000185AFB990-0x0000000185AFBA20
+	public static IntPtr WDfRYgPumOULOLJgJQmVbQrIGFcB(); // 0x0000000185B711B0-0x0000000185B71250
+	public static bool buvZNiUIUGRrscMpoIFAmpdCtSlD(); // 0x000000018CD921DC-0x000000018CD922F4
 }
 
-internal struct aPUzMfNhVBeTKbkRTCyfUbYiSBad // TypeDefIndex: 53679
+internal struct aPUzMfNhVBeTKbkRTCyfUbYiSBad // TypeDefIndex: 78923
 {
 	// Fields
 	private int mSeyKxQAdShumFrtyKzbiHWlRiBKA; // 0x00
@@ -2738,16 +2724,16 @@ internal struct aPUzMfNhVBeTKbkRTCyfUbYiSBad // TypeDefIndex: 53679
 	public static readonly int eKqkynwsVFXrdjSOTPyGJFUMkkrC; // 0x04
 
 	// Constructors
-	static aPUzMfNhVBeTKbkRTCyfUbYiSBad(); // 0x0000000184D4FC00-0x0000000184D4FC60
+	static aPUzMfNhVBeTKbkRTCyfUbYiSBad(); // 0x00000001871E9470-0x00000001871E94D0
 
 	// Methods
-	public static aPUzMfNhVBeTKbkRTCyfUbYiSBad OMkFuddpffkHwiQqkLMPATdLLdCg(byte[] param_000736b0, int param_000736b1); // 0x000000018AB9D8C4-0x000000018AB9D954
-	public static aPUzMfNhVBeTKbkRTCyfUbYiSBad APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000736b2); // 0x00000001847014E0-0x0000000184701550
-	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_000736b3); // 0x000000018464E630-0x000000018464E640
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB9D954-0x000000018AB9D9B4
+	public static aPUzMfNhVBeTKbkRTCyfUbYiSBad OMkFuddpffkHwiQqkLMPATdLLdCg(byte[] param_000aa017, int param_000aa018); // 0x000000018CD91E64-0x000000018CD91EF4
+	public static aPUzMfNhVBeTKbkRTCyfUbYiSBad APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000aa019); // 0x0000000186BB8F50-0x0000000186BB8FC0
+	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(aPUzMfNhVBeTKbkRTCyfUbYiSBad param_000aa01a); // 0x0000000185BD80B0-0x0000000185BD80C0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD91EF4-0x000000018CD91F54
 }
 
-internal struct pHOXMyaEVxLmIeQfiMyGgXRiPlXo // TypeDefIndex: 53680
+internal struct pHOXMyaEVxLmIeQfiMyGgXRiPlXo // TypeDefIndex: 78924
 {
 	// Fields
 	private uint mSeyKxQAdShumFrtyKzbiHWlRiBKA; // 0x00
@@ -2757,24 +2743,24 @@ internal struct pHOXMyaEVxLmIeQfiMyGgXRiPlXo // TypeDefIndex: 53680
 	public static readonly int eKqkynwsVFXrdjSOTPyGJFUMkkrC; // 0x04
 
 	// Constructors
-	static pHOXMyaEVxLmIeQfiMyGgXRiPlXo(); // 0x0000000184D4FBA0-0x0000000184D4FC00
+	static pHOXMyaEVxLmIeQfiMyGgXRiPlXo(); // 0x00000001871E9410-0x00000001871E9470
 
 	// Methods
-	public static pHOXMyaEVxLmIeQfiMyGgXRiPlXo OMkFuddpffkHwiQqkLMPATdLLdCg(byte[] param_000736b4, int param_000736b5); // 0x000000018AB9F7D0-0x000000018AB9F860
-	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_000736b6); // 0x000000018464E630-0x000000018464E640
-	public static pHOXMyaEVxLmIeQfiMyGgXRiPlXo APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000736b7); // 0x0000000184701550-0x00000001847015C0
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB9F860-0x000000018AB9F8C0
-	public int JRtfSkgrFOUPKcSoGGvytyofYjqoA(); // 0x000000018AB9F794-0x000000018AB9F7D0
+	public static pHOXMyaEVxLmIeQfiMyGgXRiPlXo OMkFuddpffkHwiQqkLMPATdLLdCg(byte[] param_000aa01b, int param_000aa01c); // 0x000000018CD93D5C-0x000000018CD93DEC
+	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(pHOXMyaEVxLmIeQfiMyGgXRiPlXo param_000aa01d); // 0x0000000185BD80B0-0x0000000185BD80C0
+	public static pHOXMyaEVxLmIeQfiMyGgXRiPlXo APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000aa01e); // 0x0000000186BB8FC0-0x0000000186BB9030
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD93DEC-0x000000018CD93E4C
+	public int JRtfSkgrFOUPKcSoGGvytyofYjqoA(); // 0x000000018CD93D20-0x000000018CD93D5C
 }
 
-internal struct KcRercaTvoYLPFdZzeDXDMmffaMZB // TypeDefIndex: 53681
+internal struct KcRercaTvoYLPFdZzeDXDMmffaMZB // TypeDefIndex: 78925
 {
 	// Fields
 	public int mGBqRTPfHeiBcGQGSVwfLDhJaFFPA; // 0x00
 	public int IuEuFRbjYKACLnaEzOkNJxcvuQDh; // 0x04
 }
 
-internal struct VQEiCdnEbwGfohyMCMuyTfTNFUbCA // TypeDefIndex: 53682
+internal struct VQEiCdnEbwGfohyMCMuyTfTNFUbCA // TypeDefIndex: 78926
 {
 	// Fields
 	public int lEFQlXWLnFTNCAEEMuDkRgWHehHGA; // 0x00
@@ -2783,15 +2769,15 @@ internal struct VQEiCdnEbwGfohyMCMuyTfTNFUbCA // TypeDefIndex: 53682
 	public int qUfwIaiDlSGlSVrgWNppsxAzrbBU; // 0x0C
 }
 
-internal static class tXkxDwISRsbqeYLWGfsMFeJEHmJpA // TypeDefIndex: 53683
+internal static class tXkxDwISRsbqeYLWGfsMFeJEHmJpA // TypeDefIndex: 78927
 {
 	// Methods
-	public static string dIfWoiGpEtcwfZsXRYmQBQOGIOBi(IntPtr param_000736b8, int param_000736b9); // 0x00000001835AB610-0x00000001835AB6D0
-	public static string CspekwhrfweFnBDOKYLdmhXUeNqz(IntPtr param_000736ba, int param_000736bb); // 0x00000001835ABF70-0x00000001835ABFC0
-	public static string iILbmyixUpigvnVNpEEdLTAeRcwMA(string param_000736bc); // 0x00000001835ABFC0-0x00000001835AC010
+	public static string dIfWoiGpEtcwfZsXRYmQBQOGIOBi(IntPtr param_000aa01f, int param_000aa020); // 0x0000000185A18C80-0x0000000185A18D40
+	public static string CspekwhrfweFnBDOKYLdmhXUeNqz(IntPtr param_000aa021, int param_000aa022); // 0x0000000185A19B00-0x0000000185A19B50
+	public static string iILbmyixUpigvnVNpEEdLTAeRcwMA(string param_000aa023); // 0x0000000185A19B50-0x0000000185A19BA0
 }
 
-internal class giqbwdSVuzgXFgkujBcrjDMNLMUiA : IDisposable // TypeDefIndex: 53686
+internal class giqbwdSVuzgXFgkujBcrjDMNLMUiA : IDisposable // TypeDefIndex: 78930
 {
 	// Fields
 	private static giqbwdSVuzgXFgkujBcrjDMNLMUiA xrdNMXQNXfwPuveZIufXarNDAOKx; // 0x00
@@ -2805,9 +2791,9 @@ internal class giqbwdSVuzgXFgkujBcrjDMNLMUiA : IDisposable // TypeDefIndex: 5368
 
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	private delegate IntPtr BpzSPrKUTnftWgconIhCbVUdvRvQ(int nCode, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 53684; 0x00000001814F3120-0x00000001814F3140
+	private delegate IntPtr BpzSPrKUTnftWgconIhCbVUdvRvQ(int nCode, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 78928; 0x00000001811DF7F0-0x00000001811DF810
 
-	private struct yOyuUSsjdEKXCWupRyogKAjJKPXD // TypeDefIndex: 53685
+	private struct yOyuUSsjdEKXCWupRyogKAjJKPXD // TypeDefIndex: 78929
 	{
 		// Fields
 		public IntPtr BItnZqEPinFijJHiEtvVEzrOxjwE; // 0x00
@@ -2817,29 +2803,29 @@ internal class giqbwdSVuzgXFgkujBcrjDMNLMUiA : IDisposable // TypeDefIndex: 5368
 	}
 
 	// Constructors
-	public giqbwdSVuzgXFgkujBcrjDMNLMUiA(); // 0x000000018AB9E1F0-0x000000018AB9E2CC
+	public giqbwdSVuzgXFgkujBcrjDMNLMUiA(); // 0x000000018CD92774-0x000000018CD92854
 
 	// Methods
-	public void fyNzemgyjZNUwhYKrMOEPxWkSvtb(Action<aPUzMfNhVBeTKbkRTCyfUbYiSBad, pHOXMyaEVxLmIeQfiMyGgXRiPlXo, uint, IntPtr> param_000736bd, bool param_000736be); // 0x000000018AB9E2CC-0x000000018AB9E3B4
-	public void sPMCdCGkvTWCiroURfkKtrpakKwyA(); // 0x000000018AB9E750-0x000000018AB9E7B0
+	public void fyNzemgyjZNUwhYKrMOEPxWkSvtb(Action<aPUzMfNhVBeTKbkRTCyfUbYiSBad, pHOXMyaEVxLmIeQfiMyGgXRiPlXo, uint, IntPtr> param_000aa024, bool param_000aa025); // 0x000000018CD92854-0x000000018CD9293C
+	public void sPMCdCGkvTWCiroURfkKtrpakKwyA(); // 0x000000018CD92CE4-0x000000018CD92D44
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(BpzSPrKUTnftWgconIhCbVUdvRvQ))]
-	private static IntPtr oJhyHmkjymBxsdWHVDkmPYXPsQEvA(int param_000736bf, IntPtr param_000736c0, IntPtr param_000736c1); // 0x000000018AB9E454-0x000000018AB9E750
-	public void Dispose(); // 0x000000018AB9DF94-0x000000018AB9DFE4
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB9E17C-0x000000018AB9E1F0
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000736c2); // 0x000000018AB9E110-0x000000018AB9E17C
-	private static extern IntPtr KdIYStopGjSUYeJgXgIBHbMUzaEJA(int param_000736c3, BpzSPrKUTnftWgconIhCbVUdvRvQ param_000736c4, IntPtr param_000736c5, uint param_000736c6); // 0x000000018AB9E060-0x000000018AB9E110
-	private static extern bool HArxDIMFfWqSlphPYRpMnhTdtkXj(IntPtr param_000736c7); // 0x000000018AB9DFE4-0x000000018AB9E060
-	private static extern IntPtr iKxvmKSBVHzPmdBLtLaLejObFmL(IntPtr param_000736c8, int param_000736c9, IntPtr param_000736ca, IntPtr param_000736cb); // 0x000000018AB9E3B4-0x000000018AB9E454
+	private static IntPtr oJhyHmkjymBxsdWHVDkmPYXPsQEvA(int param_000aa026, IntPtr param_000aa027, IntPtr param_000aa028); // 0x000000018CD929DC-0x000000018CD92CE4
+	public void Dispose(); // 0x000000018CD92514-0x000000018CD92564
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD926FC-0x000000018CD92774
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa029); // 0x000000018CD92690-0x000000018CD926FC
+	private static extern IntPtr KdIYStopGjSUYeJgXgIBHbMUzaEJA(int param_000aa02a, BpzSPrKUTnftWgconIhCbVUdvRvQ param_000aa02b, IntPtr param_000aa02c, uint param_000aa02d); // 0x000000018CD925E0-0x000000018CD92690
+	private static extern bool HArxDIMFfWqSlphPYRpMnhTdtkXj(IntPtr param_000aa02e); // 0x000000018CD92564-0x000000018CD925E0
+	private static extern IntPtr iKxvmKSBVHzPmdBLtLaLejObFmL(IntPtr param_000aa02f, int param_000aa030, IntPtr param_000aa031, IntPtr param_000aa032); // 0x000000018CD9293C-0x000000018CD929DC
 }
 
-internal static class GhphCjTTtxbPXhyujaPMwvhvlMRD // TypeDefIndex: 53687
+internal static class GhphCjTTtxbPXhyujaPMwvhvlMRD // TypeDefIndex: 78931
 {
 	// Methods
-	public static string vaOpvJjlGEDKEbdIFaCHClVgHLMK(string param_000736d1); // 0x00000001835AA960-0x00000001835AAA00
-	public static DKfdSpPOsWGnACTRAulCFEVLxkQk pyaFZFgMVvquylYyXNdJqCakLGAD(int param_000736d2); // 0x000000018AB986F0-0x000000018AB9870C
+	public static string vaOpvJjlGEDKEbdIFaCHClVgHLMK(string param_000aa038); // 0x0000000185A17300-0x0000000185A173A0
+	public static DKfdSpPOsWGnACTRAulCFEVLxkQk pyaFZFgMVvquylYyXNdJqCakLGAD(int param_000aa039); // 0x000000018CD8CBEC-0x000000018CD8CC08
 }
 
-internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 53692
+internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 78936
 {
 	// Fields
 	private static Guid[] CgcBYYaglKgXNsjABcKnntGWtzsIA; // 0x00
@@ -2847,14 +2833,14 @@ internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 53692
 	private static readonly hVGxLyMVpLAbzuwdUUJdJbNOTTHI[] ohquEhhtrDdhnGLUusKGMIjdgsEEA; // 0x10
 
 	// Nested types
-	public enum cBwLnixqKismFQXZofhvMEalYjTS // TypeDefIndex: 53688
+	public enum cBwLnixqKismFQXZofhvMEalYjTS // TypeDefIndex: 78932
 	{
 		None = 0,
 		CombinedTriggers = 1,
 		SplitTriggers = 2
 	}
 
-	private struct hVGxLyMVpLAbzuwdUUJdJbNOTTHI // TypeDefIndex: 53690
+	private struct hVGxLyMVpLAbzuwdUUJdJbNOTTHI // TypeDefIndex: 78934
 	{
 		// Fields
 		public PidVid UpyzrRZKfKsNDZOSBiHvfgsXnMEj; // 0x00
@@ -2862,7 +2848,7 @@ internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 53692
 		public RNUXpWQSHQZQxcCWdcDApglzUSgr FNIpviIZOJyPidyUpXYmPGfCEKoB; // 0x08
 
 		// Nested types
-		public enum RNUXpWQSHQZQxcCWdcDApglzUSgr // TypeDefIndex: 53689
+		public enum RNUXpWQSHQZQxcCWdcDApglzUSgr // TypeDefIndex: 78933
 		{
 			MatchAnyOption = 0,
 			MatchAllOptions = 1,
@@ -2870,13 +2856,13 @@ internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 53692
 		}
 
 		// Constructors
-		public hVGxLyMVpLAbzuwdUUJdJbNOTTHI(PidVid param_000736e3, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000736e4, RNUXpWQSHQZQxcCWdcDApglzUSgr param_000736e5); // 0x0000000184D85D60-0x0000000184D85D70
+		public hVGxLyMVpLAbzuwdUUJdJbNOTTHI(PidVid param_000aa04a, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000aa04b, RNUXpWQSHQZQxcCWdcDApglzUSgr param_000aa04c); // 0x0000000187232A60-0x0000000187232A70
 
 		// Methods
-		public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(ushort param_000736e6, ushort param_000736e7, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000736e8); // 0x0000000183A45080-0x0000000183A450A0
+		public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(ushort param_000aa04d, ushort param_000aa04e, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000aa04f); // 0x0000000185B73D20-0x0000000185B73D40
 	}
 
-	public enum ktfDPlUaOAAfdEZveKmPxELRhcXGA // TypeDefIndex: 53691
+	public enum ktfDPlUaOAAfdEZveKmPxELRhcXGA // TypeDefIndex: 78935
 	{
 		None = 0,
 		Bluetooth = 1,
@@ -2884,31 +2870,31 @@ internal static class vLBQszORMVnneBVHflZvQbEcUEeo // TypeDefIndex: 53692
 	}
 
 	// Constructors
-	static vLBQszORMVnneBVHflZvQbEcUEeo(); // 0x0000000183CBDB50-0x0000000183CBDE90
+	static vLBQszORMVnneBVHflZvQbEcUEeo(); // 0x00000001869FF750-0x00000001869FFA90
 
 	// Methods
-	public static string PGezzyYCrBikwHWNIDoWZBxdgidr(IdxcAbgzMTzxeMxdElxolIcPzwurA param_000736d3, Guid param_000736d4, string param_000736d5, string param_000736d6); // 0x000000018ABA1D34-0x000000018ABA1E18
-	public static cBwLnixqKismFQXZofhvMEalYjTS HZNIaIXuWQslfOqkTjsGnbfRuMUf(JXtFhzUqozCGLAAgSlsxdSapKppi[] param_000736d7, Guid param_000736d8, string param_000736d9, string param_000736da); // 0x000000018ABA1ABC-0x000000018ABA1BAC
-	public static bool MSIlIbPadRQqbtMaGWMtdJAHLVcw(Guid param_000736db, string param_000736dc, string param_000736dd); // 0x000000018ABA1BAC-0x000000018ABA1C70
-	private static bool MSIlIbPadRQqbtMaGWMtdJAHLVcw(string param_000736de); // 0x000000018ABA1C70-0x000000018ABA1D34
-	public static bool VjotqwmHEoalFmdAcNGVuRMHdKHl(InputSource param_000736df, ushort param_000736e0, ushort param_000736e1, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000736e2); // 0x0000000183A44F90-0x0000000183A45080
+	public static string PGezzyYCrBikwHWNIDoWZBxdgidr(IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa03a, Guid param_000aa03b, string param_000aa03c, string param_000aa03d); // 0x000000018CD96554-0x000000018CD96638
+	public static cBwLnixqKismFQXZofhvMEalYjTS HZNIaIXuWQslfOqkTjsGnbfRuMUf(JXtFhzUqozCGLAAgSlsxdSapKppi[] param_000aa03e, Guid param_000aa03f, string param_000aa040, string param_000aa041); // 0x000000018CD962D4-0x000000018CD963B8
+	public static bool MSIlIbPadRQqbtMaGWMtdJAHLVcw(Guid param_000aa042, string param_000aa043, string param_000aa044); // 0x000000018CD963B8-0x000000018CD9647C
+	private static bool MSIlIbPadRQqbtMaGWMtdJAHLVcw(string param_000aa045); // 0x000000018CD9647C-0x000000018CD96554
+	public static bool VjotqwmHEoalFmdAcNGVuRMHdKHl(InputSource param_000aa046, ushort param_000aa047, ushort param_000aa048, ktfDPlUaOAAfdEZveKmPxELRhcXGA param_000aa049); // 0x0000000185B73C20-0x0000000185B73D20
 }
 
-internal class lGhpciCdniKLZLdOpeIcKWUFYWuAA : NativeBuffer // TypeDefIndex: 53695
+internal class lGhpciCdniKLZLdOpeIcKWUFYWuAA : NativeBuffer // TypeDefIndex: 78939
 {
 	// Fields
 	private int ARMDhMHmzbvBrDpoCmzpPwhAYelH; // 0x20
 	private int xhdJuNERqkqVaqnRcSmwOhKHNEBX; // 0x24
 
 	// Properties
-	public int PcQxRrpvvqjayMZVpLpbDQDWvzwE { get; } // 0x0000000182B70F90-0x0000000182B70FA0 
-	public int vtNMEckrEDwwdSQRzPgmASJgjhhA { get; } // 0x00000001811F0020-0x00000001811F0030 
+	public int PcQxRrpvvqjayMZVpLpbDQDWvzwE { get; } // 0x000000018226A850-0x000000018226A860 
+	public int vtNMEckrEDwwdSQRzPgmASJgjhhA { get; } // 0x0000000182A819B0-0x0000000182A819C0 
 
 	// Constructors
-	public lGhpciCdniKLZLdOpeIcKWUFYWuAA(int param_000736ee, int param_000736ef); // 0x0000000183A41A60-0x0000000183A41AA0
+	public lGhpciCdniKLZLdOpeIcKWUFYWuAA(int param_000aa055, int param_000aa056); // 0x0000000185BAF4B0-0x0000000185BAF4F0
 }
 
-internal class yoxkQKAzOinufduFGBoeZHuXZtZs : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiBDACQHMkUJDONyqwWiGgepFzkA // TypeDefIndex: 53696
+internal class yoxkQKAzOinufduFGBoeZHuXZtZs : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiBDACQHMkUJDONyqwWiGgepFzkA // TypeDefIndex: 78940
 {
 	// Fields
 	private int mBtXxAjzptwoKVBtfVsfIdZmEYkaA; // 0x88
@@ -2931,39 +2917,39 @@ internal class yoxkQKAzOinufduFGBoeZHuXZtZs : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiB
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0xF0
 
 	// Properties
-	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000184D86890-0x0000000184D868A0 
-	public ZmIGzJfowxKiyvJARuzfVHOOhwvO zPAolPHIpBxdaALaMIjQXvmkttvN { get; } // 0x0000000184D90C40-0x0000000184D90C50 
-	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; } // 0x000000018ABA2D34-0x000000018ABA2D8C 
-	public int[] dGjaUTfRZTkKwqBTUsMjpTIBIgssA { get; } // 0x0000000184D86290-0x0000000184D862A0 
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x0000000184D89300-0x0000000184D89310 
-	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x0000000184DA5BE0-0x0000000184DA5BF0 
-	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x0000000184D9E810-0x0000000184D9E820 
-	public bool UZsYTHlvNqSwfBIafJHUuzcvloTP { get; } // 0x000000018ABA2B00-0x000000018ABA2B20 
-	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x000000018ABA224C-0x000000018ABA2270 
-	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x000000018ABA28E4-0x000000018ABA2904 
-	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000184DA87D0-0x0000000184DA87E0 
-	public lDcxHnYDfFcPYdZdkSWGiPhmdwgmA xZeMZzjkWTwGJcpflslctbmZrXFI { get; } // 0x0000000184D88590-0x0000000184D885A0 
+	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000187233450-0x0000000187233460 
+	public ZmIGzJfowxKiyvJARuzfVHOOhwvO zPAolPHIpBxdaALaMIjQXvmkttvN { get; } // 0x0000000187233660-0x0000000187233670 
+	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; } // 0x000000018CD975A0-0x000000018CD975F8 
+	public int[] dGjaUTfRZTkKwqBTUsMjpTIBIgssA { get; } // 0x0000000187232FB0-0x0000000187232FC0 
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x0000000187235AE0-0x0000000187235AF0 
+	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x00000001872406D0-0x00000001872406E0 
+	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x000000018724C8E0-0x000000018724C8F0 
+	public bool UZsYTHlvNqSwfBIafJHUuzcvloTP { get; } // 0x000000018CD97350-0x000000018CD97370 
+	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x000000018CD96A80-0x000000018CD96AA4 
+	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x000000018CD97134-0x000000018CD97154 
+	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x000000018723A770-0x000000018723A780 
+	public lDcxHnYDfFcPYdZdkSWGiPhmdwgmA xZeMZzjkWTwGJcpflslctbmZrXFI { get; } // 0x00000001872354B0-0x00000001872354C0 
 
 	// Constructors
-	public yoxkQKAzOinufduFGBoeZHuXZtZs(int param_000736f0, ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000736f1, IntPtr param_000736f2, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000736f3, HIDDeviceDriver param_000736f4, jtKDhEFaghTPhKKmJDXICzhwqTbdA param_000736f5, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000736f6, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000736f7, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000736f8); // 0x000000018ABA2904-0x000000018ABA2AA8
+	public yoxkQKAzOinufduFGBoeZHuXZtZs(int param_000aa057, ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000aa058, IntPtr param_000aa059, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa05a, HIDDeviceDriver param_000aa05b, jtKDhEFaghTPhKKmJDXICzhwqTbdA param_000aa05c, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa05d, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa05e, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000aa05f); // 0x000000018CD97154-0x000000018CD972F8
 
 	// Methods
-	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000736f9); // 0x000000018ABA2834-0x000000018ABA28E4
-	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018ABA2AA8-0x000000018ABA2B00
-	public void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_000736fa, int param_000736fb, int param_000736fc, int param_000736fd, double param_000736fe); // 0x000000018ABA20FC-0x000000018ABA215C
-	public override void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x00000001841E1670-0x00000001841E1680
-	public override void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x00000001841E1670-0x00000001841E1680
-	public void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_000736ff); // 0x0000000184D868C0-0x0000000184D868D0
-	private void QYFGQngsPeNUUNpXdBFatEpLZoZp(); // 0x000000018ABA2438-0x000000018ABA27DC
-	private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018ABA2C98-0x000000018ABA2D34
-	private void LeBKgVoQDbqkNKUSJHDqrUoYHwJG(); // 0x000000018ABA215C-0x000000018ABA224C
-	private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018ABA2270-0x000000018ABA22F0
-	private ofHLpdJoyXyoAkNJdIeRpwrQxGCI yPoaNQvvcNMxHtlrvgHzoXzbIFeW(MkXjQPavsbpITCEdETTHuRYirZF param_00073700); // 0x000000018ABA2B20-0x000000018ABA2C98
-	private lDGIHZYGcLWiHYTgTEPoVmylQNXj OJwknHEmjnbROhMpZBraZkwqRtHX(aGpYUdpKsUxonfUNYstiGMzKpBRk param_00073701); // 0x000000018ABA22F0-0x000000018ABA2438
-	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073702); // 0x000000018ABA27DC-0x000000018ABA2834
+	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa060); // 0x000000018CD97074-0x000000018CD97134
+	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CD972F8-0x000000018CD97350
+	public void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_000aa061, int param_000aa062, int param_000aa063, int param_000aa064, double param_000aa065); // 0x000000018CD9691C-0x000000018CD9697C
+	public override void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x0000000186805BA0-0x0000000186805BB0
+	public override void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x0000000186805BA0-0x0000000186805BB0
+	public void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_000aa066); // 0x0000000185B8E410-0x0000000185B8E660
+	private void QYFGQngsPeNUUNpXdBFatEpLZoZp(); // 0x000000018CD96C70-0x000000018CD9701C
+	private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018CD974F8-0x000000018CD975A0
+	private void LeBKgVoQDbqkNKUSJHDqrUoYHwJG(); // 0x000000018CD9697C-0x000000018CD96A80
+	private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018CD96AA4-0x000000018CD96B24
+	private ofHLpdJoyXyoAkNJdIeRpwrQxGCI yPoaNQvvcNMxHtlrvgHzoXzbIFeW(MkXjQPavsbpITCEdETTHuRYirZF param_000aa067); // 0x000000018CD97370-0x000000018CD974F8
+	private lDGIHZYGcLWiHYTgTEPoVmylQNXj OJwknHEmjnbROhMpZBraZkwqRtHX(aGpYUdpKsUxonfUNYstiGMzKpBRk param_000aa068); // 0x000000018CD96B24-0x000000018CD96C70
+	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa069); // 0x000000018CD9701C-0x000000018CD97074
 }
 
-internal abstract class HaRQsfqAjhzwicvrCCTdcrSnwyKT : kRbZYuhpKzSxbqUHMGxBcrQvRuQg // TypeDefIndex: 53697
+internal abstract class HaRQsfqAjhzwicvrCCTdcrSnwyKT : kRbZYuhpKzSxbqUHMGxBcrQvRuQg // TypeDefIndex: 78941
 {
 	// Fields
 	protected readonly IdxcAbgzMTzxeMxdElxolIcPzwurA gFLkmEnVjMQSOwejMhMlKHEESruD; // 0x10
@@ -2984,37 +2970,37 @@ internal abstract class HaRQsfqAjhzwicvrCCTdcrSnwyKT : kRbZYuhpKzSxbqUHMGxBcrQvR
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x82
 
 	// Properties
-	public IdxcAbgzMTzxeMxdElxolIcPzwurA SbVXyACZfupWZsZEfJQfxoOrIiVU { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
-	public IntPtr TNXzHXXjfaOmNhNeeIHeezCdZXKX { get; } // 0x000000018385B100-0x000000018385B110 
-	public string LOikUxXJsvTgyuFJrAzLxiECoOlH { get; } // 0x000000018AB98FD8-0x000000018AB9905C 
-	public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x000000018AB98F54-0x000000018AB98FD8 
-	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x0000000182B70F90-0x0000000182B70FA0 
-	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x00000001811F0020-0x00000001811F0030 
-	public Guid ystlCDcHjwlcYzgaLpkqnMWqYczw { get; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 
-	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x0000000184D8FD20-0x0000000184D8FD30 
-	public Rewired.Platforms.Windows.RawInput.DeviceType psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x0000000184D863D0-0x0000000184D863E0 
-	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x000000018AB990AC-0x000000018AB990C8 
-	public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x000000018AB98B74-0x000000018AB98B90 
-	public string tBRcGxIJicmbDzuBDnHFPihxnYHiA { get; } // 0x000000018AB98E94-0x000000018AB98F54 
-	public HIDDeviceDriver ATxmJEZGRZxXPLUqrLKAwlFIyGbB { get; } // 0x0000000182E56440-0x0000000182E56460 
-	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x0000000184D86280-0x0000000184D86290 
-	public virtual bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018AB990C8-0x000000018AB990D4 
+	public IdxcAbgzMTzxeMxdElxolIcPzwurA SbVXyACZfupWZsZEfJQfxoOrIiVU { get; } // 0x00000001829260F0-0x0000000182926100 
+	public IntPtr TNXzHXXjfaOmNhNeeIHeezCdZXKX { get; } // 0x0000000182234E30-0x0000000182234E40 
+	public string LOikUxXJsvTgyuFJrAzLxiECoOlH { get; } // 0x000000018CD8D4E0-0x000000018CD8D564 
+	public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x000000018CD8D45C-0x000000018CD8D4E0 
+	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x000000018226A850-0x000000018226A860 
+	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x0000000182A819B0-0x0000000182A819C0 
+	public Guid ystlCDcHjwlcYzgaLpkqnMWqYczw { get; } // 0x000000018723D770-0x000000018723D780 
+	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x000000018723DAB0-0x000000018723DAC0 
+	public Rewired.Platforms.Windows.RawInput.DeviceType psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x00000001872330A0-0x00000001872330B0 
+	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x000000018CD8D5B4-0x000000018CD8D5D0 
+	public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x000000018CD8D074-0x000000018CD8D090 
+	public string tBRcGxIJicmbDzuBDnHFPihxnYHiA { get; } // 0x000000018CD8D398-0x000000018CD8D45C 
+	public HIDDeviceDriver ATxmJEZGRZxXPLUqrLKAwlFIyGbB { get; } // 0x0000000187232F70-0x0000000187232F80 
+	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x0000000187232FA0-0x0000000187232FB0 
+	public virtual bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CD8D5D0-0x000000018CD8D5DC 
 
 	// Constructors
-	public HaRQsfqAjhzwicvrCCTdcrSnwyKT(IdxcAbgzMTzxeMxdElxolIcPzwurA param_00073703, IntPtr param_00073704); // 0x000000018AB98CEC-0x000000018AB98E94
+	public HaRQsfqAjhzwicvrCCTdcrSnwyKT(IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa06a, IntPtr param_000aa06b); // 0x000000018CD8D1F0-0x000000018CD8D398
 
 	// Methods
-	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073705); // 0x000000018AB98C58-0x000000018AB98C74
+	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa06c); // 0x000000018CD8D158-0x000000018CD8D174
 	public abstract void UpdateFinished();
-	public void Dispose(); // 0x000000018AB98B90-0x000000018AB98BE0
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018AB98C74-0x000000018AB98CEC
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073706); // 0x000000018AB98BE0-0x000000018AB98C58
-	private static Rewired.Platforms.Windows.RawInput.DeviceType rlshlhoHiVFHIOUBzbvZSjotESWN(ushort param_00073707, ushort param_00073708); // 0x000000018AB9905C-0x000000018AB990AC
+	public void Dispose(); // 0x000000018CD8D090-0x000000018CD8D0E0
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD8D174-0x000000018CD8D1F0
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa06d); // 0x000000018CD8D0E0-0x000000018CD8D158
+	private static Rewired.Platforms.Windows.RawInput.DeviceType rlshlhoHiVFHIOUBzbvZSjotESWN(ushort param_000aa06e, ushort param_000aa06f); // 0x000000018CD8D564-0x000000018CD8D5B4
 	public abstract void Acquire();
 	public abstract void Unacquire();
 }
 
-internal abstract class FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 53698
+internal abstract class FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 78942
 {
 	// Fields
 	public readonly ushort CYtxSBIcDASRtcEBicXiSLSLYjuR; // 0x10
@@ -3024,13 +3010,13 @@ internal abstract class FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 53698
 	public readonly byte jLKgYPbCXIqnNylkRhlRiDlyritOA; // 0x1C
 
 	// Constructors
-	public FmarwRrUedMdVuRPApXNMZUKevwt(byte param_00073709, ushort param_0007370a, ushort param_0007370b, int param_0007370c, int param_0007370d); // 0x0000000184DA8740-0x0000000184DA8760
+	public FmarwRrUedMdVuRPApXNMZUKevwt(byte param_000aa070, ushort param_000aa071, ushort param_000aa072, int param_000aa073, int param_000aa074); // 0x0000000187256840-0x0000000187256860
 
 	// Methods
 	public abstract void ghAXNTTllFZJImfdUqzOVvWsJmgN();
 }
 
-internal class ofHLpdJoyXyoAkNJdIeRpwrQxGCI : FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 53699
+internal class ofHLpdJoyXyoAkNJdIeRpwrQxGCI : FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 78943
 {
 	// Fields
 	public readonly bool RoLXagipAOyrXOjFMzxhjrdmXWLG; // 0x20
@@ -3049,18 +3035,18 @@ internal class ofHLpdJoyXyoAkNJdIeRpwrQxGCI : FmarwRrUedMdVuRPApXNMZUKevwt // Ty
 	public uint nXdBpypsCihkGgjdHnUwIADZGegB; // 0x54
 
 	// Properties
-	public virtual int IaOjDqjXmTvIEPrVtSrrcPlQvkii { get; } // 0x000000018AB9F6A8-0x000000018AB9F710 
+	public virtual int IaOjDqjXmTvIEPrVtSrrcPlQvkii { get; } // 0x000000018CD93C34-0x000000018CD93C9C 
 
 	// Constructors
-	public ofHLpdJoyXyoAkNJdIeRpwrQxGCI(byte param_0007370e, ushort param_0007370f, ushort param_00073710, int param_00073711, int param_00073712, int param_00073713, int param_00073714, int param_00073715, int param_00073716, uint param_00073717, uint param_00073718, int param_00073719, bool param_0007371a); // 0x000000018AB9F540-0x000000018AB9F6A8
+	public ofHLpdJoyXyoAkNJdIeRpwrQxGCI(byte param_000aa075, ushort param_000aa076, ushort param_000aa077, int param_000aa078, int param_000aa079, int param_000aa07a, int param_000aa07b, int param_000aa07c, int param_000aa07d, uint param_000aa07e, uint param_000aa07f, int param_000aa080, bool param_000aa081); // 0x000000018CD93AE0-0x000000018CD93C34
 
 	// Methods
-	public override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x0000000184DA87B0-0x0000000184DA87C0
-	private static float tyTDSVbkDOqKgMUIpShNJBBGFVdbA(float param_0007371b, float param_0007371c, float param_0007371d, float param_0007371e, float param_0007371f); // 0x000000018AB9F710-0x000000018AB9F794
-	private void VZZXTrHYntrgnxApHogYkofmzrBD(); // 0x000000018AB9F50C-0x000000018AB9F540
+	public override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x00000001872568B0-0x00000001872568C0
+	private static float tyTDSVbkDOqKgMUIpShNJBBGFVdbA(float param_000aa082, float param_000aa083, float param_000aa084, float param_000aa085, float param_000aa086); // 0x000000018CD93C9C-0x000000018CD93D20
+	private void VZZXTrHYntrgnxApHogYkofmzrBD(); // 0x000000018CD93AB0-0x000000018CD93AE0
 }
 
-internal class lDGIHZYGcLWiHYTgTEPoVmylQNXj : FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 53700
+internal class lDGIHZYGcLWiHYTgTEPoVmylQNXj : FmarwRrUedMdVuRPApXNMZUKevwt // TypeDefIndex: 78944
 {
 	// Fields
 	public readonly int oOVvmUPhByFiqPOnPaXNVlZlRWGm; // 0x20
@@ -3074,16 +3060,16 @@ internal class lDGIHZYGcLWiHYTgTEPoVmylQNXj : FmarwRrUedMdVuRPApXNMZUKevwt // Ty
 	public uint nXdBpypsCihkGgjdHnUwIADZGegB; // 0x40
 
 	// Properties
-	public int IaOjDqjXmTvIEPrVtSrrcPlQvkii { get; } // 0x000000018AB9F464-0x000000018AB9F4A8 
+	public int IaOjDqjXmTvIEPrVtSrrcPlQvkii { get; } // 0x000000018CD93A08-0x000000018CD93A4C 
 
 	// Constructors
-	public lDGIHZYGcLWiHYTgTEPoVmylQNXj(byte param_00073720, ushort param_00073721, ushort param_00073722, int param_00073723, int param_00073724, int param_00073725, int param_00073726, int param_00073727, int param_00073728, uint param_00073729, uint param_0007372a, int param_0007372b); // 0x000000018AB9F3DC-0x000000018AB9F464
+	public lDGIHZYGcLWiHYTgTEPoVmylQNXj(byte param_000aa087, ushort param_000aa088, ushort param_000aa089, int param_000aa08a, int param_000aa08b, int param_000aa08c, int param_000aa08d, int param_000aa08e, int param_000aa08f, uint param_000aa090, uint param_000aa091, int param_000aa092); // 0x000000018CD9397C-0x000000018CD93A08
 
 	// Methods
-	public override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x0000000184DA87A0-0x0000000184DA87B0
+	public override void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x00000001872568A0-0x00000001872568B0
 }
 
-internal interface kRbZYuhpKzSxbqUHMGxBcrQvRuQg : IDisposable // TypeDefIndex: 53702
+internal interface kRbZYuhpKzSxbqUHMGxBcrQvRuQg : IDisposable // TypeDefIndex: 78946
 {
 	// Properties
 	IdxcAbgzMTzxeMxdElxolIcPzwurA SbVXyACZfupWZsZEfJQfxoOrIiVU { get; }
@@ -3103,13 +3089,13 @@ internal interface kRbZYuhpKzSxbqUHMGxBcrQvRuQg : IDisposable // TypeDefIndex: 5
 	bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; }
 
 	// Methods
-	void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_0007372c);
+	void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa093);
 	void UpdateFinished();
 	void Acquire();
 	void Unacquire();
 }
 
-internal interface xLiBDACQHMkUJDONyqwWiGgepFzkA : kRbZYuhpKzSxbqUHMGxBcrQvRuQg // TypeDefIndex: 53703
+internal interface xLiBDACQHMkUJDONyqwWiGgepFzkA : kRbZYuhpKzSxbqUHMGxBcrQvRuQg // TypeDefIndex: 78947
 {
 	// Properties
 	int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; }
@@ -3126,11 +3112,11 @@ internal interface xLiBDACQHMkUJDONyqwWiGgepFzkA : kRbZYuhpKzSxbqUHMGxBcrQvRuQg 
 	InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; }
 
 	// Methods
-	void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_0007372d, int param_0007372e, int param_0007372f, int param_00073730, double param_00073731);
-	void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_00073732);
+	void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_000aa094, int param_000aa095, int param_000aa096, int param_000aa097, double param_000aa098);
+	void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_000aa099);
 }
 
-internal abstract class sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 53704
+internal abstract class sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 78948
 {
 	// Fields
 	public uint pQtHvGVCzCmCrGrDIKFSgCUebtrc; // 0x10
@@ -3138,14 +3124,14 @@ internal abstract class sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 53704
 	private static uint DjYOQmKcYVdfbFDaNMPPNRStKZchA; // 0x00
 
 	// Constructors
-	protected sYIBzoAewKjkEjeRAitFzrgWDNJT(); // 0x00000001841E1670-0x00000001841E1680
+	protected sYIBzoAewKjkEjeRAitFzrgWDNJT(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x000000018381D0E0-0x000000018381D120
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABA03D0-0x000000018ABA0484
+	public void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x0000000185709600-0x0000000185709640
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD94978-0x000000018CD94A34
 }
 
-internal class hzfUWCjNPPmSYyCeozhXHZrHbmeI : sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 53705
+internal class hzfUWCjNPPmSYyCeozhXHZrHbmeI : sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 78949
 {
 	// Fields
 	public agWzVEkIFodpccVvGQaNfUcyYDIUA UyaGHWZvWIteWvfDgGjbzZeHjQQK; // 0x20
@@ -3158,13 +3144,13 @@ internal class hzfUWCjNPPmSYyCeozhXHZrHbmeI : sYIBzoAewKjkEjeRAitFzrgWDNJT // Ty
 	public int IuEuFRbjYKACLnaEzOkNJxcvuQDh; // 0x40
 
 	// Constructors
-	public hzfUWCjNPPmSYyCeozhXHZrHbmeI(); // 0x00000001841E1670-0x00000001841E1680
+	public hzfUWCjNPPmSYyCeozhXHZrHbmeI(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void OSNJxVibfKbltujYHkKMLuczmano(ref DjdfDrcNukTKWfrrRLbyuQXQgKyCb param_00073733); // 0x000000018381D050-0x000000018381D0E0
+	public void OSNJxVibfKbltujYHkKMLuczmano(ref DjdfDrcNukTKWfrrRLbyuQXQgKyCb param_000aa09a); // 0x0000000185708260-0x00000001857082F0
 }
 
-internal class YuzVBZAVrBXogjeFXEIGbMAEejwR : sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 53706
+internal class YuzVBZAVrBXogjeFXEIGbMAEejwR : sYIBzoAewKjkEjeRAitFzrgWDNJT // TypeDefIndex: 78950
 {
 	// Fields
 	public IntPtr XYJbperUKfiSMXQUuxMvCcxQOWRH; // 0x20
@@ -3175,14 +3161,14 @@ internal class YuzVBZAVrBXogjeFXEIGbMAEejwR : sYIBzoAewKjkEjeRAitFzrgWDNJT // Ty
 	public KeyState qiGcZSJxGopIPnLDnLXfDzOCSjRf; // 0x38
 
 	// Constructors
-	public YuzVBZAVrBXogjeFXEIGbMAEejwR(); // 0x00000001841E1670-0x00000001841E1680
+	public YuzVBZAVrBXogjeFXEIGbMAEejwR(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void OSNJxVibfKbltujYHkKMLuczmano(ref mSXBYzcjZtWtzBMaRNJMFIuGieHBb param_00073734); // 0x000000018381CED0-0x000000018381CF50
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018AB9D3E8-0x000000018AB9D620
+	public void OSNJxVibfKbltujYHkKMLuczmano(ref mSXBYzcjZtWtzBMaRNJMFIuGieHBb param_000aa09b); // 0x0000000185706750-0x00000001857067D0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD91974-0x000000018CD91BC0
 }
 
-internal class KPUcNweIcXXVKPnTNSXZVDWPwgse : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiBDACQHMkUJDONyqwWiGgepFzkA // TypeDefIndex: 53712
+internal class KPUcNweIcXXVKPnTNSXZVDWPwgse : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiBDACQHMkUJDONyqwWiGgepFzkA // TypeDefIndex: 78956
 {
 	// Fields
 	private int mBtXxAjzptwoKVBtfVsfIdZmEYkaA; // 0x88
@@ -3207,104 +3193,104 @@ internal class KPUcNweIcXXVKPnTNSXZVDWPwgse : HaRQsfqAjhzwicvrCCTdcrSnwyKT, xLiB
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x110
 
 	// Properties
-	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000184D86890-0x0000000184D868A0 
-	public ZmIGzJfowxKiyvJARuzfVHOOhwvO zPAolPHIpBxdaALaMIjQXvmkttvN { get; } // 0x0000000184D90C40-0x0000000184D90C50 
-	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; } // 0x000000018AB9B820-0x000000018AB9B878 
-	public int[] dGjaUTfRZTkKwqBTUsMjpTIBIgssA { get; } // 0x0000000184D86250-0x0000000184D86260 
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x0000000184D8E580-0x0000000184D8E590 
-	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x0000000184DA32C0-0x0000000184DA32D0 
-	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x0000000184DA4B70-0x0000000184DA4B80 
-	public bool UZsYTHlvNqSwfBIafJHUuzcvloTP { get; } // 0x000000018AB9B3E8-0x000000018AB9B408 
-	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x00000001812081B0-0x0000000181208610 
-	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x00000001811EC580-0x00000001811EC590 
-	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000184D9EC50-0x0000000184D9EC60 
-	public lDcxHnYDfFcPYdZdkSWGiPhmdwgmA xZeMZzjkWTwGJcpflslctbmZrXFI { get; } // 0x0000000184D8D1A0-0x0000000184D8D1B0 
+	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000187233450-0x0000000187233460 
+	public ZmIGzJfowxKiyvJARuzfVHOOhwvO zPAolPHIpBxdaALaMIjQXvmkttvN { get; } // 0x0000000187233660-0x0000000187233670 
+	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; } // 0x000000018CD8FD84-0x000000018CD8FDDC 
+	public int[] dGjaUTfRZTkKwqBTUsMjpTIBIgssA { get; } // 0x0000000187232F90-0x0000000187232FA0 
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x000000018723B930-0x000000018723B940 
+	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x000000018723BAF0-0x000000018723BB00 
+	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x000000018723BAC0-0x000000018723BAD0 
+	public bool UZsYTHlvNqSwfBIafJHUuzcvloTP { get; } // 0x000000018CD8F938-0x000000018CD8F958 
+	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x00000001843FFFF0-0x0000000184400000 
+	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x0000000185829EC0-0x0000000185829ED0 
+	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000187239C70-0x0000000187239C80 
+	public lDcxHnYDfFcPYdZdkSWGiPhmdwgmA xZeMZzjkWTwGJcpflslctbmZrXFI { get; } // 0x000000018723C070-0x000000018723C080 
 
 	// Nested types
-	private class xUWOnZkFHcMPURTJdtYlIgDFwfmM // TypeDefIndex: 53707
+	private class xUWOnZkFHcMPURTJdtYlIgDFwfmM // TypeDefIndex: 78951
 	{
 		// Fields
 		public readonly aHzSDAgzXeTUuXeKeiUwhHjMNyKD UdRQWEcmSrmdmUBMTQBqIWRcBfSc; // 0x10
 
 		// Constructors
-		public xUWOnZkFHcMPURTJdtYlIgDFwfmM(aHzSDAgzXeTUuXeKeiUwhHjMNyKD param_00073790); // 0x00000001853908C0-0x00000001853908D0
+		public xUWOnZkFHcMPURTJdtYlIgDFwfmM(aHzSDAgzXeTUuXeKeiUwhHjMNyKD param_000aa0f7); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 
-	private class PbkriHrdXjmJsObVndfZLuSHkcJi // TypeDefIndex: 53708
+	private class PbkriHrdXjmJsObVndfZLuSHkcJi // TypeDefIndex: 78952
 	{
 		// Fields
 		public readonly JXtFhzUqozCGLAAgSlsxdSapKppi UdRQWEcmSrmdmUBMTQBqIWRcBfSc; // 0x10
 
 		// Constructors
-		public PbkriHrdXjmJsObVndfZLuSHkcJi(JXtFhzUqozCGLAAgSlsxdSapKppi param_00073791); // 0x00000001853908C0-0x00000001853908D0
+		public PbkriHrdXjmJsObVndfZLuSHkcJi(JXtFhzUqozCGLAAgSlsxdSapKppi param_000aa0f8); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 
-	private abstract class EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 53709
+	private abstract class EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 78953
 	{
 		// Fields
 		public readonly bool FIiAJPiqkxSDvPfuQJAZoysjMwBA; // 0x10
 
 		// Constructors
-		protected EzzIvMwZfCNBGPLqavLvXOMUteoA(bool param_00073792); // 0x0000000184D86130-0x0000000184D86140
+		protected EzzIvMwZfCNBGPLqavLvXOMUteoA(bool param_000aa0f9); // 0x0000000182A819C0-0x0000000182A819D0
 	}
 
-	private class YydebhCXXfXOawTbRGxYgLNGUlsXB : EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 53710
+	private class YydebhCXXfXOawTbRGxYgLNGUlsXB : EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 78954
 	{
 		// Fields
 		public readonly FmarwRrUedMdVuRPApXNMZUKevwt[] PRUUGFIsJlhtSfHuElXmCPJYUYvpA; // 0x18
 
 		// Constructors
-		public YydebhCXXfXOawTbRGxYgLNGUlsXB(int param_00073793); // 0x000000018AB9D620-0x000000018AB9D684
+		public YydebhCXXfXOawTbRGxYgLNGUlsXB(int param_000aa0fa); // 0x000000018CD91BC0-0x000000018CD91C24
 	}
 
-	private class obkXOyhqGBxlUiRonqACcRxSKuZe : EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 53711
+	private class obkXOyhqGBxlUiRonqACcRxSKuZe : EzzIvMwZfCNBGPLqavLvXOMUteoA // TypeDefIndex: 78955
 	{
 		// Fields
 		public readonly YydebhCXXfXOawTbRGxYgLNGUlsXB[] hwPxKvUnzBBTjiCXpLUOuTjmaMSX; // 0x18
 
 		// Constructors
-		public obkXOyhqGBxlUiRonqACcRxSKuZe(int param_00073794); // 0x000000018AB9F4A8-0x000000018AB9F50C
+		public obkXOyhqGBxlUiRonqACcRxSKuZe(int param_000aa0fb); // 0x000000018CD93A4C-0x000000018CD93AB0
 	}
 
 	// Constructors
-	public KPUcNweIcXXVKPnTNSXZVDWPwgse(int param_00073735, ZmIGzJfowxKiyvJARuzfVHOOhwvO param_00073736, IntPtr param_00073737, IdxcAbgzMTzxeMxdElxolIcPzwurA param_00073738); // 0x000000018AB9A7A0-0x000000018AB9AA44
+	public KPUcNweIcXXVKPnTNSXZVDWPwgse(int param_000aa09c, ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000aa09d, IntPtr param_000aa09e, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa09f); // 0x000000018CD8EC9C-0x000000018CD8EF44
 
 	// Methods
-	public void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_00073739, int param_0007373a, int param_0007373b, int param_0007373c, double param_0007373d); // 0x000000018AB99378-0x000000018AB996A0
-	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_0007373e); // 0x000000018AB9A63C-0x000000018AB9A6C0
-	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018AB9B2A8-0x000000018AB9B300
-	public override void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x00000001841E1670-0x00000001841E1680
-	public override void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x00000001841E1670-0x00000001841E1680
-	public void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_0007373f); // 0x0000000184D868C0-0x0000000184D868D0
-	private void QYFGQngsPeNUUNpXdBFatEpLZoZp(); // 0x000000018AB99894-0x000000018AB9A59C
-	private void yfAvlFShiJiZPPnfreeMjhGTujmfA(IntPtr param_00073740, int param_00073741, IntPtr param_00073742, byte param_00073743, double param_00073744); // 0x000000018AB9B544-0x000000018AB9B820
-	private void nibLAGsXhUkHAymdlkXvbyaAjirq(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_00073745, IntPtr param_00073746, int param_00073747, IntPtr param_00073748, byte param_00073749, double param_0007374a); // 0x000000018AB9AF1C-0x000000018AB9B1E4
-	private void luJntzprlBNmnuHnBedGcTxzITXv(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_0007374b, int param_0007374c, PbkriHrdXjmJsObVndfZLuSHkcJi param_0007374d, int param_0007374e, ushort param_0007374f, IntPtr param_00073750, IntPtr param_00073751, int param_00073752); // 0x000000018AB9AD4C-0x000000018AB9AF1C
-	private bool sSgaPaCRITPuMBAjLqumcsjvPXtS(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_00073753, JXtFhzUqozCGLAAgSlsxdSapKppi param_00073754, int param_00073755, out uint param_00073756); // 0x000000018AB9B300-0x000000018AB9B3E8
-	private bool xSOfqpvlkyeNfqLOaIBNaNhbWVym(JXtFhzUqozCGLAAgSlsxdSapKppi param_00073757, int param_00073758, IntPtr param_00073759, IntPtr param_0007375a, ushort param_0007375b, int param_0007375c, int param_0007375d, IntPtr param_0007375e); // 0x000000018AB9B480-0x000000018AB9B544
-	private static bool FlEBMeRVRQazumVeQIYnbBRPDuZY(IntPtr param_0007375f, int param_00073760, IntPtr param_00073761, AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_00073762, NativeBuffer param_00073763); // 0x000000018AB996A0-0x000000018AB997EC
-	private void qvYGeXeGlIkheDMjWsikEJTzmcHA(int param_00073764, ushort param_00073765, ushort param_00073766, uint param_00073767, int param_00073768, int param_00073769); // 0x000000018AB9B1E4-0x000000018AB9B2A8
-	private void BVCiKnOCToKDgmhnxRfSThwZUOkr(int param_0007376a, ushort param_0007376b, ushort param_0007376c, int param_0007376d, ushort param_0007376e, IntPtr param_0007376f, int param_00073770, ushort param_00073771); // 0x000000018AB990D4-0x000000018AB99378
-	private void xNbcdXMmWsASjatpkLkNkKmAwexj(int param_00073772, ushort param_00073773, ushort param_00073774, int param_00073775, int param_00073776, uint param_00073777); // 0x000000018AB9B408-0x000000018AB9B480
-	private void JsjOXtopwUSqjgiShdZTZXGpVHBW(int param_00073778, ushort param_00073779, ushort param_0007377a, int param_0007377b, int param_0007377c, uint param_0007377d); // 0x000000018AB997EC-0x000000018AB99864
-	private void RflbCNHcLQbAuloVqeDRQNFCECXY(IntPtr param_0007377e, int param_0007377f, int param_00073780, double param_00073781); // 0x000000018AB9A59C-0x000000018AB9A5CC
-	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073782); // 0x000000018AB9A5CC-0x000000018AB9A63C
-	private static FmarwRrUedMdVuRPApXNMZUKevwt iYNCcaehgpwhCGDActAqYExwhUNYA(List<ofHLpdJoyXyoAkNJdIeRpwrQxGCI> param_00073783, List<lDGIHZYGcLWiHYTgTEPoVmylQNXj> param_00073784, MlriOiaGsGcNChpISALUGlIRPxwK param_00073785, JXtFhzUqozCGLAAgSlsxdSapKppi param_00073786, ushort param_00073787, bool param_00073788, int param_00073789, int param_0007378a); // 0x000000018AB9AA44-0x000000018AB9AD4C
-	private FmarwRrUedMdVuRPApXNMZUKevwt XKFFvVDiKuHWIGsSzwdUrkQNhHnbb(EzzIvMwZfCNBGPLqavLvXOMUteoA[] param_0007378b, int param_0007378c, int param_0007378d, int param_0007378e); // 0x000000018AB9A6C0-0x000000018AB9A7A0
-	private static bool KmumXRhbNCKPddDmdJYYoqkqDIxp(IdxcAbgzMTzxeMxdElxolIcPzwurA param_0007378f); // 0x000000018AB99864-0x000000018AB99894
+	public void EGhvxPKhXjlkipAYJerjFLXFedUDA(IntPtr param_000aa0a0, int param_000aa0a1, int param_000aa0a2, int param_000aa0a3, double param_000aa0a4); // 0x000000018CD8D884-0x000000018CD8DB88
+	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa0a5); // 0x000000018CD8EB38-0x000000018CD8EBBC
+	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CD8F7E8-0x000000018CD8F840
+	public override void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x0000000186805BA0-0x0000000186805BB0
+	public override void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x0000000186805BA0-0x0000000186805BB0
+	public void nextLeCtjcIrhGkHxnHsBgbWXbjk(int param_000aa0a6); // 0x0000000185B8E410-0x0000000185B8E660
+	private void QYFGQngsPeNUUNpXdBFatEpLZoZp(); // 0x000000018CD8DD88-0x000000018CD8EA98
+	private void yfAvlFShiJiZPPnfreeMjhGTujmfA(IntPtr param_000aa0a7, int param_000aa0a8, IntPtr param_000aa0a9, byte param_000aa0aa, double param_000aa0ab); // 0x000000018CD8FA9C-0x000000018CD8FD84
+	private void nibLAGsXhUkHAymdlkXvbyaAjirq(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_000aa0ac, IntPtr param_000aa0ad, int param_000aa0ae, IntPtr param_000aa0af, byte param_000aa0b0, double param_000aa0b1); // 0x000000018CD8F420-0x000000018CD8F71C
+	private void luJntzprlBNmnuHnBedGcTxzITXv(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_000aa0b2, int param_000aa0b3, PbkriHrdXjmJsObVndfZLuSHkcJi param_000aa0b4, int param_000aa0b5, ushort param_000aa0b6, IntPtr param_000aa0b7, IntPtr param_000aa0b8, int param_000aa0b9); // 0x000000018CD8F250-0x000000018CD8F420
+	private bool sSgaPaCRITPuMBAjLqumcsjvPXtS(AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_000aa0ba, JXtFhzUqozCGLAAgSlsxdSapKppi param_000aa0bb, int param_000aa0bc, out uint param_000aa0bd); // 0x000000018CD8F840-0x000000018CD8F938
+	private bool xSOfqpvlkyeNfqLOaIBNaNhbWVym(JXtFhzUqozCGLAAgSlsxdSapKppi param_000aa0be, int param_000aa0bf, IntPtr param_000aa0c0, IntPtr param_000aa0c1, ushort param_000aa0c2, int param_000aa0c3, int param_000aa0c4, IntPtr param_000aa0c5); // 0x000000018CD8F9D4-0x000000018CD8FA9C
+	private static bool FlEBMeRVRQazumVeQIYnbBRPDuZY(IntPtr param_000aa0c6, int param_000aa0c7, IntPtr param_000aa0c8, AList<MDBYECqvXkaCiSmYJZjrizfidEbk.dHQmwhHbvgbNuAqIBFbWyaCtzDht> param_000aa0c9, NativeBuffer param_000aa0ca); // 0x000000018CD8DB88-0x000000018CD8DCDC
+	private void qvYGeXeGlIkheDMjWsikEJTzmcHA(int param_000aa0cb, ushort param_000aa0cc, ushort param_000aa0cd, uint param_000aa0ce, int param_000aa0cf, int param_000aa0d0); // 0x000000018CD8F71C-0x000000018CD8F7E8
+	private void BVCiKnOCToKDgmhnxRfSThwZUOkr(int param_000aa0d1, ushort param_000aa0d2, ushort param_000aa0d3, int param_000aa0d4, ushort param_000aa0d5, IntPtr param_000aa0d6, int param_000aa0d7, ushort param_000aa0d8); // 0x000000018CD8D5DC-0x000000018CD8D884
+	private void xNbcdXMmWsASjatpkLkNkKmAwexj(int param_000aa0d9, ushort param_000aa0da, ushort param_000aa0db, int param_000aa0dc, int param_000aa0dd, uint param_000aa0de); // 0x000000018CD8F958-0x000000018CD8F9D4
+	private void JsjOXtopwUSqjgiShdZTZXGpVHBW(int param_000aa0df, ushort param_000aa0e0, ushort param_000aa0e1, int param_000aa0e2, int param_000aa0e3, uint param_000aa0e4); // 0x000000018CD8DCDC-0x000000018CD8DD58
+	private void RflbCNHcLQbAuloVqeDRQNFCECXY(IntPtr param_000aa0e5, int param_000aa0e6, int param_000aa0e7, double param_000aa0e8); // 0x000000018CD8EA98-0x000000018CD8EAC8
+	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa0e9); // 0x000000018CD8EAC8-0x000000018CD8EB38
+	private static FmarwRrUedMdVuRPApXNMZUKevwt iYNCcaehgpwhCGDActAqYExwhUNYA(List<ofHLpdJoyXyoAkNJdIeRpwrQxGCI> param_000aa0ea, List<lDGIHZYGcLWiHYTgTEPoVmylQNXj> param_000aa0eb, MlriOiaGsGcNChpISALUGlIRPxwK param_000aa0ec, JXtFhzUqozCGLAAgSlsxdSapKppi param_000aa0ed, ushort param_000aa0ee, bool param_000aa0ef, int param_000aa0f0, int param_000aa0f1); // 0x000000018CD8EF44-0x000000018CD8F250
+	private FmarwRrUedMdVuRPApXNMZUKevwt XKFFvVDiKuHWIGsSzwdUrkQNhHnbb(EzzIvMwZfCNBGPLqavLvXOMUteoA[] param_000aa0f2, int param_000aa0f3, int param_000aa0f4, int param_000aa0f5); // 0x000000018CD8EBBC-0x000000018CD8EC9C
+	private static bool KmumXRhbNCKPddDmdJYYoqkqDIxp(IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa0f6); // 0x000000018CD8DD58-0x000000018CD8DD88
 }
 
-internal abstract class lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 53713
+internal abstract class lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 78957
 {
 	// Constructors
-	protected lDcxHnYDfFcPYdZdkSWGiPhmdwgmA(); // 0x00000001841E1670-0x00000001841E1680
+	protected lDcxHnYDfFcPYdZdkSWGiPhmdwgmA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public abstract void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_00073795);
+	public abstract void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_000aa0fc);
 	public abstract void KPuiWAvOKrAdDjHVrInsJKecQePb();
 }
 
-internal class REPhaSELegkrQWkZsOTraGFJMQPm : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 53714
+internal class REPhaSELegkrQWkZsOTraGFJMQPm : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 78958
 {
 	// Fields
 	private List<ofHLpdJoyXyoAkNJdIeRpwrQxGCI> JnZdnAAxIEnZHOEoELthikNEvNaaA; // 0x10
@@ -3312,17 +3298,17 @@ internal class REPhaSELegkrQWkZsOTraGFJMQPm : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // T
 	private bool HEwlObHLcANEFfbAOiDfGuAIUMsM; // 0x20
 
 	// Constructors
-	public REPhaSELegkrQWkZsOTraGFJMQPm(); // 0x000000018AB9C9F0-0x000000018AB9CA68
+	public REPhaSELegkrQWkZsOTraGFJMQPm(); // 0x000000018CD90F58-0x000000018CD90FD0
 
 	// Methods
-	public override void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_00073796); // 0x000000018AB9CA68-0x000000018AB9CABC
-	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_00073797); // 0x000000018AB9C934-0x000000018AB9C984
-	public int vvUauQUeffozzgJFkSCnIWIEwnhP(int param_00073798); // 0x000000018AB9CABC-0x000000018AB9CAFC
-	public override void KPuiWAvOKrAdDjHVrInsJKecQePb(); // 0x000000018AB9C984-0x000000018AB9C9F0
-	private static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_00073799); // 0x000000018AB94FD4-0x000000018AB95038
+	public override void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_000aa0fd); // 0x000000018CD90FD0-0x000000018CD91024
+	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000aa0fe); // 0x000000018CD90E98-0x000000018CD90EE8
+	public int vvUauQUeffozzgJFkSCnIWIEwnhP(int param_000aa0ff); // 0x000000018CD91024-0x000000018CD91064
+	public override void KPuiWAvOKrAdDjHVrInsJKecQePb(); // 0x000000018CD90EE8-0x000000018CD90F58
+	private static float kzrWRwKiQqAJGqnTzWzzgJiRpXsJ(int param_000aa100); // 0x000000018CD89464-0x000000018CD894C8
 }
 
-internal class MlriOiaGsGcNChpISALUGlIRPxwK : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 53715
+internal class MlriOiaGsGcNChpISALUGlIRPxwK : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // TypeDefIndex: 78959
 {
 	// Fields
 	private bool HEwlObHLcANEFfbAOiDfGuAIUMsM; // 0x10
@@ -3342,23 +3328,23 @@ internal class MlriOiaGsGcNChpISALUGlIRPxwK : lDcxHnYDfFcPYdZdkSWGiPhmdwgmA // T
 	private ofHLpdJoyXyoAkNJdIeRpwrQxGCI[] NYbDfBmYBYxDHYQLXEjeMivjLNvc; // 0x80
 
 	// Properties
-	public int kmxlJMJLnLOAgESnXBARXJzszbKT { get; } // 0x000000018AB9BC54-0x000000018AB9BC74 
+	public int kmxlJMJLnLOAgESnXBARXJzszbKT { get; } // 0x000000018CD901B4-0x000000018CD901D4 
 
 	// Constructors
-	public MlriOiaGsGcNChpISALUGlIRPxwK(); // 0x000000018AB9BC74-0x000000018AB9BD14
+	public MlriOiaGsGcNChpISALUGlIRPxwK(); // 0x000000018CD901D4-0x000000018CD90274
 
 	// Methods
-	public override void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_0007379a); // 0x000000018AB9BD14-0x000000018AB9BF1C
-	public int DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_0007379b, int param_0007379c); // 0x000000018AB9BA34-0x000000018AB9BBE0
-	public override void KPuiWAvOKrAdDjHVrInsJKecQePb(); // 0x000000018AB9BBE0-0x000000018AB9BC54
+	public override void ghpRYZOlOAyEnbMLpYIqdDbtPgQh(ofHLpdJoyXyoAkNJdIeRpwrQxGCI param_000aa101); // 0x000000018CD90274-0x000000018CD9047C
+	public int DYxtgWHqYudqjBhVQJKzjymElHwy(RawInputAxis param_000aa102, int param_000aa103); // 0x000000018CD8FF98-0x000000018CD90140
+	public override void KPuiWAvOKrAdDjHVrInsJKecQePb(); // 0x000000018CD90140-0x000000018CD901B4
 }
 
-internal enum KMIrdmYHGwLisztsVlJZPPznmmQt // TypeDefIndex: 53718
+internal enum KMIrdmYHGwLisztsVlJZPPznmmQt // TypeDefIndex: 78962
 {
 	SharpDX = 0
 }
 
-internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 53732
+internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 78976
 {
 	// Fields
 	private List<xLiBDACQHMkUJDONyqwWiGgepFzkA> PCdPJbHLsogIbJECApXLUpgSXfnrA; // 0x10
@@ -3403,26 +3389,26 @@ internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 537
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x118
 
 	// Properties
-	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x0000000184D85A60-0x0000000184D85A70 0x000000018ABA1680-0x000000018ABA1684
+	public hohNsNaAhdJOLmrreLGwwtWoRfkL DFsdfJeNLRhTXegkARhhXCEGzBogc { get; set; } // 0x000000018226EEA0-0x000000018226EEB0 0x000000018CD95D94-0x000000018CD95D98
 
 	// Events
 	public event Action DpsleWpZupQSExUUeoaqxQrXkiab {
-		add; // 0x000000018ABA1634-0x000000018ABA1680
-		remove; // 0x000000018ABA1A70-0x000000018ABA1ABC
+		add; // 0x000000018CD95D48-0x000000018CD95D94
+		remove; // 0x000000018CD96288-0x000000018CD962D4
 	}
 
 	// Nested types
-	private class BBPHWEilcatnRSLrVfHUObqnlgQO // TypeDefIndex: 53719
+	private class BBPHWEilcatnRSLrVfHUObqnlgQO // TypeDefIndex: 78963
 	{
 		// Fields
 		public ushort CYtxSBIcDASRtcEBicXiSLSLYjuR; // 0x10
 		public ushort JgkXfSUVjtjfBrljIbYIZHzHjCnF; // 0x12
 
 		// Constructors
-		public BBPHWEilcatnRSLrVfHUObqnlgQO(ushort param_000737ec, ushort param_000737ed); // 0x0000000184DA87E0-0x0000000184DA87F0
+		public BBPHWEilcatnRSLrVfHUObqnlgQO(ushort param_000aa153, ushort param_000aa154); // 0x00000001872568D0-0x00000001872568E0
 	}
 
-	internal class TYZWQvCctKFtWPxDncuiJgmJUxed : IdxcAbgzMTzxeMxdElxolIcPzwurA // TypeDefIndex: 53720
+	internal class TYZWQvCctKFtWPxDncuiJgmJUxed : IdxcAbgzMTzxeMxdElxolIcPzwurA // TypeDefIndex: 78964
 	{
 		// Fields
 		private IntPtr isHQxXecLduNfiWGxkrHfvsWgIsE; // 0x10
@@ -3449,45 +3435,45 @@ internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 537
 		private bool VEuNYdpZVeDRskoHCxMnQySLfVeQ; // 0x9C
 
 		// Properties
-		public IntPtr GebVmHpsJPFlDsHlVnlvHSQVztdK { get; } // 0x000000018385B100-0x000000018385B110 
-		public bool zDVgUhrfAfIgYMdclajHjFgtbNJXA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
-		public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x0000000182FFF600-0x0000000182FFF610 
-		public ZmPxydCEzlPckyvKlHErkFzgGOFX BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x0000000184D862C0-0x0000000184D862D0 
-		public pKfkmqTLezjFVzcIBPtMMyRxABwH FgnMidYTRITgpetgeSFsBzmtVqg { get; } // 0x0000000184D86200-0x0000000184D86210 
-		public string QVMkSNFdzYBkSGGdcYhOkBRBEqJFb { get; } // 0x00000001811F36E0-0x00000001811F36F0 
-		public bool jRIXoCZDUfZanaiKGfTModoQmerH { get; set; } // 0x00000001812081B0-0x0000000181208610 0x00000001841E1670-0x00000001841E1680
-		public aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] vnsxdvCfmAdoMUjBnHXzFustAXhEb { get; } // 0x0000000184D86260-0x0000000184D86270 
-		public JXtFhzUqozCGLAAgSlsxdSapKppi[] NdwbjMyHWBpjFInkCzszCfJNATFjA { get; } // 0x0000000184D861F0-0x0000000184D86200 
-		public string QXKDwkyKHflTUTDjlilpWKmzxeZi { get; } // 0x0000000184D85A60-0x0000000184D85A70 
-		public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x0000000184D86270-0x0000000184D86280 
-		public int eKPYMUXhTxBdzYqkhjcxbAyVDCugA { get; } // 0x0000000184D86570-0x0000000184D86580 
-		public int IgAWnnkazSdEUGswQhfizzwTVqAs { get; } // 0x0000000184D86560-0x0000000184D86570 
-		public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x0000000184D88340-0x0000000184D88350 
-		public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x0000000184D86230-0x0000000184D86240 
-		public bool BJdhruPWQfbEmflPqJRhZZyRVxDTA { get; } // 0x00000001812081B0-0x0000000181208610 
+		public IntPtr GebVmHpsJPFlDsHlVnlvHSQVztdK { get; } // 0x0000000182234E30-0x0000000182234E40 
+		public bool zDVgUhrfAfIgYMdclajHjFgtbNJXA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187240E10-0x0000000187240E20 0x0000000187240E30-0x0000000187240E40
+		public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x00000001851A4410-0x00000001851A4420 
+		public ZmPxydCEzlPckyvKlHErkFzgGOFX BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x000000018225E800-0x000000018225E810 
+		public pKfkmqTLezjFVzcIBPtMMyRxABwH FgnMidYTRITgpetgeSFsBzmtVqg { get; } // 0x000000018226EE80-0x000000018226EE90 
+		public string QVMkSNFdzYBkSGGdcYhOkBRBEqJFb { get; } // 0x00000001829600D0-0x00000001829600E0 
+		public bool jRIXoCZDUfZanaiKGfTModoQmerH { get; set; } // 0x00000001843FFFF0-0x0000000184400000 0x0000000186805BA0-0x0000000186805BB0
+		public aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] vnsxdvCfmAdoMUjBnHXzFustAXhEb { get; } // 0x00000001828D49D0-0x00000001828D49E0 
+		public JXtFhzUqozCGLAAgSlsxdSapKppi[] NdwbjMyHWBpjFInkCzszCfJNATFjA { get; } // 0x0000000187232F50-0x0000000187232F60 
+		public string QXKDwkyKHflTUTDjlilpWKmzxeZi { get; } // 0x000000018226EEA0-0x000000018226EEB0 
+		public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x000000018226EBD0-0x000000018226EBE0 
+		public int eKPYMUXhTxBdzYqkhjcxbAyVDCugA { get; } // 0x00000001872331A0-0x00000001872331B0 
+		public int IgAWnnkazSdEUGswQhfizzwTVqAs { get; } // 0x0000000187233600-0x0000000187233610 
+		public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x000000018226ED60-0x000000018226ED70 
+		public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x0000000187232F80-0x0000000187232F90 
+		public bool BJdhruPWQfbEmflPqJRhZZyRVxDTA { get; } // 0x00000001843FFFF0-0x0000000184400000 
 
 		// Constructors
-		public TYZWQvCctKFtWPxDncuiJgmJUxed(IntPtr param_000737f0, string param_000737f1, string param_000737f2, string param_000737f3, string param_000737f4, int param_000737f5, int param_000737f6, bool param_000737f7, string param_000737f8); // 0x000000018ABA8564-0x000000018ABA8E64
+		public TYZWQvCctKFtWPxDncuiJgmJUxed(IntPtr param_000aa157, string param_000aa158, string param_000aa159, string param_000aa15a, string param_000aa15b, int param_000aa15c, int param_000aa15d, bool param_000aa15e, string param_000aa15f); // 0x000000018CD9CE6C-0x000000018CD9D654
 
 		// Methods
-		public static TYZWQvCctKFtWPxDncuiJgmJUxed qXhKlRveaMOfkyfZqUhJZWCFRfkd(IntPtr param_000737ee, string param_000737ef); // 0x000000018ABA9A88-0x000000018ABA9B30
-		public bool xULxbDXErMDWumqPoCklYRksejXD(bool param_000737fb, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000737fc, bool param_000737fd, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000737fe, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000737ff); // 0x000000018ABA9B3C-0x000000018ABA9D10
-		public void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018ABA8124-0x000000018ABA816C
-		public bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_00073800, int param_00073801); // 0x00000001812081B0-0x0000000181208610
-		public bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_00073802, int param_00073803, byte param_00073804 = 0 /* Metadata: 0x02333D3D */); // 0x000000018ABA91E8-0x000000018ABA95A8
-		public string efFcegvAymobYqJrtnRqLeSRXvqm(); // 0x000000018ABA9960-0x000000018ABA9A88
-		public bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_00073805); // 0x000000018ABA95A8-0x000000018ABA9960
-		public string aWBHzUPzbLPVEfFhmcDSkVnnSvncA(); // 0x000000018ABA915C-0x000000018ABA91E8
-		public bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_00073806); // 0x000000018ABA8E64-0x000000018ABA915C
-		public string FpKBQHheYjWwGPXekyQQsMXbqOsJA(); // 0x000000018ABA81B8-0x000000018ABA8244
-		public bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_00073807); // 0x000000018ABA8244-0x000000018ABA8564
-		public void Dispose(); // 0x00000001841E1670-0x00000001841E1680
-		public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_00073808, int param_00073809); // 0x00000001812081B0-0x0000000181208610
-		private static byte[] rBaHfZKawipRifPvkvHJKbEAcqIbA(int param_0007380a); // 0x000000018ABA9B30-0x000000018ABA9B3C
-		private static byte[] EBVcyhHKcGqGprrNlMmPYhzuwScN(int param_0007380b); // 0x000000018ABA816C-0x000000018ABA81B8
+		public static TYZWQvCctKFtWPxDncuiJgmJUxed qXhKlRveaMOfkyfZqUhJZWCFRfkd(IntPtr param_000aa155, string param_000aa156); // 0x000000018CD9E12C-0x000000018CD9E1DC
+		public bool xULxbDXErMDWumqPoCklYRksejXD(bool param_000aa162, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa163, bool param_000aa164, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa165, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000aa166); // 0x000000018CD9E1E8-0x000000018CD9E3B8
+		public void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018CD9CB14-0x000000018CD9CB5C
+		public bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_000aa167, int param_000aa168); // 0x00000001843FFFF0-0x0000000184400000
+		public bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_000aa169, int param_000aa16a, byte param_000aa16b = 0 /* Metadata: 0x0262C181 */); // 0x000000018CD9D9D8-0x000000018CD9DCF4
+		public string efFcegvAymobYqJrtnRqLeSRXvqm(); // 0x000000018CD9E004-0x000000018CD9E12C
+		public bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_000aa16c); // 0x000000018CD9DCF4-0x000000018CD9E004
+		public string aWBHzUPzbLPVEfFhmcDSkVnnSvncA(); // 0x000000018CD9D948-0x000000018CD9D9D8
+		public bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_000aa16d); // 0x000000018CD9D654-0x000000018CD9D948
+		public string FpKBQHheYjWwGPXekyQQsMXbqOsJA(); // 0x000000018CD9CBA8-0x000000018CD9CC38
+		public bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_000aa16e); // 0x000000018CD9CC38-0x000000018CD9CE6C
+		public void Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+		public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_000aa16f, int param_000aa170); // 0x00000001843FFFF0-0x0000000184400000
+		private static byte[] rBaHfZKawipRifPvkvHJKbEAcqIbA(int param_000aa171); // 0x000000018CD9E1DC-0x000000018CD9E1E8
+		private static byte[] EBVcyhHKcGqGprrNlMmPYhzuwScN(int param_000aa172); // 0x000000018CD9CB5C-0x000000018CD9CBA8
 	}
 
-	internal class ruxuuPDanVezylUfoGeMkVKJEnht : HIDDeviceDriver.IHIDDevice // TypeDefIndex: 53721
+	internal class ruxuuPDanVezylUfoGeMkVKJEnht : HIDDeviceDriver.IHIDDevice // TypeDefIndex: 78965
 	{
 		// Fields
 		private IdxcAbgzMTzxeMxdElxolIcPzwurA gFLkmEnVjMQSOwejMhMlKHEESruD; // 0x10
@@ -3496,36 +3482,36 @@ internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 537
 		private YWFEqRKsCWKdGhNygVhQhOHuhIISb ofeMqKayCcCqfzsNnflltZtNnCnw; // 0x48
 
 		// Properties
-		public HIDDeviceDriver.HIDProperties properties { get; } // 0x0000000184D921A0-0x0000000184D921C0 
+		public HIDDeviceDriver.HIDProperties properties { get; } // 0x000000018723FF30-0x000000018723FF50 
 
 		// Constructors
-		public ruxuuPDanVezylUfoGeMkVKJEnht(IdxcAbgzMTzxeMxdElxolIcPzwurA param_0007380c, jtKDhEFaghTPhKKmJDXICzhwqTbdA param_0007380d); // 0x000000018ABAD0D0-0x000000018ABAD33C
+		public ruxuuPDanVezylUfoGeMkVKJEnht(IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa173, jtKDhEFaghTPhKKmJDXICzhwqTbdA param_000aa174); // 0x000000018CDA18A8-0x000000018CDA1B14
 
 		// Methods
-		public byte[] GetHidFeatureData(byte reportId, int reportLength, int timeoutMs, int retryCount); // 0x000000018ABACE3C-0x000000018ABACF2C
-		public bool ReadSync(IntPtr buffer, int bytesToRead, int timeoutMs); // 0x000000018ABACF2C-0x000000018ABAD01C
-		public void WriteAsync(SAcTodLryXZPmeZqsKbnQQxsbBmo outputReport, int timeoutMs); // 0x000000018ABAD01C-0x000000018ABAD054
-		public bool WriteSync(SAcTodLryXZPmeZqsKbnQQxsbBmo outputReport, int timeoutMs); // 0x000000018ABAD054-0x000000018ABAD0D0
+		public byte[] GetHidFeatureData(byte reportId, int reportLength, int timeoutMs, int retryCount); // 0x000000018CDA160C-0x000000018CDA1700
+		public bool ReadSync(IntPtr buffer, int bytesToRead, int timeoutMs); // 0x000000018CDA1700-0x000000018CDA17F4
+		public void WriteAsync(SAcTodLryXZPmeZqsKbnQQxsbBmo outputReport, int timeoutMs); // 0x000000018CDA17F4-0x000000018CDA182C
+		public bool WriteSync(SAcTodLryXZPmeZqsKbnQQxsbBmo outputReport, int timeoutMs); // 0x000000018CDA182C-0x000000018CDA18A8
 	}
 
 	[Serializable]
 	[CompilerGenerated]
-	private sealed class omwAInyGiLnGMfhQQeVbChBjqJiSA // TypeDefIndex: 53722
+	private sealed class omwAInyGiLnGMfhQQeVbChBjqJiSA // TypeDefIndex: 78966
 	{
 		// Fields
 		public static readonly omwAInyGiLnGMfhQQeVbChBjqJiSA __9; // 0x00
 		public static Action<xLiBDACQHMkUJDONyqwWiGgepFzkA> __9__63_0; // 0x08
 
 		// Constructors
-		static omwAInyGiLnGMfhQQeVbChBjqJiSA(); // 0x0000000184D3E7D0-0x0000000184D3E830
-		public omwAInyGiLnGMfhQQeVbChBjqJiSA(); // 0x00000001841E1670-0x00000001841E1680
+		static omwAInyGiLnGMfhQQeVbChBjqJiSA(); // 0x00000001871E43A0-0x00000001871E4400
+		public omwAInyGiLnGMfhQQeVbChBjqJiSA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void YjnFatoRtXbnwbzKGbIYKKRidrkJ(xLiBDACQHMkUJDONyqwWiGgepFzkA param_00073819); // 0x000000018ABAC6A0-0x000000018ABAC6E8
+		internal void YjnFatoRtXbnwbzKGbIYKKRidrkJ(xLiBDACQHMkUJDONyqwWiGgepFzkA param_000aa180); // 0x000000018CDA0E08-0x000000018CDA0E50
 	}
 
 	[CompilerGenerated]
-	private sealed class ikmtoIrgaQEmwgrLGzLuySoJFqajA // TypeDefIndex: 53723
+	private sealed class ikmtoIrgaQEmwgrLGzLuySoJFqajA // TypeDefIndex: 78967
 	{
 		// Fields
 		public IList<prXDGPaiLRznhHdqRYUShDUjqIyH.IYkFHeDTeaiIvMIzYRFbPiZVuQFL> GOzTOfPYxjKiJhXSvjNBuDyvlcEN; // 0x10
@@ -3533,108 +3519,108 @@ internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 537
 		public Predicate<string> cfKNSsaNXhxtiqgPDGlZJuyUMbNe; // 0x20
 
 		// Constructors
-		public ikmtoIrgaQEmwgrLGzLuySoJFqajA(); // 0x00000001841E1670-0x00000001841E1680
+		public ikmtoIrgaQEmwgrLGzLuySoJFqajA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal bool bnFqPCshRloXmbhRXaIjcWkTkDoM(string param_0007381a); // 0x000000018ABAB9C4-0x000000018ABABA50
+		internal bool bnFqPCshRloXmbhRXaIjcWkTkDoM(string param_000aa181); // 0x000000018CDA0098-0x000000018CDA0124
 	}
 
 	[CompilerGenerated]
-	private sealed class prZhJkGBFrwUqAKCmChravCGvJNP // TypeDefIndex: 53724
+	private sealed class prZhJkGBFrwUqAKCmChravCGvJNP // TypeDefIndex: 78968
 	{
 		// Fields
 		public xLiBDACQHMkUJDONyqwWiGgepFzkA PvKagwjwgdXskZTrVyKqnAaEjUjp; // 0x10
 
 		// Constructors
-		public prZhJkGBFrwUqAKCmChravCGvJNP(); // 0x00000001841E1670-0x00000001841E1680
+		public prZhJkGBFrwUqAKCmChravCGvJNP(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal bool dgUlRWoEXCStrfZCEgzrjEuSgUqI(xLiBDACQHMkUJDONyqwWiGgepFzkA param_0007381b); // 0x000000018ABAC968-0x000000018ABAC9D0
+		internal bool dgUlRWoEXCStrfZCEgzrjEuSgUqI(xLiBDACQHMkUJDONyqwWiGgepFzkA param_000aa182); // 0x000000018CDA10D0-0x000000018CDA1178
 	}
 
 	[CompilerGenerated]
-	private sealed class GlNhCCgMjcQIVwwXMEiSWzZbAfnX // TypeDefIndex: 53725
+	private sealed class GlNhCCgMjcQIVwwXMEiSWzZbAfnX // TypeDefIndex: 78969
 	{
 		// Fields
 		public szduZeeDEtcYluGujxaTriOejwKbA fssrnmhfPTfupcxFxQGSQWsdnHnDA; // 0x10
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x18
 
 		// Constructors
-		public GlNhCCgMjcQIVwwXMEiSWzZbAfnX(); // 0x00000001841E1670-0x00000001841E1680
+		public GlNhCCgMjcQIVwwXMEiSWzZbAfnX(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void vZjcZWMEntIzLtcjbeTsSgTINytg(); // 0x0000000183826310-0x0000000183826490
+		internal void vZjcZWMEntIzLtcjbeTsSgTINytg(); // 0x000000018692ED10-0x000000018692EE90
 	}
 
 	[CompilerGenerated]
-	private sealed class FWZCGroCJfXRIUZkmKoLGrbKjzOT // TypeDefIndex: 53726
+	private sealed class FWZCGroCJfXRIUZkmKoLGrbKjzOT // TypeDefIndex: 78970
 	{
 		// Fields
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x10
 
 		// Constructors
-		public FWZCGroCJfXRIUZkmKoLGrbKjzOT(); // 0x00000001841E1670-0x00000001841E1680
+		public FWZCGroCJfXRIUZkmKoLGrbKjzOT(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void ObDUYKchQWRiSbkmIIbnYCQOGhPN(); // 0x000000018ABA59EC-0x000000018ABA5AD0
+		internal void ObDUYKchQWRiSbkmIIbnYCQOGhPN(); // 0x000000018CD9A368-0x000000018CD9A44C
 	}
 
 	[CompilerGenerated]
-	private sealed class VNMdXtDLkQXEpSyYombUnkKjGEvc // TypeDefIndex: 53727
+	private sealed class VNMdXtDLkQXEpSyYombUnkKjGEvc // TypeDefIndex: 78971
 	{
 		// Fields
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x10
 
 		// Constructors
-		public VNMdXtDLkQXEpSyYombUnkKjGEvc(); // 0x00000001841E1670-0x00000001841E1680
+		public VNMdXtDLkQXEpSyYombUnkKjGEvc(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void PeFtLtOYkjxixvKmeghUafarnKuOA(); // 0x000000018ABA9F8C-0x000000018ABAA040
+		internal void PeFtLtOYkjxixvKmeghUafarnKuOA(); // 0x000000018CD9E634-0x000000018CD9E6E8
 	}
 
 	[CompilerGenerated]
-	private sealed class akdamyrqQLDGcybxMjSNvUiasAGP // TypeDefIndex: 53728
+	private sealed class akdamyrqQLDGcybxMjSNvUiasAGP // TypeDefIndex: 78972
 	{
 		// Fields
 		public szduZeeDEtcYluGujxaTriOejwKbA fssrnmhfPTfupcxFxQGSQWsdnHnDA; // 0x10
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x18
 
 		// Constructors
-		public akdamyrqQLDGcybxMjSNvUiasAGP(); // 0x00000001841E1670-0x00000001841E1680
+		public akdamyrqQLDGcybxMjSNvUiasAGP(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void lOgeMHWULyuDCCedGGeEgOskOqiMA(); // 0x0000000183824C30-0x0000000183824CC0
+		internal void lOgeMHWULyuDCCedGGeEgOskOqiMA(); // 0x000000018692EBF0-0x000000018692EC80
 	}
 
 	[CompilerGenerated]
-	private sealed class gqmJDTUdRrFISImawJTcoGBHLmAib // TypeDefIndex: 53729
+	private sealed class gqmJDTUdRrFISImawJTcoGBHLmAib // TypeDefIndex: 78973
 	{
 		// Fields
 		public szduZeeDEtcYluGujxaTriOejwKbA fssrnmhfPTfupcxFxQGSQWsdnHnDA; // 0x10
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x18
 
 		// Constructors
-		public gqmJDTUdRrFISImawJTcoGBHLmAib(); // 0x00000001841E1670-0x00000001841E1680
+		public gqmJDTUdRrFISImawJTcoGBHLmAib(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void oXGILJBqCMgmWATlAeDwCJthyJYJB(); // 0x0000000183826280-0x0000000183826310
+		internal void oXGILJBqCMgmWATlAeDwCJthyJYJB(); // 0x000000018692EC80-0x000000018692ED10
 	}
 
 	[CompilerGenerated]
-	private sealed class GoQCAXddPhpZnFSgEIGjhNZHVvCPb // TypeDefIndex: 53730
+	private sealed class GoQCAXddPhpZnFSgEIGjhNZHVvCPb // TypeDefIndex: 78974
 	{
 		// Fields
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x10
 
 		// Constructors
-		public GoQCAXddPhpZnFSgEIGjhNZHVvCPb(); // 0x00000001841E1670-0x00000001841E1680
+		public GoQCAXddPhpZnFSgEIGjhNZHVvCPb(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void TKruLIUpBNRzvTmHGklOHaWPrKVD(); // 0x000000018ABA5AD0-0x000000018ABA5B84
+		internal void TKruLIUpBNRzvTmHGklOHaWPrKVD(); // 0x000000018CD9A44C-0x000000018CD9A500
 	}
 
 	[CompilerGenerated]
-	private sealed class HhYFZUOAMYchRCDHhmKdDkGmRWyPA // TypeDefIndex: 53731
+	private sealed class HhYFZUOAMYchRCDHhmKdDkGmRWyPA // TypeDefIndex: 78975
 	{
 		// Fields
 		public szduZeeDEtcYluGujxaTriOejwKbA fssrnmhfPTfupcxFxQGSQWsdnHnDA; // 0x10
@@ -3642,88 +3628,88 @@ internal class szduZeeDEtcYluGujxaTriOejwKbA : IInputSource // TypeDefIndex: 537
 		public bool HGEsqLPPQDyoMIyIJfbjyrMBSKyQ; // 0x20
 
 		// Constructors
-		public HhYFZUOAMYchRCDHhmKdDkGmRWyPA(); // 0x00000001841E1670-0x00000001841E1680
+		public HhYFZUOAMYchRCDHhmKdDkGmRWyPA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal void mLWwkuAiiNmrmxcHxHMhkiABaSQfb(); // 0x0000000184B21940-0x0000000184B219F0
+		internal void mLWwkuAiiNmrmxcHxHMhkiABaSQfb(); // 0x0000000185B777B0-0x0000000185B77860
 	}
 
 	// Constructors
-	public szduZeeDEtcYluGujxaTriOejwKbA(ConfigVars param_000737a3, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000737a4, bool param_000737a5, bool param_000737a6, ZTnhIRoUwpwDSquXvRdXVrHhmNqH param_000737a7, BGFFhOVnzqjmrCUSbuDuqqEvzAIS param_000737a8); // 0x0000000183A43590-0x0000000183A43EC0
-	static szduZeeDEtcYluGujxaTriOejwKbA(); // 0x00000001849BACD0-0x00000001849BAE50
+	public szduZeeDEtcYluGujxaTriOejwKbA(ConfigVars param_000aa10a, hohNsNaAhdJOLmrreLGwwtWoRfkL param_000aa10b, bool param_000aa10c, bool param_000aa10d, ZTnhIRoUwpwDSquXvRdXVrHhmNqH param_000aa10e, BGFFhOVnzqjmrCUSbuDuqqEvzAIS param_000aa10f); // 0x0000000185B72300-0x0000000185B72C30
+	static szduZeeDEtcYluGujxaTriOejwKbA(); // 0x0000000186E13F30-0x0000000186E140B0
 
 	// Methods
-	public void YYSIcdQZNwuArKWlGMDmRJNqArY(); // 0x00000001841E1670-0x00000001841E1680
-	public void zqSkLmupRiXSvinHfYCcdyyKpYwJ(); // 0x00000001841D2B70-0x00000001841D2C80
-	public bool TBJVCXPqQIwZjxnHHtaOCFIuckci(); // 0x0000000183A43050-0x0000000183A43140
-	public bool jVjgOpvShvSdLChqjIbSIbIIanUs(); // 0x000000018ABA1940-0x000000018ABA1964
-	public bool BFfsjWiEpJdOjSFSiJcagkWdgaVe(); // 0x0000000183A41A10-0x0000000183A41A60
-	public bool JIOXLRuMyjcqaJZnjmXwnbWNmUAcA(bool param_000737a9); // 0x00000001833038A0-0x00000001833038B0
-	public void SystemDeviceDisconnected(); // 0x000000018ABA1178-0x000000018ABA1184
-	public void SystemDeviceConnected(); // 0x000000018ABA1178-0x000000018ABA1184
-	public void Update(); // 0x00000001833036D0-0x0000000183303750
-	public void UpdateDevices(UpdateLoopType updateLoop); // 0x0000000183303070-0x00000001833030C0
-	public void UpdateFinished(); // 0x00000001833030C0-0x0000000183303110
+	public void YYSIcdQZNwuArKWlGMDmRJNqArY(); // 0x0000000186805BA0-0x0000000186805BB0
+	public void zqSkLmupRiXSvinHfYCcdyyKpYwJ(); // 0x00000001864836C0-0x00000001864837C0
+	public bool TBJVCXPqQIwZjxnHHtaOCFIuckci(); // 0x0000000186B65B50-0x0000000186B65C40
+	public bool jVjgOpvShvSdLChqjIbSIbIIanUs(); // 0x000000018CD96054-0x000000018CD96078
+	public bool BFfsjWiEpJdOjSFSiJcagkWdgaVe(); // 0x0000000186B65C40-0x0000000186B65C90
+	public bool JIOXLRuMyjcqaJZnjmXwnbWNmUAcA(bool param_000aa110); // 0x00000001851DFE20-0x00000001851DFE30
+	public void SystemDeviceDisconnected(); // 0x000000018CD95884-0x000000018CD95890
+	public void SystemDeviceConnected(); // 0x000000018CD95884-0x000000018CD95890
+	public void Update(); // 0x00000001851DF5D0-0x00000001851DF660
+	public void UpdateDevices(UpdateLoopType updateLoop); // 0x00000001851DFCA0-0x00000001851DFCF0
+	public void UpdateFinished(); // 0x00000001851DFCF0-0x00000001851DFD40
 	public IList<T> GetJoysticks<T>()
 		where T : class;
-	private List<xLiBDACQHMkUJDONyqwWiGgepFzkA> jeLlJnpyFXRSpQwfmBbZzMeqKJMd(bool param_000737ad); // 0x0000000183A43EC0-0x0000000183A44200
-	private static void IvaiVVNYacgZnqKZfujTUHpfbBhU(ref List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000737ae, List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000737af); // 0x00000001841D2C80-0x00000001841D2EC0
-	private xLiBDACQHMkUJDONyqwWiGgepFzkA oMpNWtDkqBarMtULfBUYmGnseBtO(IntPtr param_000737b0, mrpPdMulHkXGyvibMdjBBPWOPSOo param_000737b1, IList<prXDGPaiLRznhHdqRYUShDUjqIyH.IYkFHeDTeaiIvMIzYRFbPiZVuQFL> param_000737b2, List<string> param_000737b3, int param_000737b4); // 0x0000000183A44200-0x0000000183A44400
-	private xLiBDACQHMkUJDONyqwWiGgepFzkA UtmCNmkcQjejyuWQFZPRpnzkaTAV(prXDGPaiLRznhHdqRYUShDUjqIyH.IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000737b5, int param_000737b6); // 0x000000018ABA11F8-0x000000018ABA13D0
-	private xLiBDACQHMkUJDONyqwWiGgepFzkA lagCYTOqVShxXMDfailyhoDMeQZQA(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000737b7, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000737b8, IntPtr param_000737b9, ushort param_000737ba, ushort param_000737bb, int param_000737bc); // 0x0000000183A44590-0x0000000183A44670
-	private bool sWjKGFeakMLKUrcJiTerGpkwEnlgA(ushort param_000737bd, ushort param_000737be); // 0x0000000183A44400-0x0000000183A44550
-	private int EsLwNrByQcEYDaVUhdrUcJekSZrc(); // 0x0000000183A44AC0-0x0000000183A44B10
-	private int HAlcbAPlpAGCjaHUimzYPmYgHkkwA(); // 0x000000018ABA0A14-0x000000018ABA0AEC
-	private xLiBDACQHMkUJDONyqwWiGgepFzkA AIeKyVaARAbqBseIBlYSeGYKIRPf(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000737bf, IntPtr param_000737c0, int param_000737c1, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000737c2, List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000737c3, bool param_000737c4); // 0x0000000183A448F0-0x0000000183A44AC0
-	private xLiBDACQHMkUJDONyqwWiGgepFzkA ldSiUwcEKgSlJKqcqaBlKxEjgOiDA(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000737c5, IntPtr param_000737c6); // 0x0000000183F4D230-0x0000000183F4D290
-	private static int SVJCECoUpFLjPlNOqfDiLxmBvMRM(xLiBDACQHMkUJDONyqwWiGgepFzkA param_000737c7, xLiBDACQHMkUJDONyqwWiGgepFzkA param_000737c8); // 0x000000018ABA0C84-0x000000018ABA0D70
-	private void NaqpfzKBgzvsCPBYctRnpQSwrUjw(); // 0x0000000183A44EA0-0x0000000183A44F70
-	private void BgjPLwHdmNLeqEXEBYSYXgIwCgMn(); // 0x000000018ABA06F0-0x000000018ABA07B8
-	private void CNuXwRByEAlSsRNuVKoMfHXJXoPk(); // 0x000000018ABA07CC-0x000000018ABA0984
-	private void mCUaWYMQNsJjivLOnmAVDLStzZee(); // 0x0000000183304040-0x0000000183304190
-	private void HYrmDLgtoGMidKkGLNKlNxBDvYRJ(); // 0x000000018ABA0B4C-0x000000018ABA0C44
-	private void BXxYjqUovILvkoVjZpJeCaVZGoVW(); // 0x000000018ABA06B0-0x000000018ABA06F0
-	private void AtpbzvkCQeShMyQbveVpfYMUlQtd(); // 0x000000018ABA0484-0x000000018ABA06B0
-	private void eGtyJqMJNzzxMIcUENFayGEhhLxH(IntPtr param_000737c9); // 0x000000018ABA18AC-0x000000018ABA1908
-	private void VaMlaCTsZZHenILJSgqVboewfQLaA(); // 0x0000000183A45B10-0x0000000183A45BD0
-	private void pOBVblzEENapurvRdFzQiCLogZeD(); // 0x0000000183A45400-0x0000000183A454F0
-	public static bool iIeFvfbrvrhiakPoCdEUVroOLDrjA(lGhpciCdniKLZLdOpeIcKWUFYWuAA param_000737ca, out uint param_000737cb); // 0x0000000183302110-0x00000001833021A0
-	private bool qTdkVSvlDLSajpAXJngHFmSCoeSN(Rewired.ControllerType param_000737cc, lGhpciCdniKLZLdOpeIcKWUFYWuAA param_000737cd, uint param_000737ce, out IntPtr param_000737cf); // 0x00000001833022D0-0x0000000183302440
-	private void ZVKkhwUCDMDnGjQIBDeMXEEAhxbdb(IntPtr param_000737d0); // 0x000000018ABA15E8-0x000000018ABA1634
-	private void yKMeFGEqxNaAigEkJZuUwKeFgLwxA(); // 0x0000000183A45BD0-0x0000000183A45BE0
-	private void xzDqvRzonUdMvwyTsfWTKstwcrkV(); // 0x0000000183A44DB0-0x0000000183A44EA0
-	private void gKYevTglWegheEqthLLgUznwcqKGb(); // 0x000000018ABA1908-0x000000018ABA1940
-	private void eDAGGEpCSVLGsTJGNDIMtSYQuDwC(); // 0x000000018ABA1684-0x000000018ABA18AC
-	private void HSAIzkNyFOAYbKJKgLpCVKuubomb(); // 0x000000018ABA0AEC-0x000000018ABA0B4C
-	private void xbdWTeHMyveQReZGlhbtoMIyilfe(); // 0x0000000183328610-0x0000000183328850
-	private void YBIKlNzikKbQIlpVFckxxsxuhWDj(); // 0x000000018ABA13D0-0x000000018ABA15E8
-	private void svtjyZxQguJEqsRYyrtwCzhqhquf(VAmVuDvNsSbewEPAcnmMyxvuGlBo.kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000737d1); // 0x0000000183A45330-0x0000000183A45400
-	private static VAmVuDvNsSbewEPAcnmMyxvuGlBo bTLupeoyTomBFOiIqcRdAmMlwICN(VAmVuDvNsSbewEPAcnmMyxvuGlBo.kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000737d2); // 0x0000000184B219F0-0x0000000184B21A80
-	private void IjeZlMjSdOEVHHbBtqUaegyNgOEE(); // 0x0000000183A45DC0-0x0000000183A45F60
-	private void nBeuQYAYJbweumPcWoeFnUlOsiOX(); // 0x000000018ABA1964-0x000000018ABA1A70
-	private void QxWvCVWYWrVtTIGBhKsSrDiqbcDcA(bool param_000737d3); // 0x000000018ABA0C44-0x000000018ABA0C84
-	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000737d4); // 0x0000000184D86FA0-0x0000000184D86FB0
-	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000737d5); // 0x0000000184D88E90-0x0000000184D88EA0
-	private void CLTBAgqnxQgewuhANitNRputSTiR(FullScreenMode param_000737d6); // 0x000000018ABA07B8-0x000000018ABA07CC
-	private void FIRaUXoJZMEkgIpqqHgxeQmHGhvAA(IntPtr param_000737d7); // 0x000000018ABA09D4-0x000000018ABA0A14
-	private IntPtr EHpWMcCNNRKjmTJfVKblgdrxqEyR(IntPtr param_000737d8, uint param_000737d9, IntPtr param_000737da, IntPtr param_000737db); // 0x0000000183ECB120-0x0000000183ECB2A0
-	private void qkuXeeejCQiWxHPFGTnqTKUmGVtiA(Action param_000737dc, bool param_000737dd); // 0x0000000183A44F70-0x0000000183A44F90
-	private void EPlRczSzrQiPhqdzQkoGvhyPzhnP(zKVkJdcdYcKLvtNQJglDKOzGsCiJA param_000737de, double param_000737df); // 0x0000000183F4D1B0-0x0000000183F4D230
-	private void UJpunUADhWsykxnQeUpOiqNyrDGl(DjdfDrcNukTKWfrrRLbyuQXQgKyCb param_000737e0, double param_000737e1); // 0x000000018381CF50-0x000000018381D020
-	private void mwjfWWCtWiqiGQRWhfkGBoNPFbjw(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_000737e2, double param_000737e3); // 0x000000018381D020-0x000000018381D050
-	private void aaXYjTgngXnPzsiDHlzgjPghTuEt(mSXBYzcjZtWtzBMaRNJMFIuGieHBb param_000737e4, double param_000737e5); // 0x000000018381CE50-0x000000018381CEA0
-	private void pmwewcEnUtTWMJqgiSPcqzEXdCQmA(YuzVBZAVrBXogjeFXEIGbMAEejwR param_000737e6, double param_000737e7); // 0x000000018381CEA0-0x000000018381CED0
-	private void gaixKEKXsvqNKuHlJjlMJdAIClvc(IntPtr param_000737e8); // 0x0000000184DA87C0-0x0000000184DA87D0
-	private void tlSEpQyVSWnlGzjHEgCjodhuJxXk(); // 0x0000000184DA87C0-0x0000000184DA87D0
-	public void Dispose(); // 0x000000018ABA0984-0x000000018ABA09D4
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABA1184-0x000000018ABA11F8
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000737e9); // 0x000000018ABA0D70-0x000000018ABA1178
-	public static bool tCbcPZwKuIOKmAcgXlTEByoPzOae(CRhcTXpzBCukpjnPBnBpAuCFmFrX param_000737ea, out int param_000737eb); // 0x0000000183656980-0x0000000183656C90
+	private List<xLiBDACQHMkUJDONyqwWiGgepFzkA> jeLlJnpyFXRSpQwfmBbZzMeqKJMd(bool param_000aa114); // 0x0000000185B72EE0-0x0000000185B73220
+	private static void IvaiVVNYacgZnqKZfujTUHpfbBhU(ref List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000aa115, List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000aa116); // 0x00000001864837C0-0x0000000186483A00
+	private xLiBDACQHMkUJDONyqwWiGgepFzkA oMpNWtDkqBarMtULfBUYmGnseBtO(IntPtr param_000aa117, mrpPdMulHkXGyvibMdjBBPWOPSOo param_000aa118, IList<prXDGPaiLRznhHdqRYUShDUjqIyH.IYkFHeDTeaiIvMIzYRFbPiZVuQFL> param_000aa119, List<string> param_000aa11a, int param_000aa11b); // 0x0000000185B73220-0x0000000185B73440
+	private xLiBDACQHMkUJDONyqwWiGgepFzkA UtmCNmkcQjejyuWQFZPRpnzkaTAV(prXDGPaiLRznhHdqRYUShDUjqIyH.IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa11c, int param_000aa11d); // 0x000000018CD95908-0x000000018CD95AE4
+	private xLiBDACQHMkUJDONyqwWiGgepFzkA lagCYTOqVShxXMDfailyhoDMeQZQA(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000aa11e, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa11f, IntPtr param_000aa120, ushort param_000aa121, ushort param_000aa122, int param_000aa123); // 0x0000000185B73590-0x0000000185B73670
+	private bool sWjKGFeakMLKUrcJiTerGpkwEnlgA(ushort param_000aa124, ushort param_000aa125); // 0x0000000185B73440-0x0000000185B73590
+	private int EsLwNrByQcEYDaVUhdrUcJekSZrc(); // 0x0000000185B72DB0-0x0000000185B72E30
+	private int HAlcbAPlpAGCjaHUimzYPmYgHkkwA(); // 0x000000018CD95090-0x000000018CD95168
+	private xLiBDACQHMkUJDONyqwWiGgepFzkA AIeKyVaARAbqBseIBlYSeGYKIRPf(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000aa126, IntPtr param_000aa127, int param_000aa128, IdxcAbgzMTzxeMxdElxolIcPzwurA param_000aa129, List<xLiBDACQHMkUJDONyqwWiGgepFzkA> param_000aa12a, bool param_000aa12b); // 0x0000000185B73930-0x0000000185B73AF0
+	private xLiBDACQHMkUJDONyqwWiGgepFzkA ldSiUwcEKgSlJKqcqaBlKxEjgOiDA(ZmIGzJfowxKiyvJARuzfVHOOhwvO param_000aa12c, IntPtr param_000aa12d); // 0x000000018CD96078-0x000000018CD96178
+	private static int SVJCECoUpFLjPlNOqfDiLxmBvMRM(xLiBDACQHMkUJDONyqwWiGgepFzkA param_000aa12e, xLiBDACQHMkUJDONyqwWiGgepFzkA param_000aa12f); // 0x000000018CD95300-0x000000018CD953EC
+	private void NaqpfzKBgzvsCPBYctRnpQSwrUjw(); // 0x0000000185B72210-0x0000000185B722E0
+	private void BgjPLwHdmNLeqEXEBYSYXgIwCgMn(); // 0x000000018CD94CA0-0x000000018CD94D68
+	private void CNuXwRByEAlSsRNuVKoMfHXJXoPk(); // 0x000000018CD94D7C-0x000000018CD94F34
+	private void mCUaWYMQNsJjivLOnmAVDLStzZee(); // 0x00000001857070F0-0x0000000185707290
+	private void HYrmDLgtoGMidKkGLNKlNxBDvYRJ(); // 0x000000018CD951C8-0x000000018CD952C0
+	private void BXxYjqUovILvkoVjZpJeCaVZGoVW(); // 0x000000018CD94C60-0x000000018CD94CA0
+	private void AtpbzvkCQeShMyQbveVpfYMUlQtd(); // 0x000000018CD94A34-0x000000018CD94C60
+	private void eGtyJqMJNzzxMIcUENFayGEhhLxH(IntPtr param_000aa130); // 0x000000018CD95FC0-0x000000018CD9601C
+	private void VaMlaCTsZZHenILJSgqVboewfQLaA(); // 0x0000000186DD9AB0-0x0000000186DD9B10
+	private void pOBVblzEENapurvRdFzQiCLogZeD(); // 0x0000000186DD9C40-0x0000000186DD9D30
+	public static bool iIeFvfbrvrhiakPoCdEUVroOLDrjA(lGhpciCdniKLZLdOpeIcKWUFYWuAA param_000aa131, out uint param_000aa132); // 0x00000001857052E0-0x0000000185705370
+	private bool qTdkVSvlDLSajpAXJngHFmSCoeSN(Rewired.ControllerType param_000aa133, lGhpciCdniKLZLdOpeIcKWUFYWuAA param_000aa134, uint param_000aa135, out IntPtr param_000aa136); // 0x0000000185705FE0-0x0000000185706150
+	private void ZVKkhwUCDMDnGjQIBDeMXEEAhxbdb(IntPtr param_000aa137); // 0x000000018CD95CFC-0x000000018CD95D48
+	private void yKMeFGEqxNaAigEkJZuUwKeFgLwxA(); // 0x0000000185BAF280-0x0000000185BAF290
+	private void xzDqvRzonUdMvwyTsfWTKstwcrkV(); // 0x0000000185B72120-0x0000000185B72210
+	private void gKYevTglWegheEqthLLgUznwcqKGb(); // 0x000000018CD9601C-0x000000018CD96054
+	private void eDAGGEpCSVLGsTJGNDIMtSYQuDwC(); // 0x000000018CD95D98-0x000000018CD95FC0
+	private void HSAIzkNyFOAYbKJKgLpCVKuubomb(); // 0x000000018CD95168-0x000000018CD951C8
+	private void xbdWTeHMyveQReZGlhbtoMIyilfe(); // 0x0000000185BBED20-0x0000000185BBEF60
+	private void YBIKlNzikKbQIlpVFckxxsxuhWDj(); // 0x000000018CD95AE4-0x000000018CD95CFC
+	private void svtjyZxQguJEqsRYyrtwCzhqhquf(VAmVuDvNsSbewEPAcnmMyxvuGlBo.kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000aa138); // 0x0000000187030060-0x0000000187030130
+	private static VAmVuDvNsSbewEPAcnmMyxvuGlBo bTLupeoyTomBFOiIqcRdAmMlwICN(VAmVuDvNsSbewEPAcnmMyxvuGlBo.kHNwxQmQEdrtRthvkmZVuYphaaTJ param_000aa139); // 0x0000000185B77860-0x0000000185B778F0
+	private void IjeZlMjSdOEVHHbBtqUaegyNgOEE(); // 0x0000000185BAEE80-0x0000000185BAF020
+	private void nBeuQYAYJbweumPcWoeFnUlOsiOX(); // 0x000000018CD96178-0x000000018CD96288
+	private void QxWvCVWYWrVtTIGBhKsSrDiqbcDcA(bool param_000aa13a); // 0x000000018CD952C0-0x000000018CD95300
+	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000aa13b); // 0x000000018226EFB0-0x000000018226EFC0
+	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000aa13c); // 0x0000000187235DE0-0x0000000187235DF0
+	private void CLTBAgqnxQgewuhANitNRputSTiR(FullScreenMode param_000aa13d); // 0x000000018CD94D68-0x000000018CD94D7C
+	private void FIRaUXoJZMEkgIpqqHgxeQmHGhvAA(IntPtr param_000aa13e); // 0x000000018CD95050-0x000000018CD95090
+	private IntPtr EHpWMcCNNRKjmTJfVKblgdrxqEyR(IntPtr param_000aa13f, uint param_000aa140, IntPtr param_000aa141, IntPtr param_000aa142); // 0x0000000186192930-0x0000000186192A90
+	private void qkuXeeejCQiWxHPFGTnqTKUmGVtiA(Action param_000aa143, bool param_000aa144); // 0x0000000185B722E0-0x0000000185B72300
+	private void EPlRczSzrQiPhqdzQkoGvhyPzhnP(zKVkJdcdYcKLvtNQJglDKOzGsCiJA param_000aa145, double param_000aa146); // 0x000000018CD94F84-0x000000018CD95050
+	private void UJpunUADhWsykxnQeUpOiqNyrDGl(DjdfDrcNukTKWfrrRLbyuQXQgKyCb param_000aa147, double param_000aa148); // 0x0000000185708160-0x0000000185708230
+	private void mwjfWWCtWiqiGQRWhfkGBoNPFbjw(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_000aa149, double param_000aa14a); // 0x0000000185708230-0x0000000185708260
+	private void aaXYjTgngXnPzsiDHlzgjPghTuEt(mSXBYzcjZtWtzBMaRNJMFIuGieHBb param_000aa14b, double param_000aa14c); // 0x0000000185706650-0x0000000185706720
+	private void pmwewcEnUtTWMJqgiSPcqzEXdCQmA(YuzVBZAVrBXogjeFXEIGbMAEejwR param_000aa14d, double param_000aa14e); // 0x0000000185706720-0x0000000185706750
+	private void gaixKEKXsvqNKuHlJjlMJdAIClvc(IntPtr param_000aa14f); // 0x00000001872568C0-0x00000001872568D0
+	private void tlSEpQyVSWnlGzjHEgCjodhuJxXk(); // 0x00000001872568C0-0x00000001872568D0
+	public void Dispose(); // 0x000000018CD94F34-0x000000018CD94F84
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD95890-0x000000018CD95908
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa150); // 0x000000018CD953EC-0x000000018CD95884
+	public static bool tCbcPZwKuIOKmAcgXlTEByoPzOae(CRhcTXpzBCukpjnPBnBpAuCFmFrX param_000aa151, out int param_000aa152); // 0x0000000185B73EE0-0x0000000185B741F0
 	[CompilerGenerated]
-	private bool OHKNPsGEQeaWeVRqQcrFZxKnamAfA(); // 0x000000018434D070-0x000000018434D080
+	private bool OHKNPsGEQeaWeVRqQcrFZxKnamAfA(); // 0x00000001865B7B30-0x00000001865B7B40
 }
 
-internal class BGFFhOVnzqjmrCUSbuDuqqEvzAIS : IDisposable, IUnifiedKeyboardSource, IGetSetEnabled // TypeDefIndex: 53734
+internal class BGFFhOVnzqjmrCUSbuDuqqEvzAIS : IDisposable, IUnifiedKeyboardSource, IGetSetEnabled // TypeDefIndex: 78978
 {
 	// Fields
 	private readonly object HjEsWTUUzyFrvqnrkapJHwVyFDeL; // 0x10
@@ -3744,14 +3730,14 @@ internal class BGFFhOVnzqjmrCUSbuDuqqEvzAIS : IDisposable, IUnifiedKeyboardSourc
 	private static readonly int[] HeTNVscHrGYDoawzylOsckULxDcI; // 0x30
 
 	// Properties
-	public bool enabled { get; set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000183B25570-0x0000000183B25580
-	public InputSource inputSource { get; } // 0x0000000184D9EC50-0x0000000184D9EC60 
-	public HardwareControllerMap_Game hardwareMap { get; } // 0x0000000183CB66B0-0x0000000183CB6710 
-	public int buttonCount { get; } // 0x0000000184DA7330-0x0000000184DA7340 
-	public Rewired.Controller.Extension controllerExtension { get; } // 0x00000001811EC580-0x00000001811EC590 
+	public bool enabled { get; set; } // 0x000000018225DFB0-0x000000018225DFC0 0x0000000185BB4CF0-0x0000000185BB4D00
+	public InputSource inputSource { get; } // 0x0000000187239C70-0x0000000187239C80 
+	public HardwareControllerMap_Game hardwareMap { get; } // 0x00000001856EE580-0x00000001856EE5E0 
+	public int buttonCount { get; } // 0x00000001872553B0-0x00000001872553C0 
+	public Rewired.Controller.Extension controllerExtension { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 
 	// Nested types
-	private class avWgBWgMFdSQrvTVQeBgdycbSGpPc // TypeDefIndex: 53733
+	private class avWgBWgMFdSQrvTVQeBgdycbSGpPc // TypeDefIndex: 78977
 	{
 		// Fields
 		private static readonly KeyCode[] pFuGnbLRDSnNvhAQAenmcPZqiZJUA; // 0x00
@@ -3761,47 +3747,47 @@ internal class BGFFhOVnzqjmrCUSbuDuqqEvzAIS : IDisposable, IUnifiedKeyboardSourc
 		private uint iCgpPHzbeBZRvUdEMfMWitcWYGYdA; // 0x28
 
 		// Constructors
-		public avWgBWgMFdSQrvTVQeBgdycbSGpPc(UpdateLoopType param_0007382f); // 0x0000000183B23A10-0x0000000183B23A90
-		static avWgBWgMFdSQrvTVQeBgdycbSGpPc(); // 0x0000000184D36220-0x0000000184D36290
+		public avWgBWgMFdSQrvTVQeBgdycbSGpPc(UpdateLoopType param_000aa196); // 0x0000000185BB34C0-0x0000000185BB3540
+		static avWgBWgMFdSQrvTVQeBgdycbSGpPc(); // 0x00000001871D7840-0x00000001871D78B0
 
 		// Methods
-		public void WYQzLCOWqkbLHmJcWgMubEnztMay(YuzVBZAVrBXogjeFXEIGbMAEejwR param_00073830); // 0x000000018381DFE0-0x000000018381E1F0
-		public void ThxjiTXroVhUQlMvuVXRacyBCfxI(ControllerDataUpdater param_00073831); // 0x00000001830BE5E0-0x00000001830BE7D0
-		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x0000000185393A94-0x0000000185393A9C
-		private void onmZpcQsNWkJaoyEXrkRLfzaMDNP(); // 0x0000000183D08F20-0x0000000183D09080
-		public void IlInRbQKjABiLpwivJDVudtvAhrT(); // 0x0000000185395B50-0x0000000185395B64
-		public void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018381F4B0-0x000000018381F4F0
+		public void WYQzLCOWqkbLHmJcWgMubEnztMay(YuzVBZAVrBXogjeFXEIGbMAEejwR param_000aa197); // 0x00000001857053C0-0x00000001857055E0
+		public void ThxjiTXroVhUQlMvuVXRacyBCfxI(ControllerDataUpdater param_000aa198); // 0x000000018518B930-0x000000018518BB10
+		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x0000000187837500-0x0000000187837508
+		private void onmZpcQsNWkJaoyEXrkRLfzaMDNP(); // 0x0000000186037B80-0x0000000186037CE0
+		public void IlInRbQKjABiLpwivJDVudtvAhrT(); // 0x000000018783B640-0x000000018783B654
+		public void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x0000000185704230-0x0000000185704270
 	}
 
 	// Constructors
-	static BGFFhOVnzqjmrCUSbuDuqqEvzAIS(); // 0x00000001842FEAA0-0x00000001842FF0C0
-	public BGFFhOVnzqjmrCUSbuDuqqEvzAIS(UpdateLoopSetting param_0007381c); // 0x0000000183B24A80-0x0000000183B254F0
+	static BGFFhOVnzqjmrCUSbuDuqqEvzAIS(); // 0x00000001866EEB50-0x00000001866EF180
+	public BGFFhOVnzqjmrCUSbuDuqqEvzAIS(UpdateLoopSetting param_000aa183); // 0x0000000185BB41F0-0x0000000185BB4C70
 
 	// Methods
-	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_0007381d); // 0x00000001830BE050-0x00000001830BE5E0
-	public void dIQoZlRvvXQBwfqmSAhCFbuZFRfl(YuzVBZAVrBXogjeFXEIGbMAEejwR param_0007381e); // 0x000000018381DAF0-0x000000018381DF00
-	public void kLFPRiEHmmWpHKPIQzKIRWwjlRaY(bool param_0007381f); // 0x0000000185394954-0x000000018539495C
-	public void DrkbGFnnjuIFzGgUJMWHvELXATHgb(bool param_00073820); // 0x000000018ABA33E0-0x000000018ABA340C
-	private int LXBptcZWiZkJQlJEcdIwkmFrgqym(); // 0x0000000183B254F0-0x0000000183B25570
-	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_00073821); // 0x0000000183820320-0x0000000183820390
-	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_00073822); // 0x000000018ABA38D8-0x000000018ABA392C
-	private void SilOiSjOzMFSkyAGlGTtAGtKYhtQ(bool param_00073823); // 0x00000001841E1670-0x00000001841E1680
-	private void wdffWlIHAHwHXZMJagxgeuvOlrL(bool param_00073824); // 0x000000018ABA37A8-0x000000018ABA38D8
-	private void fdDrNFhysOaMiFiboTMuPapDPCGL(UpdateLoopType param_00073825); // 0x000000018381D780-0x000000018381D8A0
-	private void IFnZWtaVuVqwqMtbuWlOHUZikYnH(); // 0x000000018381EFC0-0x000000018381F4B0
-	public void UpdateInputData(ControllerDataUpdater dataUpdater); // 0x0000000183C7BCC0-0x0000000183C7BD00
-	public void Clear(); // 0x0000000185394954-0x000000018539495C
-	private static HardwareControllerMap_Game lHUHEThTZvhKPeQFVBfKcPLdzhYdA(); // 0x0000000183CB9E90-0x0000000183CBA250
-	public void Dispose(); // 0x000000018ABA3390-0x000000018ABA33E0
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABA35C0-0x000000018ABA3634
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073828); // 0x000000018ABA340C-0x000000018ABA35C0
-	public static int XhJtRxldAadntQUcXEtPqgBRnOUo(YuzVBZAVrBXogjeFXEIGbMAEejwR param_00073829, KeyCode[] param_0007382a); // 0x000000018381E1F0-0x000000018381E910
-	private static WVJmIOuiHfoHGzSrfIOlgfYfJWHl.WRERAPCBXnkbbRNoLOLIJyYkhFAo NpozjhYGMcYRIEKScsvqlDcNDNYiA(); // 0x000000018381E950-0x000000018381EBA0
-	private static bool sUoPnPsKrcACoKpZFSVqdvHEcvKP(Keys param_0007382b, WVJmIOuiHfoHGzSrfIOlgfYfJWHl.WRERAPCBXnkbbRNoLOLIJyYkhFAo param_0007382c, out KeyCode param_0007382d); // 0x000000018ABA3634-0x000000018ABA37A8
-	private static bool iYKiwkUmEJLbOIJagzsHSQOrWcaG(Keys param_0007382e); // 0x000000018381EBD0-0x000000018381EC20
+	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa184); // 0x000000018518B3A0-0x000000018518B930
+	public void dIQoZlRvvXQBwfqmSAhCFbuZFRfl(YuzVBZAVrBXogjeFXEIGbMAEejwR param_000aa185); // 0x0000000185706230-0x0000000185706650
+	public void kLFPRiEHmmWpHKPIQzKIRWwjlRaY(bool param_000aa186); // 0x000000018CD97C0C-0x000000018CD97C14
+	public void DrkbGFnnjuIFzGgUJMWHvELXATHgb(bool param_000aa187); // 0x000000018CD97C64-0x000000018CD97C90
+	private int LXBptcZWiZkJQlJEcdIwkmFrgqym(); // 0x0000000185BB4C70-0x0000000185BB4CF0
+	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000aa188); // 0x00000001859AE820-0x00000001859AE890
+	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000aa189); // 0x000000018CD98170-0x000000018CD981C4
+	private void SilOiSjOzMFSkyAGlGTtAGtKYhtQ(bool param_000aa18a); // 0x0000000186805BA0-0x0000000186805BB0
+	private void wdffWlIHAHwHXZMJagxgeuvOlrL(bool param_000aa18b); // 0x000000018CD98034-0x000000018CD98170
+	private void fdDrNFhysOaMiFiboTMuPapDPCGL(UpdateLoopType param_000aa18c); // 0x000000018570A5A0-0x000000018570A970
+	private void IFnZWtaVuVqwqMtbuWlOHUZikYnH(); // 0x0000000185704270-0x0000000185704430
+	public void UpdateInputData(ControllerDataUpdater dataUpdater); // 0x00000001851DE880-0x00000001851DEA80
+	public void Clear(); // 0x000000018CD97C0C-0x000000018CD97C14
+	private static HardwareControllerMap_Game lHUHEThTZvhKPeQFVBfKcPLdzhYdA(); // 0x00000001856F6610-0x00000001856F69F0
+	public void Dispose(); // 0x000000018CD97C14-0x000000018CD97C64
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD97E44-0x000000018CD97EBC
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa18f); // 0x000000018CD97C90-0x000000018CD97E44
+	public static int XhJtRxldAadntQUcXEtPqgBRnOUo(YuzVBZAVrBXogjeFXEIGbMAEejwR param_000aa190, KeyCode[] param_000aa191); // 0x00000001857055E0-0x0000000185705CD0
+	private static WVJmIOuiHfoHGzSrfIOlgfYfJWHl.WRERAPCBXnkbbRNoLOLIJyYkhFAo NpozjhYGMcYRIEKScsvqlDcNDNYiA(); // 0x0000000185705D10-0x0000000185705F60
+	private static bool sUoPnPsKrcACoKpZFSVqdvHEcvKP(Keys param_000aa192, WVJmIOuiHfoHGzSrfIOlgfYfJWHl.WRERAPCBXnkbbRNoLOLIJyYkhFAo param_000aa193, out KeyCode param_000aa194); // 0x000000018CD97EBC-0x000000018CD98034
+	private static bool iYKiwkUmEJLbOIJagzsHSQOrWcaG(Keys param_000aa195); // 0x0000000185705F90-0x0000000185705FE0
 }
 
-internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, IGetSetEnabled // TypeDefIndex: 53738
+internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, IGetSetEnabled // TypeDefIndex: 78982
 {
 	// Fields
 	private readonly Rewired.Utils.Classes.Utility.SpinLock HjEsWTUUzyFrvqnrkapJHwVyFDeL; // 0x10
@@ -3814,16 +3800,16 @@ internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, 
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x39
 
 	// Properties
-	public bool enabled { get; set; } // 0x00000001811F2A70-0x00000001811F2A80 0x0000000183B23A90-0x0000000183B23AE0
-	public InputSource inputSource { get; } // 0x0000000184D9EC50-0x0000000184D9EC60 
-	public HardwareControllerMap_Game hardwareMap { get; } // 0x0000000183CB69D0-0x0000000183CB6A10 
-	public int buttonCount { get; } // 0x0000000184D9EC50-0x0000000184D9EC60 
-	public int axisCount { get; } // 0x0000000184D882B0-0x0000000184D882C0 
-	public Vector2 mousePosition { get; } // 0x0000000183B23D60-0x0000000183B23DA0 
-	public Rewired.Controller.Extension controllerExtension { get; } // 0x00000001811EC580-0x00000001811EC590 
+	public bool enabled { get; set; } // 0x000000018225E070-0x000000018225E080 0x0000000185BB35C0-0x0000000185BB3610
+	public InputSource inputSource { get; } // 0x0000000187239C70-0x0000000187239C80 
+	public HardwareControllerMap_Game hardwareMap { get; } // 0x00000001856EE8A0-0x00000001856EE8E0 
+	public int buttonCount { get; } // 0x0000000187239C70-0x0000000187239C80 
+	public int axisCount { get; } // 0x00000001845BA780-0x00000001845BA790 
+	public Vector2 mousePosition { get; } // 0x00000001856F6F40-0x00000001856F6F80 
+	public Rewired.Controller.Extension controllerExtension { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 
 	// Nested types
-	private class lCgPxQxUWsyWqmIWfpNakKUfxVRH // TypeDefIndex: 53736
+	private class lCgPxQxUWsyWqmIWfpNakKUfxVRH // TypeDefIndex: 78980
 	{
 		// Fields
 		public readonly UpdateLoopType pFEhljMHttGCkHPDZdESaDYgtFFob; // 0x10
@@ -3843,7 +3829,7 @@ internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, 
 		private bool UanSeCfuScbcPkurFjZgMxAfhuTX; // 0x54
 
 		// Nested types
-		private enum HhTBnQyJIkIiaJgNxOCgGTOKguzrb // TypeDefIndex: 53735
+		private enum HhTBnQyJIkIiaJgNxOCgGTOKguzrb // TypeDefIndex: 78979
 		{
 			None = 0,
 			Down = 1,
@@ -3852,21 +3838,21 @@ internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, 
 		}
 
 		// Constructors
-		public lCgPxQxUWsyWqmIWfpNakKUfxVRH(PlCzmuNhZpPPWYyaeUOeECkDjsWIA param_0007383f, UpdateLoopType param_00073840); // 0x0000000183B23980-0x0000000183B23A10
+		public lCgPxQxUWsyWqmIWfpNakKUfxVRH(PlCzmuNhZpPPWYyaeUOeECkDjsWIA param_000aa1a6, UpdateLoopType param_000aa1a7); // 0x0000000185BB3430-0x0000000185BB34C0
 
 		// Methods
-		public void WYQzLCOWqkbLHmJcWgMubEnztMay(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_00073841); // 0x000000018381D8A0-0x000000018381DAF0
-		public void ThxjiTXroVhUQlMvuVXRacyBCfxI(ControllerDataUpdater param_00073842); // 0x00000001830BC910-0x00000001830BCB50
-		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x0000000185393A8C-0x0000000185393A94
-		private void onmZpcQsNWkJaoyEXrkRLfzaMDNP(); // 0x0000000183128840-0x00000001831289A0
-		public void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018381B900-0x000000018381B950
-		public void CYdSaltspMNWohvuuTXUjBWHTpDl(); // 0x00000001831289A0-0x0000000183128B70
-		private void VyCgqKfpajjcknrXTuhUmiZQcyqwA(int param_00073843, int param_00073844, int param_00073845, int param_00073846); // 0x000000018381DF00-0x000000018381DFB0
-		private static HhTBnQyJIkIiaJgNxOCgGTOKguzrb kyKfQxZyKWeQPedOIhyYDRyNmDAI(int param_00073847, int param_00073848, int param_00073849); // 0x000000018381DFB0-0x000000018381DFE0
-		private static bool VHMaCoQghLUPGIBaWgsvoPcKNHIg(IntPtr param_0007384a); // 0x000000018381EC50-0x000000018381EDE0
+		public void WYQzLCOWqkbLHmJcWgMubEnztMay(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_000aa1a8); // 0x00000001857097D0-0x0000000185709A20
+		public void ThxjiTXroVhUQlMvuVXRacyBCfxI(ControllerDataUpdater param_000aa1a9); // 0x00000001856F7A20-0x00000001856F7C60
+		public void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x00000001878374F8-0x0000000187837500
+		private void onmZpcQsNWkJaoyEXrkRLfzaMDNP(); // 0x00000001856F7070-0x00000001856F71D0
+		public void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x00000001868BF940-0x00000001868BF990
+		public void CYdSaltspMNWohvuuTXUjBWHTpDl(); // 0x00000001856F71D0-0x00000001856F72B0
+		private void VyCgqKfpajjcknrXTuhUmiZQcyqwA(int param_000aa1aa, int param_000aa1ab, int param_000aa1ac, int param_000aa1ad); // 0x0000000186278060-0x0000000186278110
+		private static HhTBnQyJIkIiaJgNxOCgGTOKguzrb kyKfQxZyKWeQPedOIhyYDRyNmDAI(int param_000aa1ae, int param_000aa1af, int param_000aa1b0); // 0x0000000186278110-0x0000000186278140
+		private static bool VHMaCoQghLUPGIBaWgsvoPcKNHIg(IntPtr param_000aa1b1); // 0x000000018644B240-0x000000018644B3D0
 	}
 
-	private class PlCzmuNhZpPPWYyaeUOeECkDjsWIA // TypeDefIndex: 53737
+	private class PlCzmuNhZpPPWYyaeUOeECkDjsWIA // TypeDefIndex: 78981
 	{
 		// Fields
 		private bool ATJVjCUpthiJVXHDTEpQUcxufvay; // 0x10
@@ -3877,41 +3863,41 @@ internal class ZTnhIRoUwpwDSquXvRdXVrHhmNqH : IDisposable, IUnifiedMouseSource, 
 		private double SmKsyQZReGxldCPFdSRcxpnvZMBw; // 0x20
 
 		// Properties
-		public bool SMHjScSRxOyFrvkxYQVeBOGPGlSU { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
-		public bool lmtaWdhnloskbAyjOWXPwARdGroU { get; } // 0x0000000184D88380-0x0000000184D88390 
+		public bool SMHjScSRxOyFrvkxYQVeBOGPGlSU { get; } // 0x00000001829D0800-0x00000001829D0810 
+		public bool lmtaWdhnloskbAyjOWXPwARdGroU { get; } // 0x0000000187235410-0x0000000187235420 
 
 		// Constructors
-		public PlCzmuNhZpPPWYyaeUOeECkDjsWIA(bool param_0007384b, float param_0007384c); // 0x0000000183B23EB0-0x0000000183B23ED0
+		public PlCzmuNhZpPPWYyaeUOeECkDjsWIA(bool param_000aa1b2, float param_000aa1b3); // 0x0000000185BB3630-0x0000000185BB3650
 
 		// Methods
-		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x0000000183304560-0x00000001833045B0
-		private void EOwFowhEzkhRTYDoIWAqvfpBBhWz(bool param_0007384d); // 0x0000000183826150-0x0000000183826210
+		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x0000000185707290-0x00000001857072E0
+		private void EOwFowhEzkhRTYDoIWAqvfpBBhWz(bool param_000aa1b4); // 0x0000000185BB2E80-0x0000000185BB2F60
 	}
 
 	// Constructors
-	public ZTnhIRoUwpwDSquXvRdXVrHhmNqH(UpdateLoopSetting param_00073832); // 0x0000000183B23ED0-0x0000000183B249E0
+	public ZTnhIRoUwpwDSquXvRdXVrHhmNqH(UpdateLoopSetting param_000aa199); // 0x0000000185BB3650-0x0000000185BB4150
 
 	// Methods
-	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073833); // 0x0000000183304360-0x0000000183304560
-	public void dIQoZlRvvXQBwfqmSAhCFbuZFRfl(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_00073834); // 0x000000018381D120-0x000000018381D670
-	public void kLFPRiEHmmWpHKPIQzKIRWwjlRaY(bool param_00073835); // 0x000000018539495C-0x0000000185394964
-	public void DrkbGFnnjuIFzGgUJMWHvELXATHgb(bool param_00073836); // 0x000000018ABAA23C-0x000000018ABAA268
-	private int PhkiokooYDDYxkDImYTrcLciFuHcA(); // 0x0000000183B249E0-0x0000000183B24A80
-	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_00073837); // 0x0000000183820390-0x0000000183820410
-	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_00073838); // 0x000000018ABAA608-0x000000018ABAA65C
-	private void SilOiSjOzMFSkyAGlGTtAGtKYhtQ(bool param_00073839); // 0x00000001841E1670-0x00000001841E1680
-	private void wdffWlIHAHwHXZMJagxgeuvOlrL(bool param_0007383a); // 0x000000018ABAA4C4-0x000000018ABAA608
-	private void fdDrNFhysOaMiFiboTMuPapDPCGL(UpdateLoopType param_0007383b); // 0x000000018381D670-0x000000018381D780
-	private void edrKAxwAkJAXhgHqMieXnBDbdsoCb(); // 0x000000018381B950-0x000000018381BE70
-	public void UpdateInputData(ControllerDataUpdater dataUpdater); // 0x0000000183B23C30-0x0000000183B23C70
-	public void Clear(); // 0x000000018539495C-0x0000000185394964
-	private HardwareControllerMap_Game lHUHEThTZvhKPeQFVBfKcPLdzhYdA(); // 0x0000000183CB9970-0x0000000183CB9E90
-	public void Dispose(); // 0x000000018ABAA1EC-0x000000018ABAA23C
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABAA450-0x000000018ABAA4C4
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007383e); // 0x000000018ABAA268-0x000000018ABAA450
+	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa19a); // 0x0000000185706D30-0x0000000185706F20
+	public void dIQoZlRvvXQBwfqmSAhCFbuZFRfl(hzfUWCjNPPmSYyCeozhXHZrHbmeI param_000aa19b); // 0x0000000185709640-0x00000001857097D0
+	public void kLFPRiEHmmWpHKPIQzKIRWwjlRaY(bool param_000aa19c); // 0x0000000187839ADC-0x0000000187839AE4
+	public void DrkbGFnnjuIFzGgUJMWHvELXATHgb(bool param_000aa19d); // 0x000000018CD9E8E4-0x000000018CD9E910
+	private int PhkiokooYDDYxkDImYTrcLciFuHcA(); // 0x0000000185BB4150-0x0000000185BB41F0
+	private void BSBbCkZloeHSdffjvjzejfeNNIchb(bool param_000aa19e); // 0x00000001859AE7A0-0x00000001859AE820
+	private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000aa19f); // 0x000000018CD9ECC0-0x000000018CD9ED14
+	private void SilOiSjOzMFSkyAGlGTtAGtKYhtQ(bool param_000aa1a0); // 0x0000000186805BA0-0x0000000186805BB0
+	private void wdffWlIHAHwHXZMJagxgeuvOlrL(bool param_000aa1a1); // 0x000000018CD9EB70-0x000000018CD9ECC0
+	private void fdDrNFhysOaMiFiboTMuPapDPCGL(UpdateLoopType param_000aa1a2); // 0x0000000185709EB0-0x000000018570A5A0
+	private void edrKAxwAkJAXhgHqMieXnBDbdsoCb(); // 0x00000001868BF750-0x00000001868BF940
+	public void UpdateInputData(ControllerDataUpdater dataUpdater); // 0x00000001856F6E20-0x00000001856F6E60
+	public void Clear(); // 0x0000000187839ADC-0x0000000187839AE4
+	private HardwareControllerMap_Game lHUHEThTZvhKPeQFVBfKcPLdzhYdA(); // 0x00000001856F4E30-0x00000001856F5350
+	public void Dispose(); // 0x000000018CD9E894-0x000000018CD9E8E4
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CD9EAF8-0x000000018CD9EB70
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1a5); // 0x000000018CD9E910-0x000000018CD9EAF8
 }
 
-internal struct DiznChfdyTJvRPParHLnaqnPVzZv // TypeDefIndex: 53739
+internal struct DiznChfdyTJvRPParHLnaqnPVzZv // TypeDefIndex: 78983
 {
 	// Fields
 	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi; // 0x00
@@ -3920,10 +3906,10 @@ internal struct DiznChfdyTJvRPParHLnaqnPVzZv // TypeDefIndex: 53739
 	public IntPtr FTfUyLMXnRNRbeaVgvsiuEYXLbVT; // 0x08
 
 	// Properties
-	public static int YpiskYsFFWembKBaCqaTQGDhNxlO { get; } // 0x0000000184DA43A0-0x0000000184DA43B0 
+	public static int YpiskYsFFWembKBaCqaTQGDhNxlO { get; } // 0x0000000187239D50-0x0000000187239D60 
 }
 
-internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
+internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 78990
 {
 	// Fields
 	private FyEbIWjWQhPULmtXskjXBUhYUqFPA jmipOkUkxbAcgZiyhHUsLQsuuYiU;
@@ -3939,14 +3925,14 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 	public u0001 NQthVhNZOAkUOSWFJwgKuUWBhYMO { get; }
 
 	// Nested types
-	private enum FyEbIWjWQhPULmtXskjXBUhYUqFPA // TypeDefIndex: 53742
+	private enum FyEbIWjWQhPULmtXskjXBUhYUqFPA // TypeDefIndex: 78986
 	{
 		Idle = 0,
 		AwaitingResult = 1,
 		ResultReceived = 2
 	}
 
-	private sealed class NESEXlkBVRLSjGEsOdIKXfRsOFCl // TypeDefIndex: 53745
+	private sealed class NESEXlkBVRLSjGEsOdIKXfRsOFCl // TypeDefIndex: 78989
 	{
 		// Fields
 		private static NESEXlkBVRLSjGEsOdIKXfRsOFCl<u0001> xrdNMXQNXfwPuveZIufXarNDAOKx;
@@ -3959,7 +3945,7 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 		private BTNmtMSOiajrmBAIaoFdMzCdVskY lJjrRfRJvPeJUShIPlGdELzsBDUQ { get; }
 
 		// Nested types
-		private class BTNmtMSOiajrmBAIaoFdMzCdVskY : IDisposable // TypeDefIndex: 53744
+		private class BTNmtMSOiajrmBAIaoFdMzCdVskY : IDisposable // TypeDefIndex: 78988
 		{
 			// Fields
 			private readonly object HjEsWTUUzyFrvqnrkapJHwVyFDeL;
@@ -3974,7 +3960,7 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 
 			// Nested types
 			[CompilerGenerated]
-			private sealed class BUIeXeoziomLPIapGsSkFgmUdRpiA // TypeDefIndex: 53743
+			private sealed class BUIeXeoziomLPIapGsSkFgmUdRpiA // TypeDefIndex: 78987
 			{
 				// Fields
 				public BTNmtMSOiajrmBAIaoFdMzCdVskY<u0001> fssrnmhfPTfupcxFxQGSQWsdnHnDA;
@@ -3991,7 +3977,7 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 			public BTNmtMSOiajrmBAIaoFdMzCdVskY();
 
 			// Methods
-			public void AAXjsGGHQEteEheROEeoBzNznwsrA(WaitCallback param_0007385c);
+			public void AAXjsGGHQEteEheROEeoBzNznwsrA(WaitCallback param_000aa1c3);
 			private bool DKVpNyqREOIVACgmSVaaAXYjPvP();
 			private bool FxiegTKVyhfGenuvuiEUOYSQqspG();
 			private void cJeIgwPpHpJGVXAKXNJbFaEFIlIgA();
@@ -3999,7 +3985,7 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 			private void uBHqzaCswncgWAdbNWUayxzJoldu();
 			public void Dispose();
 			protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA();
-			protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007385d);
+			protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1c4);
 		}
 
 		// Constructors
@@ -4008,30 +3994,30 @@ internal class KSXcWnVJXHdGdcxUNnMBaqHZACuK<u0001> // TypeDefIndex: 53746
 		// Methods
 		private void BKbxHFMYcvQRuhbUaIZMyXlmzOIG();
 		private void rbrNYWagjzOiRNfxSnvGuvZlbJgu();
-		private void SMZJGeIgeRtmrUpceNbdeKQKOtnl(WaitCallback param_00073859);
+		private void SMZJGeIgeRtmrUpceNbdeKQKOtnl(WaitCallback param_000aa1c0);
 		private void SbYVTdmkPElTDzeOGdijEuqHpCge();
 		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA();
-		private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007385a);
+		private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1c1);
 		public static void euZXQnafTjiEzrhHIKeELzrqjFyr();
 		public static void GgzQSbkFWCDsneRKNqUgeIrHGJSmA();
-		public static void AAXjsGGHQEteEheROEeoBzNznwsrA(WaitCallback param_0007385b);
+		public static void AAXjsGGHQEteEheROEeoBzNznwsrA(WaitCallback param_000aa1c2);
 	}
 
 	// Constructors
-	public KSXcWnVJXHdGdcxUNnMBaqHZACuK(bool param_00073855, Func<u0001> param_00073856);
+	public KSXcWnVJXHdGdcxUNnMBaqHZACuK(bool param_000aa1bc, Func<u0001> param_000aa1bd);
 
 	// Methods
 	public bool evtegpBZukhUanAyLlcPaJjgZbJbA();
 	public bool DWIrjgNykvSEeIQkvOfpQQEGuOWS();
 	public void ghAXNTTllFZJImfdUqzOVvWsJmgN();
-	private void hdiJdZyFEUGKhDTcyWDBiRKYKLKOA(object param_00073857);
+	private void hdiJdZyFEUGKhDTcyWDBiRKYKLKOA(object param_000aa1be);
 	public void SbYVTdmkPElTDzeOGdijEuqHpCge();
 	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA();
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073858);
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1bf);
 }
 
 [DefaultMember("Item")]
-internal class toAwWuzejnaxZpduiQVRAKFLGLpV : IDisposable // TypeDefIndex: 53748
+internal class toAwWuzejnaxZpduiQVRAKFLGLpV : IDisposable // TypeDefIndex: 78992
 {
 	// Fields
 	private unsafe byte* vTLatNQVCPvVEfeheGwFAFPYSJLM; // 0x10
@@ -4039,27 +4025,27 @@ internal class toAwWuzejnaxZpduiQVRAKFLGLpV : IDisposable // TypeDefIndex: 53748
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x1C
 
 	// Properties
-	public IntPtr JQribhuJPxYJhZXwMOVrrrQRjfcE { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+	public IntPtr JQribhuJPxYJhZXwMOVrrrQRjfcE { get; } // 0x00000001829260F0-0x0000000182926100 
 
 	// Constructors
-	public toAwWuzejnaxZpduiQVRAKFLGLpV(int param_0007385e); // 0x00000001843C1480-0x00000001843C1490
+	public toAwWuzejnaxZpduiQVRAKFLGLpV(int param_000aa1c5); // 0x000000018685B0E0-0x000000018685B0F0
 
 	// Methods
-	public byte xSODOfgqLsiXoyJvmOpBVPwaIhwfA(int param_0007385f); // 0x000000018ABAE878-0x000000018ABAE8F0
-	public unsafe int NfAisoggUvhlodoCNuCEacDozOghA(byte* param_00073860, int param_00073861, int param_00073862, int param_00073863 = 0 /* Metadata: 0x02333D45 */, int param_00073864 = 0 /* Metadata: 0x02333D46 */); // 0x000000018ABAE61C-0x000000018ABAE6A8
-	public unsafe int pKFSKDqgONfLTCDUYnuwcUilOSdfA(byte* param_00073865, int param_00073866, int param_00073867, int param_00073868 = 0 /* Metadata: 0x02333D47 */, int param_00073869 = 0 /* Metadata: 0x02333D48 */); // 0x000000018ABAE74C-0x000000018ABAE7CC
-	public int pKFSKDqgONfLTCDUYnuwcUilOSdfA(IntPtr param_0007386a, int param_0007386b, int param_0007386c, int param_0007386d = 0 /* Metadata: 0x02333D49 */, int param_0007386e = 0 /* Metadata: 0x02333D4A */); // 0x000000018ABAE73C-0x000000018ABAE74C
-	public bool PvUblyHLGmOPsBpGTwBHtzjsBHNJ(int param_0007386f); // 0x00000001843C1490-0x00000001843C1520
-	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x00000001843C1520-0x00000001843C1540
-	public void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x00000001843C1540-0x00000001843C1590
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAE7CC-0x000000018ABAE878
-	public void Dispose(); // 0x000000018ABAE5CC-0x000000018ABAE61C
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABAE6C8-0x000000018ABAE73C
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073870); // 0x000000018ABAE6A8-0x000000018ABAE6C8
-	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(toAwWuzejnaxZpduiQVRAKFLGLpV param_00073871); // 0x00000001833021A0-0x00000001833021B0
+	public byte xSODOfgqLsiXoyJvmOpBVPwaIhwfA(int param_000aa1c6); // 0x000000018CDA306C-0x000000018CDA30E4
+	public unsafe int NfAisoggUvhlodoCNuCEacDozOghA(byte* param_000aa1c7, int param_000aa1c8, int param_000aa1c9, int param_000aa1ca = 0 /* Metadata: 0x0262C189 */, int param_000aa1cb = 0 /* Metadata: 0x0262C18A */); // 0x000000018CDA2E04-0x000000018CDA2E94
+	public unsafe int pKFSKDqgONfLTCDUYnuwcUilOSdfA(byte* param_000aa1cc, int param_000aa1cd, int param_000aa1ce, int param_000aa1cf = 0 /* Metadata: 0x0262C18B */, int param_000aa1d0 = 0 /* Metadata: 0x0262C18C */); // 0x000000018CDA2F3C-0x000000018CDA2FC0
+	public int pKFSKDqgONfLTCDUYnuwcUilOSdfA(IntPtr param_000aa1d1, int param_000aa1d2, int param_000aa1d3, int param_000aa1d4 = 0 /* Metadata: 0x0262C18D */, int param_000aa1d5 = 0 /* Metadata: 0x0262C18E */); // 0x000000018CDA2F2C-0x000000018CDA2F3C
+	public bool PvUblyHLGmOPsBpGTwBHtzjsBHNJ(int param_000aa1d6); // 0x000000018685B0F0-0x000000018685B180
+	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018685B180-0x000000018685B1A0
+	public void IYsALPEzKUpSHjMlchBUFTjZCkvr(); // 0x000000018685B1A0-0x000000018685B1F0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA2FC0-0x000000018CDA306C
+	public void Dispose(); // 0x000000018CDA2DB4-0x000000018CDA2E04
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDA2EB4-0x000000018CDA2F2C
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1d7); // 0x000000018CDA2E94-0x000000018CDA2EB4
+	public static IntPtr APoRgahkkqCivzZqzQUvGNyXvZFi(toAwWuzejnaxZpduiQVRAKFLGLpV param_000aa1d8); // 0x000000018566BC30-0x000000018566BC40
 }
 
-internal class rYyHAAtlEbEefKkEVDsoHjKzQHzSA : IDisposable // TypeDefIndex: 53749
+internal class rYyHAAtlEbEefKkEVDsoHjKzQHzSA : IDisposable // TypeDefIndex: 78993
 {
 	// Fields
 	private readonly toAwWuzejnaxZpduiQVRAKFLGLpV UzUtkVqQmznFIdHWsNfTBPdCjRYAA; // 0x10
@@ -4072,23 +4058,23 @@ internal class rYyHAAtlEbEefKkEVDsoHjKzQHzSA : IDisposable // TypeDefIndex: 5374
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x3C
 
 	// Constructors
-	public rYyHAAtlEbEefKkEVDsoHjKzQHzSA(int param_00073872); // 0x000000018ABACBF8-0x000000018ABACCC0
+	public rYyHAAtlEbEefKkEVDsoHjKzQHzSA(int param_000aa1d9); // 0x000000018CDA13B4-0x000000018CDA147C
 
 	// Methods
-	public unsafe int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte* param_00073873, int param_00073874, int param_00073875, out int param_00073876, out uint param_00073877); // 0x000000018ABACD24-0x000000018ABACE10
-	public int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte[] param_00073878, int param_00073879, out int param_0007387a, out uint param_0007387b); // 0x000000018ABACCC0-0x000000018ABACD24
-	public int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte[] param_0007387c, int param_0007387d); // 0x000000018ABACE10-0x000000018ABACE3C
-	public unsafe int EhQhxFweepMpjwazcuSRnFZeQtLc(byte* param_0007387e, int param_0007387f, int param_00073880); // 0x000000018ABACA68-0x000000018ABACB54
-	public int EhQhxFweepMpjwazcuSRnFZeQtLc(byte[] param_00073881, int param_00073882); // 0x000000018ABACA20-0x000000018ABACA68
-	private void IcBISzOexeeCFBBCHLiSwCFvMhLgb(int param_00073883); // 0x000000018AAF2574-0x000000018AAF2620
-	private void yuLXTQnXSGIcdGUhDNZoJPyanKWi(int param_00073884); // 0x000000018AAF1FD0-0x000000018AAF2018
-	private void kyDgXWfzjJAkrIQxdKMrgyHLnHJqB(); // 0x000000018AAF2560-0x000000018AAF2574
-	public void Dispose(); // 0x000000018ABAC9D0-0x000000018ABACA20
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABACB84-0x000000018ABACBF8
-	protected void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073885); // 0x000000018ABACB54-0x000000018ABACB84
+	public unsafe int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte* param_000aa1da, int param_000aa1db, int param_000aa1dc, out int param_000aa1dd, out uint param_000aa1de); // 0x000000018CDA14E0-0x000000018CDA15E0
+	public int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte[] param_000aa1df, int param_000aa1e0, out int param_000aa1e1, out uint param_000aa1e2); // 0x000000018CDA147C-0x000000018CDA14E0
+	public int lNECrXByHXlCxWFdivlmtrMoEFAhb(byte[] param_000aa1e3, int param_000aa1e4); // 0x000000018CDA15E0-0x000000018CDA160C
+	public unsafe int EhQhxFweepMpjwazcuSRnFZeQtLc(byte* param_000aa1e5, int param_000aa1e6, int param_000aa1e7); // 0x000000018CDA1210-0x000000018CDA130C
+	public int EhQhxFweepMpjwazcuSRnFZeQtLc(byte[] param_000aa1e8, int param_000aa1e9); // 0x000000018CDA11C8-0x000000018CDA1210
+	private void IcBISzOexeeCFBBCHLiSwCFvMhLgb(int param_000aa1ea); // 0x000000018CCE5424-0x000000018CCE54D0
+	private void yuLXTQnXSGIcdGUhDNZoJPyanKWi(int param_000aa1eb); // 0x000000018CCE4E1C-0x000000018CCE4E68
+	private void kyDgXWfzjJAkrIQxdKMrgyHLnHJqB(); // 0x000000018CCE5410-0x000000018CCE5424
+	public void Dispose(); // 0x000000018CDA1178-0x000000018CDA11C8
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDA133C-0x000000018CDA13B4
+	protected void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1ec); // 0x000000018CDA130C-0x000000018CDA133C
 }
 
-internal class QJwvzXmfrDwHfKfbgOEvmUxvMugV<u0001> : IDisposable // TypeDefIndex: 53750
+internal class QJwvzXmfrDwHfKfbgOEvmUxvMugV<u0001> : IDisposable // TypeDefIndex: 78994
 	where  : struct
 {
 	// Fields
@@ -4108,47 +4094,47 @@ internal class QJwvzXmfrDwHfKfbgOEvmUxvMugV<u0001> : IDisposable // TypeDefIndex
 	// Methods
 	private void JXMwUKzdKsQrCZVBaiKwnsmkPmQr();
 	private void bcgbrYhHCWtoivWahvpLJXBJcqjU();
-	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073887);
+	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa1ee);
 	public void Dispose();
 }
 
-internal static class zozpnScYaMYLEskGhxafwYKHPZAg // TypeDefIndex: 53751
+internal static class zozpnScYaMYLEskGhxafwYKHPZAg // TypeDefIndex: 78995
 {
 	// Methods
-	private static unsafe void DFyINpwAkpyNMTAFAIeuZmRCfSTQ(byte* param_00073888, byte* param_00073889, uint param_0007388a); // 0x000000018ABAEC2C-0x000000018ABAEF00
-	private static unsafe void DFyINpwAkpyNMTAFAIeuZmRCfSTQ(byte* param_0007388b, byte* param_0007388c, ulong param_0007388d); // 0x000000018ABAEF00-0x000000018ABAF1BC
-	public static unsafe bool qKdcIUhkEEAsbPtVMNAaEBFbzjxZA(byte* param_0007388e, byte* param_0007388f, int param_00073890, int param_00073891, int param_00073892); // 0x000000018ABAF25C-0x000000018ABAF630
-	public static unsafe bool QhNLvaNMaGFxNukiIiOTMHLSUsKy(byte* param_00073893, byte* param_00073894, int param_00073895, int param_00073896, int param_00073897); // 0x000000018ABAF1BC-0x000000018ABAF25C
-	public static unsafe void adQeBKQycYBIKxYHBChhSlmJZlnH(byte* param_00073898, int param_00073899); // 0x00000001843C1590-0x00000001843C1600
+	private static unsafe void DFyINpwAkpyNMTAFAIeuZmRCfSTQ(byte* param_000aa1ef, byte* param_000aa1f0, uint param_000aa1f1); // 0x000000018CDA34A4-0x000000018CDA3778
+	private static unsafe void DFyINpwAkpyNMTAFAIeuZmRCfSTQ(byte* param_000aa1f2, byte* param_000aa1f3, ulong param_000aa1f4); // 0x000000018CDA3778-0x000000018CDA3A34
+	public static unsafe bool qKdcIUhkEEAsbPtVMNAaEBFbzjxZA(byte* param_000aa1f5, byte* param_000aa1f6, int param_000aa1f7, int param_000aa1f8, int param_000aa1f9); // 0x000000018CDA3AD4-0x000000018CDA3EAC
+	public static unsafe bool QhNLvaNMaGFxNukiIiOTMHLSUsKy(byte* param_000aa1fa, byte* param_000aa1fb, int param_000aa1fc, int param_000aa1fd, int param_000aa1fe); // 0x000000018CDA3A34-0x000000018CDA3AD4
+	public static unsafe void adQeBKQycYBIKxYHBChhSlmJZlnH(byte* param_000aa1ff, int param_000aa200); // 0x000000018685B1F0-0x000000018685B260
 }
 
-internal struct osgMuduIeTPzAGUfwObqUCaVRyzG : IEquatable<osgMuduIeTPzAGUfwObqUCaVRyzG> // TypeDefIndex: 53752
+internal struct osgMuduIeTPzAGUfwObqUCaVRyzG : IEquatable<osgMuduIeTPzAGUfwObqUCaVRyzG> // TypeDefIndex: 78996
 {
 	// Fields
 	private int HSnIduFqjbgPApqEtDpMoTJARSpq; // 0x00
 
 	// Methods
-	public bool Equals(osgMuduIeTPzAGUfwObqUCaVRyzG other); // 0x0000000182EED260-0x0000000182EED270
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_0007389b); // 0x000000018ABAC74C-0x000000018ABAC7A8
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x0000000182B77620-0x0000000182B77630
-	public static bool APoRgahkkqCivzZqzQUvGNyXvZFi(osgMuduIeTPzAGUfwObqUCaVRyzG param_0007389c); // 0x00000001845FCC70-0x00000001845FCC80
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAC6E8-0x000000018ABAC74C
+	public bool Equals(osgMuduIeTPzAGUfwObqUCaVRyzG other); // 0x0000000184FF20D0-0x0000000184FF20E0
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000aa202); // 0x000000018CDA0EB4-0x000000018CDA0F10
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x00000001844AD290-0x00000001844AD2A0
+	public static bool APoRgahkkqCivzZqzQUvGNyXvZFi(osgMuduIeTPzAGUfwObqUCaVRyzG param_000aa203); // 0x0000000185B74EA0-0x0000000185B74EB0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA0E50-0x000000018CDA0EB4
 }
 
-internal class beaToZucjyOfmWGEnxdCGCgakptr : RCeEVNGupoFrfdNPsoxbzSPYwBxdA, hosKjEbZIzDTSDHxGqYoGUnVmtF // TypeDefIndex: 53753
+internal class beaToZucjyOfmWGEnxdCGCgakptr : RCeEVNGupoFrfdNPsoxbzSPYwBxdA, hosKjEbZIzDTSDHxGqYoGUnVmtF // TypeDefIndex: 78997
 {
 	// Constructors
-	public beaToZucjyOfmWGEnxdCGCgakptr(IntPtr param_0007389d); // 0x000000018ABA8048-0x000000018ABA8050
-	protected beaToZucjyOfmWGEnxdCGCgakptr(); // 0x00000001841E1670-0x00000001841E1680
+	public beaToZucjyOfmWGEnxdCGCgakptr(IntPtr param_000aa204); // 0x000000018CD9CA4C-0x000000018CD9CA54
+	protected beaToZucjyOfmWGEnxdCGCgakptr(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	private int zbGNYxQlkfDNSRfsmocddFNZCxJg(); // 0x000000018ABAAE10-0x000000018ABAAEB0
-	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007389e); // 0x000000018ABAAC7C-0x000000018ABAADA4
-	protected override void tRZXOmwrFPteeSBixriJnLPOkZUO(); // 0x000000018ABAADA4-0x000000018ABAAE10
-	protected override void KyeLibjaCuIJLGBLURntTLgfGlvEb(IntPtr param_0007389f); // 0x000000018ABAAC10-0x000000018ABAAC7C
+	private int zbGNYxQlkfDNSRfsmocddFNZCxJg(); // 0x000000018CD9F4CC-0x000000018CD9F56C
+	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa205); // 0x000000018CD9F334-0x000000018CD9F460
+	protected override void tRZXOmwrFPteeSBixriJnLPOkZUO(); // 0x000000018CD9F460-0x000000018CD9F4CC
+	protected override void KyeLibjaCuIJLGBLURntTLgfGlvEb(IntPtr param_000aa206); // 0x000000018CD9F2C8-0x000000018CD9F334
 }
 
-internal static class ZLUfwKdIzjhfuhpbHTsguqSkHrKjc // TypeDefIndex: 53754
+internal static class ZLUfwKdIzjhfuhpbHTsguqSkHrKjc // TypeDefIndex: 78998
 {
 	// Fields
 	public static bool NxWByWiXQAWFanFdlIscXiojYSHJA; // 0x00
@@ -4158,28 +4144,28 @@ internal static class ZLUfwKdIzjhfuhpbHTsguqSkHrKjc // TypeDefIndex: 53754
 	public static bool ZEDuewImLKarFXsZVqNTVKQIyqit; // 0x04
 
 	// Constructors
-	static ZLUfwKdIzjhfuhpbHTsguqSkHrKjc(); // 0x000000018ABAA178-0x000000018ABAA1EC
+	static ZLUfwKdIzjhfuhpbHTsguqSkHrKjc(); // 0x000000018CD9E820-0x000000018CD9E894
 }
 
-internal class RCeEVNGupoFrfdNPsoxbzSPYwBxdA : tzrBlbgnrkVEMpkSCLtDWtjEVeLS // TypeDefIndex: 53755
+internal class RCeEVNGupoFrfdNPsoxbzSPYwBxdA : tzrBlbgnrkVEMpkSCLtDWtjEVeLS // TypeDefIndex: 78999
 {
 	// Fields
 	protected internal unsafe void* lAcSoTmtafaUVffsOybRduUMmIYr; // 0x28
 
 	// Properties
-	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x000000018ABA8004-0x000000018ABA8048
+	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; set; } // 0x0000000182262130-0x0000000182262140 0x000000018CD9CA08-0x000000018CD9CA4C
 
 	// Constructors
-	public RCeEVNGupoFrfdNPsoxbzSPYwBxdA(IntPtr param_000738a0); // 0x000000018ABA8048-0x000000018ABA8050
-	protected RCeEVNGupoFrfdNPsoxbzSPYwBxdA(); // 0x00000001841E1670-0x00000001841E1680
+	public RCeEVNGupoFrfdNPsoxbzSPYwBxdA(IntPtr param_000aa207); // 0x000000018CD9CA4C-0x000000018CD9CA54
+	protected RCeEVNGupoFrfdNPsoxbzSPYwBxdA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	protected virtual void tRZXOmwrFPteeSBixriJnLPOkZUO(); // 0x00000001841E1670-0x00000001841E1680
-	protected virtual void KyeLibjaCuIJLGBLURntTLgfGlvEb(IntPtr param_000738a2); // 0x00000001841E1670-0x00000001841E1680
-	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000738a3); // 0x00000001841E1670-0x00000001841E1680
+	protected virtual void tRZXOmwrFPteeSBixriJnLPOkZUO(); // 0x0000000186805BA0-0x0000000186805BB0
+	protected virtual void KyeLibjaCuIJLGBLURntTLgfGlvEb(IntPtr param_000aa209); // 0x0000000186805BA0-0x0000000186805BB0
+	protected override void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa20a); // 0x0000000186805BA0-0x0000000186805BB0
 }
 
-internal abstract class tzrBlbgnrkVEMpkSCLtDWtjEVeLS : IDisposable // TypeDefIndex: 53756
+internal abstract class tzrBlbgnrkVEMpkSCLtDWtjEVeLS : IDisposable // TypeDefIndex: 79000
 {
 	// Fields
 	[CompilerGenerated]
@@ -4190,43 +4176,43 @@ internal abstract class tzrBlbgnrkVEMpkSCLtDWtjEVeLS : IDisposable // TypeDefInd
 	private bool RhxbbauMvTzhNsFBmASStlVahrdbA; // 0x20
 
 	// Properties
-	public bool aUTgKpJATaNiezPFWYhlmSmsCPlC { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D866B0-0x0000000184D866C0 0x0000000184D866D0-0x0000000184D866E0
+	public bool aUTgKpJATaNiezPFWYhlmSmsCPlC { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182246E50-0x0000000182246E60 0x0000000182246E60-0x0000000182246E70
 
 	// Constructors
-	protected tzrBlbgnrkVEMpkSCLtDWtjEVeLS(); // 0x00000001841E1670-0x00000001841E1680
+	protected tzrBlbgnrkVEMpkSCLtDWtjEVeLS(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABAE9E8-0x000000018ABAEA5C
-	public void Dispose(); // 0x000000018ABAE8F0-0x000000018ABAE8FC
-	private void KBdDTdNqXftRPscisbtlkjsgaUPO(bool param_000738a5); // 0x000000018ABAE8FC-0x000000018ABAE9E8
-	protected abstract void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000738a6);
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDA31E0-0x000000018CDA3258
+	public void Dispose(); // 0x000000018CDA30E4-0x000000018CDA30F0
+	private void KBdDTdNqXftRPscisbtlkjsgaUPO(bool param_000aa20c); // 0x000000018CDA30F0-0x000000018CDA31E0
+	protected abstract void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa20d);
 }
 
-internal class TrZygBjBOPxdNoLZDCUKGcceunIo // TypeDefIndex: 53757
+internal class TrZygBjBOPxdNoLZDCUKGcceunIo // TypeDefIndex: 79001
 {
 	// Fields
 	public IntPtr JQribhuJPxYJhZXwMOVrrrQRjfcE; // 0x10
 
 	// Constructors
-	public TrZygBjBOPxdNoLZDCUKGcceunIo(IntPtr param_000738a7); // 0x0000000184D88BF0-0x0000000184D88C00
+	public TrZygBjBOPxdNoLZDCUKGcceunIo(IntPtr param_000aa20e); // 0x000000018561B5A0-0x000000018561B5B0
 
 	// Methods
-	public static TrZygBjBOPxdNoLZDCUKGcceunIo APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000738a8); // 0x000000018ABA9D10-0x000000018ABA9D58
-	public static unsafe void* APoRgahkkqCivzZqzQUvGNyXvZFi(TrZygBjBOPxdNoLZDCUKGcceunIo param_000738a9); // 0x00000001853E476C-0x00000001853E4784
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABA9D58-0x000000018ABA9E38
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x0000000182B2E2D0-0x0000000182B2E2E0
-	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(TrZygBjBOPxdNoLZDCUKGcceunIo param_000738aa); // 0x000000018ABA9E38-0x000000018ABA9E58
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000738ab); // 0x000000018ABA9E58-0x000000018ABA9F10
+	public static TrZygBjBOPxdNoLZDCUKGcceunIo APoRgahkkqCivzZqzQUvGNyXvZFi(IntPtr param_000aa20f); // 0x000000018CD9E3B8-0x000000018CD9E400
+	public static unsafe void* APoRgahkkqCivzZqzQUvGNyXvZFi(TrZygBjBOPxdNoLZDCUKGcceunIo param_000aa210); // 0x0000000187889CB4-0x0000000187889CCC
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD9E400-0x000000018CD9E4E0
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x00000001828BC2B0-0x00000001828BC2C0
+	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(TrZygBjBOPxdNoLZDCUKGcceunIo param_000aa211); // 0x000000018CD9E4E0-0x000000018CD9E500
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000aa212); // 0x000000018CD9E500-0x000000018CD9E5B8
 }
 
 [Guid("00000000-0000-0000-C000-000000000046")]
-internal interface hosKjEbZIzDTSDHxGqYoGUnVmtF // TypeDefIndex: 53758
+internal interface hosKjEbZIzDTSDHxGqYoGUnVmtF // TypeDefIndex: 79002
 {
 	// Methods
 	int IYsALPEzKUpSHjMlchBUFTjZCkvr();
 }
 
-internal struct sjuMpQgJsMMamCXrodZGkLhzEaWP : IEquatable<sjuMpQgJsMMamCXrodZGkLhzEaWP> // TypeDefIndex: 53759
+internal struct sjuMpQgJsMMamCXrodZGkLhzEaWP : IEquatable<sjuMpQgJsMMamCXrodZGkLhzEaWP> // TypeDefIndex: 79003
 {
 	// Fields
 	private int wfZtUaqEuoTiZPVpOiwfYggcKVVM; // 0x00
@@ -4246,25 +4232,25 @@ internal struct sjuMpQgJsMMamCXrodZGkLhzEaWP : IEquatable<sjuMpQgJsMMamCXrodZGkL
 	public static readonly bfSyveGvJUGZkIOhbclwiChZPQrO YjKrMIveSChdaCJhDLipDxHCbdNPb; // 0x60
 
 	// Properties
-	public int rJSfuaTnaunbUhFSRwBTCTBYnyDb { get; } // 0x0000000182B77620-0x0000000182B77630 
-	public bool tRuaqIhSdYzhnrhZSyEMOnYHehUr { get; } // 0x000000018ABAE3E4-0x000000018ABAE424 
+	public int rJSfuaTnaunbUhFSRwBTCTBYnyDb { get; } // 0x00000001844AD290-0x00000001844AD2A0 
+	public bool tRuaqIhSdYzhnrhZSyEMOnYHehUr { get; } // 0x000000018CDA2BCC-0x000000018CDA2C0C 
 
 	// Constructors
-	public sjuMpQgJsMMamCXrodZGkLhzEaWP(int param_000738ac); // 0x0000000184D86140-0x0000000184D86150
-	public sjuMpQgJsMMamCXrodZGkLhzEaWP(uint param_000738ad); // 0x0000000184D86140-0x0000000184D86150
-	static sjuMpQgJsMMamCXrodZGkLhzEaWP(); // 0x000000018ABADC4C-0x000000018ABAE33C
+	public sjuMpQgJsMMamCXrodZGkLhzEaWP(int param_000aa213); // 0x0000000184547F40-0x0000000184547F50
+	public sjuMpQgJsMMamCXrodZGkLhzEaWP(uint param_000aa214); // 0x0000000184547F40-0x0000000184547F50
+	static sjuMpQgJsMMamCXrodZGkLhzEaWP(); // 0x000000018CDA2434-0x000000018CDA2B24
 
 	// Methods
-	public static int dYrigLVdlgNkIRdGqiPIJRSuzwi(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000738ae); // 0x000000018ABAE33C-0x000000018ABAE380
-	public static sjuMpQgJsMMamCXrodZGkLhzEaWP APoRgahkkqCivzZqzQUvGNyXvZFi(int param_000738af); // 0x0000000184D88BE0-0x0000000184D88BF0
-	public bool Equals(sjuMpQgJsMMamCXrodZGkLhzEaWP other); // 0x000000018ABADBC0-0x000000018ABADC08
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000738b1); // 0x000000018ABAE504-0x000000018ABAE574
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018ABADC08-0x000000018ABADC4C
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAE424-0x000000018ABAE504
-	public void hAZvkDasTiqEOBiwnrBHkHIaUlHO(); // 0x000000018ABAE380-0x000000018ABAE3E4
+	public static int dYrigLVdlgNkIRdGqiPIJRSuzwi(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000aa215); // 0x000000018CDA2B24-0x000000018CDA2B68
+	public static sjuMpQgJsMMamCXrodZGkLhzEaWP APoRgahkkqCivzZqzQUvGNyXvZFi(int param_000aa216); // 0x0000000187235A70-0x0000000187235A80
+	public bool Equals(sjuMpQgJsMMamCXrodZGkLhzEaWP other); // 0x000000018CDA23A8-0x000000018CDA23F0
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000aa218); // 0x000000018CDA2CEC-0x000000018CDA2D5C
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018CDA23F0-0x000000018CDA2434
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA2C0C-0x000000018CDA2CEC
+	public void hAZvkDasTiqEOBiwnrBHkHIaUlHO(); // 0x000000018CDA2B68-0x000000018CDA2BCC
 }
 
-internal sealed class bfSyveGvJUGZkIOhbclwiChZPQrO // TypeDefIndex: 53760
+internal sealed class bfSyveGvJUGZkIOhbclwiChZPQrO // TypeDefIndex: 79004
 {
 	// Fields
 	private static readonly object ZmiDSdTByJVOmBlCYCNEdEqJiceI; // 0x00
@@ -4282,59 +4268,59 @@ internal sealed class bfSyveGvJUGZkIOhbclwiChZPQrO // TypeDefIndex: 53760
 	private string kRdGDRZLnRMEVZuAFhqPyTEUlftG; // 0x30
 
 	// Properties
-	public sjuMpQgJsMMamCXrodZGkLhzEaWP gMRGEdhhgqpXnIAVONYyDfqHOvJJc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-	public string YYmqiTBOJEBhWqdLAOdhIHyRgxTV { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-	public string cEBHICmSaSZTMrCZHtWqVdpEuXiA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-	public string DVbZohZclzeJzulNXhAYNNnnEzxD { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-	public string ryYCGDiFKHbCVCRTEIIcHhWPnpxTb { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+	public sjuMpQgJsMMamCXrodZGkLhzEaWP gMRGEdhhgqpXnIAVONYyDfqHOvJJc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+	public string YYmqiTBOJEBhWqdLAOdhIHyRgxTV { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+	public string cEBHICmSaSZTMrCZHtWqVdpEuXiA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+	public string DVbZohZclzeJzulNXhAYNNnnEzxD { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+	public string ryYCGDiFKHbCVCRTEIIcHhWPnpxTb { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
 
 	// Constructors
-	public bfSyveGvJUGZkIOhbclwiChZPQrO(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000738b2, string param_000738b3, string param_000738b4, string param_000738b5, string param_000738b6 = null); // 0x000000018A8D912C-0x000000018A8D9178
-	static bfSyveGvJUGZkIOhbclwiChZPQrO(); // 0x000000018ABAB2F0-0x000000018ABAB430
+	public bfSyveGvJUGZkIOhbclwiChZPQrO(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000aa219, string param_000aa21a, string param_000aa21b, string param_000aa21c, string param_000aa21d = null); // 0x000000018CA8B840-0x000000018CA8B88C
+	static bfSyveGvJUGZkIOhbclwiChZPQrO(); // 0x000000018CD9F9C0-0x000000018CD9FB00
 
 	// Methods
-	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(bfSyveGvJUGZkIOhbclwiChZPQrO param_000738bc); // 0x000000018ABAB88C-0x000000018ABAB8FC
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000738bd); // 0x000000018ABAB8FC-0x000000018ABAB9C4
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018ABAAEB0-0x000000018ABAAF04
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAB73C-0x000000018ABAB88C
-	public static bfSyveGvJUGZkIOhbclwiChZPQrO VKICJqsJwFOpSUilqXSJZBqYhSeT(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000738be); // 0x000000018ABAAF04-0x000000018ABAB2F0
-	private static void lSSCOJFIWrnBijzKFolPglRHfchqE(System.Type param_000738bf); // 0x000000018ABAB590-0x000000018ABAB73C
-	private static string hTeZRFPSWzaqjQbCTpOdHimdNdSO(int param_000738c0); // 0x000000018ABAB4D0-0x000000018ABAB590
-	private static extern uint cOZXuDTobiOdpFwHGvPoPBreOMPv(int param_000738c1, IntPtr param_000738c2, int param_000738c3, int param_000738c4, ref IntPtr param_000738c5, int param_000738c6, IntPtr param_000738c7); // 0x000000018ABAB430-0x000000018ABAB4D0
+	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(bfSyveGvJUGZkIOhbclwiChZPQrO param_000aa223); // 0x000000018CD9FF60-0x000000018CD9FFD0
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000aa224); // 0x000000018CD9FFD0-0x000000018CDA0098
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x000000018CD9F56C-0x000000018CD9F5C4
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD9FE10-0x000000018CD9FF60
+	public static bfSyveGvJUGZkIOhbclwiChZPQrO VKICJqsJwFOpSUilqXSJZBqYhSeT(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000aa225); // 0x000000018CD9F5C4-0x000000018CD9F9C0
+	private static void lSSCOJFIWrnBijzKFolPglRHfchqE(System.Type param_000aa226); // 0x000000018CD9FC64-0x000000018CD9FE10
+	private static string hTeZRFPSWzaqjQbCTpOdHimdNdSO(int param_000aa227); // 0x000000018CD9FBA4-0x000000018CD9FC64
+	private static extern uint cOZXuDTobiOdpFwHGvPoPBreOMPv(int param_000aa228, IntPtr param_000aa229, int param_000aa22a, int param_000aa22b, ref IntPtr param_000aa22c, int param_000aa22d, IntPtr param_000aa22e); // 0x000000018CD9FB00-0x000000018CD9FBA4
 }
 
-internal class KIANlWxmpqLSfvaerMIDZHOPDMdD : Exception // TypeDefIndex: 53761
+internal class KIANlWxmpqLSfvaerMIDZHOPDMdD : Exception // TypeDefIndex: 79005
 {
 	// Fields
 	private bfSyveGvJUGZkIOhbclwiChZPQrO VNCzCGcKHuGqDDqrmPJZtvCnUtYi; // 0x90
 
 	// Constructors
-	public KIANlWxmpqLSfvaerMIDZHOPDMdD(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000738c8); // 0x000000018ABA6448-0x000000018ABA64E0
-	public KIANlWxmpqLSfvaerMIDZHOPDMdD(bfSyveGvJUGZkIOhbclwiChZPQrO param_000738c9); // 0x000000018ABA64E0-0x000000018ABA6590
+	public KIANlWxmpqLSfvaerMIDZHOPDMdD(sjuMpQgJsMMamCXrodZGkLhzEaWP param_000aa22f); // 0x000000018CD9AE0C-0x000000018CD9AEA4
+	public KIANlWxmpqLSfvaerMIDZHOPDMdD(bfSyveGvJUGZkIOhbclwiChZPQrO param_000aa230); // 0x000000018CD9AEA4-0x000000018CD9AF54
 }
 
-internal delegate u0001 xxrnKXssXwirTAQWUdskFdUMBgNHb<out u0001>(); // TypeDefIndex: 53762; 0x00000000-0x00000000
+internal delegate u0001 xxrnKXssXwirTAQWUdskFdUMBgNHb<out u0001>(); // TypeDefIndex: 79006; 0x00000000-0x00000000
 
-internal static class BrxTASPZWLjfpFdYlhWjVHOQaBUe // TypeDefIndex: 53763
+internal static class BrxTASPZWLjfpFdYlhWjVHOQaBUe // TypeDefIndex: 79007
 {
 	// Methods
-	private static unsafe extern void* yneFvEDelAAnMoHsqMrOepXLkDffb(void* param_000738cc, void* param_000738cd, UIntPtr param_000738ce); // 0x0000000183125240-0x0000000183125290
-	private static unsafe void* ajHtDTrvzcZCRjeUpGONRGpfyKUK(void* param_000738cf, void* param_000738d0, int param_000738d1); // 0x00000001831251F0-0x0000000183125240
-	public static void qKdcIUhkEEAsbPtVMNAaEBFbzjxZA(IntPtr param_000738d2, IntPtr param_000738d3, int param_000738d4); // 0x00000001831251F0-0x0000000183125240
+	private static unsafe extern void* yneFvEDelAAnMoHsqMrOepXLkDffb(void* param_000aa233, void* param_000aa234, UIntPtr param_000aa235); // 0x000000018CD983E4-0x000000018CD98478
+	private static unsafe void* ajHtDTrvzcZCRjeUpGONRGpfyKUK(void* param_000aa236, void* param_000aa237, int param_000aa238); // 0x000000018CD98354-0x000000018CD98360
+	public static void qKdcIUhkEEAsbPtVMNAaEBFbzjxZA(IntPtr param_000aa239, IntPtr param_000aa23a, int param_000aa23b); // 0x000000018CD98354-0x000000018CD98360
 	public static int SYUJsGEebKGYJaXvpjqFltrKPxst<u0001>()
 		where  : struct;
-	public static Guid lxBfDgfWvtXURJWTdktXMEccQnHe(System.Type param_000738d5); // 0x000000018ABA3ABC-0x000000018ABA3AF4
-	public static string uOzPQZBhpjDJZbMJzGgWPpgOzePp(IntPtr param_000738d6, int param_000738d7); // 0x000000018ABA3AF4-0x000000018ABA3B40
-	public static string QTHrbaUMJlrPinbmosEAlsKRWhsg<u0001>(string param_000738d8, u0001[] param_000738d9);
+	public static Guid lxBfDgfWvtXURJWTdktXMEccQnHe(System.Type param_000aa23c); // 0x000000018CD98360-0x000000018CD98398
+	public static string uOzPQZBhpjDJZbMJzGgWPpgOzePp(IntPtr param_000aa23d, int param_000aa23e); // 0x000000018CD98398-0x000000018CD983E4
+	public static string QTHrbaUMJlrPinbmosEAlsKRWhsg<u0001>(string param_000aa23f, u0001[] param_000aa240);
 }
 
-internal class seIBpytGDfuFlKsBhBvcMXznriOe // TypeDefIndex: 53765
+internal class seIBpytGDfuFlKsBhBvcMXznriOe // TypeDefIndex: 79009
 {
 	// Fields
 	private static IntPtr jhGooCbTTXmgjsKnAiicIgjWqgcZ; // 0x00
 
 	// Nested types
-	internal enum slZGpLdlHEcSApIxuWJmPRUgnEMS // TypeDefIndex: 53764
+	internal enum slZGpLdlHEcSApIxuWJmPRUgnEMS // TypeDefIndex: 79008
 	{
 		UserData = -21,
 		ExtendedStyle = -20,
@@ -4346,18 +4332,18 @@ internal class seIBpytGDfuFlKsBhBvcMXznriOe // TypeDefIndex: 53765
 	}
 
 	// Constructors
-	static seIBpytGDfuFlKsBhBvcMXznriOe(); // 0x000000018ABAD4B8-0x000000018ABAD4F4
+	static seIBpytGDfuFlKsBhBvcMXznriOe(); // 0x000000018CDA1C9C-0x000000018CDA1CD8
 
 	// Methods
-	public static extern IntPtr hRiRwYJBjSVOrHiPzPXauIMCQPTj(IntPtr param_000738da, IntPtr param_000738db, int param_000738dc, IntPtr param_000738dd, IntPtr param_000738de); // 0x000000018ABAD4F4-0x000000018ABAD594
-	public static extern IntPtr QFgaYbkWDIHVIbxKtCmwkREWHRUlA(string param_000738df); // 0x000000018ABAD3BC-0x000000018ABAD438
-	public static IntPtr kZUgUEiEIyfFGHxEceelvhObUcBoc(IntPtr param_000738e0, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000738e1); // 0x000000018ABAD594-0x000000018ABAD5EC
-	private static extern IntPtr WmEBbdHCmIkBFeSzenoaYkCQibeJB(IntPtr param_000738e2, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000738e3); // 0x000000018ABAD438-0x000000018ABAD4B8
-	private static extern IntPtr MOXnhZhygCYADfqDpxIHjSOlMTwC(IntPtr param_000738e4, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000738e5); // 0x000000018ABAD33C-0x000000018ABAD3BC
-	public static extern bool lFRbcmhglbQbPdQIaYNvQrGesSgJB(IntPtr param_000738e6); // 0x000000018ABAD5EC-0x000000018ABAD624
+	public static extern IntPtr hRiRwYJBjSVOrHiPzPXauIMCQPTj(IntPtr param_000aa241, IntPtr param_000aa242, int param_000aa243, IntPtr param_000aa244, IntPtr param_000aa245); // 0x000000018CDA1CD8-0x000000018CDA1D7C
+	public static extern IntPtr QFgaYbkWDIHVIbxKtCmwkREWHRUlA(string param_000aa246); // 0x000000018CDA1B98-0x000000018CDA1C18
+	public static IntPtr kZUgUEiEIyfFGHxEceelvhObUcBoc(IntPtr param_000aa247, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000aa248); // 0x000000018CDA1D7C-0x000000018CDA1DD4
+	private static extern IntPtr WmEBbdHCmIkBFeSzenoaYkCQibeJB(IntPtr param_000aa249, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000aa24a); // 0x000000018CDA1C18-0x000000018CDA1C9C
+	private static extern IntPtr MOXnhZhygCYADfqDpxIHjSOlMTwC(IntPtr param_000aa24b, slZGpLdlHEcSApIxuWJmPRUgnEMS param_000aa24c); // 0x000000018CDA1B14-0x000000018CDA1B98
+	public static extern bool lFRbcmhglbQbPdQIaYNvQrGesSgJB(IntPtr param_000aa24d); // 0x000000018CDA1DD4-0x000000018CDA1E0C
 }
 
-internal enum MIMEBibeTKehnATrbjXXwrQAaUzCb // TypeDefIndex: 53766
+internal enum MIMEBibeTKehnATrbjXXwrQAaUzCb // TypeDefIndex: 79010
 {
 	None = 0,
 	XINPUT_9_1_0 = 1,
@@ -4367,7 +4353,7 @@ internal enum MIMEBibeTKehnATrbjXXwrQAaUzCb // TypeDefIndex: 53766
 	XINPUT_1_4 = 5
 }
 
-internal class GtCdBOEKissCDxkzesWcITSdMOut // TypeDefIndex: 53768
+internal class GtCdBOEKissCDxkzesWcITSdMOut // TypeDefIndex: 79012
 {
 	// Fields
 	private static bool cskAILJHBmOJbCCYzUscJUtMJpkjA; // 0x00
@@ -4377,54 +4363,54 @@ internal class GtCdBOEKissCDxkzesWcITSdMOut // TypeDefIndex: 53768
 	private static BJBFthynMHXUCKrXpIrKdnkmNKsv oTgnAwDElWujlNEWnBKuoeXGqSoH; // 0x18
 
 	// Properties
-	public static bool sqJLlwsCsBhPRvpGyAjZbEBOcprv { get; } // 0x000000018ABA5CF4-0x000000018ABA5D2C 
-	public static MIMEBibeTKehnATrbjXXwrQAaUzCb ifGsmUnyklcvIhWxxvBsBtYoUrvh { get; } // 0x000000018ABA5E14-0x000000018ABA5E4C 
-	public static CrgrIKvxFWvZvjakhDbDRFvrhbjw rLxaACDCyIxzUcBGEkfeVaKJWVTk { get; } // 0x000000018ABA5D54-0x000000018ABA5D8C 
+	public static bool sqJLlwsCsBhPRvpGyAjZbEBOcprv { get; } // 0x000000018CD9A67C-0x000000018CD9A6B4 
+	public static MIMEBibeTKehnATrbjXXwrQAaUzCb ifGsmUnyklcvIhWxxvBsBtYoUrvh { get; } // 0x000000018CD9A79C-0x000000018CD9A7D4 
+	public static CrgrIKvxFWvZvjakhDbDRFvrhbjw rLxaACDCyIxzUcBGEkfeVaKJWVTk { get; } // 0x000000018CD9A6DC-0x000000018CD9A714 
 
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-	public unsafe delegate int CrgrIKvxFWvZvjakhDbDRFvrhbjw(int arg0, void* arg1); // TypeDefIndex: 53767; 0x00000001815802E0-0x00000001815802F0
+	public unsafe delegate int CrgrIKvxFWvZvjakhDbDRFvrhbjw(int arg0, void* arg1); // TypeDefIndex: 79011; 0x00000001859B7730-0x00000001859B7740
 
 	// Methods
-	private static unsafe extern int WmuQlwARWIUUGmlQtMvyLQMCEBCS(int param_000738e7, void* param_000738e8); // 0x000000018ABA5DD4-0x000000018ABA5E14
-	private static unsafe int qLOWFiGgQzBqnTjjtHmPbtlmMXSGA(int param_000738e9, void* param_000738ea); // 0x000000018ABA6150-0x000000018ABA6158
-	private static unsafe extern int EcLEGzcLuWLwfgqmHoSoCBnmLzxMc(int param_000738eb, void* param_000738ec); // 0x000000018ABA5CAC-0x000000018ABA5CF4
-	private static unsafe int gKeJjjwLrgOcooRjpRBOhCsXuAhK(int param_000738ed, void* param_000738ee); // 0x000000018ABA5E4C-0x000000018ABA5E54
-	private static unsafe extern int nKZDwZpAhcNvngleGNwOkwrXtNNQ(int param_000738ef, void* param_000738f0); // 0x000000018ABA6100-0x000000018ABA6148
-	private static unsafe int llInDuXSJRDqKFlXbbcLZHDILJOm(int param_000738f1, void* param_000738f2); // 0x000000018ABA5FD0-0x000000018ABA5FD8
-	private static unsafe extern int SMSSEESdBQjgKkfSOnqHAFmaLqJu(int param_000738f3, void* param_000738f4); // 0x000000018ABA5D8C-0x000000018ABA5DD4
-	private static unsafe int oWgUodfIzEwHIhjXHEPdjqOYEgKBA(int param_000738f5, void* param_000738f6); // 0x000000018ABA6148-0x000000018ABA6150
-	private static unsafe extern int GlpgmzVdgHsxMKCoIfGIJleBntmEb(int param_000738f7, void* param_000738f8); // 0x0000000184D280F0-0x0000000184D28180
-	private static unsafe int NiFotMbPIZbgbjZvSZHKPVZHOkUpA(int param_000738f9, void* param_000738fa); // 0x00000001853952B4-0x00000001853952BC
-	public static bool EIgZIsAaXKSOIBvpwmqjiRutRAOm(out MIMEBibeTKehnATrbjXXwrQAaUzCb param_000738fb, out string param_000738fc, out int param_000738fd); // 0x0000000183B231F0-0x0000000183B23380
-	private static bool AqSjfMIAPvzxYokyFbynybATTPjJ(); // 0x0000000183B233D0-0x0000000183B234E0
-	private static bool gXNGfLtOhcrOgQRUCoNYOBPAZtQC(); // 0x000000018ABA5E54-0x000000018ABA5F7C
-	private static bool mqeEzuBkyHAUIazBILjoaWTZXONyA(); // 0x000000018ABA5FD8-0x000000018ABA6100
-	private static bool zSLfyxiSNglLhhRWeNIPaAdwtSogB(); // 0x000000018ABA6158-0x000000018ABA6280
-	private static bool CPRiWouGWpIvZbMzMaMcGTVlJPog(); // 0x000000018ABA5B84-0x000000018ABA5CAC
-	private static bool PghschPkVcdMkuEjwKNmmlfwibMl(); // 0x000000018ABA5D2C-0x000000018ABA5D54
-	private static bool kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x0000000183B23380-0x0000000183B233D0
-	public static void iUSCAVHRnNWsJHJVInfBbwPDDdWBB(); // 0x000000018ABA5F7C-0x000000018ABA5FD0
+	private static unsafe extern int WmuQlwARWIUUGmlQtMvyLQMCEBCS(int param_000aa24e, void* param_000aa24f); // 0x000000018CD9A75C-0x000000018CD9A79C
+	private static unsafe int qLOWFiGgQzBqnTjjtHmPbtlmMXSGA(int param_000aa250, void* param_000aa251); // 0x000000018CD9AAF4-0x000000018CD9AAFC
+	private static unsafe extern int EcLEGzcLuWLwfgqmHoSoCBnmLzxMc(int param_000aa252, void* param_000aa253); // 0x000000018CD9A634-0x000000018CD9A67C
+	private static unsafe int gKeJjjwLrgOcooRjpRBOhCsXuAhK(int param_000aa254, void* param_000aa255); // 0x000000018CD9A7D4-0x000000018CD9A7DC
+	private static unsafe extern int nKZDwZpAhcNvngleGNwOkwrXtNNQ(int param_000aa256, void* param_000aa257); // 0x000000018CD9AAA4-0x000000018CD9AAEC
+	private static unsafe int llInDuXSJRDqKFlXbbcLZHDILJOm(int param_000aa258, void* param_000aa259); // 0x000000018CD9A968-0x000000018CD9A970
+	private static unsafe extern int SMSSEESdBQjgKkfSOnqHAFmaLqJu(int param_000aa25a, void* param_000aa25b); // 0x000000018CD9A714-0x000000018CD9A75C
+	private static unsafe int oWgUodfIzEwHIhjXHEPdjqOYEgKBA(int param_000aa25c, void* param_000aa25d); // 0x000000018CD9AAEC-0x000000018CD9AAF4
+	private static unsafe extern int GlpgmzVdgHsxMKCoIfGIJleBntmEb(int param_000aa25e, void* param_000aa25f); // 0x0000000185BAF7C0-0x0000000185BAF850
+	private static unsafe int NiFotMbPIZbgbjZvSZHKPVZHOkUpA(int param_000aa260, void* param_000aa261); // 0x0000000187839AD4-0x0000000187839ADC
+	public static bool EIgZIsAaXKSOIBvpwmqjiRutRAOm(out MIMEBibeTKehnATrbjXXwrQAaUzCb param_000aa262, out string param_000aa263, out int param_000aa264); // 0x0000000185BB13C0-0x0000000185BB1550
+	private static bool AqSjfMIAPvzxYokyFbynybATTPjJ(); // 0x0000000185BB15A0-0x0000000185BB16B0
+	private static bool gXNGfLtOhcrOgQRUCoNYOBPAZtQC(); // 0x000000018CD9A7DC-0x000000018CD9A910
+	private static bool mqeEzuBkyHAUIazBILjoaWTZXONyA(); // 0x000000018CD9A970-0x000000018CD9AAA4
+	private static bool zSLfyxiSNglLhhRWeNIPaAdwtSogB(); // 0x000000018CD9AAFC-0x000000018CD9AC30
+	private static bool CPRiWouGWpIvZbMzMaMcGTVlJPog(); // 0x000000018CD9A500-0x000000018CD9A634
+	private static bool PghschPkVcdMkuEjwKNmmlfwibMl(); // 0x000000018CD9A6B4-0x000000018CD9A6DC
+	private static bool kNwsRjzUPqlWAngmSxVsTsQzbnNU(); // 0x0000000185BB1550-0x0000000185BB15A0
+	public static void iUSCAVHRnNWsJHJVInfBbwPDDdWBB(); // 0x000000018CD9A910-0x000000018CD9A968
 }
 
-internal class nKmzDjyDAHhaWGWNaeRKraijtxEk // TypeDefIndex: 53769
+internal class nKmzDjyDAHhaWGWNaeRKraijtxEk // TypeDefIndex: 79013
 {
 	// Fields
 	private readonly XeeDQlLvdfFWoEYqJXLUihFnLlSt TSmOIDpHImYStgrgdcBDQRGCYTcd; // 0x10
 
 	// Properties
-	public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x00000001836A82E0-0x00000001836A8310 
+	public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x0000000185BB0180-0x0000000185BB0260 
 
 	// Constructors
-	public nKmzDjyDAHhaWGWNaeRKraijtxEk(XeeDQlLvdfFWoEYqJXLUihFnLlSt param_00073902 = XeeDQlLvdfFWoEYqJXLUihFnLlSt.Any /* Metadata: 0x02333D58 */); // 0x0000000184D86130-0x0000000184D86140
+	public nKmzDjyDAHhaWGWNaeRKraijtxEk(XeeDQlLvdfFWoEYqJXLUihFnLlSt param_000aa269 = XeeDQlLvdfFWoEYqJXLUihFnLlSt.Any /* Metadata: 0x0262C19C */); // 0x0000000182A819C0-0x0000000182A819D0
 
 	// Methods
-	public MTkIHhmbDyfNUhhhFXnIIVjLwOsY RnRKkCABRuKQqtoefbomyRfdIyAI(lzVnDkLSnMDxnNcAjwlHHyjxaWuL param_00073903); // 0x000000018ABABD9C-0x000000018ABABE24
-	public bool jhDqvurSoWPXWZpHUjiCqrMMMfVS(out BJBFthynMHXUCKrXpIrKdnkmNKsv param_00073904); // 0x000000018ABABE94-0x000000018ABABEB0
-	public sjuMpQgJsMMamCXrodZGkLhzEaWP hJVWdluocTccqfVOELDXAeXkkPPlA(MjfRFftkTcBeBOoxrCKsCyjeiVkX param_00073905); // 0x000000018ABABE24-0x000000018ABABE94
+	public MTkIHhmbDyfNUhhhFXnIIVjLwOsY RnRKkCABRuKQqtoefbomyRfdIyAI(lzVnDkLSnMDxnNcAjwlHHyjxaWuL param_000aa26a); // 0x000000018CDA04E4-0x000000018CDA056C
+	public bool jhDqvurSoWPXWZpHUjiCqrMMMfVS(out BJBFthynMHXUCKrXpIrKdnkmNKsv param_000aa26b); // 0x000000018CDA05DC-0x000000018CDA05F8
+	public sjuMpQgJsMMamCXrodZGkLhzEaWP hJVWdluocTccqfVOELDXAeXkkPPlA(MjfRFftkTcBeBOoxrCKsCyjeiVkX param_000aa26c); // 0x000000018CDA056C-0x000000018CDA05DC
 }
 
-internal struct noccVtHfezXkLCsIalwenvYFTJemA // TypeDefIndex: 53770
+internal struct noccVtHfezXkLCsIalwenvYFTJemA // TypeDefIndex: 79014
 {
 	// Fields
 	public cycPVSDOevSXhUToOPDYJAzVngvP PlahzMFUWWFVTEjviHdVVhgEfBVTb; // 0x00
@@ -4436,23 +4422,23 @@ internal struct noccVtHfezXkLCsIalwenvYFTJemA // TypeDefIndex: 53770
 	public short hCMIUROrTGFDMMqLkLejnPumaGdU; // 0x0A
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAC480-0x000000018ABAC6A0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA0BE8-0x000000018CDA0E08
 }
 
 [Flags]
-internal enum uadRIYjcmydQXrMsjFupGPQKYlxI : short // TypeDefIndex: 53771
+internal enum uadRIYjcmydQXrMsjFupGPQKYlxI : short // TypeDefIndex: 79015
 {
 	None = 0,
 	VoiceSupported = 4
 }
 
-internal enum lzVnDkLSnMDxnNcAjwlHHyjxaWuL // TypeDefIndex: 53772
+internal enum lzVnDkLSnMDxnNcAjwlHHyjxaWuL // TypeDefIndex: 79016
 {
 	Any = 0,
 	Gamepad = 1
 }
 
-internal enum QytQNbevFMmLqBLgMvWLcuqTSrYS : byte // TypeDefIndex: 53773
+internal enum QytQNbevFMmLqBLgMvWLcuqTSrYS : byte // TypeDefIndex: 79017
 {
 	Gamepad = 1,
 	Wheel = 2,
@@ -4467,7 +4453,7 @@ internal enum QytQNbevFMmLqBLgMvWLcuqTSrYS : byte // TypeDefIndex: 53773
 }
 
 [Flags]
-internal enum cycPVSDOevSXhUToOPDYJAzVngvP : short // TypeDefIndex: 53775
+internal enum cycPVSDOevSXhUToOPDYJAzVngvP : short // TypeDefIndex: 79019
 {
 	Y = -32768,
 	None = 0,
@@ -4487,7 +4473,7 @@ internal enum cycPVSDOevSXhUToOPDYJAzVngvP : short // TypeDefIndex: 53775
 	X = 16384
 }
 
-internal enum XeeDQlLvdfFWoEYqJXLUihFnLlSt : byte // TypeDefIndex: 53776
+internal enum XeeDQlLvdfFWoEYqJXLUihFnLlSt : byte // TypeDefIndex: 79020
 {
 	One = 0,
 	Two = 1,
@@ -4496,33 +4482,33 @@ internal enum XeeDQlLvdfFWoEYqJXLUihFnLlSt : byte // TypeDefIndex: 53776
 	Any = 255
 }
 
-internal static class shnHHDrlItPppjTdnueDMaecBIoF // TypeDefIndex: 53777
+internal static class shnHHDrlItPppjTdnueDMaecBIoF // TypeDefIndex: 79021
 {
 	// Methods
-	public static int wVFohyegaaQeFDgTfJYKtLKogtgR(int param_00073906, MjfRFftkTcBeBOoxrCKsCyjeiVkX param_00073907); // 0x000000018ABADAF0-0x000000018ABADB0C
-	private static unsafe int ohlZIROIcbLMisUPhQvAAftGaIXd(int param_00073908, void* param_00073909); // 0x000000018ABAD948-0x000000018ABAD9D0
-	private static unsafe extern int drNVUIubQttGHkuzLAsWuvSZsJTc(int param_0007390a, void* param_0007390b); // 0x000000018ABAD70C-0x000000018ABAD74C
-	private static unsafe extern int qCyBbXchefAJxButpsWlQEtcnzJW(int param_0007390c, void* param_0007390d); // 0x000000018ABADA20-0x000000018ABADA68
-	private static unsafe extern int uRZEDYCPcESEdxERxuQhqXVijabH(int param_0007390e, void* param_0007390f); // 0x000000018ABADAA8-0x000000018ABADAF0
-	private static unsafe extern int nDZSStYEtqlQZfkxWZvzhjlJGRNKA(int param_00073910, void* param_00073911); // 0x000000018ABAD8B8-0x000000018ABAD900
-	private static unsafe extern int MCTvSDSujIVfbjwftkjHzEpbGEns(int param_00073912, void* param_00073913); // 0x000000018ABAD624-0x000000018ABAD66C
-	public static int jchinRbcEpGCiNimVCjmUrgPbxygb(int param_00073914, out BJBFthynMHXUCKrXpIrKdnkmNKsv param_00073915); // 0x00000001836A8310-0x00000001836A8320
-	private static unsafe int esqCpYIkAcsHEBmFMnFSVAuAloPgA(int param_00073916, void* param_00073917); // 0x00000001836A8320-0x00000001836A8440
-	private static unsafe extern int qLOWFiGgQzBqnTjjtHmPbtlmMXSGA(int param_00073918, void* param_00073919); // 0x000000018ABADA68-0x000000018ABADAA8
-	private static unsafe extern int gKeJjjwLrgOcooRjpRBOhCsXuAhK(int param_0007391a, void* param_0007391b); // 0x000000018ABAD7D8-0x000000018ABAD820
-	private static unsafe extern int llInDuXSJRDqKFlXbbcLZHDILJOm(int param_0007391c, void* param_0007391d); // 0x000000018ABAD870-0x000000018ABAD8B8
-	private static unsafe extern int oWgUodfIzEwHIhjXHEPdjqOYEgKBA(int param_0007391e, void* param_0007391f); // 0x000000018ABAD900-0x000000018ABAD948
-	private static unsafe extern int NiFotMbPIZbgbjZvSZHKPVZHOkUpA(int param_00073920, void* param_00073921); // 0x00000001836A8440-0x00000001836A84D0
-	public static int xdWWhxhvmgmkLLBwouOFGdJVbuNx(int param_00073922, lzVnDkLSnMDxnNcAjwlHHyjxaWuL param_00073923, out MTkIHhmbDyfNUhhhFXnIIVjLwOsY param_00073924); // 0x000000018ABADB0C-0x000000018ABADB24
-	private static unsafe int yxXWCHstXCFCCMBNolxEflYSsAUn(int param_00073925, int param_00073926, void* param_00073927); // 0x000000018ABADB24-0x000000018ABADBC0
-	private static unsafe extern int eJYYHbJrjZBFOXOmMCYESfVBZqMM(int param_00073928, int param_00073929, void* param_0007392a); // 0x000000018ABAD74C-0x000000018ABAD7D8
-	private static unsafe extern int MXvGpBjbsLUCVLXvQQdDEKWCtcBY(int param_0007392b, int param_0007392c, void* param_0007392d); // 0x000000018ABAD66C-0x000000018ABAD6BC
-	private static unsafe extern int iLnWhwvWzDknQPIMxhwMcieQPKBbA(int param_0007392e, int param_0007392f, void* param_00073930); // 0x000000018ABAD820-0x000000018ABAD870
-	private static unsafe extern int OHNlSIycQZrbzDzRANioMwRBpeMQ(int param_00073931, int param_00073932, void* param_00073933); // 0x000000018ABAD6BC-0x000000018ABAD70C
-	private static unsafe extern int pJEcXmQEhIaVberlyFFmMipIcdav(int param_00073934, int param_00073935, void* param_00073936); // 0x000000018ABAD9D0-0x000000018ABADA20
+	public static int wVFohyegaaQeFDgTfJYKtLKogtgR(int param_000aa26d, MjfRFftkTcBeBOoxrCKsCyjeiVkX param_000aa26e); // 0x000000018CDA22D8-0x000000018CDA22F4
+	private static unsafe int ohlZIROIcbLMisUPhQvAAftGaIXd(int param_000aa26f, void* param_000aa270); // 0x000000018CDA2130-0x000000018CDA21B8
+	private static unsafe extern int drNVUIubQttGHkuzLAsWuvSZsJTc(int param_000aa271, void* param_000aa272); // 0x000000018CDA1EF4-0x000000018CDA1F34
+	private static unsafe extern int qCyBbXchefAJxButpsWlQEtcnzJW(int param_000aa273, void* param_000aa274); // 0x000000018CDA2208-0x000000018CDA2250
+	private static unsafe extern int uRZEDYCPcESEdxERxuQhqXVijabH(int param_000aa275, void* param_000aa276); // 0x000000018CDA2290-0x000000018CDA22D8
+	private static unsafe extern int nDZSStYEtqlQZfkxWZvzhjlJGRNKA(int param_000aa277, void* param_000aa278); // 0x000000018CDA20A0-0x000000018CDA20E8
+	private static unsafe extern int MCTvSDSujIVfbjwftkjHzEpbGEns(int param_000aa279, void* param_000aa27a); // 0x000000018CDA1E0C-0x000000018CDA1E54
+	public static int jchinRbcEpGCiNimVCjmUrgPbxygb(int param_000aa27b, out BJBFthynMHXUCKrXpIrKdnkmNKsv param_000aa27c); // 0x0000000185BB0260-0x0000000185BB0340
+	private static unsafe int esqCpYIkAcsHEBmFMnFSVAuAloPgA(int param_000aa27d, void* param_000aa27e); // 0x0000000185BB0340-0x0000000185BB0460
+	private static unsafe extern int qLOWFiGgQzBqnTjjtHmPbtlmMXSGA(int param_000aa27f, void* param_000aa280); // 0x000000018CDA2250-0x000000018CDA2290
+	private static unsafe extern int gKeJjjwLrgOcooRjpRBOhCsXuAhK(int param_000aa281, void* param_000aa282); // 0x000000018CDA1FC0-0x000000018CDA2008
+	private static unsafe extern int llInDuXSJRDqKFlXbbcLZHDILJOm(int param_000aa283, void* param_000aa284); // 0x000000018CDA2058-0x000000018CDA20A0
+	private static unsafe extern int oWgUodfIzEwHIhjXHEPdjqOYEgKBA(int param_000aa285, void* param_000aa286); // 0x000000018CDA20E8-0x000000018CDA2130
+	private static unsafe extern int NiFotMbPIZbgbjZvSZHKPVZHOkUpA(int param_000aa287, void* param_000aa288); // 0x0000000185BB0460-0x0000000185BB04F0
+	public static int xdWWhxhvmgmkLLBwouOFGdJVbuNx(int param_000aa289, lzVnDkLSnMDxnNcAjwlHHyjxaWuL param_000aa28a, out MTkIHhmbDyfNUhhhFXnIIVjLwOsY param_000aa28b); // 0x000000018CDA22F4-0x000000018CDA230C
+	private static unsafe int yxXWCHstXCFCCMBNolxEflYSsAUn(int param_000aa28c, int param_000aa28d, void* param_000aa28e); // 0x000000018CDA230C-0x000000018CDA23A8
+	private static unsafe extern int eJYYHbJrjZBFOXOmMCYESfVBZqMM(int param_000aa28f, int param_000aa290, void* param_000aa291); // 0x000000018CDA1F34-0x000000018CDA1FC0
+	private static unsafe extern int MXvGpBjbsLUCVLXvQQdDEKWCtcBY(int param_000aa292, int param_000aa293, void* param_000aa294); // 0x000000018CDA1E54-0x000000018CDA1EA4
+	private static unsafe extern int iLnWhwvWzDknQPIMxhwMcieQPKBbA(int param_000aa295, int param_000aa296, void* param_000aa297); // 0x000000018CDA2008-0x000000018CDA2058
+	private static unsafe extern int OHNlSIycQZrbzDzRANioMwRBpeMQ(int param_000aa298, int param_000aa299, void* param_000aa29a); // 0x000000018CDA1EA4-0x000000018CDA1EF4
+	private static unsafe extern int pJEcXmQEhIaVberlyFFmMipIcdav(int param_000aa29b, int param_000aa29c, void* param_000aa29d); // 0x000000018CDA21B8-0x000000018CDA2208
 }
 
-internal struct MTkIHhmbDyfNUhhhFXnIIVjLwOsY // TypeDefIndex: 53778
+internal struct MTkIHhmbDyfNUhhhFXnIIVjLwOsY // TypeDefIndex: 79022
 {
 	// Fields
 	public Rewired.Libraries.SharpDX.XInput.DeviceType SPvkVDDQKebsselcJZJzSqGLscPR; // 0x00
@@ -4532,14 +4518,14 @@ internal struct MTkIHhmbDyfNUhhhFXnIIVjLwOsY // TypeDefIndex: 53778
 	public MjfRFftkTcBeBOoxrCKsCyjeiVkX AzTKzpcpepoHyqkrIKIAosuSVoBx; // 0x10
 }
 
-internal struct BJBFthynMHXUCKrXpIrKdnkmNKsv // TypeDefIndex: 53779
+internal struct BJBFthynMHXUCKrXpIrKdnkmNKsv // TypeDefIndex: 79023
 {
 	// Fields
 	public int oCVfOcyPWfqxcGJTrHWIbrkJtSbn; // 0x00
 	public noccVtHfezXkLCsIalwenvYFTJemA yEzDGpbzVFxDDUBgkdbBQTXdcfKib; // 0x04
 }
 
-internal struct MjfRFftkTcBeBOoxrCKsCyjeiVkX // TypeDefIndex: 53780
+internal struct MjfRFftkTcBeBOoxrCKsCyjeiVkX // TypeDefIndex: 79024
 {
 	// Fields
 	public ushort UetSrkuKipqxnZTTTLZFrsjNsUrs; // 0x00
@@ -4547,25 +4533,25 @@ internal struct MjfRFftkTcBeBOoxrCKsCyjeiVkX // TypeDefIndex: 53780
 }
 
 [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-internal delegate IntPtr OlYiLLSahgAkoRhTdadLIxcrPDagA(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 53781; 0x00000001814D0D00-0x00000001814D0D20
+internal delegate IntPtr OlYiLLSahgAkoRhTdadLIxcrPDagA(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam); // TypeDefIndex: 79025; 0x00000001811CDB70-0x00000001811CDB90
 
-internal delegate void YmzpkeeavzkhSRVYZAjVqDpxtWjO(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // TypeDefIndex: 53782; 0x00000001814DD080-0x00000001814DD0A0
+internal delegate void YmzpkeeavzkhSRVYZAjVqDpxtWjO(IntPtr rawInputHeaderIndices, IntPtr rawInputDataIndices, uint indicesCount, IntPtr rawInputData, uint rawInputDataSize); // TypeDefIndex: 79026; 0x00000001812083C0-0x00000001812083E0
 
-internal static class PFieJcnJGXQWnamkjCbEsemZIUvaA // TypeDefIndex: 53783
+internal static class PFieJcnJGXQWnamkjCbEsemZIUvaA // TypeDefIndex: 79027
 {
 	// Fields
 	internal static kShxDsToEeohgssnWUecapcoTGAY lOpEXrgCIzZTgtqSunZdfhqRxwCrA; // 0x00
 
 	// Methods
-	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x0000000183A457B0-0x0000000183A45840
-	public static void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018ABA7EC4-0x000000018ABA7F4C
-	public static OlYiLLSahgAkoRhTdadLIxcrPDagA yydCLfbOZCmdAWhusRGdMrQCLikk(); // 0x0000000183A45F60-0x0000000183A45FF0
-	public static void TpiKAhQKVNTRraDvFHgiVaVMiotV(IntPtr param_00073944, bool param_00073945); // 0x0000000183A45AB0-0x0000000183A45B10
-	public static void lPtuVhwlxOLXlhXxyBXbRlzWWbVF(bool param_00073946); // 0x000000018ABA7F4C-0x000000018ABA7FDC
-	public static void CUeHhSUGvEXntxCfpTYkQgmMxTRJ(YmzpkeeavzkhSRVYZAjVqDpxtWjO param_00073947); // 0x0000000183A45670-0x0000000183A45710
+	public static void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x0000000186FBD430-0x0000000186FBD4C0
+	public static void SbYVTdmkPElTDzeOGdijEuqHpCge(); // 0x000000018CD9C8C4-0x000000018CD9C950
+	public static OlYiLLSahgAkoRhTdadLIxcrPDagA yydCLfbOZCmdAWhusRGdMrQCLikk(); // 0x0000000185BAF020-0x0000000185BAF0B0
+	public static void TpiKAhQKVNTRraDvFHgiVaVMiotV(IntPtr param_000aa2ab, bool param_000aa2ac); // 0x0000000186DD9B10-0x0000000186DD9B70
+	public static void lPtuVhwlxOLXlhXxyBXbRlzWWbVF(bool param_000aa2ad); // 0x000000018CD9C950-0x000000018CD9C9E0
+	public static void CUeHhSUGvEXntxCfpTYkQgmMxTRJ(YmzpkeeavzkhSRVYZAjVqDpxtWjO param_000aa2ae); // 0x000000018716EA50-0x000000018716EAF0
 }
 
-internal class kShxDsToEeohgssnWUecapcoTGAY : IDisposable // TypeDefIndex: 53784
+internal class kShxDsToEeohgssnWUecapcoTGAY : IDisposable // TypeDefIndex: 79028
 {
 	// Fields
 	private int zadrMTlYVTgdzKxPzICXdxgbwQex; // 0x10
@@ -4574,26 +4560,26 @@ internal class kShxDsToEeohgssnWUecapcoTGAY : IDisposable // TypeDefIndex: 53784
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x20
 
 	// Constructors
-	public kShxDsToEeohgssnWUecapcoTGAY(uint param_00073948); // 0x0000000183A45840-0x0000000183A458C0
+	public kShxDsToEeohgssnWUecapcoTGAY(uint param_000aa2af); // 0x0000000186FBD4C0-0x0000000186FBD540
 
 	// Methods
-	public unsafe IntPtr oGlFeFwwZwedaHIewyilwhOLvyyG(uint param_00073949, void* param_0007394a); // 0x0000000183125150-0x00000001831251F0
-	public void Dispose(); // 0x000000018ABABA50-0x000000018ABABAA0
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABABAF8-0x000000018ABABB6C
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_0007394b); // 0x000000018ABABAA0-0x000000018ABABAF8
+	public unsafe IntPtr oGlFeFwwZwedaHIewyilwhOLvyyG(uint param_000aa2b0, void* param_000aa2b1); // 0x000000018CDA0244-0x000000018CDA02B4
+	public void Dispose(); // 0x000000018CDA0124-0x000000018CDA0174
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDA01CC-0x000000018CDA0244
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa2b2); // 0x000000018CDA0174-0x000000018CDA01CC
 }
 
-internal class JpjMwGtAGXGdiSKJDsvCQANVInzY // TypeDefIndex: 53785
+internal class JpjMwGtAGXGdiSKJDsvCQANVInzY // TypeDefIndex: 79029
 {
 	// Methods
-	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* aWxbndPmTPjLOCEauVAheAMzUlFC(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_0007394c); // 0x00000001831258F0-0x0000000183125920
-	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* yIHqZCfhLoWDvawkQqmLFopXoxSA(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_0007394d); // 0x000000018ABA6424-0x000000018ABA6448
-	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* xhSnFqBEonsMmIEcSGbrksbKsnorA(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_0007394e); // 0x00000001831258F0-0x0000000183125920
-	private static uint HWcbvHbLIpYfFBKcQhkBiYzgCnTdB(uint param_0007394f); // 0x0000000184DA8880-0x0000000184DA8890
-	private static ulong fIyFzgigAjTcWBRPhpyuGxtgnyocb(ulong param_00073950); // 0x0000000184DA8890-0x0000000184DA88A0
+	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* aWxbndPmTPjLOCEauVAheAMzUlFC(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2b3); // 0x0000000185296AB0-0x0000000185296AE0
+	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* yIHqZCfhLoWDvawkQqmLFopXoxSA(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2b4); // 0x000000018CD9ADE8-0x000000018CD9AE0C
+	public static unsafe eVGbmsHPQqEuPzDqvamRtBFdLadfb* xhSnFqBEonsMmIEcSGbrksbKsnorA(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2b5); // 0x0000000185296AB0-0x0000000185296AE0
+	private static uint HWcbvHbLIpYfFBKcQhkBiYzgCnTdB(uint param_000aa2b6); // 0x0000000187256970-0x0000000187256980
+	private static ulong fIyFzgigAjTcWBRPhpyuGxtgnyocb(ulong param_000aa2b7); // 0x0000000184DF1240-0x0000000184DF1250
 }
 
-internal class MVrlJVITVpqkHqjKGDpulBhzcIhh // TypeDefIndex: 53786
+internal class MVrlJVITVpqkHqjKGDpulBhzcIhh // TypeDefIndex: 79030
 {
 	// Fields
 	private static readonly OlYiLLSahgAkoRhTdadLIxcrPDagA FqefwoaXiSJOmYYtELQISkLtqHHC; // 0x00
@@ -4623,53 +4609,53 @@ internal class MVrlJVITVpqkHqjKGDpulBhzcIhh // TypeDefIndex: 53786
 	private static Action cquFiigoGXXxfjEUDiFhIXaBAHsbc; // 0x90
 
 	// Properties
-	public static YmzpkeeavzkhSRVYZAjVqDpxtWjO syXEaBfCiAwrlPWEPnfmcHGtkJjH { set; } // 0x000000018ABA6C5C-0x000000018ABA6CBC
+	public static YmzpkeeavzkhSRVYZAjVqDpxtWjO syXEaBfCiAwrlPWEPnfmcHGtkJjH { set; } // 0x000000018CD9B634-0x000000018CD9B694
 
 	// Events
 	public static event Action<mSXBYzcjZtWtzBMaRNJMFIuGieHBb, double> SsXiUcznBpWfadJBgDDEoeJsbcno {
-		add; // 0x0000000183328A10-0x0000000183328AF0
-		remove; // 0x000000018ABA696C-0x000000018ABA6A34
+		add; // 0x0000000185BBF120-0x0000000185BBF200
+		remove; // 0x000000018CD9B334-0x000000018CD9B3FC
 	}
 	public static event Action<DjdfDrcNukTKWfrrRLbyuQXQgKyCb, double> LEbFnBzHYoCiYcshYAScAihGhxHwA {
-		add; // 0x0000000183328930-0x0000000183328A10
-		remove; // 0x000000018ABA670C-0x000000018ABA67D4
+		add; // 0x0000000185BBF040-0x0000000185BBF120
+		remove; // 0x000000018CD9B0D4-0x000000018CD9B19C
 	}
 	public static event Action<zKVkJdcdYcKLvtNQJglDKOzGsCiJA, double> neJbWcBDantvUooVijlaFMpMNMwc {
-		add; // 0x0000000183328850-0x0000000183328930
-		remove; // 0x000000018ABA67D4-0x000000018ABA68A0
+		add; // 0x0000000185BBEF60-0x0000000185BBF040
+		remove; // 0x000000018CD9B19C-0x000000018CD9B268
 	}
 	public static event Action<IntPtr> vrsKYxMgJTEgnNvuckTBQHVDBKDX {
-		add; // 0x0000000183328AF0-0x0000000183328BE0
-		remove; // 0x000000018ABA68A0-0x000000018ABA696C
+		add; // 0x0000000185BBF200-0x0000000185BBF2F0
+		remove; // 0x000000018CD9B268-0x000000018CD9B334
 	}
 	public static event Action cquFiigoGXXxfjEUDiFhIXaBAHsbc {
-		add; // 0x0000000183329800-0x00000001833298F0
-		remove; // 0x000000018ABA6A34-0x000000018ABA6B0C
+		add; // 0x0000000185BC0950-0x0000000185BC0A40
+		remove; // 0x000000018CD9B3FC-0x000000018CD9B4D4
 	}
 
 	// Constructors
-	static MVrlJVITVpqkHqjKGDpulBhzcIhh(); // 0x0000000183A41AA0-0x0000000183A41D80
+	static MVrlJVITVpqkHqjKGDpulBhzcIhh(); // 0x0000000185BAF4F0-0x0000000185BAF7C0
 
 	// Methods
-	public static void TpiKAhQKVNTRraDvFHgiVaVMiotV(IntPtr param_0007395c, bool param_0007395d); // 0x0000000183A454F0-0x0000000183A455C0
-	public static void lPtuVhwlxOLXlhXxyBXbRlzWWbVF(bool param_0007395e); // 0x000000018ABA6C08-0x000000018ABA6C5C
-	public static OlYiLLSahgAkoRhTdadLIxcrPDagA yydCLfbOZCmdAWhusRGdMrQCLikk(); // 0x000000018ABA6D78-0x000000018ABA6DC8
-	public static List<wgusdmZBLEfgRBCxIrfySywpZHFE> enWrmPEeSZfdoBIXgaeNFsgyFeVm(bool param_0007395f); // 0x0000000183656C90-0x0000000183657050
-	public static void NlBooNplUxgcTGtUoAHOdxfgqLeLB(abFErqCdZgKHUdVIIOnJrBUAGMehA param_00073960, LWuuyyeGWpRCBrWNacseKxmRFYIp param_00073961, goEaxheiFEgwAIsfqZHDtvQiUGPG param_00073962, IntPtr param_00073963); // 0x00000001838264D0-0x00000001838265C0
-	public static void wGrahPhRbBizMtOvWEMDVwYXVDvtA(abFErqCdZgKHUdVIIOnJrBUAGMehA param_00073964, LWuuyyeGWpRCBrWNacseKxmRFYIp param_00073965); // 0x000000018ABA6CBC-0x000000018ABA6D78
-	internal static void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018ABA6B0C-0x000000018ABA6C08
-	public static void vgKBcpOoajMJoqTWxeHtyWzsjdnM(IntPtr param_00073966, double param_00073967); // 0x0000000183125D00-0x0000000183126390
-	private static unsafe void qxQLXaYgByjGNWpBbcJghGGKeNTC(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_00073968, byte[] param_00073969, uint[] param_0007396a, uint[] param_0007396b, ref uint param_0007396c, ref uint param_0007396d); // 0x0000000183126390-0x00000001831266C0
-	private static unsafe bool SPMCNsrOpGwcxLYacDElVNDXRFns(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_0007396e, byte[] param_0007396f, uint[] param_00073970, uint[] param_00073971, ref uint param_00073972, ref uint param_00073973); // 0x00000001831266C0-0x0000000183126950
-	private static void tVxBFTGXMnxgPeMYCSkQUnpbGOoe(byte[] param_00073974, uint[] param_00073975, uint[] param_00073976, ref uint param_00073977, ref uint param_00073978); // 0x00000001831253F0-0x0000000183125670
-	private static unsafe void RRZhkOeYzzthkSLVmwFonkcdgpjJ(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_00073979, double param_0007397a); // 0x0000000183125920-0x0000000183125D00
-	private static void nDTawVTAoIAFsbtkUfIldMjueiTZA(IntPtr param_0007397b, IntPtr param_0007397c); // 0x0000000184A43B30-0x0000000184A43BF0
+	public static void TpiKAhQKVNTRraDvFHgiVaVMiotV(IntPtr param_000aa2c3, bool param_000aa2c4); // 0x0000000186DD9B70-0x0000000186DD9C40
+	public static void lPtuVhwlxOLXlhXxyBXbRlzWWbVF(bool param_000aa2c5); // 0x000000018CD9B5E0-0x000000018CD9B634
+	public static OlYiLLSahgAkoRhTdadLIxcrPDagA yydCLfbOZCmdAWhusRGdMrQCLikk(); // 0x000000018CD9B754-0x000000018CD9B7A4
+	public static List<wgusdmZBLEfgRBCxIrfySywpZHFE> enWrmPEeSZfdoBIXgaeNFsgyFeVm(bool param_000aa2c6); // 0x0000000185B741F0-0x0000000185B745C0
+	public static void NlBooNplUxgcTGtUoAHOdxfgqLeLB(abFErqCdZgKHUdVIIOnJrBUAGMehA param_000aa2c7, LWuuyyeGWpRCBrWNacseKxmRFYIp param_000aa2c8, goEaxheiFEgwAIsfqZHDtvQiUGPG param_000aa2c9, IntPtr param_000aa2ca); // 0x000000018692EED0-0x000000018692EFC0
+	public static void wGrahPhRbBizMtOvWEMDVwYXVDvtA(abFErqCdZgKHUdVIIOnJrBUAGMehA param_000aa2cb, LWuuyyeGWpRCBrWNacseKxmRFYIp param_000aa2cc); // 0x000000018CD9B694-0x000000018CD9B754
+	internal static void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD9B4D4-0x000000018CD9B5E0
+	public static void vgKBcpOoajMJoqTWxeHtyWzsjdnM(IntPtr param_000aa2cd, double param_000aa2ce); // 0x0000000185296E10-0x0000000185297A90
+	private static unsafe void qxQLXaYgByjGNWpBbcJghGGKeNTC(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2cf, byte[] param_000aa2d0, uint[] param_000aa2d1, uint[] param_000aa2d2, ref uint param_000aa2d3, ref uint param_000aa2d4); // 0x0000000185297A90-0x0000000185297DB0
+	private static unsafe bool SPMCNsrOpGwcxLYacDElVNDXRFns(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2d5, byte[] param_000aa2d6, uint[] param_000aa2d7, uint[] param_000aa2d8, ref uint param_000aa2d9, ref uint param_000aa2da); // 0x0000000185297DB0-0x0000000185298030
+	private static void tVxBFTGXMnxgPeMYCSkQUnpbGOoe(byte[] param_000aa2db, uint[] param_000aa2dc, uint[] param_000aa2dd, ref uint param_000aa2de, ref uint param_000aa2df); // 0x0000000185296780-0x0000000185296A00
+	private static unsafe void RRZhkOeYzzthkSLVmwFonkcdgpjJ(eVGbmsHPQqEuPzDqvamRtBFdLadfb* param_000aa2e0, double param_000aa2e1); // 0x0000000185296AE0-0x0000000185296E10
+	private static void nDTawVTAoIAFsbtkUfIldMjueiTZA(IntPtr param_000aa2e2, IntPtr param_000aa2e3); // 0x0000000186D4F190-0x0000000186D4F250
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(OlYiLLSahgAkoRhTdadLIxcrPDagA))]
-	private static IntPtr EHpWMcCNNRKjmTJfVKblgdrxqEyR(IntPtr param_0007397d, uint param_0007397e, IntPtr param_0007397f, IntPtr param_00073980); // 0x00000001831252E0-0x00000001831253F0
-	private static void AZgZtnudOfHLMHbaXZPBHyxBJVMlA(IntPtr param_00073981, uint param_00073982, IntPtr param_00073983, IntPtr param_00073984); // 0x000000018ABA6590-0x000000018ABA670C
+	private static IntPtr EHpWMcCNNRKjmTJfVKblgdrxqEyR(IntPtr param_000aa2e4, uint param_000aa2e5, IntPtr param_000aa2e6, IntPtr param_000aa2e7); // 0x00000001857067D0-0x00000001857068E0
+	private static void AZgZtnudOfHLMHbaXZPBHyxBJVMlA(IntPtr param_000aa2e8, uint param_000aa2e9, IntPtr param_000aa2ea, IntPtr param_000aa2eb); // 0x000000018CD9AF54-0x000000018CD9B0D4
 }
 
-internal class wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 53787
+internal class wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 79031
 {
 	// Fields
 	[CompilerGenerated]
@@ -4680,19 +4666,19 @@ internal class wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 53787
 	private IntPtr AmVONUtDvoQUFdreFSkTcHvqipNr; // 0x20
 
 	// Properties
-	public string gZujlIZHlXntcldIKdZQeHyVlQWHA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-	public CRhcTXpzBCukpjnPBnBpAuCFmFrX psAUfTCmGaZDidaHRsWjLEaznECN { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x00000001811EF9B0-0x00000001811EF9C0
-	public IntPtr PUEzmrlElSKlZtsHOOIRnENkNBKo { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000184D86500-0x0000000184D86510
+	public string gZujlIZHlXntcldIKdZQeHyVlQWHA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+	public CRhcTXpzBCukpjnPBnBpAuCFmFrX psAUfTCmGaZDidaHRsWjLEaznECN { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001844AF510-0x00000001844AF520 0x000000018442F470-0x000000018442F480
+	public IntPtr PUEzmrlElSKlZtsHOOIRnENkNBKo { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018225E800-0x000000018225E810 0x000000018561BB30-0x000000018561BB40
 
 	// Constructors
-	internal wgusdmZBLEfgRBCxIrfySywpZHFE(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_00073985, string param_00073986, IntPtr param_00073987); // 0x00000001845FCCD0-0x00000001845FCD00
+	internal wgusdmZBLEfgRBCxIrfySywpZHFE(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000aa2ec, string param_000aa2ed, IntPtr param_000aa2ee); // 0x0000000185B747A0-0x0000000185B747D0
 
 	// Methods
-	internal static wgusdmZBLEfgRBCxIrfySywpZHFE RLcJyEedmyGIJVtDCTzfkOeSDRUX(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_0007398b, string param_0007398c, IntPtr param_0007398d); // 0x00000001836570C0-0x00000001836571F0
+	internal static wgusdmZBLEfgRBCxIrfySywpZHFE RLcJyEedmyGIJVtDCTzfkOeSDRUX(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000aa2f2, string param_000aa2f3, IntPtr param_000aa2f4); // 0x0000000185B74630-0x0000000185B74750
 }
 
 [Flags]
-internal enum goEaxheiFEgwAIsfqZHDtvQiUGPG // TypeDefIndex: 53788
+internal enum goEaxheiFEgwAIsfqZHDtvQiUGPG // TypeDefIndex: 79032
 {
 	None = 0,
 	Remove = 1,
@@ -4707,7 +4693,7 @@ internal enum goEaxheiFEgwAIsfqZHDtvQiUGPG // TypeDefIndex: 53788
 	DeviceNotify = 8192
 }
 
-internal enum CRhcTXpzBCukpjnPBnBpAuCFmFrX // TypeDefIndex: 53789
+internal enum CRhcTXpzBCukpjnPBnBpAuCFmFrX // TypeDefIndex: 79033
 {
 	Mouse = 0,
 	Keyboard = 1,
@@ -4715,7 +4701,7 @@ internal enum CRhcTXpzBCukpjnPBnBpAuCFmFrX // TypeDefIndex: 53789
 }
 
 [Flags]
-internal enum agWzVEkIFodpccVvGQaNfUcyYDIUA // TypeDefIndex: 53791
+internal enum agWzVEkIFodpccVvGQaNfUcyYDIUA // TypeDefIndex: 79035
 {
 	None = 0,
 	LeftButtonDown = 1,
@@ -4738,7 +4724,7 @@ internal enum agWzVEkIFodpccVvGQaNfUcyYDIUA // TypeDefIndex: 53791
 }
 
 [Flags]
-internal enum nEjeDBVgexNIjqfJlYOtOMoVihOf // TypeDefIndex: 53792
+internal enum nEjeDBVgexNIjqfJlYOtOMoVihOf // TypeDefIndex: 79036
 {
 	MoveRelative = 0,
 	MoveAbsolute = 1,
@@ -4747,33 +4733,33 @@ internal enum nEjeDBVgexNIjqfJlYOtOMoVihOf // TypeDefIndex: 53792
 	MoveNoCoalesce = 8
 }
 
-internal enum zxmQEDVlSVZgBaGceSudpJKYsZKf // TypeDefIndex: 53793
+internal enum zxmQEDVlSVZgBaGceSudpJKYsZKf // TypeDefIndex: 79037
 {
 	Input = 268435459,
 	Header = 268435461
 }
 
-internal enum gALzpFzwhlnEZZUcMLSUZZXetvHR // TypeDefIndex: 53794
+internal enum gALzpFzwhlnEZZUcMLSUZZXetvHR // TypeDefIndex: 79038
 {
 	PreparsedData = 536870917,
 	DeviceName = 536870919,
 	DeviceInfo = 536870923
 }
 
-internal static class txdZluSVIdNbTzSPvjBJBaqRCFYjA // TypeDefIndex: 53796
+internal static class txdZluSVIdNbTzSPvjBJBaqRCFYjA // TypeDefIndex: 79040
 {
 	// Methods
-	public static int QGORlCUYiiKgAzLxpdAHdjnrahLU(OQIcCfJXWwApaUlAVrdDDLoBUrejb[] param_0007398e, ref int param_0007398f, int param_00073990); // 0x00000001836A8550-0x00000001836A85C0
-	private static unsafe extern int hSGeHgcIEPTzBThcNXmeEMCmXZePA(void* param_00073991, void* param_00073992, int param_00073993); // 0x00000001836A85C0-0x00000001836A8610
-	public static int gRHknKLgPajCSfGvSCmrfNADQYVBc(IntPtr param_00073994, gALzpFzwhlnEZZUcMLSUZZXetvHR param_00073995, IntPtr param_00073996, ref int param_00073997); // 0x0000000183657050-0x0000000183657060
-	private static unsafe extern int gLzvIPtgxPoPTrfPMDRRawcgceAc(void* param_00073998, int param_00073999, void* param_0007399a, void* param_0007399b); // 0x0000000183657060-0x00000001836570C0
-	public static osgMuduIeTPzAGUfwObqUCaVRyzG vRDUPewDxXlFctDUtsHDaGjOqokW(CNtllmNWNzFkFTNFeulZFkWvvpHy[] param_0007399c, int param_0007399d, int param_0007399e); // 0x0000000183826490-0x00000001838264D0
-	private static unsafe extern osgMuduIeTPzAGUfwObqUCaVRyzG QwEAPBfvQKwNgoZReNOvboqfnSCY(void* param_0007399f, int param_000739a0, int param_000739a1); // 0x00000001838265C0-0x0000000183826610
-	public static int zGEeBnIfiyJZjxSpMXPsWHmIpoMd(IntPtr param_000739a2, zxmQEDVlSVZgBaGceSudpJKYsZKf param_000739a3, IntPtr param_000739a4, ref int param_000739a5, int param_000739a6); // 0x00000001831257A0-0x0000000183125800
-	private static unsafe extern int ZljhvXOxSssEffLNOEouPxQnBoXE(void* param_000739a7, int param_000739a8, void* param_000739a9, void* param_000739aa, int param_000739ab); // 0x00000001831257A0-0x0000000183125800
+	public static int QGORlCUYiiKgAzLxpdAHdjnrahLU(OQIcCfJXWwApaUlAVrdDDLoBUrejb[] param_000aa2f5, ref int param_000aa2f6, int param_000aa2f7); // 0x000000018521EBB0-0x000000018521EC20
+	private static unsafe extern int hSGeHgcIEPTzBThcNXmeEMCmXZePA(void* param_000aa2f8, void* param_000aa2f9, int param_000aa2fa); // 0x000000018521EC20-0x000000018521EC70
+	public static int gRHknKLgPajCSfGvSCmrfNADQYVBc(IntPtr param_000aa2fb, gALzpFzwhlnEZZUcMLSUZZXetvHR param_000aa2fc, IntPtr param_000aa2fd, ref int param_000aa2fe); // 0x0000000185B745C0-0x0000000185B745D0
+	private static unsafe extern int gLzvIPtgxPoPTrfPMDRRawcgceAc(void* param_000aa2ff, int param_000aa300, void* param_000aa301, void* param_000aa302); // 0x0000000185B745D0-0x0000000185B74630
+	public static osgMuduIeTPzAGUfwObqUCaVRyzG vRDUPewDxXlFctDUtsHDaGjOqokW(CNtllmNWNzFkFTNFeulZFkWvvpHy[] param_000aa303, int param_000aa304, int param_000aa305); // 0x000000018692EE90-0x000000018692EED0
+	private static unsafe extern osgMuduIeTPzAGUfwObqUCaVRyzG QwEAPBfvQKwNgoZReNOvboqfnSCY(void* param_000aa306, int param_000aa307, int param_000aa308); // 0x000000018692EFC0-0x000000018692F010
+	public static int zGEeBnIfiyJZjxSpMXPsWHmIpoMd(IntPtr param_000aa309, zxmQEDVlSVZgBaGceSudpJKYsZKf param_000aa30a, IntPtr param_000aa30b, ref int param_000aa30c, int param_000aa30d); // 0x0000000185296A50-0x0000000185296AB0
+	private static unsafe extern int ZljhvXOxSssEffLNOEouPxQnBoXE(void* param_000aa30e, int param_000aa30f, void* param_000aa310, void* param_000aa311, int param_000aa312); // 0x0000000185296A50-0x0000000185296AB0
 }
 
-internal struct gPplkeSKivfTCZDOGuWFpRDGDmsm // TypeDefIndex: 53797
+internal struct gPplkeSKivfTCZDOGuWFpRDGDmsm // TypeDefIndex: 79041
 {
 	// Fields
 	public int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -4783,7 +4769,7 @@ internal struct gPplkeSKivfTCZDOGuWFpRDGDmsm // TypeDefIndex: 53797
 	public rgAkIgjHDNckdejhqWDuEmGRIoFq ZBCSSGMWnCwgDPJeIPDSPZBKtuvy; // 0x08
 }
 
-internal struct rgAkIgjHDNckdejhqWDuEmGRIoFq // TypeDefIndex: 53798
+internal struct rgAkIgjHDNckdejhqWDuEmGRIoFq // TypeDefIndex: 79042
 {
 	// Fields
 	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG; // 0x00
@@ -4793,7 +4779,7 @@ internal struct rgAkIgjHDNckdejhqWDuEmGRIoFq // TypeDefIndex: 53798
 	public LWuuyyeGWpRCBrWNacseKxmRFYIp ZhwNBMzYOdcsywMxxqnQBgbeZIaX; // 0x0E
 }
 
-internal struct SfFaHADMrQbcwflMBmQXkwqIelOJc // TypeDefIndex: 53799
+internal struct SfFaHADMrQbcwflMBmQXkwqIelOJc // TypeDefIndex: 79043
 {
 	// Fields
 	public int SPvkVDDQKebsselcJZJzSqGLscPR; // 0x00
@@ -4804,7 +4790,7 @@ internal struct SfFaHADMrQbcwflMBmQXkwqIelOJc // TypeDefIndex: 53799
 	public int ZpyLJjoennsvsigUEJXRRfZQMZm; // 0x14
 }
 
-internal struct YEaFsvGKtTiepucCOCjGDFntYFrZ // TypeDefIndex: 53800
+internal struct YEaFsvGKtTiepucCOCjGDFntYFrZ // TypeDefIndex: 79044
 {
 	// Fields
 	public int kHDARXdQXjnkqXHSxymGIdZFAfeYA; // 0x00
@@ -4813,7 +4799,7 @@ internal struct YEaFsvGKtTiepucCOCjGDFntYFrZ // TypeDefIndex: 53800
 	public osgMuduIeTPzAGUfwObqUCaVRyzG WTsXHRpuyFqDDJoYoileSsFcUVDR; // 0x0C
 }
 
-internal struct ljSrYrwNGOwPioPZBpvStBnwjFQAA // TypeDefIndex: 53801
+internal struct ljSrYrwNGOwPioPZBpvStBnwjFQAA // TypeDefIndex: 79045
 {
 	// Fields
 	public int NtcGiXQhWfOScMXzroBpmRQcbosh; // 0x00
@@ -4821,14 +4807,14 @@ internal struct ljSrYrwNGOwPioPZBpvStBnwjFQAA // TypeDefIndex: 53801
 	public int weiPPQoYrlwEMXGVOFGXYvmeFoNKA; // 0x08
 }
 
-internal struct eVGbmsHPQqEuPzDqvamRtBFdLadfb // TypeDefIndex: 53802
+internal struct eVGbmsHPQqEuPzDqvamRtBFdLadfb // TypeDefIndex: 79046
 {
 	// Fields
 	public sAkZhNdEdGCnzHbulSTkFQBJEjjmA fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
 	public xEOCvMytMMBiFNtjQSoRjINVCJAT thLICHPmpalmfjGmuMkilAKwymgl; // 0x18
 }
 
-internal struct CNtllmNWNzFkFTNFeulZFkWvvpHy // TypeDefIndex: 53803
+internal struct CNtllmNWNzFkFTNFeulZFkWvvpHy // TypeDefIndex: 79047
 {
 	// Fields
 	public short NDweLaWskzoBwpWJxCWuzQStzdYi; // 0x00
@@ -4837,14 +4823,14 @@ internal struct CNtllmNWNzFkFTNFeulZFkWvvpHy // TypeDefIndex: 53803
 	public IntPtr FTfUyLMXnRNRbeaVgvsiuEYXLbVT; // 0x08
 }
 
-internal struct OQIcCfJXWwApaUlAVrdDDLoBUrejb // TypeDefIndex: 53804
+internal struct OQIcCfJXWwApaUlAVrdDDLoBUrejb // TypeDefIndex: 79048
 {
 	// Fields
 	public IntPtr KyAihJLnqGkelkzINpKTCpuYYfu; // 0x00
 	public int SPvkVDDQKebsselcJZJzSqGLscPR; // 0x08
 }
 
-internal struct sAkZhNdEdGCnzHbulSTkFQBJEjjmA // TypeDefIndex: 53805
+internal struct sAkZhNdEdGCnzHbulSTkFQBJEjjmA // TypeDefIndex: 79049
 {
 	// Fields
 	public CRhcTXpzBCukpjnPBnBpAuCFmFrX SPvkVDDQKebsselcJZJzSqGLscPR; // 0x00
@@ -4853,7 +4839,7 @@ internal struct sAkZhNdEdGCnzHbulSTkFQBJEjjmA // TypeDefIndex: 53805
 	public IntPtr SYqmVJUIKktczRQHKAkUmMbYGBxaA; // 0x10
 }
 
-internal struct xEOCvMytMMBiFNtjQSoRjINVCJAT // TypeDefIndex: 53806
+internal struct xEOCvMytMMBiFNtjQSoRjINVCJAT // TypeDefIndex: 79050
 {
 	// Fields
 	public ajxMoblcufJawiiMHymdgaEIvjFw DukdLFGcEPRHSHNCfwNoiYBgvsqRB; // 0x00
@@ -4861,7 +4847,7 @@ internal struct xEOCvMytMMBiFNtjQSoRjINVCJAT // TypeDefIndex: 53806
 	public ljSrYrwNGOwPioPZBpvStBnwjFQAA ZBCSSGMWnCwgDPJeIPDSPZBKtuvy; // 0x00
 }
 
-internal struct cZLbCsAFlKJMGGqHdHjLmmRJabKPc // TypeDefIndex: 53807
+internal struct cZLbCsAFlKJMGGqHdHjLmmRJabKPc // TypeDefIndex: 79051
 {
 	// Fields
 	public short QqciAOwjVzFtInJAgMFDmpoPpQVK; // 0x00
@@ -4872,7 +4858,7 @@ internal struct cZLbCsAFlKJMGGqHdHjLmmRJabKPc // TypeDefIndex: 53807
 	public int fADmYCSvHxrTPAqWhMiVXhcMhSWj; // 0x0C
 }
 
-internal class mrpPdMulHkXGyvibMdjBBPWOPSOo : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 53808
+internal class mrpPdMulHkXGyvibMdjBBPWOPSOo : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 79052
 {
 	// Fields
 	[CompilerGenerated]
@@ -4887,17 +4873,17 @@ internal class mrpPdMulHkXGyvibMdjBBPWOPSOo : wgusdmZBLEfgRBCxIrfySywpZHFE // Ty
 	private LWuuyyeGWpRCBrWNacseKxmRFYIp rqZHdIAsEIlrdlDQBtmUhaxPNUBB; // 0x36
 
 	// Properties
-	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
-	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86710-0x0000000184D86720 0x0000000184D86720-0x0000000184D86730
-	public int yaEXslHRhOToVZGGZIFieBALQaJRA { [CompilerGenerated] set; } // 0x0000000184D86740-0x0000000184D86750
-	public abFErqCdZgKHUdVIIOnJrBUAGMehA NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA89B0-0x0000000184DA89C0 0x0000000184DA89A0-0x0000000184DA89B0
-	public LWuuyyeGWpRCBrWNacseKxmRFYIp ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA89D0-0x0000000184DA89E0 0x0000000184DA89C0-0x0000000184DA89D0
+	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271A60-0x0000000182271A70 0x0000000182271A90-0x0000000182271AA0
+	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271A80-0x0000000182271A90 0x0000000182271AB0-0x0000000182271AC0
+	public int yaEXslHRhOToVZGGZIFieBALQaJRA { [CompilerGenerated] set; } // 0x0000000186033510-0x0000000186033520
+	public abFErqCdZgKHUdVIIOnJrBUAGMehA NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187256A90-0x0000000187256AA0 0x0000000187256A80-0x0000000187256A90
+	public LWuuyyeGWpRCBrWNacseKxmRFYIp ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187256AB0-0x0000000187256AC0 0x0000000187256AA0-0x0000000187256AB0
 
 	// Constructors
-	internal mrpPdMulHkXGyvibMdjBBPWOPSOo(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000739ac, string param_000739ad, IntPtr param_000739ae); // 0x00000001845FCC80-0x00000001845FCCD0
+	internal mrpPdMulHkXGyvibMdjBBPWOPSOo(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000aa313, string param_000aa314, IntPtr param_000aa315); // 0x0000000185B74750-0x0000000185B747A0
 }
 
-internal struct zKVkJdcdYcKLvtNQJglDKOzGsCiJA // TypeDefIndex: 53809
+internal struct zKVkJdcdYcKLvtNQJglDKOzGsCiJA // TypeDefIndex: 79053
 {
 	// Fields
 	public IntPtr KyAihJLnqGkelkzINpKTCpuYYfu; // 0x00
@@ -4907,15 +4893,15 @@ internal struct zKVkJdcdYcKLvtNQJglDKOzGsCiJA // TypeDefIndex: 53809
 	public int iuNYQbPwVApaHsrhjCzxXYEPzBgK; // 0x18
 
 	// Properties
-	internal bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x0000000183125290-0x00000001831252B0 
-	public IntPtr SHlbubNuxlqVklDElKqucmqaCxZcA { get; } // 0x0000000184D88320-0x0000000184D88330 
-	public int yeudotIftAWEtGlsppEvDqGAffNuB { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
+	internal bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CDA3490-0x000000018CDA34A4 
+	public IntPtr SHlbubNuxlqVklDElKqucmqaCxZcA { get; } // 0x00000001844AFA30-0x00000001844AFA40 
+	public int yeudotIftAWEtGlsppEvDqGAffNuB { get; } // 0x00000001828BC2B0-0x00000001828BC2C0 
 
 	// Constructors
-	internal zKVkJdcdYcKLvtNQJglDKOzGsCiJA(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000739b4, kShxDsToEeohgssnWUecapcoTGAY param_000739b5); // 0x00000001831250F0-0x0000000183125150
+	internal zKVkJdcdYcKLvtNQJglDKOzGsCiJA(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000aa31b, kShxDsToEeohgssnWUecapcoTGAY param_000aa31c); // 0x000000018CDA3428-0x000000018CDA3490
 }
 
-internal class wipgjXgdcagaRVfgHUmgjqThFDQPA : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 53810
+internal class wipgjXgdcagaRVfgHUmgjqThFDQPA : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 79054
 {
 	// Fields
 	[CompilerGenerated]
@@ -4932,18 +4918,18 @@ internal class wipgjXgdcagaRVfgHUmgjqThFDQPA : wgusdmZBLEfgRBCxIrfySywpZHFE // T
 	private int cYAASufDZpoNOavZdlkKnIofuTiQB; // 0x3C
 
 	// Properties
-	public int eHAaNjBSbKSlOjKEZJQNkJoSwZVkA { [CompilerGenerated] set; } // 0x00000001811F2AA0-0x00000001811F2AB0
-	public int VYKoqtbBjrGccTFhEMzSSLVuJPE { [CompilerGenerated] set; } // 0x0000000184D86720-0x0000000184D86730
-	public int aEkTcvgYqxSexHVWAmvzTvYwdOVB { [CompilerGenerated] set; } // 0x0000000184D86740-0x0000000184D86750
-	public int vtRKDNMEXnCtWGRZpQJXnHBRkEArA { [CompilerGenerated] set; } // 0x0000000184D86760-0x0000000184D86770
-	public int AJOTmBiiRlAMOGoYxtoLzCZpXfLw { [CompilerGenerated] set; } // 0x0000000184D86430-0x0000000184D86440
-	public int ThKWlJXDmlVGnnQRpDVYbxuXdPwL { [CompilerGenerated] set; } // 0x0000000184D86670-0x0000000184D86680
+	public int eHAaNjBSbKSlOjKEZJQNkJoSwZVkA { [CompilerGenerated] set; } // 0x0000000182271A90-0x0000000182271AA0
+	public int VYKoqtbBjrGccTFhEMzSSLVuJPE { [CompilerGenerated] set; } // 0x0000000182271AB0-0x0000000182271AC0
+	public int aEkTcvgYqxSexHVWAmvzTvYwdOVB { [CompilerGenerated] set; } // 0x0000000186033510-0x0000000186033520
+	public int vtRKDNMEXnCtWGRZpQJXnHBRkEArA { [CompilerGenerated] set; } // 0x0000000182271AA0-0x0000000182271AB0
+	public int AJOTmBiiRlAMOGoYxtoLzCZpXfLw { [CompilerGenerated] set; } // 0x0000000185E3C070-0x0000000185E3C080
+	public int ThKWlJXDmlVGnnQRpDVYbxuXdPwL { [CompilerGenerated] set; } // 0x000000018226F010-0x000000018226F020
 
 	// Constructors
-	internal wipgjXgdcagaRVfgHUmgjqThFDQPA(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000739b6, string param_000739b7, IntPtr param_000739b8); // 0x00000001845FCBD0-0x00000001845FCC20
+	internal wipgjXgdcagaRVfgHUmgjqThFDQPA(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000aa31d, string param_000aa31e, IntPtr param_000aa31f); // 0x0000000185B74EB0-0x0000000185B74F00
 }
 
-internal struct mSXBYzcjZtWtzBMaRNJMFIuGieHBb // TypeDefIndex: 53811
+internal struct mSXBYzcjZtWtzBMaRNJMFIuGieHBb // TypeDefIndex: 79055
 {
 	// Fields
 	public IntPtr KyAihJLnqGkelkzINpKTCpuYYfu; // 0x00
@@ -4954,10 +4940,10 @@ internal struct mSXBYzcjZtWtzBMaRNJMFIuGieHBb // TypeDefIndex: 53811
 	public int fADmYCSvHxrTPAqWhMiVXhcMhSWj; // 0x18
 
 	// Constructors
-	internal mSXBYzcjZtWtzBMaRNJMFIuGieHBb(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000739bf); // 0x00000001831252B0-0x00000001831252E0
+	internal mSXBYzcjZtWtzBMaRNJMFIuGieHBb(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000aa326); // 0x0000000185295EA0-0x0000000185295ED0
 }
 
-internal class wieHFjxbsUmmATupJtXCbsazblEo : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 53812
+internal class wieHFjxbsUmmATupJtXCbsazblEo : wgusdmZBLEfgRBCxIrfySywpZHFE // TypeDefIndex: 79056
 {
 	// Fields
 	[CompilerGenerated]
@@ -4970,16 +4956,16 @@ internal class wieHFjxbsUmmATupJtXCbsazblEo : wgusdmZBLEfgRBCxIrfySywpZHFE // Ty
 	private bool ItoeVtbnocScRHJgKyONdwCnxAsoA; // 0x34
 
 	// Properties
-	public int kHDARXdQXjnkqXHSxymGIdZFAfeYA { [CompilerGenerated] set; } // 0x00000001811F2AA0-0x00000001811F2AB0
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { [CompilerGenerated] set; } // 0x0000000184D86720-0x0000000184D86730
-	public int FLayQNTZGlakSZxbqEvPeDahBpVR { [CompilerGenerated] set; } // 0x0000000184D86740-0x0000000184D86750
-	public bool WTsXHRpuyFqDDJoYoileSsFcUVDR { [CompilerGenerated] set; } // 0x0000000184D86AA0-0x0000000184D86AB0
+	public int kHDARXdQXjnkqXHSxymGIdZFAfeYA { [CompilerGenerated] set; } // 0x0000000182271A90-0x0000000182271AA0
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { [CompilerGenerated] set; } // 0x0000000182271AB0-0x0000000182271AC0
+	public int FLayQNTZGlakSZxbqEvPeDahBpVR { [CompilerGenerated] set; } // 0x0000000186033510-0x0000000186033520
+	public bool WTsXHRpuyFqDDJoYoileSsFcUVDR { [CompilerGenerated] set; } // 0x000000018226EBC0-0x000000018226EBD0
 
 	// Constructors
-	internal wieHFjxbsUmmATupJtXCbsazblEo(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000739c0, string param_000739c1, IntPtr param_000739c2); // 0x00000001845FCC20-0x00000001845FCC70
+	internal wieHFjxbsUmmATupJtXCbsazblEo(ref gPplkeSKivfTCZDOGuWFpRDGDmsm param_000aa327, string param_000aa328, IntPtr param_000aa329); // 0x0000000185B74E50-0x0000000185B74EA0
 }
 
-internal struct DjdfDrcNukTKWfrrRLbyuQXQgKyCb // TypeDefIndex: 53813
+internal struct DjdfDrcNukTKWfrrRLbyuQXQgKyCb // TypeDefIndex: 79057
 {
 	// Fields
 	public IntPtr KyAihJLnqGkelkzINpKTCpuYYfu; // 0x00
@@ -4992,10 +4978,10 @@ internal struct DjdfDrcNukTKWfrrRLbyuQXQgKyCb // TypeDefIndex: 53813
 	public int KNTFhJabRbWgVSMSJojTSthigWSM; // 0x20
 
 	// Constructors
-	internal DjdfDrcNukTKWfrrRLbyuQXQgKyCb(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000739c7); // 0x0000000184DA8810-0x0000000184DA8850
+	internal DjdfDrcNukTKWfrrRLbyuQXQgKyCb(ref eVGbmsHPQqEuPzDqvamRtBFdLadfb param_000aa32e); // 0x0000000187256900-0x0000000187256940
 }
 
-internal struct ajxMoblcufJawiiMHymdgaEIvjFw // TypeDefIndex: 53815
+internal struct ajxMoblcufJawiiMHymdgaEIvjFw // TypeDefIndex: 79059
 {
 	// Fields
 	public short qtIfMRoWBGZEUSCwsKeTMCQXFfRIA; // 0x00
@@ -5006,7 +4992,7 @@ internal struct ajxMoblcufJawiiMHymdgaEIvjFw // TypeDefIndex: 53815
 	public uint fADmYCSvHxrTPAqWhMiVXhcMhSWj; // 0x14
 
 	// Nested types
-	internal struct USiwaeSaxweLQUqwTGtUJWFxJkrnA // TypeDefIndex: 53814
+	internal struct USiwaeSaxweLQUqwTGtUJWFxJkrnA // TypeDefIndex: 79058
 	{
 		// Fields
 		public int PlahzMFUWWFVTEjviHdVVhgEfBVTb; // 0x00
@@ -5015,7 +5001,7 @@ internal struct ajxMoblcufJawiiMHymdgaEIvjFw // TypeDefIndex: 53815
 	}
 }
 
-internal class MwhSVMPfdcpoumktuBQSgmpdjtWy // TypeDefIndex: 53816
+internal class MwhSVMPfdcpoumktuBQSgmpdjtWy // TypeDefIndex: 79060
 {
 	// Fields
 	[CompilerGenerated]
@@ -5026,28 +5012,28 @@ internal class MwhSVMPfdcpoumktuBQSgmpdjtWy // TypeDefIndex: 53816
 	private string buNwJfbmWgjXTqvSrXqbYAWEsumH; // 0x20
 
 	// Properties
-	public System.DateTime hgFaQmGLUeVDOdDXRoqfXHiJIuHG { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x0000000184D88BF0-0x0000000184D88C00
-	public WeakReference CONGklVjAgCjvUUVAAcuaCaElUhgA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
-	public string ndfVIOIcKudCckULWiysYpaCbGrT { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
-	public bool KhUXLNPkpWjwofZokzbeleVKbjfgA { get; } // 0x000000018ABA6DC8-0x000000018ABA6DE8 
+	public System.DateTime hgFaQmGLUeVDOdDXRoqfXHiJIuHG { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829260F0-0x0000000182926100 0x000000018561B5A0-0x000000018561B5B0
+	public WeakReference CONGklVjAgCjvUUVAAcuaCaElUhgA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182234E30-0x0000000182234E40 0x0000000187835500-0x0000000187835510
+	public string ndfVIOIcKudCckULWiysYpaCbGrT { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
+	public bool KhUXLNPkpWjwofZokzbeleVKbjfgA { get; } // 0x000000018CD9B7A4-0x000000018CD9B7C4 
 
 	// Constructors
-	public MwhSVMPfdcpoumktuBQSgmpdjtWy(System.DateTime param_000739c8, beaToZucjyOfmWGEnxdCGCgakptr param_000739c9, string param_000739ca); // 0x000000018ABA6DE8-0x000000018ABA6E84
+	public MwhSVMPfdcpoumktuBQSgmpdjtWy(System.DateTime param_000aa32f, beaToZucjyOfmWGEnxdCGCgakptr param_000aa330, string param_000aa331); // 0x000000018CD9B7C4-0x000000018CD9B860
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABA6E84-0x000000018ABA70BC
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD9B860-0x000000018CD9BA9C
 }
 
-internal class sydsmPALqDcYsqFlVusLVUEQVMTF : EventArgs // TypeDefIndex: 53817
+internal class sydsmPALqDcYsqFlVusLVUEQVMTF : EventArgs // TypeDefIndex: 79061
 {
 	// Fields
 	public beaToZucjyOfmWGEnxdCGCgakptr CONGklVjAgCjvUUVAAcuaCaElUhgA; // 0x10
 
 	// Constructors
-	public sydsmPALqDcYsqFlVusLVUEQVMTF(beaToZucjyOfmWGEnxdCGCgakptr param_000739ce); // 0x000000018ABAE574-0x000000018ABAE5CC
+	public sydsmPALqDcYsqFlVusLVUEQVMTF(beaToZucjyOfmWGEnxdCGCgakptr param_000aa335); // 0x000000018CDA2D5C-0x000000018CDA2DB4
 }
 
-internal static class DjSNbeYiviAPSDflTjNmhluZkSEDA // TypeDefIndex: 53818
+internal static class DjSNbeYiviAPSDflTjNmhluZkSEDA // TypeDefIndex: 79062
 {
 	// Fields
 	private static Dictionary<IntPtr, List<MwhSVMPfdcpoumktuBQSgmpdjtWy>> NJwgxxHIwUQbAbaAedCWkDFhbfvIA; // 0x00
@@ -5059,59 +5045,59 @@ internal static class DjSNbeYiviAPSDflTjNmhluZkSEDA // TypeDefIndex: 53818
 	private static EventHandler<sydsmPALqDcYsqFlVusLVUEQVMTF> JLizZBTUTJnQfglpikskfHPNHgfu; // 0x10
 
 	// Properties
-	private static Dictionary<IntPtr, List<MwhSVMPfdcpoumktuBQSgmpdjtWy>> eMTEjLuPdsFtNqZKblbNcJptsmLy { get; } // 0x000000018ABA5750-0x000000018ABA5954 
+	private static Dictionary<IntPtr, List<MwhSVMPfdcpoumktuBQSgmpdjtWy>> eMTEjLuPdsFtNqZKblbNcJptsmLy { get; } // 0x000000018CD9A0CC-0x000000018CD9A2D0 
 
 	// Constructors
-	static DjSNbeYiviAPSDflTjNmhluZkSEDA(); // 0x000000018ABA5688-0x000000018ABA5750
+	static DjSNbeYiviAPSDflTjNmhluZkSEDA(); // 0x000000018CD9A004-0x000000018CD9A0CC
 
 	// Methods
-	private static void tUHBCNTueGOlWtHpLXuYHYhkeYAQ(object param_000739cf, EventArgs param_000739d0); // 0x000000018ABA5954-0x000000018ABA59EC
-	public static void TdIjAaBrrCTcQSdlsdfSVnXMwsij(beaToZucjyOfmWGEnxdCGCgakptr param_000739d1); // 0x000000018ABA4F9C-0x000000018ABA5438
-	public static MwhSVMPfdcpoumktuBQSgmpdjtWy VKICJqsJwFOpSUilqXSJZBqYhSeT(beaToZucjyOfmWGEnxdCGCgakptr param_000739d2); // 0x000000018ABA5438-0x000000018ABA5688
-	public static void EswdwvOCwPJrqQcxniNLuqSeonQm(beaToZucjyOfmWGEnxdCGCgakptr param_000739d3); // 0x000000018ABA4728-0x000000018ABA49A0
-	public static List<MwhSVMPfdcpoumktuBQSgmpdjtWy> ATNEAsvgwocAGmxmntLZGIFaKUHJ(); // 0x000000018ABA42F0-0x000000018ABA4680
-	public static string JQBMldhjYDRygibJkDILaZGLpMJj(); // 0x000000018ABA4A48-0x000000018ABA4F9C
-	private static void GScePwfOnrAtARsauTXUrxzKrdvCA(beaToZucjyOfmWGEnxdCGCgakptr param_000739d4); // 0x000000018ABA49A0-0x000000018ABA4A48
-	private static void EpDviDZsDTJJroieQwfNNwQMUwdU(beaToZucjyOfmWGEnxdCGCgakptr param_000739d5); // 0x000000018ABA4680-0x000000018ABA4728
+	private static void tUHBCNTueGOlWtHpLXuYHYhkeYAQ(object param_000aa336, EventArgs param_000aa337); // 0x000000018CD9A2D0-0x000000018CD9A368
+	public static void TdIjAaBrrCTcQSdlsdfSVnXMwsij(beaToZucjyOfmWGEnxdCGCgakptr param_000aa338); // 0x000000018CD998FC-0x000000018CD99DA0
+	public static MwhSVMPfdcpoumktuBQSgmpdjtWy VKICJqsJwFOpSUilqXSJZBqYhSeT(beaToZucjyOfmWGEnxdCGCgakptr param_000aa339); // 0x000000018CD99DA0-0x000000018CD9A004
+	public static void EswdwvOCwPJrqQcxniNLuqSeonQm(beaToZucjyOfmWGEnxdCGCgakptr param_000aa33a); // 0x000000018CD99074-0x000000018CD992FC
+	public static List<MwhSVMPfdcpoumktuBQSgmpdjtWy> ATNEAsvgwocAGmxmntLZGIFaKUHJ(); // 0x000000018CD98C28-0x000000018CD98FCC
+	public static string JQBMldhjYDRygibJkDILaZGLpMJj(); // 0x000000018CD993A4-0x000000018CD998FC
+	private static void GScePwfOnrAtARsauTXUrxzKrdvCA(beaToZucjyOfmWGEnxdCGCgakptr param_000aa33b); // 0x000000018CD992FC-0x000000018CD993A4
+	private static void EpDviDZsDTJJroieQwfNNwQMUwdU(beaToZucjyOfmWGEnxdCGCgakptr param_000aa33c); // 0x000000018CD98FCC-0x000000018CD99074
 }
 
-internal class wIMvmabHACphhxAzZJdivgRKjPRS // TypeDefIndex: 53819
+internal class wIMvmabHACphhxAzZJdivgRKjPRS // TypeDefIndex: 79063
 {
 	// Methods
-	public static sjuMpQgJsMMamCXrodZGkLhzEaWP LekOyIAejjFsjtpmzmOFJGnvGrfR(int param_000739d6); // 0x000000018ABAEA5C-0x000000018ABAEA6C
+	public static sjuMpQgJsMMamCXrodZGkLhzEaWP LekOyIAejjFsjtpmzmOFJGnvGrfR(int param_000aa33d); // 0x000000018CDA3258-0x000000018CDA3268
 }
 
-internal enum LWuuyyeGWpRCBrWNacseKxmRFYIp : short // TypeDefIndex: 53820
+internal enum LWuuyyeGWpRCBrWNacseKxmRFYIp : short // TypeDefIndex: 79064
 {
 
 }
 
-internal enum abFErqCdZgKHUdVIIOnJrBUAGMehA : short // TypeDefIndex: 53821
+internal enum abFErqCdZgKHUdVIIOnJrBUAGMehA : short // TypeDefIndex: 79065
 {
 
 }
 
-internal static class alcYuHLEzuGPfuLRSCIyjPahvkwMA // TypeDefIndex: 53823
+internal static class alcYuHLEzuGPfuLRSCIyjPahvkwMA // TypeDefIndex: 79067
 {
 	// Fields
 	public static readonly IEqualityComparer<IntPtr> VudBgnfEHueVHdnyyUaJgaZeWSuMb; // 0x00
 
 	// Nested types
-	internal class QQQnCYuJNqhupVpBaAfTGQnQNfIeA : EqualityComparer<IntPtr> // TypeDefIndex: 53822
+	internal class QQQnCYuJNqhupVpBaAfTGQnQNfIeA : EqualityComparer<IntPtr> // TypeDefIndex: 79066
 	{
 		// Constructors
-		public QQQnCYuJNqhupVpBaAfTGQnQNfIeA(); // 0x000000018ABA7FDC-0x000000018ABA8004
+		public QQQnCYuJNqhupVpBaAfTGQnQNfIeA(); // 0x000000018CD9C9E0-0x000000018CD9CA08
 
 		// Methods
-		public override bool Equals(IntPtr param_000739d7, IntPtr param_000739d8); // 0x000000018829C278-0x000000018829C280
-		public override int GetHashCode(IntPtr param_000739d9); // 0x0000000184D86510-0x0000000184D86520
+		public override bool Equals(IntPtr param_000aa33e, IntPtr param_000aa33f); // 0x000000018A797384-0x000000018A79738C
+		public override int GetHashCode(IntPtr param_000aa340); // 0x0000000187235340-0x0000000187235350
 	}
 
 	// Constructors
-	static alcYuHLEzuGPfuLRSCIyjPahvkwMA(); // 0x000000018ABAAAEC-0x000000018ABAAB68
+	static alcYuHLEzuGPfuLRSCIyjPahvkwMA(); // 0x000000018CD9F1A4-0x000000018CD9F220
 }
 
-internal class ajkStzGIJaDgjbLVrblCWyQPXycSA // TypeDefIndex: 53825
+internal class ajkStzGIJaDgjbLVrblCWyQPXycSA // TypeDefIndex: 79069
 {
 	// Fields
 	internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x10
@@ -5127,10 +5113,10 @@ internal class ajkStzGIJaDgjbLVrblCWyQPXycSA // TypeDefIndex: 53825
 	public int gIXNVNOUUsvTJscMHIuLrdDZdGGFA; // 0x38
 
 	// Properties
-	public Rewired.Libraries.SharpDX.DirectInput.DeviceType SPvkVDDQKebsselcJZJzSqGLscPR { get; } // 0x0000000184D86340-0x0000000184D86350 
+	public Rewired.Libraries.SharpDX.DirectInput.DeviceType SPvkVDDQKebsselcJZJzSqGLscPR { get; } // 0x000000018225E050-0x000000018225E060 
 
 	// Nested types
-	internal struct TJXYcYlQQWVjaqEPBpgKDgLMEDFIA // TypeDefIndex: 53824
+	internal struct TJXYcYlQQWVjaqEPBpgKDgLMEDFIA // TypeDefIndex: 79068
 	{
 		// Fields
 		public int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -5147,14 +5133,14 @@ internal class ajkStzGIJaDgjbLVrblCWyQPXycSA // TypeDefIndex: 53825
 	}
 
 	// Constructors
-	public ajkStzGIJaDgjbLVrblCWyQPXycSA(); // 0x0000000184DA8920-0x0000000184DA8930
+	public ajkStzGIJaDgjbLVrblCWyQPXycSA(); // 0x0000000187256A00-0x0000000187256A10
 
 	// Methods
-	internal static TJXYcYlQQWVjaqEPBpgKDgLMEDFIA aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x0000000184DA8930-0x0000000184DA8950
-	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref TJXYcYlQQWVjaqEPBpgKDgLMEDFIA param_000739da); // 0x0000000184DA88D0-0x0000000184DA8920
+	internal static TJXYcYlQQWVjaqEPBpgKDgLMEDFIA aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x0000000187256A10-0x0000000187256A30
+	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref TJXYcYlQQWVjaqEPBpgKDgLMEDFIA param_000aa341); // 0x00000001872569B0-0x0000000187256A00
 }
 
-internal abstract class BslFyWdFqNvcSBpOIOOVPaeVNHaNA<u0001, u0002, u0003> : NinxpESAdWHMScogYtzEcrOKmWSq // TypeDefIndex: 53826
+internal abstract class BslFyWdFqNvcSBpOIOOVPaeVNHaNA<u0001, u0002, u0003> : NinxpESAdWHMScogYtzEcrOKmWSq // TypeDefIndex: 79070
 	where  : class, nQctLAKvbEudnDiceCspsjyQWyFh<u0002, u0003>, new()
 	where  : struct
 	where  : struct, yAcTuDRxvBzGjwYsLbbzRJSQLkNg
@@ -5165,17 +5151,17 @@ internal abstract class BslFyWdFqNvcSBpOIOOVPaeVNHaNA<u0001, u0002, u0003> : Nin
 	private static readonly u0003[] tuzqvPEIjWLzOHhCjETGwjImFUDn;
 
 	// Constructors
-	protected BslFyWdFqNvcSBpOIOOVPaeVNHaNA(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_000739db, Guid param_000739dc);
+	protected BslFyWdFqNvcSBpOIOOVPaeVNHaNA(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_000aa342, Guid param_000aa343);
 	static BslFyWdFqNvcSBpOIOOVPaeVNHaNA();
 
 	// Methods
-	public void pBdrxIfkhCoeAxTcHlOjIOiDbQCK(u0001 param_000739dd);
+	public void pBdrxIfkhCoeAxTcHlOjIOiDbQCK(u0001 param_000aa344);
 	public u0001 wPFOKUUpYprfCDMPnhYKcLjfowrTA();
-	public void wPFOKUUpYprfCDMPnhYKcLjfowrTA(ref ref u0001 param_000739de);
+	public void wPFOKUUpYprfCDMPnhYKcLjfowrTA(ref ref u0001 param_000aa345);
 	private BdBmIXRJGKOiDSKgyDtNfVCrBQEn ZQigHQgruyJfOUyTeykyunojQPpD();
 }
 
-internal class BdBmIXRJGKOiDSKgyDtNfVCrBQEn // TypeDefIndex: 53828
+internal class BdBmIXRJGKOiDSKgyDtNfVCrBQEn // TypeDefIndex: 79072
 {
 	// Fields
 	[CompilerGenerated]
@@ -5186,10 +5172,10 @@ internal class BdBmIXRJGKOiDSKgyDtNfVCrBQEn // TypeDefIndex: 53828
 	public int iuNYQbPwVApaHsrhjCzxXYEPzBgK; // 0x24
 
 	// Properties
-	public HegtEhejPmLQIYSeBGlDUmMVfXog[] kidCTAgaJTWmbWtqnuzgvoLuRezj { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+	public HegtEhejPmLQIYSeBGlDUmMVfXog[] kidCTAgaJTWmbWtqnuzgvoLuRezj { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
 
 	// Nested types
-	internal struct FutXJCNATGBBBVcZISpPWUxaJkzE // TypeDefIndex: 53827
+	internal struct FutXJCNATGBBBVcZISpPWUxaJkzE // TypeDefIndex: 79071
 	{
 		// Fields
 		public int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -5200,29 +5186,29 @@ internal class BdBmIXRJGKOiDSKgyDtNfVCrBQEn // TypeDefIndex: 53828
 		public IntPtr owpoqybUmgJxbGYvZyZMEcbNBjg; // 0x18
 
 		// Methods
-		internal void tlMFikAtsnFGlFrXAOESOHxMzckeB(); // 0x00000001841E1670-0x00000001841E1680
+		internal void tlMFikAtsnFGlFrXAOESOHxMzckeB(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	// Constructors
-	public BdBmIXRJGKOiDSKgyDtNfVCrBQEn(ZSUAvntfLnoPvgBKYfVfuvtQblMGA param_000739df); // 0x000000018ABA3A58-0x000000018ABA3ABC
+	public BdBmIXRJGKOiDSKgyDtNfVCrBQEn(ZSUAvntfLnoPvgBKYfVfuvtQblMGA param_000aa346); // 0x000000018CD982F0-0x000000018CD98354
 
 	// Methods
-	internal static FutXJCNATGBBBVcZISpPWUxaJkzE aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x0000000184DA87F0-0x0000000184DA8810
-	internal void tlMFikAtsnFGlFrXAOESOHxMzckeB(ref FutXJCNATGBBBVcZISpPWUxaJkzE param_000739e1); // 0x00000001841E1670-0x00000001841E1680
-	internal void KmiIOZVjDMCcknNOzTkUaihZTwDu(ref FutXJCNATGBBBVcZISpPWUxaJkzE param_000739e2); // 0x000000018ABA392C-0x000000018ABA3A58
+	internal static FutXJCNATGBBBVcZISpPWUxaJkzE aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x00000001872568E0-0x0000000187256900
+	internal void tlMFikAtsnFGlFrXAOESOHxMzckeB(ref FutXJCNATGBBBVcZISpPWUxaJkzE param_000aa348); // 0x0000000186805BA0-0x0000000186805BB0
+	internal void KmiIOZVjDMCcknNOzTkUaihZTwDu(ref FutXJCNATGBBBVcZISpPWUxaJkzE param_000aa349); // 0x000000018CD981C4-0x000000018CD982F0
 }
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-internal sealed class NumFTHcWyFNMUnwclDnApNJtFwHK : Attribute // TypeDefIndex: 53829
+internal sealed class NumFTHcWyFNMUnwclDnApNJtFwHK : Attribute // TypeDefIndex: 79073
 {
 	// Fields
 	public ZSUAvntfLnoPvgBKYfVfuvtQblMGA qtIfMRoWBGZEUSCwsKeTMCQXFfRIA; // 0x10
 
 	// Constructors
-	public NumFTHcWyFNMUnwclDnApNJtFwHK(ZSUAvntfLnoPvgBKYfVfuvtQblMGA param_000739e3); // 0x00000001814F51F0-0x00000001814F5220
+	public NumFTHcWyFNMUnwclDnApNJtFwHK(ZSUAvntfLnoPvgBKYfVfuvtQblMGA param_000aa34a); // 0x0000000182234E90-0x0000000182234EA0
 }
 
-internal class HegtEhejPmLQIYSeBGlDUmMVfXog // TypeDefIndex: 53831
+internal class HegtEhejPmLQIYSeBGlDUmMVfXog // TypeDefIndex: 79075
 {
 	// Fields
 	[CompilerGenerated]
@@ -5239,15 +5225,15 @@ internal class HegtEhejPmLQIYSeBGlDUmMVfXog // TypeDefIndex: 53831
 	private JusXszoNktGzFGSsuCDrqZOXPYLd YYRYLQkIcFanROmUnffIgJLHciYM; // 0x34
 
 	// Properties
-	public string cJMYRUIePewENzlebCoKsxxPfeZBA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-	public Guid siWwLXOcgVFQaBSYCwupJaWLZyif { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D890C0-0x0000000184D890D0 0x0000000184D890D0-0x0000000184D890E0
-	public int eACABbdNxPpsXrChQCGOcejnVKCoA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
-	public poeujHXJKdgxzeFEVUBvUcmFtnlu SaoerZudwQNINIaXPcHwRppPeTAjA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86710-0x0000000184D86720 0x0000000184D86720-0x0000000184D86730
-	public int LXWtZSJLQtMoTbFjkdAwAqCiriInA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D864F0-0x0000000184D86500 0x0000000184D86740-0x0000000184D86750
-	public JusXszoNktGzFGSsuCDrqZOXPYLd qtIfMRoWBGZEUSCwsKeTMCQXFfRIA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86730-0x0000000184D86740 0x0000000184D86760-0x0000000184D86770
+	public string cJMYRUIePewENzlebCoKsxxPfeZBA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+	public Guid siWwLXOcgVFQaBSYCwupJaWLZyif { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001845C28E0-0x00000001845C28F0 0x0000000187235FF0-0x0000000187236000
+	public int eACABbdNxPpsXrChQCGOcejnVKCoA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271A60-0x0000000182271A70 0x0000000182271A90-0x0000000182271AA0
+	public poeujHXJKdgxzeFEVUBvUcmFtnlu SaoerZudwQNINIaXPcHwRppPeTAjA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271A80-0x0000000182271A90 0x0000000182271AB0-0x0000000182271AC0
+	public int LXWtZSJLQtMoTbFjkdAwAqCiriInA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018226EBA0-0x000000018226EBB0 0x0000000186033510-0x0000000186033520
+	public JusXszoNktGzFGSsuCDrqZOXPYLd qtIfMRoWBGZEUSCwsKeTMCQXFfRIA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182271A70-0x0000000182271A80 0x0000000182271AA0-0x0000000182271AB0
 
 	// Nested types
-	internal struct ozvAyCXuKGgqigeHCTMEVggfEdBb // TypeDefIndex: 53830
+	internal struct ozvAyCXuKGgqigeHCTMEVggfEdBb // TypeDefIndex: 79074
 	{
 		// Fields
 		public IntPtr fruetKtxnglqvJWPDpeQHtLRoAFR; // 0x00
@@ -5257,14 +5243,14 @@ internal class HegtEhejPmLQIYSeBGlDUmMVfXog // TypeDefIndex: 53831
 	}
 
 	// Constructors
-	public HegtEhejPmLQIYSeBGlDUmMVfXog(Guid param_000739e4, int param_000739e5, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739e6, JusXszoNktGzFGSsuCDrqZOXPYLd param_000739e7, int param_000739e8); // 0x0000000184DA8860-0x0000000184DA8880
+	public HegtEhejPmLQIYSeBGlDUmMVfXog(Guid param_000aa34b, int param_000aa34c, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa34d, JusXszoNktGzFGSsuCDrqZOXPYLd param_000aa34e, int param_000aa34f); // 0x0000000187256950-0x0000000187256970
 
 	// Methods
-	internal void KmiIOZVjDMCcknNOzTkUaihZTwDu(ref ozvAyCXuKGgqigeHCTMEVggfEdBb param_000739ef); // 0x000000018ABA6338-0x000000018ABA6424
+	internal void KmiIOZVjDMCcknNOzTkUaihZTwDu(ref ozvAyCXuKGgqigeHCTMEVggfEdBb param_000aa356); // 0x000000018CD9ACE8-0x000000018CD9ADE8
 }
 
 [AttributeUsage(AttributeTargets.Field)]
-internal sealed class UsoCBdhjCsFpPWgGxoGohJlQMojhA : Attribute // TypeDefIndex: 53832
+internal sealed class UsoCBdhjCsFpPWgGxoGohJlQMojhA : Attribute // TypeDefIndex: 79076
 {
 	// Fields
 	public string cJMYRUIePewENzlebCoKsxxPfeZBA; // 0x10
@@ -5275,54 +5261,54 @@ internal sealed class UsoCBdhjCsFpPWgGxoGohJlQMojhA : Attribute // TypeDefIndex:
 	public int LXWtZSJLQtMoTbFjkdAwAqCiriInA; // 0x2C
 
 	// Constructors
-	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000739f0, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739f1, JusXszoNktGzFGSsuCDrqZOXPYLd param_000739f2); // 0x000000018ABA9F3C-0x000000018ABA9F60
-	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000739f3, int param_000739f4, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739f5, JusXszoNktGzFGSsuCDrqZOXPYLd param_000739f6); // 0x000000018ABA9F60-0x000000018ABA9F8C
-	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000739f7, int param_000739f8, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739f9); // 0x000000018ABA9F10-0x000000018ABA9F3C
-	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(int param_000739fa, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739fb); // 0x0000000184DA88A0-0x0000000184DA88B0
+	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000aa357, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa358, JusXszoNktGzFGSsuCDrqZOXPYLd param_000aa359); // 0x000000018CD9E5E4-0x000000018CD9E608
+	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000aa35a, int param_000aa35b, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa35c, JusXszoNktGzFGSsuCDrqZOXPYLd param_000aa35d); // 0x000000018CD9E608-0x000000018CD9E634
+	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(string param_000aa35e, int param_000aa35f, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa360); // 0x000000018CD9E5B8-0x000000018CD9E5E4
+	public UsoCBdhjCsFpPWgGxoGohJlQMojhA(int param_000aa361, poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa362); // 0x0000000187256980-0x0000000187256990
 }
 
 [Guid("54d41081-dc15-4833-a41b-748f73a38179")]
-internal class NinxpESAdWHMScogYtzEcrOKmWSq : beaToZucjyOfmWGEnxdCGCgakptr // TypeDefIndex: 53833
+internal class NinxpESAdWHMScogYtzEcrOKmWSq : beaToZucjyOfmWGEnxdCGCgakptr // TypeDefIndex: 79077
 {
 	// Fields
 	private BxcPeTIqLZsfHyGzFAombgJBgOBgA CCIDsGdBkezzjiCYAvVUqKLboyKN; // 0x30
 
 	// Properties
-	public BxcPeTIqLZsfHyGzFAombgJBgOBgA bQxjaUtIIAzBytgLlGJLWkKTvfYJ { get; } // 0x000000018ABA7158-0x000000018ABA71CC 
-	public ajkStzGIJaDgjbLVrblCWyQPXycSA BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x000000018ABA7C14-0x000000018ABA7C38 
-	public asJwVBrSeOWneGuTCmUUKaDTCXQW HaJoSgyQGvIKAhtZwsROMPMhCloz { get; } // 0x000000018ABA7134-0x000000018ABA7158 
+	public BxcPeTIqLZsfHyGzFAombgJBgOBgA bQxjaUtIIAzBytgLlGJLWkKTvfYJ { get; } // 0x000000018CD9BB38-0x000000018CD9BBAC 
+	public ajkStzGIJaDgjbLVrblCWyQPXycSA BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x000000018CD9C614-0x000000018CD9C638 
+	public asJwVBrSeOWneGuTCmUUKaDTCXQW HaJoSgyQGvIKAhtZwsROMPMhCloz { get; } // 0x000000018CD9BB14-0x000000018CD9BB38 
 
 	// Constructors
-	protected NinxpESAdWHMScogYtzEcrOKmWSq(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_000739fc, Guid param_000739fd); // 0x000000018ABA7A38-0x000000018ABA7A90
+	protected NinxpESAdWHMScogYtzEcrOKmWSq(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_000aa363, Guid param_000aa364); // 0x000000018CD9C42C-0x000000018CD9C48C
 
 	// Methods
-	public IList<HcRHynaOJyRqcNcJqdaUjCNwaqErA> MznPZWFYHovIfnvTwQfLuchCFQtCA(); // 0x000000018ABA7504-0x000000018ABA7510
-	public IList<HcRHynaOJyRqcNcJqdaUjCNwaqErA> MznPZWFYHovIfnvTwQfLuchCFQtCA(poeujHXJKdgxzeFEVUBvUcmFtnlu param_000739fe); // 0x000000018ABA736C-0x000000018ABA7504
-	private static unsafe extern int AxSHxvBzfqylfXIptAxhKBZKBBoAA(void* param_000739ff); // 0x000000018ABA70BC-0x000000018ABA7134
-	private static unsafe extern int VWWPECkrYMVsBueqQDPvLpvSntZy(void* param_00073a00, void* param_00073a01, void* param_00073a02, int param_00073a03); // 0x000000018ABA788C-0x000000018ABA792C
-	private static unsafe extern int nYJURgbmJOiKYdzYikHbMfheswry(void* param_00073a04, void* param_00073a05); // 0x000000018ABA7D78-0x000000018ABA7DFC
-	private static unsafe extern int XfDKazdHpSSHvtnCCYBbFpwMtcQd(void* param_00073a06, void* param_00073a07); // 0x000000018ABA79A0-0x000000018ABA79E4
-	private static unsafe extern int SfQunMaEfrkvUFcTpiaRaTSkGeFU(void* param_00073a08, int param_00073a09, void* param_00073a0a); // 0x000000018ABA776C-0x000000018ABA77FC
-	private static unsafe extern int htNczLIrTOhhLZIhqojELWddiMIp(void* param_00073a0b, void* param_00073a0c, void* param_00073a0d); // 0x000000018ABA7CB0-0x000000018ABA7D04
-	private static unsafe extern int dAvfAxMEDcCNUGiIoJToIKOtfCctA(void* param_00073a0e); // 0x000000018ABA7AE4-0x000000018ABA7B5C
-	private static unsafe extern int TZGGYBFbWjKPVKBBaJUcrgOVoDEGb(void* param_00073a0f, void* param_00073a10, int param_00073a11); // 0x000000018ABA77FC-0x000000018ABA788C
-	private static unsafe extern int FlTVZZHkavFydpByPrsdEfygeFQG(void* param_00073a12, void* param_00073a13); // 0x000000018ABA7240-0x000000018ABA7284
-	private static unsafe extern int aajgrhsheUBnSvThaJcSzQFAxRnh(void* param_00073a14, void* param_00073a15, void* param_00073a16); // 0x000000018ABA7A90-0x000000018ABA7AE4
-	private static unsafe extern int hkQvHjFvIvDOYOdDtYPmVMGjKkem(void* param_00073a17); // 0x000000018ABA7C38-0x000000018ABA7CB0
-	internal void RnRKkCABRuKQqtoefbomyRfdIyAI(out ajkStzGIJaDgjbLVrblCWyQPXycSA param_00073a18); // 0x000000018ABA767C-0x000000018ABA776C
-	internal void MAuHDzjMnPcOWbSeiFCzttkSKDpjA(TrZygBjBOPxdNoLZDCUKGcceunIo param_00073a19, IntPtr param_00073a1a, int param_00073a1b); // 0x000000018ABA72D8-0x000000018ABA736C
-	internal void FZbpTJYKmvFDvHfqhGDnGJLJLXTFB(IntPtr param_00073a1c, IntPtr param_00073a1d); // 0x000000018ABA71CC-0x000000018ABA7240
-	internal void myZnuCrIBGWvxqjekjoiAHhhceUfb(IntPtr param_00073a1e, IntPtr param_00073a1f); // 0x000000018ABA7D04-0x000000018ABA7D78
-	public void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x000000018ABA79E4-0x000000018ABA7A38
-	public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x000000018ABA7284-0x000000018ABA72D8
-	internal void WuSaVHZtGxfwIdMWdiQmkvkgqKRQA(int param_00073a20, IntPtr param_00073a21); // 0x000000018ABA792C-0x000000018ABA79A0
-	internal void drtdpDkrzuYshLmnvAEuCyRyPjPeA(BdBmIXRJGKOiDSKgyDtNfVCrBQEn param_00073a22); // 0x000000018ABA7B5C-0x000000018ABA7C14
-	public void qgQQxgNRUXeZPOPVqlZKNCorGlvU(IntPtr param_00073a23, xyDAHdjbDRYaqEPZVCMNiWkIIuzcA param_00073a24); // 0x000000018ABA7DFC-0x000000018ABA7E70
-	internal void OGrDcIXXNcEPYhAmTKABFmhvcEhL(out asJwVBrSeOWneGuTCmUUKaDTCXQW param_00073a25); // 0x000000018ABA7510-0x000000018ABA767C
-	public void swHCghpaXnNJcxZhclsnDkVwtNWU(); // 0x000000018ABA7E70-0x000000018ABA7EC4
+	public IList<HcRHynaOJyRqcNcJqdaUjCNwaqErA> MznPZWFYHovIfnvTwQfLuchCFQtCA(); // 0x000000018CD9BEF8-0x000000018CD9BF04
+	public IList<HcRHynaOJyRqcNcJqdaUjCNwaqErA> MznPZWFYHovIfnvTwQfLuchCFQtCA(poeujHXJKdgxzeFEVUBvUcmFtnlu param_000aa365); // 0x000000018CD9BD50-0x000000018CD9BEF8
+	private static unsafe extern int AxSHxvBzfqylfXIptAxhKBZKBBoAA(void* param_000aa366); // 0x000000018CD9BA9C-0x000000018CD9BB14
+	private static unsafe extern int VWWPECkrYMVsBueqQDPvLpvSntZy(void* param_000aa367, void* param_000aa368, void* param_000aa369, int param_000aa36a); // 0x000000018CD9C280-0x000000018CD9C320
+	private static unsafe extern int nYJURgbmJOiKYdzYikHbMfheswry(void* param_000aa36b, void* param_000aa36c); // 0x000000018CD9C778-0x000000018CD9C7FC
+	private static unsafe extern int XfDKazdHpSSHvtnCCYBbFpwMtcQd(void* param_000aa36d, void* param_000aa36e); // 0x000000018CD9C394-0x000000018CD9C3D8
+	private static unsafe extern int SfQunMaEfrkvUFcTpiaRaTSkGeFU(void* param_000aa36f, int param_000aa370, void* param_000aa371); // 0x000000018CD9C160-0x000000018CD9C1F0
+	private static unsafe extern int htNczLIrTOhhLZIhqojELWddiMIp(void* param_000aa372, void* param_000aa373, void* param_000aa374); // 0x000000018CD9C6B0-0x000000018CD9C704
+	private static unsafe extern int dAvfAxMEDcCNUGiIoJToIKOtfCctA(void* param_000aa375); // 0x000000018CD9C4E0-0x000000018CD9C558
+	private static unsafe extern int TZGGYBFbWjKPVKBBaJUcrgOVoDEGb(void* param_000aa376, void* param_000aa377, int param_000aa378); // 0x000000018CD9C1F0-0x000000018CD9C280
+	private static unsafe extern int FlTVZZHkavFydpByPrsdEfygeFQG(void* param_000aa379, void* param_000aa37a); // 0x000000018CD9BC20-0x000000018CD9BC64
+	private static unsafe extern int aajgrhsheUBnSvThaJcSzQFAxRnh(void* param_000aa37b, void* param_000aa37c, void* param_000aa37d); // 0x000000018CD9C48C-0x000000018CD9C4E0
+	private static unsafe extern int hkQvHjFvIvDOYOdDtYPmVMGjKkem(void* param_000aa37e); // 0x000000018CD9C638-0x000000018CD9C6B0
+	internal void RnRKkCABRuKQqtoefbomyRfdIyAI(out ajkStzGIJaDgjbLVrblCWyQPXycSA param_000aa37f); // 0x000000018CD9C070-0x000000018CD9C160
+	internal void MAuHDzjMnPcOWbSeiFCzttkSKDpjA(TrZygBjBOPxdNoLZDCUKGcceunIo param_000aa380, IntPtr param_000aa381, int param_000aa382); // 0x000000018CD9BCB8-0x000000018CD9BD50
+	internal void FZbpTJYKmvFDvHfqhGDnGJLJLXTFB(IntPtr param_000aa383, IntPtr param_000aa384); // 0x000000018CD9BBAC-0x000000018CD9BC20
+	internal void myZnuCrIBGWvxqjekjoiAHhhceUfb(IntPtr param_000aa385, IntPtr param_000aa386); // 0x000000018CD9C704-0x000000018CD9C778
+	public void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x000000018CD9C3D8-0x000000018CD9C42C
+	public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x000000018CD9BC64-0x000000018CD9BCB8
+	internal void WuSaVHZtGxfwIdMWdiQmkvkgqKRQA(int param_000aa387, IntPtr param_000aa388); // 0x000000018CD9C320-0x000000018CD9C394
+	internal void drtdpDkrzuYshLmnvAEuCyRyPjPeA(BdBmIXRJGKOiDSKgyDtNfVCrBQEn param_000aa389); // 0x000000018CD9C558-0x000000018CD9C614
+	public void qgQQxgNRUXeZPOPVqlZKNCorGlvU(IntPtr param_000aa38a, xyDAHdjbDRYaqEPZVCMNiWkIIuzcA param_000aa38b); // 0x000000018CD9C7FC-0x000000018CD9C870
+	internal void OGrDcIXXNcEPYhAmTKABFmhvcEhL(out asJwVBrSeOWneGuTCmUUKaDTCXQW param_000aa38c); // 0x000000018CD9BF04-0x000000018CD9C070
+	public void swHCghpaXnNJcxZhclsnDkVwtNWU(); // 0x000000018CD9C870-0x000000018CD9C8C4
 }
 
-internal class asJwVBrSeOWneGuTCmUUKaDTCXQW // TypeDefIndex: 53835
+internal class asJwVBrSeOWneGuTCmUUKaDTCXQW // TypeDefIndex: 79079
 {
 	// Fields
 	internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x10
@@ -5336,12 +5322,12 @@ internal class asJwVBrSeOWneGuTCmUUKaDTCXQW // TypeDefIndex: 53835
 	public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX; // 0x5A
 
 	// Properties
-	public Rewired.Libraries.SharpDX.DirectInput.DeviceType SPvkVDDQKebsselcJZJzSqGLscPR { get; } // 0x0000000184D86A90-0x0000000184D86AA0 
-	public int VYKoqtbBjrGccTFhEMzSSLVuJPE { get; } // 0x0000000184DA8950-0x0000000184DA8960 
-	public bool VxwjAuEHHcRvsDhckJuytMDdsEkO { get; } // 0x000000018ABAAC04-0x000000018ABAAC10 
+	public Rewired.Libraries.SharpDX.DirectInput.DeviceType SPvkVDDQKebsselcJZJzSqGLscPR { get; } // 0x000000018226EBB0-0x000000018226EBC0 
+	public int VYKoqtbBjrGccTFhEMzSSLVuJPE { get; } // 0x0000000187256A30-0x0000000187256A40 
+	public bool VxwjAuEHHcRvsDhckJuytMDdsEkO { get; } // 0x000000018CD9F2BC-0x000000018CD9F2C8 
 
 	// Nested types
-	internal struct CNqfbQSlroFLSiDmFWHFtobYppShA // TypeDefIndex: 53834
+	internal struct CNqfbQSlroFLSiDmFWHFtobYppShA // TypeDefIndex: 79078
 	{
 		// Fields
 		public int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -5874,30 +5860,30 @@ internal class asJwVBrSeOWneGuTCmUUKaDTCXQW // TypeDefIndex: 53835
 	}
 
 	// Constructors
-	public asJwVBrSeOWneGuTCmUUKaDTCXQW(); // 0x0000000184DA8960-0x0000000184DA8970
+	public asJwVBrSeOWneGuTCmUUKaDTCXQW(); // 0x0000000187256A40-0x0000000187256A50
 
 	// Methods
-	internal static CNqfbQSlroFLSiDmFWHFtobYppShA aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x0000000184DA8970-0x0000000184DA89A0
-	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref CNqfbQSlroFLSiDmFWHFtobYppShA param_00073a26); // 0x000000018ABAAB68-0x000000018ABAAC04
+	internal static CNqfbQSlroFLSiDmFWHFtobYppShA aCLjbmCknACmVmpCCqRcKovsfAeq(); // 0x0000000187256A50-0x0000000187256A80
+	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref CNqfbQSlroFLSiDmFWHFtobYppShA param_000aa38d); // 0x000000018CD9F220-0x000000018CD9F2BC
 }
 
-internal struct ZiNFfyMDyvFubBAcAJZJdlSkFDnK // TypeDefIndex: 53836
+internal struct ZiNFfyMDyvFubBAcAJZJdlSkFDnK // TypeDefIndex: 79080
 {
 	// Fields
 	private int hHOhDmXXIIbTDlbnlvBbdCfmTboR; // 0x00
 
 	// Properties
-	public poeujHXJKdgxzeFEVUBvUcmFtnlu qtIfMRoWBGZEUSCwsKeTMCQXFfRIA { get; } // 0x0000000184DA88C0-0x0000000184DA88D0 
-	public int LXWtZSJLQtMoTbFjkdAwAqCiriInA { get; } // 0x0000000184DA88B0-0x0000000184DA88C0 
+	public poeujHXJKdgxzeFEVUBvUcmFtnlu qtIfMRoWBGZEUSCwsKeTMCQXFfRIA { get; } // 0x00000001872569A0-0x00000001872569B0 
+	public int LXWtZSJLQtMoTbFjkdAwAqCiriInA { get; } // 0x0000000187256990-0x00000001872569A0 
 
 	// Methods
-	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(ZiNFfyMDyvFubBAcAJZJdlSkFDnK param_00073a27); // 0x000000018ABAA87C-0x000000018ABAA884
-	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_00073a28); // 0x000000018ABAA7C8-0x000000018ABAA87C
-	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x0000000182B77620-0x0000000182B77630
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAA65C-0x000000018ABAA7C8
+	public bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(ZiNFfyMDyvFubBAcAJZJdlSkFDnK param_000aa38e); // 0x000000018CD9EF34-0x000000018CD9EF3C
+	public override bool wmgNCKPTdHLFLNHTicNSGFrTxitCA(object param_000aa38f); // 0x000000018CD9EE80-0x000000018CD9EF34
+	public override int GubJpCYCjfcPBxeJkADxCoihHVYdA(); // 0x00000001844AD290-0x00000001844AD2A0
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CD9ED14-0x000000018CD9EE80
 }
 
-internal class HcRHynaOJyRqcNcJqdaUjCNwaqErA // TypeDefIndex: 53838
+internal class HcRHynaOJyRqcNcJqdaUjCNwaqErA // TypeDefIndex: 79082
 {
 	// Fields
 	internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x10
@@ -5917,7 +5903,7 @@ internal class HcRHynaOJyRqcNcJqdaUjCNwaqErA // TypeDefIndex: 53838
 	public short dlIVDRGEvVUFoSlAgprRdLPqgqDE; // 0x4E
 
 	// Nested types
-	internal struct sXYLFovlvLSPcFvjDhXVeNhoaMEX // TypeDefIndex: 53837
+	internal struct sXYLFovlvLSPcFvjDhXVeNhoaMEX // TypeDefIndex: 79081
 	{
 		// Fields
 		public int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -6197,32 +6183,32 @@ internal class HcRHynaOJyRqcNcJqdaUjCNwaqErA // TypeDefIndex: 53838
 	}
 
 	// Constructors
-	public HcRHynaOJyRqcNcJqdaUjCNwaqErA(); // 0x0000000184DA8850-0x0000000184DA8860
+	public HcRHynaOJyRqcNcJqdaUjCNwaqErA(); // 0x0000000187256940-0x0000000187256950
 
 	// Methods
-	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref sXYLFovlvLSPcFvjDhXVeNhoaMEX param_00073a29); // 0x000000018ABA6280-0x000000018ABA6338
+	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref sXYLFovlvLSPcFvjDhXVeNhoaMEX param_000aa390); // 0x000000018CD9AC30-0x000000018CD9ACE8
 }
 
-internal class BxcPeTIqLZsfHyGzFAombgJBgOBgA : IXVoGLHTxMZOhmxUdMQSOueCZssK // TypeDefIndex: 53839
+internal class BxcPeTIqLZsfHyGzFAombgJBgOBgA : IXVoGLHTxMZOhmxUdMQSOueCZssK // TypeDefIndex: 79083
 {
 	// Properties
-	public WBJKccxsRUtRJdmcyVziTsqftMNx IlcLYDpMHHjmkmnhEaMyOecSKJjG { set; } // 0x000000018ABA3D24-0x000000018ABA3D88
-	public string HhWVFfmFttuBrivSKjzReDMOiLBBA { get; } // 0x000000018ABA3D88-0x000000018ABA3DE0 
-	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x000000018ABA3BF4-0x000000018ABA3C4C 
-	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x000000018ABA3B40-0x000000018ABA3B9C 
-	public string LOikUxXJsvTgyuFJrAzLxiECoOlH { get; } // 0x000000018ABA3CD0-0x000000018ABA3D24 
-	public EsYlVkTNpXweFHIzPgRHfxdCgmmRA rWfPOTkywVVLkhergznPfrOaXcQA { set; } // 0x000000018ABA3C6C-0x000000018ABA3CD0
-	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x000000018ABA3B9C-0x000000018ABA3BF4 
+	public WBJKccxsRUtRJdmcyVziTsqftMNx IlcLYDpMHHjmkmnhEaMyOecSKJjG { set; } // 0x000000018CD9865C-0x000000018CD986C0
+	public string HhWVFfmFttuBrivSKjzReDMOiLBBA { get; } // 0x000000018CD986C0-0x000000018CD98718 
+	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x000000018CD9852C-0x000000018CD98584 
+	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x000000018CD98478-0x000000018CD984D4 
+	public string LOikUxXJsvTgyuFJrAzLxiECoOlH { get; } // 0x000000018CD98608-0x000000018CD9865C 
+	public EsYlVkTNpXweFHIzPgRHfxdCgmmRA rWfPOTkywVVLkhergznPfrOaXcQA { set; } // 0x000000018CD985A4-0x000000018CD98608
+	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x000000018CD984D4-0x000000018CD9852C 
 
 	// Constructors
-	internal BxcPeTIqLZsfHyGzFAombgJBgOBgA(NinxpESAdWHMScogYtzEcrOKmWSq param_00073a2a); // 0x000000018ABA3C4C-0x000000018ABA3C6C
+	internal BxcPeTIqLZsfHyGzFAombgJBgOBgA(NinxpESAdWHMScogYtzEcrOKmWSq param_000aa391); // 0x000000018CD98584-0x000000018CD985A4
 }
 
 [Guid("bf798031-483a-4da2-aa99-5d64ed369700")]
-internal class nmDUaUhbthOlhiDQJeKfGxYxeylPA : beaToZucjyOfmWGEnxdCGCgakptr // TypeDefIndex: 53842
+internal class nmDUaUhbthOlhiDQJeKfGxYxeylPA : beaToZucjyOfmWGEnxdCGCgakptr // TypeDefIndex: 79086
 {
 	// Nested types
-	private static class kbvKEgcMmfBBffrwpruAVhvtnuzD // TypeDefIndex: 53841
+	private static class kbvKEgcMmfBBffrwpruAVhvtnuzD // TypeDefIndex: 79085
 	{
 		// Fields
 		private static tMimMEtdyazRsphUXImMfGENsXXk xlBGlicniqyqVcDrynCdvCYuHFKD; // 0x00
@@ -6230,36 +6216,36 @@ internal class nmDUaUhbthOlhiDQJeKfGxYxeylPA : beaToZucjyOfmWGEnxdCGCgakptr // T
 		private static int fKLlmcGypGrqZthvjDiFnMYoYyhQ; // 0x10
 
 		// Properties
-		public static IntPtr ZuzLHeGGMPEKuocadCcrASTQesVzA { get; } // 0x000000018ABABB6C-0x000000018ABABBBC 
+		public static IntPtr ZuzLHeGGMPEKuocadCcrASTQesVzA { get; } // 0x000000018CDA02B4-0x000000018CDA0304 
 
 		// Nested types
 		[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-		private unsafe delegate int tMimMEtdyazRsphUXImMfGENsXXk(void* deviceInstance, IntPtr data); // TypeDefIndex: 53840; 0x00000001815802E0-0x00000001815802F0
+		private unsafe delegate int tMimMEtdyazRsphUXImMfGENsXXk(void* deviceInstance, IntPtr data); // TypeDefIndex: 79084; 0x00000001859B7730-0x00000001859B7740
 
 		// Constructors
-		static kbvKEgcMmfBBffrwpruAVhvtnuzD(); // 0x000000018ABABBBC-0x000000018ABABC94
+		static kbvKEgcMmfBBffrwpruAVhvtnuzD(); // 0x000000018CDA0304-0x000000018CDA03DC
 
 		// Methods
-		public static int oVJgJJeEaimeBjSkJAJcNoqnwkSR(); // 0x000000018ABABCE8-0x000000018ABABD44
-		public static void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018ABABC94-0x000000018ABABCE8
+		public static int oVJgJJeEaimeBjSkJAJcNoqnwkSR(); // 0x000000018CDA0430-0x000000018CDA048C
+		public static void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CDA03DC-0x000000018CDA0430
 		[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(tMimMEtdyazRsphUXImMfGENsXXk))]
-		private static unsafe int qIDEVMCaZpeqDADiaqyTpWBDgMPQA(void* param_00073a41, IntPtr param_00073a42); // 0x000000018ABABD44-0x000000018ABABD9C
+		private static unsafe int qIDEVMCaZpeqDADiaqyTpWBDgMPQA(void* param_000aa3a8, IntPtr param_000aa3a9); // 0x000000018CDA048C-0x000000018CDA04E4
 	}
 
 	// Constructors
-	public nmDUaUhbthOlhiDQJeKfGxYxeylPA(); // 0x000000018ABAC080-0x000000018ABAC16C
+	public nmDUaUhbthOlhiDQJeKfGxYxeylPA(); // 0x000000018CDA07CC-0x000000018CDA08C0
 
 	// Methods
-	public IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> enWrmPEeSZfdoBIXgaeNFsgyFeVm(); // 0x000000018ABAC20C-0x000000018ABAC21C
-	public IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> enWrmPEeSZfdoBIXgaeNFsgyFeVm(CjUKMefScpzMvgjgiUiuzegeDMUm param_00073a2d, krgKPYTnLgdfAdFjoUESWSGAlErR param_00073a2e); // 0x000000018ABAC21C-0x000000018ABAC3C8
-	public int vCJFJxrdRFOvytGXVnYrjkdwDObt(CjUKMefScpzMvgjgiUiuzegeDMUm param_00073a2f, krgKPYTnLgdfAdFjoUESWSGAlErR param_00073a30); // 0x000000018ABAC3C8-0x000000018ABAC480
-	private static unsafe extern int dLepqwjgJnjtChZdwslOrnVNvgZl(void* param_00073a31, void* param_00073a32, void* param_00073a33, void* param_00073a34); // 0x000000018ABAC16C-0x000000018ABAC20C
-	private static unsafe extern int RwOjAFglUQiUuBNhHgEgMjALXQvh(void* param_00073a35, int param_00073a36, void* param_00073a37, void* param_00073a38, int param_00073a39); // 0x000000018ABABEB0-0x000000018ABABF50
-	internal void SnFdvdwiySLLSSiTHYYZjXHLHIjP(Guid param_00073a3a, out IntPtr param_00073a3b, beaToZucjyOfmWGEnxdCGCgakptr param_00073a3c); // 0x000000018ABABF50-0x000000018ABABFE4
-	internal void UtKGIVDjczyGxgCHobkVhsfcudsub(int param_00073a3d, TrZygBjBOPxdNoLZDCUKGcceunIo param_00073a3e, IntPtr param_00073a3f, krgKPYTnLgdfAdFjoUESWSGAlErR param_00073a40); // 0x000000018ABABFE4-0x000000018ABAC080
+	public IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> enWrmPEeSZfdoBIXgaeNFsgyFeVm(); // 0x000000018CDA0960-0x000000018CDA0970
+	public IList<asJwVBrSeOWneGuTCmUUKaDTCXQW> enWrmPEeSZfdoBIXgaeNFsgyFeVm(CjUKMefScpzMvgjgiUiuzegeDMUm param_000aa394, krgKPYTnLgdfAdFjoUESWSGAlErR param_000aa395); // 0x000000018CDA0970-0x000000018CDA0B2C
+	public int vCJFJxrdRFOvytGXVnYrjkdwDObt(CjUKMefScpzMvgjgiUiuzegeDMUm param_000aa396, krgKPYTnLgdfAdFjoUESWSGAlErR param_000aa397); // 0x000000018CDA0B2C-0x000000018CDA0BE8
+	private static unsafe extern int dLepqwjgJnjtChZdwslOrnVNvgZl(void* param_000aa398, void* param_000aa399, void* param_000aa39a, void* param_000aa39b); // 0x000000018CDA08C0-0x000000018CDA0960
+	private static unsafe extern int RwOjAFglUQiUuBNhHgEgMjALXQvh(void* param_000aa39c, int param_000aa39d, void* param_000aa39e, void* param_000aa39f, int param_000aa3a0); // 0x000000018CDA05F8-0x000000018CDA0698
+	internal void SnFdvdwiySLLSSiTHYYZjXHLHIjP(Guid param_000aa3a1, out IntPtr param_000aa3a2, beaToZucjyOfmWGEnxdCGCgakptr param_000aa3a3); // 0x000000018CDA0698-0x000000018CDA0730
+	internal void UtKGIVDjczyGxgCHobkVhsfcudsub(int param_000aa3a4, TrZygBjBOPxdNoLZDCUKGcceunIo param_000aa3a5, IntPtr param_000aa3a6, krgKPYTnLgdfAdFjoUESWSGAlErR param_000aa3a7); // 0x000000018CDA0730-0x000000018CDA07CC
 }
 
-internal class wuUsWJxKUExVGbjrtMTrHrrTkHbe // TypeDefIndex: 53844
+internal class wuUsWJxKUExVGbjrtMTrHrrTkHbe // TypeDefIndex: 79088
 {
 	// Fields
 	private readonly IntPtr lAcSoTmtafaUVffsOybRduUMmIYr; // 0x10
@@ -6268,22 +6254,22 @@ internal class wuUsWJxKUExVGbjrtMTrHrrTkHbe // TypeDefIndex: 53844
 	private List<asJwVBrSeOWneGuTCmUUKaDTCXQW> jBzjoZjRACtkMgdijVWGGaIhSqdWD; // 0x20
 
 	// Properties
-	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
-	public List<asJwVBrSeOWneGuTCmUUKaDTCXQW> MzPERRBOtszDGBDVIGlDTyZWLsQe { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x00000001829260F0-0x0000000182926100 
+	public List<asJwVBrSeOWneGuTCmUUKaDTCXQW> MzPERRBOtszDGBDVIGlDTyZWLsQe { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
 
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	private unsafe delegate int SYhuNWxVfYmSkwZWMuEcrBLoLMGT(void* deviceInstance, IntPtr data); // TypeDefIndex: 53843; 0x00000001815802E0-0x00000001815802F0
+	private unsafe delegate int SYhuNWxVfYmSkwZWMuEcrBLoLMGT(void* deviceInstance, IntPtr data); // TypeDefIndex: 79087; 0x00000001859B7730-0x00000001859B7740
 
 	// Constructors
-	public wuUsWJxKUExVGbjrtMTrHrrTkHbe(); // 0x000000018ABAEA6C-0x000000018ABAEB58
+	public wuUsWJxKUExVGbjrtMTrHrrTkHbe(); // 0x000000018CDA3268-0x000000018CDA3354
 
 	// Methods
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(SYhuNWxVfYmSkwZWMuEcrBLoLMGT))]
-	private static unsafe int qIDEVMCaZpeqDADiaqyTpWBDgMPQA(void* param_00073a48, IntPtr param_00073a49); // 0x000000018ABAEB58-0x000000018ABAEC2C
+	private static unsafe int qIDEVMCaZpeqDADiaqyTpWBDgMPQA(void* param_000aa3af, IntPtr param_000aa3b0); // 0x000000018CDA3354-0x000000018CDA3428
 }
 
-internal class pAlgwGEUPtryjgsKQTmLqLcapLJfA // TypeDefIndex: 53846
+internal class pAlgwGEUPtryjgsKQTmLqLcapLJfA // TypeDefIndex: 79090
 {
 	// Fields
 	private readonly IntPtr lAcSoTmtafaUVffsOybRduUMmIYr; // 0x10
@@ -6292,23 +6278,23 @@ internal class pAlgwGEUPtryjgsKQTmLqLcapLJfA // TypeDefIndex: 53846
 	private List<HcRHynaOJyRqcNcJqdaUjCNwaqErA> eydGulGzjGCrVoBdVauMYRMNMFLr; // 0x20
 
 	// Properties
-	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
-	public List<HcRHynaOJyRqcNcJqdaUjCNwaqErA> zeaYchZeeNyczvMxtOgCNwpsetpu { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+	public IntPtr flvVEFpgKucPjVdmvJHkUQNaTzAQ { get; } // 0x00000001829260F0-0x0000000182926100 
+	public List<HcRHynaOJyRqcNcJqdaUjCNwaqErA> zeaYchZeeNyczvMxtOgCNwpsetpu { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018225E800-0x000000018225E810 0x0000000187835950-0x0000000187835960
 
 	// Nested types
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	private unsafe delegate int eDsskVCpFwDNWJVmPNTIBKGClisQA(void* deviceInstance, IntPtr data); // TypeDefIndex: 53845; 0x00000001815802E0-0x00000001815802F0
+	private unsafe delegate int eDsskVCpFwDNWJVmPNTIBKGClisQA(void* deviceInstance, IntPtr data); // TypeDefIndex: 79089; 0x00000001859B7730-0x00000001859B7740
 
 	// Constructors
-	public pAlgwGEUPtryjgsKQTmLqLcapLJfA(); // 0x000000018ABAC7A8-0x000000018ABAC894
+	public pAlgwGEUPtryjgsKQTmLqLcapLJfA(); // 0x000000018CDA0F10-0x000000018CDA0FFC
 
 	// Methods
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(eDsskVCpFwDNWJVmPNTIBKGClisQA))]
-	private static unsafe int ruMcqlHhNVQqoKxDgpAFwBLBsbxVA(void* param_00073a4f, IntPtr param_00073a50); // 0x000000018ABAC894-0x000000018ABAC968
+	private static unsafe int ruMcqlHhNVQqoKxDgpAFwBLBsbxVA(void* param_000aa3b6, IntPtr param_000aa3b7); // 0x000000018CDA0FFC-0x000000018CDA10D0
 }
 
 [Flags]
-internal enum xyDAHdjbDRYaqEPZVCMNiWkIIuzcA // TypeDefIndex: 53847
+internal enum xyDAHdjbDRYaqEPZVCMNiWkIIuzcA // TypeDefIndex: 79091
 {
 	Exclusive = 1,
 	NonExclusive = 2,
@@ -6317,19 +6303,19 @@ internal enum xyDAHdjbDRYaqEPZVCMNiWkIIuzcA // TypeDefIndex: 53847
 	NoWinKey = 16
 }
 
-internal enum ZSUAvntfLnoPvgBKYfVfuvtQblMGA // TypeDefIndex: 53848
+internal enum ZSUAvntfLnoPvgBKYfVfuvtQblMGA // TypeDefIndex: 79092
 {
 	AbsoluteAxis = 1,
 	RelativeAxis = 2
 }
 
-internal enum WBJKccxsRUtRJdmcyVziTsqftMNx // TypeDefIndex: 53849
+internal enum WBJKccxsRUtRJdmcyVziTsqftMNx // TypeDefIndex: 79093
 {
 	Absolute = 0,
 	Relative = 1
 }
 
-internal enum CjUKMefScpzMvgjgiUiuzegeDMUm // TypeDefIndex: 53850
+internal enum CjUKMefScpzMvgjgiUiuzegeDMUm // TypeDefIndex: 79094
 {
 	All = 0,
 	Device = 1,
@@ -6339,7 +6325,7 @@ internal enum CjUKMefScpzMvgjgiUiuzegeDMUm // TypeDefIndex: 53850
 }
 
 [Flags]
-internal enum krgKPYTnLgdfAdFjoUESWSGAlErR // TypeDefIndex: 53851
+internal enum krgKPYTnLgdfAdFjoUESWSGAlErR // TypeDefIndex: 79095
 {
 	AllDevices = 0,
 	AttachedOnly = 1,
@@ -6350,7 +6336,7 @@ internal enum krgKPYTnLgdfAdFjoUESWSGAlErR // TypeDefIndex: 53851
 }
 
 [Flags]
-internal enum BofDOjIlnPpdCKzkZiAcEniWwqDKA // TypeDefIndex: 53852
+internal enum BofDOjIlnPpdCKzkZiAcEniWwqDKA // TypeDefIndex: 79096
 {
 	Attached = 1,
 	PolledDevice = 2,
@@ -6370,7 +6356,7 @@ internal enum BofDOjIlnPpdCKzkZiAcEniWwqDKA // TypeDefIndex: 53852
 }
 
 [Flags]
-internal enum poeujHXJKdgxzeFEVUBvUcmFtnlu // TypeDefIndex: 53853
+internal enum poeujHXJKdgxzeFEVUBvUcmFtnlu // TypeDefIndex: 79097
 {
 	All = 0,
 	RelativeAxis = 1,
@@ -6391,7 +6377,7 @@ internal enum poeujHXJKdgxzeFEVUBvUcmFtnlu // TypeDefIndex: 53853
 	Optional = 2147483647
 }
 
-internal enum CyFASCppRXrIorhnlHrqucehWOo // TypeDefIndex: 53855
+internal enum CyFASCppRXrIorhnlHrqucehWOo // TypeDefIndex: 79099
 {
 	ForceFeedbackActuator = 1,
 	ForceFeedbackTrigger = 2,
@@ -6404,7 +6390,7 @@ internal enum CyFASCppRXrIorhnlHrqucehWOo // TypeDefIndex: 53855
 	GuidIsUsage = 65536
 }
 
-internal enum gBJFzvCtfVRFnbuNFPcUrApHGRbld // TypeDefIndex: 53856
+internal enum gBJFzvCtfVRFnbuNFPcUrApHGRbld // TypeDefIndex: 79100
 {
 	Device = 0,
 	Byoffset = 1,
@@ -6412,14 +6398,14 @@ internal enum gBJFzvCtfVRFnbuNFPcUrApHGRbld // TypeDefIndex: 53856
 	Byusage = 3
 }
 
-internal static class YrKeajBlioTDbIZrSmDozcGIxEZH // TypeDefIndex: 53857
+internal static class YrKeajBlioTDbIZrSmDozcGIxEZH // TypeDefIndex: 79101
 {
 	// Methods
-	public static void HKufRDnCLuWDDhREAOmBIYAaebUc(IntPtr param_00073a55, int param_00073a56, Guid param_00073a57, out IntPtr param_00073a58, beaToZucjyOfmWGEnxdCGCgakptr param_00073a59); // 0x000000018ABAA040-0x000000018ABAA0DC
-	private static unsafe extern int VJLKbJKUcqgDWnApUjSUhfldDyeEb(void* param_00073a5a, int param_00073a5b, void* param_00073a5c, void* param_00073a5d, void* param_00073a5e); // 0x000000018ABAA0DC-0x000000018ABAA178
+	public static void HKufRDnCLuWDDhREAOmBIYAaebUc(IntPtr param_000aa3bc, int param_000aa3bd, Guid param_000aa3be, out IntPtr param_000aa3bf, beaToZucjyOfmWGEnxdCGCgakptr param_000aa3c0); // 0x000000018CD9E6E8-0x000000018CD9E784
+	private static unsafe extern int VJLKbJKUcqgDWnApUjSUhfldDyeEb(void* param_000aa3c1, int param_000aa3c2, void* param_000aa3c3, void* param_000aa3c4, void* param_000aa3c5); // 0x000000018CD9E784-0x000000018CD9E820
 }
 
-internal sealed class aVZjCUyfrUiieRCSvMhvPOLXIvNB // TypeDefIndex: 53858
+internal sealed class aVZjCUyfrUiieRCSvMhvPOLXIvNB // TypeDefIndex: 79102
 {
 	// Fields
 	public static readonly IntPtr oDmajWmJdXkNRgeRAsNAnharcyDDA; // 0x00
@@ -6449,10 +6435,10 @@ internal sealed class aVZjCUyfrUiieRCSvMhvPOLXIvNB // TypeDefIndex: 53858
 	public static readonly IntPtr NttGkMgOjvZIHnlPQdBudxwAxfslb; // 0xC0
 
 	// Constructors
-	static aVZjCUyfrUiieRCSvMhvPOLXIvNB(); // 0x000000018ABAA884-0x000000018ABAAAEC
+	static aVZjCUyfrUiieRCSvMhvPOLXIvNB(); // 0x000000018CD9EF3C-0x000000018CD9F1A4
 }
 
-internal struct cgArPRymQOcpHGuUttHKOmZEDCfNA // TypeDefIndex: 53860
+internal struct cgArPRymQOcpHGuUttHKOmZEDCfNA // TypeDefIndex: 79104
 {
 	// Fields
 	public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
@@ -6460,7 +6446,7 @@ internal struct cgArPRymQOcpHGuUttHKOmZEDCfNA // TypeDefIndex: 53860
 	public string uHVFxYdqpgjkdgNAHnKeGPzZhuZpb; // 0x20
 
 	// Nested types
-	internal struct IxQHsEdrJUMoitelnVClfEnMbawIA // TypeDefIndex: 53859
+	internal struct IxQHsEdrJUMoitelnVClfEnMbawIA // TypeDefIndex: 79103
 	{
 		// Fields
 		public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
@@ -6728,10 +6714,10 @@ internal struct cgArPRymQOcpHGuUttHKOmZEDCfNA // TypeDefIndex: 53860
 	}
 
 	// Methods
-	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref IxQHsEdrJUMoitelnVClfEnMbawIA param_00073a5f); // 0x000000018ABB8A94-0x000000018ABB8AD0
+	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref IxQHsEdrJUMoitelnVClfEnMbawIA param_000aa3c6); // 0x000000018CDAD404-0x000000018CDAD440
 }
 
-internal struct kkodSjjyHKxXmuuzDWPlSRhmRILR // TypeDefIndex: 53861
+internal struct kkodSjjyHKxXmuuzDWPlSRhmRILR // TypeDefIndex: 79105
 {
 	// Fields
 	internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -6740,14 +6726,14 @@ internal struct kkodSjjyHKxXmuuzDWPlSRhmRILR // TypeDefIndex: 53861
 	public gBJFzvCtfVRFnbuNFPcUrApHGRbld SPvkVDDQKebsselcJZJzSqGLscPR; // 0x0C
 }
 
-internal struct fcRAIOWwGfwZOjORFTyrSbXkUTyd // TypeDefIndex: 53862
+internal struct fcRAIOWwGfwZOjORFTyrSbXkUTyd // TypeDefIndex: 79106
 {
 	// Fields
 	public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
 	public int thLICHPmpalmfjGmuMkilAKwymgl; // 0x10
 }
 
-internal struct QvWbleffChmRFEWHpvLtcEfemOHPc // TypeDefIndex: 53863
+internal struct QvWbleffChmRFEWHpvLtcEfemOHPc // TypeDefIndex: 79107
 {
 	// Fields
 	public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
@@ -6755,14 +6741,14 @@ internal struct QvWbleffChmRFEWHpvLtcEfemOHPc // TypeDefIndex: 53863
 	public int iKBRPdrdnIJiibACgpcKoJPBTfmg; // 0x14
 }
 
-internal struct pCGksMnYbcBiSLcNpaGiTypRAZyi // TypeDefIndex: 53865
+internal struct pCGksMnYbcBiSLcNpaGiTypRAZyi // TypeDefIndex: 79109
 {
 	// Fields
 	public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
 	public string ynhuhpTbOaCIKUkjGeRHUWijjFkKA; // 0x10
 
 	// Nested types
-	internal struct EaVrxzQFCTeFlgOvlCOXVfDNHkVI // TypeDefIndex: 53864
+	internal struct EaVrxzQFCTeFlgOvlCOXVfDNHkVI // TypeDefIndex: 79108
 	{
 		// Fields
 		public kkodSjjyHKxXmuuzDWPlSRhmRILR fGbkjxXruFaPdjIKRcGRbabwnxrUA; // 0x00
@@ -7029,38 +7015,38 @@ internal struct pCGksMnYbcBiSLcNpaGiTypRAZyi // TypeDefIndex: 53865
 	}
 
 	// Methods
-	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref EaVrxzQFCTeFlgOvlCOXVfDNHkVI param_00073a60); // 0x000000018ABB9778-0x000000018ABB97AC
+	internal void BcaDDZeihMgRujTrJVazrAjsWLLU(ref EaVrxzQFCTeFlgOvlCOXVfDNHkVI param_000aa3c7); // 0x000000018CDAE064-0x000000018CDAE098
 }
 
-internal interface LUJFUwdxIdstOIgjIQCNizLsdLETA // TypeDefIndex: 53866
+internal interface LUJFUwdxIdstOIgjIQCNizLsdLETA // TypeDefIndex: 79110
 {
 	// Properties
 	ZSUAvntfLnoPvgBKYfVfuvtQblMGA qtIfMRoWBGZEUSCwsKeTMCQXFfRIA { get; }
 	HegtEhejPmLQIYSeBGlDUmMVfXog[] kidCTAgaJTWmbWtqnuzgvoLuRezj { get; }
 }
 
-internal interface nQctLAKvbEudnDiceCspsjyQWyFh<u0001, in u0002> // TypeDefIndex: 53867
+internal interface nQctLAKvbEudnDiceCspsjyQWyFh<u0001, in u0002> // TypeDefIndex: 79111
 	where  : struct
 	where  : struct, yAcTuDRxvBzGjwYsLbbzRJSQLkNg
 {
 	// Methods
-	void MarshalFrom(IntPtr param_00073a61);
+	void MarshalFrom(IntPtr param_000aa3c8);
 }
 
-internal struct EsYlVkTNpXweFHIzPgRHfxdCgmmRA // TypeDefIndex: 53868
+internal struct EsYlVkTNpXweFHIzPgRHfxdCgmmRA // TypeDefIndex: 79112
 {
 	// Fields
 	public int HSeftqFKglSCHULyPTKbHYccgDSz; // 0x00
 	public int ULSIzpQhQxVgvjIcLvfoFdMCeDIB; // 0x04
 
 	// Constructors
-	public EsYlVkTNpXweFHIzPgRHfxdCgmmRA(int param_00073a62, int param_00073a63); // 0x0000000184D85C40-0x0000000184D85C50
+	public EsYlVkTNpXweFHIzPgRHfxdCgmmRA(int param_000aa3c9, int param_000aa3ca); // 0x00000001827241A0-0x00000001827241B0
 
 	// Methods
-	internal void yaDKKkmiDuALDKUnmEByBCDNTjpD(ref QvWbleffChmRFEWHpvLtcEfemOHPc param_00073a64); // 0x0000000184DA89F0-0x0000000184DA8A00
+	internal void yaDKKkmiDuALDKUnmEByBCDNTjpD(ref QvWbleffChmRFEWHpvLtcEfemOHPc param_000aa3cb); // 0x0000000187256AC0-0x0000000187256AD0
 }
 
-internal interface yAcTuDRxvBzGjwYsLbbzRJSQLkNg // TypeDefIndex: 53869
+internal interface yAcTuDRxvBzGjwYsLbbzRJSQLkNg // TypeDefIndex: 79113
 {
 	// Properties
 	int bUsOcCfceAaHAFMFyMNHggeIypvmb { get; }
@@ -7069,13 +7055,13 @@ internal interface yAcTuDRxvBzGjwYsLbbzRJSQLkNg // TypeDefIndex: 53869
 	int SuwGDyfBVtiOexFOrVCuRmDawZagA { get; }
 }
 
-internal class uiNBFFkTpfqYYBjzPgxoiyKQNigQA : BslFyWdFqNvcSBpOIOOVPaeVNHaNA<GPkbBxELmYMSjUedRXbWrnFhNjKFb, OIMKScjOBjkpKdGtwdiPLlAhCFN, BFjQFlXYsiaVRjZHngIGIaJlOkcm> // TypeDefIndex: 53870
+internal class uiNBFFkTpfqYYBjzPgxoiyKQNigQA : BslFyWdFqNvcSBpOIOOVPaeVNHaNA<GPkbBxELmYMSjUedRXbWrnFhNjKFb, OIMKScjOBjkpKdGtwdiPLlAhCFN, BFjQFlXYsiaVRjZHngIGIaJlOkcm> // TypeDefIndex: 79114
 {
 	// Constructors
-	public uiNBFFkTpfqYYBjzPgxoiyKQNigQA(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_00073a65, Guid param_00073a66); // 0x000000018ABBB310-0x000000018ABBB38C
+	public uiNBFFkTpfqYYBjzPgxoiyKQNigQA(nmDUaUhbthOlhiDQJeKfGxYxeylPA param_000aa3cc, Guid param_000aa3cd); // 0x000000018CDAFBF8-0x000000018CDAFC74
 }
 
-internal enum xvWLroqHVxATEJwSrusLWaCJJSGI // TypeDefIndex: 53871
+internal enum xvWLroqHVxATEJwSrusLWaCJJSGI // TypeDefIndex: 79115
 {
 	X = 0,
 	Y = 4,
@@ -7243,7 +7229,7 @@ internal enum xvWLroqHVxATEJwSrusLWaCJJSGI // TypeDefIndex: 53871
 	ForceSliders1 = 268
 }
 
-internal class GPkbBxELmYMSjUedRXbWrnFhNjKFb : nQctLAKvbEudnDiceCspsjyQWyFh<OIMKScjOBjkpKdGtwdiPLlAhCFN, BFjQFlXYsiaVRjZHngIGIaJlOkcm> // TypeDefIndex: 53872
+internal class GPkbBxELmYMSjUedRXbWrnFhNjKFb : nQctLAKvbEudnDiceCspsjyQWyFh<OIMKScjOBjkpKdGtwdiPLlAhCFN, BFjQFlXYsiaVRjZHngIGIaJlOkcm> // TypeDefIndex: 79116
 {
 	// Fields
 	private int wYzJglTQyAoUtvakRNfILbqUpqkk; // 0x10
@@ -7278,49 +7264,49 @@ internal class GPkbBxELmYMSjUedRXbWrnFhNjKFb : nQctLAKvbEudnDiceCspsjyQWyFh<OIMK
 	private int[] gbQqTKasYrlAhVhxLmxdPDrseOFhA; // 0x98
 
 	// Properties
-	public int sURegOJXrVrzsRbkTLhQVBuqJVbJ { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-	public int KNTFhJabRbWgVSMSJojTSthigWSM { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
-	public int MFJjLDiicbnoxXotepspuhOjfNkU { get; set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x00000001811EF9B0-0x00000001811EF9C0
-	public int JHOkKToIVVbEcQssxCBAbFteUTkQ { get; set; } // 0x0000000184D86310-0x0000000184D86320 0x0000000184D86320-0x0000000184D86330
-	public int MPFeHSJixWGHRViAmxtGYsCTbaBS { get; set; } // 0x0000000182B70F90-0x0000000182B70FA0 0x0000000184D86330-0x0000000184D86340
-	public int HzCrJpUKcFwGlBvsIoLvGxAmjbkg { get; set; } // 0x00000001811F0020-0x00000001811F0030 0x00000001811F0030-0x00000001811F0040
-	public int[] tQMFwFExlACgqLBpJkZQHFkqDevy { get; internal set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
-	public int[] lLFhHhTIlkPPZIEycNsUuGtSyENC { get; internal set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
-	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; internal set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
-	public int nMXWZjmUOsgnEDIggCbietHaDulG { get; set; } // 0x0000000184D865E0-0x0000000184D865F0 0x0000000184D86610-0x0000000184D86620
-	public int gOprXbqeJdcnvaXGWLEibDgUZTTp { get; set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
-	public int TMqorUndAhGVWeuMVKXiERPjxBccB { get; set; } // 0x0000000184D863D0-0x0000000184D863E0 0x0000000184D86450-0x0000000184D86460
-	public int xaktQtDeBEfMritKatjunUXLFzJm { get; set; } // 0x0000000184D86600-0x0000000184D86610 0x0000000184D86630-0x0000000184D86640
-	public int JxKRuTpZfeQsRJscQoyeTSMMDVyr { get; set; } // 0x0000000184D86550-0x0000000184D86560 0x0000000184D865A0-0x0000000184D865B0
-	public int yNsxnEADgrJiFToYaFiqMehPGKtY { get; set; } // 0x0000000184D86540-0x0000000184D86550 0x0000000184D86590-0x0000000184D865A0
-	public int[] AcGhvdLAvxSObqgmvUyxoeQwolJC { get; internal set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
-	public int BWzWpyeMNqZYmsDIwMPxzlcuhgPB { get; set; } // 0x0000000184D86790-0x0000000184D867A0 0x0000000184D86D50-0x0000000184D86D60
-	public int rGayEOeAOdRcJXVXPshqTGsTECXz { get; set; } // 0x0000000184D88110-0x0000000184D88120 0x0000000184D88120-0x0000000184D88130
-	public int CzsOlnRhsuydUyCBYJsEKMxnSWuU { get; set; } // 0x0000000184D86CF0-0x0000000184D86D00 0x0000000184D86D00-0x0000000184D86D10
-	public int JkeWkKAKZVHbDghQHzvIAJzRJFQr { get; set; } // 0x0000000184D86B50-0x0000000184D86B60 0x0000000184D86BB0-0x0000000184D86BC0
-	public int rnBVcFvKrCijIJnrgqRPyRGksUrk { get; set; } // 0x0000000184D868A0-0x0000000184D868B0 0x0000000184D868D0-0x0000000184D868E0
-	public int WjKqIuLkcYZCvVGSlBrDKElircMK { get; set; } // 0x0000000184D868B0-0x0000000184D868C0 0x0000000184D868E0-0x0000000184D868F0
-	public int[] SsvrLLvGhWXUmFhbSkonQzKgpDMg { get; internal set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
-	public int OnbtdHADzTjroKuJEKWlXSKskARq { get; set; } // 0x0000000184D863A0-0x0000000184D863B0 0x0000000184D86420-0x0000000184D86430
-	public int SgObdTVqQKDtrHLaAVHQmvwnYBKr { get; set; } // 0x0000000184D8FCE0-0x0000000184D8FCF0 0x0000000184D8FCF0-0x0000000184D8FD00
-	public int TEtZtVcZmHktppdaeqwMrrbvJCep { get; set; } // 0x0000000184D86890-0x0000000184D868A0 0x0000000184D868C0-0x0000000184D868D0
-	public int ATCfXnEcwrDcbaPXkNvYbBtgJEBeD { get; set; } // 0x0000000184D90C40-0x0000000184D90C50 0x0000000184D90C60-0x0000000184D90C70
-	public int WwzLuDGHSspRHCkpQBHIAOYWUbytA { get; set; } // 0x0000000184D86B60-0x0000000184D86B70 0x0000000184D86BC0-0x0000000184D86BD0
-	public int dbvJIKkVDcPVizpIAbyDQMiNTjRc { get; set; } // 0x0000000184D86B20-0x0000000184D86B30 0x0000000184D86B80-0x0000000184D86B90
-	public int[] McibGxihWCRUpJxuGDWxQiSiYGsr { get; internal set; } // 0x0000000184D85EE0-0x0000000184D85EF0 0x0000000186352D0C-0x0000000186352D20
+	public int sURegOJXrVrzsRbkTLhQVBuqJVbJ { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+	public int KNTFhJabRbWgVSMSJojTSthigWSM { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
+	public int MFJjLDiicbnoxXotepspuhOjfNkU { get; set; } // 0x00000001844AF510-0x00000001844AF520 0x000000018442F470-0x000000018442F480
+	public int JHOkKToIVVbEcQssxCBAbFteUTkQ { get; set; } // 0x0000000187233000-0x0000000187233010 0x0000000187233010-0x0000000187233020
+	public int MPFeHSJixWGHRViAmxtGYsCTbaBS { get; set; } // 0x000000018226A850-0x000000018226A860 0x0000000186036460-0x0000000186036470
+	public int HzCrJpUKcFwGlBvsIoLvGxAmjbkg { get; set; } // 0x0000000182A819B0-0x0000000182A819C0 0x0000000182A819D0-0x0000000182A819E0
+	public int[] tQMFwFExlACgqLBpJkZQHFkqDevy { get; internal set; } // 0x0000000182262130-0x0000000182262140 0x0000000185CA30F0-0x0000000185CA3100
+	public int[] lLFhHhTIlkPPZIEycNsUuGtSyENC { get; internal set; } // 0x00000001829600D0-0x00000001829600E0 0x000000018783BA80-0x000000018783BA90
+	public bool[] PlahzMFUWWFVTEjviHdVVhgEfBVTb { get; internal set; } // 0x0000000182986470-0x0000000182986480 0x0000000186AB5C00-0x0000000186AB5C10
+	public int nMXWZjmUOsgnEDIggCbietHaDulG { get; set; } // 0x0000000182271C50-0x0000000182271C60 0x0000000182271C70-0x0000000182271C80
+	public int gOprXbqeJdcnvaXGWLEibDgUZTTp { get; set; } // 0x0000000182271C40-0x0000000182271C50 0x0000000182271C60-0x0000000182271C70
+	public int TMqorUndAhGVWeuMVKXiERPjxBccB { get; set; } // 0x00000001872330A0-0x00000001872330B0 0x0000000185E120B0-0x0000000185E120C0
+	public int xaktQtDeBEfMritKatjunUXLFzJm { get; set; } // 0x0000000187233730-0x0000000187233740 0x0000000187233740-0x0000000187233750
+	public int JxKRuTpZfeQsRJscQoyeTSMMDVyr { get; set; } // 0x0000000187233280-0x0000000187233290 0x00000001854CCF30-0x00000001854CCF40
+	public int yNsxnEADgrJiFToYaFiqMehPGKtY { get; set; } // 0x00000001872336F0-0x0000000187233700 0x0000000187233700-0x0000000187233710
+	public int[] AcGhvdLAvxSObqgmvUyxoeQwolJC { get; internal set; } // 0x0000000187232F70-0x0000000187232F80 0x00000001856B9750-0x00000001856B9760
+	public int BWzWpyeMNqZYmsDIwMPxzlcuhgPB { get; set; } // 0x00000001872332A0-0x00000001872332B0 0x0000000185FF5E70-0x0000000185FF5F30
+	public int rGayEOeAOdRcJXVXPshqTGsTECXz { get; set; } // 0x0000000187233670-0x0000000187233680 0x0000000187233690-0x00000001872336A0
+	public int CzsOlnRhsuydUyCBYJsEKMxnSWuU { get; set; } // 0x0000000182271AE0-0x0000000182271AF0 0x0000000185B8E660-0x0000000185B8E8A0
+	public int JkeWkKAKZVHbDghQHzvIAJzRJFQr { get; set; } // 0x00000001872333A0-0x00000001872333B0 0x0000000187233400-0x0000000187233410
+	public int rnBVcFvKrCijIJnrgqRPyRGksUrk { get; set; } // 0x0000000187233370-0x0000000187233380 0x00000001872333D0-0x00000001872333E0
+	public int WjKqIuLkcYZCvVGSlBrDKElircMK { get; set; } // 0x0000000187233390-0x00000001872333A0 0x00000001872333F0-0x0000000187233400
+	public int[] SsvrLLvGhWXUmFhbSkonQzKgpDMg { get; internal set; } // 0x00000001829CD170-0x00000001829CD180 0x0000000188800CC0-0x0000000188800CD0
+	public int OnbtdHADzTjroKuJEKWlXSKskARq { get; set; } // 0x0000000187233080-0x0000000187233090 0x00000001872330F0-0x0000000187233100
+	public int SgObdTVqQKDtrHLaAVHQmvwnYBKr { get; set; } // 0x000000018723DA60-0x000000018723DA70 0x000000018723DA70-0x000000018723DA80
+	public int TEtZtVcZmHktppdaeqwMrrbvJCep { get; set; } // 0x0000000187233450-0x0000000187233460 0x0000000185B8E410-0x0000000185B8E660
+	public int ATCfXnEcwrDcbaPXkNvYbBtgJEBeD { get; set; } // 0x0000000187233660-0x0000000187233670 0x0000000187233680-0x0000000187233690
+	public int WwzLuDGHSspRHCkpQBHIAOYWUbytA { get; set; } // 0x00000001872333B0-0x00000001872333C0 0x0000000185FD6920-0x0000000185FD6930
+	public int dbvJIKkVDcPVizpIAbyDQMiNTjRc { get; set; } // 0x0000000182271AD0-0x0000000182271AE0 0x0000000182271B30-0x0000000182271B40
+	public int[] McibGxihWCRUpJxuGDWxQiSiYGsr { get; internal set; } // 0x0000000187232C70-0x0000000187232C80 0x00000001887DE51C-0x00000001887DE530
 
 	// Constructors
-	public GPkbBxELmYMSjUedRXbWrnFhNjKFb(); // 0x000000018ABB26D0-0x000000018ABB27C0
+	public GPkbBxELmYMSjUedRXbWrnFhNjKFb(); // 0x000000018CDA6F88-0x000000018CDA7078
 
 	// Methods
-	public void MarshalFrom(IntPtr param_00073a85); // 0x000000018ABB241C-0x000000018ABB26D0
-	public void OSNJxVibfKbltujYHkKMLuczmano(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_00073a86); // 0x000000018AB96238-0x000000018AB964F4
-	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018AB9699C-0x000000018AB97020
-	public bool zOecMSUXqFEeObIykqUIZusBBEzfb(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_00073a87); // 0x000000018ABB2EC8-0x000000018ABB3258
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABB27C0-0x000000018ABB2EC8
+	public void MarshalFrom(IntPtr param_000aa3ec); // 0x000000018CDA6CD4-0x000000018CDA6F88
+	public void OSNJxVibfKbltujYHkKMLuczmano(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000aa3ed); // 0x000000018CD8A6E0-0x000000018CD8A98C
+	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CD8AE78-0x000000018CD8B508
+	public bool zOecMSUXqFEeObIykqUIZusBBEzfb(GPkbBxELmYMSjUedRXbWrnFhNjKFb param_000aa3ee); // 0x000000018CDA7780-0x000000018CDA7B10
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA7078-0x000000018CDA7780
 }
 
-internal struct BFjQFlXYsiaVRjZHngIGIaJlOkcm : yAcTuDRxvBzGjwYsLbbzRJSQLkNg // TypeDefIndex: 53873
+internal struct BFjQFlXYsiaVRjZHngIGIaJlOkcm : yAcTuDRxvBzGjwYsLbbzRJSQLkNg // TypeDefIndex: 79117
 {
 	// Fields
 	[CompilerGenerated]
@@ -7333,18 +7319,18 @@ internal struct BFjQFlXYsiaVRjZHngIGIaJlOkcm : yAcTuDRxvBzGjwYsLbbzRJSQLkNg // T
 	private int fKlcastPuvARuASmKkyvmcubSdbP; // 0x0C
 
 	// Properties
-	public int bUsOcCfceAaHAFMFyMNHggeIypvmb { [CompilerGenerated] get; } // 0x0000000182B77620-0x0000000182B77630 
-	public int aAYoduMJWbpzoALgzTFLgapBasnK { [CompilerGenerated] get; } // 0x0000000184D88B20-0x0000000184D88B30 
-	public int yarsNCqpAJyntJMkiHvyHqhuMcsT { [CompilerGenerated] get; } // 0x0000000184D88B10-0x0000000184D88B20 
-	public int SuwGDyfBVtiOexFOrVCuRmDawZagA { [CompilerGenerated] get; } // 0x0000000184D8CAD0-0x0000000184D8CAE0 
-	public xvWLroqHVxATEJwSrusLWaCJJSGI eACABbdNxPpsXrChQCGOcejnVKCoA { get; } // 0x0000000182B77620-0x0000000182B77630 
+	public int bUsOcCfceAaHAFMFyMNHggeIypvmb { [CompilerGenerated] get; } // 0x00000001844AD290-0x00000001844AD2A0 
+	public int aAYoduMJWbpzoALgzTFLgapBasnK { [CompilerGenerated] get; } // 0x00000001872342E0-0x00000001872342F0 
+	public int yarsNCqpAJyntJMkiHvyHqhuMcsT { [CompilerGenerated] get; } // 0x0000000184431A70-0x0000000184431A80 
+	public int SuwGDyfBVtiOexFOrVCuRmDawZagA { [CompilerGenerated] get; } // 0x0000000184431980-0x0000000184431990 
+	public xvWLroqHVxATEJwSrusLWaCJJSGI eACABbdNxPpsXrChQCGOcejnVKCoA { get; } // 0x00000001844AD290-0x00000001844AD2A0 
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABAF778-0x000000018ABAF910
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDA3FDC-0x000000018CDA4174
 }
 
 [Flags]
-internal enum JusXszoNktGzFGSsuCDrqZOXPYLd // TypeDefIndex: 53874
+internal enum JusXszoNktGzFGSsuCDrqZOXPYLd // TypeDefIndex: 79118
 {
 	None = 0,
 	Position = 256,
@@ -7353,7 +7339,7 @@ internal enum JusXszoNktGzFGSsuCDrqZOXPYLd // TypeDefIndex: 53874
 	Force = 1024
 }
 
-internal abstract class IXVoGLHTxMZOhmxUdMQSOueCZssK // TypeDefIndex: 53875
+internal abstract class IXVoGLHTxMZOhmxUdMQSOueCZssK // TypeDefIndex: 79119
 {
 	// Fields
 	[CompilerGenerated]
@@ -7364,27 +7350,27 @@ internal abstract class IXVoGLHTxMZOhmxUdMQSOueCZssK // TypeDefIndex: 53875
 	private gBJFzvCtfVRFnbuNFPcUrApHGRbld hBIZgtQsQWGAmgRmMqIoSaNqDtzb; // 0x1C
 
 	// Properties
-	private NinxpESAdWHMScogYtzEcrOKmWSq KyAihJLnqGkelkzINpKTCpuYYfu { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-	private int piNaiPHnbCykrnVuKnIfGQADxohrb { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x00000001811EF9B0-0x00000001811EF9C0
-	private gBJFzvCtfVRFnbuNFPcUrApHGRbld DKzDBNjhyKawuvYhonJIQWfJJXouA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86310-0x0000000184D86320 0x0000000184D86320-0x0000000184D86330
+	private NinxpESAdWHMScogYtzEcrOKmWSq KyAihJLnqGkelkzINpKTCpuYYfu { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+	private int piNaiPHnbCykrnVuKnIfGQADxohrb { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001844AF510-0x00000001844AF520 0x000000018442F470-0x000000018442F480
+	private gBJFzvCtfVRFnbuNFPcUrApHGRbld DKzDBNjhyKawuvYhonJIQWfJJXouA { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000187233000-0x0000000187233010 0x0000000187233010-0x0000000187233020
 
 	// Constructors
-	internal IXVoGLHTxMZOhmxUdMQSOueCZssK(NinxpESAdWHMScogYtzEcrOKmWSq param_00073a8b, int param_00073a8c, gBJFzvCtfVRFnbuNFPcUrApHGRbld param_00073a8d); // 0x000000018A7DAF08-0x000000018A7DAF2C
+	internal IXVoGLHTxMZOhmxUdMQSOueCZssK(NinxpESAdWHMScogYtzEcrOKmWSq param_000aa3f2, int param_000aa3f3, gBJFzvCtfVRFnbuNFPcUrApHGRbld param_000aa3f4); // 0x0000000186B4B560-0x0000000186B4B590
 
 	// Methods
-	protected int IbvjoHVOeandXkoQeovjYhtlcGTH(IntPtr param_00073a8e); // 0x000000018ABB4068-0x000000018ABB4074
-	protected int IbvjoHVOeandXkoQeovjYhtlcGTH(IntPtr param_00073a8f, int param_00073a90); // 0x000000018ABB4074-0x000000018ABB4104
-	protected void mnOZfTJZaPJhBHSiKkLNiAfZLffw(IntPtr param_00073a91, int param_00073a92); // 0x000000018ABB4264-0x000000018ABB42F0
-	protected string CmOETABROiKtQaTdmgJeSDAFRDKy(IntPtr param_00073a93); // 0x000000018ABB3FB8-0x000000018ABB4068
-	protected string RwTlCccdmfTvMlReSRsZUqwrcDzJ(IntPtr param_00073a94); // 0x000000018ABB41C0-0x000000018ABB41CC
-	protected string RwTlCccdmfTvMlReSRsZUqwrcDzJ(IntPtr param_00073a95, int param_00073a96); // 0x000000018ABB4104-0x000000018ABB41C0
-	protected void mnOZfTJZaPJhBHSiKkLNiAfZLffw(IntPtr param_00073a97, EsYlVkTNpXweFHIzPgRHfxdCgmmRA param_00073a98); // 0x000000018ABB41CC-0x000000018ABB4264
-	internal void NWPOtDnANJklqoVQxJKSFBnsYXcG<u0001>(ref kkodSjjyHKxXmuuzDWPlSRhmRILR param_00073a99)
+	protected int IbvjoHVOeandXkoQeovjYhtlcGTH(IntPtr param_000aa3f5); // 0x000000018CDA8948-0x000000018CDA8954
+	protected int IbvjoHVOeandXkoQeovjYhtlcGTH(IntPtr param_000aa3f6, int param_000aa3f7); // 0x000000018CDA8954-0x000000018CDA89E4
+	protected void mnOZfTJZaPJhBHSiKkLNiAfZLffw(IntPtr param_000aa3f8, int param_000aa3f9); // 0x000000018CDA8B44-0x000000018CDA8BD0
+	protected string CmOETABROiKtQaTdmgJeSDAFRDKy(IntPtr param_000aa3fa); // 0x000000018CDA8898-0x000000018CDA8948
+	protected string RwTlCccdmfTvMlReSRsZUqwrcDzJ(IntPtr param_000aa3fb); // 0x000000018CDA8AA0-0x000000018CDA8AAC
+	protected string RwTlCccdmfTvMlReSRsZUqwrcDzJ(IntPtr param_000aa3fc, int param_000aa3fd); // 0x000000018CDA89E4-0x000000018CDA8AA0
+	protected void mnOZfTJZaPJhBHSiKkLNiAfZLffw(IntPtr param_000aa3fe, EsYlVkTNpXweFHIzPgRHfxdCgmmRA param_000aa3ff); // 0x000000018CDA8AAC-0x000000018CDA8B44
+	internal void NWPOtDnANJklqoVQxJKSFBnsYXcG<u0001>(ref kkodSjjyHKxXmuuzDWPlSRhmRILR param_000aa400)
 		where  : struct;
 }
 
 [NumFTHcWyFNMUnwclDnApNJtFwHK(ZSUAvntfLnoPvgBKYfVfuvtQblMGA.AbsoluteAxis)]
-internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
+internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 79126
 {
 	// Fields
 	[UsoCBdhjCsFpPWgGxoGohJlQMojhA("a36d02e0-c9f3-11cf-bfc7-444553540000", poeujHXJKdgxzeFEVUBvUcmFtnlu.All | poeujHXJKdgxzeFEVUBvUcmFtnlu.RelativeAxis | poeujHXJKdgxzeFEVUBvUcmFtnlu.AbsoluteAxis | poeujHXJKdgxzeFEVUBvUcmFtnlu.Axis | poeujHXJKdgxzeFEVUBvUcmFtnlu.AnyInstance, JusXszoNktGzFGSsuCDrqZOXPYLd.None | JusXszoNktGzFGSsuCDrqZOXPYLd.Position)]
@@ -7451,7 +7437,7 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 	// Nested types
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct dnwgCPskbCTndpnYChDvjxqegNPVA // TypeDefIndex: 53876
+	public struct dnwgCPskbCTndpnYChDvjxqegNPVA // TypeDefIndex: 79120
 	{
 		// Fields
 		public int LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
@@ -7459,7 +7445,7 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct RjfdULNFKDUKshSsbLaipldtoeRe // TypeDefIndex: 53877
+	public struct RjfdULNFKDUKshSsbLaipldtoeRe // TypeDefIndex: 79121
 	{
 		// Fields
 		public byte LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
@@ -7467,7 +7453,7 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct tCSUEGwBtoWbbIABjeMhOAwkjJKd // TypeDefIndex: 53878
+	public struct tCSUEGwBtoWbbIABjeMhOAwkjJKd // TypeDefIndex: 79122
 	{
 		// Fields
 		public int LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
@@ -7475,7 +7461,7 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct jmRkwNfmcIQEhYatGHRgLTKtMqv // TypeDefIndex: 53879
+	public struct jmRkwNfmcIQEhYatGHRgLTKtMqv // TypeDefIndex: 79123
 	{
 		// Fields
 		public int LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
@@ -7483,7 +7469,7 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct QsfDoNeJyNpLYgfytuOQaqWEUKoEc // TypeDefIndex: 53880
+	public struct QsfDoNeJyNpLYgfytuOQaqWEUKoEc // TypeDefIndex: 79124
 	{
 		// Fields
 		public int LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
@@ -7491,14 +7477,14 @@ internal struct OIMKScjOBjkpKdGtwdiPLlAhCFN // TypeDefIndex: 53882
 
 	[CompilerGenerated]
 	[UnsafeValueType]
-	public struct QnanEQmYDJICALBcEGCwizylolqkA // TypeDefIndex: 53881
+	public struct QnanEQmYDJICALBcEGCwizylolqkA // TypeDefIndex: 79125
 	{
 		// Fields
 		public int LBTCsHdPuZxlgwbRpqFFEZxHLNXvB; // 0x00
 	}
 }
 
-internal class SWoCckscCFFlHZUcZBalEtsOlVBB : IDisposable // TypeDefIndex: 53886
+internal class SWoCckscCFFlHZUcZBalEtsOlVBB : IDisposable // TypeDefIndex: 79130
 {
 	// Fields
 	private readonly string brGcSQOyREiDQmYUDOShcciGajbhA; // 0x10
@@ -7518,10 +7504,10 @@ internal class SWoCckscCFFlHZUcZBalEtsOlVBB : IDisposable // TypeDefIndex: 53886
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x68
 
 	// Properties
-	private bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x000000018ABB74F8-0x000000018ABB7548 
+	private bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x000000018CDABE84-0x000000018CDABED4 
 
 	// Nested types
-	private enum zyzbBTMhhKdxBRMBXLSFiNshoEIT // TypeDefIndex: 53884
+	private enum zyzbBTMhhKdxBRMBXLSFiNshoEIT // TypeDefIndex: 79128
 	{
 		Idle = 0,
 		Waiting = 1,
@@ -7531,7 +7517,7 @@ internal class SWoCckscCFFlHZUcZBalEtsOlVBB : IDisposable // TypeDefIndex: 53886
 		FinishedSuccess = 5
 	}
 
-	public enum VRtdlWZPJsabUWMRrfWbNDGWgGUBA // TypeDefIndex: 53885
+	public enum VRtdlWZPJsabUWMRrfWbNDGWgGUBA // TypeDefIndex: 79129
 	{
 		Idle = 0,
 		Success = 1,
@@ -7541,30 +7527,30 @@ internal class SWoCckscCFFlHZUcZBalEtsOlVBB : IDisposable // TypeDefIndex: 53886
 	}
 
 	// Constructors
-	public SWoCckscCFFlHZUcZBalEtsOlVBB(string param_00073a9a, int param_00073a9b, int param_00073a9c); // 0x000000018ABB7208-0x000000018ABB74F8
+	public SWoCckscCFFlHZUcZBalEtsOlVBB(string param_000aa401, int param_000aa402, int param_000aa403); // 0x000000018CDABB90-0x000000018CDABE84
 
 	// Methods
-	public VRtdlWZPJsabUWMRrfWbNDGWgGUBA EhQhxFweepMpjwazcuSRnFZeQtLc(byte[] param_00073a9d); // 0x000000018ABB6C90-0x000000018ABB6FC4
-	private bool fnQdOSfnsDVjxpjPuvcYfsMiPhHW(); // 0x000000018ABB7548-0x000000018ABB7730
-	private void NURSyHTXmChYGrLRLcTlgmIUZHes(); // 0x000000018ABB6FD4-0x000000018ABB7094
-	private VRtdlWZPJsabUWMRrfWbNDGWgGUBA yyJosQggFThnaqprPeJzBJCwuauA(); // 0x000000018ABB7A20-0x000000018ABB7B9C
-	private void GnozaAakspodijQYSRWkQsLZBcuW(); // 0x000000018ABB6FC4-0x000000018ABB6FD4
-	private void vmUpEHNMKvugRhWjFEYqKHjMaSmm(); // 0x000000018ABB7894-0x000000018ABB7934
-	private void tRuaqIhSdYzhnrhZSyEMOnYHehUr(); // 0x000000018ABB7884-0x000000018ABB7894
-	private void xIDBeuCIhqKkMkiEyjskQnzzqdhDb(); // 0x000000018ABB7934-0x000000018ABB7A20
-	private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018ABB6C08-0x000000018ABB6C40
-	private void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x000000018ABB77E0-0x000000018ABB784C
-	private bool ljzOTGpCHRdGziUWNHWpNIuHgneIA(); // 0x000000018ABB784C-0x000000018ABB7884
-	private bool kVYKrvcgVGoBAawfvjoxKHOMlWwG(); // 0x000000018ABB7730-0x000000018ABB77E0
-	private void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018ABB6B84-0x000000018ABB6C08
+	public VRtdlWZPJsabUWMRrfWbNDGWgGUBA EhQhxFweepMpjwazcuSRnFZeQtLc(byte[] param_000aa404); // 0x000000018CDAB610-0x000000018CDAB944
+	private bool fnQdOSfnsDVjxpjPuvcYfsMiPhHW(); // 0x000000018CDABED4-0x000000018CDAC0BC
+	private void NURSyHTXmChYGrLRLcTlgmIUZHes(); // 0x000000018CDAB954-0x000000018CDABA14
+	private VRtdlWZPJsabUWMRrfWbNDGWgGUBA yyJosQggFThnaqprPeJzBJCwuauA(); // 0x000000018CDAC3B0-0x000000018CDAC52C
+	private void GnozaAakspodijQYSRWkQsLZBcuW(); // 0x000000018CDAB944-0x000000018CDAB954
+	private void vmUpEHNMKvugRhWjFEYqKHjMaSmm(); // 0x000000018CDAC224-0x000000018CDAC2C4
+	private void tRuaqIhSdYzhnrhZSyEMOnYHehUr(); // 0x000000018CDAC214-0x000000018CDAC224
+	private void xIDBeuCIhqKkMkiEyjskQnzzqdhDb(); // 0x000000018CDAC2C4-0x000000018CDAC3B0
+	private void DFzbWQdNlFisggGgVmYILlDdMehP(); // 0x000000018CDAB588-0x000000018CDAB5C0
+	private void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x000000018CDAC170-0x000000018CDAC1D8
+	private bool ljzOTGpCHRdGziUWNHWpNIuHgneIA(); // 0x000000018CDAC1D8-0x000000018CDAC214
+	private bool kVYKrvcgVGoBAawfvjoxKHOMlWwG(); // 0x000000018CDAC0BC-0x000000018CDAC170
+	private void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018CDAB504-0x000000018CDAB588
 	[Rewired.Utils.Attributes.MonoPInvokeCallback(typeof(MDBYECqvXkaCiSmYJZjrizfidEbk.nnQCTPzFcMHWGWfoOtAsaDpWLiXO))]
-	private static void DrVaxNHoNLkLOmHrSqoMKLRBoMjY(int param_00073a9e, int param_00073a9f, IntPtr param_00073aa0); // 0x00000001841E1670-0x00000001841E1680
-	public void Dispose(); // 0x000000018ABB6C40-0x000000018ABB6C90
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABB7194-0x000000018ABB7208
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073aa1); // 0x000000018ABB7094-0x000000018ABB7194
+	private static void DrVaxNHoNLkLOmHrSqoMKLRBoMjY(int param_000aa405, int param_000aa406, IntPtr param_000aa407); // 0x0000000186805BA0-0x0000000186805BB0
+	public void Dispose(); // 0x000000018CDAB5C0-0x000000018CDAB610
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDABB18-0x000000018CDABB90
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa408); // 0x000000018CDABA14-0x000000018CDABB18
 }
 
-internal class aHzSDAgzXeTUuXeKeiUwhHjMNyKD // TypeDefIndex: 53889
+internal class aHzSDAgzXeTUuXeKeiUwhHjMNyKD // TypeDefIndex: 79133
 {
 	// Fields
 	[CompilerGenerated]
@@ -7597,23 +7583,23 @@ internal class aHzSDAgzXeTUuXeKeiUwhHjMNyKD // TypeDefIndex: 53889
 	private ywtLnMAYNmOsSSPgvZjUhjksSggo wkXxVtcCQqSjsHMkInyHuMXAVkrL; // 0x38
 
 	// Properties
-	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D96190-0x0000000184D961A0 0x0000000184D94F60-0x0000000184D94F70
-	public byte yQxQgOQNMVMVBtcqgArgADGYErtCb { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88390-0x0000000184D883A0 0x0000000184DA0900-0x0000000184DA0910
-	private bool vtTDydgHKBpOnHSyNFEsNAlyQxfS { [CompilerGenerated] set; } // 0x0000000184DA8AE0-0x0000000184DA8AF0
-	private ushort EVOgATFTRXRYYHBhTtlQzWYqqwdA { [CompilerGenerated] set; } // 0x0000000184DA8B00-0x0000000184DA8B10
-	public ushort pHcUlKlzzchyOdBayWGzpHfvaXne { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D993B0-0x0000000184D993C0 0x0000000184DA8A80-0x0000000184DA8A90
-	private ushort OZGNGboMcWuoFBqTPiRpwosbEqYM { [CompilerGenerated] set; } // 0x0000000184DA8AB0-0x0000000184DA8AC0
-	private ushort xfxgDPRowhYBpUmBfcwmlmnSOAOk { [CompilerGenerated] set; } // 0x0000000184DA8AF0-0x0000000184DA8B00
-	public bool BfopjfztUWmuPqlPQddPxAYCUqBv { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86150-0x0000000184D86160 0x0000000184D86160-0x0000000184D86170
-	private bool hMRiaanusLpZjoDmjlMCDmUAeXvt { [CompilerGenerated] set; } // 0x0000000184D89610-0x0000000184D89620
-	private bool OrluHimCvJfxNzFNtqGOaUVOaKzG { [CompilerGenerated] set; } // 0x0000000184D89630-0x0000000184D89640
-	private bool pBNaQqqwjWuTtRxKaIqRAoduhvcR { [CompilerGenerated] set; } // 0x0000000184D89620-0x0000000184D89630
-	private uint[] uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
-	public OkLYbJfHcwWnAGGibDNWcbwLCuXsA rWfPOTkywVVLkhergznPfrOaXcQA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 0x0000000184D8FAE0-0x0000000184D8FAF0
-	public ywtLnMAYNmOsSSPgvZjUhjksSggo vLEBkPDtgrvJRhDPlMNfHsyfaKXnB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8FD20-0x0000000184D8FD30 0x0000000184D91AB0-0x0000000184D91AC0
+	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184434E50-0x0000000184434E60 0x0000000187243130-0x0000000187243140
+	public byte yQxQgOQNMVMVBtcqgArgADGYErtCb { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187235CB0-0x0000000187235CC0 0x000000018724EB70-0x000000018724EB80
+	private bool vtTDydgHKBpOnHSyNFEsNAlyQxfS { [CompilerGenerated] set; } // 0x0000000187256BB0-0x0000000187256BC0
+	private ushort EVOgATFTRXRYYHBhTtlQzWYqqwdA { [CompilerGenerated] set; } // 0x0000000187256BD0-0x0000000187256BE0
+	public ushort pHcUlKlzzchyOdBayWGzpHfvaXne { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187247620-0x0000000187247630 0x0000000187256B50-0x0000000187256B60
+	private ushort OZGNGboMcWuoFBqTPiRpwosbEqYM { [CompilerGenerated] set; } // 0x0000000187256B80-0x0000000187256B90
+	private ushort xfxgDPRowhYBpUmBfcwmlmnSOAOk { [CompilerGenerated] set; } // 0x0000000187256BC0-0x0000000187256BD0
+	public bool BfopjfztUWmuPqlPQddPxAYCUqBv { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EB80-0x000000018226EB90 0x000000018226EB90-0x000000018226EBA0
+	private bool hMRiaanusLpZjoDmjlMCDmUAeXvt { [CompilerGenerated] set; } // 0x000000018226ED10-0x000000018226ED20
+	private bool OrluHimCvJfxNzFNtqGOaUVOaKzG { [CompilerGenerated] set; } // 0x00000001872364F0-0x0000000187236500
+	private bool pBNaQqqwjWuTtRxKaIqRAoduhvcR { [CompilerGenerated] set; } // 0x00000001872364E0-0x00000001872364F0
+	private uint[] uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x0000000187835950-0x0000000187835960
+	public OkLYbJfHcwWnAGGibDNWcbwLCuXsA rWfPOTkywVVLkhergznPfrOaXcQA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723D770-0x000000018723D780 0x000000018723D780-0x000000018723D790
+	public ywtLnMAYNmOsSSPgvZjUhjksSggo vLEBkPDtgrvJRhDPlMNfHsyfaKXnB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723DAB0-0x000000018723DAC0 0x000000018723FA00-0x000000018723FA10
 
 	// Nested types
-	public struct OkLYbJfHcwWnAGGibDNWcbwLCuXsA // TypeDefIndex: 53887
+	public struct OkLYbJfHcwWnAGGibDNWcbwLCuXsA // TypeDefIndex: 79131
 	{
 		// Fields
 		[CompilerGenerated]
@@ -7634,17 +7620,17 @@ internal class aHzSDAgzXeTUuXeKeiUwhHjMNyKD // TypeDefIndex: 53889
 		private ushort TvxuXikcWoBDNuALcEEQPyyqnVZm; // 0x0E
 
 		// Properties
-		public ushort ItMgALtDaiVTFjHhSTsudMjbbXEbA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184D87160-0x0000000184D87170
-		public ushort vNUrgCyNhiUnLsFVTLYUvLEjfntu { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87610-0x0000000184D87620 0x0000000184DA8A10-0x0000000184DA8A20
-		internal ushort DwlIhRdQEPDZMlYEjVTJrPCtauNx { [CompilerGenerated] set; } // 0x0000000184DA8A50-0x0000000184DA8A60
-		internal ushort bxWgvYsqzYEOyNWKUFzImHLcCmcK { [CompilerGenerated] set; } // 0x0000000184DA8A20-0x0000000184DA8A30
-		internal ushort EvUdqujojeMZuETniwnoKWXjuZNWB { [CompilerGenerated] set; } // 0x0000000184DA8A70-0x0000000184DA8A80
-		internal ushort hEKMVDtZDkgVmvdcqcPlfCxPVjok { [CompilerGenerated] set; } // 0x0000000184DA8A00-0x0000000184DA8A10
-		internal ushort oQpvoKPnebMtUqjKGMoXpqAsQVCj { [CompilerGenerated] set; } // 0x0000000184DA8A40-0x0000000184DA8A50
-		internal ushort JxxAHZCnxiMJSoWYGfKVGIrCMVJIA { [CompilerGenerated] set; } // 0x0000000184DA8A60-0x0000000184DA8A70
+		public ushort ItMgALtDaiVTFjHhSTsudMjbbXEbA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x000000018448B780-0x000000018448B790 0x000000018448B8B0-0x000000018448B8C0
+		public ushort vNUrgCyNhiUnLsFVTLYUvLEjfntu { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000187234260-0x0000000187234270 0x0000000187256AE0-0x0000000187256AF0
+		internal ushort DwlIhRdQEPDZMlYEjVTJrPCtauNx { [CompilerGenerated] set; } // 0x0000000187256B20-0x0000000187256B30
+		internal ushort bxWgvYsqzYEOyNWKUFzImHLcCmcK { [CompilerGenerated] set; } // 0x0000000187256AF0-0x0000000187256B00
+		internal ushort EvUdqujojeMZuETniwnoKWXjuZNWB { [CompilerGenerated] set; } // 0x0000000187256B40-0x0000000187256B50
+		internal ushort hEKMVDtZDkgVmvdcqcPlfCxPVjok { [CompilerGenerated] set; } // 0x0000000187256AD0-0x0000000187256AE0
+		internal ushort oQpvoKPnebMtUqjKGMoXpqAsQVCj { [CompilerGenerated] set; } // 0x0000000187256B10-0x0000000187256B20
+		internal ushort JxxAHZCnxiMJSoWYGfKVGIrCMVJIA { [CompilerGenerated] set; } // 0x0000000187256B30-0x0000000187256B40
 	}
 
-	public struct ywtLnMAYNmOsSSPgvZjUhjksSggo // TypeDefIndex: 53888
+	public struct ywtLnMAYNmOsSSPgvZjUhjksSggo // TypeDefIndex: 79132
 	{
 		// Fields
 		[CompilerGenerated]
@@ -7665,21 +7651,21 @@ internal class aHzSDAgzXeTUuXeKeiUwhHjMNyKD // TypeDefIndex: 53889
 		private ushort VmjYZskzCwrkfFwqWiukRllVDVxW; // 0x0E
 
 		// Properties
-		public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184D87160-0x0000000184D87170
-		internal ushort rfcVzyntsQRBZuQsphQIAieNMatf { [CompilerGenerated] set; } // 0x0000000184DA8A10-0x0000000184DA8A20
-		internal ushort UGSHpKjCSetxyyuIPUDWVEYHBlFD { [CompilerGenerated] set; } // 0x0000000184DA8A50-0x0000000184DA8A60
-		internal ushort YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000184DA8A20-0x0000000184DA8A30
-		internal ushort iBWeYzDXeUpHNJXfgECfOIwdFzByA { [CompilerGenerated] set; } // 0x0000000184DA8A70-0x0000000184DA8A80
-		internal ushort cNzOuRRFodLwcumimnQZGvgbMZCT { [CompilerGenerated] set; } // 0x0000000184DA8A00-0x0000000184DA8A10
-		internal ushort UJTiICQitwbxBiJLohBISjwTSsGgA { [CompilerGenerated] set; } // 0x0000000184DA8A40-0x0000000184DA8A50
-		internal ushort QLFvEFUNxbHddWoDVbMfbMgJHwGY { [CompilerGenerated] set; } // 0x0000000184DA8A60-0x0000000184DA8A70
+		public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x000000018448B780-0x000000018448B790 0x000000018448B8B0-0x000000018448B8C0
+		internal ushort rfcVzyntsQRBZuQsphQIAieNMatf { [CompilerGenerated] set; } // 0x0000000187256AE0-0x0000000187256AF0
+		internal ushort UGSHpKjCSetxyyuIPUDWVEYHBlFD { [CompilerGenerated] set; } // 0x0000000187256B20-0x0000000187256B30
+		internal ushort YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000187256AF0-0x0000000187256B00
+		internal ushort iBWeYzDXeUpHNJXfgECfOIwdFzByA { [CompilerGenerated] set; } // 0x0000000187256B40-0x0000000187256B50
+		internal ushort cNzOuRRFodLwcumimnQZGvgbMZCT { [CompilerGenerated] set; } // 0x0000000187256AD0-0x0000000187256AE0
+		internal ushort UJTiICQitwbxBiJLohBISjwTSsGgA { [CompilerGenerated] set; } // 0x0000000187256B10-0x0000000187256B20
+		internal ushort QLFvEFUNxbHddWoDVbMfbMgJHwGY { [CompilerGenerated] set; } // 0x0000000187256B30-0x0000000187256B40
 	}
 
 	// Constructors
-	internal aHzSDAgzXeTUuXeKeiUwhHjMNyKD(MDBYECqvXkaCiSmYJZjrizfidEbk.cGvTcLBAAcvnQHXapwJLwcbObXDw param_00073aa2); // 0x0000000183BF7B00-0x0000000183BF7CF0
+	internal aHzSDAgzXeTUuXeKeiUwhHjMNyKD(MDBYECqvXkaCiSmYJZjrizfidEbk.cGvTcLBAAcvnQHXapwJLwcbObXDw param_000aa409); // 0x0000000185704430-0x0000000185704740
 }
 
-internal sealed class yDpFzqLnhRMZnaEyxToARrRqCzAhA : IdxcAbgzMTzxeMxdElxolIcPzwurA // TypeDefIndex: 53892
+internal sealed class yDpFzqLnhRMZnaEyxToARrRqCzAhA : IdxcAbgzMTzxeMxdElxolIcPzwurA // TypeDefIndex: 79136
 {
 	// Fields
 	[CompilerGenerated]
@@ -7713,32 +7699,32 @@ internal sealed class yDpFzqLnhRMZnaEyxToARrRqCzAhA : IdxcAbgzMTzxeMxdElxolIcPzw
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0xD4
 
 	// Properties
-	public IntPtr GebVmHpsJPFlDsHlVnlvHSQVztdK { get; } // 0x0000000184D892F0-0x0000000184D89300 
-	public bool zDVgUhrfAfIgYMdclajHjFgtbNJXA { get; } // 0x000000018ABBD458-0x000000018ABBD5A8 
-	public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x000000018ABBDE04-0x000000018ABBDE54 
-	public ZmPxydCEzlPckyvKlHErkFzgGOFX BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x0000000184D86230-0x0000000184D86240 
-	public aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] vnsxdvCfmAdoMUjBnHXzFustAXhEb { get; } // 0x0000000184D862B0-0x0000000184D862C0 
-	public JXtFhzUqozCGLAAgSlsxdSapKppi[] NdwbjMyHWBpjFInkCzszCfJNATFjA { get; } // 0x0000000184D862A0-0x0000000184D862B0 
-	public pKfkmqTLezjFVzcIBPtMMyRxABwH FgnMidYTRITgpetgeSFsBzmtVqg { get; } // 0x0000000184D85A50-0x0000000184D85A60 
-	public string QVMkSNFdzYBkSGGdcYhOkBRBEqJFb { get; } // 0x0000000184D862C0-0x0000000184D862D0 
-	public string QXKDwkyKHflTUTDjlilpWKmzxeZi { get; } // 0x00000001811F36E0-0x00000001811F36F0 
-	public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x0000000184D85A60-0x0000000184D85A70 
-	public int eKPYMUXhTxBdzYqkhjcxbAyVDCugA { get; } // 0x0000000184D863D0-0x0000000184D863E0 
-	public int IgAWnnkazSdEUGswQhfizzwTVqAs { get; } // 0x0000000184D86600-0x0000000184D86610 
-	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x0000000184D86800-0x0000000184D86810 
-	public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x0000000182E56440-0x0000000182E56460 
-	public bool BJdhruPWQfbEmflPqJRhZZyRVxDTA { get; } // 0x000000018ABBE9CC-0x000000018ABBEBA4 
-	public bool jRIXoCZDUfZanaiKGfTModoQmerH { get; set; } // 0x0000000184D86C50-0x0000000184D86C60 0x000000018ABBC690-0x000000018ABBC6DC
+	public IntPtr GebVmHpsJPFlDsHlVnlvHSQVztdK { get; } // 0x0000000187236200-0x0000000187236210 
+	public bool zDVgUhrfAfIgYMdclajHjFgtbNJXA { get; } // 0x000000018CDB1BF4-0x000000018CDB1D58 
+	public bool akJlAXhUcHpRKZzggAJdBwlcZzEF { get; } // 0x000000018CDB2524-0x000000018CDB2574 
+	public ZmPxydCEzlPckyvKlHErkFzgGOFX BkPbwOOXbHfrprsNBdoJnAuJgArO { get; } // 0x0000000187232F80-0x0000000187232F90 
+	public aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] vnsxdvCfmAdoMUjBnHXzFustAXhEb { get; } // 0x0000000187232FC0-0x0000000187232FD0 
+	public JXtFhzUqozCGLAAgSlsxdSapKppi[] NdwbjMyHWBpjFInkCzszCfJNATFjA { get; } // 0x00000001829CD170-0x00000001829CD180 
+	public pKfkmqTLezjFVzcIBPtMMyRxABwH FgnMidYTRITgpetgeSFsBzmtVqg { get; } // 0x0000000182986470-0x0000000182986480 
+	public string QVMkSNFdzYBkSGGdcYhOkBRBEqJFb { get; } // 0x000000018225E800-0x000000018225E810 
+	public string QXKDwkyKHflTUTDjlilpWKmzxeZi { get; } // 0x00000001829600D0-0x00000001829600E0 
+	public string YYRyzKMAZwsaThONuxJfKsPrqcLy { get; } // 0x000000018226EEA0-0x000000018226EEB0 
+	public int eKPYMUXhTxBdzYqkhjcxbAyVDCugA { get; } // 0x00000001872330A0-0x00000001872330B0 
+	public int IgAWnnkazSdEUGswQhfizzwTVqAs { get; } // 0x0000000187233730-0x0000000187233740 
+	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x000000018225DFF0-0x000000018225E000 
+	public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc { get; } // 0x0000000187232F70-0x0000000187232F80 
+	public bool BJdhruPWQfbEmflPqJRhZZyRVxDTA { get; } // 0x000000018CDB2F70-0x000000018CDB314C 
+	public bool jRIXoCZDUfZanaiKGfTModoQmerH { get; set; } // 0x0000000182271B80-0x0000000182271B90 0x000000018CDB0E20-0x000000018CDB0E6C
 
 	// Nested types
-	private enum qJbRNNMrmslroOIsxeQmCcLMXgXZ // TypeDefIndex: 53890
+	private enum qJbRNNMrmslroOIsxeQmCcLMXgXZ // TypeDefIndex: 79134
 	{
 		Closed = 0,
 		Read = 1,
 		Write = 2
 	}
 
-	private enum XbydykTBZpzAgcAYLLOAdYoJdXOI // TypeDefIndex: 53891
+	private enum XbydykTBZpzAgcAYLLOAdYoJdXOI // TypeDefIndex: 79135
 	{
 		Success = 0,
 		ReadError = 1,
@@ -7748,46 +7734,46 @@ internal sealed class yDpFzqLnhRMZnaEyxToARrRqCzAhA : IdxcAbgzMTzxeMxdElxolIcPzw
 
 	// Constructors
 	[CustomObfuscation(rename = false)]
-	private yDpFzqLnhRMZnaEyxToARrRqCzAhA(); // 0x0000000183BF7CF0-0x0000000183BF7E50
+	private yDpFzqLnhRMZnaEyxToARrRqCzAhA(); // 0x0000000185B77110-0x0000000185B77270
 	[CustomObfuscation(rename = false)]
-	internal yDpFzqLnhRMZnaEyxToARrRqCzAhA(string param_00073ac2, string param_00073ac3, string param_00073ac4, string param_00073ac5, int param_00073ac6, int param_00073ac7, bool param_00073ac8, string param_00073ac9); // 0x0000000183BF86F0-0x0000000183BF90B0
+	internal yDpFzqLnhRMZnaEyxToARrRqCzAhA(string param_000aa429, string param_000aa42a, string param_000aa42b, string param_000aa42c, int param_000aa42d, int param_000aa42e, bool param_000aa42f, string param_000aa430); // 0x00000001857034D0-0x0000000185703DF0
 
 	// Methods
-	public bool xULxbDXErMDWumqPoCklYRksejXD(bool param_00073aca, qMSJAGnGFztVWGbbMtcbmLOJutTU param_00073acb, bool param_00073acc, qMSJAGnGFztVWGbbMtcbmLOJutTU param_00073acd, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_00073ace); // 0x000000018ABBE3A0-0x000000018ABBE9CC
-	public void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018ABBB400-0x000000018ABBB544
-	private void SKCfCPhVJOMYakuKsOmJaIsjlwUnb(); // 0x000000018ABBC838-0x000000018ABBC898
-	public bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_00073acf, int param_00073ad0); // 0x000000018ABBBD44-0x000000018ABBBED4
-	public bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_00073ad1, int param_00073ad2, byte param_00073ad3 = 0 /* Metadata: 0x02334118 */); // 0x000000018ABBD97C-0x000000018ABBDDB8
-	public string efFcegvAymobYqJrtnRqLeSRXvqm(); // 0x000000018ABBE290-0x000000018ABBE394
-	public bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_00073ad4); // 0x000000018ABBDE54-0x000000018ABBE290
-	public string aWBHzUPzbLPVEfFhmcDSkVnnSvncA(); // 0x000000018ABBD5A8-0x000000018ABBD610
-	public bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_00073ad5); // 0x000000018ABBD610-0x000000018ABBD97C
-	public string FpKBQHheYjWwGPXekyQQsMXbqOsJA(); // 0x000000018ABBBF20-0x000000018ABBBF88
-	public bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_00073ad6); // 0x000000018ABBBFF0-0x000000018ABBC318
-	public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(IntPtr param_00073ad7, int param_00073ad8, int param_00073ad9, AnBliHBmROTlQRPQOqeIZLIecGsj param_00073ada); // 0x000000018ABBDDE0-0x000000018ABBDE04
-	public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_00073adb, int param_00073adc); // 0x000000018ABBDDB8-0x000000018ABBDDE0
-	private static byte[] rBaHfZKawipRifPvkvHJKbEAcqIbA(int param_00073add); // 0x000000018ABBE394-0x000000018ABBE3A0
-	private XbydykTBZpzAgcAYLLOAdYoJdXOI CIRcAPhwkFeoRmgwpjkeBCjfAhDcA(IntPtr param_00073ade, int param_00073adf, int param_00073ae0, out YWFEqRKsCWKdGhNygVhQhOHuhIISb.IiHctnpBsQSxJMoMVHTqEaHmqgQd param_00073ae1); // 0x000000018ABBB544-0x000000018ABBBCA8
-	private bool ToQFotKWwCgndUaTBToYTmrOovVs(IntPtr param_00073ae2, int param_00073ae3, int param_00073ae4, AnBliHBmROTlQRPQOqeIZLIecGsj param_00073ae5, bool param_00073ae6); // 0x000000018ABBCA9C-0x000000018ABBD3E4
-	private void VKxYmTNYVOnOBunPEPJgOAzNeExF(); // 0x00000001841E1670-0x00000001841E1680
-	private void RXznckIneLHHZgcoHMWJxWSGcOG(); // 0x000000018ABBC6DC-0x000000018ABBC838
-	public void Dispose(); // 0x000000018ABBBCA8-0x000000018ABBBCF8
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABBD3E4-0x000000018ABBD458
-	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073ae7); // 0x000000018ABBC898-0x000000018ABBCA9C
-	public static bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(IntPtr param_00073ae8, out byte[] param_00073ae9); // 0x000000018ABBC318-0x000000018ABBC690
-	public static string FpKBQHheYjWwGPXekyQQsMXbqOsJA(IntPtr param_00073aea); // 0x000000018ABBBF88-0x000000018ABBBFF0
-	public static IntPtr TtLPjCoOesFjwMuQyzeJompLoOlU(string param_00073aeb, qMSJAGnGFztVWGbbMtcbmLOJutTU param_00073aec, uint param_00073aed, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_00073aee); // 0x0000000183BF9160-0x0000000183BF9270
-	public static void IjwGSjYKZqScbuJEXEeygNHIrhKN(IntPtr param_00073aef); // 0x0000000183BF8690-0x0000000183BF86F0
-	public static void FddmNUFAJGTaeGitIyWbBgVFrpjP(IntPtr param_00073af0); // 0x0000000183BF85B0-0x0000000183BF8630
-	private static void EvQkruhFtUPkWpfhSyZahjeJteKb(IntPtr param_00073af1); // 0x000000018ABBBED4-0x000000018ABBBF20
-	private static byte[] EBVcyhHKcGqGprrNlMmPYhzuwScN(int param_00073af2); // 0x000000018ABBBCF8-0x000000018ABBBD44
-	public static pKfkmqTLezjFVzcIBPtMMyRxABwH iLsCnIghhhFKLfgeJKsjceaxsTLCB(IntPtr param_00073af3); // 0x0000000183BF9390-0x0000000183BF94F0
-	public static ZmPxydCEzlPckyvKlHErkFzgGOFX uEAXsIjxPmFhXTzVAoDinwENKsxP(IntPtr param_00073af4); // 0x0000000183BFA520-0x0000000183BFADE0
-	public static aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] MzZjSlZlkKsGUFYXBKcrVLMLrije(IntPtr param_00073af5, short param_00073af6, short param_00073af7); // 0x0000000183BF94F0-0x0000000183BF9C70
-	public static JXtFhzUqozCGLAAgSlsxdSapKppi[] dgkbLUUyrEuMcEjmmFDNcXLvCQvrA(IntPtr param_00073af8, short param_00073af9, short param_00073afa); // 0x0000000183BF9C70-0x0000000183BFA450
+	public bool xULxbDXErMDWumqPoCklYRksejXD(bool param_000aa431, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa432, bool param_000aa433, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa434, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000aa435); // 0x000000018CDB2A28-0x000000018CDB2F70
+	public void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018CDAFCE8-0x000000018CDAFE3C
+	private void SKCfCPhVJOMYakuKsOmJaIsjlwUnb(); // 0x000000018CDB0FD8-0x000000018CDB1040
+	public bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_000aa436, int param_000aa437); // 0x000000018CDB0644-0x000000018CDB07D4
+	public bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_000aa438, int param_000aa439, byte param_000aa43a = 0 /* Metadata: 0x0262C55C */); // 0x000000018CDB2134-0x000000018CDB24D8
+	public string efFcegvAymobYqJrtnRqLeSRXvqm(); // 0x000000018CDB2914-0x000000018CDB2A1C
+	public bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_000aa43b); // 0x000000018CDB2574-0x000000018CDB2914
+	public string aWBHzUPzbLPVEfFhmcDSkVnnSvncA(); // 0x000000018CDB1D58-0x000000018CDB1DC4
+	public bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_000aa43c); // 0x000000018CDB1DC4-0x000000018CDB2134
+	public string FpKBQHheYjWwGPXekyQQsMXbqOsJA(); // 0x000000018CDB0820-0x000000018CDB088C
+	public bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_000aa43d); // 0x000000018CDB08F8-0x000000018CDB0B48
+	public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(IntPtr param_000aa43e, int param_000aa43f, int param_000aa440, AnBliHBmROTlQRPQOqeIZLIecGsj param_000aa441); // 0x000000018CDB2500-0x000000018CDB2524
+	public bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_000aa442, int param_000aa443); // 0x000000018CDB24D8-0x000000018CDB2500
+	private static byte[] rBaHfZKawipRifPvkvHJKbEAcqIbA(int param_000aa444); // 0x000000018CDB2A1C-0x000000018CDB2A28
+	private XbydykTBZpzAgcAYLLOAdYoJdXOI CIRcAPhwkFeoRmgwpjkeBCjfAhDcA(IntPtr param_000aa445, int param_000aa446, int param_000aa447, out YWFEqRKsCWKdGhNygVhQhOHuhIISb.IiHctnpBsQSxJMoMVHTqEaHmqgQd param_000aa448); // 0x000000018CDAFE3C-0x000000018CDB05A8
+	private bool ToQFotKWwCgndUaTBToYTmrOovVs(IntPtr param_000aa449, int param_000aa44a, int param_000aa44b, AnBliHBmROTlQRPQOqeIZLIecGsj param_000aa44c, bool param_000aa44d); // 0x000000018CDB1254-0x000000018CDB1B7C
+	private void VKxYmTNYVOnOBunPEPJgOAzNeExF(); // 0x0000000186805BA0-0x0000000186805BB0
+	private void RXznckIneLHHZgcoHMWJxWSGcOG(); // 0x000000018CDB0E6C-0x000000018CDB0FD8
+	public void Dispose(); // 0x000000018CDB05A8-0x000000018CDB05F8
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDB1B7C-0x000000018CDB1BF4
+	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa44e); // 0x000000018CDB1040-0x000000018CDB1254
+	public static bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(IntPtr param_000aa44f, out byte[] param_000aa450); // 0x000000018CDB0B48-0x000000018CDB0E20
+	public static string FpKBQHheYjWwGPXekyQQsMXbqOsJA(IntPtr param_000aa451); // 0x000000018CDB088C-0x000000018CDB08F8
+	public static IntPtr TtLPjCoOesFjwMuQyzeJompLoOlU(string param_000aa452, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa453, uint param_000aa454, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000aa455); // 0x0000000185703EA0-0x0000000185703FB0
+	public static void IjwGSjYKZqScbuJEXEeygNHIrhKN(IntPtr param_000aa456); // 0x0000000185AFB6F0-0x0000000185AFB750
+	public static void FddmNUFAJGTaeGitIyWbBgVFrpjP(IntPtr param_000aa457); // 0x0000000185AFB750-0x0000000185AFB7D0
+	private static void EvQkruhFtUPkWpfhSyZahjeJteKb(IntPtr param_000aa458); // 0x000000018CDB07D4-0x000000018CDB0820
+	private static byte[] EBVcyhHKcGqGprrNlMmPYhzuwScN(int param_000aa459); // 0x000000018CDB05F8-0x000000018CDB0644
+	public static pKfkmqTLezjFVzcIBPtMMyRxABwH iLsCnIghhhFKLfgeJKsjceaxsTLCB(IntPtr param_000aa45a); // 0x00000001857040D0-0x0000000185704230
+	public static ZmPxydCEzlPckyvKlHErkFzgGOFX uEAXsIjxPmFhXTzVAoDinwENKsxP(IntPtr param_000aa45b); // 0x00000001865C1670-0x00000001865C1F40
+	public static aHzSDAgzXeTUuXeKeiUwhHjMNyKD[] MzZjSlZlkKsGUFYXBKcrVLMLrije(IntPtr param_000aa45c, short param_000aa45d, short param_000aa45e); // 0x0000000185704740-0x0000000185704ED0
+	public static JXtFhzUqozCGLAAgSlsxdSapKppi[] dgkbLUUyrEuMcEjmmFDNcXLvCQvrA(IntPtr param_000aa45f, short param_000aa460, short param_000aa461); // 0x00000001865C0B80-0x00000001865C1340
 }
 
-internal class pKfkmqTLezjFVzcIBPtMMyRxABwH // TypeDefIndex: 53893
+internal class pKfkmqTLezjFVzcIBPtMMyRxABwH // TypeDefIndex: 79137
 {
 	// Fields
 	[CompilerGenerated]
@@ -7802,17 +7788,17 @@ internal class pKfkmqTLezjFVzcIBPtMMyRxABwH // TypeDefIndex: 53893
 	private string MvURDPGVAnbNPHokVbYnEDrMWSGAA; // 0x28
 
 	// Properties
-	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
-	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
-	private int yBrHttIvbAPDTFKFjBZTKMchpxWn { [CompilerGenerated] set; } // 0x00000001811EF9B0-0x00000001811EF9C0
-	public string TnSIgOtQQQCxeLXdYqAmhJEQAWjv { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
-	public string KUxPfqLSyZJZSINawevgTrMiCXuD { [CompilerGenerated] set; } // 0x0000000182FDB880-0x0000000182FDB890
+	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
+	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
+	private int yBrHttIvbAPDTFKFjBZTKMchpxWn { [CompilerGenerated] set; } // 0x000000018442F470-0x000000018442F480
+	public string TnSIgOtQQQCxeLXdYqAmhJEQAWjv { [CompilerGenerated] set; } // 0x0000000187835950-0x0000000187835960
+	public string KUxPfqLSyZJZSINawevgTrMiCXuD { [CompilerGenerated] set; } // 0x0000000185CA30F0-0x0000000185CA3100
 
 	// Constructors
-	internal pKfkmqTLezjFVzcIBPtMMyRxABwH(MDBYECqvXkaCiSmYJZjrizfidEbk.GdZTshfUFywPkphGdVzwMUmXwiZb param_00073afb); // 0x0000000183BFB070-0x0000000183BFB140
+	internal pKfkmqTLezjFVzcIBPtMMyRxABwH(MDBYECqvXkaCiSmYJZjrizfidEbk.GdZTshfUFywPkphGdVzwMUmXwiZb param_000aa462); // 0x000000018687A420-0x000000018687A4F0
 }
 
-internal class ZmPxydCEzlPckyvKlHErkFzgGOFX // TypeDefIndex: 53894
+internal class ZmPxydCEzlPckyvKlHErkFzgGOFX // TypeDefIndex: 79138
 {
 	// Fields
 	[CompilerGenerated]
@@ -7849,28 +7835,28 @@ internal class ZmPxydCEzlPckyvKlHErkFzgGOFX // TypeDefIndex: 53894
 	private short ZRgddIBNtsoJSMltJbMEcykMQkkqA; // 0x3A
 
 	// Properties
-	public short ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D96190-0x0000000184D961A0 0x0000000184D94F60-0x0000000184D94F70
-	public short NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA8BA0-0x0000000184DA8BB0 0x0000000184DA8B80-0x0000000184DA8B90
-	public short eWcIGAyfISkTRCxwLEzYDwBhxXNT { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D96D00-0x0000000184D96D10 0x0000000184DA8B00-0x0000000184DA8B10
-	public short twWgyKYIignftDZJqVYymJvnhZLO { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D993B0-0x0000000184D993C0 0x0000000184DA8A80-0x0000000184DA8A90
-	public short FGGPXeutjDcGGYJFjFtImAsQZSIC { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA8B70-0x0000000184DA8B80 0x0000000184DA8AB0-0x0000000184DA8AC0
-	private short[] uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
-	private short zEhcdcxrhEhqCSdWJNEpaIvoFigJ { [CompilerGenerated] set; } // 0x0000000184DA8B10-0x0000000184DA8B20
-	public short lQXkNeVylOntJdOrOVkFESIdghWt { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA8B90-0x0000000184DA8BA0 0x0000000184DA8BC0-0x0000000184DA8BD0
-	public short vQZsVQHIJiHngByYIlmtSFLxlgwi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D9E610-0x0000000184D9E620 0x0000000184DA8B40-0x0000000184DA8B50
-	private short EyRKBObXUWcxCdXUNGOOucVdSnbE { [CompilerGenerated] set; } // 0x0000000184DA8B20-0x0000000184DA8B30
-	private short sBCDQUIDvFWgcDrQNjSppTLxUwQE { [CompilerGenerated] set; } // 0x0000000184DA8B60-0x0000000184DA8B70
-	private short iiBypvdQtOAZmaprrbycWFwNeYOVA { [CompilerGenerated] set; } // 0x0000000184DA8B50-0x0000000184DA8B60
-	private short rLiXPNunmKNJgUDKdNtNLzzfRvgv { [CompilerGenerated] set; } // 0x0000000184DA89A0-0x0000000184DA89B0
-	private short krUWCsmFkCCaniEjibwlkSFwqXxHA { [CompilerGenerated] set; } // 0x0000000184DA89C0-0x0000000184DA89D0
-	private short aXlxbZdHqFFqrGzexQagmVHTilEDA { [CompilerGenerated] set; } // 0x0000000184DA8B30-0x0000000184DA8B40
-	private short RcJPzQHLaLlIsNMwUGthGWLbZmgIA { [CompilerGenerated] set; } // 0x0000000184DA8BB0-0x0000000184DA8BC0
+	public short ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184434E50-0x0000000184434E60 0x0000000187243130-0x0000000187243140
+	public short NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187256C70-0x0000000187256C80 0x0000000187256C50-0x0000000187256C60
+	public short eWcIGAyfISkTRCxwLEzYDwBhxXNT { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187244E60-0x0000000187244E70 0x0000000187256BD0-0x0000000187256BE0
+	public short twWgyKYIignftDZJqVYymJvnhZLO { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187247620-0x0000000187247630 0x0000000187256B50-0x0000000187256B60
+	public short FGGPXeutjDcGGYJFjFtImAsQZSIC { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187256C40-0x0000000187256C50 0x0000000187256B80-0x0000000187256B90
+	private short[] uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x0000000187835950-0x0000000187835960
+	private short zEhcdcxrhEhqCSdWJNEpaIvoFigJ { [CompilerGenerated] set; } // 0x0000000187256BE0-0x0000000187256BF0
+	public short lQXkNeVylOntJdOrOVkFESIdghWt { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187256C60-0x0000000187256C70 0x0000000187256C90-0x0000000187256CA0
+	public short vQZsVQHIJiHngByYIlmtSFLxlgwi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018724C700-0x000000018724C710 0x0000000187256C10-0x0000000187256C20
+	private short EyRKBObXUWcxCdXUNGOOucVdSnbE { [CompilerGenerated] set; } // 0x0000000187256BF0-0x0000000187256C00
+	private short sBCDQUIDvFWgcDrQNjSppTLxUwQE { [CompilerGenerated] set; } // 0x0000000187256C30-0x0000000187256C40
+	private short iiBypvdQtOAZmaprrbycWFwNeYOVA { [CompilerGenerated] set; } // 0x0000000187256C20-0x0000000187256C30
+	private short rLiXPNunmKNJgUDKdNtNLzzfRvgv { [CompilerGenerated] set; } // 0x0000000187256A80-0x0000000187256A90
+	private short krUWCsmFkCCaniEjibwlkSFwqXxHA { [CompilerGenerated] set; } // 0x0000000187256AA0-0x0000000187256AB0
+	private short aXlxbZdHqFFqrGzexQagmVHTilEDA { [CompilerGenerated] set; } // 0x0000000187256C00-0x0000000187256C10
+	private short RcJPzQHLaLlIsNMwUGthGWLbZmgIA { [CompilerGenerated] set; } // 0x0000000187256C80-0x0000000187256C90
 
 	// Constructors
-	internal ZmPxydCEzlPckyvKlHErkFzgGOFX(MDBYECqvXkaCiSmYJZjrizfidEbk.wVeMkOOBFiFZpAAnIEqQLLFkoZNAA param_00073b01); // 0x0000000183BFAFC0-0x0000000183BFB070
+	internal ZmPxydCEzlPckyvKlHErkFzgGOFX(MDBYECqvXkaCiSmYJZjrizfidEbk.wVeMkOOBFiFZpAAnIEqQLLFkoZNAA param_000aa468); // 0x00000001865C2060-0x00000001865C2110
 }
 
-internal class YWFEqRKsCWKdGhNygVhQhOHuhIISb // TypeDefIndex: 53896
+internal class YWFEqRKsCWKdGhNygVhQhOHuhIISb // TypeDefIndex: 79140
 {
 	// Fields
 	[CompilerGenerated]
@@ -7879,11 +7865,11 @@ internal class YWFEqRKsCWKdGhNygVhQhOHuhIISb // TypeDefIndex: 53896
 	private IiHctnpBsQSxJMoMVHTqEaHmqgQd ErNcmAYszzaAphAnutJlcIjkyYuq; // 0x18
 
 	// Properties
-	public byte[] thLICHPmpalmfjGmuMkilAKwymgl { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
-	private IiHctnpBsQSxJMoMVHTqEaHmqgQd OuXZCbJoDUmyQUJlOUEYTbvwsriI { [CompilerGenerated] set; } // 0x00000001811EF9B0-0x00000001811EF9C0
+	public byte[] thLICHPmpalmfjGmuMkilAKwymgl { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829260F0-0x0000000182926100 0x0000000184FD2410-0x0000000184FD2420
+	private IiHctnpBsQSxJMoMVHTqEaHmqgQd OuXZCbJoDUmyQUJlOUEYTbvwsriI { [CompilerGenerated] set; } // 0x000000018442F470-0x000000018442F480
 
 	// Nested types
-	public enum IiHctnpBsQSxJMoMVHTqEaHmqgQd // TypeDefIndex: 53895
+	public enum IiHctnpBsQSxJMoMVHTqEaHmqgQd // TypeDefIndex: 79139
 	{
 		Success = 0,
 		WaitTimedOut = 1,
@@ -7896,13 +7882,13 @@ internal class YWFEqRKsCWKdGhNygVhQhOHuhIISb // TypeDefIndex: 53896
 	}
 
 	// Constructors
-	public YWFEqRKsCWKdGhNygVhQhOHuhIISb(int param_00073b12); // 0x000000018ABB7C9C-0x000000018ABB7CF8
+	public YWFEqRKsCWKdGhNygVhQhOHuhIISb(int param_000aa479); // 0x000000018CDAC62C-0x000000018CDAC688
 
 	// Methods
-	public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(byte[] param_00073b15, IiHctnpBsQSxJMoMVHTqEaHmqgQd param_00073b16); // 0x0000000183B46FF0-0x0000000183B47040
+	public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(byte[] param_000aa47c, IiHctnpBsQSxJMoMVHTqEaHmqgQd param_000aa47d); // 0x00000001856B50C0-0x00000001856B50E0
 }
 
-internal class PaspQuZMWnmetbmgeGoiPkTYOPRh // TypeDefIndex: 53899
+internal class PaspQuZMWnmetbmgeGoiPkTYOPRh // TypeDefIndex: 79143
 {
 	// Fields
 	[CompilerGenerated]
@@ -7914,29 +7900,29 @@ internal class PaspQuZMWnmetbmgeGoiPkTYOPRh // TypeDefIndex: 53899
 
 	// Events
 	public event UCdwqJeASphJMbzucKJohLzKNEqD aUuoQzbZBRJjbeeCFhvLcBhACrrT {
-		add; // 0x0000000183BF8470-0x0000000183BF8510
-		remove; // 0x000000018ABB689C-0x000000018ABB6930
+		add; // 0x0000000186C4BFA0-0x0000000186C4C040
+		remove; // 0x000000018CDAB228-0x000000018CDAB2BC
 	}
 	public event SwCsQrkBjVSTgqqRcJuRjwBjNmaf KtrCywelWMYGovnGNyfTuHhcTEED {
-		add; // 0x0000000183BF8510-0x0000000183BF85B0
-		remove; // 0x000000018ABB69CC-0x000000018ABB6A60
+		add; // 0x0000000186C4C040-0x0000000186C4C0E0
+		remove; // 0x000000018CDAB34C-0x000000018CDAB3E0
 	}
 
 	// Nested types
-	public delegate void UCdwqJeASphJMbzucKJohLzKNEqD(); // TypeDefIndex: 53897; 0x00000001853DEDB8-0x00000001853DEDC8
+	public delegate void UCdwqJeASphJMbzucKJohLzKNEqD(); // TypeDefIndex: 79141; 0x0000000185B44B70-0x0000000185B44B80
 
-	public delegate void SwCsQrkBjVSTgqqRcJuRjwBjNmaf(); // TypeDefIndex: 53898; 0x00000001853DEDB8-0x00000001853DEDC8
+	public delegate void SwCsQrkBjVSTgqqRcJuRjwBjNmaf(); // TypeDefIndex: 79142; 0x0000000185B44B70-0x0000000185B44B80
 
 	// Constructors
-	public PaspQuZMWnmetbmgeGoiPkTYOPRh(yDpFzqLnhRMZnaEyxToARrRqCzAhA param_00073b1b); // 0x0000000185390F40-0x0000000185390F50
+	public PaspQuZMWnmetbmgeGoiPkTYOPRh(yDpFzqLnhRMZnaEyxToARrRqCzAhA param_000aa482); // 0x0000000187835950-0x0000000187835960
 
 	// Methods
-	public void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x000000018ABB6A60-0x000000018ABB6B20
-	private void WQhldserNbWnudEAZYBcioElozWr(); // 0x000000018ABB6930-0x000000018ABB69CC
-	private static void obpeZCglRVGqGSqZFghdtHEHdLYSA(IAsyncResult param_00073b1c); // 0x000000018ABB6B20-0x000000018ABB6B84
+	public void lBMTbRuwRfNSwCPcHnAiVMhJqLHQ(); // 0x000000018CDAB3E0-0x000000018CDAB4A0
+	private void WQhldserNbWnudEAZYBcioElozWr(); // 0x000000018CDAB2BC-0x000000018CDAB34C
+	private static void obpeZCglRVGqGSqZFghdtHEHdLYSA(IAsyncResult param_000aa483); // 0x000000018CDAB4A0-0x000000018CDAB504
 }
 
-internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 53906
+internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 79150
 {
 	// Fields
 	private static Guid orFmBWnFhrAmrGbePUDhMXIWYfFaA; // 0x00
@@ -7949,10 +7935,10 @@ internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 53906
 	private static NativeBuffer qPvwreSiMPHTVHFnILkVMbgTdVckA; // 0x88
 
 	// Properties
-	private static Guid pAUPSOxlCkARNioNgUKfLJSUTAsb { get; } // 0x00000001849C9560-0x00000001849C96A0 
+	private static Guid pAUPSOxlCkARNioNgUKfLJSUTAsb { get; } // 0x0000000186E140B0-0x0000000186E14200 
 
 	// Nested types
-	public struct IYkFHeDTeaiIvMIzYRFbPiZVuQFL // TypeDefIndex: 53900
+	public struct IYkFHeDTeaiIvMIzYRFbPiZVuQFL // TypeDefIndex: 79144
 	{
 		// Fields
 		public string uHVFxYdqpgjkdgNAHnKeGPzZhuZpb; // 0x00
@@ -7967,13 +7953,13 @@ internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 53906
 		public string RCkbDMwhfgaXSHlSrLNVbcJiljIPc; // 0x40
 
 		// Constructors
-		public IYkFHeDTeaiIvMIzYRFbPiZVuQFL(string param_00073b53, string param_00073b54, string param_00073b55, string param_00073b56, string param_00073b57, bool param_00073b58, string param_00073b59); // 0x00000001835AAA00-0x00000001835AAAC0
+		public IYkFHeDTeaiIvMIzYRFbPiZVuQFL(string param_000aa4ba, string param_000aa4bb, string param_000aa4bc, string param_000aa4bd, string param_000aa4be, bool param_000aa4bf, string param_000aa4c0); // 0x0000000185A16C10-0x0000000185A16CD0
 
 		// Methods
-		private void XnCEiShJkGvlKpNnqFurhkzzhMGd(); // 0x0000000184433890-0x00000001844339C0
+		private void XnCEiShJkGvlKpNnqFurhkzzhMGd(); // 0x0000000185A16960-0x0000000185A16A70
 	}
 
-	private struct cQuuLrgeChfSTCfVgQjFhkvLyfEuA // TypeDefIndex: 53901
+	private struct cQuuLrgeChfSTCfVgQjFhkvLyfEuA // TypeDefIndex: 79145
 	{
 		// Fields
 		public int EEjhUIhIcsWLXXeGfefLxEjqKdgQ; // 0x00
@@ -7981,22 +7967,22 @@ internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 53906
 		public string hdyeVnGBkdgGBgilyBhrVrxcQSQLA; // 0x08
 
 		// Constructors
-		public cQuuLrgeChfSTCfVgQjFhkvLyfEuA(int param_00073b5a, uint param_00073b5b, string param_00073b5c); // 0x0000000185395DAC-0x0000000185395DC0
+		public cQuuLrgeChfSTCfVgQjFhkvLyfEuA(int param_000aa4c1, uint param_000aa4c2, string param_000aa4c3); // 0x0000000187838F0C-0x0000000187838F20
 	}
 
-	private struct PUUjROsMtnhbqLEaBbcdiryfdlYVA // TypeDefIndex: 53902
+	private struct PUUjROsMtnhbqLEaBbcdiryfdlYVA // TypeDefIndex: 79146
 	{
 		// Fields
 		public readonly uint DoaPxMFAmfwLwshNWtiPzjXtBZNn; // 0x00
 		public readonly string SvmsnETUSlePEWPKjGqPgpeaQhBCb; // 0x08
 
 		// Constructors
-		public PUUjROsMtnhbqLEaBbcdiryfdlYVA(uint param_00073b5d, string param_00073b5e); // 0x000000018ABB6834-0x000000018ABB689C
+		public PUUjROsMtnhbqLEaBbcdiryfdlYVA(uint param_000aa4c4, string param_000aa4c5); // 0x000000018CDAB1C0-0x000000018CDAB228
 	}
 
 	[Serializable]
 	[CompilerGenerated]
-	private sealed class iHTcxnFGZEknIwdPyWYiSWhasdfr // TypeDefIndex: 53903
+	private sealed class iHTcxnFGZEknIwdPyWYiSWhasdfr // TypeDefIndex: 79147
 	{
 		// Fields
 		public static readonly iHTcxnFGZEknIwdPyWYiSWhasdfr __9; // 0x00
@@ -8004,79 +7990,79 @@ internal class prXDGPaiLRznhHdqRYUShDUjqIyH // TypeDefIndex: 53906
 		public static Func<IYkFHeDTeaiIvMIzYRFbPiZVuQFL, yDpFzqLnhRMZnaEyxToARrRqCzAhA> __9__16_1; // 0x10
 
 		// Constructors
-		static iHTcxnFGZEknIwdPyWYiSWhasdfr(); // 0x0000000184D3E890-0x0000000184D3E8F0
-		public iHTcxnFGZEknIwdPyWYiSWhasdfr(); // 0x00000001841E1670-0x00000001841E1680
+		static iHTcxnFGZEknIwdPyWYiSWhasdfr(); // 0x00000001871E4460-0x00000001871E44C0
+		public iHTcxnFGZEknIwdPyWYiSWhasdfr(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal yDpFzqLnhRMZnaEyxToARrRqCzAhA JyWLrEfuZufMatcdBHYODKYexGNpA(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_00073b5f); // 0x0000000183BF7A00-0x0000000183BF7B00
-		internal yDpFzqLnhRMZnaEyxToARrRqCzAhA llUwWOhSJpXGABMigmacsomCTqRf(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_00073b60); // 0x000000018ABB9044-0x000000018ABB912C
+		internal yDpFzqLnhRMZnaEyxToARrRqCzAhA JyWLrEfuZufMatcdBHYODKYexGNpA(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa4c6); // 0x0000000186BF5EA0-0x0000000186BF5FA0
+		internal yDpFzqLnhRMZnaEyxToARrRqCzAhA llUwWOhSJpXGABMigmacsomCTqRf(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa4c7); // 0x000000018CDAD9D0-0x000000018CDADAB8
 	}
 
 	[CompilerGenerated]
-	private sealed class coBnyIRvfDSGVhYitTrMKrmmJyes // TypeDefIndex: 53904
+	private sealed class coBnyIRvfDSGVhYitTrMKrmmJyes // TypeDefIndex: 79148
 	{
 		// Fields
 		public string CusHjDRpgtyRVMdEIQNEUqckZRHS; // 0x10
 		public StringComparison yLuIpNZNhUrDNMLHWsApTJYEMyAs; // 0x18
 
 		// Constructors
-		public coBnyIRvfDSGVhYitTrMKrmmJyes(); // 0x00000001841E1670-0x00000001841E1680
+		public coBnyIRvfDSGVhYitTrMKrmmJyes(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal bool gYfiFoTNSByGDnTRoiIOtcwsYWIJ(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_00073b61); // 0x00000001847DC790-0x00000001847DC7C0
+		internal bool gYfiFoTNSByGDnTRoiIOtcwsYWIJ(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa4c8); // 0x0000000186CCD5D0-0x0000000186CCD600
 	}
 
 	[CompilerGenerated]
-	private sealed class iFYZNmPpSepatsZnFmYSKeNoIeeu // TypeDefIndex: 53905
+	private sealed class iFYZNmPpSepatsZnFmYSKeNoIeeu // TypeDefIndex: 79149
 	{
 		// Fields
 		public string CusHjDRpgtyRVMdEIQNEUqckZRHS; // 0x10
 
 		// Constructors
-		public iFYZNmPpSepatsZnFmYSKeNoIeeu(); // 0x00000001841E1670-0x00000001841E1680
+		public iFYZNmPpSepatsZnFmYSKeNoIeeu(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		internal bool itPeTpKIPoEZdFubjsTtBhNBjRwT(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_00073b62); // 0x000000018ABB8EB4-0x000000018ABB8EC8
+		internal bool itPeTpKIPoEZdFubjsTtBhNBjRwT(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa4c9); // 0x000000018CDAD828-0x000000018CDAD83C
 	}
 
 	// Constructors
-	static prXDGPaiLRznhHdqRYUShDUjqIyH(); // 0x0000000183A43140-0x0000000183A434E0
+	static prXDGPaiLRznhHdqRYUShDUjqIyH(); // 0x0000000185B750B0-0x0000000185B75470
 
 	// Methods
-	public static bool akJlAXhUcHpRKZzggAJdBwlcZzEF(string param_00073b21); // 0x000000018ABB9FAC-0x000000018ABBA1E4
-	public static IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> ZsFKVtoqECXqMobddXTHIzFkgTDf(); // 0x0000000183A44550-0x0000000183A44590
-	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA ftozITswzymIijifTFKqaNvpMxYe(IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> param_00073b22, string param_00073b23, StringComparison param_00073b24); // 0x0000000183A44670-0x0000000183A447D0
-	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA lSlsrqNndcLyPhsxkdXsTaZoJcFm(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_00073b25); // 0x0000000183A447D0-0x0000000183A448F0
-	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA RDxaMMdZGrVvyrpeXUOWDMjjtQBp(string param_00073b26); // 0x000000018ABB9F50-0x000000018ABB9FAC
-	public static IEnumerable<yDpFzqLnhRMZnaEyxToARrRqCzAhA> EHzJeyivDsPTLTBcjaniESaGLkps(); // 0x0000000183A40EE0-0x0000000183A41020
-	public static IEnumerable<yDpFzqLnhRMZnaEyxToARrRqCzAhA> EHzJeyivDsPTLTBcjaniESaGLkps(string param_00073b27); // 0x000000018ABB9800-0x000000018ABB99C0
-	public static bool BFfsjWiEpJdOjSFSiJcagkWdgaVe(); // 0x0000000183A40C90-0x0000000183A40EE0
-	public static int SWbYOscVZJwijEvqMgmjujNLcsHr(); // 0x0000000183A44B10-0x0000000183A44B70
-	public static int SWbYOscVZJwijEvqMgmjujNLcsHr(ref yqCthwNGAZgagjDBQbkNEzFfVZWu.AInQCDdqSLTTWRljCHGQhayircJNA param_00073b28, NativeBuffer param_00073b29); // 0x0000000183A44B70-0x0000000183A44BD0
-	private static IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> xmpJfrrdjRmhDPmzAXFLDvDVEGWs(); // 0x00000001835AAAC0-0x00000001835AB1C0
-	private static void LhbNLblETIcsVFiyTBeldyFEHJVAA(List<cQuuLrgeChfSTCfVgQjFhkvLyfEuA> param_00073b2a); // 0x0000000183E048B0-0x0000000183E04C30
-	private static List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> hAzrRYoAQCAzVlmESxUYeppeFjiHA(List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_00073b2b); // 0x000000018ABBA444-0x000000018ABBA5F8
-	private static List<uint> ZaAiEABFIHOILIBTghxOurobuiQNA(uint param_00073b2c); // 0x0000000183E05500-0x0000000183E056E0
-	private static List<uint> qClaPQIpuNiUBudQkNlzytTaNVAL(uint param_00073b2d); // 0x0000000183E056E0-0x0000000183E05840
-	private static string gpKudyFUqpLILrJBheYPpiNAaRVb(uint param_00073b2e); // 0x00000001835ABD20-0x00000001835ABF30
-	private static void OwwQDpGojKDBAmTtwtniZPNtpmMr(uint param_00073b2f, ref List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_00073b30, out bool param_00073b31, out string param_00073b32); // 0x0000000184424210-0x00000001844242F0
-	private static bool hsRlUUaETREUjXzkuqivbvLsWfLP(uint param_00073b33, ref List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_00073b34, out bool param_00073b35, out uint param_00073b36); // 0x00000001844242F0-0x00000001844243B0
-	private static bool TSgPgCsRkdGmyzuupaPfboHknHCcA(uint param_00073b37, string param_00073b38, out string param_00073b39, out uint param_00073b3a); // 0x00000001835ABB50-0x00000001835ABCD0
-	private static bool gtGWbLOgbGxPMAgkCHDWcyCucxqJA(string param_00073b3b, out string param_00073b3c); // 0x000000018ABBA34C-0x000000018ABBA444
-	private static bool eDyFVubmhWaFrouRpboBKdrfJKrL(uint param_00073b3d, string param_00073b3e, out uint param_00073b3f); // 0x000000018ABBA1E4-0x000000018ABBA34C
-	private static bool NbqWRqtzdNlHvUvcOKFBldUZeUICA(string param_00073b40, bool param_00073b41 = true /* Metadata: 0x02334128 */); // 0x000000018ABB9A14-0x000000018ABB9F50
-	private static MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB RpcHbtTsDvqNIwcmrikEejKmglMf(); // 0x0000000183E04850-0x0000000183E048B0
-	private static string WSbygJHhAOkGYSkBTqfQVaLdTwWD(IntPtr param_00073b42, MDBYECqvXkaCiSmYJZjrizfidEbk.OdnntAHntokWiUdDHtrlcobDeFoF param_00073b43); // 0x00000001835AB2F0-0x00000001835AB400
-	private static string tRUnFgKTtCscuSPvKgSIaAABMVpL(IntPtr param_00073b44, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b45); // 0x00000001835AB400-0x00000001835AB520
-	private static string EEmmwDJRxHVvCIDUZHfIeXTDuzij(IntPtr param_00073b46, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b47); // 0x000000018ABB97AC-0x000000018ABB9800
-	private static string ENzahFoqYbHqgQWFcUBGCjRzGsvP(IntPtr param_00073b48, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b49); // 0x000000018ABB99C0-0x000000018ABB9A14
-	private static string UMFVPIxbQrSCNKcyITghJqcjOoXi(IntPtr param_00073b4a, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b4b); // 0x0000000183E04C30-0x0000000183E04CA0
-	private static string DJGaEpIjHmBElJmHZJsXFXBAHZdCb(IntPtr param_00073b4c, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b4d); // 0x00000001835AB280-0x00000001835AB2F0
-	private static string pOHzpBxHEcNSmGKovYmuTBCmjdhC(IntPtr param_00073b4e, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b4f, int param_00073b50); // 0x00000001835AB6D0-0x00000001835AB890
-	private static string bggqCanFRkzuRDWxQjbXwQcodoiH(IntPtr param_00073b51, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073b52); // 0x00000001835AC170-0x00000001835AC2D0
+	public static bool akJlAXhUcHpRKZzggAJdBwlcZzEF(string param_000aa488); // 0x000000018CDAE8A0-0x000000018CDAEAD8
+	public static IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> ZsFKVtoqECXqMobddXTHIzFkgTDf(); // 0x0000000185B73EA0-0x0000000185B73EE0
+	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA ftozITswzymIijifTFKqaNvpMxYe(IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> param_000aa489, string param_000aa48a, StringComparison param_000aa48b); // 0x0000000185B73670-0x0000000185B737F0
+	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA lSlsrqNndcLyPhsxkdXsTaZoJcFm(IYkFHeDTeaiIvMIzYRFbPiZVuQFL param_000aa48c); // 0x0000000185B737F0-0x0000000185B73930
+	public static yDpFzqLnhRMZnaEyxToARrRqCzAhA RDxaMMdZGrVvyrpeXUOWDMjjtQBp(string param_000aa48d); // 0x000000018CDAE844-0x000000018CDAE8A0
+	public static IEnumerable<yDpFzqLnhRMZnaEyxToARrRqCzAhA> EHzJeyivDsPTLTBcjaniESaGLkps(); // 0x0000000186B65EF0-0x0000000186B66030
+	public static IEnumerable<yDpFzqLnhRMZnaEyxToARrRqCzAhA> EHzJeyivDsPTLTBcjaniESaGLkps(string param_000aa48e); // 0x000000018CDAE0EC-0x000000018CDAE2AC
+	public static bool BFfsjWiEpJdOjSFSiJcagkWdgaVe(); // 0x0000000186B65C90-0x0000000186B65EF0
+	public static int SWbYOscVZJwijEvqMgmjujNLcsHr(); // 0x0000000185B72C30-0x0000000185B72C90
+	public static int SWbYOscVZJwijEvqMgmjujNLcsHr(ref yqCthwNGAZgagjDBQbkNEzFfVZWu.AInQCDdqSLTTWRljCHGQhayircJNA param_000aa48f, NativeBuffer param_000aa490); // 0x0000000185B72C90-0x0000000185B72CF0
+	private static IList<IYkFHeDTeaiIvMIzYRFbPiZVuQFL> xmpJfrrdjRmhDPmzAXFLDvDVEGWs(); // 0x0000000185A17FD0-0x0000000185A186D0
+	private static void LhbNLblETIcsVFiyTBeldyFEHJVAA(List<cQuuLrgeChfSTCfVgQjFhkvLyfEuA> param_000aa491); // 0x0000000185A17C50-0x0000000185A17FD0
+	private static List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> hAzrRYoAQCAzVlmESxUYeppeFjiHA(List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_000aa492); // 0x000000018CDAED4C-0x000000018CDAEF00
+	private static List<uint> ZaAiEABFIHOILIBTghxOurobuiQNA(uint param_000aa493); // 0x0000000185278910-0x0000000185278AF0
+	private static List<uint> qClaPQIpuNiUBudQkNlzytTaNVAL(uint param_000aa494); // 0x0000000185278AF0-0x0000000185278C50
+	private static string gpKudyFUqpLILrJBheYPpiNAaRVb(uint param_000aa495); // 0x0000000185A19BA0-0x0000000185A19E10
+	private static void OwwQDpGojKDBAmTtwtniZPNtpmMr(uint param_000aa496, ref List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_000aa497, out bool param_000aa498, out string param_000aa499); // 0x0000000185A16A70-0x0000000185A16B50
+	private static bool hsRlUUaETREUjXzkuqivbvLsWfLP(uint param_000aa49a, ref List<PUUjROsMtnhbqLEaBbcdiryfdlYVA> param_000aa49b, out bool param_000aa49c, out uint param_000aa49d); // 0x0000000185A16B50-0x0000000185A16C10
+	private static bool TSgPgCsRkdGmyzuupaPfboHknHCcA(uint param_000aa49e, string param_000aa49f, out string param_000aa4a0, out uint param_000aa4a1); // 0x0000000185A19930-0x0000000185A19AB0
+	private static bool gtGWbLOgbGxPMAgkCHDWcyCucxqJA(string param_000aa4a2, out string param_000aa4a3); // 0x000000018CDAEC50-0x000000018CDAED4C
+	private static bool eDyFVubmhWaFrouRpboBKdrfJKrL(uint param_000aa4a4, string param_000aa4a5, out uint param_000aa4a6); // 0x000000018CDAEAD8-0x000000018CDAEC50
+	private static bool NbqWRqtzdNlHvUvcOKFBldUZeUICA(string param_000aa4a7, bool param_000aa4a8 = true /* Metadata: 0x0262C56C */); // 0x000000018CDAE300-0x000000018CDAE844
+	private static MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB RpcHbtTsDvqNIwcmrikEejKmglMf(); // 0x0000000186E5BE20-0x0000000186E5BEB0
+	private static string WSbygJHhAOkGYSkBTqfQVaLdTwWD(IntPtr param_000aa4a9, MDBYECqvXkaCiSmYJZjrizfidEbk.OdnntAHntokWiUdDHtrlcobDeFoF param_000aa4aa); // 0x0000000185A18800-0x0000000185A18910
+	private static string tRUnFgKTtCscuSPvKgSIaAABMVpL(IntPtr param_000aa4ab, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4ac); // 0x0000000185A18910-0x0000000185A18A30
+	private static string EEmmwDJRxHVvCIDUZHfIeXTDuzij(IntPtr param_000aa4ad, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4ae); // 0x000000018CDAE098-0x000000018CDAE0EC
+	private static string ENzahFoqYbHqgQWFcUBGCjRzGsvP(IntPtr param_000aa4af, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4b0); // 0x000000018CDAE2AC-0x000000018CDAE300
+	private static string UMFVPIxbQrSCNKcyITghJqcjOoXi(IntPtr param_000aa4b1, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4b2); // 0x0000000185A168F0-0x0000000185A16960
+	private static string DJGaEpIjHmBElJmHZJsXFXBAHZdCb(IntPtr param_000aa4b3, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4b4); // 0x0000000185A18790-0x0000000185A18800
+	private static string pOHzpBxHEcNSmGKovYmuTBCmjdhC(IntPtr param_000aa4b5, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4b6, int param_000aa4b7); // 0x0000000185A18A30-0x0000000185A18BF0
+	private static string bggqCanFRkzuRDWxQjbXwQcodoiH(IntPtr param_000aa4b8, ref MDBYECqvXkaCiSmYJZjrizfidEbk.ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa4b9); // 0x0000000185A17A10-0x0000000185A17B70
 }
 
-internal class JXtFhzUqozCGLAAgSlsxdSapKppi // TypeDefIndex: 53909
+internal class JXtFhzUqozCGLAAgSlsxdSapKppi // TypeDefIndex: 79153
 {
 	// Fields
 	[CompilerGenerated]
@@ -8129,33 +8115,33 @@ internal class JXtFhzUqozCGLAAgSlsxdSapKppi // TypeDefIndex: 53909
 	private FTOiINMsdGsAPJJyCRstLZPtRyob wkXxVtcCQqSjsHMkInyHuMXAVkrL; // 0x58
 
 	// Properties
-	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D96190-0x0000000184D961A0 0x0000000184D94F60-0x0000000184D94F70
-	public byte yQxQgOQNMVMVBtcqgArgADGYErtCb { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88390-0x0000000184D883A0 0x0000000184DA0900-0x0000000184DA0910
-	private bool vtTDydgHKBpOnHSyNFEsNAlyQxfS { [CompilerGenerated] set; } // 0x0000000184DA8AE0-0x0000000184DA8AF0
-	private ushort EVOgATFTRXRYYHBhTtlQzWYqqwdA { [CompilerGenerated] set; } // 0x0000000184DA8B00-0x0000000184DA8B10
-	public ushort pHcUlKlzzchyOdBayWGzpHfvaXne { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D993B0-0x0000000184D993C0 0x0000000184DA8A80-0x0000000184DA8A90
-	private ushort OZGNGboMcWuoFBqTPiRpwosbEqYM { [CompilerGenerated] set; } // 0x0000000184DA8AB0-0x0000000184DA8AC0
-	private ushort xfxgDPRowhYBpUmBfcwmlmnSOAOk { [CompilerGenerated] set; } // 0x0000000184DA8AF0-0x0000000184DA8B00
-	public bool BfopjfztUWmuPqlPQddPxAYCUqBv { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86150-0x0000000184D86160 0x0000000184D86160-0x0000000184D86170
-	private bool hMRiaanusLpZjoDmjlMCDmUAeXvt { [CompilerGenerated] set; } // 0x0000000184D89610-0x0000000184D89620
-	private bool OrluHimCvJfxNzFNtqGOaUVOaKzG { [CompilerGenerated] set; } // 0x0000000184D89630-0x0000000184D89640
-	private bool pBNaQqqwjWuTtRxKaIqRAoduhvcR { [CompilerGenerated] set; } // 0x0000000184D89620-0x0000000184D89630
-	private bool lhcFgIyotHiTDfPsiWQeKyQqtxTO { [CompilerGenerated] set; } // 0x0000000184D866D0-0x0000000184D866E0
-	private byte uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x0000000184D86860-0x0000000184D86870
-	public ushort rTIQSbqOnUSmuevmXNIAdLXhUEc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA8AD0-0x0000000184DA8AE0 0x0000000184DA8AC0-0x0000000184DA8AD0
-	public ushort VtyHLJteBwuRwyyuieGwmtYecGPq { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA8A90-0x0000000184DA8AA0 0x0000000184DA8AA0-0x0000000184DA8AB0
-	private ushort[] YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000182FDB880-0x0000000182FDB890
-	public uint CfHaeRicZteSoguHdEQyFjSdoVhgd { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D864F0-0x0000000184D86500 0x0000000184D86740-0x0000000184D86750
-	public uint bFwqshEICTItwIvQnTVtjCmEEhPOA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86730-0x0000000184D86740 0x0000000184D86760-0x0000000184D86770
-	public int yuuLeDEnXHQWGYlbsuwXHCpOexoCA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
-	public int UIOacgZTgkjwtdxToaahjmcjPOooc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
-	public int iWOAtDfVIEwlveRsEXZbFHNDedliA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865E0-0x0000000184D865F0 0x0000000184D86610-0x0000000184D86620
-	public int GgFHkuuBxplJABXwhoHoystWwxHJ { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
-	public xzMuoUlvKGCyuZtipJBdZbVUadLB rWfPOTkywVVLkhergznPfrOaXcQA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8FD50-0x0000000184D8FD60 0x0000000184D91540-0x0000000184D91550
-	public FTOiINMsdGsAPJJyCRstLZPtRyob vLEBkPDtgrvJRhDPlMNfHsyfaKXnB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D87E00-0x0000000184D87E10 0x0000000184DA61E0-0x0000000184DA61F0
+	public ushort NDweLaWskzoBwpWJxCWuzQStzdYi { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184434E50-0x0000000184434E60 0x0000000187243130-0x0000000187243140
+	public byte yQxQgOQNMVMVBtcqgArgADGYErtCb { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187235CB0-0x0000000187235CC0 0x000000018724EB70-0x000000018724EB80
+	private bool vtTDydgHKBpOnHSyNFEsNAlyQxfS { [CompilerGenerated] set; } // 0x0000000187256BB0-0x0000000187256BC0
+	private ushort EVOgATFTRXRYYHBhTtlQzWYqqwdA { [CompilerGenerated] set; } // 0x0000000187256BD0-0x0000000187256BE0
+	public ushort pHcUlKlzzchyOdBayWGzpHfvaXne { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187247620-0x0000000187247630 0x0000000187256B50-0x0000000187256B60
+	private ushort OZGNGboMcWuoFBqTPiRpwosbEqYM { [CompilerGenerated] set; } // 0x0000000187256B80-0x0000000187256B90
+	private ushort xfxgDPRowhYBpUmBfcwmlmnSOAOk { [CompilerGenerated] set; } // 0x0000000187256BC0-0x0000000187256BD0
+	public bool BfopjfztUWmuPqlPQddPxAYCUqBv { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EB80-0x000000018226EB90 0x000000018226EB90-0x000000018226EBA0
+	private bool hMRiaanusLpZjoDmjlMCDmUAeXvt { [CompilerGenerated] set; } // 0x000000018226ED10-0x000000018226ED20
+	private bool OrluHimCvJfxNzFNtqGOaUVOaKzG { [CompilerGenerated] set; } // 0x00000001872364F0-0x0000000187236500
+	private bool pBNaQqqwjWuTtRxKaIqRAoduhvcR { [CompilerGenerated] set; } // 0x00000001872364E0-0x00000001872364F0
+	private bool lhcFgIyotHiTDfPsiWQeKyQqtxTO { [CompilerGenerated] set; } // 0x0000000182246E60-0x0000000182246E70
+	private byte uEWSYFkyRUKNddSuwNCCuQBguizT { [CompilerGenerated] set; } // 0x000000018225E0A0-0x000000018225E0B0
+	public ushort rTIQSbqOnUSmuevmXNIAdLXhUEc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187256BA0-0x0000000187256BB0 0x0000000187256B90-0x0000000187256BA0
+	public ushort VtyHLJteBwuRwyyuieGwmtYecGPq { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187256B60-0x0000000187256B70 0x0000000187256B70-0x0000000187256B80
+	private ushort[] YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000185CA30F0-0x0000000185CA3100
+	public uint CfHaeRicZteSoguHdEQyFjSdoVhgd { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226EBA0-0x000000018226EBB0 0x0000000186033510-0x0000000186033520
+	public uint bFwqshEICTItwIvQnTVtjCmEEhPOA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271A70-0x0000000182271A80 0x0000000182271AA0-0x0000000182271AB0
+	public int yuuLeDEnXHQWGYlbsuwXHCpOexoCA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001829600C0-0x00000001829600D0 0x0000000185E3C070-0x0000000185E3C080
+	public int UIOacgZTgkjwtdxToaahjmcjPOooc { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018226F000-0x000000018226F010 0x000000018226F010-0x000000018226F020
+	public int iWOAtDfVIEwlveRsEXZbFHNDedliA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271C50-0x0000000182271C60 0x0000000182271C70-0x0000000182271C80
+	public int GgFHkuuBxplJABXwhoHoystWwxHJ { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182271C40-0x0000000182271C50 0x0000000182271C60-0x0000000182271C70
+	public xzMuoUlvKGCyuZtipJBdZbVUadLB rWfPOTkywVVLkhergznPfrOaXcQA { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018723DAF0-0x000000018723DB00 0x0000000187233C90-0x0000000187233CA0
+	public FTOiINMsdGsAPJJyCRstLZPtRyob vLEBkPDtgrvJRhDPlMNfHsyfaKXnB { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000187234DB0-0x0000000187234DC0 0x0000000187234090-0x00000001872340A0
 
 	// Nested types
-	public struct xzMuoUlvKGCyuZtipJBdZbVUadLB // TypeDefIndex: 53907
+	public struct xzMuoUlvKGCyuZtipJBdZbVUadLB // TypeDefIndex: 79151
 	{
 		// Fields
 		[CompilerGenerated]
@@ -8176,17 +8162,17 @@ internal class JXtFhzUqozCGLAAgSlsxdSapKppi // TypeDefIndex: 53909
 		private ushort TvxuXikcWoBDNuALcEEQPyyqnVZm; // 0x0E
 
 		// Properties
-		public ushort ItMgALtDaiVTFjHhSTsudMjbbXEbA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184D87160-0x0000000184D87170
-		public ushort vNUrgCyNhiUnLsFVTLYUvLEjfntu { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87610-0x0000000184D87620 0x0000000184DA8A10-0x0000000184DA8A20
-		internal ushort DwlIhRdQEPDZMlYEjVTJrPCtauNx { [CompilerGenerated] set; } // 0x0000000184DA8A50-0x0000000184DA8A60
-		internal ushort bxWgvYsqzYEOyNWKUFzImHLcCmcK { [CompilerGenerated] set; } // 0x0000000184DA8A20-0x0000000184DA8A30
-		internal ushort EvUdqujojeMZuETniwnoKWXjuZNWB { [CompilerGenerated] set; } // 0x0000000184DA8A70-0x0000000184DA8A80
-		internal ushort hEKMVDtZDkgVmvdcqcPlfCxPVjok { [CompilerGenerated] set; } // 0x0000000184DA8A00-0x0000000184DA8A10
-		public ushort oQpvoKPnebMtUqjKGMoXpqAsQVCj { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184DA8A30-0x0000000184DA8A40 0x0000000184DA8A40-0x0000000184DA8A50
-		public ushort JxxAHZCnxiMJSoWYGfKVGIrCMVJIA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184DA8BD0-0x0000000184DA8BE0 0x0000000184DA8A60-0x0000000184DA8A70
+		public ushort ItMgALtDaiVTFjHhSTsudMjbbXEbA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x000000018448B780-0x000000018448B790 0x000000018448B8B0-0x000000018448B8C0
+		public ushort vNUrgCyNhiUnLsFVTLYUvLEjfntu { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000187234260-0x0000000187234270 0x0000000187256AE0-0x0000000187256AF0
+		internal ushort DwlIhRdQEPDZMlYEjVTJrPCtauNx { [CompilerGenerated] set; } // 0x0000000187256B20-0x0000000187256B30
+		internal ushort bxWgvYsqzYEOyNWKUFzImHLcCmcK { [CompilerGenerated] set; } // 0x0000000187256AF0-0x0000000187256B00
+		internal ushort EvUdqujojeMZuETniwnoKWXjuZNWB { [CompilerGenerated] set; } // 0x0000000187256B40-0x0000000187256B50
+		internal ushort hEKMVDtZDkgVmvdcqcPlfCxPVjok { [CompilerGenerated] set; } // 0x0000000187256AD0-0x0000000187256AE0
+		public ushort oQpvoKPnebMtUqjKGMoXpqAsQVCj { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000187256B00-0x0000000187256B10 0x0000000187256B10-0x0000000187256B20
+		public ushort JxxAHZCnxiMJSoWYGfKVGIrCMVJIA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000187256CA0-0x0000000187256CB0 0x0000000187256B30-0x0000000187256B40
 	}
 
-	public struct FTOiINMsdGsAPJJyCRstLZPtRyob // TypeDefIndex: 53908
+	public struct FTOiINMsdGsAPJJyCRstLZPtRyob // TypeDefIndex: 79152
 	{
 		// Fields
 		[CompilerGenerated]
@@ -8207,37 +8193,37 @@ internal class JXtFhzUqozCGLAAgSlsxdSapKppi // TypeDefIndex: 53909
 		private ushort VmjYZskzCwrkfFwqWiukRllVDVxW; // 0x0E
 
 		// Properties
-		public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D87110-0x0000000184D87120 0x0000000184D87160-0x0000000184D87170
-		internal ushort rfcVzyntsQRBZuQsphQIAieNMatf { [CompilerGenerated] set; } // 0x0000000184DA8A10-0x0000000184DA8A20
-		internal ushort UGSHpKjCSetxyyuIPUDWVEYHBlFD { [CompilerGenerated] set; } // 0x0000000184DA8A50-0x0000000184DA8A60
-		internal ushort YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000184DA8A20-0x0000000184DA8A30
-		internal ushort iBWeYzDXeUpHNJXfgECfOIwdFzByA { [CompilerGenerated] set; } // 0x0000000184DA8A70-0x0000000184DA8A80
-		internal ushort cNzOuRRFodLwcumimnQZGvgbMZCT { [CompilerGenerated] set; } // 0x0000000184DA8A00-0x0000000184DA8A10
-		public ushort UJTiICQitwbxBiJLohBISjwTSsGgA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184DA8A30-0x0000000184DA8A40 0x0000000184DA8A40-0x0000000184DA8A50
-		internal ushort QLFvEFUNxbHddWoDVbMfbMgJHwGY { [CompilerGenerated] set; } // 0x0000000184DA8A60-0x0000000184DA8A70
+		public ushort ZhwNBMzYOdcsywMxxqnQBgbeZIaX { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x000000018448B780-0x000000018448B790 0x000000018448B8B0-0x000000018448B8C0
+		internal ushort rfcVzyntsQRBZuQsphQIAieNMatf { [CompilerGenerated] set; } // 0x0000000187256AE0-0x0000000187256AF0
+		internal ushort UGSHpKjCSetxyyuIPUDWVEYHBlFD { [CompilerGenerated] set; } // 0x0000000187256B20-0x0000000187256B30
+		internal ushort YGNxrFfotADbwHHXFCFbjPccoxEvb { [CompilerGenerated] set; } // 0x0000000187256AF0-0x0000000187256B00
+		internal ushort iBWeYzDXeUpHNJXfgECfOIwdFzByA { [CompilerGenerated] set; } // 0x0000000187256B40-0x0000000187256B50
+		internal ushort cNzOuRRFodLwcumimnQZGvgbMZCT { [CompilerGenerated] set; } // 0x0000000187256AD0-0x0000000187256AE0
+		public ushort UJTiICQitwbxBiJLohBISjwTSsGgA { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000187256B00-0x0000000187256B10 0x0000000187256B10-0x0000000187256B20
+		internal ushort QLFvEFUNxbHddWoDVbMfbMgJHwGY { [CompilerGenerated] set; } // 0x0000000187256B30-0x0000000187256B40
 	}
 
 	// Constructors
-	internal JXtFhzUqozCGLAAgSlsxdSapKppi(MDBYECqvXkaCiSmYJZjrizfidEbk.HZHOCcmbYJxOQijkKDEoZNGhKlFt param_00073b63); // 0x0000000183BFB330-0x0000000183BFB5B0
+	internal JXtFhzUqozCGLAAgSlsxdSapKppi(MDBYECqvXkaCiSmYJZjrizfidEbk.HZHOCcmbYJxOQijkKDEoZNGhKlFt param_000aa4ca); // 0x00000001865C1340-0x00000001865C15C0
 }
 
-internal delegate void YAYhqrEoEUwBEDwatJjdRaWkgjIE(); // TypeDefIndex: 53910; 0x00000001853DEDB8-0x00000001853DEDC8
+internal delegate void YAYhqrEoEUwBEDwatJjdRaWkgjIE(); // TypeDefIndex: 79154; 0x0000000185B44B70-0x0000000185B44B80
 
-internal enum qMSJAGnGFztVWGbbMtcbmLOJutTU // TypeDefIndex: 53911
+internal enum qMSJAGnGFztVWGbbMtcbmLOJutTU // TypeDefIndex: 79155
 {
 	NonOverlapped = 0,
 	Overlapped = 1
 }
 
 [Flags]
-internal enum nqaKskRUwxbeUaaRxyXfhGNcbkBm // TypeDefIndex: 53912
+internal enum nqaKskRUwxbeUaaRxyXfhGNcbkBm // TypeDefIndex: 79156
 {
 	Exclusive = 0,
 	ShareRead = 1,
 	ShareWrite = 2
 }
 
-internal interface IdxcAbgzMTzxeMxdElxolIcPzwurA : IDisposable // TypeDefIndex: 53913
+internal interface IdxcAbgzMTzxeMxdElxolIcPzwurA : IDisposable // TypeDefIndex: 79157
 {
 	// Properties
 	IntPtr GebVmHpsJPFlDsHlVnlvHSQVztdK { get; }
@@ -8258,20 +8244,20 @@ internal interface IdxcAbgzMTzxeMxdElxolIcPzwurA : IDisposable // TypeDefIndex: 
 	bool BJdhruPWQfbEmflPqJRhZZyRVxDTA { get; }
 
 	// Methods
-	bool xULxbDXErMDWumqPoCklYRksejXD(bool param_00073b8f, qMSJAGnGFztVWGbbMtcbmLOJutTU param_00073b90, bool param_00073b91, qMSJAGnGFztVWGbbMtcbmLOJutTU param_00073b92, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_00073b93);
+	bool xULxbDXErMDWumqPoCklYRksejXD(bool param_000aa4f6, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa4f7, bool param_000aa4f8, qMSJAGnGFztVWGbbMtcbmLOJutTU param_000aa4f9, nqaKskRUwxbeUaaRxyXfhGNcbkBm param_000aa4fa);
 	void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA();
-	bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_00073b94, int param_00073b95);
-	bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_00073b96, int param_00073b97, byte param_00073b98 = 0 /* Metadata: 0x0233412E */);
+	bool EhQhxFweepMpjwazcuSRnFZeQtLc(YWFEqRKsCWKdGhNygVhQhOHuhIISb param_000aa4fb, int param_000aa4fc);
+	bool aunlOVhpWoQiLKWoGcKSaHLfoXig(out byte[] param_000aa4fd, int param_000aa4fe, byte param_000aa4ff = 0 /* Metadata: 0x0262C572 */);
 	string efFcegvAymobYqJrtnRqLeSRXvqm();
-	bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_00073b99);
+	bool efFcegvAymobYqJrtnRqLeSRXvqm(out byte[] param_000aa500);
 	string aWBHzUPzbLPVEfFhmcDSkVnnSvncA();
-	bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_00073b9a);
+	bool aWBHzUPzbLPVEfFhmcDSkVnnSvncA(out byte[] param_000aa501);
 	string FpKBQHheYjWwGPXekyQQsMXbqOsJA();
-	bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_00073b9b);
-	bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_00073b9c, int param_00073b9d);
+	bool FpKBQHheYjWwGPXekyQQsMXbqOsJA(out byte[] param_000aa502);
+	bool cWNDdKjHWcUyzYOsFgZrPjZLiW(SAcTodLryXZPmeZqsKbnQQxsbBmo param_000aa503, int param_000aa504);
 }
 
-internal class GmZKiAtyHCxBQdcQbJSlTPDYeHyh : IDisposable // TypeDefIndex: 53915
+internal class GmZKiAtyHCxBQdcQbJSlTPDYeHyh : IDisposable // TypeDefIndex: 79159
 {
 	// Fields
 	private readonly BCrcjwPSVWVTkTJoZjurbxnlvFSPA CfrKJJSAyimvwjMUPAPRDXKzsPZP; // 0x10
@@ -8288,36 +8274,36 @@ internal class GmZKiAtyHCxBQdcQbJSlTPDYeHyh : IDisposable // TypeDefIndex: 53915
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x60
 
 	// Nested types
-	public delegate void BCrcjwPSVWVTkTJoZjurbxnlvFSPA(IntPtr reportPointer, int reportByteLength, int reportCount, double timestamp); // TypeDefIndex: 53914; 0x00000001815547C0-0x00000001815547E0
+	public delegate void BCrcjwPSVWVTkTJoZjurbxnlvFSPA(IntPtr reportPointer, int reportByteLength, int reportCount, double timestamp); // TypeDefIndex: 79158; 0x00000001811CDB70-0x00000001811CDB90
 
 	// Constructors
-	public GmZKiAtyHCxBQdcQbJSlTPDYeHyh(string param_00073b9e, int param_00073b9f, string param_00073ba0, BCrcjwPSVWVTkTJoZjurbxnlvFSPA param_00073ba1); // 0x000000018ABB389C-0x000000018ABB3E20
+	public GmZKiAtyHCxBQdcQbJSlTPDYeHyh(string param_000aa505, int param_000aa506, string param_000aa507, BCrcjwPSVWVTkTJoZjurbxnlvFSPA param_000aa508); // 0x000000018CDA8174-0x000000018CDA86FC
 
 	// Methods
-	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018ABB358C-0x000000018ABB3734
-	private void NzwthoEmIfaUpXEKjvYIxvKAYsLH(); // 0x000000018ABB3414-0x000000018ABB3548
-	private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018ABB32A8-0x000000018ABB3414
-	private bool eZqveQdLMqWCWwgrupQSzRJBttwc(byte[] param_00073ba2); // 0x000000018ABB3E20-0x000000018ABB3E74
-	private bool UVAINHhGqunVbVWdcaVBPDuDgptg(); // 0x000000018ABB3734-0x000000018ABB3828
-	public void Dispose(); // 0x000000018ABB3258-0x000000018ABB32A8
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABB3828-0x000000018ABB389C
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073ba3); // 0x000000018ABB3548-0x000000018ABB358C
+	public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018CDA7E60-0x000000018CDA8008
+	private void NzwthoEmIfaUpXEKjvYIxvKAYsLH(); // 0x000000018CDA7CE0-0x000000018CDA7E1C
+	private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018CDA7B60-0x000000018CDA7CE0
+	private bool eZqveQdLMqWCWwgrupQSzRJBttwc(byte[] param_000aa509); // 0x000000018CDA86FC-0x000000018CDA8750
+	private bool UVAINHhGqunVbVWdcaVBPDuDgptg(); // 0x000000018CDA8008-0x000000018CDA80FC
+	public void Dispose(); // 0x000000018CDA7B10-0x000000018CDA7B60
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDA80FC-0x000000018CDA8174
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa50a); // 0x000000018CDA7E1C-0x000000018CDA7E60
 }
 
-internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
+internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 79174
 {
 	// Fields
 	internal static readonly IntPtr WUbkTWMRstakAOOBXTqosefccnxn; // 0x00
 	internal static IVfAZcQUPLflQJNXBMuFPKDDBvSJ WuyOVSGWaiJiZxsguelzyftXTiSp; // 0x08
 
 	// Properties
-	internal static int ZMyoQQZHmAhxHATKUZpfdwJoOKpiA { get; } // 0x00000001835AC3B0-0x00000001835AC410 
-	internal static int qeHAzYAsIzstuoMjzWyVgrxmJmpeb { get; } // 0x0000000184DA3370-0x0000000184DA3380 
-	internal static Guid FyZtNyZLPMCKmsEvHWkPVNuBLRiQ { get; } // 0x000000018ABB4D10-0x000000018ABB4D68 
-	internal static Guid MxWoSgVNBNuNEIjXHaoUkPwILiPo { get; } // 0x0000000183E04750-0x0000000183E047B0 
+	internal static int ZMyoQQZHmAhxHATKUZpfdwJoOKpiA { get; } // 0x0000000185A179B0-0x0000000185A17A10 
+	internal static int qeHAzYAsIzstuoMjzWyVgrxmJmpeb { get; } // 0x0000000187250F50-0x0000000187250F60 
+	internal static Guid FyZtNyZLPMCKmsEvHWkPVNuBLRiQ { get; } // 0x000000018CDA9618-0x000000018CDA9670 
+	internal static Guid MxWoSgVNBNuNEIjXHaoUkPwILiPo { get; } // 0x0000000186E39270-0x0000000186E392D0 
 
 	// Nested types
-	internal struct CBtraXnwXpmyYfPuzLvlCcBzHcLk // TypeDefIndex: 53916
+	internal struct CBtraXnwXpmyYfPuzLvlCcBzHcLk // TypeDefIndex: 79160
 	{
 		// Fields
 		public static readonly int YYYwecOazrpNKDkqnhldLbjwVCOt; // 0x00
@@ -8328,10 +8314,10 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		public IntPtr jsSJXwXwYGhgniLMhSTWRVpIvwms; // 0x18
 
 		// Constructors
-		static CBtraXnwXpmyYfPuzLvlCcBzHcLk(); // 0x000000018ABAF910-0x000000018ABAF9A0
+		static CBtraXnwXpmyYfPuzLvlCcBzHcLk(); // 0x000000018CDA4174-0x000000018CDA4204
 	}
 
-	internal struct NwIzwEuvvoEuXLxYyuEhdQwOWVzA // TypeDefIndex: 53917
+	internal struct NwIzwEuvvoEuXLxYyuEhdQwOWVzA // TypeDefIndex: 79161
 	{
 		// Fields
 		public static readonly int YYYwecOazrpNKDkqnhldLbjwVCOt; // 0x00
@@ -8340,10 +8326,10 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		public bool hIxHTAahWVYNjOEaYDCCfjqWUhHv; // 0x10
 
 		// Constructors
-		static NwIzwEuvvoEuXLxYyuEhdQwOWVzA(); // 0x0000000184CEC600-0x0000000184CEC6B0
+		static NwIzwEuvvoEuXLxYyuEhdQwOWVzA(); // 0x0000000185B75000-0x0000000185B750B0
 	}
 
-	internal struct OdnntAHntokWiUdDHtrlcobDeFoF // TypeDefIndex: 53918
+	internal struct OdnntAHntokWiUdDHtrlcobDeFoF // TypeDefIndex: 79162
 	{
 		// Fields
 		internal int RAqcnpHrqBYCbbQhULmPgKdlbAcP; // 0x00
@@ -8352,10 +8338,10 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal IntPtr uEWSYFkyRUKNddSuwNCCuQBguizT; // 0x18
 
 		// Properties
-		public int YYYwecOazrpNKDkqnhldLbjwVCOt { get; } // 0x0000000184DA43E0-0x0000000184DA43F0 
+		public int YYYwecOazrpNKDkqnhldLbjwVCOt { get; } // 0x0000000187239C60-0x0000000187239C70 
 	}
 
-	internal struct ZBJNsrUqCLQBwhEksjgMQwyVNulB // TypeDefIndex: 53919
+	internal struct ZBJNsrUqCLQBwhEksjgMQwyVNulB // TypeDefIndex: 79163
 	{
 		// Fields
 		internal int RAqcnpHrqBYCbbQhULmPgKdlbAcP; // 0x00
@@ -8364,24 +8350,24 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal IntPtr uEWSYFkyRUKNddSuwNCCuQBguizT; // 0x18
 
 		// Properties
-		public int YYYwecOazrpNKDkqnhldLbjwVCOt { get; } // 0x0000000184DA43E0-0x0000000184DA43F0 
+		public int YYYwecOazrpNKDkqnhldLbjwVCOt { get; } // 0x0000000187239C60-0x0000000187239C70 
 	}
 
-	internal struct zQUvgYtDBPnHxTlagLfRbHFoYHuA // TypeDefIndex: 53920
+	internal struct zQUvgYtDBPnHxTlagLfRbHFoYHuA // TypeDefIndex: 79164
 	{
 		// Fields
 		internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
 		internal string QVMkSNFdzYBkSGGdcYhOkBRBEqJFb; // 0x08
 	}
 
-	internal struct IVfAZcQUPLflQJNXBMuFPKDDBvSJ // TypeDefIndex: 53921
+	internal struct IVfAZcQUPLflQJNXBMuFPKDDBvSJ // TypeDefIndex: 79165
 	{
 		// Fields
 		public Guid zNEQgTKuywuYjIFibrdrdMXNcTWdA; // 0x00
 		public ulong DKZHXbCKKHSLelzDkJSsZeqCwUoG; // 0x10
 	}
 
-	internal struct GdZTshfUFywPkphGdVzwMUmXwiZb // TypeDefIndex: 53922
+	internal struct GdZTshfUFywPkphGdVzwMUmXwiZb // TypeDefIndex: 79166
 	{
 		// Fields
 		internal int DpYPmjpmntKbDQjXRlVzRHTqRZtb; // 0x00
@@ -8390,7 +8376,7 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal short yaEXslHRhOToVZGGZIFieBALQaJRA; // 0x08
 	}
 
-	internal struct wVeMkOOBFiFZpAAnIEqQLLFkoZNAA // TypeDefIndex: 53923
+	internal struct wVeMkOOBFiFZpAAnIEqQLLFkoZNAA // TypeDefIndex: 79167
 	{
 		// Fields
 		internal short ZhwNBMzYOdcsywMxxqnQBgbeZIaX; // 0x00
@@ -8411,7 +8397,7 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal short RcJPzQHLaLlIsNMwUGthGWLbZmgIA; // 0x2A
 	}
 
-	internal struct HZHOCcmbYJxOQijkKDEoZNGhKlFt // TypeDefIndex: 53925
+	internal struct HZHOCcmbYJxOQijkKDEoZNGhKlFt // TypeDefIndex: 79169
 	{
 		// Fields
 		internal ushort NDweLaWskzoBwpWJxCWuzQStzdYi; // 0x00
@@ -8439,14 +8425,14 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal IByqlcoARSDqEKzHbCrNMVsTTQLu VLenFfKKPrenZGpfyWJnXIhXbjuD; // 0x38
 
 		// Nested types
-		internal struct IByqlcoARSDqEKzHbCrNMVsTTQLu // TypeDefIndex: 53924
+		internal struct IByqlcoARSDqEKzHbCrNMVsTTQLu // TypeDefIndex: 79168
 		{
 			// Fields
 			internal ushort[] MdVJzrDujwFLpVVdSUCkeVIfhPcv; // 0x00
 		}
 	}
 
-	internal struct cGvTcLBAAcvnQHXapwJLwcbObXDw // TypeDefIndex: 53927
+	internal struct cGvTcLBAAcvnQHXapwJLwcbObXDw // TypeDefIndex: 79171
 	{
 		// Fields
 		internal ushort NDweLaWskzoBwpWJxCWuzQStzdYi; // 0x00
@@ -8464,14 +8450,14 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		internal ckgadpNmTOqjlmzFTWrSowPkwEdY VLenFfKKPrenZGpfyWJnXIhXbjuD; // 0x18
 
 		// Nested types
-		internal struct ckgadpNmTOqjlmzFTWrSowPkwEdY // TypeDefIndex: 53926
+		internal struct ckgadpNmTOqjlmzFTWrSowPkwEdY // TypeDefIndex: 79170
 		{
 			// Fields
 			internal ushort[] MdVJzrDujwFLpVVdSUCkeVIfhPcv; // 0x00
 		}
 	}
 
-	internal struct dHQmwhHbvgbNuAqIBFbWyaCtzDht // TypeDefIndex: 53928
+	internal struct dHQmwhHbvgbNuAqIBFbWyaCtzDht // TypeDefIndex: 79172
 	{
 		// Fields
 		public ushort UJTiICQitwbxBiJLohBISjwTSsGgA; // 0x00
@@ -8479,69 +8465,69 @@ internal static class MDBYECqvXkaCiSmYJZjrizfidEbk // TypeDefIndex: 53930
 		public uint SLPzpJxHRYLGGqgBYRdylUCgwhEM; // 0x04
 
 		// Properties
-		public uint jyZihDTgYnhgMvYUjEVDqSPXpyHB { get; } // 0x0000000184D88B20-0x0000000184D88B30 
+		public uint jyZihDTgYnhgMvYUjEVDqSPXpyHB { get; } // 0x00000001872342E0-0x00000001872342F0 
 	}
 
 	[UnmanagedFunctionPointer(CallingConvention.StdCall)]
-	public delegate void nnQCTPzFcMHWGWfoOtAsaDpWLiXO(int dwErrorCode, int dwNumbmerOfBytesTransfered, IntPtr lpOverlapped); // TypeDefIndex: 53929; 0x0000000181546280-0x00000001815462A0
+	public delegate void nnQCTPzFcMHWGWfoOtAsaDpWLiXO(int dwErrorCode, int dwNumbmerOfBytesTransfered, IntPtr lpOverlapped); // TypeDefIndex: 79173; 0x00000001811DF7F0-0x00000001811DF810
 
 	// Constructors
-	static MDBYECqvXkaCiSmYJZjrizfidEbk(); // 0x0000000184B6B2A0-0x0000000184B6B370
+	static MDBYECqvXkaCiSmYJZjrizfidEbk(); // 0x000000018702B1C0-0x000000018702B290
 
 	// Methods
-	internal static extern bool RYrcvNGsskawASVJvvEVsabgNctg(IntPtr param_00073baa); // 0x000000018ABB4730-0x000000018ABB47AC
-	internal static extern bool ImbwHAAIHSaxgTyvDvEpzDXjhce(IntPtr param_00073bab, IntPtr param_00073bac); // 0x0000000183BF8630-0x0000000183BF8690
-	internal static extern bool WuPzsguhZYdvHaWbnBQQzUUJbDQpA(IntPtr param_00073bad); // 0x0000000183BF83C0-0x0000000183BF8470
-	internal static extern IntPtr xCnufPBpKdYnhGCjrxEfDUZOthqJ(IntPtr param_00073bae, int param_00073baf, int param_00073bb0, IntPtr param_00073bb1); // 0x000000018ABB4E2C-0x000000018ABB4ED4
-	internal static extern IntPtr EhCgiLwvPkqgjCyzTcXzaXhlhTCD(string param_00073bb2, uint param_00073bb3, int param_00073bb4, ref NwIzwEuvvoEuXLxYyuEhdQwOWVzA param_00073bb5, int param_00073bb6, int param_00073bb7, int param_00073bb8); // 0x0000000183BF9270-0x0000000183BF9390
-	internal static extern bool TqXaeispoJFPnbIQJiTmbSrTiZQsA(IntPtr param_00073bb9, out IntPtr param_00073bba, uint param_00073bbb, out uint param_00073bbc, IntPtr param_00073bbd); // 0x000000018ABB47AC-0x000000018ABB4868
-	internal static extern bool vzDSCTvFaOAiNKVFyODODxCmCxcgb(IntPtr param_00073bbe, out IntPtr param_00073bbf, uint param_00073bc0, IntPtr param_00073bc1, nnQCTPzFcMHWGWfoOtAsaDpWLiXO param_00073bc2); // 0x000000018ABB4D68-0x000000018ABB4E2C
-	internal static extern uint grKWUTxHrBekRHyGyqwzltCJmZbNA(IntPtr param_00073bc3, int param_00073bc4); // 0x000000018ABB4BDC-0x000000018ABB4C64
-	internal static extern bool aWmXAsuhvUfzVzqjYKyuJJTRUgTC(IntPtr param_00073bc5, IntPtr param_00073bc6, uint param_00073bc7, out uint param_00073bc8, IntPtr param_00073bc9); // 0x000000018ABB4B20-0x000000018ABB4BDC
-	internal static extern bool aWmXAsuhvUfzVzqjYKyuJJTRUgTC(IntPtr param_00073bca, IntPtr param_00073bcb, uint param_00073bcc, IntPtr param_00073bcd, IntPtr param_00073bce); // 0x000000018ABB4A64-0x000000018ABB4B20
-	internal static extern void sDUBlMDuCrPLxbyAXEXopezSVYlSA(IntPtr param_00073bcf, int param_00073bd0); // 0x0000000183BF78F0-0x0000000183BF7940
-	internal static extern bool mtSaPCodCIAqAUkfFPZjykoitoKn(IntPtr param_00073bd1, IntPtr param_00073bd2, out int param_00073bd3, bool param_00073bd4); // 0x000000018ABB4C64-0x000000018ABB4D10
-	internal static extern uint PMKTUsakHzcYBvHKnxuNGwJuJXWn(int param_00073bd5, bool param_00073bd6); // 0x000000018ABB460C-0x000000018ABB4694
-	public static extern bool FmnMJMxFTrSOZWCFWCkbwloVGQgH(IntPtr param_00073bd7, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073bd8, int param_00073bd9, ref int param_00073bda, IntPtr param_00073bdb, int param_00073bdc, ref int param_00073bdd); // 0x00000001835AB890-0x00000001835AB920
-	public static extern bool cjSszbhUuOYloPbmVElhxorJJlru(IntPtr param_00073bde, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073bdf, ref IVfAZcQUPLflQJNXBMuFPKDDBvSJ param_00073be0, ref ulong param_00073be1, IntPtr param_00073be2, int param_00073be3, ref int param_00073be4, uint param_00073be5); // 0x00000001835AC490-0x00000001835AC540
-	internal static extern bool JVoDOoRetbRCPIiFUOHmNjsvwsex(IntPtr param_00073be6, int param_00073be7, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073be8); // 0x00000001835AB230-0x00000001835AB280
-	internal static extern int KuhQvokhsUXrtnTEHOIjowvEUEXM(IntPtr param_00073be9); // 0x0000000183E047B0-0x0000000183E047E0
-	internal static extern bool rslFJoayUotdPsPPolEiTNhdjCfkA(IntPtr param_00073bea, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073beb, ref Guid param_00073bec, int param_00073bed, ref OdnntAHntokWiUdDHtrlcobDeFoF param_00073bee); // 0x00000001835AB1C0-0x00000001835AB230
-	internal static extern IntPtr RSwFhLkinlqsRryJsUguPSweSrdJA(ref Guid param_00073bef, string param_00073bf0, int param_00073bf1, int param_00073bf2); // 0x0000000183E047E0-0x0000000183E04850
-	internal static extern bool PLikBdjLDPBDKcMpgVqTOxXXSNfNA(IntPtr param_00073bf3, ref OdnntAHntokWiUdDHtrlcobDeFoF param_00073bf4, IntPtr param_00073bf5, int param_00073bf6, ref int param_00073bf7, IntPtr param_00073bf8); // 0x00000001835AC410-0x00000001835AC490
-	internal static extern bool PLikBdjLDPBDKcMpgVqTOxXXSNfNA(IntPtr param_00073bf9, ref OdnntAHntokWiUdDHtrlcobDeFoF param_00073bfa, ref zQUvgYtDBPnHxTlagLfRbHFoYHuA param_00073bfb, int param_00073bfc, ref int param_00073bfd, IntPtr param_00073bfe); // 0x0000000183826610-0x0000000183826730
-	internal static extern bool tkavVlneyLExcabIOnRTCxEMKhQjA(IntPtr param_00073bff, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_00073c00, IntPtr param_00073c01, uint param_00073c02, out uint param_00073c03); // 0x00000001835AC540-0x00000001835AC700
-	internal static extern int faXBkMDpQFrgQHDzZyEaQalcBcJW(out uint param_00073c04, uint param_00073c05, uint param_00073c06); // 0x00000001835ABCD0-0x00000001835ABD20
-	internal static extern int SRMyVaUNoYAmCAmVdQiWEadSxyNz(uint param_00073c07, IntPtr param_00073c08, int param_00073c09, uint param_00073c0a); // 0x00000001835AC060-0x00000001835AC0C0
-	internal static extern int jbbGNMciSfRZTAceYrCVNBnhIZNCb(out uint param_00073c0b, uint param_00073c0c, uint param_00073c0d); // 0x00000001835AC010-0x00000001835AC060
-	internal static extern int tUrpCGzHZDQfUMSYGckzHRoUgUij(out uint param_00073c0e, uint param_00073c0f, uint param_00073c10); // 0x0000000183E05840-0x0000000183E05890
-	internal static extern int jwFgcYxBnPLkNorEiHJaCRzbYYV(out uint param_00073c11, uint param_00073c12, uint param_00073c13); // 0x0000000183E054B0-0x0000000183E05500
-	internal static extern bool fMXBzDdBdGKLINYGUKUetTzjxGOtA(IntPtr param_00073c14, ref GdZTshfUFywPkphGdVzwMUmXwiZb param_00073c15); // 0x0000000183BFAF70-0x0000000183BFAFC0
-	internal static extern bool ZNzCNtgwgJZKDWYhYoqDzJxQHMiS(IntPtr param_00073c16, byte[] param_00073c17, int param_00073c18); // 0x000000018ABB49BC-0x000000018ABB4A64
-	internal static extern bool XtmaREUrnRpnBTGOWCRgKELJuyKSA(IntPtr param_00073c19, IntPtr param_00073c1a, int param_00073c1b); // 0x000000018ABB4920-0x000000018ABB49BC
-	internal static extern void EOgyeaeeUGjLwYeDvEDHAxqDoBms(ref Guid param_00073c1c); // 0x0000000183826B20-0x0000000183826BA0
-	internal static extern bool uixceIvdPJdaoJJymVkliGNeEdAaA(IntPtr param_00073c1d, ref IntPtr param_00073c1e); // 0x0000000183BFAF20-0x0000000183BFAF70
-	internal static extern bool BJJMzlwCocwgEVyYAexZMNYxwtz(IntPtr param_00073c1f); // 0x000000018470FE60-0x000000018470FEA0
-	internal static extern bool QVvpdVYdnjjLylHFdYIuXIfWCQDAA(IntPtr param_00073c20, IntPtr param_00073c21, int param_00073c22); // 0x000000018ABB4694-0x000000018ABB4730
-	internal static extern int BCWNrQNlFTqSlxykTDyYIBaCBZPP(IntPtr param_00073c23, ref wVeMkOOBFiFZpAAnIEqQLLFkoZNAA param_00073c24); // 0x0000000183BFAE50-0x0000000183BFAF20
-	internal static extern int DSxRQZVleAiAANmrZyuFBqUxAFiQ(short param_00073c25, IntPtr param_00073c26, ref short param_00073c27, IntPtr param_00073c28); // 0x0000000183BFB5B0-0x0000000183BFB610
-	internal static extern bool CYbrFAVAccWinrZWyDmVXKtjtzqk(IntPtr param_00073c29, IntPtr param_00073c2a, int param_00073c2b); // 0x000000018ABB4350-0x000000018ABB43EC
-	internal static extern bool MCEXBgwAQbgGjLOtKDRGAMXmhtCJ(IntPtr param_00073c2c, IntPtr param_00073c2d, int param_00073c2e); // 0x000000018ABB450C-0x000000018ABB456C
-	internal static extern bool CVKCdCEMXUyTspWjgpKwyxyjOGAn(IntPtr param_00073c2f, IntPtr param_00073c30, int param_00073c31); // 0x000000018ABB42F0-0x000000018ABB4350
-	internal static extern int nXspMLbwoNOUldHkejknQQJCcfbZ(short param_00073c32, IntPtr param_00073c33, ref short param_00073c34, IntPtr param_00073c35); // 0x0000000183BF7940-0x0000000183BF79A0
-	public static extern int EaNAkBPFRrZGjEPWWKtpUeIpPqyI(int param_00073c36, ushort param_00073c37, ushort param_00073c38, IntPtr param_00073c39, ref uint param_00073c3a, IntPtr param_00073c3b, IntPtr param_00073c3c, uint param_00073c3d); // 0x000000018ABB446C-0x000000018ABB450C
-	public static extern int UJbLHJlpDBEQFdwYfqlXzqRZEuMm(int param_00073c3e, ushort param_00073c3f, ushort param_00073c40, ushort param_00073c41, IntPtr param_00073c42, ushort param_00073c43, IntPtr param_00073c44, IntPtr param_00073c45, uint param_00073c46); // 0x000000018ABB4868-0x000000018ABB4920
-	public static extern int OzvgWaYsBvDVMJjsVKCaLmZqBHaiA(int param_00073c47, IntPtr param_00073c48, ref uint param_00073c49, IntPtr param_00073c4a, IntPtr param_00073c4b, uint param_00073c4c); // 0x000000018ABB456C-0x000000018ABB460C
-	public static extern int ECxiAMdxpFiEHNqdGuupiYZFClnHA(int param_00073c4d, IntPtr param_00073c4e); // 0x000000018ABB43EC-0x000000018ABB446C
+	internal static extern bool RYrcvNGsskawASVJvvEVsabgNctg(IntPtr param_000aa511); // 0x000000018CDA9024-0x000000018CDA90A4
+	internal static extern bool ImbwHAAIHSaxgTyvDvEpzDXjhce(IntPtr param_000aa512, IntPtr param_000aa513); // 0x0000000185AFB7D0-0x0000000185AFB830
+	internal static extern bool WuPzsguhZYdvHaWbnBQQzUUJbDQpA(IntPtr param_000aa514); // 0x0000000185AFB830-0x0000000185AFB8E0
+	internal static extern IntPtr xCnufPBpKdYnhGCjrxEfDUZOthqJ(IntPtr param_000aa515, int param_000aa516, int param_000aa517, IntPtr param_000aa518); // 0x000000018CDA9738-0x000000018CDA97E0
+	internal static extern IntPtr EhCgiLwvPkqgjCyzTcXzaXhlhTCD(string param_000aa519, uint param_000aa51a, int param_000aa51b, ref NwIzwEuvvoEuXLxYyuEhdQwOWVzA param_000aa51c, int param_000aa51d, int param_000aa51e, int param_000aa51f); // 0x0000000185703FB0-0x00000001857040D0
+	internal static extern bool TqXaeispoJFPnbIQJiTmbSrTiZQsA(IntPtr param_000aa520, out IntPtr param_000aa521, uint param_000aa522, out uint param_000aa523, IntPtr param_000aa524); // 0x000000018CDA90A4-0x000000018CDA9160
+	internal static extern bool vzDSCTvFaOAiNKVFyODODxCmCxcgb(IntPtr param_000aa525, out IntPtr param_000aa526, uint param_000aa527, IntPtr param_000aa528, nnQCTPzFcMHWGWfoOtAsaDpWLiXO param_000aa529); // 0x000000018CDA9670-0x000000018CDA9738
+	internal static extern uint grKWUTxHrBekRHyGyqwzltCJmZbNA(IntPtr param_000aa52a, int param_000aa52b); // 0x000000018CDA94E0-0x000000018CDA9568
+	internal static extern bool aWmXAsuhvUfzVzqjYKyuJJTRUgTC(IntPtr param_000aa52c, IntPtr param_000aa52d, uint param_000aa52e, out uint param_000aa52f, IntPtr param_000aa530); // 0x000000018CDA9424-0x000000018CDA94E0
+	internal static extern bool aWmXAsuhvUfzVzqjYKyuJJTRUgTC(IntPtr param_000aa531, IntPtr param_000aa532, uint param_000aa533, IntPtr param_000aa534, IntPtr param_000aa535); // 0x000000018CDA9368-0x000000018CDA9424
+	internal static extern void sDUBlMDuCrPLxbyAXEXopezSVYlSA(IntPtr param_000aa536, int param_000aa537); // 0x00000001865C1620-0x00000001865C1670
+	internal static extern bool mtSaPCodCIAqAUkfFPZjykoitoKn(IntPtr param_000aa538, IntPtr param_000aa539, out int param_000aa53a, bool param_000aa53b); // 0x000000018CDA9568-0x000000018CDA9618
+	internal static extern uint PMKTUsakHzcYBvHKnxuNGwJuJXWn(int param_000aa53c, bool param_000aa53d); // 0x000000018CDA8EFC-0x000000018CDA8F88
+	public static extern bool FmnMJMxFTrSOZWCFWCkbwloVGQgH(IntPtr param_000aa53e, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa53f, int param_000aa540, ref int param_000aa541, IntPtr param_000aa542, int param_000aa543, ref int param_000aa544); // 0x0000000185A18BF0-0x0000000185A18C80
+	public static extern bool cjSszbhUuOYloPbmVElhxorJJlru(IntPtr param_000aa545, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa546, ref IVfAZcQUPLflQJNXBMuFPKDDBvSJ param_000aa547, ref ulong param_000aa548, IntPtr param_000aa549, int param_000aa54a, ref int param_000aa54b, uint param_000aa54c); // 0x0000000185A177F0-0x0000000185A178A0
+	internal static extern bool JVoDOoRetbRCPIiFUOHmNjsvwsex(IntPtr param_000aa54d, int param_000aa54e, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa54f); // 0x0000000185A18740-0x0000000185A18790
+	internal static extern int KuhQvokhsUXrtnTEHOIjowvEUEXM(IntPtr param_000aa550); // 0x000000018709CB50-0x000000018709CB80
+	internal static extern bool rslFJoayUotdPsPPolEiTNhdjCfkA(IntPtr param_000aa551, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa552, ref Guid param_000aa553, int param_000aa554, ref OdnntAHntokWiUdDHtrlcobDeFoF param_000aa555); // 0x0000000185A186D0-0x0000000185A18740
+	internal static extern IntPtr RSwFhLkinlqsRryJsUguPSweSrdJA(ref Guid param_000aa556, string param_000aa557, int param_000aa558, int param_000aa559); // 0x0000000186EA5500-0x0000000186EA5570
+	internal static extern bool PLikBdjLDPBDKcMpgVqTOxXXSNfNA(IntPtr param_000aa55a, ref OdnntAHntokWiUdDHtrlcobDeFoF param_000aa55b, IntPtr param_000aa55c, int param_000aa55d, ref int param_000aa55e, IntPtr param_000aa55f); // 0x0000000185A17930-0x0000000185A179B0
+	internal static extern bool PLikBdjLDPBDKcMpgVqTOxXXSNfNA(IntPtr param_000aa560, ref OdnntAHntokWiUdDHtrlcobDeFoF param_000aa561, ref zQUvgYtDBPnHxTlagLfRbHFoYHuA param_000aa562, int param_000aa563, ref int param_000aa564, IntPtr param_000aa565); // 0x00000001869C7CE0-0x00000001869C7E00
+	internal static extern bool tkavVlneyLExcabIOnRTCxEMKhQjA(IntPtr param_000aa566, ref ZBJNsrUqCLQBwhEksjgMQwyVNulB param_000aa567, IntPtr param_000aa568, uint param_000aa569, out uint param_000aa56a); // 0x0000000185A178A0-0x0000000185A17930
+	internal static extern int faXBkMDpQFrgQHDzZyEaQalcBcJW(out uint param_000aa56b, uint param_000aa56c, uint param_000aa56d); // 0x0000000185A19AB0-0x0000000185A19B00
+	internal static extern int SRMyVaUNoYAmCAmVdQiWEadSxyNz(uint param_000aa56e, IntPtr param_000aa56f, int param_000aa570, uint param_000aa571); // 0x0000000185A19880-0x0000000185A198E0
+	internal static extern int jbbGNMciSfRZTAceYrCVNBnhIZNCb(out uint param_000aa572, uint param_000aa573, uint param_000aa574); // 0x0000000185A198E0-0x0000000185A19930
+	internal static extern int tUrpCGzHZDQfUMSYGckzHRoUgUij(out uint param_000aa575, uint param_000aa576, uint param_000aa577); // 0x0000000185278C50-0x0000000185278CA0
+	internal static extern int jwFgcYxBnPLkNorEiHJaCRzbYYV(out uint param_000aa578, uint param_000aa579, uint param_000aa57a); // 0x00000001852788C0-0x0000000185278910
+	internal static extern bool fMXBzDdBdGKLINYGUKUetTzjxGOtA(IntPtr param_000aa57b, ref GdZTshfUFywPkphGdVzwMUmXwiZb param_000aa57c); // 0x0000000186D3A900-0x0000000186D3A950
+	internal static extern bool ZNzCNtgwgJZKDWYhYoqDzJxQHMiS(IntPtr param_000aa57d, byte[] param_000aa57e, int param_000aa57f); // 0x000000018CDA92BC-0x000000018CDA9368
+	internal static extern bool XtmaREUrnRpnBTGOWCRgKELJuyKSA(IntPtr param_000aa580, IntPtr param_000aa581, int param_000aa582); // 0x000000018CDA921C-0x000000018CDA92BC
+	internal static extern void EOgyeaeeUGjLwYeDvEDHAxqDoBms(ref Guid param_000aa583); // 0x0000000185AFCCC0-0x0000000185AFCD40
+	internal static extern bool uixceIvdPJdaoJJymVkliGNeEdAaA(IntPtr param_000aa584, ref IntPtr param_000aa585); // 0x00000001865C2010-0x00000001865C2060
+	internal static extern bool BJJMzlwCocwgEVyYAexZMNYxwtz(IntPtr param_000aa586); // 0x0000000186C1A970-0x0000000186C1A9B0
+	internal static extern bool QVvpdVYdnjjLylHFdYIuXIfWCQDAA(IntPtr param_000aa587, IntPtr param_000aa588, int param_000aa589); // 0x000000018CDA8F88-0x000000018CDA9024
+	internal static extern int BCWNrQNlFTqSlxykTDyYIBaCBZPP(IntPtr param_000aa58a, ref wVeMkOOBFiFZpAAnIEqQLLFkoZNAA param_000aa58b); // 0x00000001865C1F40-0x00000001865C2010
+	internal static extern int DSxRQZVleAiAANmrZyuFBqUxAFiQ(short param_000aa58c, IntPtr param_000aa58d, ref short param_000aa58e, IntPtr param_000aa58f); // 0x00000001865C15C0-0x00000001865C1620
+	internal static extern bool CYbrFAVAccWinrZWyDmVXKtjtzqk(IntPtr param_000aa590, IntPtr param_000aa591, int param_000aa592); // 0x000000018CDA8C30-0x000000018CDA8CD0
+	internal static extern bool MCEXBgwAQbgGjLOtKDRGAMXmhtCJ(IntPtr param_000aa593, IntPtr param_000aa594, int param_000aa595); // 0x000000018CDA8DF8-0x000000018CDA8E58
+	internal static extern bool CVKCdCEMXUyTspWjgpKwyxyjOGAn(IntPtr param_000aa596, IntPtr param_000aa597, int param_000aa598); // 0x000000018CDA8BD0-0x000000018CDA8C30
+	internal static extern int nXspMLbwoNOUldHkejknQQJCcfbZ(short param_000aa599, IntPtr param_000aa59a, ref short param_000aa59b, IntPtr param_000aa59c); // 0x0000000186E15190-0x0000000186E151F0
+	public static extern int EaNAkBPFRrZGjEPWWKtpUeIpPqyI(int param_000aa59d, ushort param_000aa59e, ushort param_000aa59f, IntPtr param_000aa5a0, ref uint param_000aa5a1, IntPtr param_000aa5a2, IntPtr param_000aa5a3, uint param_000aa5a4); // 0x000000018CDA8D54-0x000000018CDA8DF8
+	public static extern int UJbLHJlpDBEQFdwYfqlXzqRZEuMm(int param_000aa5a5, ushort param_000aa5a6, ushort param_000aa5a7, ushort param_000aa5a8, IntPtr param_000aa5a9, ushort param_000aa5aa, IntPtr param_000aa5ab, IntPtr param_000aa5ac, uint param_000aa5ad); // 0x000000018CDA9160-0x000000018CDA921C
+	public static extern int OzvgWaYsBvDVMJjsVKCaLmZqBHaiA(int param_000aa5ae, IntPtr param_000aa5af, ref uint param_000aa5b0, IntPtr param_000aa5b1, IntPtr param_000aa5b2, uint param_000aa5b3); // 0x000000018CDA8E58-0x000000018CDA8EFC
+	public static extern int ECxiAMdxpFiEHNqdGuupiYZFClnHA(int param_000aa5b4, IntPtr param_000aa5b5); // 0x000000018CDA8CD0-0x000000018CDA8D54
 }
 
-internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
+internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 79187
 {
 	// Fields
 	private static Rewired.Platforms.Platform GXaMQWLMYHxvakihbyXtNdLRZwcd; // 0x00
 
 	// Nested types
-	public enum JjlLXXcqMqcxzDtGZnlUJTjxredw : uint // TypeDefIndex: 53931
+	public enum JjlLXXcqMqcxzDtGZnlUJTjxredw : uint // TypeDefIndex: 79175
 	{
 		SDL_FIRSTEVENT = 0,
 		SDL_QUIT = 256,
@@ -8587,7 +8573,7 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		SDL_LASTEVENT = 65535
 	}
 
-	public struct WtYDlYGBazQlCIfNIIGpZwxTHFulA // TypeDefIndex: 53932
+	public struct WtYDlYGBazQlCIfNIIGpZwxTHFulA // TypeDefIndex: 79176
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8601,10 +8587,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public ushort VnheYvgFyqcMywLnySzvjCjWscEMA; // 0x12
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c73, uint param_00073c74, IntPtr param_00073c75); // 0x000000018ABB7B9C-0x000000018ABB7C28
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5da, uint param_000aa5db, IntPtr param_000aa5dc); // 0x000000018CDAC52C-0x000000018CDAC5B8
 	}
 
-	public struct nuPqVpafSULPUJReuwXEHVFGTqYo // TypeDefIndex: 53933
+	public struct nuPqVpafSULPUJReuwXEHVFGTqYo // TypeDefIndex: 79177
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8618,10 +8604,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public short FmdSXrJLQJYiSCJmoqvyCXHSOSmD; // 0x12
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c76, uint param_00073c77, IntPtr param_00073c78); // 0x000000018ABB91F4-0x000000018ABB9294
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5dd, uint param_000aa5de, IntPtr param_000aa5df); // 0x000000018CDADAB8-0x000000018CDADB58
 	}
 
-	public struct MpgatCrtHXZXKexKnssNnzqOxHkb // TypeDefIndex: 53934
+	public struct MpgatCrtHXZXKexKnssNnzqOxHkb // TypeDefIndex: 79178
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8633,10 +8619,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public byte jzbhfBnEYjRMcuwPXqZPPJqPVMfX; // 0x0F
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c79, uint param_00073c7a, IntPtr param_00073c7b); // 0x000000018ABB4ED4-0x000000018ABB4F54
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5e0, uint param_000aa5e1, IntPtr param_000aa5e2); // 0x000000018CDA97E0-0x000000018CDA9860
 	}
 
-	public struct ARLpXSGgShledzMXCkwiFbYQfzgq // TypeDefIndex: 53935
+	public struct ARLpXSGgShledzMXCkwiFbYQfzgq // TypeDefIndex: 79179
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8648,10 +8634,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public byte jzbhfBnEYjRMcuwPXqZPPJqPVMfX; // 0x0F
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c7c, uint param_00073c7d, IntPtr param_00073c7e); // 0x000000018ABAF630-0x000000018ABAF6B0
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5e3, uint param_000aa5e4, IntPtr param_000aa5e5); // 0x000000018CDA3EAC-0x000000018CDA3F2C
 	}
 
-	public struct XkfkMHwGKUjrAejsvknbmMNxlVxj // TypeDefIndex: 53936
+	public struct XkfkMHwGKUjrAejsvknbmMNxlVxj // TypeDefIndex: 79180
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8659,10 +8645,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public int zBSiICiRqsUlQKkfjtDXhKgQNPQk; // 0x08
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c7f, uint param_00073c80, IntPtr param_00073c81); // 0x000000018ABB7C28-0x000000018ABB7C9C
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5e6, uint param_000aa5e7, IntPtr param_000aa5e8); // 0x000000018CDAC5B8-0x000000018CDAC62C
 	}
 
-	public struct EEHintEoWqwtrulXqUuaStXrpcHl // TypeDefIndex: 53937
+	public struct EEHintEoWqwtrulXqUuaStXrpcHl // TypeDefIndex: 79181
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8676,10 +8662,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public ushort VnheYvgFyqcMywLnySzvjCjWscEMA; // 0x12
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c82, uint param_00073c83, IntPtr param_00073c84); // 0x000000018ABAF9A0-0x000000018ABAFA2C
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5e9, uint param_000aa5ea, IntPtr param_000aa5eb); // 0x000000018CDA4204-0x000000018CDA4290
 	}
 
-	public struct ZFIgyKFYAnbTAjavbvUFScwzweHVA // TypeDefIndex: 53938
+	public struct ZFIgyKFYAnbTAjavbvUFScwzweHVA // TypeDefIndex: 79182
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8691,10 +8677,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public byte jzbhfBnEYjRMcuwPXqZPPJqPVMfX; // 0x0F
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c85, uint param_00073c86, IntPtr param_00073c87); // 0x000000018ABB7CF8-0x000000018ABB7D78
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5ec, uint param_000aa5ed, IntPtr param_000aa5ee); // 0x000000018CDAC688-0x000000018CDAC708
 	}
 
-	public struct wEGFotndTOlmgYqzAoyIypxyoDcB // TypeDefIndex: 53939
+	public struct wEGFotndTOlmgYqzAoyIypxyoDcB // TypeDefIndex: 79183
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8702,10 +8688,10 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public int zBSiICiRqsUlQKkfjtDXhKgQNPQk; // 0x08
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_00073c88, uint param_00073c89, IntPtr param_00073c8a); // 0x000000018ABBB38C-0x000000018ABBB400
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(JjlLXXcqMqcxzDtGZnlUJTjxredw param_000aa5ef, uint param_000aa5f0, IntPtr param_000aa5f1); // 0x000000018CDAFC74-0x000000018CDAFCE8
 	}
 
-	public struct iFlWUPUplqnKICmxEXHwZclSsZxJ // TypeDefIndex: 53940
+	public struct iFlWUPUplqnKICmxEXHwZclSsZxJ // TypeDefIndex: 79184
 	{
 		// Fields
 		public JjlLXXcqMqcxzDtGZnlUJTjxredw IhWBKiERBWnyRQRTdQrbdYNSHuuM; // 0x00
@@ -8719,144 +8705,144 @@ internal class ERrmsitpcXDZelTYlGLEEisQnmaGA // TypeDefIndex: 53943
 		public wEGFotndTOlmgYqzAoyIypxyoDcB hZbTzmReTERBNKOIAxjoohpNVhtX; // 0x7C
 
 		// Methods
-		public void OuBkTAWCffoNeeupcONpZtGJgILD(IntPtr param_00073c8b); // 0x000000018ABB8EC8-0x000000018ABB9044
+		public void OuBkTAWCffoNeeupcONpZtGJgILD(IntPtr param_000aa5f2); // 0x000000018CDAD83C-0x000000018CDAD9D0
 	}
 
-	private class qYbtvLznmMJAIBgUTZLsEeMXGBFo // TypeDefIndex: 53941
+	private class qYbtvLznmMJAIBgUTZLsEeMXGBFo // TypeDefIndex: 79185
 	{
 		// Methods
-		public static extern int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_00073c8c); // 0x000000018ABBAE84-0x000000018ABBAEF4
-		public static extern void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018ABBB118-0x000000018ABBB180
-		public static extern int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018ABBA668-0x000000018ABBA6D0
-		public static extern int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_00073c8d); // 0x000000018ABBAE50-0x000000018ABBAE84
-		public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_00073c8e); // 0x000000018ABBB0A4-0x000000018ABBB118
-		private static extern IntPtr IWqTvEUOuYeLmIzLwLRzkDjsOPqWA(IntPtr param_00073c8f); // 0x000000018ABBA744-0x000000018ABBA7B8
-		public static extern Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_00073c90); // 0x000000018ABBA7B8-0x000000018ABBA848
-		public static extern Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_00073c91); // 0x000000018ABBACD0-0x000000018ABBAD58
-		public static extern int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_00073c92); // 0x000000018ABBB180-0x000000018ABBB1B4
-		public static extern int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_00073c93); // 0x000000018ABBA9D4-0x000000018ABBAA08
-		public static extern int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_00073c94); // 0x000000018ABBA92C-0x000000018ABBA960
-		public static extern int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_00073c95); // 0x000000018ABBB070-0x000000018ABBB0A4
-		public static extern IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_00073c96); // 0x000000018ABBA5F8-0x000000018ABBA668
-		public static extern void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_00073c97); // 0x000000018ABBAAF4-0x000000018ABBAB68
-		public static extern bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_00073c98); // 0x000000018ABBADA4-0x000000018ABBAE1C
-		public static extern bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_00073c99); // 0x000000018ABBB234-0x000000018ABBB2A8
-		public static extern IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_00073c9a); // 0x000000018ABBA848-0x000000018ABBA8B8
-		public static extern void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_00073c9b); // 0x000000018ABBA960-0x000000018ABBA9D4
-		public static extern bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_00073c9c); // 0x000000018ABBAA7C-0x000000018ABBAAF4
-		public static extern IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_00073c9d); // 0x000000018ABBABDC-0x000000018ABBAC50
-		public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_00073c9e); // 0x000000018ABBAEF4-0x000000018ABBAF68
-		private static extern IntPtr WehwYZSglWDUlLRFOEFmyNNiixis(IntPtr param_00073c9f); // 0x000000018ABBAB68-0x000000018ABBABDC
-		public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_00073ca0); // 0x000000018ABBAC50-0x000000018ABBACD0
-		private static extern IntPtr xrBYQeYkrICdseJJLmdJfKrjSswHA(Guid param_00073ca1); // 0x000000018ABBB1B4-0x000000018ABBB234
-		public static extern int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_00073ca2); // 0x000000018ABBAFDC-0x000000018ABBB070
-		public static extern void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_00073ca3); // 0x000000018ABBAF68-0x000000018ABBAFDC
-		public static extern IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_00073ca4); // 0x000000018ABBA8B8-0x000000018ABBA92C
-		public static extern int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_00073ca5); // 0x000000018ABBB2DC-0x000000018ABBB310
-		public static extern int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_00073ca6, float param_00073ca7, uint param_00073ca8); // 0x000000018ABBAD58-0x000000018ABBADA4
-		public static extern int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_00073ca9); // 0x000000018ABBAE1C-0x000000018ABBAE50
-		public static extern int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_00073caa); // 0x000000018ABBA6D0-0x000000018ABBA744
-		public static extern int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_00073cab); // 0x000000018ABBB2A8-0x000000018ABBB2DC
-		public static extern int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_00073cac); // 0x000000018ABBAA08-0x000000018ABBAA7C
+		public static extern int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_000aa5f3); // 0x000000018CDAF778-0x000000018CDAF7E8
+		public static extern void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018CDAFA0C-0x000000018CDAFA74
+		public static extern int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018CDAEF70-0x000000018CDAEFD8
+		public static extern int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_000aa5f4); // 0x000000018CDAF744-0x000000018CDAF778
+		public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_000aa5f5); // 0x000000018CDAF998-0x000000018CDAFA0C
+		private static extern IntPtr IWqTvEUOuYeLmIzLwLRzkDjsOPqWA(IntPtr param_000aa5f6); // 0x000000018CDAF04C-0x000000018CDAF0C0
+		public static extern Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_000aa5f7); // 0x000000018CDAF0C0-0x000000018CDAF148
+		public static extern Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_000aa5f8); // 0x000000018CDAF5CC-0x000000018CDAF650
+		public static extern int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_000aa5f9); // 0x000000018CDAFA74-0x000000018CDAFAA8
+		public static extern int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_000aa5fa); // 0x000000018CDAF2D4-0x000000018CDAF308
+		public static extern int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_000aa5fb); // 0x000000018CDAF22C-0x000000018CDAF260
+		public static extern int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_000aa5fc); // 0x000000018CDAF964-0x000000018CDAF998
+		public static extern IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_000aa5fd); // 0x000000018CDAEF00-0x000000018CDAEF70
+		public static extern void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_000aa5fe); // 0x000000018CDAF3F0-0x000000018CDAF464
+		public static extern bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_000aa5ff); // 0x000000018CDAF69C-0x000000018CDAF710
+		public static extern bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_000aa600); // 0x000000018CDAFB20-0x000000018CDAFB90
+		public static extern IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_000aa601); // 0x000000018CDAF148-0x000000018CDAF1B8
+		public static extern void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_000aa602); // 0x000000018CDAF260-0x000000018CDAF2D4
+		public static extern bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_000aa603); // 0x000000018CDAF37C-0x000000018CDAF3F0
+		public static extern IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_000aa604); // 0x000000018CDAF4D8-0x000000018CDAF54C
+		public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_000aa605); // 0x000000018CDAF7E8-0x000000018CDAF85C
+		private static extern IntPtr WehwYZSglWDUlLRFOEFmyNNiixis(IntPtr param_000aa606); // 0x000000018CDAF464-0x000000018CDAF4D8
+		public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_000aa607); // 0x000000018CDAF54C-0x000000018CDAF5CC
+		private static extern IntPtr xrBYQeYkrICdseJJLmdJfKrjSswHA(Guid param_000aa608); // 0x000000018CDAFAA8-0x000000018CDAFB20
+		public static extern int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_000aa609); // 0x000000018CDAF8D0-0x000000018CDAF964
+		public static extern void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_000aa60a); // 0x000000018CDAF85C-0x000000018CDAF8D0
+		public static extern IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_000aa60b); // 0x000000018CDAF1B8-0x000000018CDAF22C
+		public static extern int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_000aa60c); // 0x000000018CDAFBC4-0x000000018CDAFBF8
+		public static extern int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_000aa60d, float param_000aa60e, uint param_000aa60f); // 0x000000018CDAF650-0x000000018CDAF69C
+		public static extern int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_000aa610); // 0x000000018CDAF710-0x000000018CDAF744
+		public static extern int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_000aa611); // 0x000000018CDAEFD8-0x000000018CDAF04C
+		public static extern int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_000aa612); // 0x000000018CDAFB90-0x000000018CDAFBC4
+		public static extern int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_000aa613); // 0x000000018CDAF308-0x000000018CDAF37C
 	}
 
-	private class ZiFBslcUIoWqkgvaoOpVTkLNvMBfA // TypeDefIndex: 53942
+	private class ZiFBslcUIoWqkgvaoOpVTkLNvMBfA // TypeDefIndex: 79186
 	{
 		// Methods
-		public static extern int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_00073cad); // 0x000000018ABB8608-0x000000018ABB8678
-		public static extern void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018ABB889C-0x000000018ABB8904
-		public static extern int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018ABB7DE8-0x000000018ABB7E50
-		public static extern int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_00073cae); // 0x000000018ABB85D4-0x000000018ABB8608
-		public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_00073caf); // 0x000000018ABB8828-0x000000018ABB889C
-		private static extern IntPtr IWqTvEUOuYeLmIzLwLRzkDjsOPqWA(IntPtr param_00073cb0); // 0x000000018ABB7EC4-0x000000018ABB7F38
-		public static extern Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_00073cb1); // 0x000000018ABB7F38-0x000000018ABB7FC8
-		public static extern Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_00073cb2); // 0x000000018ABB8450-0x000000018ABB84DC
-		public static extern int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_00073cb3); // 0x000000018ABB8904-0x000000018ABB8938
-		public static extern int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_00073cb4); // 0x000000018ABB8154-0x000000018ABB8188
-		public static extern int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_00073cb5); // 0x000000018ABB80AC-0x000000018ABB80E0
-		public static extern int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_00073cb6); // 0x000000018ABB87F4-0x000000018ABB8828
-		public static extern IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_00073cb7); // 0x000000018ABB7D78-0x000000018ABB7DE8
-		public static extern void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_00073cb8); // 0x000000018ABB8274-0x000000018ABB82E8
-		public static extern bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_00073cb9); // 0x000000018ABB8528-0x000000018ABB85A0
-		public static extern bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_00073cba); // 0x000000018ABB89B4-0x000000018ABB8A2C
-		public static extern IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_00073cbb); // 0x000000018ABB7FC8-0x000000018ABB8038
-		public static extern void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_00073cbc); // 0x000000018ABB80E0-0x000000018ABB8154
-		public static extern bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_00073cbd); // 0x000000018ABB81FC-0x000000018ABB8274
-		public static extern IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_00073cbe); // 0x000000018ABB835C-0x000000018ABB83D0
-		public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_00073cbf); // 0x000000018ABB8678-0x000000018ABB86EC
-		private static extern IntPtr WehwYZSglWDUlLRFOEFmyNNiixis(IntPtr param_00073cc0); // 0x000000018ABB82E8-0x000000018ABB835C
-		public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_00073cc1); // 0x000000018ABB83D0-0x000000018ABB8450
-		private static extern IntPtr xrBYQeYkrICdseJJLmdJfKrjSswHA(Guid param_00073cc2); // 0x000000018ABB8938-0x000000018ABB89B4
-		public static extern int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_00073cc3); // 0x000000018ABB8760-0x000000018ABB87F4
-		public static extern void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_00073cc4); // 0x000000018ABB86EC-0x000000018ABB8760
-		public static extern IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_00073cc5); // 0x000000018ABB8038-0x000000018ABB80AC
-		public static extern int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_00073cc6); // 0x000000018ABB8A60-0x000000018ABB8A94
-		public static extern int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_00073cc7, float param_00073cc8, uint param_00073cc9); // 0x000000018ABB84DC-0x000000018ABB8528
-		public static extern int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_00073cca); // 0x000000018ABB85A0-0x000000018ABB85D4
-		public static extern int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_00073ccb); // 0x000000018ABB7E50-0x000000018ABB7EC4
-		public static extern int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_00073ccc); // 0x000000018ABB8A2C-0x000000018ABB8A60
-		public static extern int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_00073ccd); // 0x000000018ABB8188-0x000000018ABB81FC
+		public static extern int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_000aa614); // 0x000000018CDACF84-0x000000018CDACFF4
+		public static extern void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018CDAD218-0x000000018CDAD280
+		public static extern int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018CDAC778-0x000000018CDAC7E0
+		public static extern int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_000aa615); // 0x000000018CDACF50-0x000000018CDACF84
+		public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_000aa616); // 0x000000018CDAD1A4-0x000000018CDAD218
+		private static extern IntPtr IWqTvEUOuYeLmIzLwLRzkDjsOPqWA(IntPtr param_000aa617); // 0x000000018CDAC854-0x000000018CDAC8C8
+		public static extern Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_000aa618); // 0x000000018CDAC8C8-0x000000018CDAC950
+		public static extern Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_000aa619); // 0x000000018CDACDD4-0x000000018CDACE5C
+		public static extern int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_000aa61a); // 0x000000018CDAD280-0x000000018CDAD2B4
+		public static extern int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_000aa61b); // 0x000000018CDACADC-0x000000018CDACB10
+		public static extern int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_000aa61c); // 0x000000018CDACA34-0x000000018CDACA68
+		public static extern int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_000aa61d); // 0x000000018CDAD170-0x000000018CDAD1A4
+		public static extern IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_000aa61e); // 0x000000018CDAC708-0x000000018CDAC778
+		public static extern void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_000aa61f); // 0x000000018CDACBF8-0x000000018CDACC6C
+		public static extern bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_000aa620); // 0x000000018CDACEA8-0x000000018CDACF1C
+		public static extern bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_000aa621); // 0x000000018CDAD32C-0x000000018CDAD39C
+		public static extern IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_000aa622); // 0x000000018CDAC950-0x000000018CDAC9C0
+		public static extern void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_000aa623); // 0x000000018CDACA68-0x000000018CDACADC
+		public static extern bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_000aa624); // 0x000000018CDACB84-0x000000018CDACBF8
+		public static extern IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_000aa625); // 0x000000018CDACCE0-0x000000018CDACD54
+		public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_000aa626); // 0x000000018CDACFF4-0x000000018CDAD068
+		private static extern IntPtr WehwYZSglWDUlLRFOEFmyNNiixis(IntPtr param_000aa627); // 0x000000018CDACC6C-0x000000018CDACCE0
+		public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_000aa628); // 0x000000018CDACD54-0x000000018CDACDD4
+		private static extern IntPtr xrBYQeYkrICdseJJLmdJfKrjSswHA(Guid param_000aa629); // 0x000000018CDAD2B4-0x000000018CDAD32C
+		public static extern int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_000aa62a); // 0x000000018CDAD0DC-0x000000018CDAD170
+		public static extern void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_000aa62b); // 0x000000018CDAD068-0x000000018CDAD0DC
+		public static extern IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_000aa62c); // 0x000000018CDAC9C0-0x000000018CDACA34
+		public static extern int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_000aa62d); // 0x000000018CDAD3D0-0x000000018CDAD404
+		public static extern int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_000aa62e, float param_000aa62f, uint param_000aa630); // 0x000000018CDACE5C-0x000000018CDACEA8
+		public static extern int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_000aa631); // 0x000000018CDACF1C-0x000000018CDACF50
+		public static extern int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_000aa632); // 0x000000018CDAC7E0-0x000000018CDAC854
+		public static extern int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_000aa633); // 0x000000018CDAD39C-0x000000018CDAD3D0
+		public static extern int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_000aa634); // 0x000000018CDACB10-0x000000018CDACB84
 	}
 
 	// Methods
-	public static void zNxygNLCbLgQWIkDHlllTllbCkWN(Rewired.Platforms.Platform param_00073c54); // 0x000000018ABB0D30-0x000000018ABB0D6C
-	public static int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_00073c55); // 0x000000018ABB06D0-0x000000018ABB0774
-	public static void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018ABB0AA8-0x000000018ABB0B44
-	public static int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018ABAFAD0-0x000000018ABAFB6C
-	public static int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_00073c56); // 0x000000018ABB062C-0x000000018ABB06D0
-	public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_00073c57); // 0x000000018ABB0A04-0x000000018ABB0AA8
-	public static Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_00073c58); // 0x000000018ABAFC10-0x000000018ABAFCD8
-	public static Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_00073c59); // 0x000000018ABB0354-0x000000018ABB0418
-	public static int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_00073c5a); // 0x000000018ABB0B44-0x000000018ABB0BE8
-	public static int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_00073c5b); // 0x000000018ABAFF68-0x000000018ABB000C
-	public static int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_00073c5c); // 0x000000018ABAFE20-0x000000018ABAFEC4
-	public static int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_00073c5d); // 0x000000018ABB0960-0x000000018ABB0A04
-	public static IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_00073c5e); // 0x000000018ABAFA2C-0x000000018ABAFAD0
-	public static void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_00073c5f); // 0x000000018ABB0154-0x000000018ABB01F8
-	public static bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_00073c60); // 0x000000018ABB04E4-0x000000018ABB0588
-	public static bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_00073c61); // 0x000000018ABB0BE8-0x000000018ABB0C8C
-	public static IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_00073c62); // 0x000000018ABAFCD8-0x000000018ABAFD7C
-	public static void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_00073c63); // 0x000000018ABAFEC4-0x000000018ABAFF68
-	public static bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_00073c64); // 0x000000018ABB00B0-0x000000018ABB0154
-	public static IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_00073c65); // 0x000000018ABB01F8-0x000000018ABB029C
-	public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_00073c66); // 0x000000018ABB0774-0x000000018ABB0818
-	public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_00073c67); // 0x000000018ABB029C-0x000000018ABB0354
-	public static int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_00073c68); // 0x000000018ABB08BC-0x000000018ABB0960
-	public static void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_00073c69); // 0x000000018ABB0818-0x000000018ABB08BC
-	public static IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_00073c6a); // 0x000000018ABAFD7C-0x000000018ABAFE20
-	public static int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_00073c6b); // 0x000000018ABB0D6C-0x000000018ABB0E10
-	public static int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_00073c6c, float param_00073c6d, uint param_00073c6e); // 0x000000018ABB0418-0x000000018ABB04E4
-	public static int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_00073c6f); // 0x000000018ABB0588-0x000000018ABB062C
-	public static int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_00073c70); // 0x000000018ABAFB6C-0x000000018ABAFC10
-	public static int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_00073c71); // 0x000000018ABB0C8C-0x000000018ABB0D30
-	public static int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_00073c72); // 0x000000018ABB000C-0x000000018ABB00B0
+	public static void zNxygNLCbLgQWIkDHlllTllbCkWN(Rewired.Platforms.Platform param_000aa5bb); // 0x000000018CDA5594-0x000000018CDA55D0
+	public static int jwrJtgKjbbgPiEvPzIjyLvoCtpHE(uint param_000aa5bc); // 0x000000018CDA4F34-0x000000018CDA4FD8
+	public static void tqeQqIgZtGKzNcajBGIXRnLskZYM(); // 0x000000018CDA530C-0x000000018CDA53A8
+	public static int FlPITYNFTmoSbARzUSaLQMrOMOqc(); // 0x000000018CDA4334-0x000000018CDA43D0
+	public static int jtMkMQzzIZBUVMwQIAFkBFEmWivb(IntPtr param_000aa5bd); // 0x000000018CDA4E90-0x000000018CDA4F34
+	public static string tedOpxaNBSGgAWoWixwzWrgFqoQL(IntPtr param_000aa5be); // 0x000000018CDA5268-0x000000018CDA530C
+	public static Guid LuQdaCyDzrtQGUQqmEytwWAgfOYw(IntPtr param_000aa5bf); // 0x000000018CDA4474-0x000000018CDA453C
+	public static Guid ZIPzEXUFOeVjIAgnLFCepqkVKHJM(int param_000aa5c0); // 0x000000018CDA4BB8-0x000000018CDA4C7C
+	public static int vERLDthNGhXVoXIEPqNUoGHEEkEIA(IntPtr param_000aa5c1); // 0x000000018CDA53A8-0x000000018CDA544C
+	public static int PWTInrzAvACxKnQqxEWHVcrFdUNg(IntPtr param_000aa5c2); // 0x000000018CDA47CC-0x000000018CDA4870
+	public static int NNBTbfFuffRFbqDBUgrcqpINLrEu(IntPtr param_000aa5c3); // 0x000000018CDA4684-0x000000018CDA4728
+	public static int nVyFChLsZrfhaBbmqjMMxtRtfyFX(IntPtr param_000aa5c4); // 0x000000018CDA51C4-0x000000018CDA5268
+	public static IntPtr DppdmBqndqzcqMmSjilMoljGXHDB(int param_000aa5c5); // 0x000000018CDA4290-0x000000018CDA4334
+	public static void WVPXjSlbIxbDIjcYXENKhsSaYzCAB(IntPtr param_000aa5c6); // 0x000000018CDA49B8-0x000000018CDA4A5C
+	public static bool ammdgwfkSBjrtriRwGNWqoBgoViD(IntPtr param_000aa5c7); // 0x000000018CDA4D48-0x000000018CDA4DEC
+	public static bool yCHnHBjrrRHIabrzBFQYgVHXTDIS(int param_000aa5c8); // 0x000000018CDA544C-0x000000018CDA54F0
+	public static IntPtr MEHnTIhsJPTJLZVWwtLapocCBslU(int param_000aa5c9); // 0x000000018CDA453C-0x000000018CDA45E0
+	public static void OKxZCQOlAKuxosWnNfUSpAVtqCOU(IntPtr param_000aa5ca); // 0x000000018CDA4728-0x000000018CDA47CC
+	public static bool WHlNHJApSucVJmftrxByiJtrRFgB(IntPtr param_000aa5cb); // 0x000000018CDA4914-0x000000018CDA49B8
+	public static IntPtr YByIqufDeKtkEgnFNqxDdfMkIPqNB(IntPtr param_000aa5cc); // 0x000000018CDA4A5C-0x000000018CDA4B00
+	public static string kVQNMjyFRTnECAjDfOLwOrfoongs(IntPtr param_000aa5cd); // 0x000000018CDA4FD8-0x000000018CDA507C
+	public static string YsvKMokirpfvzgJIaASLQdhjBLAyA(Guid param_000aa5ce); // 0x000000018CDA4B00-0x000000018CDA4BB8
+	public static int luDrnAHGQGWZDDrfcgFDsOraUmUL(string param_000aa5cf); // 0x000000018CDA5120-0x000000018CDA51C4
+	public static void lUwudyWMKicvdDYOlOAiHMjSgEcj(IntPtr param_000aa5d0); // 0x000000018CDA507C-0x000000018CDA5120
+	public static IntPtr MHJxrABcIImHEyevoooKONwddsvQ(IntPtr param_000aa5d1); // 0x000000018CDA45E0-0x000000018CDA4684
+	public static int ztlzTIjgAXDKNEMgxnlhkQXrVnOD(IntPtr param_000aa5d2); // 0x000000018CDA55D0-0x000000018CDA5674
+	public static int amSFbSxgSxaxeNKePFRsBRhODgCj(IntPtr param_000aa5d3, float param_000aa5d4, uint param_000aa5d5); // 0x000000018CDA4C7C-0x000000018CDA4D48
+	public static int gaBBlfWoIYcnGKOiIRgLgVaTEaRCA(IntPtr param_000aa5d6); // 0x000000018CDA4DEC-0x000000018CDA4E90
+	public static int FsbyMkSMOpwrdHnSeRoaODVKANlH(IntPtr param_000aa5d7); // 0x000000018CDA43D0-0x000000018CDA4474
+	public static int zLuybkgsnsUtTrwghlaYJqRjseGt(IntPtr param_000aa5d8); // 0x000000018CDA54F0-0x000000018CDA5594
+	public static int RyzUoOVywYCGxBIgLHQLebPAhVll(IntPtr param_000aa5d9); // 0x000000018CDA4870-0x000000018CDA4914
 }
 
-internal abstract class awAAQgaTMaFquWqbjmYTlfVuPLmn : IntPtrWrapper // TypeDefIndex: 53944
+internal abstract class awAAQgaTMaFquWqbjmYTlfVuPLmn : IntPtrWrapper // TypeDefIndex: 79188
 {
 	// Constructors
-	public awAAQgaTMaFquWqbjmYTlfVuPLmn(IntPtr param_00073cce); // 0x0000000184D88BF0-0x0000000184D88C00
+	public awAAQgaTMaFquWqbjmYTlfVuPLmn(IntPtr param_000aa635); // 0x000000018561B5A0-0x000000018561B5B0
 }
 
-internal class emeCwsELnoJvwBwEcPKnJiieeMKWB : awAAQgaTMaFquWqbjmYTlfVuPLmn // TypeDefIndex: 53945
+internal class emeCwsELnoJvwBwEcPKnJiieeMKWB : awAAQgaTMaFquWqbjmYTlfVuPLmn // TypeDefIndex: 79189
 {
 	// Constructors
-	public emeCwsELnoJvwBwEcPKnJiieeMKWB(IntPtr param_00073ccf); // 0x0000000184D88BF0-0x0000000184D88C00
+	public emeCwsELnoJvwBwEcPKnJiieeMKWB(IntPtr param_000aa636); // 0x000000018561B5A0-0x000000018561B5B0
 }
 
-internal class vNRtVHTjVoyNCDmQcAzXxtkQARZr : emeCwsELnoJvwBwEcPKnJiieeMKWB // TypeDefIndex: 53946
+internal class vNRtVHTjVoyNCDmQcAzXxtkQARZr : emeCwsELnoJvwBwEcPKnJiieeMKWB // TypeDefIndex: 79190
 {
 	// Constructors
-	public vNRtVHTjVoyNCDmQcAzXxtkQARZr(IntPtr param_00073cd0); // 0x0000000184D88BF0-0x0000000184D88C00
+	public vNRtVHTjVoyNCDmQcAzXxtkQARZr(IntPtr param_000aa637); // 0x000000018561B5A0-0x000000018561B5B0
 }
 
-internal class vKhSWbjZBnXdiBtYsIvqFDDeKQgD : awAAQgaTMaFquWqbjmYTlfVuPLmn // TypeDefIndex: 53947
+internal class vKhSWbjZBnXdiBtYsIvqFDDeKQgD : awAAQgaTMaFquWqbjmYTlfVuPLmn // TypeDefIndex: 79191
 {
 	// Constructors
-	public vKhSWbjZBnXdiBtYsIvqFDDeKQgD(IntPtr param_00073cd1); // 0x0000000184D88BF0-0x0000000184D88C00
+	public vKhSWbjZBnXdiBtYsIvqFDDeKQgD(IntPtr param_000aa638); // 0x000000018561B5A0-0x000000018561B5B0
 }
 
-internal abstract class eymKPgAQNIgZhKCqIVYwnHlbhjdg : SATAzMAJRyYTzCBJGvFLRQVcCxJp // TypeDefIndex: 53948
+internal abstract class eymKPgAQNIgZhKCqIVYwnHlbhjdg : SATAzMAJRyYTzCBJGvFLRQVcCxJp // TypeDefIndex: 79192
 {
 	// Fields
 	public readonly awAAQgaTMaFquWqbjmYTlfVuPLmn WRVMLbifHBwQBLkFCpNYIkjmlyHS; // 0x10
@@ -8872,41 +8858,41 @@ internal abstract class eymKPgAQNIgZhKCqIVYwnHlbhjdg : SATAzMAJRyYTzCBJGvFLRQVcC
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x48
 
 	// Properties
-	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018ABB8E9C-0x000000018ABB8EB4 
-	public string FtcRGxQNIjALWmqPGdmabKWoWeGqA { get; } // 0x000000018ABB8B74-0x000000018ABB8B90 
-	public string SvmsnETUSlePEWPKjGqPgpeaQhBCb { get; } // 0x000000018ABB8B58-0x000000018ABB8B74 
-	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x000000018ABB8B90-0x000000018ABB8BAC 
-	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x000000018ABB8AD0-0x000000018ABB8AEC 
-	public PidVid eabRFvqklxoYMJPbeMmtEYziJBbB { get; } // 0x000000018ABB8E48-0x000000018ABB8E64 
-	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x000000018ABB8CE8-0x000000018ABB8D0C 
-	public virtual YwnGomAALbeQxCXpVQwIDgzNouDmA psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x00000001811EC580-0x00000001811EC590 
-	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x00000001812081B0-0x0000000181208610 
-	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x00000001811EC580-0x00000001811EC590 
-	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x00000001811F2A70-0x00000001811F2A80 
-	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x0000000184D86640-0x0000000184D86650 
+	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CDAD810-0x000000018CDAD828 
+	public string FtcRGxQNIjALWmqPGdmabKWoWeGqA { get; } // 0x000000018CDAD4E4-0x000000018CDAD500 
+	public string SvmsnETUSlePEWPKjGqPgpeaQhBCb { get; } // 0x000000018CDAD4C8-0x000000018CDAD4E4 
+	public int WrZJIhOLVdLWUIrJApfNbpXUMNdG { get; } // 0x000000018CDAD500-0x000000018CDAD51C 
+	public int KnragBIqiQeRNgMAwjMLFeBdfrAKB { get; } // 0x000000018CDAD440-0x000000018CDAD45C 
+	public PidVid eabRFvqklxoYMJPbeMmtEYziJBbB { get; } // 0x000000018CDAD7BC-0x000000018CDAD7D8 
+	public Guid lAPlbdTpUUTlIXjXMGhYOvVvirGw { get; } // 0x000000018CDAD658-0x000000018CDAD67C 
+	public virtual YwnGomAALbeQxCXpVQwIDgzNouDmA psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x0000000185829EC0-0x0000000185829ED0 
+	public bool tLrAyVcCEurtcBKhkxyJlRolMCZB { get; } // 0x00000001843FFFF0-0x0000000184400000 
+	public Rewired.Controller.Extension pRKzCmAPObGnLKFLapCPeGiCIBrub { get; } // 0x0000000185829EC0-0x0000000185829ED0 
+	public bool xqUYbLPLrmFdyZFIgZvzennsaPdQ { get; } // 0x000000018225E070-0x000000018225E080 
+	public int JRFeOiKXgtgggVSSKsmUhCRRAWyd { get; } // 0x000000018226F000-0x000000018226F010 
 
 	// Constructors
-	protected eymKPgAQNIgZhKCqIVYwnHlbhjdg(awAAQgaTMaFquWqbjmYTlfVuPLmn param_00073cd2, EAUUbKQFcztOaxVulmGcrJehPchk param_00073cd3, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_00073cd4); // 0x000000018ABB8C14-0x000000018ABB8C70
+	protected eymKPgAQNIgZhKCqIVYwnHlbhjdg(awAAQgaTMaFquWqbjmYTlfVuPLmn param_000aa639, EAUUbKQFcztOaxVulmGcrJehPchk param_000aa63a, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_000aa63b); // 0x000000018CDAD584-0x000000018CDAD5E0
 
 	// Methods
-	public virtual void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x000000018ABB8AEC-0x000000018ABB8B0C
-	public virtual void cRSJGojFjxojRfSBwUsHksZOrqPe(); // 0x000000018ABB8C70-0x000000018ABB8C94
-	private void xPBdvUPjjzkXVCZTuDzSdjNkafrP(); // 0x000000018ABB8E64-0x000000018ABB8E9C
+	public virtual void DKVpNyqREOIVACgmSVaaAXYjPvP(); // 0x000000018CDAD45C-0x000000018CDAD47C
+	public virtual void cRSJGojFjxojRfSBwUsHksZOrqPe(); // 0x000000018CDAD5E0-0x000000018CDAD604
+	private void xPBdvUPjjzkXVCZTuDzSdjNkafrP(); // 0x000000018CDAD7D8-0x000000018CDAD810
 	public abstract void Update(UpdateLoopType updateLoop);
 	public abstract void UpdateFinished();
-	public void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x00000001841E1670-0x00000001841E1680
-	public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x00000001841E1670-0x00000001841E1680
-	public virtual bool ktgGdIfNDRudeuiYQdNnefAmyiVaA(); // 0x000000018ABB8E28-0x000000018ABB8E48
-	public void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_00073cd6, float param_00073cd7, bool param_00073cd8); // 0x000000018ABB8D0C-0x000000018ABB8E28
-	public void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018ABB8C94-0x000000018ABB8CE8
-	public void Dispose(); // 0x000000018ABB8B0C-0x000000018ABB8B58
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABB8BB8-0x000000018ABB8C14
-	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073cd9); // 0x000000018ABB8BAC-0x000000018ABB8BB8
+	public void ZoGbtSrjNkpybJlqlhkJDQCcPlkF(); // 0x0000000186805BA0-0x0000000186805BB0
+	public void IoyeuUADILkjyEidcCIyeCInNLwS(); // 0x0000000186805BA0-0x0000000186805BB0
+	public virtual bool ktgGdIfNDRudeuiYQdNnefAmyiVaA(); // 0x000000018CDAD79C-0x000000018CDAD7BC
+	public void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_000aa63d, float param_000aa63e, bool param_000aa63f); // 0x000000018CDAD67C-0x000000018CDAD79C
+	public void eEnRZrPQkNXhsmIjYHcmHsAiBpVj(); // 0x000000018CDAD604-0x000000018CDAD658
+	public void Dispose(); // 0x000000018CDAD47C-0x000000018CDAD4C8
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDAD528-0x000000018CDAD584
+	protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa640); // 0x000000018CDAD51C-0x000000018CDAD528
 	protected abstract void FWwXtpLDXpNEVxDZFIrCEZiSGYLi();
 	protected abstract void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA();
 }
 
-internal enum mRjzAKSnuWBoVcYwzfxaYuEXQlkL : byte // TypeDefIndex: 53949
+internal enum mRjzAKSnuWBoVcYwzfxaYuEXQlkL : byte // TypeDefIndex: 79193
 {
 	Button = 0,
 	Axis = 1,
@@ -8914,13 +8900,13 @@ internal enum mRjzAKSnuWBoVcYwzfxaYuEXQlkL : byte // TypeDefIndex: 53949
 	Ball = 3
 }
 
-internal enum ItgnJOvMvArQEKCRZgvhggJrcdcBb // TypeDefIndex: 53950
+internal enum ItgnJOvMvArQEKCRZgvhggJrcdcBb // TypeDefIndex: 79194
 {
 	Joystick = 0,
 	Gamepad = 1
 }
 
-internal enum YwnGomAALbeQxCXpVQwIDgzNouDmA // TypeDefIndex: 53951
+internal enum YwnGomAALbeQxCXpVQwIDgzNouDmA // TypeDefIndex: 79195
 {
 	Joystick = 0,
 	Gamepad = 1,
@@ -8928,21 +8914,21 @@ internal enum YwnGomAALbeQxCXpVQwIDgzNouDmA // TypeDefIndex: 53951
 	Keyboard = 3
 }
 
-internal class HMtmYXFGOgHuhDFfOFddFYSgYpDVA : dnxyCjpDlDvOdxTyzeYVqByiyZzK // TypeDefIndex: 53952
+internal class HMtmYXFGOgHuhDFfOFddFYSgYpDVA : dnxyCjpDlDvOdxTyzeYVqByiyZzK // TypeDefIndex: 79196
 {
 	// Properties
-	public override YwnGomAALbeQxCXpVQwIDgzNouDmA psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+	public override YwnGomAALbeQxCXpVQwIDgzNouDmA psAUfTCmGaZDidaHRsWjLEaznECN { get; } // 0x00000001872328C0-0x00000001872328D0 
 
 	// Constructors
-	public HMtmYXFGOgHuhDFfOFddFYSgYpDVA(vNRtVHTjVoyNCDmQcAzXxtkQARZr param_00073cda, EAUUbKQFcztOaxVulmGcrJehPchk param_00073cdb); // 0x000000018ABB3F64-0x000000018ABB3F98
+	public HMtmYXFGOgHuhDFfOFddFYSgYpDVA(vNRtVHTjVoyNCDmQcAzXxtkQARZr param_000aa641, EAUUbKQFcztOaxVulmGcrJehPchk param_000aa642); // 0x000000018CDA8844-0x000000018CDA8878
 
 	// Methods
-	public override bool ktgGdIfNDRudeuiYQdNnefAmyiVaA(); // 0x000000018ABB3F98-0x000000018ABB3FB8
-	protected override void FWwXtpLDXpNEVxDZFIrCEZiSGYLi(); // 0x000000018ABB3EDC-0x000000018ABB3F64
-	protected override void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018ABB3E74-0x000000018ABB3EDC
+	public override bool ktgGdIfNDRudeuiYQdNnefAmyiVaA(); // 0x000000018CDA8878-0x000000018CDA8898
+	protected override void FWwXtpLDXpNEVxDZFIrCEZiSGYLi(); // 0x000000018CDA87BC-0x000000018CDA8844
+	protected override void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018CDA8750-0x000000018CDA87BC
 }
 
-internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefIndex: 53958
+internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefIndex: 79202
 {
 	// Fields
 	private IInputSource IAmByAEMxeEeStLlLVFgPdffNLub; // 0x38
@@ -8960,16 +8946,16 @@ internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefInd
 
 	// Properties
 	[CustomObfuscation(rename = false)]
-	public override int deviceCount { get; } // 0x0000000184D863D0-0x0000000184D863E0 
+	public override int deviceCount { get; } // 0x00000001872330A0-0x00000001872330B0 
 	[CustomObfuscation(rename = false)]
-	public override PlatformInputManager primaryInputManager { get; } // 0x0000000184D86230-0x0000000184D86240 
+	public override PlatformInputManager primaryInputManager { get; } // 0x0000000187232F80-0x0000000187232F90 
 	[CustomObfuscation(rename = false)]
-	public override IInputSource inputSource { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+	public override IInputSource inputSource { get; } // 0x0000000182986470-0x0000000182986480 
 	[CustomObfuscation(rename = false)]
-	public override InputSource inputSourceType { get; } // 0x0000000184DA89E0-0x0000000184DA89F0 
+	public override InputSource inputSourceType { get; } // 0x0000000187239D90-0x0000000187239DA0 
 
 	// Nested types
-	private class NzfnZqexdZgkSScFXWJZEzeOWPul : IInputManagerJoystick // TypeDefIndex: 53953
+	private class NzfnZqexdZgkSScFXWJZEzeOWPul : IInputManagerJoystick // TypeDefIndex: 79197
 	{
 		// Fields
 		private int SAwUWSkGKioQPDUaFBSUbXjjqYIM; // 0x10
@@ -9005,73 +8991,73 @@ internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefInd
 
 		// Properties
 		[CustomObfuscation(rename = false)]
-		public int rewiredId { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public int rewiredId { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x0000000182234E90-0x0000000182234EA0
 		[CustomObfuscation(rename = false)]
-		public int inputManagerId { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int inputManagerId { get; set; } // 0x0000000182971EE0-0x0000000182971EF0 0x000000018275FD70-0x000000018275FD80
 		[CustomObfuscation(rename = false)]
-		public string name { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public string name { get; } // 0x0000000182262130-0x0000000182262140 
 		[CustomObfuscation(rename = false)]
-		public long? systemId { get; } // 0x000000018ABB5F04-0x000000018ABB5F64 
+		public long? systemId { get; } // 0x000000018CDAA864-0x000000018CDAA8C4 
 		[CustomObfuscation(rename = false)]
-		public int unityId { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public int unityId { get; } // 0x0000000185829EC0-0x0000000185829ED0 
 		[CustomObfuscation(rename = false)]
-		public Guid instanceGuid { get; } // 0x0000000184D87E00-0x0000000184D87E10 
+		public Guid instanceGuid { get; } // 0x0000000187234DB0-0x0000000187234DC0 
 		[CustomObfuscation(rename = false)]
-		public Guid persistentGuid { get; } // 0x0000000184D87E00-0x0000000184D87E10 
+		public Guid persistentGuid { get; } // 0x0000000187234DB0-0x0000000187234DC0 
 		[CustomObfuscation(rename = false)]
-		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
+		public Rewired.Controller.Extension extension { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018723BB00-0x000000018723BB10 0x0000000188D9C9D0-0x0000000188D9C9E4
 
 		// Constructors
-		public NzfnZqexdZgkSScFXWJZEzeOWPul(Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_00073d03); // 0x000000018ABB5EDC-0x000000018ABB5F04
+		public NzfnZqexdZgkSScFXWJZEzeOWPul(Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000aa66a); // 0x000000018CDAA83C-0x000000018CDAA864
 
 		// Methods
 		[CustomObfuscation(rename = false)]
-		public void SetVibration(float amount, int motorIndex); // 0x000000018ABB5C1C-0x000000018ABB5C40
+		public void SetVibration(float amount, int motorIndex); // 0x000000018CDAA574-0x000000018CDAA598
 		[CustomObfuscation(rename = false)]
-		public void StopVibration(); // 0x00000001841E1670-0x00000001841E1680
-		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018ABB64E4-0x000000018ABB668C
-		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d04); // 0x000000018ABB6748-0x000000018ABB6834
+		public void StopVibration(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018CDAAE54-0x000000018CDAB008
+		public void zdydrJEThCgTgeIKlxbRirIgPrdgB(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa66b); // 0x000000018CDAB0D0-0x000000018CDAB1C0
 		[CustomObfuscation(rename = false)]
-		public void Update(); // 0x000000018ABB5D9C-0x000000018ABB5E10
+		public void Update(); // 0x000000018CDAA6F4-0x000000018CDAA768
 		[CustomObfuscation(rename = false)]
-		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018ABB5290-0x000000018ABB53E4
-		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d06); // 0x000000018ABB53E4-0x000000018ABB54B0
-		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018ABB5BBC-0x000000018ABB5C1C
+		public void FillData(ControllerDataUpdater dataUpdater); // 0x000000018CDA9B9C-0x000000018CDA9CEC
+		public int HzPmTNZHjTeMRqJVTLSBKHKRLNFG(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa66d); // 0x000000018CDA9CEC-0x000000018CDA9E08
+		private BridgedControllerHWInfo QaexLfVSNbNHhboOvHEvgYdhcbmt(); // 0x000000018CDAA514-0x000000018CDAA574
 		[CustomObfuscation(rename = false)]
-		public BridgedController ToBridgedController(); // 0x000000018ABB5CD8-0x000000018ABB5D38
+		public BridgedController ToBridgedController(); // 0x000000018CDAA630-0x000000018CDAA690
 		[CustomObfuscation(rename = false)]
-		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018ABB5D38-0x000000018ABB5D9C
-		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018ABB56A8-0x000000018ABB5790
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018ABB668C-0x000000018ABB6748
-		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_SDL2_Base.Axis param_00073d07, int param_00073d08); // 0x000000018ABB5E10-0x000000018ABB5EAC
-		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_SDL2_Base.Button param_00073d09, int param_00073d0a); // 0x000000018ABB5C40-0x000000018ABB5CD8
-		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_SDL2_Base.Axis param_00073d0b); // 0x000000018ABB5140-0x000000018ABB5290
-		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_SDL2_Base.Button param_00073d0c); // 0x000000018ABB5F64-0x000000018ABB6238
-		private bool nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_00073d0d, int param_00073d0e, HatType param_00073d0f); // 0x000000018ABB6238-0x000000018ABB62D4
-		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_00073d10, Rewired.Data.Mapping.AxisDirection param_00073d11); // 0x000000018AB842E0-0x000000018AB8432C
-		private ControlDeviceType BCgWEkBQDSIocFrfafoaaDZZIqEv(YwnGomAALbeQxCXpVQwIDgzNouDmA param_00073d12); // 0x000000018ABB5114-0x000000018ABB5140
-		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018ABB5790-0x000000018ABB5BBC
-		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018ABB54B0-0x000000018ABB56A8
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_00073d13); // 0x000000018ABB63D0-0x000000018ABB64E4
-		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_00073d14); // 0x000000018ABB62D4-0x000000018ABB63D0
-		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018ABB4F54-0x000000018ABB5114
-		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d15, NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d16); // 0x000000018AB0699C-0x000000018AB069CC
-		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d17, NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d18); // 0x000000018ABB5EAC-0x000000018ABB5EDC
+		public ControllerDisconnectedEventArgs ToControllerDisconnectedEventArgs(); // 0x000000018CDAA690-0x000000018CDAA6F4
+		private void NkoqbCbQUJeDuCjzLLadeyqGfntS(); // 0x000000018CDAA000-0x000000018CDAA0F4
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(); // 0x000000018CDAB008-0x000000018CDAB0D0
+		private void UxgsasKuGqopgQwFFISfZULSApaI(HardwareJoystickMap.Platform_SDL2_Base.Axis param_000aa66e, int param_000aa66f); // 0x000000018CDAA768-0x000000018CDAA804
+		private void SlxylFVFbDNoNznWgcjBPYhvekkC(HardwareJoystickMap.Platform_SDL2_Base.Button param_000aa670, int param_000aa671); // 0x000000018CDAA598-0x000000018CDAA630
+		private float DYxtgWHqYudqjBhVQJKzjymElHwy(HardwareJoystickMap.Platform_SDL2_Base.Axis param_000aa672); // 0x000000018CDA9A4C-0x000000018CDA9B9C
+		private bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(HardwareJoystickMap.Platform_SDL2_Base.Button param_000aa673); // 0x000000018CDAA8C4-0x000000018CDAABA8
+		private bool nRdiXbbkJNZLWvmBZlGjEqPPBccI(int param_000aa674, int param_000aa675, HatType param_000aa676); // 0x000000018CDAABA8-0x000000018CDAAC44
+		private float mSxgldHAJNIiJDyPeUSIRNKVYLSqb(int param_000aa677, Rewired.Data.Mapping.AxisDirection param_000aa678); // 0x000000018CD78290-0x000000018CD782DC
+		private ControlDeviceType BCgWEkBQDSIocFrfafoaaDZZIqEv(YwnGomAALbeQxCXpVQwIDgzNouDmA param_000aa679); // 0x000000018CDA9A20-0x000000018CDA9A4C
+		private void ODjDNosGTVTcApOFJHPRXXJKAaMW(); // 0x000000018CDAA0F4-0x000000018CDAA514
+		private string IeuDBTyfoXaFRBEPsPJzcxogdisx(); // 0x000000018CDA9E08-0x000000018CDAA000
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedControllerHWInfo param_000aa67a); // 0x000000018CDAAD40-0x000000018CDAAE54
+		private void nTCBmuLlaOPLgCgiTpWPxqNDfOdw(BridgedController param_000aa67b); // 0x000000018CDAAC44-0x000000018CDAAD40
+		private UnknownControllerHat[] AksIjPlBzYIerpYGUHpsdbhDSeVW(); // 0x000000018CDA9860-0x000000018CDA9A20
+		public static int PUwZSLuKHRgBeBIdtZbaoZgHIMdBA(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa67c, NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa67d); // 0x000000018CCF98EC-0x000000018CCF9924
+		public static int ZTOwqxDJXpohSLyPoOMAhofMtKMo(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa67e, NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa67f); // 0x000000018CDAA804-0x000000018CDAA83C
 	}
 
-	private class oUOKGHnKbmgVUnxustBbqqMKFIAR // TypeDefIndex: 53957
+	private class oUOKGHnKbmgVUnxustBbqqMKFIAR // TypeDefIndex: 79201
 	{
 		// Fields
 		private List<JVfHduEdjteOzOpMhmxTIlGBvTXP> kfYfqEcEuytPhEMEULSfGPpdWoee; // 0x10
 
 		// Nested types
-		public enum fJVfptvxSiGstmLDuwjqSLUyzAnG // TypeDefIndex: 53954
+		public enum fJVfptvxSiGstmLDuwjqSLUyzAnG // TypeDefIndex: 79198
 		{
 			Exact = 0,
 			Approximate = 1
 		}
 
-		public class JVfHduEdjteOzOpMhmxTIlGBvTXP // TypeDefIndex: 53955
+		public class JVfHduEdjteOzOpMhmxTIlGBvTXP // TypeDefIndex: 79199
 		{
 			// Fields
 			public int ZewBubFBTMGdguZhicDjJwXDMzqL; // 0x10
@@ -9083,14 +9069,14 @@ internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefInd
 			public int GLSLJeVDquUKRLDTtYNqebBYfdCK; // 0x40
 
 			// Constructors
-			public JVfHduEdjteOzOpMhmxTIlGBvTXP(); // 0x00000001841E1670-0x00000001841E1680
+			public JVfHduEdjteOzOpMhmxTIlGBvTXP(); // 0x0000000186805BA0-0x0000000186805BB0
 
 			// Methods
-			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d1f, fJVfptvxSiGstmLDuwjqSLUyzAnG param_00073d20); // 0x000000018ABC71C8-0x000000018ABC72B4
+			public bool HzPmTNZHjTeMRqJVTLSBKHKRLNFG(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa686, fJVfptvxSiGstmLDuwjqSLUyzAnG param_000aa687); // 0x000000018CDBB8A4-0x000000018CDBB9F4
 		}
 
 		[CompilerGenerated]
-		private sealed class nKrAmqahJMUsOOFjEQdTCPNJLcXfB : IEnumerable<JVfHduEdjteOzOpMhmxTIlGBvTXP>, IEnumerator<JVfHduEdjteOzOpMhmxTIlGBvTXP> // TypeDefIndex: 53956
+		private sealed class nKrAmqahJMUsOOFjEQdTCPNJLcXfB : IEnumerable<JVfHduEdjteOzOpMhmxTIlGBvTXP>, IEnumerator<JVfHduEdjteOzOpMhmxTIlGBvTXP> // TypeDefIndex: 79200
 		{
 			// Fields
 			private int fYQgehhaxgmucoHwUcKeBQGOPxQf; // 0x10
@@ -9105,75 +9091,75 @@ internal class EUduSDIlhfiaIBoNLnCGNzHdzizb : PlatformInputManager // TypeDefInd
 			private int JbCuPbQlPJerRbkBryzmjprgTJnI; // 0x4C
 
 			// Properties
-			JVfHduEdjteOzOpMhmxTIlGBvTXP IEnumerator<Rewired.InputSources.SDL2.SDL2InputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
-			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			JVfHduEdjteOzOpMhmxTIlGBvTXP IEnumerator<Rewired.InputSources.SDL2.SDL2InputManager.JoystickRecords.Record>.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182234E30-0x0000000182234E40 
 
 			// Constructors
 			[DebuggerHidden]
-			public nKrAmqahJMUsOOFjEQdTCPNJLcXfB(int param_00073d21); // 0x00000001891B1F10-0x00000001891B1F44
+			public nKrAmqahJMUsOOFjEQdTCPNJLcXfB(int param_000aa688); // 0x000000018B707D6C-0x000000018B707DA0
 
 			// Methods
 			[DebuggerHidden]
-			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
-			private bool MoveNext(); // 0x000000018ABCCEEC-0x000000018ABCCFE4
+			void IDisposable.Dispose(); // 0x0000000186805BA0-0x0000000186805BB0
+			private bool MoveNext(); // 0x000000018CDC17E8-0x000000018CDC18EC
 			[DebuggerHidden]
-			void IEnumerator.Reset(); // 0x000000018ABCD0A8-0x000000018ABCD0F4
+			void IEnumerator.Reset(); // 0x000000018CDC19B0-0x000000018CDC19FC
 			[DebuggerHidden]
-			IEnumerator<JVfHduEdjteOzOpMhmxTIlGBvTXP> System.Collections.Generic.IEnumerable<Rewired.InputSources.SDL2.SDL2InputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018ABCCFE4-0x000000018ABCD0A0
+			IEnumerator<JVfHduEdjteOzOpMhmxTIlGBvTXP> System.Collections.Generic.IEnumerable<Rewired.InputSources.SDL2.SDL2InputManager.JoystickRecords.Record>.GetEnumerator(); // 0x000000018CDC18EC-0x000000018CDC19A8
 			[DebuggerHidden]
-			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018ABCD0A0-0x000000018ABCD0A8
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018CDC19A8-0x000000018CDC19B0
 		}
 
 		// Constructors
-		public oUOKGHnKbmgVUnxustBbqqMKFIAR(); // 0x000000018ABB93BC-0x000000018ABB9434
+		public oUOKGHnKbmgVUnxustBbqqMKFIAR(); // 0x000000018CDADCA4-0x000000018CDADD1C
 
 		// Methods
-		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d19); // 0x000000018ABB9434-0x000000018ABB96E0
-		public IEnumerable<JVfHduEdjteOzOpMhmxTIlGBvTXP> rPEMzZmJunpFkQUNyRKTxEVSsvJu(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073d1a, fJVfptvxSiGstmLDuwjqSLUyzAnG param_00073d1b); // 0x000000018ABB96E0-0x000000018ABB9778
-		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_00073d1c, Guid param_00073d1d, int param_00073d1e); // 0x000000018ABB9294-0x000000018ABB93BC
+		public void oeWKkKFoQYQjZrnTprfFYxpVhrZv(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa680); // 0x000000018CDADD1C-0x000000018CDADFCC
+		public IEnumerable<JVfHduEdjteOzOpMhmxTIlGBvTXP> rPEMzZmJunpFkQUNyRKTxEVSsvJu(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa681, fJVfptvxSiGstmLDuwjqSLUyzAnG param_000aa682); // 0x000000018CDADFCC-0x000000018CDAE064
+		private void QKCfzjnPNjViQblauEfiHIvbjBzFA(int param_000aa683, Guid param_000aa684, int param_000aa685); // 0x000000018CDADB58-0x000000018CDADCA4
 	}
 
 	// Constructors
-	public EUduSDIlhfiaIBoNLnCGNzHdzizb(ConfigVars param_00073cdc, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_00073cdd, Func<int> param_00073cde, bool param_00073cdf, bool param_00073ce0, bool param_00073ce1); // 0x000000018ABB1F44-0x000000018ABB2178
+	public EUduSDIlhfiaIBoNLnCGNzHdzizb(ConfigVars param_000aa643, Func<BridgedControllerHWInfo, HardwareJoystickMap_InputManager> param_000aa644, Func<int> param_000aa645, bool param_000aa646, bool param_000aa647, bool param_000aa648); // 0x000000018CDA67F8-0x000000018CDA6A30
 
 	// Methods
 	[CustomObfuscation(rename = false)]
-	public override void Initialize(); // 0x000000018ABB11BC-0x000000018ABB1234
+	public override void Initialize(); // 0x000000018CDA5A60-0x000000018CDA5AD8
 	[CustomObfuscation(rename = false)]
-	public override void Update(UpdateLoopType updateLoop); // 0x000000018ABB1B24-0x000000018ABB1CAC
+	public override void Update(UpdateLoopType updateLoop); // 0x000000018CDA63D0-0x000000018CDA6558
 	[CustomObfuscation(rename = false)]
-	public override void OnDestroy(); // 0x000000018ABB1378-0x000000018ABB147C
+	public override void OnDestroy(); // 0x000000018CDA5C18-0x000000018CDA5D1C
 	[CustomObfuscation(rename = false)]
-	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000184D86280-0x0000000184D86290
+	public override Action<int, ControllerDataUpdater> GetInputDataUpdateDelegate(); // 0x0000000187232FA0-0x0000000187232FB0
 	[CustomObfuscation(rename = false)]
-	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018ABB1A70-0x000000018ABB1B24
+	public override void UpdateControllerData(int inputManagerId, ControllerDataUpdater data); // 0x000000018CDA631C-0x000000018CDA63D0
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceConnected(); // 0x000000018ABB1A38-0x000000018ABB1A54
+	public override void SystemDeviceConnected(); // 0x000000018CDA62E4-0x000000018CDA6300
 	[CustomObfuscation(rename = false)]
-	public override void SystemDeviceDisconnected(); // 0x000000018ABB1A54-0x000000018ABB1A70
+	public override void SystemDeviceDisconnected(); // 0x000000018CDA6300-0x000000018CDA631C
 	[CustomObfuscation(rename = false)]
-	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x00000001841E1670-0x00000001841E1680
+	public override void SetUnityJoystickId(int joystickId, int unityJoystickId); // 0x0000000186805BA0-0x0000000186805BB0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x00000001811EC580-0x00000001811EC590
+	public override IUnifiedMouseSource GetUnifiedMouseSource(); // 0x0000000185829EC0-0x0000000185829ED0
 	[CustomObfuscation(rename = false)]
-	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x00000001811EC580-0x00000001811EC590
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x000000018ABB147C-0x000000018ABB14A0
-	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<eYBCsGBkYgpZlfwGcBnLcsBJbMwt> param_00073ce7); // 0x000000018ABB14A0-0x000000018ABB1A38
-	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018ABB2304-0x000000018ABB2374
-	private IList<eYBCsGBkYgpZlfwGcBnLcsBJbMwt> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x000000018ABB0E10-0x000000018ABB0E58
-	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_00073ce8, int param_00073ce9, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cea, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073ceb); // 0x000000018ABB0E58-0x000000018ABB1060
-	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cec, int param_00073ced); // 0x000000018ABB2374-0x000000018ABB241C
-	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cee); // 0x000000018ABB2178-0x000000018ABB2220
-	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cef, int param_00073cf0); // 0x000000018ABB2280-0x000000018ABB2304
-	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_00073cf1, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cf2, int param_00073cf3, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cf4, oUOKGHnKbmgVUnxustBbqqMKFIAR.fJVfptvxSiGstmLDuwjqSLUyzAnG param_00073cf5); // 0x000000018ABB1234-0x000000018ABB1378
-	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_00073cf6, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cf7, oUOKGHnKbmgVUnxustBbqqMKFIAR.fJVfptvxSiGstmLDuwjqSLUyzAnG param_00073cf8); // 0x000000018ABB1CAC-0x000000018ABB1F2C
-	private void FmRdMrTyVCXeXzKnHASejEPxgddh(); // 0x000000018ABB1060-0x000000018ABB1088
-	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cf9, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_00073cfa, bool param_00073cfb); // 0x000000018ABB1088-0x000000018ABB11BC
-	private void iEEFlbFDszRppifBFnwpNApzASvF(NzfnZqexdZgkSScFXWJZEzeOWPul param_00073cfc, bool param_00073cfd); // 0x000000018ABB2220-0x000000018ABB2280
-	private void YRTktFeeUAVOaQxmZgkJtHesqmqO(); // 0x000000018ABB1F2C-0x000000018ABB1F44
+	public override IUnifiedKeyboardSource GetUnifiedKeyboardSource(); // 0x0000000185829EC0-0x0000000185829ED0
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(); // 0x000000018CDA5D1C-0x000000018CDA5D40
+	private void RhgInQuUBnQMTDjkeZBGAYpMBRql(IList<eYBCsGBkYgpZlfwGcBnLcsBJbMwt> param_000aa64e); // 0x000000018CDA5D40-0x000000018CDA62E4
+	private void yJJCtBCrCEsbprFwlpsOnWBkGRvrA(); // 0x000000018CDA6BBC-0x000000018CDA6C2C
+	private IList<eYBCsGBkYgpZlfwGcBnLcsBJbMwt> AlkKsBlkcKIlWhlVuLZJCJDXfHCgb(); // 0x000000018CDA5674-0x000000018CDA56BC
+	private void FVpBjAwyGBpVQpbIGUMUuPmYWCYq(int param_000aa64f, int param_000aa650, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa651, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa652); // 0x000000018CDA56BC-0x000000018CDA58D4
+	private bool ymbuqHxpmIVcyliPHUJTGDZqcnEJA(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa653, int param_000aa654); // 0x000000018CDA6C2C-0x000000018CDA6CD4
+	private int gYLinYswKgWgjjceGEMBKlqvhlEGb(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa655); // 0x000000018CDA6A30-0x000000018CDA6AD8
+	private bool iXsRWfwjaxOSbFdmAXxVCIUyoIxI(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa656, int param_000aa657); // 0x000000018CDA6B38-0x000000018CDA6BBC
+	private void NQvRARFJpLxdsIUPRkuuXQTUjNox(int param_000aa658, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa659, int param_000aa65a, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa65b, oUOKGHnKbmgVUnxustBbqqMKFIAR.fJVfptvxSiGstmLDuwjqSLUyzAnG param_000aa65c); // 0x000000018CDA5AD8-0x000000018CDA5C18
+	private void XxteBwdFImtrzajKwxGejbRDStnH(int param_000aa65d, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa65e, oUOKGHnKbmgVUnxustBbqqMKFIAR.fJVfptvxSiGstmLDuwjqSLUyzAnG param_000aa65f); // 0x000000018CDA6558-0x000000018CDA67E0
+	private void FmRdMrTyVCXeXzKnHASejEPxgddh(); // 0x000000018CDA58D4-0x000000018CDA58FC
+	private void GOiJYHNLShkFyPFsoSQwzPnKQhdP(List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa660, List<NzfnZqexdZgkSScFXWJZEzeOWPul> param_000aa661, bool param_000aa662); // 0x000000018CDA58FC-0x000000018CDA5A60
+	private void iEEFlbFDszRppifBFnwpNApzASvF(NzfnZqexdZgkSScFXWJZEzeOWPul param_000aa663, bool param_000aa664); // 0x000000018CDA6AD8-0x000000018CDA6B38
+	private void YRTktFeeUAVOaQxmZgkJtHesqmqO(); // 0x000000018CDA67E0-0x000000018CDA67F8
 }
 
-internal interface SATAzMAJRyYTzCBJGvFLRQVcCxJp : IDisposable // TypeDefIndex: 53960
+internal interface SATAzMAJRyYTzCBJGvFLRQVcCxJp : IDisposable // TypeDefIndex: 79204
 {
 	// Properties
 	string FtcRGxQNIjALWmqPGdmabKWoWeGqA { get; }
@@ -9194,11 +9180,11 @@ internal interface SATAzMAJRyYTzCBJGvFLRQVcCxJp : IDisposable // TypeDefIndex: 5
 	void ZoGbtSrjNkpybJlqlhkJDQCcPlkF();
 	void IoyeuUADILkjyEidcCIyeCInNLwS();
 	bool ktgGdIfNDRudeuiYQdNnefAmyiVaA();
-	void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_00073d55, float param_00073d56, bool param_00073d57);
+	void hJVWdluocTccqfVOELDXAeXkkPPlA(int param_000aa6bc, float param_000aa6bd, bool param_000aa6be);
 	void eEnRZrPQkNXhsmIjYHcmHsAiBpVj();
 }
 
-internal interface eYBCsGBkYgpZlfwGcBnLcsBJbMwt : SATAzMAJRyYTzCBJGvFLRQVcCxJp // TypeDefIndex: 53961
+internal interface eYBCsGBkYgpZlfwGcBnLcsBJbMwt : SATAzMAJRyYTzCBJGvFLRQVcCxJp // TypeDefIndex: 79205
 {
 	// Properties
 	int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; }
@@ -9209,12 +9195,12 @@ internal interface eYBCsGBkYgpZlfwGcBnLcsBJbMwt : SATAzMAJRyYTzCBJGvFLRQVcCxJp /
 	bool kvhxEchYAeVevuDKBFpXXYUTZopc { get; }
 
 	// Methods
-	float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_00073d58);
-	bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_00073d59);
-	int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_00073d5a);
+	float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000aa6bf);
+	bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000aa6c0);
+	int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_000aa6c1);
 }
 
-internal class dnxyCjpDlDvOdxTyzeYVqByiyZzK : eymKPgAQNIgZhKCqIVYwnHlbhjdg, eYBCsGBkYgpZlfwGcBnLcsBJbMwt // TypeDefIndex: 53962
+internal class dnxyCjpDlDvOdxTyzeYVqByiyZzK : eymKPgAQNIgZhKCqIVYwnHlbhjdg, eYBCsGBkYgpZlfwGcBnLcsBJbMwt // TypeDefIndex: 79206
 {
 	// Fields
 	public readonly int FyijsPYPkZofyZbVExmyRvDMcNhH; // 0x50
@@ -9228,33 +9214,33 @@ internal class dnxyCjpDlDvOdxTyzeYVqByiyZzK : eymKPgAQNIgZhKCqIVYwnHlbhjdg, eYBC
 	private bool IChuAIFqQqdhkCxewvXZoMKPBgMeA; // 0x80
 
 	// Properties
-	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000184D86310-0x0000000184D86320 
-	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x0000000184D86550-0x0000000184D86560 
-	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x0000000184D86540-0x0000000184D86550 
-	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x0000000184D86570-0x0000000184D86580 
-	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000184DA89E0-0x0000000184DA89F0 
-	public bool kvhxEchYAeVevuDKBFpXXYUTZopc { get; } // 0x0000000184D8D1F0-0x0000000184D8D200 
+	public int aEzAgIVEqKcrAAUPDMqCfKbgZYrTb { get; } // 0x0000000187233000-0x0000000187233010 
+	public int iNOQjioNbBRxJPHSCBvgxibcstpi { get; } // 0x0000000187233280-0x0000000187233290 
+	public int hpHEWblMORJTJvPPqjDYAUiPxJQN { get; } // 0x00000001872336F0-0x0000000187233700 
+	public int ACEOXLRCsNdDCWUGWYRzsPIHAeoBA { get; } // 0x00000001872331A0-0x00000001872331B0 
+	public InputSource zERCWzsvIRQVvGinECtcGVMfFapFb { get; } // 0x0000000187239D90-0x0000000187239DA0 
+	public bool kvhxEchYAeVevuDKBFpXXYUTZopc { get; } // 0x000000018226EFC0-0x000000018226EFD0 
 
 	// Constructors
-	public dnxyCjpDlDvOdxTyzeYVqByiyZzK(emeCwsELnoJvwBwEcPKnJiieeMKWB param_00073d5b, EAUUbKQFcztOaxVulmGcrJehPchk param_00073d5c); // 0x000000018ABCAD84-0x000000018ABCADA0
-	protected dnxyCjpDlDvOdxTyzeYVqByiyZzK(emeCwsELnoJvwBwEcPKnJiieeMKWB param_00073d5d, EAUUbKQFcztOaxVulmGcrJehPchk param_00073d5e, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_00073d5f); // 0x000000018ABCADA0-0x000000018ABCADF8
-	protected dnxyCjpDlDvOdxTyzeYVqByiyZzK(awAAQgaTMaFquWqbjmYTlfVuPLmn param_00073d60, EAUUbKQFcztOaxVulmGcrJehPchk param_00073d61, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_00073d62, int param_00073d63, int param_00073d64, int param_00073d65, int param_00073d66); // 0x000000018ABCAC14-0x000000018ABCAD84
+	public dnxyCjpDlDvOdxTyzeYVqByiyZzK(emeCwsELnoJvwBwEcPKnJiieeMKWB param_000aa6c2, EAUUbKQFcztOaxVulmGcrJehPchk param_000aa6c3); // 0x000000018CDBF714-0x000000018CDBF730
+	protected dnxyCjpDlDvOdxTyzeYVqByiyZzK(emeCwsELnoJvwBwEcPKnJiieeMKWB param_000aa6c4, EAUUbKQFcztOaxVulmGcrJehPchk param_000aa6c5, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_000aa6c6); // 0x000000018CDBF730-0x000000018CDBF774
+	protected dnxyCjpDlDvOdxTyzeYVqByiyZzK(awAAQgaTMaFquWqbjmYTlfVuPLmn param_000aa6c7, EAUUbKQFcztOaxVulmGcrJehPchk param_000aa6c8, ItgnJOvMvArQEKCRZgvhggJrcdcBb param_000aa6c9, int param_000aa6ca, int param_000aa6cb, int param_000aa6cc, int param_000aa6cd); // 0x000000018CDBF5A0-0x000000018CDBF714
 
 	// Methods
-	public void XRbfXMBnELvQWROZJCQXJkBLAYkh(mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_00073d67, byte param_00073d68, short param_00073d69, double param_00073d6a); // 0x000000018ABCAB28-0x000000018ABCAC14
-	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073d6b); // 0x000000018ABCAA60-0x000000018ABCAAB4
-	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018ABCAE80-0x000000018ABCAED4
-	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_00073d6c); // 0x000000018ABCA820-0x000000018ABCA868
-	public bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_00073d6d); // 0x000000018ABCADF8-0x000000018ABCAE80
-	public int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_00073d6e); // 0x000000018ABCA9CC-0x000000018ABCAA10
-	protected void HZsdiEZvykgsHaxzaLWnbNlmEyfAA(emeCwsELnoJvwBwEcPKnJiieeMKWB param_00073d6f); // 0x000000018ABCA8B0-0x000000018ABCA9CC
-	protected override void FWwXtpLDXpNEVxDZFIrCEZiSGYLi(); // 0x000000018ABCA868-0x000000018ABCA8B0
-	protected override void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018ABCA7B8-0x000000018ABCA820
-	private float MooJfwCJmltiYVFDwnfNcYcaEqtH(int param_00073d70); // 0x000000018ABCAA10-0x000000018ABCAA60
-	private int UyTdZLDnPVBTdbBLEhLJzrknCbCnb(short param_00073d71); // 0x000000018ABCAAB4-0x000000018ABCAB28
+	public void XRbfXMBnELvQWROZJCQXJkBLAYkh(mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_000aa6ce, byte param_000aa6cf, short param_000aa6d0, double param_000aa6d1); // 0x000000018CDBF4B4-0x000000018CDBF5A0
+	public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa6d2); // 0x000000018CDBF3E8-0x000000018CDBF43C
+	public override void rtVwRpwCmfbNsKOJOmhtvzHenwRDA(); // 0x000000018CDBF7FC-0x000000018CDBF850
+	public float DYxtgWHqYudqjBhVQJKzjymElHwy(int param_000aa6d3); // 0x000000018CDBF1A8-0x000000018CDBF1F0
+	public bool lrsQAhdkMHwMfBaOmoegOfkmAFnX(int param_000aa6d4); // 0x000000018CDBF774-0x000000018CDBF7FC
+	public int ImLuWROnVBPkqNCjYBWRnhyTStaH(int param_000aa6d5); // 0x000000018CDBF354-0x000000018CDBF398
+	protected void HZsdiEZvykgsHaxzaLWnbNlmEyfAA(emeCwsELnoJvwBwEcPKnJiieeMKWB param_000aa6d6); // 0x000000018CDBF238-0x000000018CDBF354
+	protected override void FWwXtpLDXpNEVxDZFIrCEZiSGYLi(); // 0x000000018CDBF1F0-0x000000018CDBF238
+	protected override void AJjHQkSWCXEVFGwQfDDPGjmhdXBbA(); // 0x000000018CDBF13C-0x000000018CDBF1A8
+	private float MooJfwCJmltiYVFDwnfNcYcaEqtH(int param_000aa6d7); // 0x000000018CDBF398-0x000000018CDBF3E8
+	private int UyTdZLDnPVBTdbBLEhLJzrknCbCnb(short param_000aa6d8); // 0x000000018CDBF43C-0x000000018CDBF4B4
 }
 
-internal class EAUUbKQFcztOaxVulmGcrJehPchk // TypeDefIndex: 53963
+internal class EAUUbKQFcztOaxVulmGcrJehPchk // TypeDefIndex: 79207
 {
 	// Fields
 	public int xmhBzZvHjrDXSYjquxxdImhALvdn; // 0x10
@@ -9274,25 +9260,25 @@ internal class EAUUbKQFcztOaxVulmGcrJehPchk // TypeDefIndex: 53963
 	public int mDfvIrfTdctiyDRPfEHZSUBTcTRU; // 0x78
 
 	// Constructors
-	public EAUUbKQFcztOaxVulmGcrJehPchk(); // 0x00000001841E1670-0x00000001841E1680
+	public EAUUbKQFcztOaxVulmGcrJehPchk(); // 0x0000000186805BA0-0x0000000186805BB0
 
 	// Methods
-	public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018ABC65F8-0x000000018ABC67A0
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABC67A0-0x000000018ABC6B70
+	public void pYQRzXnykRQYsfpIPhseqdKvyUyv(); // 0x000000018CDBAC78-0x000000018CDBAE38
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDBAE38-0x000000018CDBB220
 }
 
-internal static class CkYAeLjuGywRgkcwnFEDEdreeWUH // TypeDefIndex: 53964
+internal static class CkYAeLjuGywRgkcwnFEDEdreeWUH // TypeDefIndex: 79208
 {
 	// Methods
-	public static string[] nkbwzzXaxJDZxDlleLaIiCTWIrSA(); // 0x000000018ABBF684-0x000000018ABBF6F4
-	private static string[] DKHcXCDshgIueEpuCgDvHRrgWKXPc(byte[] param_00073d72); // 0x000000018ABBF4B8-0x000000018ABBF5C4
-	private static string AOgsqWWfIUAdPERQNfNKylGprhJo(byte[] param_00073d73, byte[] param_00073d74, byte[] param_00073d75); // 0x000000018ABBEF68-0x000000018ABBF4B8
-	private static byte[] XziEXFEDZzYTTTkiVhpDDbaCBLOwB(); // 0x000000018ABBF624-0x000000018ABBF684
-	private static byte[] ydEFHkgSZwLwmEkIXLgfUjsVRlcS(); // 0x000000018ABBF6F4-0x000000018ABBF754
-	private static byte[] LpauIRVxRMhdbthiybZkdHetkWry(); // 0x000000018ABBF5C4-0x000000018ABBF624
+	public static string[] nkbwzzXaxJDZxDlleLaIiCTWIrSA(); // 0x000000018CDB3C20-0x000000018CDB3C90
+	private static string[] DKHcXCDshgIueEpuCgDvHRrgWKXPc(byte[] param_000aa6d9); // 0x000000018CDB3A54-0x000000018CDB3B60
+	private static string AOgsqWWfIUAdPERQNfNKylGprhJo(byte[] param_000aa6da, byte[] param_000aa6db, byte[] param_000aa6dc); // 0x000000018CDB3518-0x000000018CDB3A54
+	private static byte[] XziEXFEDZzYTTTkiVhpDDbaCBLOwB(); // 0x000000018CDB3BC0-0x000000018CDB3C20
+	private static byte[] ydEFHkgSZwLwmEkIXLgfUjsVRlcS(); // 0x000000018CDB3C90-0x000000018CDB3CF0
+	private static byte[] LpauIRVxRMhdbthiybZkdHetkWry(); // 0x000000018CDB3B60-0x000000018CDB3BC0
 }
 
-internal class BMNnWbDIXUHHRoADwVXJdYVDrPxr : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53965
+internal class BMNnWbDIXUHHRoADwVXJdYVDrPxr : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79209
 {
 	// Fields
 	public readonly float[] nXdBpypsCihkGgjdHnUwIADZGegB; // 0x20
@@ -9304,13 +9290,13 @@ internal class BMNnWbDIXUHHRoADwVXJdYVDrPxr : zseGNggMpNmuvgqogMqiEcjsNLTGc // T
 	private readonly Action<byte[], float[]> YwiPAftMvGgmgCcORnlZzluKFMEMA; // 0x48
 
 	// Constructors
-	public BMNnWbDIXUHHRoADwVXJdYVDrPxr(byte param_00073d76, HIDInfo param_00073d77, int param_00073d78, Action<byte[], float[]> param_00073d79); // 0x000000018ABBEC5C-0x000000018ABBED4C
+	public BMNnWbDIXUHHRoADwVXJdYVDrPxr(byte param_000aa6dd, HIDInfo param_000aa6de, int param_000aa6df, Action<byte[], float[]> param_000aa6e0); // 0x000000018CDB3210-0x000000018CDB3300
 
 	// Methods
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073d7a, double param_00073d7b); // 0x000000018ABBEBA4-0x000000018ABBEC5C
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa6e1, double param_000aa6e2); // 0x000000018CDB314C-0x000000018CDB3210
 }
 
-internal class MkXjQPavsbpITCEdETTHuRYirZF : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53966
+internal class MkXjQPavsbpITCEdETTHuRYirZF : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79210
 {
 	// Fields
 	public int nXdBpypsCihkGgjdHnUwIADZGegB; // 0x20
@@ -9323,27 +9309,27 @@ internal class MkXjQPavsbpITCEdETTHuRYirZF : zseGNggMpNmuvgqogMqiEcjsNLTGc // Ty
 	public readonly int kSwmEyHjVuCPsrTRRDEKURcgTEAV; // 0x44
 
 	// Constructors
-	public MkXjQPavsbpITCEdETTHuRYirZF(byte param_00073d7c, HIDInfo param_00073d7d, bool param_00073d7e, int param_00073d7f); // 0x000000018ABC745C-0x000000018ABC74C8
+	public MkXjQPavsbpITCEdETTHuRYirZF(byte param_000aa6e3, HIDInfo param_000aa6e4, bool param_000aa6e5, int param_000aa6e6); // 0x000000018CDBBB98-0x000000018CDBBC04
 
 	// Methods
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073d80, double param_00073d81); // 0x000000018ABC73A4-0x000000018ABC745C
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa6e7, double param_000aa6e8); // 0x000000018CDBBAE4-0x000000018CDBBB98
 }
 
-internal class lvcscUNtHDcrkMfwArDXBcZCtwpB : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53967
+internal class lvcscUNtHDcrkMfwArDXBcZCtwpB : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79211
 {
 	// Fields
 	public bool nXdBpypsCihkGgjdHnUwIADZGegB; // 0x20
 	public double jKarPwkwSXrEognwvLrOcdRHcNeA; // 0x28
 
 	// Constructors
-	public lvcscUNtHDcrkMfwArDXBcZCtwpB(byte param_00073d82, HIDInfo param_00073d83); // 0x0000000183219380-0x0000000183219390
+	public lvcscUNtHDcrkMfwArDXBcZCtwpB(byte param_000aa6e9, HIDInfo param_000aa6ea); // 0x00000001851E8C10-0x00000001851E8C20
 
 	// Methods
-	public void XRbfXMBnELvQWROZJCQXJkBLAYkh(bool param_00073d84, double param_00073d85); // 0x0000000184DA8E60-0x0000000184DA8E70
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073d86, double param_00073d87); // 0x000000018ABCCE5C-0x000000018ABCCE98
+	public void XRbfXMBnELvQWROZJCQXJkBLAYkh(bool param_000aa6eb, double param_000aa6ec); // 0x0000000187256F30-0x0000000187256F40
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa6ed, double param_000aa6ee); // 0x000000018CDC1758-0x000000018CDC1794
 }
 
-internal struct SAcTodLryXZPmeZqsKbnQQxsbBmo // TypeDefIndex: 53968
+internal struct SAcTodLryXZPmeZqsKbnQQxsbBmo // TypeDefIndex: 79212
 {
 	// Fields
 	public IntPtr nHisCqzKiJPnvrBApmQCTQgKQacL; // 0x00
@@ -9352,16 +9338,16 @@ internal struct SAcTodLryXZPmeZqsKbnQQxsbBmo // TypeDefIndex: 53968
 	public AnBliHBmROTlQRPQOqeIZLIecGsj QIFfqVFzAOVHXQCtcKcTtPAIinvib; // 0x10
 
 	// Properties
-	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018ABC8C44-0x000000018ABC8C58 
+	public bool mqRCtAxaQaFWMUPrNugLezEtRAku { get; } // 0x000000018CDBD5D0-0x000000018CDBD5E4 
 
 	// Constructors
-	public SAcTodLryXZPmeZqsKbnQQxsbBmo(IntPtr param_00073d88, int param_00073d89, int param_00073d8a); // 0x0000000184DA8DD0-0x0000000184DA8DF0
+	public SAcTodLryXZPmeZqsKbnQQxsbBmo(IntPtr param_000aa6ef, int param_000aa6f0, int param_000aa6f1); // 0x0000000187256EA0-0x0000000187256EC0
 
 	// Methods
-	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABC89F0-0x000000018ABC8C44
+	public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDBD37C-0x000000018CDBD5D0
 }
 
-internal abstract class zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53970
+internal abstract class zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79214
 {
 	// Fields
 	public readonly byte jLKgYPbCXIqnNylkRhlRiDlyritOA; // 0x10
@@ -9370,7 +9356,7 @@ internal abstract class zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53970
 	// Nested types
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class HIDInfo // TypeDefIndex: 53969
+	internal class HIDInfo // TypeDefIndex: 79213
 	{
 		// Fields
 		public ushort usagePage; // 0x10
@@ -9385,23 +9371,23 @@ internal abstract class zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53970
 		public uint unitsExp; // 0x30
 
 		// Constructors
-		public HIDInfo(); // 0x00000001841E1670-0x00000001841E1680
+		public HIDInfo(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	// Constructors
-	public zseGNggMpNmuvgqogMqiEcjsNLTGc(byte param_00073d8b, HIDInfo param_00073d8c); // 0x0000000183219380-0x0000000183219390
+	public zseGNggMpNmuvgqogMqiEcjsNLTGc(byte param_000aa6f2, HIDInfo param_000aa6f3); // 0x00000001851E8C10-0x00000001851E8C20
 
 	// Methods
-	public abstract void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073d8d, double param_00073d8e);
+	public abstract void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa6f4, double param_000aa6f5);
 }
 
-internal abstract class BrezXUXIUZIUDqjwzOgFxvkVSabY : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53973
+internal abstract class BrezXUXIUZIUDqjwzOgFxvkVSabY : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79217
 {
 	// Fields
 	internal OoscetqJhudXgEciDHFwzOydVvnF OQuDWCRCmZkGoHBTJAXxelJXcmSj; // 0x20
 
 	// Nested types
-	internal abstract class OoscetqJhudXgEciDHFwzOydVvnF // TypeDefIndex: 53971
+	internal abstract class OoscetqJhudXgEciDHFwzOydVvnF // TypeDefIndex: 79215
 	{
 		// Fields
 		private int TcjJRWjshTQwocwamIBcpjKiRmed; // 0x10
@@ -9413,54 +9399,54 @@ internal abstract class BrezXUXIUZIUDqjwzOgFxvkVSabY : zseGNggMpNmuvgqogMqiEcjsN
 		private bool FbDmubKHHdXxcuYTfJFqIFYOuqnG; // 0x38
 
 		// Properties
-		public UpdateLoopType pFEhljMHttGCkHPDZdESaDYgtFFob { set; } // 0x000000018ABC83C0-0x000000018ABC841C
+		public UpdateLoopType pFEhljMHttGCkHPDZdESaDYgtFFob { set; } // 0x000000018CDBCD40-0x000000018CDBCD9C
 
 		// Constructors
-		public OoscetqJhudXgEciDHFwzOydVvnF(); // 0x0000000184DA8DC0-0x0000000184DA8DD0
+		public OoscetqJhudXgEciDHFwzOydVvnF(); // 0x0000000187256E90-0x0000000187256EA0
 
 		// Methods
-		public void ZKVquzDWqTgHeItuLmTWcFhwVgaF(UpdateLoopSetting param_00073d94, Func<UpdateLoopType, iauVjjFObNvkjJmbggvouVWygepEA> param_00073d95); // 0x000000018ABC8030-0x000000018ABC83C0
-		public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073d96); // 0x000000018ABC8020-0x000000018ABC8030
+		public void ZKVquzDWqTgHeItuLmTWcFhwVgaF(UpdateLoopSetting param_000aa6fb, Func<UpdateLoopType, iauVjjFObNvkjJmbggvouVWygepEA> param_000aa6fc); // 0x000000018CDBC9A4-0x000000018CDBCD40
+		public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa6fd); // 0x000000018CDBC994-0x000000018CDBC9A4
 	}
 
-	internal abstract class iauVjjFObNvkjJmbggvouVWygepEA // TypeDefIndex: 53972
+	internal abstract class iauVjjFObNvkjJmbggvouVWygepEA // TypeDefIndex: 79216
 	{
 		// Fields
 		public readonly UpdateLoopType pFEhljMHttGCkHPDZdESaDYgtFFob; // 0x10
 
 		// Constructors
-		public iauVjjFObNvkjJmbggvouVWygepEA(UpdateLoopType param_00073d97); // 0x00000001814F51F0-0x00000001814F5220
+		public iauVjjFObNvkjJmbggvouVWygepEA(UpdateLoopType param_000aa6fe); // 0x0000000182234E90-0x0000000182234EA0
 	}
 
 	// Constructors
-	public BrezXUXIUZIUDqjwzOgFxvkVSabY(OoscetqJhudXgEciDHFwzOydVvnF param_00073d8f, byte param_00073d90, HIDInfo param_00073d91); // 0x000000018ABBED68-0x000000018ABBED94
+	public BrezXUXIUZIUDqjwzOgFxvkVSabY(OoscetqJhudXgEciDHFwzOydVvnF param_000aa6f6, byte param_000aa6f7, HIDInfo param_000aa6f8); // 0x000000018CDB331C-0x000000018CDB3348
 
 	// Methods
-	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073d92); // 0x000000018ABBED4C-0x000000018ABBED68
+	public virtual void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa6f9); // 0x000000018CDB3300-0x000000018CDB331C
 }
 
 [Flags]
-internal enum AnBliHBmROTlQRPQOqeIZLIecGsj // TypeDefIndex: 53974
+internal enum AnBliHBmROTlQRPQOqeIZLIecGsj // TypeDefIndex: 79218
 {
 	None = 0,
 	WriteDirect = 1,
 	IgnoreExpectedReportSize = 2
 }
 
-internal enum sHQfHnKWSyUglbJevPHjzyHZgqdoA // TypeDefIndex: 53975
+internal enum sHQfHnKWSyUglbJevPHjzyHZgqdoA // TypeDefIndex: 79219
 {
 	Unknown = 0,
 	USB = 1,
 	Bluetooth = 2
 }
 
-internal enum hJxPFEDYiOqNMDuutvEivGuMTnYB // TypeDefIndex: 53976
+internal enum hJxPFEDYiOqNMDuutvEivGuMTnYB // TypeDefIndex: 79220
 {
 	Synchronous = 0,
 	Asynchronous = 1
 }
 
-internal class PiAoaHLiNJrbgVmbRfzTAJWkhYXRA : BrezXUXIUZIUDqjwzOgFxvkVSabY // TypeDefIndex: 53981
+internal class PiAoaHLiNJrbgVmbRfzTAJWkhYXRA : BrezXUXIUZIUDqjwzOgFxvkVSabY // TypeDefIndex: 79225
 {
 	// Fields
 	public double jKarPwkwSXrEognwvLrOcdRHcNeA; // 0x28
@@ -9474,30 +9460,30 @@ internal class PiAoaHLiNJrbgVmbRfzTAJWkhYXRA : BrezXUXIUZIUDqjwzOgFxvkVSabY // T
 	private readonly Func<float> VVXlQiWWvlBMKJxZjKBlrPLsXDtq; // 0x60
 
 	// Properties
-	public float[] nXdBpypsCihkGgjdHnUwIADZGegB { get; } // 0x000000018ABC8704-0x000000018ABC8768 
-	public RingBuffer<HiuAvUHPgkmSANBATMROifVCBjUxA> HoFCUsHKnPeVbzHOakkkpbMlyBLD { get; } // 0x000000018ABC8768-0x000000018ABC87CC 
+	public float[] nXdBpypsCihkGgjdHnUwIADZGegB { get; } // 0x000000018CDBD090-0x000000018CDBD0F4 
+	public RingBuffer<HiuAvUHPgkmSANBATMROifVCBjUxA> HoFCUsHKnPeVbzHOakkkpbMlyBLD { get; } // 0x000000018CDBD0F4-0x000000018CDBD158 
 
 	// Nested types
-	internal class kyqjQlIiaGZtpYRkEETpxDSpxvDv : BrezXUXIUZIUDqjwzOgFxvkVSabY.OoscetqJhudXgEciDHFwzOydVvnF // TypeDefIndex: 53977
+	internal class kyqjQlIiaGZtpYRkEETpxDSpxvDv : BrezXUXIUZIUDqjwzOgFxvkVSabY.OoscetqJhudXgEciDHFwzOydVvnF // TypeDefIndex: 79221
 	{
 		// Fields
 		private int pbDDxnkDGOFFxgurHgDSPHXKbAtm; // 0x40
 		private int RsaxMMimAbCgwIfghHuRsaWosJrCA; // 0x44
 
 		// Properties
-		public float[] nXdBpypsCihkGgjdHnUwIADZGegB { get; } // 0x000000018ABCCDA4-0x000000018ABCCE00 
-		public RingBuffer<HiuAvUHPgkmSANBATMROifVCBjUxA> HoFCUsHKnPeVbzHOakkkpbMlyBLD { get; } // 0x000000018ABCCE00-0x000000018ABCCE5C 
+		public float[] nXdBpypsCihkGgjdHnUwIADZGegB { get; } // 0x000000018CDC16A0-0x000000018CDC16FC 
+		public RingBuffer<HiuAvUHPgkmSANBATMROifVCBjUxA> HoFCUsHKnPeVbzHOakkkpbMlyBLD { get; } // 0x000000018CDC16FC-0x000000018CDC1758 
 
 		// Constructors
-		public kyqjQlIiaGZtpYRkEETpxDSpxvDv(UpdateLoopSetting param_00073da1, int param_00073da2, int param_00073da3); // 0x000000018ABCCC7C-0x000000018ABCCD20
+		public kyqjQlIiaGZtpYRkEETpxDSpxvDv(UpdateLoopSetting param_000aa708, int param_000aa709, int param_000aa70a); // 0x000000018CDC1570-0x000000018CDC1618
 
 		// Methods
-		public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_00073da4); // 0x000000018ABCCB48-0x000000018ABCCBC4
-		public void ZEDAhXcNFeIbNaPFJpmdmsCxtulXB(float[] param_00073da5, float param_00073da6); // 0x000000018ABCCBC4-0x000000018ABCCC7C
-		private BrezXUXIUZIUDqjwzOgFxvkVSabY.iauVjjFObNvkjJmbggvouVWygepEA cCPdnrwJLaDYFvYciKmFvMUgvsFX(UpdateLoopType param_00073da7); // 0x000000018ABCCD20-0x000000018ABCCDA4
+		public override void TSexxBoQJJrDUHjAVGegZXOfrqTg(UpdateLoopType param_000aa70b); // 0x000000018CDC1430-0x000000018CDC14AC
+		public void ZEDAhXcNFeIbNaPFJpmdmsCxtulXB(float[] param_000aa70c, float param_000aa70d); // 0x000000018CDC14AC-0x000000018CDC1570
+		private BrezXUXIUZIUDqjwzOgFxvkVSabY.iauVjjFObNvkjJmbggvouVWygepEA cCPdnrwJLaDYFvYciKmFvMUgvsFX(UpdateLoopType param_000aa70e); // 0x000000018CDC1618-0x000000018CDC16A0
 	}
 
-	internal class HLBnPtgZqgIhkkDljbUsrpAeszHs : BrezXUXIUZIUDqjwzOgFxvkVSabY.iauVjjFObNvkjJmbggvouVWygepEA // TypeDefIndex: 53979
+	internal class HLBnPtgZqgIhkkDljbUsrpAeszHs : BrezXUXIUZIUDqjwzOgFxvkVSabY.iauVjjFObNvkjJmbggvouVWygepEA // TypeDefIndex: 79223
 	{
 		// Fields
 		private float[] CWbBjAbbYvkvCWVdqqQTLDlshNMgb; // 0x18
@@ -9509,50 +9495,50 @@ internal class PiAoaHLiNJrbgVmbRfzTAJWkhYXRA : BrezXUXIUZIUDqjwzOgFxvkVSabY // T
 		// Nested types
 		[Serializable]
 		[CompilerGenerated]
-		private sealed class FXaMAIQanfMLpceamEgcsFHguvbA // TypeDefIndex: 53978
+		private sealed class FXaMAIQanfMLpceamEgcsFHguvbA // TypeDefIndex: 79222
 		{
 			// Fields
 			public static readonly FXaMAIQanfMLpceamEgcsFHguvbA __9; // 0x00
 			public static Func<HiuAvUHPgkmSANBATMROifVCBjUxA> __9__5_0; // 0x08
 
 			// Constructors
-			static FXaMAIQanfMLpceamEgcsFHguvbA(); // 0x000000018ABC6B70-0x000000018ABC6BD4
-			public FXaMAIQanfMLpceamEgcsFHguvbA(); // 0x00000001841E1670-0x00000001841E1680
+			static FXaMAIQanfMLpceamEgcsFHguvbA(); // 0x000000018CDBB220-0x000000018CDBB284
+			public FXaMAIQanfMLpceamEgcsFHguvbA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 			// Methods
-			internal HiuAvUHPgkmSANBATMROifVCBjUxA kczVUQgBKZSwIAHtfNxgpvzxQCjH(); // 0x000000018ABC6BD4-0x000000018ABC6C10
+			internal HiuAvUHPgkmSANBATMROifVCBjUxA kczVUQgBKZSwIAHtfNxgpvzxQCjH(); // 0x000000018CDBB284-0x000000018CDBB2C0
 		}
 
 		// Constructors
-		public HLBnPtgZqgIhkkDljbUsrpAeszHs(UpdateLoopType param_00073da8, int param_00073da9, int param_00073daa); // 0x000000018ABC6E9C-0x000000018ABC70B8
+		public HLBnPtgZqgIhkkDljbUsrpAeszHs(UpdateLoopType param_000aa70f, int param_000aa710, int param_000aa711); // 0x000000018CDBB564-0x000000018CDBB780
 
 		// Methods
-		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018ABC6D0C-0x000000018ABC6E9C
-		public void EGhvxPKhXjlkipAYJerjFLXFedUDA(float[] param_00073dab, float param_00073dac); // 0x000000018ABC6C10-0x000000018ABC6D0C
+		public void TSexxBoQJJrDUHjAVGegZXOfrqTg(); // 0x000000018CDBB3CC-0x000000018CDBB564
+		public void EGhvxPKhXjlkipAYJerjFLXFedUDA(float[] param_000aa712, float param_000aa713); // 0x000000018CDBB2C0-0x000000018CDBB3CC
 	}
 
-	public class HiuAvUHPgkmSANBATMROifVCBjUxA // TypeDefIndex: 53980
+	public class HiuAvUHPgkmSANBATMROifVCBjUxA // TypeDefIndex: 79224
 	{
 		// Fields
 		public Vector3 nXdBpypsCihkGgjdHnUwIADZGegB; // 0x10
 		public float IIQdtrlhGlIfBJNHpheUBYofgwZL; // 0x1C
 
 		// Constructors
-		public HiuAvUHPgkmSANBATMROifVCBjUxA(); // 0x00000001841E1670-0x00000001841E1680
+		public HiuAvUHPgkmSANBATMROifVCBjUxA(); // 0x0000000186805BA0-0x0000000186805BB0
 
 		// Methods
-		public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(float[] param_00073dad, float param_00073dae); // 0x000000018ABC7140-0x000000018ABC71C8
-		public void OSNJxVibfKbltujYHkKMLuczmano(HiuAvUHPgkmSANBATMROifVCBjUxA param_00073daf); // 0x000000018ABC7114-0x000000018ABC7140
+		public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(float[] param_000aa714, float param_000aa715); // 0x000000018CDBB808-0x000000018CDBB8A4
+		public void OSNJxVibfKbltujYHkKMLuczmano(HiuAvUHPgkmSANBATMROifVCBjUxA param_000aa716); // 0x000000018CDBB7DC-0x000000018CDBB808
 	}
 
 	// Constructors
-	public PiAoaHLiNJrbgVmbRfzTAJWkhYXRA(UpdateLoopSetting param_00073d98, byte param_00073d99, HIDInfo param_00073d9a, int param_00073d9b, int param_00073d9c, Action<byte[], float[]> param_00073d9d, Func<float> param_00073d9e); // 0x000000018ABC858C-0x000000018ABC8704
+	public PiAoaHLiNJrbgVmbRfzTAJWkhYXRA(UpdateLoopSetting param_000aa6ff, byte param_000aa700, HIDInfo param_000aa701, int param_000aa702, int param_000aa703, Action<byte[], float[]> param_000aa704, Func<float> param_000aa705); // 0x000000018CDBCF18-0x000000018CDBD090
 
 	// Methods
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073d9f, double param_00073da0); // 0x000000018ABC841C-0x000000018ABC858C
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa706, double param_000aa707); // 0x000000018CDBCD9C-0x000000018CDBCF18
 }
 
-internal class aGpYUdpKsUxonfUNYstiGMzKpBRk : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53983
+internal class aGpYUdpKsUxonfUNYstiGMzKpBRk : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79227
 {
 	// Fields
 	public int nXdBpypsCihkGgjdHnUwIADZGegB; // 0x20
@@ -9563,21 +9549,21 @@ internal class aGpYUdpKsUxonfUNYstiGMzKpBRk : zseGNggMpNmuvgqogMqiEcjsNLTGc // T
 	private Func<int, int> YwiPAftMvGgmgCcORnlZzluKFMEMA; // 0x40
 
 	// Nested types
-	public enum eoNcwkAZGAFJnvEjsAsmYdHYHPjhb // TypeDefIndex: 53982
+	public enum eoNcwkAZGAFJnvEjsAsmYdHYHPjhb // TypeDefIndex: 79226
 	{
 		Default = 0,
 		Custom = 1
 	}
 
 	// Constructors
-	public aGpYUdpKsUxonfUNYstiGMzKpBRk(byte param_00073db0, HIDInfo param_00073db1, eoNcwkAZGAFJnvEjsAsmYdHYHPjhb param_00073db2); // 0x000000018ABCA6BC-0x000000018ABCA710
-	public aGpYUdpKsUxonfUNYstiGMzKpBRk(byte param_00073db3, HIDInfo param_00073db4, Func<int, int> param_00073db5); // 0x000000018ABCA710-0x000000018ABCA74C
+	public aGpYUdpKsUxonfUNYstiGMzKpBRk(byte param_000aa717, HIDInfo param_000aa718, eoNcwkAZGAFJnvEjsAsmYdHYHPjhb param_000aa719); // 0x000000018CDBF048-0x000000018CDBF09C
+	public aGpYUdpKsUxonfUNYstiGMzKpBRk(byte param_000aa71a, HIDInfo param_000aa71b, Func<int, int> param_000aa71c); // 0x000000018CDBF09C-0x000000018CDBF0D8
 
 	// Methods
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073db6, double param_00073db7); // 0x000000018ABCA5D0-0x000000018ABCA6BC
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa71d, double param_000aa71e); // 0x000000018CDBEF5C-0x000000018CDBF048
 }
 
-internal sealed class jtKDhEFaghTPhKKmJDXICzhwqTbdA : IDisposable // TypeDefIndex: 53987
+internal sealed class jtKDhEFaghTPhKKmJDXICzhwqTbdA : IDisposable // TypeDefIndex: 79231
 {
 	// Fields
 	private Rewired.Utils.Classes.Utility.ThreadHelper swKaDCbNENkYjkUfdceifkmFnqWvA; // 0x10
@@ -9590,9 +9576,9 @@ internal sealed class jtKDhEFaghTPhKKmJDXICzhwqTbdA : IDisposable // TypeDefInde
 	private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x40
 
 	// Nested types
-	public delegate bool gbbRmNlhHpFiauYmPxdDBPsbFjoE(SAcTodLryXZPmeZqsKbnQQxsbBmo report, int timeoutMs); // TypeDefIndex: 53984; 0x0000000185FD6A74-0x0000000185FD6AA4
+	public delegate bool gbbRmNlhHpFiauYmPxdDBPsbFjoE(SAcTodLryXZPmeZqsKbnQQxsbBmo report, int timeoutMs); // TypeDefIndex: 79228; 0x00000001812B2570-0x00000001812B25A0
 
-	private class hgjbdVMBzosMrnPpxtWgpzWiigxg : IDisposable // TypeDefIndex: 53986
+	private class hgjbdVMBzosMrnPpxtWgpzWiigxg : IDisposable // TypeDefIndex: 79230
 	{
 		// Fields
 		private bool XRptggVYwQNQEdxPtFjcjAjCJVxq; // 0x10
@@ -9602,10 +9588,10 @@ internal sealed class jtKDhEFaghTPhKKmJDXICzhwqTbdA : IDisposable // TypeDefInde
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x44
 
 		// Properties
-		public bool PEpqVkzuexMtothymCvAAubDtYVq { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public bool PEpqVkzuexMtothymCvAAubDtYVq { get; } // 0x00000001829D0800-0x00000001829D0810 
 
 		// Nested types
-		public struct tgxrTrgZneKONfhmBSnPyXsFbDPf // TypeDefIndex: 53985
+		public struct tgxrTrgZneKONfhmBSnPyXsFbDPf // TypeDefIndex: 79229
 		{
 			// Fields
 			public SAcTodLryXZPmeZqsKbnQQxsbBmo mQrqDGdAdHFSQumahwovqGlDLgWA; // 0x00
@@ -9613,35 +9599,35 @@ internal sealed class jtKDhEFaghTPhKKmJDXICzhwqTbdA : IDisposable // TypeDefInde
 		}
 
 		// Constructors
-		public hgjbdVMBzosMrnPpxtWgpzWiigxg(); // 0x000000018ABCB090-0x000000018ABCB0FC
+		public hgjbdVMBzosMrnPpxtWgpzWiigxg(); // 0x000000018CDBF948-0x000000018CDBF9B4
 
 		// Methods
-		public void wCtpDbtxPicIuXtuGQKqvmyDbeRr(ref SAcTodLryXZPmeZqsKbnQQxsbBmo param_00073dc0, int param_00073dc1); // 0x000000018ABCB124-0x000000018ABCB26C
-		public tgxrTrgZneKONfhmBSnPyXsFbDPf pVkevBBTaMPqQrkKZsFGLIOUTRvFA(); // 0x000000018ABCB0FC-0x000000018ABCB124
-		public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x0000000184DA8E50-0x0000000184DA8E60
-		public void Dispose(); // 0x000000018ABCAF9C-0x000000018ABCAFEC
-		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABCB01C-0x000000018ABCB090
-		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073dc2); // 0x000000018ABCAFEC-0x000000018ABCB01C
+		public void wCtpDbtxPicIuXtuGQKqvmyDbeRr(ref SAcTodLryXZPmeZqsKbnQQxsbBmo param_000aa727, int param_000aa728); // 0x000000018CDBF9DC-0x000000018CDBFB28
+		public tgxrTrgZneKONfhmBSnPyXsFbDPf pVkevBBTaMPqQrkKZsFGLIOUTRvFA(); // 0x000000018CDBF9B4-0x000000018CDBF9DC
+		public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x0000000187256F20-0x0000000187256F30
+		public void Dispose(); // 0x000000018CDBF850-0x000000018CDBF8A0
+		protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDBF8D0-0x000000018CDBF948
+		protected virtual void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa729); // 0x000000018CDBF8A0-0x000000018CDBF8D0
 	}
 
 	// Constructors
-	public jtKDhEFaghTPhKKmJDXICzhwqTbdA(gbbRmNlhHpFiauYmPxdDBPsbFjoE param_00073db8); // 0x000000018ABCB8B4-0x000000018ABCB9D8
+	public jtKDhEFaghTPhKKmJDXICzhwqTbdA(gbbRmNlhHpFiauYmPxdDBPsbFjoE param_000aa71f); // 0x000000018CDC0188-0x000000018CDC02AC
 
 	// Methods
-	public void hYvemJOXXUPtREKiTBHrlMMsGDrV(SAcTodLryXZPmeZqsKbnQQxsbBmo param_00073db9, int param_00073dba); // 0x000000018ABCBD8C-0x000000018ABCBEFC
-	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018ABCBB0C-0x000000018ABCBD8C
-	private bool EIgZIsAaXKSOIBvpwmqjiRutRAOm(); // 0x000000018ABCB2BC-0x000000018ABCB2EC
-	private bool KRUgOpAPLkQYqdFcOjkKadcFryvo(); // 0x000000018ABCB2EC-0x000000018ABCB594
-	private void bKfARqbnaNHoECghRjJvcRHJTmoSB(); // 0x000000018ABCB9D8-0x000000018ABCBB0C
-	private void DsSeJLzxIxyAHbxkWYAhwdMYTUyI(); // 0x00000001841E1670-0x00000001841E1680
-	private void ZUMZLCCaSxZVHCuTXKLNUOVVFEFc(); // 0x00000001841E1670-0x00000001841E1680
-	private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018ABCB594-0x000000018ABCB76C
-	public void Dispose(); // 0x000000018ABCB26C-0x000000018ABCB2BC
-	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018ABCB840-0x000000018ABCB8B4
-	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_00073dbb); // 0x000000018ABCB76C-0x000000018ABCB840
+	public void hYvemJOXXUPtREKiTBHrlMMsGDrV(SAcTodLryXZPmeZqsKbnQQxsbBmo param_000aa720, int param_000aa721); // 0x000000018CDC0678-0x000000018CDC07F0
+	public void ghAXNTTllFZJImfdUqzOVvWsJmgN(); // 0x000000018CDC03E8-0x000000018CDC0678
+	private bool EIgZIsAaXKSOIBvpwmqjiRutRAOm(); // 0x000000018CDBFB78-0x000000018CDBFBA8
+	private bool KRUgOpAPLkQYqdFcOjkKadcFryvo(); // 0x000000018CDBFBA8-0x000000018CDBFE50
+	private void bKfARqbnaNHoECghRjJvcRHJTmoSB(); // 0x000000018CDC02AC-0x000000018CDC03E8
+	private void DsSeJLzxIxyAHbxkWYAhwdMYTUyI(); // 0x0000000186805BA0-0x0000000186805BB0
+	private void ZUMZLCCaSxZVHCuTXKLNUOVVFEFc(); // 0x0000000186805BA0-0x0000000186805BB0
+	private void MKwPGmPNfhFmvlkQlEqXqLOfRmuO(); // 0x000000018CDBFE50-0x000000018CDC0034
+	public void Dispose(); // 0x000000018CDBFB28-0x000000018CDBFB78
+	protected override void UlyZCbweXGfeTJIZsUwUGXjUnpwaA(); // 0x000000018CDC0110-0x000000018CDC0188
+	private void SbYVTdmkPElTDzeOGdijEuqHpCge(bool param_000aa722); // 0x000000018CDC0034-0x000000018CDC0110
 }
 
-internal class RBWPuDEGPubdlvFFeXjPxJMpYYij // TypeDefIndex: 53988
+internal class RBWPuDEGPubdlvFFeXjPxJMpYYij // TypeDefIndex: 79232
 {
 	// Fields
 	private byte caasdHbDlOGYqhKbRaxkOlDDhkFoA; // 0x10
@@ -9651,30 +9637,30 @@ internal class RBWPuDEGPubdlvFFeXjPxJMpYYij // TypeDefIndex: 53988
 	private Action YyIWivtzuBhhvNfvbejonXoThpE; // 0x18
 
 	// Properties
-	public float ykhfzAYhhtbumDJSjGZrFKgLjXlg { get; set; } // 0x000000018ABC88CC-0x000000018ABC88E0 0x000000018ABC88E0-0x000000018ABC890C
-	public float zhusFmcCBtTZbuuoZfgcSzcnuLlg { get; set; } // 0x000000018ABC89C8-0x000000018ABC89DC 0x000000018ABC87CC-0x000000018ABC87F8
-	public float pYiEkwIgIrQXsEKIZyINXQdzYopC { get; set; } // 0x000000018ABC890C-0x000000018ABC8920 0x000000018ABC88A0-0x000000018ABC88CC
-	public byte DMnVvPBsAAJdxNAWNtvwXIfBhEsh { get; set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x000000018ABC89DC-0x000000018ABC89F0
-	public byte KNBzijjeDFeLXEuEGPePapYGvipEB { get; set; } // 0x0000000184D88380-0x0000000184D88390 0x000000018ABC87F8-0x000000018ABC880C
-	public byte SGliDyErnsorGKsladytAlEeuyeb { get; set; } // 0x0000000184D88390-0x0000000184D883A0 0x000000018ABC8920-0x000000018ABC8934
+	public float ykhfzAYhhtbumDJSjGZrFKgLjXlg { get; set; } // 0x000000018CDBD258-0x000000018CDBD26C 0x000000018CDBD26C-0x000000018CDBD298
+	public float zhusFmcCBtTZbuuoZfgcSzcnuLlg { get; set; } // 0x000000018CDBD354-0x000000018CDBD368 0x000000018CDBD158-0x000000018CDBD184
+	public float pYiEkwIgIrQXsEKIZyINXQdzYopC { get; set; } // 0x000000018CDBD298-0x000000018CDBD2AC 0x000000018CDBD22C-0x000000018CDBD258
+	public byte DMnVvPBsAAJdxNAWNtvwXIfBhEsh { get; set; } // 0x00000001829D0800-0x00000001829D0810 0x000000018CDBD368-0x000000018CDBD37C
+	public byte KNBzijjeDFeLXEuEGPePapYGvipEB { get; set; } // 0x0000000187235410-0x0000000187235420 0x000000018CDBD184-0x000000018CDBD198
+	public byte SGliDyErnsorGKsladytAlEeuyeb { get; set; } // 0x0000000187235CB0-0x0000000187235CC0 0x000000018CDBD2AC-0x000000018CDBD2C0
 
 	// Events
 	public event Action YyIWivtzuBhhvNfvbejonXoThpE {
-		add; // 0x000000018ABC8934-0x000000018ABC89C8
-		remove; // 0x000000018ABC880C-0x000000018ABC88A0
+		add; // 0x000000018CDBD2C0-0x000000018CDBD354
+		remove; // 0x000000018CDBD198-0x000000018CDBD22C
 	}
 
 	// Constructors
-	public RBWPuDEGPubdlvFFeXjPxJMpYYij(byte param_00073dcb, byte param_00073dcc, byte param_00073dcd); // 0x0000000184DA6B90-0x0000000184DA6BA0
+	public RBWPuDEGPubdlvFFeXjPxJMpYYij(byte param_000aa732, byte param_000aa733, byte param_000aa734); // 0x0000000187254780-0x0000000187254790
 }
 
-internal static class NNefSVhzYujRHlfteDpNOUkkUmtWA // TypeDefIndex: 53990
+internal static class NNefSVhzYujRHlfteDpNOUkkUmtWA // TypeDefIndex: 79234
 {
 	// Fields
 	private static LnNStPJIXScwsdLkQVeDAsbanRsq[] mUarZAnOcAgasaFrUziGjTsTtExW; // 0x00
 
 	// Nested types
-	private class LnNStPJIXScwsdLkQVeDAsbanRsq // TypeDefIndex: 53989
+	private class LnNStPJIXScwsdLkQVeDAsbanRsq // TypeDefIndex: 79233
 	{
 		// Fields
 		public readonly ushort GcDXLONUdcLWGUjNnLEwuJedpMpo; // 0x10
@@ -9687,24 +9673,24 @@ internal static class NNefSVhzYujRHlfteDpNOUkkUmtWA // TypeDefIndex: 53990
 		public readonly float fyMfMsJFuuFKhIifangwweWmriev; // 0x30
 
 		// Constructors
-		public LnNStPJIXScwsdLkQVeDAsbanRsq(ushort param_00073ddd, ushort param_00073dde, string param_00073ddf, bool param_00073de0, int param_00073de1, int param_00073de2, int param_00073de3, float param_00073de4); // 0x000000018ABC72F8-0x000000018ABC73A4
+		public LnNStPJIXScwsdLkQVeDAsbanRsq(ushort param_000aa744, ushort param_000aa745, string param_000aa746, bool param_000aa747, int param_000aa748, int param_000aa749, int param_000aa74a, float param_000aa74b); // 0x000000018CDBBA38-0x000000018CDBBAE4
 
 		// Methods
-		public bool AnRgfMBlQHwOzfSTAJfBJzQWMhaTA(ushort param_00073de5, ushort param_00073de6); // 0x000000018ABC72E4-0x000000018ABC72F8
-		public bool AnRgfMBlQHwOzfSTAJfBJzQWMhaTA(ushort param_00073de7, ushort param_00073de8, string param_00073de9); // 0x000000018ABC72B4-0x000000018ABC72E4
+		public bool AnRgfMBlQHwOzfSTAJfBJzQWMhaTA(ushort param_000aa74c, ushort param_000aa74d); // 0x000000018CDBBA24-0x000000018CDBBA38
+		public bool AnRgfMBlQHwOzfSTAJfBJzQWMhaTA(ushort param_000aa74e, ushort param_000aa74f, string param_000aa750); // 0x000000018CDBB9F4-0x000000018CDBBA24
 	}
 
 	// Constructors
-	static NNefSVhzYujRHlfteDpNOUkkUmtWA(); // 0x000000018ABC7E04-0x000000018ABC8020
+	static NNefSVhzYujRHlfteDpNOUkkUmtWA(); // 0x000000018CDBC764-0x000000018CDBC994
 
 	// Methods
-	public static bool RUKiytTXrLcSpQZCCQWaDIqtKpRi(ushort param_00073dce, ushort param_00073dcf, string param_00073dd0 = null); // 0x000000018ABC7D98-0x000000018ABC7E04
-	public static float RDQwknGoqzlZPaqjxePTtSVHsjZh(ushort param_00073dd1, ushort param_00073dd2, string param_00073dd3 = null); // 0x000000018ABC7D28-0x000000018ABC7D98
-	public static bool PWBpTzdlpMMdlGkToklvyHBOgsFO(ushort param_00073dd4, ushort param_00073dd5, string param_00073dd6, out int param_00073dd7, out int param_00073dd8, out int param_00073dd9); // 0x000000018ABC7A48-0x000000018ABC7C20
-	private static LnNStPJIXScwsdLkQVeDAsbanRsq QKYeAJatDbmEBhCgDoraFkrxAfGgA(ushort param_00073dda, ushort param_00073ddb, string param_00073ddc = null); // 0x000000018ABC7C20-0x000000018ABC7D28
+	public static bool RUKiytTXrLcSpQZCCQWaDIqtKpRi(ushort param_000aa735, ushort param_000aa736, string param_000aa737 = null); // 0x000000018CDBC6F8-0x000000018CDBC764
+	public static float RDQwknGoqzlZPaqjxePTtSVHsjZh(ushort param_000aa738, ushort param_000aa739, string param_000aa73a = null); // 0x000000018CDBC688-0x000000018CDBC6F8
+	public static bool PWBpTzdlpMMdlGkToklvyHBOgsFO(ushort param_000aa73b, ushort param_000aa73c, string param_000aa73d, out int param_000aa73e, out int param_000aa73f, out int param_000aa740); // 0x000000018CDBC378-0x000000018CDBC564
+	private static LnNStPJIXScwsdLkQVeDAsbanRsq QKYeAJatDbmEBhCgDoraFkrxAfGgA(ushort param_000aa741, ushort param_000aa742, string param_000aa743 = null); // 0x000000018CDBC564-0x000000018CDBC688
 }
 
-internal class psxalbFqqRAvexHgaNTDxDrhdRTx : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 53994
+internal class psxalbFqqRAvexHgaNTDxDrhdRTx : zseGNggMpNmuvgqogMqiEcjsNLTGc // TypeDefIndex: 79238
 {
 	// Fields
 	private TouchpadInfo PbqIfxbfeatRVrbKRWrLMiXzJFwcb; // 0x20
@@ -9717,7 +9703,7 @@ internal class psxalbFqqRAvexHgaNTDxDrhdRTx : zseGNggMpNmuvgqogMqiEcjsNLTGc // T
 	// Nested types
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class TouchpadInfo // TypeDefIndex: 53991
+	internal class TouchpadInfo // TypeDefIndex: 79235
 	{
 		// Fields
 		public int maxTouches; // 0x10
@@ -9729,24 +9715,24 @@ internal class psxalbFqqRAvexHgaNTDxDrhdRTx : zseGNggMpNmuvgqogMqiEcjsNLTGc // T
 		public bool reverseY; // 0x25
 
 		// Constructors
-		public TouchpadInfo(int param_00073df2, int param_00073df3, int param_00073df4, int param_00073df5, int param_00073df6, bool param_00073df7, bool param_00073df8); // 0x0000000184DA8E10-0x0000000184DA8E40
+		public TouchpadInfo(int param_000aa759, int param_000aa75a, int param_000aa75b, int param_000aa75c, int param_000aa75d, bool param_000aa75e, bool param_000aa75f); // 0x0000000187256EE0-0x0000000187256F10
 
 		// Methods
-		public void CalculateTouch(ref TouchData data); // 0x000000018ABCA368-0x000000018ABCA464
+		public void CalculateTouch(ref TouchData data); // 0x000000018CDBECF0-0x000000018CDBEDF0
 	}
 
-	private class nDGDgFZHIjKCRXRTSCjYEVvndGZs // TypeDefIndex: 53992
+	private class nDGDgFZHIjKCRXRTSCjYEVvndGZs // TypeDefIndex: 79236
 	{
 		// Fields
 		public readonly TouchData[] HoFCUsHKnPeVbzHOakkkpbMlyBLD; // 0x10
 
 		// Constructors
-		public nDGDgFZHIjKCRXRTSCjYEVvndGZs(int param_00073dfa); // 0x000000018ABCCE98-0x000000018ABCCEEC
+		public nDGDgFZHIjKCRXRTSCjYEVvndGZs(int param_000aa761); // 0x000000018CDC1794-0x000000018CDC17E8
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal struct TouchData // TypeDefIndex: 53993
+	internal struct TouchData // TypeDefIndex: 79237
 	{
 		// Fields
 		public int touchId; // 0x00
@@ -9760,63 +9746,63 @@ internal class psxalbFqqRAvexHgaNTDxDrhdRTx : zseGNggMpNmuvgqogMqiEcjsNLTGc // T
 		public int positionAbsY; // 0x20
 
 		// Methods
-		public void Clear(); // 0x0000000184DA8DF0-0x0000000184DA8E10
+		public void Clear(); // 0x0000000187256EC0-0x0000000187256EE0
 	}
 
 	// Constructors
-	public psxalbFqqRAvexHgaNTDxDrhdRTx(byte param_00073dea, TouchpadInfo param_00073deb, HIDInfo param_00073dec, int param_00073ded, Action<NativeBuffer, TouchData[]> param_00073dee); // 0x000000018ABCD3A8-0x000000018ABCD5A0
+	public psxalbFqqRAvexHgaNTDxDrhdRTx(byte param_000aa751, TouchpadInfo param_000aa752, HIDInfo param_000aa753, int param_000aa754, Action<NativeBuffer, TouchData[]> param_000aa755); // 0x000000018CDC1CBC-0x000000018CDC1EB8
 
 	// Methods
-	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_00073def, double param_00073df0); // 0x000000018ABCD0F4-0x000000018ABCD2D0
-	public void ngUTlTZVPYrlJkAyrcnFEapgxoxqA(); // 0x000000018ABCD5A0-0x000000018ABCD80C
-	public bool KfeTnSggKRQtOUjPypCDriUSQzXD(int param_00073df1); // 0x000000018ABCD33C-0x000000018ABCD3A8
+	public override void EGhvxPKhXjlkipAYJerjFLXFedUDA(NativeBuffer param_000aa756, double param_000aa757); // 0x000000018CDC19FC-0x000000018CDC1BE4
+	public void ngUTlTZVPYrlJkAyrcnFEapgxoxqA(); // 0x000000018CDC1EB8-0x000000018CDC2130
+	public bool KfeTnSggKRQtOUjPypCDriUSQzXD(int param_000aa758); // 0x000000018CDC1C50-0x000000018CDC1CBC
 	[CompilerGenerated]
-	private nDGDgFZHIjKCRXRTSCjYEVvndGZs IaOGkKqyuGWXZNwuvoHmkUzArMpF(); // 0x000000018ABCD2D0-0x000000018ABCD33C
+	private nDGDgFZHIjKCRXRTSCjYEVvndGZs IaOGkKqyuGWXZNwuvoHmkUzArMpF(); // 0x000000018CDC1BE4-0x000000018CDC1C50
 }
 
-internal class VbAAdTxzmAWCstIPAWbKlCcBdbYW // TypeDefIndex: 53999
+internal class VbAAdTxzmAWCstIPAWbKlCcBdbYW // TypeDefIndex: 79243
 {
 	// Nested types
-	public static class HMuWgOZTDrvYKkeApgAkWDDFcCDk // TypeDefIndex: 53995
+	public static class HMuWgOZTDrvYKkeApgAkWDDFcCDk // TypeDefIndex: 79239
 	{
 		// Methods
-		public static bool DAzrfvcgSzzBEUwbqeizpCzsHfjt(ushort param_00073e06); // 0x000000018ABC70B8-0x000000018ABC70D0
-		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_00073e07); // 0x000000018ABC70F4-0x000000018ABC7114
-		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_00073e08); // 0x000000018ABC70D0-0x000000018ABC70F4
+		public static bool DAzrfvcgSzzBEUwbqeizpCzsHfjt(ushort param_000aa76d); // 0x000000018CDBB780-0x000000018CDBB798
+		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_000aa76e); // 0x000000018CDBB7BC-0x000000018CDBB7DC
+		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_000aa76f); // 0x000000018CDBB798-0x000000018CDBB7BC
 	}
 
-	public static class snOrUdREYdJKgyCftIoxkViViWHFA // TypeDefIndex: 53996
+	public static class snOrUdREYdJKgyCftIoxkViViWHFA // TypeDefIndex: 79240
 	{
 		// Methods
-		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_00073e09); // 0x000000018ABCD848-0x000000018ABCD8CC
-		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_00073e0a); // 0x000000018ABCD80C-0x000000018ABCD848
+		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_000aa770); // 0x000000018CDC216C-0x000000018CDC21F4
+		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_000aa771); // 0x000000018CDC2130-0x000000018CDC216C
 	}
 
-	public static class MoKkibzybyrItQEdSxLaAbbpHvUZ // TypeDefIndex: 53997
+	public static class MoKkibzybyrItQEdSxLaAbbpHvUZ // TypeDefIndex: 79241
 	{
 		// Methods
-		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_00073e0b); // 0x00000001812081B0-0x0000000181208610
-		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_00073e0c); // 0x000000018ABC74C8-0x000000018ABC7A48
+		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_000aa772); // 0x00000001843FFFF0-0x0000000184400000
+		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_000aa773); // 0x000000018CDBBC04-0x000000018CDBC378
 	}
 
-	public static class knmhShzUJmxzMFpGUDPFxDsHRSVJ // TypeDefIndex: 53998
+	public static class knmhShzUJmxzMFpGUDPFxDsHRSVJ // TypeDefIndex: 79242
 	{
 		// Methods
-		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_00073e0d); // 0x000000018ABCCB38-0x000000018ABCCB48
-		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_00073e0e); // 0x000000018ABCCB28-0x000000018ABCCB38
+		public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_000aa774); // 0x000000018CDC1420-0x000000018CDC1430
+		public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_000aa775); // 0x000000018CDC1410-0x000000018CDC1420
 	}
 
 	// Methods
-	public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_00073dfb, ushort param_00073dfc); // 0x000000018ABCA554-0x000000018ABCA5A0
-	public static bool RDYeEwbRtXsLWoAKUGFZDJmuTWfRA(ushort param_00073dfd, ushort param_00073dfe); // 0x000000018ABCA518-0x000000018ABCA554
-	public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_00073dff, ushort param_00073e00); // 0x000000018ABCA464-0x000000018ABCA4D4
-	public static bool JGFRXvvyCbkrJeZqPirIEOeFkncc(ushort param_00073e01); // 0x000000018ABCA4E8-0x000000018ABCA518
-	public static bool HBMeXiFMgCwqUbhbrdJcODHQmucqA(ushort param_00073e02); // 0x000000018ABCA4D4-0x000000018ABCA4E8
-	public static bool lnjdfxrUQNpYNSRzIboSGmgXoptU(ushort param_00073e03); // 0x000000018ABCA5B4-0x000000018ABCA5D0
-	public static bool ZRrQEqyAEAaASggpqmGZdBFHevqOA(ushort param_00073e04, ushort param_00073e05); // 0x000000018ABCA5A0-0x000000018ABCA5B4
+	public static bool SeISTUMcvxQbscTuWAifXUKbHvHV(ushort param_000aa762, ushort param_000aa763); // 0x000000018CDBEEE0-0x000000018CDBEF2C
+	public static bool RDYeEwbRtXsLWoAKUGFZDJmuTWfRA(ushort param_000aa764, ushort param_000aa765); // 0x000000018CDBEEA4-0x000000018CDBEEE0
+	public static bool FRfnKffdTlqLSvooDnaigfyWpISN(ushort param_000aa766, ushort param_000aa767); // 0x000000018CDBEDF0-0x000000018CDBEE60
+	public static bool JGFRXvvyCbkrJeZqPirIEOeFkncc(ushort param_000aa768); // 0x000000018CDBEE74-0x000000018CDBEEA4
+	public static bool HBMeXiFMgCwqUbhbrdJcODHQmucqA(ushort param_000aa769); // 0x000000018CDBEE60-0x000000018CDBEE74
+	public static bool lnjdfxrUQNpYNSRzIboSGmgXoptU(ushort param_000aa76a); // 0x000000018CDBEF40-0x000000018CDBEF5C
+	public static bool ZRrQEqyAEAaASggpqmGZdBFHevqOA(ushort param_000aa76b, ushort param_000aa76c); // 0x000000018CDBEF2C-0x000000018CDBEF40
 }
 
-internal class CdOeHzikbRBkBZoJPipyBOeHnirMb // TypeDefIndex: 54000
+internal class CdOeHzikbRBkBZoJPipyBOeHnirMb // TypeDefIndex: 79244
 {
 	// Fields
 	private int faXYUcNLwyASXbOrsvCIlWLksNkG; // 0x10
@@ -9826,52 +9812,52 @@ internal class CdOeHzikbRBkBZoJPipyBOeHnirMb // TypeDefIndex: 54000
 	private Action YyIWivtzuBhhvNfvbejonXoThpE; // 0x20
 
 	// Properties
-	public float hdhgRruzeMjkMsQRzkiAhPPzgRzN { get; set; } // 0x000000018ABBEF34-0x000000018ABBEF40 0x000000018ABBEE40-0x000000018ABBEE70
-	public int vsFLtRXKpsrJpdFoXcvsRKfdRFeU { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x000000018ABBED94-0x000000018ABBEDAC
+	public float hdhgRruzeMjkMsQRzkiAhPPzgRzN { get; set; } // 0x000000018CDB34E8-0x000000018CDB34F4 0x000000018CDB33F4-0x000000018CDB3424
+	public int vsFLtRXKpsrJpdFoXcvsRKfdRFeU { get; set; } // 0x00000001828BC2B0-0x00000001828BC2C0 0x000000018CDB3348-0x000000018CDB3360
 
 	// Events
 	public event Action YyIWivtzuBhhvNfvbejonXoThpE {
-		add; // 0x000000018ABBEEA0-0x000000018ABBEF34
-		remove; // 0x000000018ABBEDAC-0x000000018ABBEE40
+		add; // 0x000000018CDB3454-0x000000018CDB34E8
+		remove; // 0x000000018CDB3360-0x000000018CDB33F4
 	}
 
 	// Constructors
-	public CdOeHzikbRBkBZoJPipyBOeHnirMb(int param_00073e13, int param_00073e14); // 0x0000000184DA8770-0x0000000184DA8780
+	public CdOeHzikbRBkBZoJPipyBOeHnirMb(int param_000aa77a, int param_000aa77b); // 0x0000000187256870-0x0000000187256880
 
 	// Methods
-	private float ZUajHrsIpJtSCJNnXgSMUYoOlGHH(int param_00073e15); // 0x000000018ABBEE70-0x000000018ABBEEA0
-	private int yLMbUGkHMQkfGjtSylvgzWWFMavm(float param_00073e16); // 0x000000018ABBEF40-0x000000018ABBEF68
+	private float ZUajHrsIpJtSCJNnXgSMUYoOlGHH(int param_000aa77c); // 0x000000018CDB3424-0x000000018CDB3454
+	private int yLMbUGkHMQkfGjtSylvgzWWFMavm(float param_000aa77d); // 0x000000018CDB34F4-0x000000018CDB3518
 }
 
 [CompilerGenerated]
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 54040
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 79284
 {
 	// Fields
-	internal static readonly long _0B31436F7F817F43292A073BAA33FBF3A226D874FC2753978FCE13DBA0EAFA5E; // 0x00 // Static value (base64): AAFAQAABQEA= - Metadata: 0x023341EC
-	internal static readonly __StaticArrayInitTypeSize_30352 _3D81570F62DF347E1C5258C8177FEB1B3318D84871BF789DD2A9446D57947604; // 0x08 // Static value (base64): jBEdArVhQKx3PVLLHV3KNCRpEz3nySEEwF4/W6DcpdB6pmRaYkFxeiA3PEH47ydK23SUCUVrNp0Uz2FMY4jJyR8D/kIiyd6W2B5QG6bqgH9vyun58nHCCEBp/VwrBawa7TjT/Z8wqgAZ3rqyfSHy+xxZteQl2l+cfBWO4ubTvr0Q0k5Yh+5thZJtvyjjEZ1Z0z1L2EjfHtcCU9Wk3UqnMP3iKwrTauMUU7ZknTBBQ8HW8dAyZn8bRCRi0roBq7K6HaM7ywNdhQ0ku4qD8DgHx1b3vMDxsNYavBnunerHgowZM2X1eMYbiOa97bidFwfybpJ2KwylYOTLEzZ9/cGa0ap6JVKM2om91mcAk3gOHn/yXujTTN7dAVGwRyt0jonXR2JDUw9E3tEQ4zj0r/Q4KRol96sGL4pUonxMnxlxfkhK6ve5wyj18Fy+n7uflLWsVyENz9Q3UNpB7+LYVm5YU9KPP4sSIhZdPw4C4obvhjaAbJffMrWmJaLYS2sAHr8M3Pj3LCUiPmOPqfZCUiY+j72ae1OKGwQFG5HYJMFBv4LALXTL4VI/9ItVlJLPSL/1wjal+ywiJxr9czQyTIOsDjvBYnOFGnGAEL/8EETNcWZSk55AiJmszdpCU8HSL2IlD/XO29akG+SgTaQRO3coNE79qU0MWLJf15LzcKSM2ksc0VedAQagq2qFZ6JYBqmJ2LL4o7qy6JejRl47IYcuQoUQY1dEjig4IR0RlBGRxTGCpMYU/MesnyfjV2fNyFxdfvpLtR2CROwgi1pbb2df3NrkKLWBqmbvvMIo+HVz+2+fzjw5hu5ZX19XPAy1EUo1ZdxtD1o8pINPPJWE+2TxO3MxF4WUoNI9GwnpMEbwjEv4bGA94Zmk6I59BMPX6fM2wygjcvH8h3YramMljOkQ2M5uW6GuRzeow+VB/hM6N/9cCymkJcQY76kFIBO5IebG2Fdff/eWA6UTdhgKzgxzUFMK9M3asAbEca4lwKZS0MKVnZqtLumbwfZRT8FjDv89NUVQb5mkcB/5o0ctIgJ/CR9sfRhdvVwd9bvbnpTuEfQnH7DDKIsmQtN4wrBRm5llB9d19976wG9cvu+bELyiKE8jDpqNM9Sxabk9W5I/VrZRJHBJ8Iez5OHQP0wdIw4n1vyTtWktcN8UDbLFCkMaStJTl5G2vW/5tohT2s1O8hDc602kgkIE83iWoGnd+Wy9nvCyeXkOJdPfZC6Ua8jni7zjmnBhBlso5kWrNFsftys4BmD7wl7FUBkyey2VGCi6aF01LQweNWyW2FxOt8c9sqbJBQt/pJptoGURB6cC+M+4ulPKjeoFByD3LRYv53jRtSeGo6uD+MtF+I8EYkmgcdITFp0OfQ7Y+dHftMyxtEpm0cM65fIpkzTqTJRJodHHWRvlow+gSGVm631edSYzu1IANbZhMIVcXtIXJjhgSfofs4sq7sLphNQE69+5xTRHc0pOT/XQFJZ0zEufGYiajockGjlQgqQ2UAWbqz8/9jV+zwZvhMOs9iD4KL+wJgQUatvtm9YkjHluJQ1z69Pu3F+IO8eXAciD1R/USIw2ZT3OFcw9GPqwFQxV0WO3XPZ5mvnQMBINfCN0UKTcYJ6idf1MP6azcLlsDqvfJOVdRGD8JgesY5LluqEtwVeyirZOOtNbLX4QEPgfKmv13fss0dKlTwOMlOCF7NPCs7EwyyOlXGsZvPhXThb1XRhaqYWtcJMY/NiZ92My0w+/O3+7EbTpisfePVkadM9niGyoUBiO5GIKXDeK2oxiqxMMfcwxX7cJM3J3bP+8MATvheULMfdEbR5/1rII6rySXlcY+napIglYnkkflw3hJ8uopALtH/9guBgHh/LgKKxqmDSfxPZwT8u6Csi67WOS9W2sDH5BTn6FGWJXXro7K/iq4L0oBckbCyUP59/XmGc9BVnIMbEZAhDCno9TFOJTGzLf5RTrVpjV8KXG8tdNd8O4uSspr8oWEJxWWvcF+Wvu8QY3jSmLSyTjAIxesruCmQEeSfL9D62xxcj17PB810x1d+KhPOmPKIYmXWDrdp2bfc4OobCX3Np45zz+rCnCc2tsVMIRZX/83Xij1QW/NRGeztp1V6iSaQb80FjqZxRzxaWbH5XbF0IJgWYyn/B2oVCEWE7qNSgqfVZ8wbLC3PDYXe1i2jU9xHSuv17rsDsfVW3p7bQmoyI4pMHfY6GZOQbJTtd3o25A5/iKwkK1Dnq4aCHIt/kutr/SorHmWrARwe8/yi/yLuK/O0Fn5v2H+TIKUquxcoFpzD9QUA45eTRRBU+qGjXNrD6BL5UiTjySRcgl/z9fAfO8n3lebOunRA6XO5O3FmJMhICbN+1/wVsACAj9skEt9kC1NJ67GusTAJGOhX8+L+I7WBfnz+ESn1ZWMgThIBstY5UsD64b5Q5p7Bbdsr+HpBTFqycR9EC1b69xZiuqjmynJ5Vm9ZUWspOMqCqbPdnQgKTfm4ZYcnPXzJz5OUf0D+QzIgWx73g+n3sSGPyT3aLS46dPVNhIYYY8zcxFdBeBWZzQw5gJFtaGqkpp95uYSlQTM1RseOznBXhKomcDB4ULTbxawSIIAOgsdKJrIVrXg0M4WGRSj1T5L/3hN+4ap7P8BE5LgTkyJxL5RtSg5QRmYpQ50YImDaiavD3yvRfAGmvpaAG5m25noC3V9G2dmkKYimpKeuyrU+RGlK+mWz4aZkerRLBHcFrR6xsvOYWn8euIuz/IqdFaHAVvvDKCun8aehZPHr/Py4TsxuBHpyLlj7tVE/5qC3gPMkYCO1wNn3gfyB/nhs53I9+WcvOZ90PB8PdzXYKEylnvOtXSH0Bd85Ckmo/8KFmz76oPPUygX5HKAo9gtYj2hU9btnVRXNq+peDozYSCAfuLRNlloljkMiqy801MXcAUQy2XfyNNjH7JKFlicyd3Xf1/Oeup1OXJkXltBBU9cOwuPlGl1QzAcSiDAGwyKas90rVlwQunDgVxbc2mDKEQJDchtfLEfJsr9VNhmh5TRlv3kRW9UZELlu+ewLrdtiJoQ0Br5aSNSqM52WxDwnqY3rfkUMW++8QE+sVCUzu3r2QeZpf8r+mJB+kvTNKPtI9ll4Q8Er8RWtrzrRIhbji17e4lLpFTb983DdRmZPZAdMpSfJEBVXR+KLvA5jH1nHr2sfFFwkSjDSd6Q2kvQSo7CEt8i2dTUpbvpWsl4VFqmnv1SSHGLpvgV4lfUCz2lMu1GurdXhtNk7GS3xMfF/GjqL7DTgzORlBa6qHl5XEWTErLHX+e4y0fP/GCQz4J6nPgXWkf+4fPGV0qVEN66Ut86i8vScApeXjPB6nTbqdNSnq/mB/9sadCLOKeUB1PNiCt2bMjOlYSelsPlINmGhs3X7ytIpwEvDKeT6gJEW99FVEazyFtTvWYm+p3IrUqadtxqSMQOn3hUFJFIvofZ30SZ8MnkTXjuX5xtdok94i+C9Pdlz+LqpsrUEVXmszwJbdtU+mkMIRlO19mlVoZNZRGgqMO2Bw6HjP9FZhJ2xzBrb3wTmnJVudrMrpCCWC6RiLngmrJNFN1hRU58KmCqURWTIEjJhj/OI7AEkrifgYQ4fZhaERCDLXCSA/3yF5ak8m9bLm0zfus8cCeXuyuTLhwE+/s0WjXkng5N3QyeX6U4toQx0S18J1XCn+mlcIDvqDT/oyZR4og3qjk50R8qOhKoM3O78I74dMesT7y/FxWiGig230Coy2a54I9jUamzW4uhaleOZ/5LLcbvoG+HjAl8zdmUEkgxZDslMuQbnqP+Ttd333rXoCW7bCh/m4LtURdgTOIayG0IUmTi6WREgnss9tclel2Xwq6bE5dnAZK13CwDFCUj/G0l2Jky2omiiVgipG1bVLp56W8lXabCHO3bvMBNdpTOyM0AueMYlr/Z77042jbWU0J82W8Ku+jC18mPbAS6Ad6W9TndCJg4vR8XDBoIxSIAMDHVuhhCJnjnvKUyD8qf998+hlZCXmWorLITD638DaxUu2P0oxq6S7Y8EsCPDnlrUQEz0d3L3W6JuOt7KL3d5yflFGyPa+GJv8lBH4Kd/dokAPg3VmMFj2InW2RkofvOoYcLEwmFvsdBgYj8GUTZalGY6gYErUt4OsHv82C/jsBC/CMjl5D5gatEctQEEqfHGz1i8nwLKVL7r3Ji0/ER1AF2L7ry8UUSeJVAUx7TTkMKaSWqzIHAY911MW8cqnnoJMcGpWJO4ELYEb8pYkfKrgkaVHVOgALucQxy9iPriMkGv8iuV0Llu85EYNzzq+MQ1T2oJkQXB80GOS1qtErKdUhwp7eMoU4w0w5Q2Lwpi8j0UHzcnCFKDZhsfvKwo8X1JUMjCD5YK1Ub0wzpZLqJ5oPtwYiHl7SH2T5dkqQZvcd1zH2YApqFxjN9StZ0Y+N7jSDTfpG44Z5zoFgnr6ijmlxClUtLMSGwnOmdaIgIKfaM3plz+LtcKLyQHCNh1kBj0vvVWbAGINREDfi3eJUA/S95r9ZR4JcbbiJ5D9VLjvzTClaxvCZyQ0szGG25Iu4eSY/8rkEaKMUOeTSoSBQIhuWEvpTHtvvw9P5NzhiU2pzSGLHgVGHls6+y26b1ftVThXKQxr3ah51TDmbPTzOzeYn+AbuOBSwVar2kVibvpYSW+ChqF98+CkHkE14VHzeNi88beu6qHcMo2BLyjwNnPbdYZ6arfA3hpXWKznDZ08yLreBvR0huLpRC9iX/w8VcN4HeN3wQ3LitPrl/Yu747PzattxOE2zP4mnYTfEzKFpcZTsTzy/Fvd/TpfWD+ysOPi1S4oTfWHGXoO4/cRcsjMfG181Hh+Z3J9ZbrIVo4Yxg/nbTxYPPnwMajTf3l7zs0GnYDAI5HcPoKqld/VeH8AEBV6vXiM+ZY0/DTKS5d4h4Si48tt0SoxmOvlJrAkeTuIVNWD64Xj68zAYl04lbmaS/CZ0EZhBMKfB4CO2Hm/GRMSFM86zJ6L86HhcB53Vsu9IVCi3q2lnlIAew6/T5pv/57qOUOgftQCGFlSORTvJ/y7vTthSVySOXBF1oBwTxRgEpp7MvVKHNwn+0siN7rkmfmfAA/ZWRgKrD1vdVQIMFi4zEhWxz39rV1Qv1aZndw+p075S59W7LXGxq6tGqIoaDO4kbNNHHHT7Uu6F3KnhkAUTRKN+A19MMFzccANLAbq1SWe8wFXmGxLZqfj7C+B2RGRNE8ApAXbRSmJg6j/k56ZI58h/I5foTxZpGJbK3RoHKXYTQPKK2tr/XoaT/F6hZtSMkreLLdxM0PgbYET2Vjl30teskKAWkdzH+o1Pvpm6cCQY5iujLIjaXimVPay565qYcKrnwaLuExag8KVAtZjj0S8DQuWn6Qn95xuZzh1WVDDMRQLdAp3DExmcqzV4Fnl0B/My+9506r5a4vQ3Zi0jUxRSRCHOBwyFEzNsIi2uW8oBVI6nJwPd/TEWTCTPyWo1svcmdUzMVHEa6/6qoKNBOM1p2Ws27tM6KE9m+onhKrBTrCk7DLN7ChaFuNRj6wChBGR1o150BcxwlfJoBsloTV8eodTwYNu0j0/X9+UCHjtG+QjWjnPpJmYhHFXk9goN89HZy6C47MVkfFoUIX+1EVFI8pe5nE+w7jjZ7V9v67Xx9tvf6uqB3B5EZB5kc5q3pSfkb6V+b/xRSOcBJyhzLig9zalCAqdeYCrvR27aqhvGpEDvLxIpABZSBFRWEuyp4CXK3ZYZJjd4mR/dAk/kPaRIzDRN3lPz7n2eqs561fTIfUVGB5t04rI2v4bTePuSPh1Evar1FqGDaEW6GMm0lG/e15xWcEWqejJ6Mxmyea4TnkR3wpxxk4CvFlSL5fwitGCNZPA2RpMPCsUgdoMPCRT656yhqDn/K+xZJBnBZkc/PBFjHJq8YUUsoWlayRkXrKTeV1na+lFf5wGxyt/l7O+LqramltqJIDu2OxE04gU+J1DfsvLtLtNHjqVPz0BbQ+yTfmhyya8H0qixFlMeuSUF7q19r3OrArFRxSrnqZZCIIo/d6diiCOjt0ZGYKl8qq1xKU60459Ze9TivwhMSV0wAau/9+W4jqGJ42yW+KnoD9iombIybByEP8ZVjKEeo0a+8Ax+EJleN5kh0/8EHcXh0TnABJyTONGz5uiEQwVCwBvqwXBKGP0qVBsvBlTT4nNGDq/+a9ngpwyBXF/LOM21CTaq2YAhFur+ZbzlsOn4jkXEyMLsCm9Inl3p8WfTiHUthKrCy7VicpyT33wofF9W+rVtaSUhVZMpqz6sAYzgtFnPSdGTLpfJZ53MbJNlVzzmDhpwT1rb0SDWC5gW5YFhWBhHsi4bHYKpjDIp5SB7vnZCrGBYwXUzgzqTLgtZ3W6J33UPojQbkxNUfWRnVOEClL//APjT1b0q1ZsOm517G57uhzWYMaQOIOTw9x2dX+7RiVRZeHIAD0elURJNCnJL5+qg4pn+BAyY+hESngiG07rkjJ+TLWHrTKUPWq3xceXN5Md7oB/oYHbuaWF0fiWNx/mE37oPMeeFIAd74pE6+uCgsnPlQMAiFhQ2GkkQFZyGNfyhp8jFo9PynyALOf+6lI0oBSon20mvCzDcDQEXDJnQ9/scwdxMfDYdAPVuzNL/qzZ08yJewxSeHH8sLSI4YLINEs1iQW6s+mJWMUPAo00zfsLzpcJrmMzH3eBg/tNWl9rEOdBC/U3Q4lQix6fBxzjtX28lD4fTi8RHdR9AlM+2SsjbPXCNZ+0zxg8bh2DO6jt8quq+ZIe9EXJ+Kp2+wneHwdjmMiVR9p/D9R7fHWRXNk9ffDPI/sPPqL+PhepKclfjhdY90qzgO3LJm9TY5WnyMY2B3CRl5EF1x4BSnZx9My1Hp8LC+EcqZBakOuH0a1CCKavXLUgVt3nkjb702nzgruRjvRK5LhJUNntJGDnaFDtG4I4wDYsL/A/edzgTzz7yR/uuMdKd3ZKJxbCear6ZcvMgO6mO/X8+lnTS9Tp0I8+fEUIhQ0WVp3iuZFPFYNkyHI8dvcX/E2iuqFdDeB+/WRWAzUPDrneKt1EmboayRjlY7uS2UvfwrxNLX2Y4kUM+dK1X4GZhkp7NPX+cjC3IYAhnTXKOdWvaIb2bkEy6z1GKt8ykRZGfyC5lPyWjpTOELILmAry9o3x0N312+dwdgS/CU9UuhgKNhya9uN7fqy7yDJvxdIwMhUV/gPuhZhT5+4VYfHdYaihjrDrIxaICDk1KmIMEo1ATNO0DyOlia2WOEE5hYd9h5NFQlKdXEPfiF3LLh1MkdnuNwoImV0gV8DGAsc9i0grjYHWxyMhIrxeb+vnFKDkSh2VxaV7Likv16ivDMfkL+1rw4s1AFMNMZYTowH34O9ENtTL7NWNUHVHTKo+1JUDq/36OilWRKqAhm/vktCTkErdc6KHcH/VFNc6FmObaueq/EQRHtbW4v53HH+TdSAOhdkDs/s4A6bWUDb/nsQ1qLWtvivvIQDwevjAsSMRX16MmcpoyYVZ1mqfpgCdcmb9ArfpFgS2CmgJFnq40E8ue/pbXotCDsD09+p5u6/mwxcaJPCq/MXLw7QHI0nuuWC2NodicUpEQ3w6bQLmdxUmcO//UqWyofi7ttDJ7a7SJJcXxLA4CjNe1msp2ezZq6oGfhppIxToCEVRGIITglNF/utlN7nwkUQLVdV4d6ss+orbYz3cHL59CXr9PeJkZe8ukdwvOHavcdY8ZezlemRwr289aD3b8olg+Cov683Q5DK9rZMCK+1w/aQ6QlYsKGAAtrKn7fX79oKdkXUg75l+s0cGfjYym/z/6mYT8i6R78lUBq4fwo+MI2Stk2hsYKyu2A23ev7Mb7WNvo4aRVq+d0VqomkQzzHdh+280vKkjtAPSIsJflNc9zFucQQr/rGuFyarOq2TZ226pdev+QHva2+CjVZqihgPzf7oSodk4t/21OpKlzUWDO91fs9acAM7bDNwGcnhxqGXcRUPXYRIBQLGm0zMcYqbHlbP7OgULdaqyv4Al+FnDHjl5BCTArpuGS6U5n/QEr7BPisJwaRH2WJd0fg41cVelQlsHifzTiD5QF2oBNn9uVIiXtN/cCzPXDL76NiZNlFsIGYtBiDVmdBRgDgo2QjDPOftXDGOQZs6LUVXghOUREiAxTkur1xIiPajcIAR8A55P76Hd92QnFvvRKAQ+ycYua2VtZ+/spW7mDZ59YQ1XK2H539U1GooE+iiGZK9F6SP7A8HJWR4CY25cDdyUj3TnXcO48AfFMr8tyk/J+vK4/kTYsY4BQHJ4PI8/u2U12WTh8jup+bnf11JWTBblxXDo/+MX2VzowHvgRoOKjdLsHRJ5fSLh73ig14Muqu4Itkwm2OVWDIf0zMDMAELvLssLeYiTMzWyaaQKXIxAq9/E/3GrsMse7WMm/oFRjh0cHA/7ap0qrg1vzTTXU1M+gLgLrkpf6aRf02AmDqVyKwMzN/YQvWPFb0dyzWX5zXcorQQYcR7LEheYnX418DytaFdy3ZIseI5nQeOt68n6J0y7WZUlkdSil+hD/mGvDJRCEYBKLqg5Ndnou0HcCgIjBw3Qza00qrieWBNPdUlOzxWKeIfRTdP9bUJUSoaaQzYw0G9mURDHNdUgB2N/B5KC0hocpV5Iphqv2xH9RbKTDXNJG2/Fk2h1HsYWyCkYV8goXi0Ns3CqA1fu8BrBn+yvTaN7C3pgBLYmXA8/rdhgD4tXmVqc3LUiw1AZkeNk5tb1AzTkAs/b1pm2DiqeWDWzYF2D/3vfFWtoscWZUWLIYcph23J00XB7ptlaQe4l0lqQkAESNJTsQcF/eWsnRPn5IvNkEv9j4roTiW6YDItCkt0bln4YkK25AMIM8ImHXXqhEUcH7BnntNXur5Xr7/xORDwIeEMUZKUl4ycpEdcT5x3ErumW65k/ivwBqAbgYYro+AnpJwkFG8wCE8UN2P19jSePI7td2cP3LK5/SWu3gPwaMe9SC0dWRS4aAtg9eBehX0PxlvSwVKNSs3kxrtKLhJ3JqQ7ltHdP0Ge9hK+U/puhUJFR/Yl2v1E1jBJI/QJ5xdUXQuht39jZmmSe8IASNXJh6nCWxDweko28EccYy+SWccdcFEQA1xiQ0UroN4/y66WHmUBZQNGxBsFoQ75OKIuTZqfDRtPPGHE0igWp5mGTwFtWeQsKu2pjab8ePtsQHX1J5g7OW8Blc+NhDI+XU9d2Rl2Uz6m7Lil05hdbofeQi2ZCnDmoGE5U3KSKf7T7BQs0CnwjcneVlXoZy5nhHvTyXH6Dt7P4+ykJ1cUfJ3iAlBFVsUJbNy0IyuI2CPL64yX+3kgYNEOmXSRK3RcFq7T6CzpYmp1zh6ERQ8AgKYkMrpPLXxdR2cfJTBMch2mTpcMHgEUuN0feKByGAkg6nQz9EK3RQye51z8y+a+gdBdRMCIR3FXpY+4Xgs4N4dxfsY/I0lcqfvPPOxFemRqKjkF798M3pp7dERa+vY7PgDqYHZQWblP7A1MLhnB0ZF0ItcdI7NnGG57VarGnA9S/b06XC2BV6SOUGHZFdQOLesrlbTpR46d1OMfNJFS0Nb0cQ+pduXLjN+5jnU8Zdo/A0DD7wiAQxQCmKMq4Pz5JzV/toYQdKFSfYCKC/2Gyc0RTSKcGCzSlnxcBPZ8WO+Ev5NuEob2b8IL0LrO175h7dVfRLzbJEBkbJkKVFE1qaPGuYOZnCtg4rttZvgGlom/gWHE/baqAIPMTUSjwQUllmI5ZJKZtG5er5t9/UQhOZC7qwlD6IrfrirNOlX4/yG01/FDMRlH0w0LlydyjN6BPlITzAEB/xk4nu8lt6fVkH1L0Rdmk53uXg9mbJMAuYCdb+6q4DKBWO0KsYsje8NrraEPCKgLcBvqLzyJrP5zlGKMKrYXmSB6kI/FaHmLqwMmLSCdM/XtCG0/fxdnKeKGD4fctfnGdYXX4gI9C9cK0qhcbT4jl83rTgNSfEg4Eu57oxHXuLGi41URXRusAaNGh+h/Anzvd3VoGhLD3FxS1KWEGiHkI8c5viXJIer9BV1za8iguu0EtK2cZmXaq1S019B6HLylPHis5oIptQExv6apC+bU3fggd3TFfGcONfwG0HQcYKn0X8UFo5WbSrCLmAELyZ6TpUpo9ano4B+b8pTuz20pleE0MNE6I/lrOZXuIWLwtAmWYk4AdlfYR1pV7C2EWQtKX02DW6bkSIfJ58gz1APiGGv/I2kw+jDv/dko3BDP6Duyv2MQD1gSVxWt3kTRoUCkIV62ztKPdYwgZ7WbshmtiR2OrauKp2G/1O8x+VswlJlLuTGGQXv+vDQNTZculHOjDnDAlMqOnqVYQFH0eeXwItBBhjuiBsqb7lGUHbk0nAStlP8fLgpTuYjAB3+gmXluZL/A20MxmMIU/901jRs2wDvLex1lnlPviPc+97fRdPzlfi3s9A587BKSxhl5PmZ+4gBal958V39POB7VfWe7GyH6wnoOwYkIpsGdmBFaC5/nG/qat27ZqdUmL1C1cMt4NVB+3MB8uowv/I3qqiNKLkNFE19c50BFHMm6obXc7zQDTvlAfXN2tQmILguxdDLqllWaNGVJKOhObqC76l8eXuIUm5h33c6e96TnM/sklJK7MpMLXY7aECHs8YyqQVlF/TkRjf5uSbrKJBGsensh1Ri9dXp70nAxOjfSEddIf3B0HRMUJgcpkN4XoQVZHK+OyVqEM+FhvWktWvva1fG/FQbXcuFJWCWl4gAikl9k8SPqB9P+TiVvSFJ3IpsUa1xzS8ok4TW0pNQ2WQZj6Dz6nPms3WcbtyeTg6hgWtQrLs8QBnsmaDqAJ0G1yt8WozwhlbZ8ItQ9oZw+v+5ru8nmrxJlo63po5v/IFuyin7giJiMxDo/HoT+lYfV8YV/rQyMnkkyL9C8RGJYp4bydHuFe5izGBnMh7XqadZSNM93jr+Ej0J7V6wCI84178+mS8gXcJkrWbaazM5adb3pFMKFirjwJlG0x7MZ7AmXHPtJQJTKXNaxS+dF7mN22H3dVHk9uAOXnYWf5UHwyIOVBnjKL5Sph+JE7lxFx0RPFPdMqvq9maGDki7HEAR2flH1rDDHiukgLpiysS446l0r/xMMdYp5ylcPoO/gI5B4uz/aywmMJA6GgBtoCR5KhuGFgI46PrEx+GJpdsM5U7wkD2RLzHsXRR2jN+Hv7oFgibww1oDkL/3azK9uJtyBSzfY7y8kI4zLMErvsu913YJlHA66ADXC8XVOmhcISOwmsEmO13JtgorplL6W/2NmFtWAVWHH3DLLb6Au1PO1RXLet9KtXdtr5AH24vDBCHCjRKtXpSIHu9TrYHASBBZDYm/Zt0EdXZUcR38KvgKnCY7G7+ShiPpq2jFb7BNk1SUNhAzl6WYV165m/Jz0k40ns7X1UvCGvaDKUa9bogKkfzVhUo0J0JsLQ41pvQjwVythGT+SPvb00mWKWpIMC1w/kKOreiLfErZLoP1L7l/amk/gQ0YW42WFnvFnBIiGWgVuXHDOPLdhBE/ZrNChwv7eABRyLsOoV7zrJtehWlA1EbmGfBTcYXWmHGa0ysgzw4WO5SrOFRpozv47eonAwKzgoyqQ01wLl9/unS0adJrbeeoAyhU4+v4DmPQ5fHzO8DZh9VFD2kuCZudKIUuYbOcun8yy1h7k0DISIH43SX0KBBOa7e/THJNX45n7LvrC9pzbOPs7VV/ZKQoQbIYkWOr5eS8LwEbcTTD52CijRyqV64Z7PH0gsR42Oc59zXcaK8Jo7OBcP4QytbbikjIwolOpnpbURXh9sbRGVccNeZPlkX0b2S0TedUXnbgR7EQgEA+5rFuI3ys+hcPTFb2Lq/H9pYYR9uEkQ5fZJdTZFEXLaXMk537VPQ/Kd47JzYtRGLhOoRStRkMmNXkEWqyk1K8hf7htWOwz5SaVz+1bsPanfUAt3B00mnTlScYMIccTUe5L87BeK7fu4ScTF7ZGH4XG+FO/FJhcGFjMYXxLa0aK4e40vPJQ5ATrBCes3Qd5E+NG28R3ooJKpMU1Uo7Lr+6D6Flw6KlONI/TrzMubVcCrPCbEW/QT4YJXJVYesmg5sZ/+i677DlYqdgkPwRwvVnhbmzN6XOR0v/cyH/FQEYP8Zi39pO0JwDSqRkDuqSKCwozt3TW1lXfX4dkas5VXSrR2JetmYF80HKattQGXusw8/GM/NTYA5qBW797p4/1QpKVQhZzwrXwDSAC8yVbq6OuIrFGS7Xo6NG33poeIIbYc8gTObaCzX3KUmuojw+W0QSAZctpy0MvwbOx64WDmac7TAxlFr61wdir/z8v/J0fAZSfxOnlk613h5l7jyd05l+t4woruZgnbHplGifdW/fx9u5gNU07wrcu2PExwARxtnR1uKJQGcvprLXQwl5l14AqsvD0RVRrrpQyYrwiJl6YCzpDxG3XNHqcPbc4gPKGblI+XnupSLTh6sYAFbQPpQkDyqHG7FjnOM+z7RpWon8SDd0kQF+UIDs1dOP4zddxtlkX8dyUkBiJG/YLUyxwDdiSOJflnKM3ljo86EnR0oscFyG+wBWFmhqJNVn5bvbQR4TpQt4g5RGEjH0kVx9gAsWehVICrUPHI53z/G1w0ltd0wDWAelCVDGni7l96hPCsEwwGA0rolONY4NYRy+lyPfpRWaXxds90j8H5QJGFbXn2magUCv3h2sUnN03pXVPGzq+sh9g8cWby4oO4R9wt36ONLbIw9TZDVfr1pZ3CUJFdQ+v5LI8H+4i63/6SYjEhP27zBn1OWcIVA7qJLUPnRnIfMflacHpX1JNsk5jyLzUz5NigBlI6x2gHcUWJFpRGsAVnAnQIYoqN/BB7xzVRFbT2ilKHu7qmNQFuOycIuI7uzKvtgW6dt3dqGHBFqCfSmJT581UjMXNXmc9PJRq40CfPIfpsI8I6JqUshuV28IGDRorFnMIiwov6gVY5xZ6GpRhdWXH+H7pGHb0Z46fo1y8DEfgORmezNMSdeHXG6k8fvcyKg+3o4duWgLZ68IZrX6DxHMW498w5W+1uV/UTvOIpxwemntyqvVBOFOLAl3pZ8C1FLA1khDqKi4nNxQOR/QGH9BhpfHq9UcfKqPcaJBxWkxbmP+2UyOBEZxw5AOZlZW5F1San+O9Su5E8J2pxTWZbZZfZTekbU5pJScFVzbVWjMjsX5obMMmKxCcCnl99HQ2YD7XKCpOD3QLYshl/zfyB9xRa195ZCU/uU676LlVpV3YPiA+SUHcXvKLVpmXs5tcnd7Zk5XjZFxKS+l1lsm+M437G3z0H1e+upZhPKYVt3rjcOQ2RQI0EFIL9DkpC0ACYCgywMmVU0Tg4LvWS534vkbHnY9IJfdh3lFnzuS1RMiRIe6iY5b8fhJ3XTa2+O5f3JixDhJjTRbVZWb+FsJVKBvQ9dPcaEML3H/Ar+gH699QklWr4Ouuu3fax6siHUznrSSvVqkb2uRaq/G/QRs+hsEdF6xyIS1opQOCq6EWXkJjSoUYJGG1di9DO7jkRXMNEHnTqm1V15gvhaBGM7RCckOBEHRjsFmUmQ2dbzzRSe0le9hIckaKKmWp5PdOIEYRjX4pop3kfV0YeritFZKXQMNW4aJ5LH+8Ayes/vgHm7PDilMoFfcXJc4oQW81+jIX2M+FMoSKHvTSSXyJvSwZyWHxspHMkdQrzk2FD0TGgXMZ2NiohWu9HMt/GJtVRfowYMD7Axc93oWK0nxSbDl9gHyrATLR8DTWNpwvuVBwpk8RL2+bbz09+zGDJGUA+RmKSWf7/RVROAWCNhT78i3D0ThsALPkZxHHyqPztGBmRu9L5oB3jyNSg6H/mG+Ip9dfRsnSnY5oDp3DF62P3XO/a6HmoucM3gZmMfdD7eniA3wEfjA/usiNeBQV6eIONRwiAPbNMwJaLM7tD1Fx02eqm+VC7dlW5L2s09KtEbfNwxxqzA6UxI99jwY5hF+5ThXTZDpIy5knpI0TqjI77HGhEThHJAAfsUdPjSlNZIlO8nH/bDouMjNjtO5A1Bzo38W1avxzx6vu9FMuoLhDStka3oEsF8EN6dDl7nQRvZxqULru9QAjTaVNp30xe89JsyMb16t6rYKlwvmgranHXoGPDHS8eXGLR6T4qYrlrnreZDaesr7ihBFA6x58+4i00lv58Z8K97KN83ruan1Y48/5KT721RZMsc2pZeTjdgM+rCohJAS1eRB2BhFuuqGntlphmoj54yS02WlJZXkZTTBVlrHRIUtoAnS4X+6ornDCMJ2EGcyU6+L+/b68mlRDx95vYB6qXJ3G2hK1TuKYAJBOteVmolnjliKTVKG+MWMLgCCtt6Ahm5TG/g0xWT6gCATPq51UlE9d7iDAv6mXlgfYNFWeYJB9T+GoiIJ+koYTWCXVvV4Z12kZcDuRTGRBP8qI+KceD5a6H4dVW13/RgELU0mPNoxodNnWOF8sdDiGILaVN2RFy8Z5urPZnaVsZVZmN8vj8m/r6I0HNj9qICyVrKEhFgtCcwLTGgIXcA9kFdSLhjCCy018kZ4WtozSpnAq6Z2j/7L6h7OuvL4Jfzo5hP8NjKiP6ytOGR9wMD4fgOPyAx0x6vr2RTujzNaRfE/E7Da+B77/SH7RXS7GjWPjJyP/X46H9ca+jK4xTGbEbWDfYh+AMb4RDIcdpBo8EOpi1Ej8TEJqXfDhrv0qJzxREJGIhPYX6Bwyil30vXLg/Y6N/jWjqghZT2++ZEN87OCTWLO49M1YRRIHRwWt4bzQhoJAuxcfh9/eh43nFILItUCGnZQAXz8OOEDqZuXhw2tdhKBmXE5nXvF3jcYd6jKA+hFOuOz3YwaILthgdSAduhiTlz2HEz+sTOo08xixgwbGag9vD6b9SXYOuCYMA75w7G4EcUkulKS3iYD5Fgy7AfVcYkh1yOyEVJNutdnvGgegNexL8F5rq7IJBMwbamy/A/jZTjxeBzuhJ7WzXHOLpYwFypV6M9/o8KAv0e5ffkFCe6spfj+IZhDf+CLEAu7XI6vr/vZCl037w+z6JA7Si0SvXopCraODcByXwKSGO2YVsoSjGANejgqd7y7iY6eYVKWcrJdJhXF8EvHvkePt02g/AVmKan6jTa8GgsWQwT3RSMw/HzWuAhamKuyovMVtzVlkeF92UZr4zSBDDzEyaJTmkacwqsVi3O942B2WuR/tBGuZIDU3LEw+le8+Z2BDUDhE7oENmqHq3q4Vw8UIAF90o8oQGvbEWVLfMJ0E9CaRRdOVQzVGMX5HbM8GkNTfzZqNXKvGjzAWBEZV49oaKhLETxIBqKBVPwTmS6B7jE5TQEF2q+mC1DtczF+CZ6Ro+35IGRBSTsXHS3XZyAiF6+Bj/jMknOz05ZTDWZB5aLoxDkToxcMmD4vi01tWCb1tS3zkM6B6auMDCMXt1vejvHVsFnA+Uy3nv5jFSpuOQb4kMRXsRLMYL4FcWcQ4ED1VKuf2sx4+wI/ZVS5PgSIukGT68cF857yflFgCa6+XUajGHQAw1OSLgPoQtSJ+9l3kwD43kIbj37/Shk2rb1ju7ptYlp2wmsmJjjzFXa+w9/tbUop/groBLSOLUso8a8s7i32RBhJZm1nz44p8yfzTOtnTQzYbnZw34t9j0DaZ39ttK6MTpJj/7laE0oXZf6tmDBaEXOzSwFtk+yUrPsMHvzA3uDcQrzI/zvlyoyxAbv/fkU7Q2MDe6DT88Lf4+peg/IBS0lGeLpbsIrrRnCOuhzWERu/lB+qKxANagt1y4y0pHwM9AS7wI1OT4msZXqcZIGn1131aag4zJMbPAFfbYf1aAmVXXgKeimf2hra78EOIEJznUR+kBX2rERB5UyIrwV0CY2s0TLoFFU6nBnicTdUbFI2a0gf9AW+D0oDCyei7PFKb/NQChAq3Jf3uNuOKBQLVo4+NwsIyOcVkbyanLPF0nXc59NCXWh/2A7m9upDqjhNPgfOfEaOpqF/+pJuPiRsvjcn8mVLsfFC8TK2ARvC7fHST1P/Z0XbGx5uJEf7mH8q3Pj148K0B6XQyMLFaMtR8Q9SxdVNLYDWvKl7BnC0++cjQdOH1uJG7Dclj7Wk1SX/oJtBrrBpevGpVzCMt8pKyQzbvim0TggmveuOl+ItqAqsjXjjWII6dqtvJpmSYZk4tf1rqYOzaK7Y6gFiEdpEKoP8lqaVYh80W1GB/qzyR+mEAMfc8IL2d/HfXiXFPi02CvsGSQKb1MeN18l9D5zquZwV9QKa/ncfqnzoKyVzFKxFJuTIWXLnpNqrXE+vasmi0vhBztSjuKXywObb+ku5WYQcUY1TOdPf75DqulGq9BTel5HtbPZ1MEXnWVsTCc1e6Id1ZUiLCh2pLRLHzj7MQcX9lp+rOeMfAFn1Ivm6zm7gLCpe6goUeRcI12FCkhtRFh+bVsWrNfF80cMTUEdybSe/MmjmPtWVYbFtPXwEqCV7XmbqPl4/rZYVxIs0rdExs0+viHw4hgakup0f25Y+/kcUl40/ZRdh2TZUtEUPinR6qDCtpSf5IlGOoaEkGlq+UK6gtVlOTY3Fus3jkdKAeb58XQGS3I16F9JzTeXglFCF8UWYKRkyDc74CpWej4gjrFPRioloOqs0R0AxDX0eszDejR980rTf7/0VJYJhi57DHToBiNdIpja0OmpQYjmzUe8i2bXYK4iu2tz5qEvdlAEt190svZL0LSQhOxTZKqMnACfYhZDHxqBQyIAnKlorpriXE5UDMAvTiTjNul6gJSr6oOM6QcHRJbimQALMA/yI14ZyvRNlr5mjgdoczHhnhqHk4vcoBk2dtT+tkxbQOV9nVvzVpsnlgnd6+1JePRpz5iHuA2a5EfYG3d3JiLQzomQ55dgOEWRjdL4LmCCOrY4AmrrIh6VZayMbXn16BkBJYLoCibnNrtJ5LYQK5fTNyERavb7h7OEJGdKol5UQPWprvZx19+4YOr0Bcju33PYss/ktP5ItGvMDcvg+5YZ26oWXv/T2RaVlHw+iwsGv4W0egE15DtPNG9PnO3xErZ+NsRrAPCzk8A8zYDwfQcyKzjhfHRKzUWbyh/33LrYji/AzWdv0g4HfYr+K7of8biE1Q2fv+YWbVLyfOmVwkNcuClNZaSNAIb6LV6FctAmtTJoAniFdIpoGt6XYyHuKcFAbyeJYTRe/Ii4qWur1WTOv6QBltZ+bG6BIN4ChFzBDmCB6tny0Ya1yAIcSFTWrQH8h4QwWnj2x3WKlGay3F1N9WCHhLIA0ErnnTK+0EbKaJcnZXBNYWv4KjjczRSd0of0DIbOldf1zeCCNFIH/EYbMUkXd4zXt0cDirpstOB3jDTjgvtS4vmQa3F+Dlyrnt85YT7v0d6l4ryPT40qsefHPzbMKuGMUFz21jiizSLa7AH+6hpBhErV9EBsf/S1gnbPlde8mV7MU6Q689fcGj7hS+mjolayqQ0H63V8eHP50XYG8U9v+0ZbBl3j2/qZLT+TNHSRSEq7RMhPtPs1nrp+nhHW1TwvEhe2ymm2WWHhcpgtLAPF2AKQeXxxyRC7PfUFp/AKTHArmXCAV/3CDmFifaGPtu8I7CZxKdsXwupvyQfWsuPD7yyIlFlvaUjFMNBaLSkgwmjBVdW7o0tLAhSRZ+2UuHxE2nWG+Zmb4gRdLkN2jVdCB0lRs/PwFPVQF9ncIZXT5VhlyuYOkdt8OwGIimiA14HcRkC1GWrrE9AtrixY7SgDKhC6SvtHC0NJijyn8jMLntcdq7dxVto/TL3u7lMesA7ZkyLiYqnpQGfYw2vyUTlLBQZNG8beI9aZ6hYS62SYLbTnZXwmCG4LqxgPVvAx/O0OXMs1fBSN6vCSvWcYSiULt+omdhbotQ6SYPPCt16JGQNhil7e67JXNIx9u2erK9PiuIltQc3hDrIaBWsJVIO+Vo2j3AEOevmi5sRvnffAI9sI2WF5Vuvx3PU2xEnOVcp2HycBYAJxEJLixSCOE4ex6iv8uaQh6ydAd1KQ5OY77lX5lLpGW4P9366/+pGPhlp/iw3lQbSxBCB9stOMhRVPKqDBbkLAJm+Rj8nO3ECRz76UClGnIw8k6C917icwYUX1yDyF6VDPSvjEfusnVkkBwwQhqWET8tF8aPNko5ElbHr5aWGbYzwhN/E4hGq6n2pMGjv50ovUm/cC3bYWXPiLmTd5VkTZCEoJSf8Ps9IQH9CjIX4JJOOwU7sfRd1vvoLyYkReSngBe9RP+XaHW1J/8LN7hXVX23rKnl+Pdy5qoO/jAKXAeB0/YMv+xGR+aDP/eum906au6PoIeFfHard0ExPKjf9GgkwX/XGLzaXGI9DTsERqO3RdVPY7oppbGjVVdu6VnaxPj6ry/EiQ3QnpEPSKLEDIBFlWuNwucKK3xWAPR9RL4jDm4ht08EqhCs+wjL3wOblSuiIb2Bb7GCn0IY9Qsh6GAv5fT2Y8DbLwhJh/AXY59yiwWiUOLbBcs0+3BoeEt107ChZclG8WQBpIzS84/VExc9sYbELo4vU219LHnG7xp8+ACvalZ9iTeXRC1dIGhA8j3fs/4nCixGWxsljxe33lub6g7HwMACg/6T+qdBlbY0v6ygi3Mlp1SgnblmahUqCK21qdDLJ1dJYdX8//+wUBU6tZEA15cOZzTmJVtRXdgyaHNfXNHJMjEIw42eGbQe6DWKHTGnWoKYpHv9Xr1W8qcyvYx0IMiY4r+3maphmUbb+tRh7ne87OFz4gVoa7jTBje5T8CNcHbMj6rwHZdJ3J9e3ufdw7HzAT0N8wwBdwkHyCMFgRJ7G886fWaOLN4X2qsALv6YFztQJAzmeETfJtKVkwDppTcdbrs8CXIGCIyuo8Gb3U7vbeT+farTlVAGPMy4va0mA0hpfNWslF+UTDUOA1xgNAYfc9XG+HaYW8XFJWs9R+BtZ1ZcHSP9VT54OT6x98w3phC2i20YubXSnbdfDq8gMbpEw3YIOMziEra4jWNiTTAghk2XZ7iSSbqckq28WG4kLYywnkkPT+bMRhuj5lCPkQL3YDVke8B9G7jtYQ41+42M5s2Ens3ySCAA7wKhNSVB4gPdahkWmikq10uIdx3XPkNfgkPbFoPLQesPGEdAFDenXuGbORbszEjYFZ3OIn4ZmX8LrTz/hLNSMihOn5QougC50u7mMpDmxz4YRp4gfXBaMnRcMSje21fTN9DkpJijfxxp9brCv1HWdXjKqSNWCBQOCBiDsdxCmbmmvS/AdcF+hFTgAFx0L8k35ttgg1aUMNTdQt6sYwMe1MeWHB8D8jyQAtU5hz+IPp3veW6FupKcirLehgaUDjCeJSgqu1H+rA37HsxLH/1C7XGBf6SAEQLTwFBKQGxjxghaH2L9BTNwsB7aJI5RuVTgcRaHlFflfUhCMFa1Z92JmeJV5jrdC040EYAGkvkoQsrugKIsHjvIqRPTQcoyvT2G50B6lZMjFqaUDBhsWL3FmJrtX1tF212ujqxNSWvUJZ2GsY+DfszFyuQiGXKuvS5Zdy9ck+M+eR4DfMUrIHs75dsdiA/yCKHhz4HMm7p7KWjn9oO/c1H0CulLuTGB4b882rT/OREpUHUIU5aG3miLJ4M3HpvwdE4xE3Q98aVsiNQvwCR/DTzbU/ehcl3E2CFSGMqMirPE8mIzftEEm+6BVjuWz4vJ1v8lw0PH/xYojkiGL4/ntenM9kMPv5HpH0jIB8Uun+dsSGg7g4xx3D569x06F2QSZrTPbQu6WXSuGRT5VT2pdT/HU6fPbmP25JZ5OMj4BO+LlLccpSVnkc9UxBsdQG9iBUVxqGVpumQFXOmVBc77cgzrVBkkcZyw1JBp7AYAcdKJ545CkSY5rTGmnFc0GRPJCEkkS57Y5Q6HWNojBXNa6weXRGnRPL4lKTS5rnHiAQqqnRsTjiQRzhX6twul1UatdQe9Ie7ZUNwRyY7O645+m0avKzDr9vpsPDoV4yZd0H01miSXsT+PXBRJc1LJpwCjZPBxBkT7SQl4Q1vm0/4ODt1ISnP+8Rx63iw1E7+DM2Ksl/ulXq2HZArNsMmmzSHUrhOjoOEYYc0uCF5wKUtI9JeBx10SaoPEpRlncTHLfMPwLK61YHK7RqG87fvcS0QXNwae8JJJ+aaBMf+uQ88bHlaHzHiGacLoNdd71k2qud2XmYTlvN1R57w9xuHU632PwOUiG8Kx7jat/dL8VBEFne9AM3T8Yulu0xXuLASqaMpM5GI4mvI4oi229054GgdNL/H3s1b3IkO//GzL3j3oIXSj/V8hosToeFP5hvFAZtuHEfzWtBDrBp60zHVUkcwgJcpjVN7DE8SNVO70gRqAJug29WEDJE7bM/sBnW1MImrVFrnrQhii6KFA+3vg8Fdy9X2ps6lRLeglgeW2CcL0V428GpAVbmGZXMujhHVzrzJ4OL2SfAo2/tET7ZNROwp4Wd1MDNMwnADMeKTtPWQ5+r+B5iP/jM4zjYLdzPdp1JDbRmhkRKu6zR+lCc8nCGbn7in4vKU3xJ2BbdSKPf9rf09rXbw9sjJ7u6efHDdZOgTtJ97Ir9bHW5VYu5daph6duqrDqdCDhaSYhOlrb53Sli39oEX9znnxrU8LhbFn3jvcCMg7bssjWY9/2KmT5zZFhCXv3q5tN02Xtna2GhM3BxwPFrvkedN8fjus5qJT/W2qGl7Pv6cXGxY8PS7vM2CmRUVNPDXIX4DyVxtZ94qIBpiWGz6vluMfYpYtvXpGXK+9cmDBLhHEarVPnN+34VTE5Ag7FDka0rlWCoMJ5zgc40gGTh+s/hpMzE3irJFksaS4dd8iIOjgErb5Vbz/K30W/pdq64WSbm8vdvTvTnWuKV5/gt6lokTbJFqhBLCGiEZdjVytpZk95DBq4hJwnSn67APsEn4bnfSwSwX7ttfTaClxfc99Wab66B31b4YEdhEiv9Od3q8GV8fOJcZyFqRKvgn98zCssIskJidaA/Kou+Iufq4K8+N48LUFLfVyBYYMMgMJExvPXfWiVw4JPULSiNUu6Mdjqh2pkRu344rB1zeektCuegHvw4kIJ9Tv1cfrLACSHlWOk7cgbw+c90/bZhe+0JPWtElx+n9ZMkw2Ub2HF1aC50uFapVLcAIBUPT5HqbyzUd//S4aQ2QkYCMQG3NftuiEr4yJNTaHMPfh4ZcHHiiN+u24zCsVQOYF/ofxkD5lef2BJQBVui9gQNBMKPbO5dEXPKcadcS2BSW6n72iWK7F0iXNVnD8AoMv42ZxfD5rKE0mGc2qk/Tzr/hC/TqOnJNOfF/Y6oE5ZqPmmkdIxLul/oJZ7h4A+raDnZsgZ6bzumm+rNhlxJgLAWl35eoHD6DrcdRP34z3U2DnB/YLpE6o5IR6zCYS3G6v63HXW9S/Sk7W2T8gzRVsfw9KbweSdzbPs1OBE5oTrtIHlOHeoDUTrHFzF1FCc5ZEuMD1JoRrvmbMGgvRf6dZa9bFoKlLI79taTLkw6ozuIK0U4yxfux9WPglJBhAfFo/YmEPzMcagnVToNJvkAf57JSKffkg8N31/+1+duJIssENSqfG2k9xMvJ0WvLdD4qJKKbTzAE9ijt8H3OdrzY9BkeWtm8nawvejfMKjmFKLGvhlIvqmnUsDjTv0y4xUDLeepYlbkzRxZqJzZifaDId98z7ev8iTDnx/so6B/A/3vIjmQuZciHbimGAwwIP2IGqPLhtXf/6sYmqyzonR/bvUyOLQx9WLufgYnMFnjonHu2sYla94cjdqIju/4fSdklTGDglTyruvAQbavUE6NvySaoSxgxiDWwCCJdAb0ipnD6D688sBGMww1vq0uWiKpSgfI2F0HFVH/D54HdvGo3jiYxZfU2tdLWa2L8HGI//NRyXqMrZbr3l2vEOa5xbj8QC7Q1Pnp3Gug2Km5ars2wqc16drMzaMCQzlOSa6zMhMkLe6KVwSAQyFTd+6kAxJ6qU2mIJS48YcKtyW8xlzTfga3Kl+MpcM982jNrJnQ8B4CxvRVJ02CP2Tbm66hj44PUr3UdsY0D+eJ5zeu27PjlHupYvP+MMKh+d8iyMIuvUpIOTPuAwiwdS+g8FBcsNSC12MsIUxFgq37+/blkIoo5rRCmUnx+rFc05/neOG0+WTFYmNEmyHYJdFypr5OUe4HnXDNFuVU3MQFhvaTg5AcxJ6FrmN9SjnJvY3qUccwl9UzUTfCN6z82XKcYE00WkeJXY7beDeC73YsctvaXmjVDNU9ftsuM0/x/QTs5AS2nlo0nF0H/Cz7pcvsz8IoAeVUgHRBCQWM0D+qU+JXaU5n3sZU7/opfaawmueeg7ze9xPPkxl7YNSVM7XEE0Vx82sG8pkH5hPzArMFLR9eCQoBdisQpFgbi+ie7h1Syx4vVXQI+GJ+OW4L2XMaxfogZNoFyZBjeU4htJcPJu5y1mEiU4XWQzGUK3PBNZ1ZYWFQKA+w+d1OPYZ9Ufq+JSqVHraGHCrnJSDZeMJzGZHyNIvP6AwmnhlaoujoGIE1iMOYho0fIZCFoJP0KLSOw+YWzO2hg9Bvgi4y4br/MAkh/sB3TmBsgpoOfRYILYtBd9AuBIQxwI/FLbnRX0gdYA8kr563BK33cjqGIBTyB8ePyeqNx7NcB0AamJ6l+w/s0JojegZNeRhStftRH/zau9ZRZFxOuvd49MXPRkw8j39Pspmpb6N8hcTUmpjcYLMYQmgc4jyR9nbAR30zXjEC2iXRe/gk4rfT7E5zUSBtjtvxtHjKOx0gcb48DkUWpucC+esFQQ6AAqGyhFHm8grgMa+SzAxiY5W5pBecrmdtqEnGT74OVMS/ORlhTMD5zbYkZ0mqfmpA5kqeO8XEDF27yUmHM5wGWuVVrBbCvbXXU/je61HAT9CRg6+t3ImABYPM8/ZT+Oo65vWXEn+T1hamXQOay2+M0+dgEIzU3lJneDaNNk3xknJbv2KFDwWttoqDuuwK6bnXWlHFFRa9VeokH9HYRnXUyklcr+UGj1JILVEEJpWMyT5UgbbfKr0tL2uE8x0ajRW3SUONeLKh9nkE8hG8s1ytABHMtUjUY7dR1y5goXTmEY1MqESucZu3Kb8h67xmCbvYfRlv66TaHUsX3drJo0Klr4Qn8H98hp9oGwz801WbVeq80VO5FRefSuAWENIy1hZX616it2kkkbiOvMP5bAMXKDn0VbfZs+2Sl63VuZEXM4MrVZ24QV1LK6HQHU7uzN+846nuhG+3JwkYCkoQ92ogsAg/Aad1I2ltM4B1OeVNJVylBeF7u3cy3VDLTb9q022cz1iEUTFZWb7uxxJYMtQ6Z6qcDjEzZ9JMbJjyicdZzvA0wuOCwrS959ErJvoQqQ3ihZ4uFoM/eJkJR3rwZi/5Q4zB35+K96Eu2IdC37/mq/EM7cJzXrK4aC62cZQGfOKAbtBOz+Yi8KsEsAygKgb+NWBcMnkjYcv6AS6K/aXWbd4tYHh0Y1CoV0tEce36G/YOglp61d6GP6iMozR1lITlD3epxGSrS21/oNzeLo0c791glT4sP9FGOEDTDvfHl/oLiMv8u0Nl98LIE1Z4HJJtFbCDDbV/hIPEQlIcjWCHCf37+ecE6iX1r/O8XyCF6U2uD1924IBK9N9rg7vRWVn3eXDOyNHJyPx3WUawjMErqI8GoYMAT3F38YkxYrTGuHTNb2h8N43iP8/f9VTOt92F4d7cRLKPwjAweh5e0mfHIVBWkIGcqlKulzbx5qFlwxcR0aaUJ1ZdppbEtIALb00SQO7wIaPFritW0e60m8TjnynKQZKLZEhNMY0vRMiU42vutTie3p6dVyAdJq9Ye/O8JiatTjav2dOOD5wkVqTgvYvZnVNF1TqaO9JV2nOE/KwLtkTY3yYJ1pZ4XLB+gUVRyTEZM8Xu1CnaVZBhXXd1yNBhj14w6NECsZWU1zWl90cSYZS9HSrJifnX5dun9V7eI8IlAyS/5etHzFt9SdDOdNApZShztkxkByxtL4ZXMnmRtcNzLmzbVzZY5ZfOdnhioNTKz8KcR0BmxUEpttGyebBGvauZeCVntoIn0JsRKpUP8RP3jZdYDwImT2S+Rin92PxGdJpNgDgBvuI/VxTK6oNI8q++AjMIBPxzCMCtC7W3k8+5LwgR3jB2lwIyVGIbxRBU3/YIc8RCYhzx9nKoCDMs7poYIfZA3UJyrKqxux4f+ZVvKG7gQHY0SXGXoG3cKPLUbpOLE3XVNqlwMvqiJyBwtw4eWSV1rCfpSD7dtaD+WlLNKQOT0uMUzeRl2rfzoAiCfNOZCnehDQk2V7ldDOreUjHYrt4COh0HKwdahEM4eU6MsnVOfQXe/VtR22x5TN5+izVphkAHGmGOtcL7mCGkrgbU8NveNxoSlsi/vulFpAYNKyUnWSbgT/UwjnWNkn7w3JnUy1ux+OP9sF0gnFkAMdZiWT5BPx0sXEEV18IYtA3a91DbVHUefRRAy8IB4gDkfrhGhVo1buazq4z4Jm6CI3GlqxMcsDKegN5wpkpPnIfusRWSywLtTj+WbOZLAbRUCfizx6pHuUkP5GHuFx5epBuTVzNR2eepZxWR+vuZroSSgbL+Pb0SbIWCFe6CGhgEXd4nqY6Kz13/IM/QRA+PLzr20pD2iUSbbpWCATwHs56gliMqiZB8ucxC68LbWwBxjCMoxg+oGsQ2FAAYdWSM5svZZjy/tu2aw0RObGfyPM/u9sdlAp6aArEPYReJmIODnITQiBpINBcVbWKeVUK0jW1w6X4iGlM6r8ZJNUsZ+/pxUUh9/P5L4RV8BsywdYK2lA8M6vKmwmGBMQfwvVHU9TbFI7jlgq+mVv9v9kpxo9ZUBhrhDpMQ2zP3EFz7MXIKOWc5uy5uYrlz3RXx8qP/RLimLBhbLUVql2OR1tjtjf3HVTjy1n2lTS1CF5hfk3/6SsuN/RAtfRmQ1pQtwnnRyWQa5aA4hMDAdzui8DwnXTclwl+m7/RvTGLkphLH9spOyXzn2R06gxd0z/MWXcmRs5U5b5e7Gug0DBNA68JcJvBb9aXuUWeGf55CKES0SZ+PD5jAD+Jwy10kqbiJg00ynjQVYaScjyHZiup6W/oID/Fczii4A5mvUDhBhm7P47lKHumZ4EN6Oq3bMUhgYETDN8LD+OoMzNEtze04xHwt6A7PTqg4iZl87mm15MqaZUpXB+YSLsDpZrwfkfPGFiN1c9EmDVJSnpXCDbk3BHz55oA1ScPSLUNHtx+0CwGu6FVR7XT0acBF31odKDHYGnbBOSipkapq6klzsK5VseaNQmrkyk0xerEQSWfX2uLDAV2mQwGaLaB6XQk3wibsnAOTbcyYt847qk28iHTBi0R6yXF19JTaobCMAHz1nOZ3oo5rrrOmLAriIbgLx55wiSCzXbTEkqlZiT9VmzRVNJiUrGQxS8dE7PE3y0YhwqTUlES58xoSOzknSFYWaa4YEq7LXirr7oad2eV7a4FFkzwWvOiS27cDOYT7MW6MuDDLXdAFgqy1PkcOhLsRXpQiFflAKySwRjyS95uNKD/Q2caMF9LProN8Xe5pYsNOPW3tIpQwR28IISlWYpDXt41mc0q25Flx0FipR8d3/2rohbSBl8Y9/WL1eGBVvlhUmLNE9uoNgRTA0xDesKB4QTpTf6qwU19wgYbKhdvQKSJuClJBEAAgxRuKVrMvV0aG5ulKmCgsjU7MGePdYQk+ga12PeSrqL3MBTbyPuni90W9KdiOGGshi91HcfN0Qiy0V6g2d1agLVf+n2PCYGydwQ8l7LNCXkgX9l33DHYnC2NCbbwk1CMCkp0QhHszU55ElgVykQ245c1HBj7d0hFi7Kxd7BDU5PMfv72oL+wIHd3K6WjXAceSGHuIWEtn4f9R5hKGpEcA4nD3v8/weYcdhQGNQXbjMIfN4W68a4+hlYreNEYgvRqfFJFlLFqpxs3EnIxb79lbp1ZVpPEI8EaOBj9QXgiv6xAN+c95/p5lj/SF8KkZnpJurKZKwII64oihXBeGqDIEQWgpXWmWUJUrsmGPXF+KL6+DrLRF1R1vplubqXs8wIskQGyeLoszDcHULhYm6jEIRLcgbLLEvk8bh5YHmDKw8UHjUwWIQTiHfxR0KRGyH4JkvrAUWdsLCAWVf+Z65/C+EZdQ3cFzzItdFcrmyegaRq8SgcCg1A8RLYyFmmthvSkU+BYj8rz8Dp8p2wWpFOIo81A6MO5wsSqx2qxz9Vg8+lgkYVYxm2qvUjcbSh4Dv8TfClpGXA7ACtNK5nZ/lgKBqkzeEZrdSN6ofpFTrkrA8w25L0tpVYg42YZ0Q/Z2/Hbeod9jcT2o3Nl8uVSUlarFe4yiVK6Z2x3g8tosCBM/D1QAUTCA8gxv3bVMOu7NX7rt5BX7vrqTtGy9Ynz1SvO96qMJRlMf8jhtKMCSxT9IT/LnFb6wet0W6c+OD9C3oaQs8HJl/aCmBVScPbtFYHPmmwPXP7cFd2m3uBH8NVpJ6D8mjckdTUytYYtgsSdJIKWTP57v0kWgXOreQ2mTVjsX/NT4+8Ire2IX+dPi9Nuny7skBLhXCvL8i8K6AeJJsav8YRT61a5AMpzDHZ0/moXsOMCadRh1TX78HRVzlv89gl/sfE/Woz4CKELXsmGzXnd+59xt7rIXXvHnHzPhwHP9uHPtGIRb6fj5j3Y3GZQDoew3W3sCt1t8YeEDAhuOpqxL1GjKhSHQlWcIU6OYydr59UhgImOsAyvO4L6jL2pqBcsvHbe3KMB9sOiovl2AlMNGcaX58ZdVe4yzmD3RaAvBApb7Ka816TI2BMbM14BOza4HBqB0qnImYkPSu7FEEkgcg8iniW01vxOYI/U/vxeMcnawwJsMM+eEAU6pUgpD6lg87X7ZX9utmAhpA0zgJAjBNa8QLS7xWrBpFxE+3lM4LSKgChlNay1dVQymrskGwPrQJyhouvX/PHCPPdrImuGTav2aG9/XNtBh4wvijlsW3IuxT9X1jnb7NBVlfXRlXtsnHnvSmJWSPJr091IWWXMY9YqtDblsiOc2l4+kzMYBJB1RrAEwOH9XxXJKc2WHdvF3C+RSo0ZsQnucI6skcDG3GnrloBQz3roNM98J7bnDmC83/rOVM24TzLzJ/85JUIsFgd0DLk+WZlbkf3zwxoPTOve0CVV5HhOpdlazNV6DKxk1eZikaZdJJMjUG/G4mkyVvfua8XaGdaoLKz2vqDSVJ+HMtUBTtB6Tts35BQbTYf1BMd4Rdveo5WROyIefT/RyO0Ijdlk0CBzgs7viS2gumC7TfhvnNaezCGzTkAgJs6a9vnrdGAk8Lo/A2Q/+khgQx54PU4mOUlmF9DwDyhbSghCy60ApR+tbbEamWutsMhRVxy6LDUAOnu1tm1n7D8E4LjBJlehhmOCKg7ypojDMFzUYZCoo+8AHjSarW1FgY4t0HU6pVk2kzE2QPFf8/sJcbdZaI9YZTPouO2qK77zwRSfxc48DYyAFlql32z2Ky+30B+w3NUNe08UPaCi0n9dhIt++TqSXdfGNHBttr7KRmOv4T5d7j4AeLMWRgrtuWAExINjg0EuOkf1gp6jtI+QEDtnREEVB0UsCnBCBIn8K6miCWma5YiqW6sQVKzKY3koy5wgjS3/DIe00tdEw1pRnZHc4NuqseK/UjBZYwJcJ2AKg37PyjvGJq3dywVmn9xl4kaytfgQGrJp6Vr2JgedPgjBix7dN8DBRfejrjr8N3nwq/2XRPyHZm0gA2YIz98f4PdJ14HeELd2g7v33WVEfhAFb78/uuuWCEb+Gh4L8N/3z90C6bw621rkKxhbRdPSb5FY4qJLfEi+iVs2S1HsxU1PqWHGdfbKoVMXtqdepldLErMagomyOtzEzkMkNwlKTWw/zt3jGetHTyVYr0p8UuWNQPFsnqgX3u99TeGSjmIcnllomVhu13cg7s3yFSmsT34Du+jJMeYONKvC77R8McQWod/MO4f8qT2EFLL/kYz7xpXoklWDYnAF8oI/lQb0B1QETkSdChlpjBxGIS/KQpYcsUqClIfQk9GIuVLSeNoxC5LNmzooRKW+pHLg4zE8BC3TaUe+CnnK9z5CJdJPhwjQQIe+jH+kPGpm0Mwb2sPHLh2idrtdQtHWp1ha6mIGncvpj6LhlGMHmClQL84RJPL2uSVDxRo5FGFjGLoEaeaB3AO836dJaRVHhh4QAsZo4VBn/n9KNkziv6hi+23bgdEGDrIn3aARNrBgs6yFVMDrrpiecQwqPhYb2JjEpY6K9PfB+TG6T8rrqaXh1mpT89lePNdP1BXX7rMiY1eCWboDKkbcjsrnPaEy8vd50G4eg+vmP5RlGYSD75xT1cnA43gT0ZpI5UyGIfPKD65W/cEY7ddcQygyHSoxE8GZgOHEq/VE/LfY5d6QcBNR+8GiispavSRCbfqaD/YFgrRziXs6QzrAM1aHuaqCL6wQ3biMhC/F7UoeNq+D3F4Im8mi1xYJBa5k3uP0zZMsCjQpIah8iIxTBKeuAqAxi13Kgk7K+CGUKcp82rYRf9uYAdiwWLiSMv6LHB4Hlu5ek7hEYKrlLk0+suc439LTQvS8VxgqKMF9Ub/JK7LVO0jmglf7K+nw5SNcu63y1Iw0/go8z3ITzft8HNX6Bsf8xsiaeeJfIr9Z23nByvcjLI1m+X3jZ3Fo34io8dZGOvPdRvdGbc2HJ7T3RFoCVz7VR7h908Gasv7ZLew2kfvfezWVznWVSv22yV5BhiO7cDoK5debcx4i5ocu1NnLNDwT/8unQ1VsFbyln/ShIsx1Vbzo1XcZSoMGd1kqMaVbmRDQsxbqi8SZyn5q7lbrQnwt8rIGmz8BYtdlyy3XkkdadY1asrf7jsy+tyJqcFN/5aMcNaNkKwLYwSQJ0m2mWWLUsBRdNh3f7UV9+4ucs/FCIdh5IToHXtWNS0Ox2Sf04apTc398YbqdfnWFq+vV5M7OWyhY5g/q0y4nFFqpLos2+mw+DZ9g1dx7ss4BrLwdsaqHSon17Ny2JpQjMDuh+3S2FV9p6qCkF3nVnp0N29PMz1xOjRU9NEsW9pwMVnfF5zAGlXl26NcSRN1bYKl68hbbIzXB/lCyIOaSLz/X0vijoSMkMhWIpZivHond5S61y4xpHZzCMStGZ74yxGpa6S4u1y65KPxFZvvT4dtFJtciDc66UXJWdJ1J79K5XQjk0rLAhBJ7zZw0i1y9ZRKZq63wt8N+KJX9GMKMC/c/z6MnN1jHkiak/AOp2BpEPgkb/xnzCCZlRcgfblD2bG8O88pVyEoLJ3t3rO7bg6ZJDmLUNQGtVrZZHgdkX36UdL7Nh7TpYW0IfViz74qcbCcT7buugS0av1zucAppb9ty03CJpyAAw1Ry768LNbGctWk2WB54VzYXJagolB8k1pHBhCTEpZ8qh4QhhaTn/veU+9oxjj4+Ofih9YXpqf7c8P77A33IPWgZUp4rFNP//J7myZmEjVv1C5OO3fkvzUA6kbQPV2+y6+OXfw4VyOFAarM9dUgLR/+jDN2spTmezUR3G0juRXKuWa+Mmh7h51HyDlIs35Lk5Rr8H1sHcnyUD/U6haQ8n9Wac0vr4cWepeuaKMckfNt+UvEilDSobA17cj8tUUVb1kTWR6WM2GYYxyD1qAZ2X8mIqgoGVTMIFTC6gsln+qOQT+z2faTS95bSCcLCreSQ2sPiMwh7HIycTLURt5vfBbHitmy6ZR2N6Q9ZrueoJiuoi6tT2lY5B/c6dJRd69Z+Q/empNF+wgy3D5IO+XiF/zak6QuUUTIakM8AmfL5IbLDxVTTQVqn4t2A5gnoG86sPbX7Epm5i2LLnZewu9wEIy1ZVow1EuUL1MfZ1pQrOAP4u/tDZ/Yn2FovwBRDKtuVtM/17msRmUs4CTpI9CIcZZoGpc6DtwJ6uLaoFmAVC6eR+OiG3T5+nhRgYNgkkG4L3M6ixRaewnRlT6yiMnKZmx14tyHVoHBmmECaJxlszfwzd+smPGJy/oagAc4Zd7dxjtVje8YAWuJecpqxMoExYOWxOXJ3QpUO+/gGazr/EVzAh3GHrBjoD/+EZ141yUqrl0WffA8ktLNDFyrcHrnqCf75i8gGCk7kOn5F7Z6KIEz6hEzr0Qw0eeG8Cqm0qFvaOZC8Bh+4ZqAqEFqXKnfYA84mnfXu7DQ5RYyzLgdymQgleAPBvKdI8RwQJLKbW7ds99jYvCCR31YYx6tKo2F8v0xbNgnO3pUUo9OXialU2aZr899ZIxrXquHEF2EewmltTrJ73vOTJAhtYhRgNMygY9Cba36p7x77ZtrDvdU59hlONlc23RFeuI8Hshi7SGCbJKD0C6yHoCed2zmmuNtVmazlbyy5kwa5uKjfggFvCHehA+jr4kxqg7jeGxRJO7HqFIgf9B1OLvUQhLXTWzn32Rxcza5qXf1HJWVLaVgO2e6Qr5sPvW2U3mgHEo70dBxSFMAtLbANOkyUrYQpVMdhrns4RriaNoqW2qCFnkFl0S3JdxQBmETgSFY4xZ6+LYTyz7646d7WLeSBIzT086yDlziPoYmkgBTioX19MOqR4b43fGdsIxtaDF8J+p3v6+6oEm35D0JuOSYZeNdWJ4BSubrKHKXmXlH40Hu5qoloDpddnStGQpYak/C+DEmpBPs02HJEafTljOzjtu1/qPDSGAJBTw7OwDKDWOX+xRfMhN1LL0esQZ/7IaY1ZR1YWwU7PCnS/A+bC2/MbDs6wUbBzPKKCO0hXRSFdWGn8rsUSA7UdqBw8VorO2e8E58qBZdZ9SXD5cI24UT2DfOvrR5OCcFACnkcVGNno3TdbaHQQWPWz1qjYmW768ymAuTOrGaVvozG7UU16bNELEmYZAw1NXTS5fUkBz0MkQnOQKxazjb7Y/eSe4fq5FkkZWbhj2XQqXLFtJdsD7eWATcXQd7IYmFzDvUvtqB0W80qc9sVw0LmLeKoZxxsvIe24hYYSGb1D/fD3XJMv2k9kk7mIgsOA4SfJoQo3Jk9U9mghqCTo6wiJ2zLT6mSfDlRlA6CjcYuYjnaICxRq0BIvKBDZLhnhft44nlNRJP3Ebm66BLFA8QGgk5vjbsfUF36dhNKpOr3v5tyzQGQ7YKr6Dl4HbLx3zygcEKBDh/SDKb1pL1frIG2mEA2Up0wub4mrI4wMBWAvfSXGdN2AjSzP1oNnDoM3GzwKXmCO72mw1MGM0/FSswMB6Ehckk1nZiLwpySLIx1ajKGRbW2UUTbFUL+uQDLTj3ed3ZG/JU+gi+PY09J4Iv9zeDBKIUTBxvVW5SX9ARa/C/kRdZVBSKcGvDbyGeXeQO+2FUYIbudQHRLQWi03oPWIgadv8OVMsP9gc0mvAGSbctvcVvJMGQwvcJKYZuAbkAGOA2y49yFGB93EYgM2zICaT8RHWz9dTFBo9LGndLKUk6dyugalWfGjuBBe6tguNMlBLu+LFfie3gaPWTAkrDEmKPtk7pIby82GFdLId0B8h2Uc2YJpTX++O3ZVuGRezu0cyQRK+ANOQ8bpVNSEaaUII0EhGFVg5tNqGfTZAbj/U2ICoUxwDFQxhC8aoBbxtQS+lOlLj6rN9sRVnkwIkHhWDbzzDjIA28Hs9MTWXWU8/oztIwZRCz+zHGk6FX0HwDAExXob1FNu4oUGsBTvk7QkIpdmliOPMruKEEGsxW//nOEbes3cDFuvO33ftubVisVQbXEUffZyUj/+ti1dLQzTEmFvkx/nuE/6eSseMwKJE6Pn94UdWGc0hdzLLLIZUUkDRrdYjdk6Xln/rKzN7dPZZW1+SyPS575KjsyP94aAWO5neMeKutVOFBrak/5vad7Ekr0NOYJ9LNJY19Sl8kFMrCLc0c+X7vEll6uvcFcBj/ps3GhbyTnbh39RvaIMz2D4NMRfcXsGgfP9gFWWVVFSRTDUvk7VCaP+Ke+AK25UuTx9oLF+b92WcHUOHrc4DJLrWdJb9dRWff1t2BUrW5mXoDnqSBEHx9QsE4sWvqYoytGte4ddJpUDpOktXy16pbTEpBlqpx2TtnRcrgKoirAPeYUxs3jgElera8FUGTp9jZwhwNNqFaZ07cDRtl1NwQEqwtdBgCUacgA36pzyHuEOl0TqPqZ3s/nv3WpzWBTeFRIfR6eekm8rcNrYnXYwggtWzD2fwAmccKNaT2nPkcyDBQgwGbnXDlWjVMF335uBTzvzdrR6gYaBboy0vdRrClIAuMo8OhxVTorwumeEYK/bfTsGKgw0tnW3QduBV+b941sxFg/pdw/idy930IdVh9INDKqq30I65IqObmoLSq+JB/Y7J8dSF3CWBCm/g/qfcztcjtWq7SiS2NFyyqvWSkml0Xw8JfTTaWbYA1LDUQI5H/r8O0MMgnMtejmz5xPSVbffUv6z2QbMr6CaSN+YOLGyOqPAPEEAgDQVvE+KH8jG4Bz5iWsA3EqNe6ejUw8PJH9nDCgGWVIzYBSykH8fs4PkkU3bhoK2P241WA4ZcjcC1ODReb3FouYNaluCsiQn+/64EBz1SxYHLH8BmEZ5ub5kpDWPZ0aDdOMPk31Z2Uj1abltPXTYyjRU/bQtYL3gWwKrVU+y2giaSWmNJcIHL2fo2W5UBy71mO9Frapn+t9N9F5MCQtc4VVh2630LIFOcF4M1Xn1uhs6Uqs2xr4ZOIzcrw0PRn5R//byvtY5DZv/CpGYkRbfD4RvFtP5PV9h3tDvcBUB4k2PgaiYKeIpQi5q2OCd42VWUuhKt3Uwt8AuDu3hAhIL7dNgch6LTzTuMlTeF5yWgUTj39gjnAZCBJpVdaXp4uqZ8Ddqp/RPAPNjtaN3Zz8pbg21WydEUiOLq5L0uPM3AdDXv9rVugIRx7CcCt+9gYAThG9twE7XRzRI+ng81SifLecFODoAHFmBr5NXjCfmE2USv9CMnJ5UZtyELbTEkylVa/Tu4wSlV4DN1QoFuSNFEQAuBjnS/2UPNG450hAfJPwbbiOeu5SHVEZGe5CbqKBgjrBtnawmlo4ANiCFdpgFyM5MjUczw0BUJIuJR5sD6IQVMdXt7SAiGgYrLw3ayd4UDj2YrtK2QIhLGEMs+z/yeiJqCGESMtj0CSsz80xSCB8XP8ylvS/3rltc3oY6tOQ+ceLM+WGK7YP6egB4oilg93NHwWNokmP4Al9n2NzF7gV9tgAR+JawzteP/E/TFwUoBOO1WYZ7uwMSbrLDggzyxDvlkbdi9Uvq8ioe1XeXzRIJW7Dss6BcZxfs4DYsaI6jPwgZpcgsma68sHHB4BnJoNrwe30bqYGFduiidAJS+woI6Mh+3vU68/EpgSwRIjXomo5BSfc3v6zVdBKvum1lg0eWhTvnXiOOZu9O+Ij2GiQ9olgjO+so+th8ZTO26BS4ibsvk/pqEKkBS+x9qQR5Slev63+F5SxQNZxNXhT91Mj/x9Xh2IS0cNLB+M8cPaDk6t58Jv5vGTC+BTlNuzZPhQL3u9scBX0SL+eaOp/jItVmhiFiXd5k8myyqjN49S/bYdxe4x03/exGwCN2OINSFOdt12yNPLpv3Lh+npVqWYnZxfhk4MbfsAOTEOffxkoSG+4C2qQYFi4+Zry7liegbGinHIQKxwUbTg+mVPM+RnGyIu7+MGu6g4iFxk6XsaoU4trUsYf+YP+DaZ9TCa4pyCq55I8qePgHOcAcfPmosOWqts4L4Tl3lsgZ9jzfdHhUyW4qkYlvfxcSscpP00eYek19RLqb1wMu0Rt22hyFFyLc8JYtstdW7wW1cDJnJn5DYZAwuW2KycVD4CML5wY43Kg2AY10I991J17nJeSGINrcbuEcGnD/MFqyj9fnLi8Ejan8zIww5FG2MJCOz624k4g2RoPC8xW7qpxN8G1q+C8MIyUiyyXR9ECle4Zn19o3HmYHadnIIZz1UHp5s3XfvLmAhHWtgwo0tinI3WbyGzB+2tyAS56ualKfxjZZXD4Lbs1sJ/tJqcjJxZzfeVd0b9uTEtfv92+2AnBMgYGvKTYBLndwaAl8MrwcQaFt/uDy4/lY2rYAbuksEhjwDdEcrqWxs87CHkywP7Pr5S/yPE9v8MbxhX/YSWtG0k2+qjQ8D2vR8gdUZtha/iZgx6hCSPbaZj8RxOjO8cBcHI/vf5eZb/i/fdo0f8Qcw1XRJRJPOLlH3lg0N4YRdiUeG3WXVNeaIWQBEUH6EOCuV+B8ob9saSCb4n6GJ77FpVJt/KbJ7jU9a79jy+GlKbwUhjzHeO0lHO2K30SpuKBz82j3YfxtdyvwizgQ/jFTPUhxQUbbCYgnoB+Y94aqjBYPvz8wD+xqacmx+DrtPQq5KBB3S79mICp1JTGs67G2WczC/qEQtAHJ3Ks9cak9jzCJ22ARwEnluRL7jyq3rDLc66vgySVgq0Dp/T2cLXDFCuvOp2hiDwbvxFAcRer1/SjWI3PUrso21lef/BuW/05iOghT9RG8T1K8ZevZHaQQjfjGGEUe+OpQlCzg1zHiL8MqGeHkZ8AnsJs3BBXyyERznI3i6MvVZKu6QkVVBuO+P3Xn59KRlN0GWYzltqVBKZNe1RzEoL0mJQ7an1maNKLmxRu7DCPgppXfI4g3/qlXDON1BWpDGvVPVikDaMkBHrX+/8vceMMlcEN51dyKXfFLbFnQ03idiJb0vLjn2ex5EUecpHi3kBzkPZPLxBKqK2M7pcJptiF4RSWJS6Lb7bb1je0mc82BRO2X4bZ/8/upAtsEc5kOwvHRGra3uXyhETJsJQERFKuUUsaPrcocuAIVuXyc56FI07O95C9gmgcFcyxMieahoxfYEDHF/jc/PV552j9XT+/VYOhgloszeRCzhig6ICLk2J9UCXP/j69VhOsvIeibG9wTH981ns0OparK1ApNAT/4D6j+2+28iS6zoSjKhoRLZg4hKayDVe5GBxtfQWvfD1vqgrEhB7LVH0wa3fKlNHYDdH3oMrBEcX5HzyTclocSihQaME25zlI2vwuILDx8augO0XDcDaVZ+FAJSwoVGP/CcYITH6JvgeJn1jkq8DFCTyEHh9y8M52QeMEsoKjyDvmgnQoEEBbk+09TwfxFYUZ2EYXRkHp3V4BFqsMp23dBpWIs5rybSDjvXZARqv200cSAaylC9kZqEWagHQACTdigLJNUXUzyeOgWxCOkIwNNeHuHkvAdfa7GPdNzALgJ23Sn6n2s/WWVjC9El7wqBlJ2rY16cq5yXRMRFxy9zO2hL/0GAD6i6oVd5YzvNowS2uy4zlVW/yXoeEd1J/lA1FtzpO/Con9YJOkDr/2GWEDmXC9D/PQxFpQFcdAx+uKxEIz2oGo/v2u7xJ13cmxZcshPO9Z8xcctgbR8hx1WNLDjwKDKXiyrBrY2h5JYI3NbHC/TF8xnXsLFKZCeDWVhf1I7XyRSdXNUAfwryhBL6e70+PTU71btKcXg1o+QoN4tmHdvY6XUqjhn+/wfwAkIP64nB5wgMN/+3T32Fml4R6AfKukHeaMkc5y/pUwq0AgVKf/LedUujbgQRbhvmc8ALyX6uGBD6BZuaQBtS51/kTSoI/7Kh3w1zYZKsCNWXYutBDF+u/Uv44nONON1C28WgXLk6qZQa2rKAJxYzsLA7Z8VCIYxEu7hbTXLfgYmePxvIemrMyRU/9FtaDYwK1rlGOXnM2dAFqi2QnnT+uPuKo0x6jORvdJTaNm+kyeoAZM3BKXwgT5zUO5f902rDsX/X9CgYrxlcIQRY9EjLUO0r6VZOG8cB76WICRyCpcKK89DAQMvilkrCee5Y178nabJJ3dDhcEInEabZ+JCu4yQBblGWulQmgm48c4hDxm8fTW09udjyqqRiKiMLBOxREHwONfJ5C6ssQjAT/RNvG1tylR7Xd+Kub+xTQNOufiEeAdZZemSW5iUC+cxRI5sWjdm41A7dLYkk4dnqrpcwQj17IjMusRVF+0TFz35JkP1909kfxfvfSVwHBWZwjoH8SdSLPa5MBA5biQ4X4s7gbOfA1Q7vKsL+d/AtFAqvBGgJBeYWKoHvIYnula8YcOVMdL4zZs3BXnbAjkGm/t94miG2DGKGBTdcvVlkEqDcLur//inbfE4UzvA8/7dgX6823CW/wQM7R9n4Y7UcnVK2fVUF6xP2CBkpYBuW+OagG8NLoRBKai5/quAarSsi0OC7kv5QeQM03HbTw14jvMaHD7BccQl3wdi27TM5r4BjuKdn7RAv8CY2e+TCbRwrEtnZAztoB6MZ6s/R+K7rt2ZxEqV7HahGO5tz8DJMIoFA7aKbK3MFx9iKPOJ6u+ZGohcbdJxUihQyhrMh/MKCFZ1O9IR+Kvlsrpy/gZomqpA49X594LwXA6vOnpjlxCPV08CcFZ94zoQnSZT2cTrFXMVSdCq36PC2fTIC0jLzeO8cahDVpjnLfAFXWIU5CNheQqtuPKyVHo+ixUfiYyOIIGHgnx/186nhHFix9WTjLCnBXq1URaeA9jRdSqtmsSTsOubn1Xm+BbgpguZ8d3T9aTe2o6IrjYCdItUExt/ZF6m48tFPvBtp3DQtgmWojUXXFLPgoqdn52WdvgQahf8QL9Otg1ZKw2YG9LLrmuWvQ3p2gvjhMyucWdHIXMAQEzg6yWFX9+MsoMmT58M0Ejf1DlPVT975MySlYVv2sCxLTBqcWSrpKX3F7pQIu50tHDCSxpot/urucGjSaQzP5g3CyGEh8jM5R90AH+0/OkxVlNjVt/IgsQsL2zXY1uatxxg7ZTJ4r9pr+cABH9fPLbFkRe1pZV0H6JYWIOfM8NE6PQAZUqFDwhE+vE0rS9AaVKk6e/JBxeeFjCiOMpeRbIlHGVa+WdVk32C8KOL19U5f6JExUv+ml/6vdmPf2hl02eZlL/IHcwmzdYMGZ7kF4uvt5zTxreypXflFn2D8Gbplf9hunUxmeV4FpJRp6JGHibSeQ1Vd44RUZfsDbonQ4Zaz5YG0ct0py38L3xXCXFWFHKRtTf2mwxcHWRtydnwY6mwHBjRjUWUd0XNt0JvtGjvTyMKw+0p8mTQTzWa1Z9u2opx4Wicuhk/UrDjrFhQUcwvwmV7R71NKflfsbbCiDdyjxkTurhlTsJOSXpHYOGTiHbcI72nOpqS0bw4kTDevXwFEOsRx9YXI4vnzebiVubGgmR21/KpBj+l87hJmzhkREvfA6eZIdoUrrHrmTIqFovTkFfPTxmrkOqCMq/gZEHXsSWw5x7bvdZi7pJ250e6jQUc16PLB3N2NzyOrFpgS8gJ7/g+rdWKZwQPkOJ76nW2ewAQDheixp2m0tC8URr7dmHe2d3rLb3bh5lB3XiQ8cZ5FGKacX9PtaY1LQqTDOspIhJb/lR6qMYGMa2dhjpgY3SfgrXiWiuTv5rMD7TIP/t0V02zat3KNOfyYIP/uPNCpN71hwfqjSMx7QO0lz4CDsEeVq7adZCp9S/TBUmpdnE82FBPM6IBvd+SgLrv+zmxARgRONg//HZQNfhCj1lBZLGLnFd7uhWrZTfqwt9rIwfGryUpPzo03ew0EStVWQ4d7ggI872pd/gAhzohXF9xgwU1NdpOuEWwMu3hChGt/QMMJuEECgFoCb2YoKhGRtP0YYbxZiDxSCpf+ajxtVpGelFaiVcJleyQlLqBov7RtW1TcqznCoeawC0AXPJWMNDZwnItD1UbzzD54d/AqLj1SE905pcMBynR4T/r0UlknfBMqpZWlTwV5uqPKy1vFK288lWC7B28Qaf14yJdlvIDSUld4vFRfLktJ1wHZecSOVzQUnH0PT1H2HPtSGjkBfvB2AqoCLgT6Fovz3iA6xuhr3RO0LJs3rnW7ckva16deEPdFon6FC4JIO04QpX3hwneRgd8bjlsserOiUY94vVc5qighSDDZIqMYTkutB/Gng7U87P4ibWelSsHFZa/5iDiVEgEaWY3XAvzjiml0tKo9+SUdPsblJs7qt5ZrV8QCqbs0g7HscGV+GrV2yOLY0xuyJEdYSgfjBzKH91PsrhGbLNZfZEuz2be/yVnxsFrZ7P7saIu1mxd7iHbC8KwUqIzaI18ZAmlGfNhQGpkyjirpP+bvj97Eml3Zr8Z9kOkos34O79pDnJ+y6ykRxzYdiFE+Rr+tWQITC7Np2KVm6kaCuhpzhQ9NVgfcPJGKvzAQf9Vw5c5bZWYuHQ1+cEb4nbumC/DYOlJ8xvaxnSQv1Lhj785WFM6sDqD17LuEs8ITUYowxB+oy6zLZ5Yp6NlHWp7ylce4jewxPqo6ChEb0c7Uof6MPUfQ3U3TGXLXRR0hximB5I6aw85u2+Z6RGM4pnxXjons/OjR3gFmrRIv3rurD1bQYD135o+swkCiD911RbRKO1v1/l+xZaW8pAOPO0xfsbsbIY1p6Y6GjKb2trzGwExSFlzkAgJttQuE+A+8jRxMFML/tDg0qQPwhKy4xrqPw7w9l9fWA4lA9ohfeaNbxMBttzY7dbJgb+gOVOtAk/2T7oAjoEE++UiGE9BFGt2oK4roniVbB35zhvA6amCJn16uLizyuTJBluj8kyOD2qlgwwIKWt9v2ZS6RzMd3GHOGiPmW+rBZq5H7FkQyYtllq6rFsdHtu08ifmnGmHAXBS7bPO/w7LMrdIQ4uyHyvyXr0CtD5/IpteLZO727myHu1xpV9dC6ieWeCc3rORsADhVcCAUYSx49W4Wh3gvn3HonpY4ysXxhGlxzwlns5R62XO0m6if5/qKbKD/7vynriXX6qxy/fiWKRR9E589CT54/To0fn7qKEFK5JYBvtVC43n9GBpC8U7BGH/wLvFYdxKkSCMZwvv1GjECvWwLtgwqLaKLWEGA5VT54qCtpu/5lHzOgKoXLCMmP9ro3O4Z0PpGWqbnh1apdIlAJRT4aBS5NsRjZO2Fq+b6/WdqcvtuRTqdrM2lMZpv0tGm2CMlvyHDQKbcxTr5qjA8L9T8YXS0jI053HTnSvLWC08dJ0DIBt+Cckcs8enqpVAuJwWdupEotnt4rRCcLf7zRmUoMCsmB1DkJ5Is51i2p00wBLmkzGnsFtJr/xSxUjDdmPe9uXvonXPXQJeQPB9I6IRXOD4PmsCmp6MWLKpVLA4ULV/tvotEnSMgpfpyKyBwrPyrtGWSuh5VxPzx43owbSn/tke5dXa/J1bTZwqHZrFC1DH4cUI0B/n/qnYQu81xBgc0YtQCH5PFhAB+i759MMaIgQ08U6ED0RotJphuldhDt+dEkaufE37cF0+mUqavEHEU4s0TA7tucOvHHDIIX0TkzS9fOnj1Eb2g+NkUo85U+TnxDD+09LIq61FM/iDLr+uBfUhWfybpFfXmFnRHyt8G8IEOIfoEhWO2G/MDJ5U5CRuZkPQHO4qWci/T6Fi+P9rIhp0piMAOO3YwSQWW2SwUdRhRw7Ao8YMFGrUrxvVzDKQyCDVcqOPzmofIXjhlff10eMkpEyTCTmXz7zcmCaB7DY0R2YtUJH1PEb2rYnvQSVR4l1oYBwmzKD8F47di4Tax74sRwu1PAJ+1EbkJA1Ye7VJzMKnYWbvtEbOxXTV+PPxxVYM/2D8EqIQnSBBybZcblGlEm00w9FYJMltIbhcBSkWIxuvK93fKqK9k5DnhP6CtaK5c8KW/xH3kumz5/LhAGgT8VtWiM32ru0xjHtZQjgUjIzau09iJkD4HHv7IOvagjm7M9l/7SdcL7jmA9ahSH62ZhWxopLk5ppra6XxQxS95k0N/RI/a7UF+vYHpplewIFl9wH1FuARu4Yx60hEWtduIWOaINcOFH/SLNmlohZWQeezDQOKQTDOMH+03yu5WREB9uD/oyrKmTGeSLxrFpWsAS1NujOHhKyxrPmRo+AnzIo2uGB3j4DwCokf0qNCIWnutSRMEf2P66mMeLtOep60NULPocELkejkcospbYXtUISwADkI3NHnl190ycEZcHGN+045ECmS6I2MmMwA3M/IkHfQ6YCjcOuH0B7wp9959iUQE1VFUBO6mwiLo8FaOGlp2pcwCn0GQFtrlt0RWR1uqoDXG1/47g1YZuyApBOz0v2uGqbo+rL1fT9BDtJ1kFXD3U7xiikqw0h2ADw6jMn+ydhA0ddOzyZHpVliTaioHVuIj4Jc8OUFIxGBSx7GghWzi8drf+OnDnTofxdyniIbU2UvrJHO1SvSItqYiA1wJKm2tL/3LYXSe/9mp4FG+WlXKYlJr8EUxhWz1uNW9mwiIcwhs7v8t03PXJmyZFwfWtPM8/AMG+upRJb9yn6zi9744doDDj7aShH9Kmg2Q5JK0bF1+1fJlsH5HJC1Nqm7ehnLBvghBcf1BXiAee1JCoQ5GN/blJj4Bj4Dx+1lrUAcTg1eHys/HAUW6L4Ru9aKChmlix92WSp8nQ3vPNFejZuiXVjQKm+MwlCjJwVL7sY8NnXnYkI/1Fu+IF0mNmXd1e+5otnuw/jRNaJ1lnV3xn6xx4WFw6lIkLoZPy+MHI09WAdEIwvx8+fQH9vbzv5iPJnWceZAENBI6Y6NZyTvMvCh157WQkUDIMshO1ZbOm2fnhoEkolfbqXtFOIIbAH9nJsFhoskyPyVtV11i1kSKXNW047CA== - Metadata: 0x023341FC
-	internal static readonly __StaticArrayInitTypeSize_13688 _5BBBDF4BAF16C2FF947F86FE4EABE872040F6FFB7501FA48FA14D67BAFCFAF1A; // 0x7698 // Static value (base64): uSj+SJldaF248KmnsWhS3ty9TI4G4jW/vrGyED/waAK7ATb5xxvuKUQDVti0O0Nvtagso8ABRO4Cn5hs9F5Ub+uRYKsqu43ikw4q1ql5WDxJvx72xaHL2aWSNTaeZZWBA99VjkLHFZsm/t6c9C6HIVj7/BLk5l93hG5yb1zSeGlztGjV1YgHLoDjMQ68awQitzjfkG3WEDtNDHu/FBZ2CKRQjlM3otqCwSEyfN0Ps2iCjI4EcN4nTDVlTO26yJMfqKz7s94X3r+9uPfszN4b3CSSDiorzVLf3v+Dtl5lD0phvcDMSyN2ZVq97NRlkrvId0s3DtY2EAiZs70xePHM/HfUxlOzj3kALr6P14qZwhME9xExj0kmlUBITxeNpFARRBjlIgQt0pxdkdDyYMWgE2mMYrUHiHA9nEqkybRhz9Xry9hQ15sssuYza3ZKA7oDfQuRLm3o4BSvB4vRWdEyoIgylgmEXEx54sHFommAj7Z0ibo7E9TefKJBmT+5G6/yk6zmFTKpARJxr7U8A4FT7/qRMaKfiW9ERWNTA+z3v9sJ6gwk9Pm4oRX6v3wvMCxtb9iEq19cufq+mKdnBX+Ug4B+QocLG6aGV4QSdKqgBxZ+A8R0n0jr1HKTuUSM7FxKoDzRM6t6IVVvZoZox4yddfqWUpw5GYGlvPT3zKjpXHMJ508Ylii3h+ASx3mjkd/LgAwcw28BtHwW50/c69UD8LZ8MxBaUy40TAB4W5Rfyme78YdPKI+6STZ51JC62fdwBB0TdPA16YFcZhx3VAssh5akGcUiu9QNBzuCJ5MNVwCl76lZfca9/68mNbldlgHcel3v1Fx/+gfM8OB2gQhvytctYhCOxD6e15EJOz5o4Bwq/3J3TkaQS1MJ00jFPSBvF8tSBPdEHvy1Z5uGr+yvOgflGjAHYxlMGhIJXvQjhWr+xNRwlxRfHmgo2G91Iagsi/QxvsBYPC9ObvB8r5TB45shg2BtsK5Ng3IlB2hgzpQaXLx7uIDC6W7+IO3UmXTW0+14JAk0RcAet+BJWKPFsLP6WIz7qdbrSAJlryq6swKZPBP2zyz9KyjY12lg7ICTI+ivpEmUP2zZXQYMKRq2NQ47G5j2HUNbv6/C2cIvhHvRtZI3FSgnzzx7CvioSFHUnto0d029x81sC/0A7jkuV495raedY3p2rFsy45ywvJItHsMaJRLbKuEcBBcpH3Z9jHsM+wDlwX61908unZMgbxMKTya1wUjsznvjUkAHKNFfhbO8U/NJNa6x2d/syxvD60qf1hlqoXuoUkeTpqAnis+BWG3/9ExCKtHKXaOOIqD0UCq9DFN3Qs5ufONihSSZlLJh5NBmyqoJN8xXg8n/hP5mzhOfZaZ98FETJRZmXYa0DuNWG6KibCrmIbsbFksiCZdKskZbOaSPbb5x+VZ1jhmTMVIgatxg4uia7zNFsp96OaFZQCi6ZbkQ74MmFJ0Whvi/bC+xv3Ccia6AXwvZgaIuug6/AHkFUnuepwuWG2KXEEv7dM2fqbFFoBH180jI8G6dHtEqdHABgB3WvEbddOYcg3iQA1aakUKecE0efrdIjLEWIg9f1lNDj2YOo2+WGdpY3xph5QuE6D+4VlwgJE6bKA4uf4fhcLYhi9hDufoyqPok1wLSqM3EaPGCMWUjWh/ZUD3/FmyzkVETqcB3Cb2m+MVjXw5ZDfiq5iZ47A/Wqhjoemj51nZpNtRqvi8A2HD2gkzPTRG20baQPfY7QoUgqJzGpObQK5/SrsNJj5kJM1GYFaIHoJhpKJ2J7Uk9PzwN2yBhErnNQEwVZ+FFJZW3Yll/9bwrrItGLStwYHBafCT6b0MwYITs0k3/2qKc/sXAd/6nw5R/hWpuOx/LaFZIM9OsjjNuuVxf4bHXR8JVmn+XoXjYtE14yLxtYjr5Ji8noxlCk7rTkmB4FLxg/fM54D8EejJd32zGSzUqGCP5b47EmSdxMrvdP51H8hhUIGG4O08DTYng2pGbJzSToiiZAfBrb3rN95u5sJWIRqQ55mJkbo0SHUNgdZI4yFgfRgjWhWbkXT7O1EVF80tY1oIXE1oVUmsmhPg2p814Tx2DwWL1CQkvtfDi/lLflRdJKw99I1nVKH+41X1Vp4/ApN0xfKDKZbmA81wURH3Z2E6BRXL2YnypA/pA/KTLLybaXiZSpTnQWEmDmjt4ejEi+bAIOO2LhyWw7bitVwUdexP6LiyI4EzP+IAsWs/uS0zmvwfMFCOuvgdMNNg+wpyLcP3nc2ONE4ztWmlh9qYzlAsmFTVzoyS1BPmYM+BB9miu3FQ30VVgOgPl7a8UxKWPu4+s9pHgv0OCnyUCALokr9SmjCUHnutpmmTx8Ywwgmxuf9iJaHXmNth0f2wUSnUBr1zPumVNWR3+e2y5pxkuPAFdMeZJ7xgDNSymxWVUbmxR2BsyTrX9XKwk6jNUzzq/6dfA/KcbATSDyCi1Qu9KM78u4EkGYq7M3bqbhrfgSFd3PgG6AKUwnV2Phgk1tRoaKsD+blxk6v2XYUi480H8PNiXzfWjhgkUuDLShUpgOolGdLT7wR71RBQmeHhbq6xAzLhHFsaxzvDkNxHL4ynpbgTR0FRtEY5LBXRrLyRWRnmTJIogTzLoOYzk10pCHZ7LANL4kB8CXABHOseskbWxAYusMqovhEaswevSFV7hlOAx9u1yWccq3lU4ZUG20mnzJr1s7OeepRoCjhI5yNQJ5yQSaSpxf/KNq+fq53LRqGQuA7RWDRJTpeoV4cb+mx7+ugfXIcr1NtiQzc4spUhQo/65pYVRSYh6HZ3nKRixF/WS8J6OBQPb9e6M1drqwxMQMS3rMuOazohEgLB49l5ztG8WspHGmCMMngIN+N7EF3havzdjSbqiq1zVrbzNw12rwdzY+nKJgKyc8mjS7Ae+B6MvnBmukN8zXQlWH9+4Yn7yWzG5+rMe4lEjjFNr6Xds4BNDuZXJaeDFW+0eihDDmAJPBa4/Pk8rFKaaQVZ/Eaa+dnvDMgpP4Yi6vSrdUdCfEjuN5ey52nag3MjymiD8uTUhStDwKXCBYcpuQt/Kv3VjPX2bky29cirDGnSbs4gmK2jsGmkR1ycdpEJ3UGWAPZ31F8Mca60Uh81Ham1TOpqb+JkVosl1oMYOFeAWYT46hlw/Mx8btGn3HqVYLLouJOLkSXa9ICRN1Fm3auLu/vZruX72dCd+iBO2CVlxzBsXgxI4xlqrg/M32GR8MVIOkZk70G+8rW1KmUTxbnRM/d8GTXLUEJQLmKw3B8pFd8a4Qp/JKzZxXLV53wOy11lWSL497Y4BznzOZAWhbUix4xa10mybCX73dUN76AqwCdd4WjF0DPEiJPZB4wlmyEUSQLK6SvzbZikqgw/Nyzj7LUF4vfAVhaGUJPE5E/NO9GurpReCRVREibfQaBVflBl3QeLax8ZfKZ9sSkGxhIpHs6lbZfmtayUqvicAkmgxcxClJ45jplTNhnfif4uKhfEqTGUVOHHhLZv2gGmS4aAPjWWU4AJeFRCqtz9VG/hdc0USsD3lk9R2a6nouDyjx0hWtW1bjmYmhVuAJN6UBYYNz8CtE1uIv+XZMl1Fk1U7ZGfds56gniBX1/E+J705SszCK5lhe2Dt6hqZbJ0ppIJKAIguOEENQm8l6+Wzb8spNDFvT9pgKmvdzOgaXOoSvP0Pw3Qz3QAuOCYqZR0LIe5oSvx7kwenSh8V6CERAX2fmqdr5vR9Il8NjP9AgRywhIuRYnbuA6Psc650IopFkx3lpl2jcbmviQpAFLBSGW9WAFP/cxnqV6iV0HkPVyNPM/d+eDhbtLVBecsHEQS4o1mxoPbfLYkVduleq0qfsXf+zxRr9cVUnUsLjBRqQKAxJMaeZK5t9OOK3Kcd229RFKVrOP2BcT2LoaWrfHVVc2yEMyVD5+sBE60IvRslrzUu/X1OyhbxMrNFt4uvc4NuxWBi+lc40CO+zyAamj6uGIEr3sEm9jnFFEkLNAEI5dxBxP0yXG4XEtAE+a+1AG224M8RQ/D0sqQ1E5BcaNlGb2vkFRJKD1Qh+KATJPSkDLl0H6xljPWk/MvJjVc//Tq+VRHKWN/ZxyEkPYWxBe+zp+hYbAjO8JcgakS8i+t4guckEXd1D7VMIjGBPnaeOrs2QutJwDSTa6TTNtLh4PWJdpIPK976BXs1APhBPu9t9/3w6Rf67cYRf+V0jsQbLRiffSi8N16yCdA7/UCrM6ui4AjF3PbdOL0akIzf+zmVwO3wh/qGOfLzJZonNYWoyjrD1D71uX9BWhOuOEbvApnaNuHpNvZwjZYalkep7NmtlsQpOqxhjf0X/tFd45cfAnPITnUL4Y/1SPRzEpofJvdddQurGwcwIFJWHteO+1Fo9Zjz9WWnaK6zg/Jwge/JO6zJmR9vI9OaBzB1ozPY3hn/Rd8R2GXF/m1BZAwH/qCx2xITJdGHedJ7NSsw8TZYS9oXxF2X5/BIvCRu2qoSfBwOznrsem29CH+qhMU6IC5WrG/orN++VAVJ1pjKUqe/9rUdzSAgaQRf96Iob9M8s0XbvFjuboxsX4bEVPlQpuvLq9o4yNTXGZ/zwOsMG/00+jUfpGw2z8s8nt/fqYzz69g0QCO3LYZeUDxnCHgbojrLiZuBEmEOpcrtMrVKdI6heV6X4nZNcoPdzp/4RwABx2ubPvlPtyGwT22BP/dxtFOEcg/N7ToBf6vABG8HAVR/JRctfzIQ4PvuuoFgFP3/mKR/MiUTas4790bNSIKLXhV3Qam6JJhpu2Z1+gfUuw8jz0OciTALt2KOk30ZS9hNgps8Olp92fdK43OKkIgn9zL6L2i6oPPFsUlSe8iINovG8uhXKhWsdy+PcsoLXTIH/CNFZ6O+h/Q48gcv8PQspZxhVlMWc5kGtHKA5O+G1Y/J9tC+t+Mi0F6mxKycQfLKC6D6w0xOkwfgm6BfhksJq3yy55SS1qjS3/mI8JBJIzp0veJVea28ekXwHKNFvc1XhS+PawT72gRrYWOtHYbHA41PDAvy/GiwBABgwgOlJt6bxDjiOliOgB7DRNaroXidEqVvU3jcQaAR+fxhrWHfO2QqRwL2ce5T/iBVZbolY+KMClJuCNUXSFrNI9srYvUNL8r+yGZfYcJs10wb+nCTTLLC83ZNN7lk8h5WNiPxyQlu4YVevYCeSk20tpy1TPUYTVlvWHDUerKDsEHsmCfm2HP0JpO2TloxGRZIqVXyjEF/rPeYjDipke3uNXFeSGxZWdpWjjkh+JwXfooMlT6KMb5ARVXp0zKgzAsnRWaVt2rWJZomFle9dNukWDGJB7kt/VI6e7JhRG/OuMgVswM+7gtKQoseFwxZ+xwGJXYmEikd1y65QuVS+eSNyrC0egjgJA8g22LDA5y0cb+DJ/puTNm5sJFjKrdwK/m79V2a+jju7RCUbWrIepdgLk7Zc1D0OpKop/DGejMHgoMqg+4mtogCjK9TF8GjRhfOSkq52cBiRJTl3AvOGNAIF3ng9z3vIgfaZsxSY4x/cQzyIP86NIMDfBM8mk/5kQCUGGAgLR7oBW2j9z5rgv/7ugtIRqrhQavn095yND/BpciIXEVG7Gi/emkT3VImS+Kbv2EbQfhySd71mPbUWJIEkjprAJ57lhgGi5S0yVj4dpmHYDEBINSfskL5vqEkv0doNg4a3bEh37H95WTyG7md0ey7PHA3cfVEXKbFuGGAD6ndZS5g0/J50jy9g2GIHMJuBuZ1rlWSH4lOASIhVgJ9DsiSF3dMAcNYGyNAMj5tUwxOnjRPEJVK3UoFk4+SYIM5HXieDBqJJJ4wLdprmpb8z9C3NlwbmziN6gOROEJZBPIvUY7yvYljiqAHYQ9X1M/oqSEjJ3O8Tir0qb93rKA2aCZTtGzlI1CrpjcIhi+zJGZiJHBW8KxnruJqA/VuARwgpi4glF6eKYD3uC8b0nk1hSUCWd60MX82d2ro6LfQ0YPpMsqPFzc9qIJr2dxuEPc4HfVG86g8hbk3rDwvt0hwqtheDL95LbbiJKeMoS8BbsGTEkd7JQvib+KBAn/EI7ir44Hsj3pitPx6fIjdg87kDyb9AZLEC6eHQYAKHff76lC+HCaheyFNDDmQ8mJCG/B9CX8GHex4+uiJXEOyG3Sn/oSA+OL6eBbqHXfaQAzhIe3fCSrtyBJgj3gkZMjg29xSXwwjPDGOpWMnAo+64/wXre05Io9IV7Xhxrc++uWnksD8ikIPacrIRQhlUuZVM0ibCg05WzGnafI+eTjO3utIZglpCmjxPbDX628+15abnXZBm/9IQ9pH/JQLHzg3zkABqP1yF1uxayFQrkmAsfFKDiFuFnjCSRpIFDPYg80r4WQotwah/qEy+yipiKVjcMtwYgNzxWHGzuQbz4ykUpggYRHS8Xm2e8cgmbRaaUqm25QNdn/49/TBBtvlaKS0V/LrOWE7aI9LmAxXN5gUA7BR3ej6djmOtENJ91GfLSmWKPQJGBFdnNpAwv4u++kqOUmpDOsRPONEUHNNGucKIO1bbOTh8OnzMWr6HD+qVPMXrE3zjd4G7RhUHbcAr7wFchPYr3nmnSHP4hFSShI5iQ+JBK5HvP0q93nPX3Vi5R45aSJ/CYCFSAnamu23h/BSeoN9ENUiW7+1SUUbu2US5gXsS6yDsxSNqvWULQDc07Mky8lGAxYv8JNKv2rQJZJo0m2WKkMiA26ZPTBtQTBLi8F/6iUMgnUq1xAAxzcX7FKWp/Apb1AaQv//qmm2eBv0VmMGQk94sCwWgABCbv/cZiyVfh4sn0LHQusP3s0bc/7Gx9XwWn7UPgENajObepNmRJeIZLDyhAaPjtJghJuLa/C5Ghus8bR/au1lABhj8fM0kTdBaAHdhBP2LsSbJuBBQ4Gzf19YAwtbGO+b20hieJuG8BYKHh/NUkXqZGtM7zsYiHQzO2ekyyGYZ6vsrh+7nuBeQLth9vMLq+ztB2A/gNEHSg3yYVFz5wpkMAQvUP4JIOsw9pXNuC0cJbl4Fk/djsEfgenstCBCxTTjnvYNAZAS+zKGpNbpkVMKg/7Aos47ohznR1vI45CyMMvE4a3FU49LwGE5xFVCgnUjhJwN8F7f9AM3cJ8xnIBCK9m0MwUNMZ/c0dNaS5xX5nOP8o1wpVBYMVG8DL2Gioi6EhVerik56DalAzoBZvPAgRM9u0HbDQBtw5CMTcY14uJF2wOFiCZAZbpFJPaeGh8DUVDJW2/rlVMAxBblNvOZlPs1ihfdtJYQqalPRx0x7HW6WYQpvwblyJKPpqnRVhJ33dqUIO0bL1RV6K9HdNyTH6rSCLRXDw0ncKQq+U7luLw064433TR2YAftadlcmGpR0Rm6UG6am+jxwnDmYPrmIb3P55Y/PM6SNLyGvPXpyZufjOenjJbhrsC5LYsWJQLi33MGmeJMGRf+/py/HO8Op+qfQOKIwdDQ5TYNVlZtwQG1aylIcUKXw7wsFs35arRIxk7N81rYU1WRDYUB/zdrLQu9zu2Q/GDHRmLOg2GHi134cTtZabN6RitkXMyvuxKtHOIBNe+CH8aVbw+NIs7so9Cac3WaVxdRne/JLC2xMJQnDK2nrgT2Uy7gGiGFXB01bdLFS6IAuTMfJdcfieeXd4LZmaBdk4XF5Uj3oKi9iCRHYmItm1I0rKmfm+AQzj4gHZqKbbFcj/+UAfDnI6CykTMOT6iU5/vNn+tbzFJjeFoHnH+MaUj4KwSCE/uvYi3lEQAujNgLQduJePRIW8a/XQNjLGGlBMRxv8wLSC5h05StVZKtnxEvMkU/AV95nO35hWkX1h3hxNJwcx6ylg+MFQzrYogCyUJ0xPnzeH2Y9n05l+rNcIQicUe4xJpbYZfySy0uAxTZvm6z724ihM1cUjLh6/HRMKykVCXZZGfkIZ1epnMy2Pu+b3nSMs9cQNd1OKnTMcRsASoxRQqCy1YgDYkA+KBqhZ1MwDKglhq/EKppSsgS77vkgds43apW9VyFwwLbdsfgg7womUG0gf0YycEoHzrUsNOpB31b4Tg7WK0Q7upapxD6E+QF/PcDcibQDSE3V7ePZ1JqDjq32F5OYCzRX3yi6cdsdw2OvYuYKWTu1iB3OSzDPjibSGH0LaCXs2/8fRu/XD+q6WFY7iTs1Sbbx4gKJKjzPiIYZFlIna/saI6cs5/LYkwlwrNHk4yVwESWyuw9wAj0IZYk3pmmLYD5q3DpF4Qp43ai2+P20TXj9P1go157HAM7yXz1RbO058dY8++WYyLGg8mp6o9tb775EBDSBxGovMevYC4zdUph0a58sjzwOCojed9ZozNszMY2NfOjqPz7kV46I9PFZYRBoZfrkCr+rDZSim2QYkAcDDyJnmD69dQ3QYuQ7qofxJVE6maAX5AFlFb+b9h21+c0JUdfefBRjRueQKgBAZn8yniZz9+1Q71M93tJIT/auFO2r+F6p9SsuInL4PYIkBZ4+MnV4v4AG9WCgtYvE6j2quTxsytFo4tyk8ZgP5gfpNObfxICvGtTur+YBmrdCN38lpLn5TpZWJc+nfv4ahpnLJYUvZF6fWYMfFKQIPXuxdRjLC5AHlp7IAQ/UUojGH0ZDJpyLq3hvK9o+N7gs3y0xjm8gMtuZWFnxx++aLf0SIE7knFibaldvvf9nqv59pCjQS2AKw0b2CEll7+xZcYhjgCzzRe9thLhx1qiiRaZXgmE6unEmX0YURuHIGkmwkEFIzNYFJxmdDGYKJXJpJW10XY6E6VPYYDGEVcmDAZko1qyQAHsMKow6hZcGtn3AYlYtXujCfzE0pwdTohoYSTm4VgA1E3KafIYkm/gi2ZCOnmIobfHoX6zbHD8HVvMe6gNGrruDVsJesH40sfH/W4cwMfzEyFtQJ8TMDszo5oWyBa1smv1yCJokl1iYxx7HrhUFyF2XNbF9UOZAGjyQlgsdaKzwIzWtlCBiWmJo6LIYCulL8ZowGhSiH4VJn5AzPN1eD0G5oXRjzfdYmqxiPHviUimuxZXECCo/YYrA4NNz67X8hXmL7jAR9PF0BJF10thAxB1lbUsuTx29iKKQ3e4Bfv0uYU45v5gNQgguiZiseVrOrH3iTEIybReTuK5VInYMmnxiWcX41gmn+2MwTLN5DvwyXuLItrNJ8ftflIwJy3xTxsGEtrWNuJaNuE5L6GFCI8z7KBXEKI4v72lnzUhp8gYZjwdupoS3/bFY5ewIsVfqKqQNazbph01p4l1crgDFKcC3bSWBrjl2dtUjLYDGg8zDJ1mXYqMm+Nl9AMfJAP0kleJ8p9/1QvVYjSuRdPmSVZkt2uMyxBhUxMF5RepsirLq4xsNS1kZpSgo8UmrlAlKuystccx5gjm+Zxfvxxay7rgzAPFi7DSoxOXrZV7h2UmCdmkh99KpeA2xroBchRsw+Vj4/QiP7S4FXRriFpaFpOKM+l3kTpqKpJVVfRSXj37ftTPeLMkW9+k5XcQTbk3LIIrITp5ltXnc1vVr5fRGBZ3kbqnYO+cSAGGLkOeTiqSulsn1G3QtxdyYstpL4UmcIrMFucNy0HKW4bt7t/l9PFwsZPVuMAkPWWqtDn56WiYoPbmqLzO7EjqqfACMb+IMQgfYmfJUJNZj09cVgXtM7nYHXGIHOYpiSb97TdPxRuocwtbn5SYcYdcX18LKOVxX/gW2GjK4poiwfv/O2AijujrjVg/4caUHn0pS1mFelN26ft6OIddrBsZxPE27WfCZUCtBxFavU55TVmBqx/BM2Lh7h2InDv+29Z3Mh7Lj4eg4FVJEoCgPNY2ObyaQDw82bwAcxmEqDDGz7FuyOsiCvc4RipFm7KFoUmKzfX52UMOoRl6vPkPk2MljE8ovqPUmmCBg1zilC7ZqLBR7zgy3Cn848tNVoR73yaFWYAMacYQXnnNVmZrqkFcHcan5Z5SujPkkY+YwtJ4mn87dIJjRLK/fsyysfSFhdJX70ubMt9syoV/M2g/nEgcjQzSapwodmyDtnZylmM6bUgL3y8r82KfKsnA9yZsxL7o9NZ1kdiTlPtNvG76FB7Sy10pbT/yzGTk/n8gOrs959ZhersuGjhGuHf9s/CMQoMl0nXf8sdkBkDDw2CCnsyqTAnoVAO1ucdWjNWABJIX3l3sFIsMryly1z7rCc8jTJWE8HyJwilm7CXsoRiZwcCGrcm2IDoraybxamAKpOC8X1WLStBA2BsQTFzIOBHdSo7itxOrju5GRppQyTP2SQiFxPBjmUmfxvTbT/xHDfKjWWuoIAi+bBUidyK8R1KB7LfUpy/evXef629YrMXouzElOPzGu1MeU99QGGiCyHx3rc7X3N55OP6YRk4rrjYYvnTZAN2DIp9VMQauKBORkUvOX5AaHydRJ6xjtHwAieIIDP3eLox2n5Nuvvm9EecPYJaymSdLfFnkG4FdvfyQYwP0ZiOCWWsVmV91eyoCJtV46h2hh8X3QmqsxEesjLzvqjqi3nvVykM7XnOmM1W25W88iit2jhT8NQDbLB271MJ96iDCsXKn8i3PXWXZw/5MMLP/wy1QhtfHTdNmcYDTph1Ow+vT2JuAjASAH3V0gdeVjjTURrjF0nPKQdcBr9SA6Wn8oz+pouaBK4wguWXmXkX46xvDZY/wjB1uLczPIImd9Jwb9LdTNepBcPm2mAtiXNqY3zbDPFvPq6G8bDPxgvlMdMbA1JY9Fohws1VidjcDNJ+p/AoLtAHw/gNKjJDs7nvI4up6CR5abTUYaRNlWrXq7XQSE/1Kdud06mj/MCcNQ8EmTb62MmLcXh/MHOARjB5+nLShYLtqijMYMG8JHQsfAmRFpQccHrnZh+iDwAsyseUiCoLc7xuCGK7U1Lz7bHUPV53tXUIZ122cdl8yLoTbjsNCvWL5qxdS7dPFFCXE0ghLglHvL0oj0ydp4OVj/Twta4AjFzZ4h4UY/vzQ5Gsx5swRFoZk4Bx1kWYwsftBjjxeHUEOE5R5qTzLEE0HV6rE0DJgUfdl/5v9Lw9BtiNoVK/MHmNf5vtpOh5L9Ujl/lFmOXN/LcZKw5yUNyz9WJIFPzsrIHqCy9l3/VPmViT0Vai8ZcEBL6VesHU+3ySDTr6rDVj5+I8tYEwfOhvnXmW+3OmAMlPsmHq30qLL603oREwmORzLoXYoLSmplP0SA6mXaM8Y6w8MihmP2+HaocpXde4GrFmDTlu2yQhgifMwEEagoRkRgcj/fDwK225rmEtXAYSTcRt1cQMgkFhWTuNe1x6v9XZpRHL+dl0x7nXpWtXGjNsDTRzQLYWsXaRudEOWxpmK+xwgrcXGI9YS1GyTJXEibJP7Cdhi8Ak3Du515mFC3sdLs2VXpukXy+VydMUwJITQ0eTJLlvGPeGr50ASBUEnZQlfYHkBrdjLCgNUqso8VNZGwYfg14vWUBzvw5AsBR+TtvxV4fVphtj42BhW9BlrXS1fvmDnR8jFBOHHAwgLBvKB6kl6g95XGFiiooU4VZONIEq1KzUuxfaUrguT704CSw4p65rI6WXfOipKlMAH2LT41pptr0tJWWFkDOnh/P6buUI8Nc3dgVT+KO8nTORxHkZGgs9+tK2w6YbSr78NdTL4Bjnk3V9WbbIN7OP8h0JWaIuhkcNmeWToGeR/ljpHr+mLscUGnCYV+5/1mjruCa8abd51TJLGhyslWj8pJxeZvKJcRyE7+EgeXvIVEH+NHOfBWUjaGFSZSpPTMkOIKJ2NBCl1uH1teaEWKvvHESdNvuLxcDMcWJItkOUgl34a79fKbk76C+iuJFN8bRulMckWtCv13se7XYJ2tgonG+DzYd9+Od4hMPOzDvOsg8iiQDvvEGRnOLlC2oBvA6pF4RMpjAudcfa2tkRQXC5m4cYZ5EaHqm57VW6/Xy3hPItzlJYSjOX9cyTLtRhr0vG3PPXLau3n1kXFB8Hi+LX1n+iz8HSX6J/XNjLLBB0dcu9PadNyIjNbIagD9r+3TSocSqMawEBG4zBnCTefK6sVSrr4subbE4UkL0kpQMIUQemrpEvIIVnDaEhlkhgN4+d703VuVP56GuYjBilNC9rmESpE7lkazGyTdaFzecL9ryYRTDylZF6Cp+HZHqjsNcKSmMmGf5WIGVIpXqJsKDB5cSxkBIRhIxGGVv1bTum6W19AcISNTCpnjwEvCjF9XGTCVwY5QKtCEv/3JUBKJPI0EoiFWVIYx/+TQc+VDZYzbjXFWON5/swnMSq2jd4J+uVUAEN0ItqyeSeJw4PgwtKIgjZ4Rwc8RV1qOl6UPCSM7Wb6CgX8GSERqe9xHWVET5W1GRgf6/8xaqoXFkDjY2FeBK1rdQ701mZcjpZQiFwD4vV88aqtk+2oaZYFx+ZevEn1PsoPnHF6FS8yd9xpRR+rpTUeeNVFycoMrnc1DTYk5ZSkRCSRLQyAl/GWXVoV1gN+c6pldCxbNyI811Yc+fSqbWSu4HY/28zpabsPZBcY26mNlVTTYVe6aNDETkKhQiKHFpx4qIDLeaF03dExdFByWIvoP4xFJmfRrOAfoNaouLhu1PfqxU7EPeSAZyHRtZk1mxHeBjKvQDqPoqJOzPvk61swsBjYu+7sHScfdST8Iz1e4INzlaj7AD7yraQD7styr8i4QgovkB7WdBoEHLYFLAkNridOq/zhcAiimemNc1RFnWViAQtKOtoeTihRmzJb+7ZC4QEGYFm9/KNya1DQs2Jky676V013pewLjsNCObsaZj0waiN/3rYixnM3mjf6KSjP+P6aOwe/YygZHvUEsXJEm3mAD7wf8Z3J/Qo5Nxp/GkFhwMr2gPMjANpcKshEb6VfdeMJve5S4zWz7nfTx8FhZxLMVlTFlbovpFI/1p1GCk6MxuU6Y4tM3Azt7Kqq8QcswPqjJTA9r3ysEyK+PJFpB4mL2+fxPBexN/SKr/GXDn0vVSUWVhMzPR9vG7ioEdTpC0kYS6n27/3tIUFTVGGYGVcplmsXeNNt+qHaLgHWeEmvguRboYUBwXowN0y+wtvgFR1jJcKwjlvT6w5d+qc2HiWGNU7Ah+pi+9fiaepr6/+pR5jrXZz9l24qlgQ0vdvNciO08QAz8q5MQOUsV9CVX/gbFfqOAPZ9VpjlMLhSRIx4OsA15s7YBddZ6eWArUQo+SsK3/cQB6Nf2I80Wpcsjy7KF0w8ZxfSTeleTN9czAZa/lPp/zD5fPR7wGNquSimDWe0rnx3f9/wrm9PM7fbS+HRLa4IpXCVGZDf9eoOK0SaWICFz+n6+++F4CQ3jhxo2l53lXTUxbR/AlpXHXFI2bzozr4GWA44RiqWHsPriNaeLRsxiXnw4lEU4KtPkwW2Lqz/G2yVIJsS7RFjAC2yMNcyICf4ts2PZxNd4mqRFxXfcR6q6WafOLK/M6P6VvNghIih29sNAylb93lFXviwJdL4WAVV52Cg0o6pXoujA34cfHvDsmxE4LoaAah+4oCtek1rtG+vt74OrsJ7ogDtXo/CTNEikcwn4Vq6WQJgz9EZxwopwxn5sTwiNJUh/zo6GTI9XKyOAp3tNVvGNbtGw/BbTADW3OKntpZM//aW8/kPwrNe6z5x/omH3mq62kwj0xrXWRoNxf4k9sGzfFV+4ZT9+F2KT+G8n8mSit+8Hlh1wGJ1w65ykQnK3VTLmx91e17ZCcqL+Dm2OaLD115GwBXSA4oUDRk3j64t61qyZwRnpzRqxB5UT+IF+juxDk2anQUJ+c0+lizfrEZft6SWeaTTSSduIc7G4WltjCPs4ue7drWM/JLSbZTZTb7x2ypjseKnBxWx/HwenFgq6Kpf4ziHDUQTmvQ7dz5oVLoD5oqM92m4HdyPtUhAATFjPaTuWWZUgN22LRwI9mKU35zgLIAIzFRwvaK1UJA0d2gW7CmNrgRgaIIqLW0+rNfJgURjBQgidNMlVU81jqfdvprzVMnbSguzweAIeDCNUOgOVJl7oinXdLF/lekDDatQUZW1kA9bRGpso3xNLgWV5W+R4d/yw67hC7Gr7Iml8sGQXl9ue4sPAPp2A3XTTTKy0J2Hdt2kasOhvYT1xBgfOYgI0sFj9hIzsBELcX380TzfvP7zcanF1TppxXaAQVXWFK2QqtcA2syl1CZeOrUl7rgfAhm9BFZId3L4jLvV8v+rth98jfePvEZ7BHnmDWGHId6eLq4Ry8eESa7Ts7b/felYNel4EJ3CkN0ttDEoRgcufWOvbGmAz0A6SNfgMURML8QYK7GzsLZ5WRuUfBTUxHJXt6QSFNA0bZh5ePKgletuonKtXCrZzxlKeq3AWlMUBcWnCeeNTmrg+Xlcnw7F1NI6t1xQh6Y5X5NjHZqrIF2JQIoyePF+PMMjOY5+UWaCtLXp9gdyoLSHKYhOds7uB29VdkO+YeNzJPeyF7ruy8u+AFoZsFy1NWuBQE1TpsdnKE0+9VH0lf/ay+xEofTJHwEQvrWSJP4+747V306UH9Km/8ipHlGwvs9PTMguRwU7r9R0CxDptyv4yenoBPguXqhVsZmTrOPV2CbomhAa0T4zAPixjbGXKsR6a52I3FGkFbD9thpT8gyaWfZibf1UEicqT8Qfmx+l1X1EwD148b7UPPW4qtArdfF18L0bry8UdPqNQSA2B0+M5QPE5L4v/5bEbhF6yek+84JbtEbCkdFtjiujXLp6KZB8h0UmBOy+PgvPm19m13HW5zY10MtFxScL0YjKyLY4k/OOzp08/dLfRwyS4CW1epdSZLghVmoTUpS6GiX1rckPC3yudVUZtWdlZp6QC1iOG3cJo/REhqoiRQ9TRFWGVEe4+S/r+RKbNHmVl5qrlS9f98hlJhhCM1YYKD/cYKM2zrBDo8FJuhp2hrTPEXmSh4fzcR4m6ht/MYp6oroMkB91JZZRNMthTOlJadyVSxVEdjBtt0pafX7Z+AwYTAtGm1ImxgwxMa63k0E+fSzkCp0lA5RFrUcje2MChUteNp9NUG6N/IK8yrrJAcW8d6craP84hcCA6WSm/Hu/HfqWzE954A1J0PtLJ0enjUz3Lp05lE3m3Kh5EXDX84z2nFZDx3MJNRkh8uu4kXuafRDIup261dAeEV5m6zh5UK35Yq95QF574YCXFMcqlWqptkX02A18OgsDgZ7z7RpkUi7RUhjOoq6Vgg079P3UXiGywZXA5XIp3SewdPR2AUJcm4o0LCZW97FP18z/cwaLi0SwiJ5y6yUM3QcaCxz0h+47vzmpKWuMWEz17YjCor67qY/8aj8Z0wD8C68Zk134YCdoMuGcWjXZ5ZXhhSsMpVoELcYq6Go5OMiu9uzs3rL+CJJBUaFFSizXPWD3ztxeelfVcJBA2OKOFrVy4odwzBI0X90HXKJuSOedqmAwV1xdBXWXkWBH64rSj2LUU9WtKFeIwvWUPJeNKv5dAaoqYjsyqqgYkBE7nrw3NEGz70Rh3HehGOoovtDKEvQv25GgV64Zg/NIYvi3M8R7S5WYWPonrn9OWG3xOts8bY44HjtqqQyP7lBVOWqJtUaRuIZAyJmH/eK594ebVCvKx4H5oN6ARQRbvd2zodKr6zhPd7eowbOKEyySsxhZplyUkgL+TgoEb1pXiPaEbEmglGhoG6CtYdt2/PoO2UiUsxcYJS9ISfR7yeUzCOIUoAhJh1c+qOCw6TyW90dd2ZjydWOQKeZRIptqnPtzzJd40bGJZhMDaC0BjHfGOvDwKY8OKF1hZ3DlP6Hz0SwMGE2qdvyo5jsKCXL3QWoz7BSW+W3MfvjLeLh+2+SpSbisf7Rf6AQeb++3Lpr8PBj23WFWgN2G03N8xcjlu/H68PoJ/7mWrMht9i5u1aH47LR25rfqAA8AJEa+1irRy6/39P2m9iZR2yRO9pHXsqVDqFUszHixON/2VlC8J5NoPNkG8NEAxTdfSjB+3znkGHPnAQu9fk0Bf7G3mnwnOqCJe0MtyFD2aQjSiQ7gUNvvz+u5Dtym9dQsr0QVj1hpeM4iWd9s7kZSGvFcFpK+/YJCZG3hRQLrXWf2OJzzf7wVhwacxMlhdly3a/xLFFlHOe/Rfz1u+rx5DZLMcPJ7wx1ene7fRYSe79E4tIo+5N9ngATnBjobxOrOskBPTMfKZ34+NENhNsvSrz3bosyXQpLgYR5Z83bLKUcwJ1BFdSu3/uRptBHaK1KUoEyG2i9cY/KfiWDA1J72Q5z7BeOrHxl5ZI/ScBJxMsgioKtTtXf3WdzYlJ47BNNGnMn7wkjqXICbFh+7iIXWcCSHVAQCCMTN6AS18SrKABwakvjmKQ8vX+RrkmDhwvhBfAOBcsb/5drLqnvmjnT5NDm/AI8D07ykCm6KDVCe2fWOZaAlIFC4DTxyekM2f11TnTykyJ5wc/qJwvDaKOMd+pvK0NqCs3/8zURgfeuSKAovgn+Jp24BLtZ1YcNys9Mi+/2JKyG3UfXBXh1W87hnQYIkGC2aoIUAgsjh8kuBlQaNV5hmT2IowcqXL2mCkPHVki9bjxiJNLkWPgacAYg10AruHy6Daq0VQqHFAgn8zBQvQUuedfQF8MLnRwGNjncghs5N4Wg81TGOwGAaHJkH6fY5Fj7LRWfqQDILMYMpgmZmaRx9GTC1WkrhG7XaUqPRN+rm4gGqzlelqfezFtGliyBW+NbdALmQC6OosIhm5E1TcJdHWRySqmnxi+3DR3HPeCpdZs88m7J3PWcoKEZiUCt+zzPLWyRWgAZZH5ppEtgzLihOAiECodSktACAyuWokWTlmNjk/RMZDYUuE5AJ2uUitZrR3PdSolSm/1X7E6TYLrFCy6/s37l46UnaWczNGQJFcbcHhPHqpEjqjYz1VDEod5ZU5OefFY2ndeOs/+J31cbs2qBJzahZuV7jvYzmLlJmuAh2ASD2JQXzutB6AAXlCZ69dKagWvnuwJ54t/i/anj+Mrn5/tq9JukGn5c3evhu+lpjwiAtoXVarsz7NgV5KCdxK1uiTllzREx/HIJHhPkC24bnCkxu4pryiZ0/+5WvjZ6GGXUJ1CMO2Otcb477qyRhVCHeBDinhocJMTylLxqxqm/X1HT7ZC3fCpkeYlUQY+MqPbAEwPxv+szNGbMMoM06L1Ti2/0eVwQInWRX0/eDMKOGcem603kJlvtLumrCKVCoHBsPfKO3usqgZiWLHRfNsDMvcxldpVGTuBFpELmNY6mJCXNrjTH8vyBex2MhyH3q0vuHBJyCXJybOkGTy71kRlrvMqZTFTbGMW2YxvoeVR6SZ6Cv3V2L6kswQexkFPr0P4f8/d6M4kDYK+pCjMCSGf1NOJNeq0OangryYutHEHhroszhxb84EK3ZSl9gzpUTIwMRugOjlvnrfVHoheIEaThuCFYleWGrWp2Z8U4hvUQ1oifOOdbvO4KoZTVI0x3l9/XqU01vZcRW1Xa7kjAFnr51HfvVSy5sQM3PKnnPFhEdfLfB0TxjWvYl147vH7eqIL9QyIN2TyCV7iGIwufA/6jcaDVigpH5iuWWb4YQG0bawr1qNUn/qqtJRsFUxb94Si07x+bQRSEb0S1flvK43aVP52ug73DaKMR7hxfX7RDq+4gPrzf7YnVML9/8DuZthoXnyUGX9u5O8MgABCidXp3nOrrdn98o+MDv4t0zegJHrkR0jGGX31T1JLh0OKylPPrusAbEleqDRQ7pB7ih8EtNVgDN3VtmHHQaIU5DDhIGoF7Og3ZAodRB7NhMbxT39QGtSqmbyo0P+lfusTiZ4fSorZjYl3PNTAcAVa3UxczC4x++vz+JXWeJ7U7X0eoHL5fbPrZ4zs48T4rZ1ESL+l/4/oE2uz9Rpyxkm25r5Wu6XXZ4U0tdz6cnlU1RcVgGlY7DFQfcafY02TORKCrZDG5LcnTbhxoohFzaFRteCkrPcukpjsfHNvw5DbqmpQHWQPEtDZ6Eges6QsqQ4jVjjpLCytDVMP5wRJ7nZAlLEnTo0yYS0aq4+x2DTF70Ay1QCztehquu2rAytjrciWKonEkzZ1RcrS3dqbT1XGs5x2BhlTT4ysmzOEGGRnBWm6KsjTZLEb6qndApHGsoX5WazF8AGDDLZ0lF5RCfl5QSGtKuOgkbhm0H1gW7qsgeQGiZd1J6VLEZYHfSy9h0l0vqBMoqqqZR/iNzV5NSVOqwVwgh/Q4gM9f9BdTqYDkiWMvV9Q9LhwUJWKUTYS07rdJjLSBsritUXNAJDXUv2qwN7emhpmHtiopQpOgPx63gmnuuA9z8QiAmH7Z7C5l7qCyxe/2sWS9ZsFF+f6h7fceI81pBR077scYbvcGZ5Lx3SZOfXcUpKb0= - Metadata: 0x0233B894
-	internal static readonly __StaticArrayInitTypeSize_88 _672B0FC8F401165C3B383DDB9C4E99487720970520B26DEB99BA4AF7DBDEA591; // 0xAC10 // Static value (base64): ugAAAL8AAADAAAAA2wAAANwAAADdAAAA3gAAAN8AAADiAAAA4gAAAP4AAADdAAAAvAAAAL0AAADbAAAAvgAAANwAAAC7AAAAvwAAAN4AAAC6AAAAwAAAAA== - Metadata: 0x0233EE14
-	internal static readonly __StaticArrayInitTypeSize_1024 D8FC129383BFF513C55131253FB9B0EC0A8206F473F932CF0006871A8007B4CD; // 0xAC68 // Static value (base64): je8C0hvfBaWhjgw8N74LS5Qrb9UCG2iiuEphOy56Zky/Z9ncKVfeq5MG1zIFNtBFpqO02zCTs6yKwro1HPK9Qun/tc9/z7K4xZ67IVOuvFbwO9jIZgvfv9xa1iZKatFR23duwU1Habb3FmAvYSZnWMKzA8ZUgwSx7tINKHjiCl9Fz2zp0/9rnmmuYgf/nmVwXAsB7so7Bplwag8A5loId3dHt+fhd7CQWya5Cc0Wvn5ug9rg+LPdl0Li1A7U0tN5Id/b9Lfv3IMNvtUam47SbTgbtvOuK7GEFHq4HYJKv2oTVwD6hWcHjT82DhSpBgljCpNt/Zyjaoom8mMTsMJkZB2u3qSLntnTMc/QSqf/1z0EarOjklq01CgLvU2+O7o6LyYFqrkWAt0DRwtElXcMMzbiaK2g0m/aGoNmQ4yzYTR5vmm5745uzlXfZ1fD72AgYHoEvvZKA8lMGwpQ2isNJ0s2srfdBrXAZ1e8WfFnuy5S8t+wxMLYx36T0V7oo9Yp1Y6wn0O+t+j5775xb9+5BsxK3Zhaetrv4CvTdnYb1AHnBmuRcTZs5stnZX9dV2II/sIGlmjyAeHSowh4RJMPD7GeB4InrgD1nf8JbAvPDhuoWmqFPmpt8oQ7ZGsSC2McgxbcjBUm2/uvd9JiOUfVFZrSsYsM4rb8trO/ZSCDuBKtbLo/O1y9SIENtNEXPbOmtKjXOCKY0E+YydnWDvneoZ/kYTEJ1GZGs4Vv3yW1aKiGIAw2EBALQapBAtg8cQWvyXwNIl9MClXlHQPMcy0Eu9C4YCVGiGdS/Nluy2rpabz79NYsbcTRW9eV2MJBpd+14jC7K3QAvFzOUbXFWGGysmVM1ATzfNNzSS3a6t8d3Z18iLkD6ri+dFDpt+3G2bCaV8QPCsH0CH17pQHk7ZUGk04AYg3YMGV6YmFs4/RRa5QBXGMZl2xkbi09bfe7DWqAGJgOHo6oCWk0+QDwoskHhzPUuBel5L9gH7W2+YmFsY4qENUQvCDSZwZx2/6QQdyJPS1mSasdYT4RTGinh3xv0CTpC06y2Qw5CIgFoJ64AtcPpb1HmZW6MCPEs6m19LTeFmHQQIBR1zc6AN6urDDZ2Vk90VTPDdYjdVzfuuNs2M1A+bxT1sm7JGyYsr36qLXKa7UKWv2FDS1H1AS00eQDw3JxZ13kQWAqXhBps8ggbsT1DQhyYz0PBdlsBpxPXAHr7MlldXr5YgLAqGubVphs7MeF03xRtdQL6+Tdkn3U2uXeQb57SHG5DPIgsJVkELfikR2/bwctuBi9fLGBK0y29ojZ0mge6dUfpLjchjKI2/GjlWRhNaVjFo/0ao8ZxG34ulEJZixhDhGWMAeIAAAA/w== - Metadata: 0x0233EE74
-	internal static readonly __StaticArrayInitTypeSize_16688 F381B0143773191EE069E703BE085604D913BC08C17AD8E76556B6D477CFD241; // 0xB068 // Static value (base64): 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 - Metadata: 0x0233F27C
+	internal static readonly long _0B31436F7F817F43292A073BAA33FBF3A226D874FC2753978FCE13DBA0EAFA5E; // 0x00 // Static value (base64): AAFAQAABQEA= - Metadata: 0x0262C630
+	internal static readonly __StaticArrayInitTypeSize_30352 _3D81570F62DF347E1C5258C8177FEB1B3318D84871BF789DD2A9446D57947604; // 0x08 // Static value (base64): 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 - Metadata: 0x0262C640
+	internal static readonly __StaticArrayInitTypeSize_13688 _5BBBDF4BAF16C2FF947F86FE4EABE872040F6FFB7501FA48FA14D67BAFCFAF1A; // 0x7698 // Static value (base64): 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 - Metadata: 0x02633CD8
+	internal static readonly __StaticArrayInitTypeSize_88 _672B0FC8F401165C3B383DDB9C4E99487720970520B26DEB99BA4AF7DBDEA591; // 0xAC10 // Static value (base64): ugAAAL8AAADAAAAA2wAAANwAAADdAAAA3gAAAN8AAADiAAAA4gAAAP4AAADdAAAAvAAAAL0AAADbAAAAvgAAANwAAAC7AAAAvwAAAN4AAAC6AAAAwAAAAA== - Metadata: 0x02637258
+	internal static readonly __StaticArrayInitTypeSize_1024 D8FC129383BFF513C55131253FB9B0EC0A8206F473F932CF0006871A8007B4CD; // 0xAC68 // Static value (base64): je8C0hvfBaWhjgw8N74LS5Qrb9UCG2iiuEphOy56Zky/Z9ncKVfeq5MG1zIFNtBFpqO02zCTs6yKwro1HPK9Qun/tc9/z7K4xZ67IVOuvFbwO9jIZgvfv9xa1iZKatFR23duwU1Habb3FmAvYSZnWMKzA8ZUgwSx7tINKHjiCl9Fz2zp0/9rnmmuYgf/nmVwXAsB7so7Bplwag8A5loId3dHt+fhd7CQWya5Cc0Wvn5ug9rg+LPdl0Li1A7U0tN5Id/b9Lfv3IMNvtUam47SbTgbtvOuK7GEFHq4HYJKv2oTVwD6hWcHjT82DhSpBgljCpNt/Zyjaoom8mMTsMJkZB2u3qSLntnTMc/QSqf/1z0EarOjklq01CgLvU2+O7o6LyYFqrkWAt0DRwtElXcMMzbiaK2g0m/aGoNmQ4yzYTR5vmm5745uzlXfZ1fD72AgYHoEvvZKA8lMGwpQ2isNJ0s2srfdBrXAZ1e8WfFnuy5S8t+wxMLYx36T0V7oo9Yp1Y6wn0O+t+j5775xb9+5BsxK3Zhaetrv4CvTdnYb1AHnBmuRcTZs5stnZX9dV2II/sIGlmjyAeHSowh4RJMPD7GeB4InrgD1nf8JbAvPDhuoWmqFPmpt8oQ7ZGsSC2McgxbcjBUm2/uvd9JiOUfVFZrSsYsM4rb8trO/ZSCDuBKtbLo/O1y9SIENtNEXPbOmtKjXOCKY0E+YydnWDvneoZ/kYTEJ1GZGs4Vv3yW1aKiGIAw2EBALQapBAtg8cQWvyXwNIl9MClXlHQPMcy0Eu9C4YCVGiGdS/Nluy2rpabz79NYsbcTRW9eV2MJBpd+14jC7K3QAvFzOUbXFWGGysmVM1ATzfNNzSS3a6t8d3Z18iLkD6ri+dFDpt+3G2bCaV8QPCsH0CH17pQHk7ZUGk04AYg3YMGV6YmFs4/RRa5QBXGMZl2xkbi09bfe7DWqAGJgOHo6oCWk0+QDwoskHhzPUuBel5L9gH7W2+YmFsY4qENUQvCDSZwZx2/6QQdyJPS1mSasdYT4RTGinh3xv0CTpC06y2Qw5CIgFoJ64AtcPpb1HmZW6MCPEs6m19LTeFmHQQIBR1zc6AN6urDDZ2Vk90VTPDdYjdVzfuuNs2M1A+bxT1sm7JGyYsr36qLXKa7UKWv2FDS1H1AS00eQDw3JxZ13kQWAqXhBps8ggbsT1DQhyYz0PBdlsBpxPXAHr7MlldXr5YgLAqGubVphs7MeF03xRtdQL6+Tdkn3U2uXeQb57SHG5DPIgsJVkELfikR2/bwctuBi9fLGBK0y29ojZ0mge6dUfpLjchjKI2/GjlWRhNaVjFo/0ao8ZxG34ulEJZixhDhGWMAeIAAAA/w== - Metadata: 0x026372B8
+	internal static readonly __StaticArrayInitTypeSize_16688 F381B0143773191EE069E703BE085604D913BC08C17AD8E76556B6D477CFD241; // 0xB068 // Static value (base64): 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 - Metadata: 0x026376C0
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_88 // TypeDefIndex: 54035
+	private struct __StaticArrayInitTypeSize_88 // TypeDefIndex: 79279
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_1024 // TypeDefIndex: 54036
+	private struct __StaticArrayInitTypeSize_1024 // TypeDefIndex: 79280
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_13688 // TypeDefIndex: 54037
+	private struct __StaticArrayInitTypeSize_13688 // TypeDefIndex: 79281
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_16688 // TypeDefIndex: 54038
+	private struct __StaticArrayInitTypeSize_16688 // TypeDefIndex: 79282
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_30352 // TypeDefIndex: 54039
+	private struct __StaticArrayInitTypeSize_30352 // TypeDefIndex: 79283
 	{
 	}
 }
@@ -9880,7 +9866,7 @@ namespace Rewired.HID.Drivers
 {
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class DualSenseDriver : HIDDeviceDriver, IDisposable, IDriver_DualSense // TypeDefIndex: 54013
+	internal class DualSenseDriver : HIDDeviceDriver, IDisposable, IDriver_DualSense // TypeDefIndex: 79257
 	{
 		// Fields
 		private readonly IHIDDevice gFLkmEnVjMQSOwejMhMlKHEESruD; // 0x58
@@ -9939,44 +9925,44 @@ namespace Rewired.HID.Drivers
 		private static uint[] IMXJZruKEAhSIjsecQEVWmnOmbrD; // 0x00
 	
 		// Properties
-		private bool isVibrating { get; } // 0x000000018ABC1FB8-0x000000018ABC2020 
-		public float BatteryLevel { get; } // 0x0000000184DA8C70-0x0000000184DA8C80 
-		public bool BatteryCharging { get; } // 0x000000018ABC1B88-0x000000018ABC1B94 
-		public DualSenseVibrationMode vibrationMode { get; set; } // 0x0000000184D8D0B0-0x0000000184D8D0C0 0x0000000184DA8D20-0x0000000184DA8D30
-		public float LeftMotor { get; set; } // 0x000000018ABC1E38-0x000000018ABC1E70 0x000000018ABC2720-0x000000018ABC2754
-		public float RightMotor { get; set; } // 0x000000018ABC1F30-0x000000018ABC1F68 0x000000018ABC28C8-0x000000018ABC28FC
-		public float LightColorR { get; set; } // 0x000000018ABC1EF0-0x000000018ABC1F30 0x000000018ABC27BC-0x000000018ABC27F0
-		public float LightColorG { get; set; } // 0x000000018ABC1EB0-0x000000018ABC1EF0 0x000000018ABC2788-0x000000018ABC27BC
-		public float LightColorB { get; set; } // 0x000000018ABC1E70-0x000000018ABC1EB0 0x000000018ABC2754-0x000000018ABC2788
-		public float LightFlashOnDuration { get; set; } // 0x0000000184DA8C90-0x0000000184DA8CA0 0x000000018ABC285C-0x000000018ABC28C8
-		public float LightFlashOffDuration { get; set; } // 0x0000000184DA8C80-0x0000000184DA8C90 0x000000018ABC27F0-0x000000018ABC285C
-		public DualSenseMicrophoneLightMode microphoneLightMode { get; set; } // 0x0000000184DA8CB0-0x0000000184DA8CC0 0x0000000184DA8CE0-0x0000000184DA8D00
-		public DualSenseOtherLightBrightness otherLightBrightness { get; set; } // 0x000000018ABC1F68-0x000000018ABC1FB8 0x000000018ABC28FC-0x000000018ABC2960
-		public DualSensePlayerLightFlags playerLights { get; set; } // 0x0000000184DA8CC0-0x0000000184DA8CD0 0x0000000184DA8D00-0x0000000184DA8D20
-		public Vector3 AccelerometerValue { get; } // 0x000000018ABC1B30-0x000000018ABC1B88 
-		public Vector3 AccelerometerValueRaw { get; } // 0x000000018ABC1AAC-0x000000018ABC1B30 
-		public Vector3 GyroscopeValue { get; } // 0x000000018ABC1C80-0x000000018ABC1CEC 
-		public Vector3 GyroscopeValueRaw { get; } // 0x000000018ABC1B94-0x000000018ABC1C80 
-		public Vector3 LastGyroscopeValue { get; } // 0x000000018ABC1D70-0x000000018ABC1E38 
-		public Vector3 LastGyroscopeValueRaw { get; } // 0x000000018ABC1CEC-0x000000018ABC1D70 
-		public Quaternion Orientation { get; } // 0x0000000184DA8CA0-0x0000000184DA8CB0 
-		public int MaxTouches { get; } // 0x0000000182BBE540-0x0000000182BBE550 
-		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000184DA8C40-0x0000000184DA8C50 
-		ushort IHIDControllerExtension.productId { get; } // 0x0000000184DA8C10-0x0000000184DA8C20 
-		string IHIDControllerExtension.productName { get; } // 0x0000000184D86230-0x0000000184D86240 
-		string IHIDControllerExtension.manufacturer { get; } // 0x0000000184D862B0-0x0000000184D862C0 
-		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000184DA8C20-0x0000000184DA8C30 
-		ushort IHIDControllerExtension.usage { get; } // 0x0000000184DA8C30-0x0000000184DA8C40 
+		private bool isVibrating { get; } // 0x000000018CDB65A0-0x000000018CDB6618 
+		public float BatteryLevel { get; } // 0x0000000187256D40-0x0000000187256D50 
+		public bool BatteryCharging { get; } // 0x000000018CDB6170-0x000000018CDB617C 
+		public DualSenseVibrationMode vibrationMode { get; set; } // 0x0000000187233DE0-0x0000000187233DF0 0x0000000187256DF0-0x0000000187256E00
+		public float LeftMotor { get; set; } // 0x000000018CDB6420-0x000000018CDB6458 0x000000018CDB6D24-0x000000018CDB6D58
+		public float RightMotor { get; set; } // 0x000000018CDB6518-0x000000018CDB6550 0x000000018CDB6EE0-0x000000018CDB6F14
+		public float LightColorR { get; set; } // 0x000000018CDB64D8-0x000000018CDB6518 0x000000018CDB6DC0-0x000000018CDB6DF4
+		public float LightColorG { get; set; } // 0x000000018CDB6498-0x000000018CDB64D8 0x000000018CDB6D8C-0x000000018CDB6DC0
+		public float LightColorB { get; set; } // 0x000000018CDB6458-0x000000018CDB6498 0x000000018CDB6D58-0x000000018CDB6D8C
+		public float LightFlashOnDuration { get; set; } // 0x0000000187256D60-0x0000000187256D70 0x000000018CDB6E6C-0x000000018CDB6EE0
+		public float LightFlashOffDuration { get; set; } // 0x0000000187256D50-0x0000000187256D60 0x000000018CDB6DF4-0x000000018CDB6E6C
+		public DualSenseMicrophoneLightMode microphoneLightMode { get; set; } // 0x0000000187256D80-0x0000000187256D90 0x0000000187256DB0-0x0000000187256DD0
+		public DualSenseOtherLightBrightness otherLightBrightness { get; set; } // 0x000000018CDB6550-0x000000018CDB65A0 0x000000018CDB6F14-0x000000018CDB6F78
+		public DualSensePlayerLightFlags playerLights { get; set; } // 0x0000000187256D90-0x0000000187256DA0 0x0000000187256DD0-0x0000000187256DF0
+		public Vector3 AccelerometerValue { get; } // 0x000000018CDB6118-0x000000018CDB6170 
+		public Vector3 AccelerometerValueRaw { get; } // 0x000000018CDB6094-0x000000018CDB6118 
+		public Vector3 GyroscopeValue { get; } // 0x000000018CDB6268-0x000000018CDB62D4 
+		public Vector3 GyroscopeValueRaw { get; } // 0x000000018CDB617C-0x000000018CDB6268 
+		public Vector3 LastGyroscopeValue { get; } // 0x000000018CDB6358-0x000000018CDB6420 
+		public Vector3 LastGyroscopeValueRaw { get; } // 0x000000018CDB62D4-0x000000018CDB6358 
+		public Quaternion Orientation { get; } // 0x0000000187256D70-0x0000000187256D80 
+		public int MaxTouches { get; } // 0x00000001845AFFB0-0x00000001845AFFC0 
+		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000187256D10-0x0000000187256D20 
+		ushort IHIDControllerExtension.productId { get; } // 0x0000000187256CE0-0x0000000187256CF0 
+		string IHIDControllerExtension.productName { get; } // 0x0000000187232F80-0x0000000187232F90 
+		string IHIDControllerExtension.manufacturer { get; } // 0x0000000187232FC0-0x0000000187232FD0 
+		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000187256CF0-0x0000000187256D00 
+		ushort IHIDControllerExtension.usage { get; } // 0x0000000187256D00-0x0000000187256D10 
 	
 		// Nested types
-		private enum TWCgCVykdASvqjAvtwILMsxkJfqS // TypeDefIndex: 54001
+		private enum TWCgCVykdASvqjAvtwILMsxkJfqS // TypeDefIndex: 79245
 		{
 			None = 0,
 			XZ = 1,
 			Y = 2
 		}
 	
-		private enum pWrWdNeHBdvnuLueHgImyhgSLeDG : byte // TypeDefIndex: 54002
+		private enum pWrWdNeHBdvnuLueHgImyhgSLeDG : byte // TypeDefIndex: 79246
 		{
 			Off = 0,
 			Feedback = 1,
@@ -9985,14 +9971,14 @@ namespace Rewired.HID.Drivers
 			SlopeFeedback = 4
 		}
 	
-		private enum CEDiiLYnylVhKqzRVmTmEUraLGnb : byte // TypeDefIndex: 54003
+		private enum CEDiiLYnylVhKqzRVmTmEUraLGnb : byte // TypeDefIndex: 79247
 		{
 			High = 0,
 			Medium = 1,
 			Low = 2
 		}
 	
-		private enum FyuaIbtRJcYOMxenmHnFCkNOWcAKA : byte // TypeDefIndex: 54004
+		private enum FyuaIbtRJcYOMxenmHnFCkNOWcAKA : byte // TypeDefIndex: 79248
 		{
 			Discharging = 0,
 			Charging = 1,
@@ -10002,7 +9988,7 @@ namespace Rewired.HID.Drivers
 			ChargingError = 15
 		}
 	
-		private enum zevHCMgjpSIcEHGdYHQwwhRNWQpq // TypeDefIndex: 54005
+		private enum zevHCMgjpSIcEHGdYHQwwhRNWQpq // TypeDefIndex: 79249
 		{
 			NotCharging = 0,
 			Discharging = 1,
@@ -10011,7 +9997,7 @@ namespace Rewired.HID.Drivers
 			Unknown = 4
 		}
 	
-		private enum qJWDrWFTHUzGihflrdUMFvJqKIYRA : byte // TypeDefIndex: 54006
+		private enum qJWDrWFTHUzGihflrdUMFvJqKIYRA : byte // TypeDefIndex: 79250
 		{
 			None = 0,
 			CompatibleVibrationMode1 = 1,
@@ -10024,7 +10010,7 @@ namespace Rewired.HID.Drivers
 			ToggleInternalMicOrExternalSpeaker = 128
 		}
 	
-		private enum HhwtNilXeadAoHHrzdwMmcgWBMJY : byte // TypeDefIndex: 54007
+		private enum HhwtNilXeadAoHHrzdwMmcgWBMJY : byte // TypeDefIndex: 79251
 		{
 			None = 0,
 			MicrophoneLEDControl = 1,
@@ -10037,7 +10023,7 @@ namespace Rewired.HID.Drivers
 			Unknown2 = 128
 		}
 	
-		private enum cSkdeMGgZoTQzLyvjJJsrKZlrAjbA : byte // TypeDefIndex: 54008
+		private enum cSkdeMGgZoTQzLyvjJJsrKZlrAjbA : byte // TypeDefIndex: 79252
 		{
 			None = 0,
 			OtherLightBrightnessControl = 1,
@@ -10045,28 +10031,28 @@ namespace Rewired.HID.Drivers
 			CompatibleVibrationMode2 = 4
 		}
 	
-		private struct VcsZpuFmaGWbgtFHPqkibctKOOSD // TypeDefIndex: 54009
+		private struct VcsZpuFmaGWbgtFHPqkibctKOOSD // TypeDefIndex: 79253
 		{
 			// Fields
 			public byte IaOjDqjXmTvIEPrVtSrrcPlQvkii; // 0x00
 	
 			// Properties
-			public byte ftEGzwCOTsOQHzRVxKNcTqNQciPgA { get; } // 0x0000000184D874B0-0x0000000184D874C0 
-			public byte RBYlIZAAsSeZLKwwqWjYrgjfzydJ { get; } // 0x0000000184DA8E40-0x0000000184DA8E50 
+			public byte ftEGzwCOTsOQHzRVxKNcTqNQciPgA { get; } // 0x0000000187234100-0x0000000187234110 
+			public byte RBYlIZAAsSeZLKwwqWjYrgjfzydJ { get; } // 0x0000000187256F10-0x0000000187256F20 
 	
 			// Constructors
-			public VcsZpuFmaGWbgtFHPqkibctKOOSD(byte param_00073e69); // 0x0000000184D87180-0x0000000184D87190
+			public VcsZpuFmaGWbgtFHPqkibctKOOSD(byte param_000aa7d0); // 0x0000000187233BE0-0x0000000187233BF0
 		}
 	
-		private static class alCCYiGZllrJPlpReystvrnGtQGs // TypeDefIndex: 54012
+		private static class alCCYiGZllrJPlpReystvrnGtQGs // TypeDefIndex: 79256
 		{
 			// Nested types
-			public static class kCZSdAchJreiZflWtxTSzYgysngq // TypeDefIndex: 54011
+			public static class kCZSdAchJreiZflWtxTSzYgysngq // TypeDefIndex: 79255
 			{
 				// Nested types
 				[Serializable]
 				[CompilerGenerated]
-				private sealed class cayHBADxgITRmVakrATHfiUEHSjn // TypeDefIndex: 54010
+				private sealed class cayHBADxgITRmVakrATHfiUEHSjn // TypeDefIndex: 79254
 				{
 					// Fields
 					public static readonly cayHBADxgITRmVakrATHfiUEHSjn __9; // 0x00
@@ -10074,90 +10060,90 @@ namespace Rewired.HID.Drivers
 					public static Func<byte, bool> __9__6_0; // 0x10
 	
 					// Constructors
-					static cayHBADxgITRmVakrATHfiUEHSjn(); // 0x000000018ABCA74C-0x000000018ABCA7B0
-					public cayHBADxgITRmVakrATHfiUEHSjn(); // 0x00000001841E1670-0x00000001841E1680
+					static cayHBADxgITRmVakrATHfiUEHSjn(); // 0x000000018CDBF0D8-0x000000018CDBF13C
+					public cayHBADxgITRmVakrATHfiUEHSjn(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 					// Methods
-					internal bool juHfDEKKzBbxMRJcXpvLPiyglqlHA(byte param_00073e87); // 0x000000018ABCA7B0-0x000000018ABCA7B8
-					internal bool xhPDEVeyBHDXCmwmsZuiLlCqHTaZA(byte param_00073e88); // 0x000000018ABCA7B0-0x000000018ABCA7B8
+					internal bool juHfDEKKzBbxMRJcXpvLPiyglqlHA(byte param_000aa7ee); // 0x000000018CB809C0-0x000000018CB809C8
+					internal bool xhPDEVeyBHDXCmwmsZuiLlCqHTaZA(byte param_000aa7ef); // 0x000000018CB809C0-0x000000018CB809C8
 				}
 	
 				// Methods
-				public static bool smyIfgWKHLuWuhRLJIuqwptGkNyL(byte[] param_00073e6a, int param_00073e6b); // 0x000000018ABCCA40-0x000000018ABCCB28
-				public static bool OoKABNyQUAFbnVfEqfJmkeFccgjoA(byte[] param_00073e6c, int param_00073e6d, byte param_00073e6e, byte param_00073e6f); // 0x000000018ABCC714-0x000000018ABCC8B4
-				public static bool FIEMnmTQkRQGLEZmIDcfwQwkdqHG(byte[] param_00073e70, int param_00073e71, byte param_00073e72, byte param_00073e73, byte param_00073e74); // 0x000000018ABCC0B4-0x000000018ABCC218
-				public static bool AzTKzpcpepoHyqkrIKIAosuSVoBx(byte[] param_00073e75, int param_00073e76, byte param_00073e77, byte param_00073e78, byte param_00073e79); // 0x000000018ABCBEFC-0x000000018ABCC0B4
-				public static bool JCAfMYDEZhXCMMwUrbPGHbVLokHXA(byte[] param_00073e7a, int param_00073e7b, byte[] param_00073e7c); // 0x000000018ABCC4A4-0x000000018ABCC714
-				public static bool jIbBsSzIgAQfboLujxPXYAEcCYUB(byte[] param_00073e7d, int param_00073e7e, byte param_00073e7f, byte param_00073e80, byte param_00073e81, byte param_00073e82); // 0x000000018ABCC8B4-0x000000018ABCCA40
-				public static bool FbrihUFIGGjchnylTBtUiyEiJCAJ(byte[] param_00073e83, int param_00073e84, byte param_00073e85, byte[] param_00073e86); // 0x000000018ABCC218-0x000000018ABCC4A4
+				public static bool smyIfgWKHLuWuhRLJIuqwptGkNyL(byte[] param_000aa7d1, int param_000aa7d2); // 0x000000018CDC1328-0x000000018CDC1410
+				public static bool OoKABNyQUAFbnVfEqfJmkeFccgjoA(byte[] param_000aa7d3, int param_000aa7d4, byte param_000aa7d5, byte param_000aa7d6); // 0x000000018CDC1004-0x000000018CDC11A0
+				public static bool FIEMnmTQkRQGLEZmIDcfwQwkdqHG(byte[] param_000aa7d7, int param_000aa7d8, byte param_000aa7d9, byte param_000aa7da, byte param_000aa7db); // 0x000000018CDC09A4-0x000000018CDC0B08
+				public static bool AzTKzpcpepoHyqkrIKIAosuSVoBx(byte[] param_000aa7dc, int param_000aa7dd, byte param_000aa7de, byte param_000aa7df, byte param_000aa7e0); // 0x000000018CDC07F0-0x000000018CDC09A4
+				public static bool JCAfMYDEZhXCMMwUrbPGHbVLokHXA(byte[] param_000aa7e1, int param_000aa7e2, byte[] param_000aa7e3); // 0x000000018CDC0D94-0x000000018CDC1004
+				public static bool jIbBsSzIgAQfboLujxPXYAEcCYUB(byte[] param_000aa7e4, int param_000aa7e5, byte param_000aa7e6, byte param_000aa7e7, byte param_000aa7e8, byte param_000aa7e9); // 0x000000018CDC11A0-0x000000018CDC1328
+				public static bool FbrihUFIGGjchnylTBtUiyEiJCAJ(byte[] param_000aa7ea, int param_000aa7eb, byte param_000aa7ec, byte[] param_000aa7ed); // 0x000000018CDC0B08-0x000000018CDC0D94
 			}
 		}
 	
 		// Constructors
-		public DualSenseDriver(InitArgs param_00073e31); // 0x000000018ABC0878-0x000000018ABC1940
-		static DualSenseDriver(); // 0x0000000184D184E0-0x0000000184D18570
+		public DualSenseDriver(InitArgs param_000aa798); // 0x000000018CDB4E5C-0x000000018CDB5F28
+		static DualSenseDriver(); // 0x0000000187178A10-0x0000000187178AA0
 	
 		// Methods
-		public void ResetOrientation(); // 0x000000018ABC06B4-0x000000018ABC06DC
-		public int GetTouchCount(); // 0x000000018ABBFA54-0x000000018ABBFAC4
-		public bool IsTouchingAtIndex(int index); // 0x000000018ABC0030-0x000000018ABC007C
-		public bool IsTouchingAtTouchId(int touchId); // 0x000000018ABC007C-0x000000018ABC00B0
-		public int GetTouchIdAtIndex(int index); // 0x000000018ABBFAC4-0x000000018ABBFB10
-		public bool GetTouchPositionByIndex(int index, out Vector2 position); // 0x000000018ABBFC94-0x000000018ABBFD28
-		public bool GetTouchPositionByTouchId(int touchId, out Vector2 position); // 0x000000018ABBFD28-0x000000018ABBFDF4
-		public bool GetTouchPositionAbsoluteByIndex(int index, out int positionX, out int positionY); // 0x000000018ABBFB10-0x000000018ABBFBB8
-		public bool GetTouchPositionAbsoluteByTouchId(int touchId, out int positionX, out int positionY); // 0x000000018ABBFBB8-0x000000018ABBFC94
-		public void StopLightFlash(); // 0x0000000184DA8C50-0x0000000184DA8C70
-		public void StopVibration(); // 0x000000018ABC0778-0x000000018ABC07E0
-		public bool SetTriggerEffect(DualSenseTriggerType trigger, IDualSenseTriggerEffect effect); // 0x000000018ABC06DC-0x000000018ABC0778
-		public DualSenseTriggerEffectStates GetTriggerEffectStates(); // 0x000000018ABBFDF4-0x000000018ABBFE40
-		public override void Update(UpdateLoopType updateLoop); // 0x000000018ABC0850-0x000000018ABC0878
-		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018ABC02BC-0x000000018ABC0618
-		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018ABBF8A8-0x000000018ABBF908
-		private void xogNzFQFRWULJIgOmcBxBKtxFiqoA(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073e36); // 0x000000018ABC33CC-0x000000018ABC33F4
-		private bool jPYAiNWxnQLIxYSKTaudFjrNWoeP(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073e37); // 0x000000018ABC20E0-0x000000018ABC212C
-		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(); // 0x000000018ABC2A14-0x000000018ABC2B90
-		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(NativeBuffer param_00073e38, int param_00073e39); // 0x000000018ABC2B90-0x000000018ABC2E40
-		private void yohjHxXpsviSyWsxJpLvoNagNLiR(ref IDualSenseTriggerEffect param_00073e3a, NativeBuffer param_00073e3b, int param_00073e3c); // 0x000000018ABC3750-0x000000018ABC3A80
-		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073e3d); // 0x000000018ABC1940-0x000000018ABC1A48
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_00073e3e, double param_00073e3f); // 0x000000018ABC33F4-0x000000018ABC3750
-		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_00073e40, NativeBuffer param_00073e41, double param_00073e42); // 0x000000018ABC07E0-0x000000018ABC0850
-		private void wtpahohJGFbRNFDwJuSYdYemDMiYB(); // 0x000000018ABC31F8-0x000000018ABC325C
-		private void pOsIRlVLbtdiHmFlfVyGdygxNYZr(NativeBuffer param_00073e43); // 0x000000018ABC22FC-0x000000018ABC237C
-		private void vHfgconsGMfWYdkHICzBGcwEErcqc(); // 0x000000018ABC2E40-0x000000018ABC3018
-		private static bool AiyWxOBgPpWpMNsHslxJpmXFryPr(ref Vector3 param_00073e44); // 0x000000018ABBF7C0-0x000000018ABBF7F0
-		private void sOXxkBcDlswbSzIcxCkMFuyUWUtNA(Vector3 param_00073e45, Vector3 param_00073e46); // 0x000000018ABC237C-0x000000018ABC2720
-		private Quaternion wKGCUNkgwbgehoWTuuGDEpsfehihA(Vector3 param_00073e47, float param_00073e48 = 0f /* Metadata: 0x0233419C */); // 0x000000018ABC3018-0x000000018ABC30F8
-		private Quaternion xIzhTduUCYcMGVhTgDCMWrRtKdrE(Vector3 param_00073e49, float param_00073e4a = 0f /* Metadata: 0x023341A0 */); // 0x000000018ABC325C-0x000000018ABC33CC
-		private bool RAkhYzgaViWNCVLpNQmWUEnUTAKmA(Vector3 param_00073e4b, out TWCgCVykdASvqjAvtwILMsxkJfqS param_00073e4c); // 0x000000018ABC0618-0x000000018ABC06B4
-		private bool dnrVvOWNyGgZFCDiyuqhYhlZFwYi(Vector3 param_00073e4d); // 0x000000018ABC1A48-0x000000018ABC1AAC
-		private bool KvVxuJqPQdMoUoEmpdfFEDLylXSeb(Vector3 param_00073e4e); // 0x000000018ABC01A8-0x000000018ABC0204
-		private Vector3 tIscWxDuheEuxNhWePMsXKCTFjHCA(float[] param_00073e4f); // 0x000000018ABC2960-0x000000018ABC29D8
-		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(RingBuffer<PiAoaHLiNJrbgVmbRfzTAJWkhYXRA.HiuAvUHPgkmSANBATMROifVCBjUxA> param_00073e50); // 0x000000018ABC21C4-0x000000018ABC22FC
-		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(Vector3 param_00073e51, float param_00073e52); // 0x000000018ABC212C-0x000000018ABC21C4
-		private int LuhCwgNusYgFEEHMNmFrQIaUAuBfA(int param_00073e53); // 0x0000000184DA8BF0-0x0000000184DA8C00
-		private void PMVNoFmLFIjFcalsPazCvdVVAmDr(byte[] param_00073e54, float[] param_00073e55); // 0x000000018ABC0204-0x000000018ABC02BC
-		private void CqWKgKBkckVeSqNwzzwHwdPbxpcP(byte[] param_00073e56, float[] param_00073e57); // 0x000000018ABBF7F0-0x000000018ABBF8A8
-		private float XtLNxyTZvnrSNbBhUKpqrWOfcDjN(); // 0x0000000184D8C8E0-0x0000000184D8C8F0
-		private void IYBwhwBHWoFBcJeMGGxWueWwCvuSA(NativeBuffer param_00073e58, psxalbFqqRAvexHgaNTDxDrhdRTx.TouchData[] param_00073e59); // 0x000000018ABBFE40-0x000000018ABC0030
-		private int KWcCWWDNqxHCAgcqvaevdTpBbfWsb(int param_00073e5a, bool param_00073e5b, int param_00073e5c); // 0x000000018ABC00B0-0x000000018ABC01A8
-		private void izyOsNUroIhKZBWsdUMAlJMzboUz(); // 0x0000000184DA8CD0-0x0000000184DA8CE0
-		private void saHHzscIFdoJAUqrVQMaGZwQZhAn(); // 0x0000000184DA8CD0-0x0000000184DA8CE0
-		private void KOCxANsCETcsclwQohzJULnYfsMv(); // 0x0000000184DA8BE0-0x0000000184DA8BF0
-		private void PmzUQqLxlqEZUlJGBXbjJRQbiyw(); // 0x0000000184DA8C00-0x0000000184DA8C10
-		~DualSenseDriver(); // 0x000000018ABBF9D8-0x000000018ABBFA54
-		protected override void Dispose(bool disposing); // 0x000000018ABBF908-0x000000018ABBF96C
-		public static bool Matches(int vid, int pid); // 0x0000000183A44D70-0x0000000183A44DB0
-		private static uint ifQVtzKeJXDpETkFUmBePRSjcilY(NativeBuffer param_00073e60, int param_00073e61); // 0x000000018ABC2020-0x000000018ABC20E0
-		private static CEDiiLYnylVhKqzRVmTmEUraLGnb FNSTBXHdgxxSvtGiuOkauhskNPVQ(DualSenseOtherLightBrightness param_00073e62); // 0x000000018ABBF96C-0x000000018ABBF9D8
-		private static DualSenseOtherLightBrightness AIYjpMYDriUlmmfcRgEdtyHpGITv(CEDiiLYnylVhKqzRVmTmEUraLGnb param_00073e63); // 0x000000018ABBF754-0x000000018ABBF7C0
-		private static pWrWdNeHBdvnuLueHgImyhgSLeDG tOYzCQmFNnGLoxkWcrbNuvXTCiOd(DualSenseTriggerType param_00073e64, byte param_00073e65); // 0x000000018ABC29D8-0x000000018ABC2A14
-		private static DualSenseTriggerEffectState wNXlGEmGFZtHTuGbIGXOIueiOmND(DualSenseTriggerType param_00073e66, byte param_00073e67, byte param_00073e68); // 0x000000018ABC30F8-0x000000018ABC31F8
+		public void ResetOrientation(); // 0x000000018CDB4C6C-0x000000018CDB4C94
+		public int GetTouchCount(); // 0x000000018CDB3FF4-0x000000018CDB4064
+		public bool IsTouchingAtIndex(int index); // 0x000000018CDB45E4-0x000000018CDB4630
+		public bool IsTouchingAtTouchId(int touchId); // 0x000000018CDB4630-0x000000018CDB4664
+		public int GetTouchIdAtIndex(int index); // 0x000000018CDB4064-0x000000018CDB40B0
+		public bool GetTouchPositionByIndex(int index, out Vector2 position); // 0x000000018CDB4240-0x000000018CDB42D4
+		public bool GetTouchPositionByTouchId(int touchId, out Vector2 position); // 0x000000018CDB42D4-0x000000018CDB43A0
+		public bool GetTouchPositionAbsoluteByIndex(int index, out int positionX, out int positionY); // 0x000000018CDB40B0-0x000000018CDB415C
+		public bool GetTouchPositionAbsoluteByTouchId(int touchId, out int positionX, out int positionY); // 0x000000018CDB415C-0x000000018CDB4240
+		public void StopLightFlash(); // 0x0000000187256D20-0x0000000187256D40
+		public void StopVibration(); // 0x000000018CDB4D30-0x000000018CDB4DB8
+		public bool SetTriggerEffect(DualSenseTriggerType trigger, IDualSenseTriggerEffect effect); // 0x000000018CDB4C94-0x000000018CDB4D30
+		public DualSenseTriggerEffectStates GetTriggerEffectStates(); // 0x000000018CDB43A0-0x000000018CDB43EC
+		public override void Update(UpdateLoopType updateLoop); // 0x000000018CDB4E34-0x000000018CDB4E5C
+		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018CDB4874-0x000000018CDB4BD0
+		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018CDB3E44-0x000000018CDB3EA4
+		private void xogNzFQFRWULJIgOmcBxBKtxFiqoA(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa79d); // 0x000000018CDB79E4-0x000000018CDB7A0C
+		private bool jPYAiNWxnQLIxYSKTaudFjrNWoeP(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa79e); // 0x000000018CDB66D8-0x000000018CDB6724
+		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(); // 0x000000018CDB702C-0x000000018CDB71A8
+		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(NativeBuffer param_000aa79f, int param_000aa7a0); // 0x000000018CDB71A8-0x000000018CDB7458
+		private void yohjHxXpsviSyWsxJpLvoNagNLiR(ref IDualSenseTriggerEffect param_000aa7a1, NativeBuffer param_000aa7a2, int param_000aa7a3); // 0x000000018CDB7D68-0x000000018CDB80AC
+		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa7a4); // 0x000000018CDB5F28-0x000000018CDB6030
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_000aa7a5, double param_000aa7a6); // 0x000000018CDB7A0C-0x000000018CDB7D68
+		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_000aa7a7, NativeBuffer param_000aa7a8, double param_000aa7a9); // 0x000000018CDB4DB8-0x000000018CDB4E34
+		private void wtpahohJGFbRNFDwJuSYdYemDMiYB(); // 0x000000018CDB7810-0x000000018CDB7874
+		private void pOsIRlVLbtdiHmFlfVyGdygxNYZr(NativeBuffer param_000aa7aa); // 0x000000018CDB68F4-0x000000018CDB6974
+		private void vHfgconsGMfWYdkHICzBGcwEErcqc(); // 0x000000018CDB7458-0x000000018CDB7630
+		private static bool AiyWxOBgPpWpMNsHslxJpmXFryPr(ref Vector3 param_000aa7ab); // 0x000000018CDB3D5C-0x000000018CDB3D8C
+		private void sOXxkBcDlswbSzIcxCkMFuyUWUtNA(Vector3 param_000aa7ac, Vector3 param_000aa7ad); // 0x000000018CDB6974-0x000000018CDB6D24
+		private Quaternion wKGCUNkgwbgehoWTuuGDEpsfehihA(Vector3 param_000aa7ae, float param_000aa7af = 0f /* Metadata: 0x0262C5E0 */); // 0x000000018CDB7630-0x000000018CDB7710
+		private Quaternion xIzhTduUCYcMGVhTgDCMWrRtKdrE(Vector3 param_000aa7b0, float param_000aa7b1 = 0f /* Metadata: 0x0262C5E4 */); // 0x000000018CDB7874-0x000000018CDB79E4
+		private bool RAkhYzgaViWNCVLpNQmWUEnUTAKmA(Vector3 param_000aa7b2, out TWCgCVykdASvqjAvtwILMsxkJfqS param_000aa7b3); // 0x000000018CDB4BD0-0x000000018CDB4C6C
+		private bool dnrVvOWNyGgZFCDiyuqhYhlZFwYi(Vector3 param_000aa7b4); // 0x000000018CDB6030-0x000000018CDB6094
+		private bool KvVxuJqPQdMoUoEmpdfFEDLylXSeb(Vector3 param_000aa7b5); // 0x000000018CDB4760-0x000000018CDB47BC
+		private Vector3 tIscWxDuheEuxNhWePMsXKCTFjHCA(float[] param_000aa7b6); // 0x000000018CDB6F78-0x000000018CDB6FF0
+		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(RingBuffer<PiAoaHLiNJrbgVmbRfzTAJWkhYXRA.HiuAvUHPgkmSANBATMROifVCBjUxA> param_000aa7b7); // 0x000000018CDB67BC-0x000000018CDB68F4
+		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(Vector3 param_000aa7b8, float param_000aa7b9); // 0x000000018CDB6724-0x000000018CDB67BC
+		private int LuhCwgNusYgFEEHMNmFrQIaUAuBfA(int param_000aa7ba); // 0x0000000187256CC0-0x0000000187256CD0
+		private void PMVNoFmLFIjFcalsPazCvdVVAmDr(byte[] param_000aa7bb, float[] param_000aa7bc); // 0x000000018CDB47BC-0x000000018CDB4874
+		private void CqWKgKBkckVeSqNwzzwHwdPbxpcP(byte[] param_000aa7bd, float[] param_000aa7be); // 0x000000018CDB3D8C-0x000000018CDB3E44
+		private float XtLNxyTZvnrSNbBhUKpqrWOfcDjN(); // 0x0000000187239610-0x0000000187239620
+		private void IYBwhwBHWoFBcJeMGGxWueWwCvuSA(NativeBuffer param_000aa7bf, psxalbFqqRAvexHgaNTDxDrhdRTx.TouchData[] param_000aa7c0); // 0x000000018CDB43EC-0x000000018CDB45E4
+		private int KWcCWWDNqxHCAgcqvaevdTpBbfWsb(int param_000aa7c1, bool param_000aa7c2, int param_000aa7c3); // 0x000000018CDB4664-0x000000018CDB4760
+		private void izyOsNUroIhKZBWsdUMAlJMzboUz(); // 0x0000000187256DA0-0x0000000187256DB0
+		private void saHHzscIFdoJAUqrVQMaGZwQZhAn(); // 0x0000000187256DA0-0x0000000187256DB0
+		private void KOCxANsCETcsclwQohzJULnYfsMv(); // 0x0000000187256CB0-0x0000000187256CC0
+		private void PmzUQqLxlqEZUlJGBXbjJRQbiyw(); // 0x0000000187256CD0-0x0000000187256CE0
+		~DualSenseDriver(); // 0x000000018CDB3F74-0x000000018CDB3FF4
+		protected override void Dispose(bool disposing); // 0x000000018CDB3EA4-0x000000018CDB3F08
+		public static bool Matches(int vid, int pid); // 0x0000000185B73BE0-0x0000000185B73C20
+		private static uint ifQVtzKeJXDpETkFUmBePRSjcilY(NativeBuffer param_000aa7c7, int param_000aa7c8); // 0x000000018CDB6618-0x000000018CDB66D8
+		private static CEDiiLYnylVhKqzRVmTmEUraLGnb FNSTBXHdgxxSvtGiuOkauhskNPVQ(DualSenseOtherLightBrightness param_000aa7c9); // 0x000000018CDB3F08-0x000000018CDB3F74
+		private static DualSenseOtherLightBrightness AIYjpMYDriUlmmfcRgEdtyHpGITv(CEDiiLYnylVhKqzRVmTmEUraLGnb param_000aa7ca); // 0x000000018CDB3CF0-0x000000018CDB3D5C
+		private static pWrWdNeHBdvnuLueHgImyhgSLeDG tOYzCQmFNnGLoxkWcrbNuvXTCiOd(DualSenseTriggerType param_000aa7cb, byte param_000aa7cc); // 0x000000018CDB6FF0-0x000000018CDB702C
+		private static DualSenseTriggerEffectState wNXlGEmGFZtHTuGbIGXOIueiOmND(DualSenseTriggerType param_000aa7cd, byte param_000aa7ce, byte param_000aa7cf); // 0x000000018CDB7710-0x000000018CDB7810
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class DualShock4Driver : HIDDeviceDriver, IDisposable, IDriver_DualShock4 // TypeDefIndex: 54017
+	internal class DualShock4Driver : HIDDeviceDriver, IDisposable, IDriver_DualShock4 // TypeDefIndex: 79261
 	{
 		// Fields
 		private readonly IHIDDevice gFLkmEnVjMQSOwejMhMlKHEESruD; // 0x58
@@ -10200,47 +10186,47 @@ namespace Rewired.HID.Drivers
 		private int[] jxgaQivcSkkQAFauzgYwflHgescD; // 0x158
 	
 		// Properties
-		private bool isVibrating { get; } // 0x000000018ABC1FB8-0x000000018ABC2020 
-		public float BatteryLevel { get; } // 0x0000000184DA8D60-0x0000000184DA8D70 
-		public bool BatteryCharging { get; } // 0x000000018ABC5468-0x000000018ABC5474 
-		public float LeftMotor { get; set; } // 0x000000018ABC1E38-0x000000018ABC1E70 0x000000018ABC2720-0x000000018ABC2754
-		public float RightMotor { get; set; } // 0x000000018ABC1F30-0x000000018ABC1F68 0x000000018ABC28C8-0x000000018ABC28FC
-		public float LightColorR { get; set; } // 0x000000018ABC1EF0-0x000000018ABC1F30 0x000000018ABC27BC-0x000000018ABC27F0
-		public float LightColorG { get; set; } // 0x000000018ABC1EB0-0x000000018ABC1EF0 0x000000018ABC2788-0x000000018ABC27BC
-		public float LightColorB { get; set; } // 0x000000018ABC1E70-0x000000018ABC1EB0 0x000000018ABC2754-0x000000018ABC2788
-		public float LightFlashOnDuration { get; set; } // 0x0000000184DA8D80-0x0000000184DA8D90 0x000000018ABC5B78-0x000000018ABC5BE4
-		public float LightFlashOffDuration { get; set; } // 0x0000000184DA8D70-0x0000000184DA8D80 0x000000018ABC5B0C-0x000000018ABC5B78
-		public Vector3 AccelerometerValue { get; } // 0x000000018ABC1B30-0x000000018ABC1B88 
-		public Vector3 AccelerometerValueRaw { get; } // 0x000000018ABC1AAC-0x000000018ABC1B30 
-		public Vector3 GyroscopeValue { get; } // 0x000000018ABC5474-0x000000018ABC54E0 
-		public Vector3 GyroscopeValueRaw { get; } // 0x000000018ABC1B94-0x000000018ABC1C80 
-		public Vector3 LastGyroscopeValue { get; } // 0x000000018ABC54E0-0x000000018ABC55A8 
-		public Vector3 LastGyroscopeValueRaw { get; } // 0x000000018ABC1CEC-0x000000018ABC1D70 
-		public Quaternion Orientation { get; } // 0x0000000184DA8D90-0x0000000184DA8DA0 
-		public int MaxTouches { get; } // 0x0000000182BBE540-0x0000000182BBE550 
-		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000184DA8C40-0x0000000184DA8C50 
-		ushort IHIDControllerExtension.productId { get; } // 0x0000000184DA8C10-0x0000000184DA8C20 
-		string IHIDControllerExtension.productName { get; } // 0x0000000184D86230-0x0000000184D86240 
-		string IHIDControllerExtension.manufacturer { get; } // 0x0000000184D862B0-0x0000000184D862C0 
-		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000184DA8C20-0x0000000184DA8C30 
-		ushort IHIDControllerExtension.usage { get; } // 0x0000000184DA8C30-0x0000000184DA8C40 
+		private bool isVibrating { get; } // 0x000000018CDB65A0-0x000000018CDB6618 
+		public float BatteryLevel { get; } // 0x0000000187256E30-0x0000000187256E40 
+		public bool BatteryCharging { get; } // 0x000000018CDB9AC8-0x000000018CDB9AD4 
+		public float LeftMotor { get; set; } // 0x000000018CDB6420-0x000000018CDB6458 0x000000018CDB6D24-0x000000018CDB6D58
+		public float RightMotor { get; set; } // 0x000000018CDB6518-0x000000018CDB6550 0x000000018CDB6EE0-0x000000018CDB6F14
+		public float LightColorR { get; set; } // 0x000000018CDB64D8-0x000000018CDB6518 0x000000018CDB6DC0-0x000000018CDB6DF4
+		public float LightColorG { get; set; } // 0x000000018CDB6498-0x000000018CDB64D8 0x000000018CDB6D8C-0x000000018CDB6DC0
+		public float LightColorB { get; set; } // 0x000000018CDB6458-0x000000018CDB6498 0x000000018CDB6D58-0x000000018CDB6D8C
+		public float LightFlashOnDuration { get; set; } // 0x0000000187256E50-0x0000000187256E60 0x000000018CDBA1F0-0x000000018CDBA264
+		public float LightFlashOffDuration { get; set; } // 0x0000000187256E40-0x0000000187256E50 0x000000018CDBA178-0x000000018CDBA1F0
+		public Vector3 AccelerometerValue { get; } // 0x000000018CDB6118-0x000000018CDB6170 
+		public Vector3 AccelerometerValueRaw { get; } // 0x000000018CDB6094-0x000000018CDB6118 
+		public Vector3 GyroscopeValue { get; } // 0x000000018CDB9AD4-0x000000018CDB9B40 
+		public Vector3 GyroscopeValueRaw { get; } // 0x000000018CDB617C-0x000000018CDB6268 
+		public Vector3 LastGyroscopeValue { get; } // 0x000000018CDB9B40-0x000000018CDB9C08 
+		public Vector3 LastGyroscopeValueRaw { get; } // 0x000000018CDB62D4-0x000000018CDB6358 
+		public Quaternion Orientation { get; } // 0x0000000187256E60-0x0000000187256E70 
+		public int MaxTouches { get; } // 0x00000001845AFFB0-0x00000001845AFFC0 
+		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000187256D10-0x0000000187256D20 
+		ushort IHIDControllerExtension.productId { get; } // 0x0000000187256CE0-0x0000000187256CF0 
+		string IHIDControllerExtension.productName { get; } // 0x0000000187232F80-0x0000000187232F90 
+		string IHIDControllerExtension.manufacturer { get; } // 0x0000000187232FC0-0x0000000187232FD0 
+		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000187256CF0-0x0000000187256D00 
+		ushort IHIDControllerExtension.usage { get; } // 0x0000000187256D00-0x0000000187256D10 
 	
 		// Nested types
-		private enum BJjxSujbJcqSpnXkhhjndNotpnWD // TypeDefIndex: 54014
+		private enum BJjxSujbJcqSpnXkhhjndNotpnWD // TypeDefIndex: 79258
 		{
 			None = 0,
 			XZ = 1,
 			Y = 2
 		}
 	
-		private static class DJDfyVMZquNeGXcVFPRfPqOGBEHf // TypeDefIndex: 54015
+		private static class DJDfyVMZquNeGXcVFPRfPqOGBEHf // TypeDefIndex: 79259
 		{
 			// Methods
-			public static unsafe uint rvUBHGpeaJFkQktbEaUiuwhZrUrN(byte* param_00073ec7, int param_00073ec8, uint param_00073ec9); // 0x000000018ABCD920-0x000000018ABCD978
-			private static unsafe uint oTwTKtmidZJYqlcpaXeNESDzIhYV(uint param_00073eca, byte* param_00073ecb, int param_00073ecc, uint param_00073ecd); // 0x000000018ABCD8CC-0x000000018ABCD920
+			public static unsafe uint rvUBHGpeaJFkQktbEaUiuwhZrUrN(byte* param_000aa82e, int param_000aa82f, uint param_000aa830); // 0x000000018CDC2248-0x000000018CDC22A8
+			private static unsafe uint oTwTKtmidZJYqlcpaXeNESDzIhYV(uint param_000aa831, byte* param_000aa832, int param_000aa833, uint param_000aa834); // 0x000000018CDC21F4-0x000000018CDC2248
 		}
 	
-		private enum rbgAffEVwbmKKMzOOEOZbWmOSjJH // TypeDefIndex: 54016
+		private enum rbgAffEVwbmKKMzOOEOZbWmOSjJH // TypeDefIndex: 79260
 		{
 			Discharging = 0,
 			Charging = 1,
@@ -10249,60 +10235,60 @@ namespace Rewired.HID.Drivers
 		}
 	
 		// Constructors
-		public DualShock4Driver(InitArgs param_00073e9d); // 0x000000018ABC42D4-0x000000018ABC5360
+		public DualShock4Driver(InitArgs param_000aa804); // 0x000000018CDB892C-0x000000018CDB99C0
 	
 		// Methods
-		public void ResetOrientation(); // 0x000000018ABC4284-0x000000018ABC42AC
-		public int GetTouchCount(); // 0x000000018ABBFA54-0x000000018ABBFAC4
-		public bool IsTouchingAtIndex(int index); // 0x000000018ABC0030-0x000000018ABC007C
-		public bool IsTouchingAtTouchId(int touchId); // 0x000000018ABC007C-0x000000018ABC00B0
-		public int GetTouchIdAtIndex(int index); // 0x000000018ABBFAC4-0x000000018ABBFB10
-		public bool GetTouchPositionByIndex(int index, out Vector2 position); // 0x000000018ABBFC94-0x000000018ABBFD28
-		public bool GetTouchPositionByTouchId(int touchId, out Vector2 position); // 0x000000018ABBFD28-0x000000018ABBFDF4
-		public bool GetTouchPositionAbsoluteByIndex(int index, out int positionX, out int positionY); // 0x000000018ABBFB10-0x000000018ABBFBB8
-		public bool GetTouchPositionAbsoluteByTouchId(int touchId, out int positionX, out int positionY); // 0x000000018ABBFBB8-0x000000018ABBFC94
-		public void StopLightFlash(); // 0x0000000184DA8D40-0x0000000184DA8D60
-		public void StopVibration(); // 0x000000018ABC0778-0x000000018ABC07E0
-		public override void Update(UpdateLoopType updateLoop); // 0x000000018ABC42AC-0x000000018ABC42D4
-		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018ABC3FE8-0x000000018ABC4284
-		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018ABC3B38-0x000000018ABC3B98
-		private void xogNzFQFRWULJIgOmcBxBKtxFiqoA(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073ea2); // 0x000000018ABC62B0-0x000000018ABC62D8
-		private bool LSOKeSyVmCGMgCPbzpLZYxBbzNaC(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073ea3); // 0x000000018ABC3EE4-0x000000018ABC3F30
-		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(); // 0x000000018ABC5BE4-0x000000018ABC60AC
-		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073ea4); // 0x000000018ABC5360-0x000000018ABC5468
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_00073ea5, double param_00073ea6); // 0x000000018ABC62D8-0x000000018ABC65F8
-		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_00073ea7, NativeBuffer param_00073ea8, double param_00073ea9); // 0x000000018ABC07E0-0x000000018ABC0850
-		private void wtpahohJGFbRNFDwJuSYdYemDMiYB(); // 0x000000018ABC624C-0x000000018ABC62B0
-		private void pOsIRlVLbtdiHmFlfVyGdygxNYZr(NativeBuffer param_00073eaa); // 0x000000018ABC56E0-0x000000018ABC5768
-		private void vHfgconsGMfWYdkHICzBGcwEErcqc(); // 0x000000018ABC60AC-0x000000018ABC624C
-		private static bool AiyWxOBgPpWpMNsHslxJpmXFryPr(ref Vector3 param_00073eab); // 0x000000018ABBF7C0-0x000000018ABBF7F0
-		private void sOXxkBcDlswbSzIcxCkMFuyUWUtNA(Vector3 param_00073eac, Vector3 param_00073ead); // 0x000000018ABC5768-0x000000018ABC5B0C
-		private Quaternion wKGCUNkgwbgehoWTuuGDEpsfehihA(Vector3 param_00073eae, float param_00073eaf = 0f /* Metadata: 0x023341D0 */); // 0x000000018ABC3018-0x000000018ABC30F8
-		private Quaternion xIzhTduUCYcMGVhTgDCMWrRtKdrE(Vector3 param_00073eb0, float param_00073eb1 = 0f /* Metadata: 0x023341D4 */); // 0x000000018ABC325C-0x000000018ABC33CC
-		private bool RAkhYzgaViWNCVLpNQmWUEnUTAKmA(Vector3 param_00073eb2, out BJjxSujbJcqSpnXkhhjndNotpnWD param_00073eb3); // 0x000000018ABC0618-0x000000018ABC06B4
-		private bool dnrVvOWNyGgZFCDiyuqhYhlZFwYi(Vector3 param_00073eb4); // 0x000000018ABC1A48-0x000000018ABC1AAC
-		private bool KvVxuJqPQdMoUoEmpdfFEDLylXSeb(Vector3 param_00073eb5); // 0x000000018ABC01A8-0x000000018ABC0204
-		private Vector3 tIscWxDuheEuxNhWePMsXKCTFjHCA(float[] param_00073eb6); // 0x000000018ABC2960-0x000000018ABC29D8
-		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(RingBuffer<PiAoaHLiNJrbgVmbRfzTAJWkhYXRA.HiuAvUHPgkmSANBATMROifVCBjUxA> param_00073eb7); // 0x000000018ABC55A8-0x000000018ABC56E0
-		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(Vector3 param_00073eb8, float param_00073eb9); // 0x000000018ABC212C-0x000000018ABC21C4
-		private int LuhCwgNusYgFEEHMNmFrQIaUAuBfA(int param_00073eba); // 0x0000000184DA8BF0-0x0000000184DA8C00
-		private void PMVNoFmLFIjFcalsPazCvdVVAmDr(byte[] param_00073ebb, float[] param_00073ebc); // 0x000000018ABC3F30-0x000000018ABC3FE8
-		private void CqWKgKBkckVeSqNwzzwHwdPbxpcP(byte[] param_00073ebd, float[] param_00073ebe); // 0x000000018ABC3A80-0x000000018ABC3B38
-		private float XtLNxyTZvnrSNbBhUKpqrWOfcDjN(); // 0x0000000184D90AD0-0x0000000184D90AE0
-		private void IYBwhwBHWoFBcJeMGGxWueWwCvuSA(NativeBuffer param_00073ebf, psxalbFqqRAvexHgaNTDxDrhdRTx.TouchData[] param_00073ec0); // 0x000000018ABC3BFC-0x000000018ABC3DEC
-		private int KWcCWWDNqxHCAgcqvaevdTpBbfWsb(int param_00073ec1, bool param_00073ec2, int param_00073ec3); // 0x000000018ABC3DEC-0x000000018ABC3EE4
-		private void izyOsNUroIhKZBWsdUMAlJMzboUz(); // 0x0000000184DA8DA0-0x0000000184DA8DB0
-		private void saHHzscIFdoJAUqrVQMaGZwQZhAn(); // 0x0000000184DA8DB0-0x0000000184DA8DC0
-		private void KOCxANsCETcsclwQohzJULnYfsMv(); // 0x0000000184DA8D30-0x0000000184DA8D40
-		private void PmzUQqLxlqEZUlJGBXbjJRQbiyw(); // 0x0000000184D90B30-0x0000000184D90B40
-		~DualShock4Driver(); // 0x000000018ABBF9D8-0x000000018ABBFA54
-		protected override void Dispose(bool disposing); // 0x000000018ABC3B98-0x000000018ABC3BFC
-		public static bool Matches(int vid, int pid); // 0x0000000183A450F0-0x0000000183A451F0
+		public void ResetOrientation(); // 0x000000018CDB88DC-0x000000018CDB8904
+		public int GetTouchCount(); // 0x000000018CDB3FF4-0x000000018CDB4064
+		public bool IsTouchingAtIndex(int index); // 0x000000018CDB45E4-0x000000018CDB4630
+		public bool IsTouchingAtTouchId(int touchId); // 0x000000018CDB4630-0x000000018CDB4664
+		public int GetTouchIdAtIndex(int index); // 0x000000018CDB4064-0x000000018CDB40B0
+		public bool GetTouchPositionByIndex(int index, out Vector2 position); // 0x000000018CDB4240-0x000000018CDB42D4
+		public bool GetTouchPositionByTouchId(int touchId, out Vector2 position); // 0x000000018CDB42D4-0x000000018CDB43A0
+		public bool GetTouchPositionAbsoluteByIndex(int index, out int positionX, out int positionY); // 0x000000018CDB40B0-0x000000018CDB415C
+		public bool GetTouchPositionAbsoluteByTouchId(int touchId, out int positionX, out int positionY); // 0x000000018CDB415C-0x000000018CDB4240
+		public void StopLightFlash(); // 0x0000000187256E10-0x0000000187256E30
+		public void StopVibration(); // 0x000000018CDB4D30-0x000000018CDB4DB8
+		public override void Update(UpdateLoopType updateLoop); // 0x000000018CDB8904-0x000000018CDB892C
+		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018CDB8620-0x000000018CDB88DC
+		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018CDB8164-0x000000018CDB81C4
+		private void xogNzFQFRWULJIgOmcBxBKtxFiqoA(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa809); // 0x000000018CDBA934-0x000000018CDBA95C
+		private bool LSOKeSyVmCGMgCPbzpLZYxBbzNaC(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa80a); // 0x000000018CDB851C-0x000000018CDB8568
+		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(); // 0x000000018CDBA264-0x000000018CDBA730
+		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa80b); // 0x000000018CDB99C0-0x000000018CDB9AC8
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_000aa80c, double param_000aa80d); // 0x000000018CDBA95C-0x000000018CDBAC78
+		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_000aa80e, NativeBuffer param_000aa80f, double param_000aa810); // 0x000000018CDB4DB8-0x000000018CDB4E34
+		private void wtpahohJGFbRNFDwJuSYdYemDMiYB(); // 0x000000018CDBA8D0-0x000000018CDBA934
+		private void pOsIRlVLbtdiHmFlfVyGdygxNYZr(NativeBuffer param_000aa811); // 0x000000018CDB9D40-0x000000018CDB9DC8
+		private void vHfgconsGMfWYdkHICzBGcwEErcqc(); // 0x000000018CDBA730-0x000000018CDBA8D0
+		private static bool AiyWxOBgPpWpMNsHslxJpmXFryPr(ref Vector3 param_000aa812); // 0x000000018CDB3D5C-0x000000018CDB3D8C
+		private void sOXxkBcDlswbSzIcxCkMFuyUWUtNA(Vector3 param_000aa813, Vector3 param_000aa814); // 0x000000018CDB9DC8-0x000000018CDBA178
+		private Quaternion wKGCUNkgwbgehoWTuuGDEpsfehihA(Vector3 param_000aa815, float param_000aa816 = 0f /* Metadata: 0x0262C614 */); // 0x000000018CDB7630-0x000000018CDB7710
+		private Quaternion xIzhTduUCYcMGVhTgDCMWrRtKdrE(Vector3 param_000aa817, float param_000aa818 = 0f /* Metadata: 0x0262C618 */); // 0x000000018CDB7874-0x000000018CDB79E4
+		private bool RAkhYzgaViWNCVLpNQmWUEnUTAKmA(Vector3 param_000aa819, out BJjxSujbJcqSpnXkhhjndNotpnWD param_000aa81a); // 0x000000018CDB4BD0-0x000000018CDB4C6C
+		private bool dnrVvOWNyGgZFCDiyuqhYhlZFwYi(Vector3 param_000aa81b); // 0x000000018CDB6030-0x000000018CDB6094
+		private bool KvVxuJqPQdMoUoEmpdfFEDLylXSeb(Vector3 param_000aa81c); // 0x000000018CDB4760-0x000000018CDB47BC
+		private Vector3 tIscWxDuheEuxNhWePMsXKCTFjHCA(float[] param_000aa81d); // 0x000000018CDB6F78-0x000000018CDB6FF0
+		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(RingBuffer<PiAoaHLiNJrbgVmbRfzTAJWkhYXRA.HiuAvUHPgkmSANBATMROifVCBjUxA> param_000aa81e); // 0x000000018CDB9C08-0x000000018CDB9D40
+		private Vector3 nsyUsUUpzkmkhcqiFSFlIzeTrkBS(Vector3 param_000aa81f, float param_000aa820); // 0x000000018CDB6724-0x000000018CDB67BC
+		private int LuhCwgNusYgFEEHMNmFrQIaUAuBfA(int param_000aa821); // 0x0000000187256CC0-0x0000000187256CD0
+		private void PMVNoFmLFIjFcalsPazCvdVVAmDr(byte[] param_000aa822, float[] param_000aa823); // 0x000000018CDB8568-0x000000018CDB8620
+		private void CqWKgKBkckVeSqNwzzwHwdPbxpcP(byte[] param_000aa824, float[] param_000aa825); // 0x000000018CDB80AC-0x000000018CDB8164
+		private float XtLNxyTZvnrSNbBhUKpqrWOfcDjN(); // 0x000000018723EA60-0x000000018723EA70
+		private void IYBwhwBHWoFBcJeMGGxWueWwCvuSA(NativeBuffer param_000aa826, psxalbFqqRAvexHgaNTDxDrhdRTx.TouchData[] param_000aa827); // 0x000000018CDB8228-0x000000018CDB8420
+		private int KWcCWWDNqxHCAgcqvaevdTpBbfWsb(int param_000aa828, bool param_000aa829, int param_000aa82a); // 0x000000018CDB8420-0x000000018CDB851C
+		private void izyOsNUroIhKZBWsdUMAlJMzboUz(); // 0x0000000187256E70-0x0000000187256E80
+		private void saHHzscIFdoJAUqrVQMaGZwQZhAn(); // 0x0000000187256E80-0x0000000187256E90
+		private void KOCxANsCETcsclwQohzJULnYfsMv(); // 0x0000000187256E00-0x0000000187256E10
+		private void PmzUQqLxlqEZUlJGBXbjJRQbiyw(); // 0x000000018723EAB0-0x000000018723EAC0
+		~DualShock4Driver(); // 0x000000018CDB3F74-0x000000018CDB3FF4
+		protected override void Dispose(bool disposing); // 0x000000018CDB81C4-0x000000018CDB8228
+		public static bool Matches(int vid, int pid); // 0x0000000185B73D90-0x0000000185B73EA0
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal abstract class HIDDeviceDriver : IDisposable, IControllerDriver // TypeDefIndex: 54022
+	internal abstract class HIDDeviceDriver : IDisposable, IControllerDriver // TypeDefIndex: 79266
 	{
 		// Fields
 		public MkXjQPavsbpITCEdETTHuRYirZF[] axes; // 0x10
@@ -10316,19 +10302,19 @@ namespace Rewired.HID.Drivers
 		private bool eLGaZWNmIskxPvBERxVfbRtgiQJG; // 0x50
 	
 		// Properties
-		public int AxisCount { get; } // 0x0000000183141B90-0x0000000183141BB0 
-		public int ButtonCount { get; } // 0x0000000183BA3DE0-0x0000000183BA3E00 
-		public int HatCount { get; } // 0x000000018AA74444-0x000000018AA74458 
-		public int AccelerometerCount { get; } // 0x000000018A78175C-0x000000018A781770 
-		public int GyroscopeCount { get; } // 0x000000018AA50CC0-0x000000018AA50CD4 
-		public int TouchpadCount { get; } // 0x000000018ABCDC20-0x000000018ABCDC34 
-		public int LightCount { get; } // 0x000000018AA7AFC8-0x000000018AA7AFDC 
-		public int VibrationMotorCount { get; } // 0x000000018AA75B34-0x000000018AA75B48 
-		protected bool disposed { get; } // 0x0000000184D86800-0x0000000184D86810 
+		public int AxisCount { get; } // 0x000000018564C6A0-0x000000018564C6C0 
+		public int ButtonCount { get; } // 0x0000000185384260-0x0000000185384280 
+		public int HatCount { get; } // 0x000000018CC65BE4-0x000000018CC65BF8 
+		public int AccelerometerCount { get; } // 0x000000018C93E870-0x000000018C93E884 
+		public int GyroscopeCount { get; } // 0x000000018CC420C8-0x000000018CC420DC 
+		public int TouchpadCount { get; } // 0x000000018CDC2554-0x000000018CDC2568 
+		public int LightCount { get; } // 0x000000018CC6C8F4-0x000000018CC6C908 
+		public int VibrationMotorCount { get; } // 0x000000018CC673EC-0x000000018CC67400 
+		protected bool disposed { get; } // 0x000000018225DFF0-0x000000018225E000 
 	
 		// Nested types
 		[CustomObfuscation(rename = false)]
-		public enum DriverType // TypeDefIndex: 54018
+		public enum DriverType // TypeDefIndex: 79262
 		{
 			None = 0,
 			DualShock4 = 1,
@@ -10341,7 +10327,7 @@ namespace Rewired.HID.Drivers
 	
 		[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 		[CustomObfuscation(rename = false)]
-		internal struct HIDProperties // TypeDefIndex: 54019
+		internal struct HIDProperties // TypeDefIndex: 79263
 		{
 			// Fields
 			public ushort vendorId; // 0x00
@@ -10355,12 +10341,12 @@ namespace Rewired.HID.Drivers
 			public int maxFeatureReportLength; // 0x24
 	
 			// Constructors
-			public HIDProperties(ushort param_00073ed8, ushort param_00073ed9, string param_00073eda, string param_00073edb, ushort param_00073edc, ushort param_00073edd, int param_00073ede, int param_00073edf, int param_00073ee0); // 0x000000018ABCDC34-0x000000018ABCDC94
+			public HIDProperties(ushort param_000aa83f, ushort param_000aa840, string param_000aa841, string param_000aa842, ushort param_000aa843, ushort param_000aa844, int param_000aa845, int param_000aa846, int param_000aa847); // 0x000000018CDC2568-0x000000018CDC25C8
 		}
 	
 		[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 		[CustomObfuscation(rename = false)]
-		internal interface IHIDDevice // TypeDefIndex: 54020
+		internal interface IHIDDevice // TypeDefIndex: 79264
 		{
 			// Properties
 			HIDProperties properties { get; }
@@ -10374,7 +10360,7 @@ namespace Rewired.HID.Drivers
 	
 		[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 		[CustomObfuscation(rename = false)]
-		internal class InitArgs // TypeDefIndex: 54021
+		internal class InitArgs // TypeDefIndex: 79265
 		{
 			// Fields
 			public readonly UpdateLoopSetting updateLoopSetting; // 0x10
@@ -10386,26 +10372,26 @@ namespace Rewired.HID.Drivers
 			public readonly IHIDDevice hidDevice; // 0x28
 	
 			// Constructors
-			public InitArgs(UpdateLoopSetting param_00073eec, sHQfHnKWSyUglbJevPHjzyHZgqdoA param_00073eed, int param_00073eee, int param_00073eef, int param_00073ef0, int param_00073ef1, IHIDDevice param_00073ef2); // 0x000000018ABCDDD8-0x000000018ABCDE0C
+			public InitArgs(UpdateLoopSetting param_000aa853, sHQfHnKWSyUglbJevPHjzyHZgqdoA param_000aa854, int param_000aa855, int param_000aa856, int param_000aa857, int param_000aa858, IHIDDevice param_000aa859); // 0x000000018CDC270C-0x000000018CDC2740
 		}
 	
 		// Constructors
-		public HIDDeviceDriver(); // 0x00000001841E1670-0x00000001841E1680
+		public HIDDeviceDriver(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
 		public abstract void Update(UpdateLoopType updateLoop);
 		public abstract bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp);
 		public abstract Rewired.Controller.Extension CreateControllerExtension();
-		public static HIDDeviceDriver GetDriver(DriverType driverId, InitArgs hidDriverInitArgs); // 0x000000018ABCDA4C-0x000000018ABCDC20
-		public static DriverType FindDriverId(int vendorId, int productId, IList<EnhancedDeviceSupportDeviceType> exclusions); // 0x0000000183A44C90-0x0000000183A44D30
-		public void Dispose(); // 0x000000018ABCD978-0x000000018ABCD9C8
-		~HIDDeviceDriver(); // 0x000000018ABCD9D4-0x000000018ABCDA4C
-		protected virtual void Dispose(bool disposing); // 0x000000018ABCD9C8-0x000000018ABCD9D4
+		public static HIDDeviceDriver GetDriver(DriverType driverId, InitArgs hidDriverInitArgs); // 0x000000018CDC2380-0x000000018CDC2554
+		public static DriverType FindDriverId(int vendorId, int productId, IList<EnhancedDeviceSupportDeviceType> exclusions); // 0x0000000185B73AF0-0x0000000185B73BA0
+		public void Dispose(); // 0x000000018CDC22A8-0x000000018CDC22F8
+		~HIDDeviceDriver(); // 0x000000018CDC2304-0x000000018CDC2380
+		protected virtual void Dispose(bool disposing); // 0x000000018CDC22F8-0x000000018CDC2304
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal abstract class NintendoSwitchGamepadDriver : HIDDeviceDriver, IDisposable, IDriver_NintendoSwitchController // TypeDefIndex: 54028
+	internal abstract class NintendoSwitchGamepadDriver : HIDDeviceDriver, IDisposable, IDriver_NintendoSwitchController // TypeDefIndex: 79272
 	{
 		// Fields
 		protected readonly wcLGjjlXOWCsqrhLDGtKnWBSVcAL _controllerType; // 0x58
@@ -10432,23 +10418,23 @@ namespace Rewired.HID.Drivers
 		private static readonly byte[] ZCnVgaecDladAEpezVypWQNqWRCK; // 0x00
 	
 		// Properties
-		public int vibrationMotorCount { get; } // 0x0000000184D88110-0x0000000184D88120 
-		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000184DA8EA0-0x0000000184DA8EB0 
-		ushort IHIDControllerExtension.productId { get; } // 0x0000000184DA8E70-0x0000000184DA8E80 
-		string IHIDControllerExtension.productName { get; } // 0x0000000184D862A0-0x0000000184D862B0 
-		string IHIDControllerExtension.manufacturer { get; } // 0x0000000184D86260-0x0000000184D86270 
-		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000184DA8E80-0x0000000184DA8E90 
-		ushort IHIDControllerExtension.usage { get; } // 0x0000000184DA8E90-0x0000000184DA8EA0 
+		public int vibrationMotorCount { get; } // 0x0000000187233670-0x0000000187233680 
+		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000187256F70-0x0000000187256F80 
+		ushort IHIDControllerExtension.productId { get; } // 0x0000000187256F40-0x0000000187256F50 
+		string IHIDControllerExtension.productName { get; } // 0x00000001829CD170-0x00000001829CD180 
+		string IHIDControllerExtension.manufacturer { get; } // 0x00000001828D49D0-0x00000001828D49E0 
+		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000187256F50-0x0000000187256F60 
+		ushort IHIDControllerExtension.usage { get; } // 0x0000000187256F60-0x0000000187256F70 
 	
 		// Nested types
-		protected enum wcLGjjlXOWCsqrhLDGtKnWBSVcAL // TypeDefIndex: 54023
+		protected enum wcLGjjlXOWCsqrhLDGtKnWBSVcAL // TypeDefIndex: 79267
 		{
 			ProController = 0,
 			JoyConLeft = 1,
 			JoyConRight = 2
 		}
 	
-		protected class WUYtwgxBXJzJOdfCTCFuhglrMbxfA // TypeDefIndex: 54024
+		protected class WUYtwgxBXJzJOdfCTCFuhglrMbxfA // TypeDefIndex: 79268
 		{
 			// Fields
 			private CdOeHzikbRBkBZoJPipyBOeHnirMb oSmYVHrrZztTUAiQcopTNrallcvl; // 0x10
@@ -10457,19 +10443,19 @@ namespace Rewired.HID.Drivers
 			private double sPQpifsdFSURWZLTNyRQiXnBddck; // 0x30
 	
 			// Properties
-			public IgqKcEqmTZuWvfVRBytHBiJRqAZc AQwStVeKIwCRGaZPubvpRItBKTIFb { get; } // 0x0000000184D890C0-0x0000000184D890D0 
+			public IgqKcEqmTZuWvfVRBytHBiJRqAZc AQwStVeKIwCRGaZPubvpRItBKTIFb { get; } // 0x00000001845C28E0-0x00000001845C28F0 
 	
 			// Constructors
-			public WUYtwgxBXJzJOdfCTCFuhglrMbxfA(CdOeHzikbRBkBZoJPipyBOeHnirMb param_00073f40); // 0x000000018ABD2DF8-0x000000018ABD2E1C
+			public WUYtwgxBXJzJOdfCTCFuhglrMbxfA(CdOeHzikbRBkBZoJPipyBOeHnirMb param_000aa8a7); // 0x000000018CDC7824-0x000000018CDC7848
 	
 			// Methods
-			public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(float param_00073f41, float param_00073f42, float param_00073f43, float param_00073f44, float param_00073f45); // 0x000000018ABD2E1C-0x000000018ABD2F68
-			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_00073f46); // 0x000000018ABD2D78-0x000000018ABD2DB8
-			public void RLhCOjJytEwCexIjODqRQczSCOzr(); // 0x000000018ABD2D10-0x000000018ABD2D78
-			public void ZNeBqtGTmPaOOBcWCPGYKvyjvYxhB(); // 0x000000018ABD2DB8-0x000000018ABD2DF8
+			public void mnOZfTJZaPJhBHSiKkLNiAfZLffw(float param_000aa8a8, float param_000aa8a9, float param_000aa8aa, float param_000aa8ab, float param_000aa8ac); // 0x000000018CDC7848-0x000000018CDC7994
+			public void TSexxBoQJJrDUHjAVGegZXOfrqTg(double param_000aa8ad); // 0x000000018CDC77A0-0x000000018CDC77E0
+			public void RLhCOjJytEwCexIjODqRQczSCOzr(); // 0x000000018CDC772C-0x000000018CDC77A0
+			public void ZNeBqtGTmPaOOBcWCPGYKvyjvYxhB(); // 0x000000018CDC77E0-0x000000018CDC7824
 		}
 	
-		protected struct IgqKcEqmTZuWvfVRBytHBiJRqAZc // TypeDefIndex: 54025
+		protected struct IgqKcEqmTZuWvfVRBytHBiJRqAZc // TypeDefIndex: 79269
 		{
 			// Fields
 			public float qnRKuAnbBhrlERNWTQPANqYTGWYN; // 0x00
@@ -10478,14 +10464,14 @@ namespace Rewired.HID.Drivers
 			public float jHwyInqjSJsdWkuMHPfyxSkBeAGe; // 0x0C
 	
 			// Constructors
-			internal IgqKcEqmTZuWvfVRBytHBiJRqAZc(float param_00073f47, float param_00073f48, float param_00073f49, float param_00073f4a); // 0x000000018AA8026C-0x000000018AA802C4
+			internal IgqKcEqmTZuWvfVRBytHBiJRqAZc(float param_000aa8ae, float param_000aa8af, float param_000aa8b0, float param_000aa8b1); // 0x000000018CC71B48-0x000000018CC71BA0
 	
 			// Methods
-			public static IgqKcEqmTZuWvfVRBytHBiJRqAZc XchWqxgmUvhSvDLAYlZyAXmMcTYy(); // 0x000000018AA80028-0x000000018AA80044
-			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABCDC94-0x000000018ABCDDD8
+			public static IgqKcEqmTZuWvfVRBytHBiJRqAZc XchWqxgmUvhSvDLAYlZyAXmMcTYy(); // 0x000000018CC71904-0x000000018CC71920
+			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDC25C8-0x000000018CDC270C
 		}
 	
-		private struct vLrvCEMfbNvdxOZFnFodHwNKJpgW // TypeDefIndex: 54026
+		private struct vLrvCEMfbNvdxOZFnFodHwNKJpgW // TypeDefIndex: 79270
 		{
 			// Fields
 			public byte GEceeAxWbJBtYCHpVqINelGlzHPL; // 0x00
@@ -10493,10 +10479,10 @@ namespace Rewired.HID.Drivers
 			public int waPRlRSkshALtzJtPscwChHvxPvA; // 0x10
 	
 			// Constructors
-			public vLrvCEMfbNvdxOZFnFodHwNKJpgW(byte param_00073f4b, byte[] param_00073f4c, int param_00073f4d); // 0x0000000188EF8150-0x0000000188EF8170
+			public vLrvCEMfbNvdxOZFnFodHwNKJpgW(byte param_000aa8b2, byte[] param_000aa8b3, int param_000aa8b4); // 0x000000018B4373F0-0x000000018B437410
 		}
 	
-		protected class rZsfLMXWUnotxWcVpREIqsNOkmls // TypeDefIndex: 54027
+		protected class rZsfLMXWUnotxWcVpREIqsNOkmls // TypeDefIndex: 79271
 		{
 			// Fields
 			public ushort XQPUUnlyQwdKFhnfBaahYWJhEfFf; // 0x10
@@ -10505,53 +10491,53 @@ namespace Rewired.HID.Drivers
 			public ushort EgdKWhZprbpKAYWwnahUEaPhAUVEA; // 0x16
 	
 			// Constructors
-			public rZsfLMXWUnotxWcVpREIqsNOkmls(); // 0x00000001841E1670-0x00000001841E1680
+			public rZsfLMXWUnotxWcVpREIqsNOkmls(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 			// Methods
-			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018ABD2F68-0x000000018ABD30B0
+			public override string vPQRuijKVWXgODYHqHVwLVeBdxsL(); // 0x000000018CDC7994-0x000000018CDC7ADC
 		}
 	
 		// Constructors
-		protected NintendoSwitchGamepadDriver(InitArgs param_00073f12, wcLGjjlXOWCsqrhLDGtKnWBSVcAL param_00073f13, int param_00073f14, int param_00073f15, int param_00073f16); // 0x000000018ABCF9C0-0x000000018ABCFFF4
-		static NintendoSwitchGamepadDriver(); // 0x000000018ABCF934-0x000000018ABCF9C0
+		protected NintendoSwitchGamepadDriver(InitArgs param_000aa879, wcLGjjlXOWCsqrhLDGtKnWBSVcAL param_000aa87a, int param_000aa87b, int param_000aa87c, int param_000aa87d); // 0x000000018CDC4318-0x000000018CDC494C
+		static NintendoSwitchGamepadDriver(); // 0x000000018CDC428C-0x000000018CDC4318
 	
 		// Methods
-		public void GetVibration(int motorIndex, out float amplitudeLow, out float frequencyLow, out float amplitudeHigh, out float frequencyHigh); // 0x000000018ABCE508-0x000000018ABCE594
-		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh); // 0x000000018ABCF2FC-0x000000018ABCF340
-		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, bool stopOtherMotors); // 0x000000018ABCF3F8-0x000000018ABCF444
-		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, float duration); // 0x000000018ABCF2B0-0x000000018ABCF2FC
-		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, float duration, bool stopOtherMotors); // 0x000000018ABCF340-0x000000018ABCF3F8
-		public void StopVibration(int motorIndex); // 0x000000018ABCF49C-0x000000018ABCF4E0
-		public void StopVibration(); // 0x000000018ABCF444-0x000000018ABCF49C
-		private void zdfqRijxtsPriXbLVHJRFgHKxhTcA(int param_00073f11); // 0x000000018ABD07A4-0x000000018ABD080C
-		protected void Initialize(); // 0x000000018ABCE604-0x000000018ABCEB78
-		public override void Update(UpdateLoopType updateLoop); // 0x000000018ABCF5B0-0x000000018ABCF748
-		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018ABCEF1C-0x000000018ABCF080
+		public void GetVibration(int motorIndex, out float amplitudeLow, out float frequencyLow, out float amplitudeHigh, out float frequencyHigh); // 0x000000018CDC2E40-0x000000018CDC2ECC
+		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh); // 0x000000018CDC3C44-0x000000018CDC3C88
+		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, bool stopOtherMotors); // 0x000000018CDC3D40-0x000000018CDC3D8C
+		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, float duration); // 0x000000018CDC3BF8-0x000000018CDC3C44
+		public void SetVibration(int motorIndex, float amplitudeLow, float frequencyLow, float amplitudeHigh, float frequencyHigh, float duration, bool stopOtherMotors); // 0x000000018CDC3C88-0x000000018CDC3D40
+		public void StopVibration(int motorIndex); // 0x000000018CDC3DF0-0x000000018CDC3E34
+		public void StopVibration(); // 0x000000018CDC3D8C-0x000000018CDC3DF0
+		private void zdfqRijxtsPriXbLVHJRFgHKxhTcA(int param_000aa878); // 0x000000018CDC5158-0x000000018CDC51DC
+		protected void Initialize(); // 0x000000018CDC2F3C-0x000000018CDC34B0
+		public override void Update(UpdateLoopType updateLoop); // 0x000000018CDC3F00-0x000000018CDC40A0
+		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018CDC385C-0x000000018CDC39C8
 		protected abstract void UpdateButtons(NativeBuffer inputReport, double timestamp);
 		protected abstract void UpdateElements(zseGNggMpNmuvgqogMqiEcjsNLTGc[] elements, NativeBuffer inputReport, double timestamp);
-		private bool LHTQmniloxxvLUBvWooEQJBMckxFA(vLrvCEMfbNvdxOZFnFodHwNKJpgW param_00073f20, byte[] param_00073f21); // 0x000000018ABCEBC0-0x000000018ABCEF1C
-		private bool XNEPLczSghGxfiHBBQBFllxUGZYh(NativeBuffer param_00073f22, byte param_00073f23); // 0x000000018ABCF8CC-0x000000018ABCF934
-		private void HChFRtIoVWDFmfMJBcrPBtjGfQNY(NativeBuffer param_00073f24); // 0x000000018ABCE594-0x000000018ABCE604
-		private void SxAdTqOoJagADFgnJZxAjZWQieEe(NativeBuffer param_00073f25, int param_00073f26); // 0x000000018ABCF4E0-0x000000018ABCF5B0
-		private static void SFkRhTrgmrHnhdjpcHOYgefKiVEl(NativeBuffer param_00073f27, int param_00073f28, IgqKcEqmTZuWvfVRBytHBiJRqAZc param_00073f29); // 0x000000018ABCF080-0x000000018ABCF2B0
-		private static byte AxrwIQtLXJBzGGlOgMzxHTBWNNsCb(float param_00073f2a); // 0x000000018ABCDE0C-0x000000018ABCDF7C
-		private bool sVFgBkVJzHonzwPVLYllGkUaBluE(); // 0x000000018ABD0660-0x000000018ABD0744
-		private bool kvaTWgNrBcpLSfPvzeibboaKLEKVA(byte param_00073f2b, byte param_00073f2c, byte param_00073f2d, byte[] param_00073f2e); // 0x000000018ABD04D4-0x000000018ABD0660
-		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073f2f); // 0x000000018ABCFFF4-0x000000018ABD00B4
-		private byte FjQCWVDBCljzgHZKPTpkqfXsFaHhb(); // 0x000000018ABCE2A4-0x000000018ABCE2C4
-		private bool ghsxgEGOPBfwjydpCjOkBJkzcZoMA(); // 0x000000018ABD00B4-0x000000018ABD04D4
-		private static void XDpefEfWNwHpFIMSZGjhsJLMGjEe(byte[] param_00073f30, rZsfLMXWUnotxWcVpREIqsNOkmls param_00073f31, rZsfLMXWUnotxWcVpREIqsNOkmls param_00073f32, bool param_00073f33); // 0x000000018ABCF748-0x000000018ABCF8CC
-		private static void KsbyBJXhKyqNGURubvAmjHeIRRtb(byte[] param_00073f34, rZsfLMXWUnotxWcVpREIqsNOkmls param_00073f35, rZsfLMXWUnotxWcVpREIqsNOkmls param_00073f36); // 0x000000018ABCEB78-0x000000018ABCEBC0
-		protected bool GetCalibratedStickValue(ushort valueX, ushort valueY, rZsfLMXWUnotxWcVpREIqsNOkmls calX, rZsfLMXWUnotxWcVpREIqsNOkmls calY, out ushort calibratedX, out ushort calibratedY); // 0x000000018ABCE2F4-0x000000018ABCE508
-		protected rZsfLMXWUnotxWcVpREIqsNOkmls GetAxisCalibration(int index); // 0x000000018ABCE2C4-0x000000018ABCE2F4
-		private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_00073f3e); // 0x000000018ABD0744-0x000000018ABD07A4
-		~NintendoSwitchGamepadDriver(); // 0x000000018ABBF9D8-0x000000018ABBFA54
-		protected override void Dispose(bool disposing); // 0x000000018ABCDF7C-0x000000018ABCE2A4
+		private bool LHTQmniloxxvLUBvWooEQJBMckxFA(vLrvCEMfbNvdxOZFnFodHwNKJpgW param_000aa887, byte[] param_000aa888); // 0x000000018CDC34F8-0x000000018CDC385C
+		private bool XNEPLczSghGxfiHBBQBFllxUGZYh(NativeBuffer param_000aa889, byte param_000aa88a); // 0x000000018CDC4224-0x000000018CDC428C
+		private void HChFRtIoVWDFmfMJBcrPBtjGfQNY(NativeBuffer param_000aa88b); // 0x000000018CDC2ECC-0x000000018CDC2F3C
+		private void SxAdTqOoJagADFgnJZxAjZWQieEe(NativeBuffer param_000aa88c, int param_000aa88d); // 0x000000018CDC3E34-0x000000018CDC3F00
+		private static void SFkRhTrgmrHnhdjpcHOYgefKiVEl(NativeBuffer param_000aa88e, int param_000aa88f, IgqKcEqmTZuWvfVRBytHBiJRqAZc param_000aa890); // 0x000000018CDC39C8-0x000000018CDC3BF8
+		private static byte AxrwIQtLXJBzGGlOgMzxHTBWNNsCb(float param_000aa891); // 0x000000018CDC2740-0x000000018CDC28B0
+		private bool sVFgBkVJzHonzwPVLYllGkUaBluE(); // 0x000000018CDC5014-0x000000018CDC50F8
+		private bool kvaTWgNrBcpLSfPvzeibboaKLEKVA(byte param_000aa892, byte param_000aa893, byte param_000aa894, byte[] param_000aa895); // 0x000000018CDC4E84-0x000000018CDC5014
+		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa896); // 0x000000018CDC494C-0x000000018CDC4A0C
+		private byte FjQCWVDBCljzgHZKPTpkqfXsFaHhb(); // 0x000000018CDC2BD8-0x000000018CDC2BF8
+		private bool ghsxgEGOPBfwjydpCjOkBJkzcZoMA(); // 0x000000018CDC4A0C-0x000000018CDC4E84
+		private static void XDpefEfWNwHpFIMSZGjhsJLMGjEe(byte[] param_000aa897, rZsfLMXWUnotxWcVpREIqsNOkmls param_000aa898, rZsfLMXWUnotxWcVpREIqsNOkmls param_000aa899, bool param_000aa89a); // 0x000000018CDC40A0-0x000000018CDC4224
+		private static void KsbyBJXhKyqNGURubvAmjHeIRRtb(byte[] param_000aa89b, rZsfLMXWUnotxWcVpREIqsNOkmls param_000aa89c, rZsfLMXWUnotxWcVpREIqsNOkmls param_000aa89d); // 0x000000018CDC34B0-0x000000018CDC34F8
+		protected bool GetCalibratedStickValue(ushort valueX, ushort valueY, rZsfLMXWUnotxWcVpREIqsNOkmls calX, rZsfLMXWUnotxWcVpREIqsNOkmls calY, out ushort calibratedX, out ushort calibratedY); // 0x000000018CDC2C28-0x000000018CDC2E40
+		protected rZsfLMXWUnotxWcVpREIqsNOkmls GetAxisCalibration(int index); // 0x000000018CDC2BF8-0x000000018CDC2C28
+		private void yonePGyMPqkUCoaTVtNEWneSYdiQ(bool param_000aa8a5); // 0x000000018CDC50F8-0x000000018CDC5158
+		~NintendoSwitchGamepadDriver(); // 0x000000018CDB3F74-0x000000018CDB3FF4
+		protected override void Dispose(bool disposing); // 0x000000018CDC28B0-0x000000018CDC2BD8
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal abstract class NintendoSwitchJoyConDriver : NintendoSwitchGamepadDriver, IDriver_NintendoSwitchJoyCon // TypeDefIndex: 54029
+	internal abstract class NintendoSwitchJoyConDriver : NintendoSwitchGamepadDriver, IDriver_NintendoSwitchJoyCon // TypeDefIndex: 79273
 	{
 		// Fields
 		private readonly NativeBuffer rIqxtIVIBEWMoGjIpWvOKpsgCyniA; // 0x118
@@ -10560,83 +10546,83 @@ namespace Rewired.HID.Drivers
 		private readonly byte[] EZeYuaOIJYjqeBMLylNPkWvUjsXjA; // 0x128
 	
 		// Properties
-		protected byte[] buttonAxisReadBuffer { get; } // 0x0000000184D8D910-0x0000000184D8D920 
+		protected byte[] buttonAxisReadBuffer { get; } // 0x000000018723B5D0-0x000000018723B5E0 
 		protected abstract int byteIndexStartSticks { get; }
-		public NintendoSwitchJoyConType joyConType { get; } // 0x0000000184D90A90-0x0000000184D90AA0 
-		public NintendoSwitchJoyConGripStyle joyConGripStyle { get; set; } // 0x0000000184D90A80-0x0000000184D90A90 0x0000000184D90AB0-0x0000000184D90AC0
+		public NintendoSwitchJoyConType joyConType { get; } // 0x000000018723F8C0-0x000000018723F8D0 
+		public NintendoSwitchJoyConGripStyle joyConGripStyle { get; set; } // 0x0000000187240800-0x0000000187240810 0x0000000187240820-0x0000000187240830
 	
 		// Constructors
-		protected NintendoSwitchJoyConDriver(InitArgs param_00073f50, wcLGjjlXOWCsqrhLDGtKnWBSVcAL param_00073f51); // 0x000000018ABD0B38-0x000000018ABD0E2C
+		protected NintendoSwitchJoyConDriver(InitArgs param_000aa8b7, wcLGjjlXOWCsqrhLDGtKnWBSVcAL param_000aa8b8); // 0x000000018CDC54FC-0x000000018CDC57F0
 	
 		// Methods
-		int IAxisCalibrationIndexMap.GetMappedAxisIndex(int elementIndex); // 0x000000018ABD0934-0x000000018ABD094C
-		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018ABD080C-0x000000018ABD086C
-		protected override void UpdateElements(zseGNggMpNmuvgqogMqiEcjsNLTGc[] elements, NativeBuffer inputReport, double timestamp); // 0x000000018ABD094C-0x000000018ABD0B38
+		int IAxisCalibrationIndexMap.GetMappedAxisIndex(int elementIndex); // 0x000000018CDC5308-0x000000018CDC5320
+		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018CDC51DC-0x000000018CDC523C
+		protected override void UpdateElements(zseGNggMpNmuvgqogMqiEcjsNLTGc[] elements, NativeBuffer inputReport, double timestamp); // 0x000000018CDC5320-0x000000018CDC54FC
 		protected abstract void HandleGripStyleStickAxisSwap(ref ushort stickX, ref ushort stickY);
-		~NintendoSwitchJoyConDriver(); // 0x000000018ABD08B8-0x000000018ABD0934
-		protected override void Dispose(bool disposing); // 0x000000018ABD086C-0x000000018ABD08B8
+		~NintendoSwitchJoyConDriver(); // 0x000000018CDC5288-0x000000018CDC5308
+		protected override void Dispose(bool disposing); // 0x000000018CDC523C-0x000000018CDC5288
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal sealed class NintendoSwitchJoyConLeftDriver : NintendoSwitchJoyConDriver // TypeDefIndex: 54030
+	internal sealed class NintendoSwitchJoyConLeftDriver : NintendoSwitchJoyConDriver // TypeDefIndex: 79274
 	{
 		// Properties
-		protected override int byteIndexStartSticks { get; } // 0x0000000184D9EC60-0x0000000184D9EC70 
+		protected override int byteIndexStartSticks { get; } // 0x0000000187239C80-0x0000000187239C90 
 	
 		// Constructors
-		public NintendoSwitchJoyConLeftDriver(InitArgs param_00073f58); // 0x000000018ABD1230-0x000000018ABD1240
+		public NintendoSwitchJoyConLeftDriver(InitArgs param_000aa8bf); // 0x000000018CDC5C00-0x000000018CDC5C10
 	
 		// Methods
-		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018ABD0ED8-0x000000018ABD1230
-		protected override void HandleGripStyleStickAxisSwap(ref ushort stickX, ref ushort stickY); // 0x000000018ABD0EB8-0x000000018ABD0ED8
-		~NintendoSwitchJoyConLeftDriver(); // 0x000000018ABD0E3C-0x000000018ABD0EB8
-		protected override void Dispose(bool disposing); // 0x000000018ABD0E2C-0x000000018ABD0E3C
-		public static bool Matches(int vid, int pid); // 0x0000000183A44D60-0x0000000183A44D70
+		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018CDC58A0-0x000000018CDC5C00
+		protected override void HandleGripStyleStickAxisSwap(ref ushort stickX, ref ushort stickY); // 0x000000018CDC5880-0x000000018CDC58A0
+		~NintendoSwitchJoyConLeftDriver(); // 0x000000018CDC5800-0x000000018CDC5880
+		protected override void Dispose(bool disposing); // 0x000000018CDC57F0-0x000000018CDC5800
+		public static bool Matches(int vid, int pid); // 0x0000000185B73BD0-0x0000000185B73BE0
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal sealed class SwitchJoyConRightDriver : NintendoSwitchJoyConDriver // TypeDefIndex: 54031
+	internal sealed class SwitchJoyConRightDriver : NintendoSwitchJoyConDriver // TypeDefIndex: 79275
 	{
 		// Properties
-		protected override int byteIndexStartSticks { get; } // 0x0000000184DA4FC0-0x0000000184DA4FD0 
+		protected override int byteIndexStartSticks { get; } // 0x0000000187239CC0-0x0000000187239CD0 
 	
 		// Constructors
-		public SwitchJoyConRightDriver(InitArgs param_00073f60); // 0x000000018ABD2D00-0x000000018ABD2D10
+		public SwitchJoyConRightDriver(InitArgs param_000aa8c7); // 0x000000018CDC771C-0x000000018CDC772C
 	
 		// Methods
-		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018ABD2A78-0x000000018ABD2D00
-		protected override void HandleGripStyleStickAxisSwap(ref ushort stickX, ref ushort stickY); // 0x000000018ABD2A5C-0x000000018ABD2A78
-		~SwitchJoyConRightDriver(); // 0x000000018ABD0E3C-0x000000018ABD0EB8
-		protected override void Dispose(bool disposing); // 0x000000018ABD0E2C-0x000000018ABD0E3C
-		public static bool Matches(int vid, int pid); // 0x0000000183A44D50-0x0000000183A44D60
+		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018CDC748C-0x000000018CDC771C
+		protected override void HandleGripStyleStickAxisSwap(ref ushort stickX, ref ushort stickY); // 0x000000018CDC7470-0x000000018CDC748C
+		~SwitchJoyConRightDriver(); // 0x000000018CDC5800-0x000000018CDC5880
+		protected override void Dispose(bool disposing); // 0x000000018CDC57F0-0x000000018CDC5800
+		public static bool Matches(int vid, int pid); // 0x0000000185B73BC0-0x0000000185B73BD0
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal sealed class NintendoSwitchProControllerDriver : NintendoSwitchGamepadDriver, IDriver_NintendoSwitchProController // TypeDefIndex: 54032
+	internal sealed class NintendoSwitchProControllerDriver : NintendoSwitchGamepadDriver, IDriver_NintendoSwitchProController // TypeDefIndex: 79276
 	{
 		// Fields
 		private readonly byte[] EZeYuaOIJYjqeBMLylNPkWvUjsXjA; // 0x118
 		private readonly NativeBuffer rIqxtIVIBEWMoGjIpWvOKpsgCyniA; // 0x120
 	
 		// Constructors
-		public NintendoSwitchProControllerDriver(InitArgs param_00073f68); // 0x000000018ABD1B4C-0x000000018ABD1EDC
+		public NintendoSwitchProControllerDriver(InitArgs param_000aa8cf); // 0x000000018CDC6528-0x000000018CDC68B8
 	
 		// Methods
-		public override void Update(UpdateLoopType updateLoop); // 0x000000018ABD1B44-0x000000018ABD1B4C
-		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018ABD1240-0x000000018ABD12A0
-		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018ABD12EC-0x000000018ABD18A0
-		protected override void UpdateElements(zseGNggMpNmuvgqogMqiEcjsNLTGc[] elements, NativeBuffer inputReport, double timestamp); // 0x000000018ABD18A0-0x000000018ABD1B44
-		~NintendoSwitchProControllerDriver(); // 0x000000018ABD08B8-0x000000018ABD0934
-		protected override void Dispose(bool disposing); // 0x000000018ABD12A0-0x000000018ABD12EC
-		public static bool Matches(int vid, int pid); // 0x0000000183A44D40-0x0000000183A44D50
+		public override void Update(UpdateLoopType updateLoop); // 0x000000018CDC6520-0x000000018CDC6528
+		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018CDC5C10-0x000000018CDC5C70
+		protected override void UpdateButtons(NativeBuffer inputReport, double timestamp); // 0x000000018CDC5CBC-0x000000018CDC6274
+		protected override void UpdateElements(zseGNggMpNmuvgqogMqiEcjsNLTGc[] elements, NativeBuffer inputReport, double timestamp); // 0x000000018CDC6274-0x000000018CDC6520
+		~NintendoSwitchProControllerDriver(); // 0x000000018CDC5288-0x000000018CDC5308
+		protected override void Dispose(bool disposing); // 0x000000018CDC5C70-0x000000018CDC5CBC
+		public static bool Matches(int vid, int pid); // 0x0000000185B73BB0-0x0000000185B73BC0
 	}
 
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class RailDriverDriver : HIDDeviceDriver, IDisposable, IDriver_RailDriver // TypeDefIndex: 54034
+	internal class RailDriverDriver : HIDDeviceDriver, IDisposable, IDriver_RailDriver // TypeDefIndex: 79278
 	{
 		// Fields
 		private readonly NativeBuffer xkaUSPMbKaIaWIOXokAQIEKBViHGA; // 0x58
@@ -10648,38 +10634,38 @@ namespace Rewired.HID.Drivers
 		private readonly SAcTodLryXZPmeZqsKbnQQxsbBmo xbEsAkXaaLqjjqgKWpscjpqoFCyU; // 0xA8
 	
 		// Properties
-		public bool SpeakerEnabled { get; set; } // 0x0000000184D86B40-0x0000000184D86B50 0x000000018ABD26B4-0x000000018ABD26C4
-		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000184DA5C60-0x0000000184DA5C70 
-		ushort IHIDControllerExtension.productId { get; } // 0x0000000184DA8EB0-0x0000000184DA8EC0 
-		string IHIDControllerExtension.productName { get; } // 0x0000000184D861F0-0x0000000184D86200 
-		string IHIDControllerExtension.manufacturer { get; } // 0x0000000184D86220-0x0000000184D86230 
-		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000184DA8EC0-0x0000000184DA8ED0 
-		ushort IHIDControllerExtension.usage { get; } // 0x0000000184DA8ED0-0x0000000184DA8EE0 
+		public bool SpeakerEnabled { get; set; } // 0x000000018226EF80-0x000000018226EF90 0x000000018CDC709C-0x000000018CDC70AC
+		ushort IHIDControllerExtension.vendorId { get; } // 0x0000000187253910-0x0000000187253920 
+		ushort IHIDControllerExtension.productId { get; } // 0x0000000187256F80-0x0000000187256F90 
+		string IHIDControllerExtension.productName { get; } // 0x0000000187232F50-0x0000000187232F60 
+		string IHIDControllerExtension.manufacturer { get; } // 0x0000000182271B70-0x0000000182271B80 
+		ushort IHIDControllerExtension.usagePage { get; } // 0x0000000187256F90-0x0000000187256FA0 
+		ushort IHIDControllerExtension.usage { get; } // 0x0000000187256FA0-0x0000000187256FB0 
 	
 		// Nested types
-		private enum ZGfmepahbYuPqRsanVTTjGOJtIWA // TypeDefIndex: 54033
+		private enum ZGfmepahbYuPqRsanVTTjGOJtIWA // TypeDefIndex: 79277
 		{
 			Speaker = 0,
 			LED = 1
 		}
 	
 		// Constructors
-		public RailDriverDriver(InitArgs param_00073f78); // 0x000000018ABD20D0-0x000000018ABD25F4
+		public RailDriverDriver(InitArgs param_000aa8df); // 0x000000018CDC6AB8-0x000000018CDC6FDC
 	
 		// Methods
-		public void SetLEDDisplay(int digitIndex, byte digitBitValues); // 0x000000018ABD2034-0x000000018ABD2074
-		public void SetLEDDisplay(byte digit1BitValues, byte digit2BitValues, byte digit3BitValues); // 0x000000018ABD2074-0x000000018ABD20D0
-		public override void Update(UpdateLoopType updateLoop); // 0x00000001841E1670-0x00000001841E1680
-		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018ABD1FB0-0x000000018ABD2034
-		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018ABD1EDC-0x000000018ABD1F3C
-		private bool LSOKeSyVmCGMgCPbzpLZYxBbzNaC(ZGfmepahbYuPqRsanVTTjGOJtIWA param_00073f7d, hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073f7e); // 0x000000018ABD1F80-0x000000018ABD1FB0
-		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(ZGfmepahbYuPqRsanVTTjGOJtIWA param_00073f7f); // 0x000000018ABD26C4-0x000000018ABD282C
-		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_00073f80); // 0x000000018ABD25F4-0x000000018ABD26B4
-		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_00073f81, double param_00073f82); // 0x000000018ABD282C-0x000000018ABD2A5C
-		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_00073f83, NativeBuffer param_00073f84, double param_00073f85); // 0x000000018ABC07E0-0x000000018ABC0850
-		~RailDriverDriver(); // 0x000000018ABBF9D8-0x000000018ABBFA54
-		protected override void Dispose(bool disposing); // 0x000000018ABD1F3C-0x000000018ABD1F80
-		public static bool Matches(int vid, int pid); // 0x0000000183A44D30-0x0000000183A44D40
+		public void SetLEDDisplay(int digitIndex, byte digitBitValues); // 0x000000018CDC6A1C-0x000000018CDC6A5C
+		public void SetLEDDisplay(byte digit1BitValues, byte digit2BitValues, byte digit3BitValues); // 0x000000018CDC6A5C-0x000000018CDC6AB8
+		public override void Update(UpdateLoopType updateLoop); // 0x0000000186805BA0-0x0000000186805BB0
+		public override bool ParseInputReport(IntPtr inputReportPtr, int inputReportLength, double timestamp); // 0x000000018CDC698C-0x000000018CDC6A1C
+		public override Rewired.Controller.Extension CreateControllerExtension(); // 0x000000018CDC68B8-0x000000018CDC6918
+		private bool LSOKeSyVmCGMgCPbzpLZYxBbzNaC(ZGfmepahbYuPqRsanVTTjGOJtIWA param_000aa8e4, hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa8e5); // 0x000000018CDC695C-0x000000018CDC698C
+		private void uFUlbKTKNOwrICDqXmKOZKORLYaO(ZGfmepahbYuPqRsanVTTjGOJtIWA param_000aa8e6); // 0x000000018CDC70AC-0x000000018CDC7214
+		private bool cWNDdKjHWcUyzYOsFgZrPjZLiW(hJxPFEDYiOqNMDuutvEivGuMTnYB param_000aa8e7); // 0x000000018CDC6FDC-0x000000018CDC709C
+		private void yfAvlFShiJiZPPnfreeMjhGTujmfA(NativeBuffer param_000aa8e8, double param_000aa8e9); // 0x000000018CDC7214-0x000000018CDC7470
+		private void UpYaxgFpNVZKFuYVuRZBvCBMruRh(zseGNggMpNmuvgqogMqiEcjsNLTGc[] param_000aa8ea, NativeBuffer param_000aa8eb, double param_000aa8ec); // 0x000000018CDB4DB8-0x000000018CDB4E34
+		~RailDriverDriver(); // 0x000000018CDB3F74-0x000000018CDB3FF4
+		protected override void Dispose(bool disposing); // 0x000000018CDC6918-0x000000018CDC695C
+		public static bool Matches(int vid, int pid); // 0x0000000185B73BA0-0x0000000185B73BB0
 	}
 }
 
@@ -10687,18 +10673,18 @@ namespace Rewired.InputManagers
 {
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class Initializer : PlatformInitializer // TypeDefIndex: 53587
+	internal class Initializer : PlatformInitializer // TypeDefIndex: 78831
 	{
 		// Fields
 		private static PlatformInitializer kmqGlvnBOqdlIDoelaOAjDQhsEhbA; // 0x00
 	
 		// Constructors
-		public Initializer(); // 0x00000001841E1670-0x00000001841E1680
+		public Initializer(); // 0x0000000186805BA0-0x0000000186805BB0
 	
 		// Methods
-		public static PlatformInitializer GetPlatformInitializer(); // 0x0000000184D27180-0x0000000184D27200
-		public override object Initialize(IConfigVars_Internal configVars); // 0x000000018381A210-0x000000018381A3C0
-		public override IElementIdentifierTool CreateTool(string inputSourceString); // 0x000000018AB7B0E4-0x000000018AB7B184
+		public static PlatformInitializer GetPlatformInitializer(); // 0x0000000187186C40-0x0000000187186CD0
+		public override object Initialize(IConfigVars_Internal configVars); // 0x0000000185B6EC00-0x0000000185B6EDB0
+		public override IElementIdentifierTool CreateTool(string inputSourceString); // 0x000000018CD6EDEC-0x000000018CD6EE8C
 	}
 }
 
@@ -10706,7 +10692,7 @@ namespace Rewired.InputSources.SDL2
 {
 	[CustomClassObfuscation(renamePrivateMembers = true, renamePubIntMembers = false)]
 	[CustomObfuscation(rename = false)]
-	internal class SDL2InputSource : IInputSource // TypeDefIndex: 53959
+	internal class SDL2InputSource : IInputSource // TypeDefIndex: 79203
 	{
 		// Fields
 		private bool axkKvliPJxIEjkBAIyuBFFzRUJZj; // 0x10
@@ -10724,62 +10710,62 @@ namespace Rewired.InputSources.SDL2
 	
 		// Events
 		private event Action _DeviceChangedEvent {
-			add; // 0x000000018ABC8E40-0x000000018ABC8ED8
-			remove; // 0x000000018ABC9194-0x000000018ABC922C
+			add; // 0x000000018CDBD7D0-0x000000018CDBD868
+			remove; // 0x000000018CDBDB28-0x000000018CDBDBC0
 		}
 		public event Action DeviceChangedEvent {
-			add; // 0x000000018ABC9C10-0x000000018ABC9C18
-			remove; // 0x000000018ABCA178-0x000000018ABCA180
+			add; // 0x000000018CDBE58C-0x000000018CDBE594
+			remove; // 0x000000018CDBEAFC-0x000000018CDBEB04
 		}
 	
 		// Constructors
-		public SDL2InputSource(UpdateLoopSetting param_00073d22, bool param_00073d23, bool param_00073d24, bool param_00073d25, bool param_00073d26); // 0x000000018ABC9940-0x000000018ABC9C10
+		public SDL2InputSource(UpdateLoopSetting param_000aa689, bool param_000aa68a, bool param_000aa68b, bool param_000aa68c, bool param_000aa68d); // 0x000000018CDBE2BC-0x000000018CDBE58C
 	
 		// Methods
-		public void SystemDeviceConnected(); // 0x000000018ABC9454-0x000000018ABC94A0
-		public void SystemDeviceDisconnected(); // 0x000000018ABC94A0-0x000000018ABC94EC
-		public void Update(); // 0x00000001841E1670-0x00000001841E1680
-		public void UpdateDevices(UpdateLoopType updateLoop); // 0x000000018ABC9618-0x000000018ABC9628
-		public void UpdateFinished(); // 0x00000001841E1670-0x00000001841E1680
+		public void SystemDeviceConnected(); // 0x000000018CDBDDD4-0x000000018CDBDE20
+		public void SystemDeviceDisconnected(); // 0x000000018CDBDE20-0x000000018CDBDE6C
+		public void Update(); // 0x0000000186805BA0-0x0000000186805BB0
+		public void UpdateDevices(UpdateLoopType updateLoop); // 0x000000018CDBDF90-0x000000018CDBDFA0
+		public void UpdateFinished(); // 0x0000000186805BA0-0x0000000186805BB0
 		public IList<T> GetJoysticks<T>()
 			where T : class;
-		private int jJiflOGWXPvqIozGqKiZJpHvQFNM(); // 0x000000018ABC9D48-0x000000018ABC9D9C
-		private dnxyCjpDlDvOdxTyzeYVqByiyZzK AIeKyVaARAbqBseIBlYSeGYKIRPf(int param_00073d2c); // 0x000000018ABC8C58-0x000000018ABC8D2C
-		private HMtmYXFGOgHuhDFfOFddFYSgYpDVA gBNIybsZTXAmCaKhYascONqMhSrc(int param_00073d2d); // 0x000000018ABC9C50-0x000000018ABC9D48
-		private EAUUbKQFcztOaxVulmGcrJehPchk HyiBkIyOECHCrIoBldAPabTCXmkL(int param_00073d2e, emeCwsELnoJvwBwEcPKnJiieeMKWB param_00073d2f); // 0x000000018ABC8F40-0x000000018ABC9068
-		private EAUUbKQFcztOaxVulmGcrJehPchk ViZqQMwzPcmDSdCsEEbAlNkidrQG(int param_00073d30, vNRtVHTjVoyNCDmQcAzXxtkQARZr param_00073d31); // 0x000000018ABC9690-0x000000018ABC9724
-		private void XPCDnGEzgkfVnCkrckXqMyQfoJYcc(); // 0x000000018ABC98E4-0x000000018ABC9940
-		private void ngDwkjpbEWRBNcKXSDRjHRwjBKlLA(); // 0x000000018ABC9DEC-0x000000018ABCA104
-		private bool UZywRESKMpGMDDmezeTfAxnccbZQ(int param_00073d32); // 0x000000018ABC94EC-0x000000018ABC9618
-		private void wqNaUSqQKKjHQwxpKLkaRwRpHQPt(int param_00073d33); // 0x000000018ABCA210-0x000000018ABCA2BC
-		private bool SXaDIQEJgRfHDgvjFwseYXBOkOGRA(int param_00073d34); // 0x000000018ABC9330-0x000000018ABC9454
-		private void ywKjiqUeBmWYHXunwWNGtCyLePFs(int param_00073d35); // 0x000000018ABCA2BC-0x000000018ABCA368
-		private dnxyCjpDlDvOdxTyzeYVqByiyZzK HWVGwOeKGJdZtPelpcqeGGIJqUvZb(int param_00073d36); // 0x000000018ABC8ED8-0x000000018ABC8F40
-		private HMtmYXFGOgHuhDFfOFddFYSgYpDVA VYenPzBRozvvWYLHsDkjerWXlpnEb(int param_00073d37); // 0x000000018ABC9628-0x000000018ABC9690
-		private void WsjBbREIIhMeCyzhcDPEhwpDTLMzb(); // 0x000000018ABC9724-0x000000018ABC98E4
-		private void qCJunJjLcnCecADZSsfUnQxyORBv(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.WtYDlYGBazQlCIfNIIGpZwxTHFulA param_00073d38, double param_00073d39); // 0x000000018ABCA140-0x000000018ABCA178
-		private void eQqdnlIiBPspGhSxZlunxIkAwkiGA(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.ARLpXSGgShledzMXCkwiFbYQfzgq param_00073d3a, double param_00073d3b); // 0x000000018ABC9C18-0x000000018ABC9C50
-		private void JKifqkEUcTcvSfvEDPyOwyjcREQx(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.MpgatCrtHXZXKexKnssNnzqOxHkb param_00073d3c, double param_00073d3d); // 0x000000018ABC90A4-0x000000018ABC90DC
-		private void XhrlMWJsyShJAPEqJeIfwdObJvpy(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.nuPqVpafSULPUJReuwXEHVFGTqYo param_00073d3e, double param_00073d3f); // 0x00000001841E1670-0x00000001841E1680
-		private void NBnDLoBkwkhNRbZsLPdvWhUvxqcL(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.XkfkMHwGKUjrAejsvknbmMNxlVxj param_00073d40); // 0x000000018ABC90DC-0x000000018ABC9118
-		private void PEjBbOeLuEXsmMwhUWOFjbEebzmcb(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.XkfkMHwGKUjrAejsvknbmMNxlVxj param_00073d41); // 0x000000018ABC9118-0x000000018ABC9154
-		private void wKOJbYEinLweOxZznCORqijmkaPL(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.EEHintEoWqwtrulXqUuaStXrpcHl param_00073d42, double param_00073d43); // 0x000000018ABCA1D0-0x000000018ABCA210
-		private void PRxdkZaJWvPmORSVENOsizlgWymHb(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.ZFIgyKFYAnbTAjavbvUFScwzweHVA param_00073d44, double param_00073d45); // 0x000000018ABC9154-0x000000018ABC9194
-		private void omMjLVkXiEoOSUcYWtcRVMgovlBR(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_00073d46); // 0x000000018ABCA104-0x000000018ABCA140
-		private void IAhWNKhBbwGSYSxqBEGqdaQcapZO(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_00073d47); // 0x000000018ABC9068-0x000000018ABC90A4
-		private void zuOAfpgCoxGAvQbTcrPrRhdgqViPA(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_00073d48); // 0x00000001841E1670-0x00000001841E1680
-		private void sRvJQsBjiTFUByzdyQstlmxBwDlf(int param_00073d49, mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_00073d4a, byte param_00073d4b, short param_00073d4c, double param_00073d4d); // 0x000000018ABCA180-0x000000018ABCA1D0
-		private void jZXdYzCIqoxnremxPHcgdBfFRQAUB(int param_00073d4e, mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_00073d4f, byte param_00073d50, short param_00073d51, double param_00073d52); // 0x000000018ABC9D9C-0x000000018ABC9DEC
-		private void RXpoRKZgVUbOXfsxzIlYsKabWHbuA(); // 0x000000018ABC922C-0x000000018ABC9330
-		public void Dispose(); // 0x000000018ABC8D7C-0x000000018ABC8DCC
-		~SDL2InputSource(); // 0x000000018ABC8DCC-0x000000018ABC8E40
-		protected virtual void Dispose(bool disposing); // 0x000000018ABC8D2C-0x000000018ABC8D7C
+		private int jJiflOGWXPvqIozGqKiZJpHvQFNM(); // 0x000000018CDBE6C4-0x000000018CDBE718
+		private dnxyCjpDlDvOdxTyzeYVqByiyZzK AIeKyVaARAbqBseIBlYSeGYKIRPf(int param_000aa693); // 0x000000018CDBD5E4-0x000000018CDBD6B8
+		private HMtmYXFGOgHuhDFfOFddFYSgYpDVA gBNIybsZTXAmCaKhYascONqMhSrc(int param_000aa694); // 0x000000018CDBE5CC-0x000000018CDBE6C4
+		private EAUUbKQFcztOaxVulmGcrJehPchk HyiBkIyOECHCrIoBldAPabTCXmkL(int param_000aa695, emeCwsELnoJvwBwEcPKnJiieeMKWB param_000aa696); // 0x000000018CDBD8D4-0x000000018CDBD9FC
+		private EAUUbKQFcztOaxVulmGcrJehPchk ViZqQMwzPcmDSdCsEEbAlNkidrQG(int param_000aa697, vNRtVHTjVoyNCDmQcAzXxtkQARZr param_000aa698); // 0x000000018CDBE00C-0x000000018CDBE0A0
+		private void XPCDnGEzgkfVnCkrckXqMyQfoJYcc(); // 0x000000018CDBE260-0x000000018CDBE2BC
+		private void ngDwkjpbEWRBNcKXSDRjHRwjBKlLA(); // 0x000000018CDBE76C-0x000000018CDBEA88
+		private bool UZywRESKMpGMDDmezeTfAxnccbZQ(int param_000aa699); // 0x000000018CDBDE6C-0x000000018CDBDF90
+		private void wqNaUSqQKKjHQwxpKLkaRwRpHQPt(int param_000aa69a); // 0x000000018CDBEB98-0x000000018CDBEC44
+		private bool SXaDIQEJgRfHDgvjFwseYXBOkOGRA(int param_000aa69b); // 0x000000018CDBDCB8-0x000000018CDBDDD4
+		private void ywKjiqUeBmWYHXunwWNGtCyLePFs(int param_000aa69c); // 0x000000018CDBEC44-0x000000018CDBECF0
+		private dnxyCjpDlDvOdxTyzeYVqByiyZzK HWVGwOeKGJdZtPelpcqeGGIJqUvZb(int param_000aa69d); // 0x000000018CDBD868-0x000000018CDBD8D4
+		private HMtmYXFGOgHuhDFfOFddFYSgYpDVA VYenPzBRozvvWYLHsDkjerWXlpnEb(int param_000aa69e); // 0x000000018CDBDFA0-0x000000018CDBE00C
+		private void WsjBbREIIhMeCyzhcDPEhwpDTLMzb(); // 0x000000018CDBE0A0-0x000000018CDBE260
+		private void qCJunJjLcnCecADZSsfUnQxyORBv(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.WtYDlYGBazQlCIfNIIGpZwxTHFulA param_000aa69f, double param_000aa6a0); // 0x000000018CDBEAC4-0x000000018CDBEAFC
+		private void eQqdnlIiBPspGhSxZlunxIkAwkiGA(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.ARLpXSGgShledzMXCkwiFbYQfzgq param_000aa6a1, double param_000aa6a2); // 0x000000018CDBE594-0x000000018CDBE5CC
+		private void JKifqkEUcTcvSfvEDPyOwyjcREQx(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.MpgatCrtHXZXKexKnssNnzqOxHkb param_000aa6a3, double param_000aa6a4); // 0x000000018CDBDA38-0x000000018CDBDA70
+		private void XhrlMWJsyShJAPEqJeIfwdObJvpy(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.nuPqVpafSULPUJReuwXEHVFGTqYo param_000aa6a5, double param_000aa6a6); // 0x0000000186805BA0-0x0000000186805BB0
+		private void NBnDLoBkwkhNRbZsLPdvWhUvxqcL(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.XkfkMHwGKUjrAejsvknbmMNxlVxj param_000aa6a7); // 0x000000018CDBDA70-0x000000018CDBDAAC
+		private void PEjBbOeLuEXsmMwhUWOFjbEebzmcb(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.XkfkMHwGKUjrAejsvknbmMNxlVxj param_000aa6a8); // 0x000000018CDBDAAC-0x000000018CDBDAE8
+		private void wKOJbYEinLweOxZznCORqijmkaPL(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.EEHintEoWqwtrulXqUuaStXrpcHl param_000aa6a9, double param_000aa6aa); // 0x000000018CDBEB58-0x000000018CDBEB98
+		private void PRxdkZaJWvPmORSVENOsizlgWymHb(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.ZFIgyKFYAnbTAjavbvUFScwzweHVA param_000aa6ab, double param_000aa6ac); // 0x000000018CDBDAE8-0x000000018CDBDB28
+		private void omMjLVkXiEoOSUcYWtcRVMgovlBR(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_000aa6ad); // 0x000000018CDBEA88-0x000000018CDBEAC4
+		private void IAhWNKhBbwGSYSxqBEGqdaQcapZO(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_000aa6ae); // 0x000000018CDBD9FC-0x000000018CDBDA38
+		private void zuOAfpgCoxGAvQbTcrPrRhdgqViPA(ref ERrmsitpcXDZelTYlGLEEisQnmaGA.wEGFotndTOlmgYqzAoyIypxyoDcB param_000aa6af); // 0x0000000186805BA0-0x0000000186805BB0
+		private void sRvJQsBjiTFUByzdyQstlmxBwDlf(int param_000aa6b0, mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_000aa6b1, byte param_000aa6b2, short param_000aa6b3, double param_000aa6b4); // 0x000000018CDBEB04-0x000000018CDBEB58
+		private void jZXdYzCIqoxnremxPHcgdBfFRQAUB(int param_000aa6b5, mRjzAKSnuWBoVcYwzfxaYuEXQlkL param_000aa6b6, byte param_000aa6b7, short param_000aa6b8, double param_000aa6b9); // 0x000000018CDBE718-0x000000018CDBE76C
+		private void RXpoRKZgVUbOXfsxzIlYsKabWHbuA(); // 0x000000018CDBDBC0-0x000000018CDBDCB8
+		public void Dispose(); // 0x000000018CDBD708-0x000000018CDBD758
+		~SDL2InputSource(); // 0x000000018CDBD758-0x000000018CDBD7D0
+		protected virtual void Dispose(bool disposing); // 0x000000018CDBD6B8-0x000000018CDBD708
 	}
 }
 
 namespace Rewired.Libraries.SharpDX.DirectInput
 {
-	internal enum DeviceType // TypeDefIndex: 53854
+	internal enum DeviceType // TypeDefIndex: 79098
 	{
 		Device = 17,
 		Mouse = 18,
@@ -10798,7 +10784,7 @@ namespace Rewired.Libraries.SharpDX.DirectInput
 
 namespace Rewired.Libraries.SharpDX.RawInput
 {
-	internal enum KeyState // TypeDefIndex: 53790
+	internal enum KeyState // TypeDefIndex: 79034
 	{
 		VirtualKeyToItem = 46,
 		SetHotKey = 50,
@@ -10816,7 +10802,7 @@ namespace Rewired.Libraries.SharpDX.RawInput
 	}
 
 	[Flags]
-	internal enum ScanCodeFlags : short // TypeDefIndex: 53795
+	internal enum ScanCodeFlags : short // TypeDefIndex: 79039
 	{
 		Make = 0,
 		Break = 1,
@@ -10828,7 +10814,7 @@ namespace Rewired.Libraries.SharpDX.RawInput
 namespace Rewired.Libraries.SharpDX.Windows.Forms
 {
 	[ComVisible(true)]
-	internal enum Keys // TypeDefIndex: 53883
+	internal enum Keys // TypeDefIndex: 79127
 	{
 		Modifiers = -65536,
 		None = 0,
@@ -11029,7 +11015,7 @@ namespace Rewired.Libraries.SharpDX.Windows.Forms
 
 namespace Rewired.Libraries.SharpDX.XInput
 {
-	internal enum DeviceType : byte // TypeDefIndex: 53774
+	internal enum DeviceType : byte // TypeDefIndex: 79018
 	{
 		Gamepad = 1
 	}
@@ -11038,52 +11024,52 @@ namespace Rewired.Libraries.SharpDX.XInput
 namespace Rewired.Platforms.Microsoft.WindowsGamingInput
 {
 	[CustomObfuscation(rename = false)]
-	internal enum WGIDeviceType // TypeDefIndex: 53599
+	internal enum WGIDeviceType // TypeDefIndex: 78843
 	{
 		None = 0,
 		Gamepad = 1
 	}
 
 	[CustomClassObfuscation(renamePubIntMembers = false, renamePrivateMembers = true)]
-	public sealed class WindowsGamingInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 53612
+	public sealed class WindowsGamingInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 78856
 	{
 		// Fields
 		private XBtNrEbRzbSZpamjVidGdfjRSeJu AFwfRVfsGZFjMcRMdwIccXaDUMcGc; // 0x28
 		private bool oMmQYEPtkGHEnpyuIjkfSCSefHbx; // 0x30
 	
 		// Properties
-		public string productName { get; } // 0x000000018AB7E1DC-0x000000018AB7E294 
-		string IHIDControllerExtension.manufacturer { get; } // 0x000000018AB7DE70-0x000000018AB7DEA8 
-		public ushort vendorId { get; } // 0x000000018AB7E294-0x000000018AB7E33C 
-		public ushort productId { get; } // 0x000000018AB7E138-0x000000018AB7E1DC 
-		ushort IHIDControllerExtension.usagePage { get; } // 0x000000018AB7DEA8-0x000000018AB7DF74 
-		ushort IHIDControllerExtension.usage { get; } // 0x000000018AB7DF74-0x000000018AB7E040 
+		public string productName { get; } // 0x000000018CD71F64-0x000000018CD7201C 
+		string IHIDControllerExtension.manufacturer { get; } // 0x000000018CD71BF8-0x000000018CD71C30 
+		public ushort vendorId { get; } // 0x000000018CD7201C-0x000000018CD720C4 
+		public ushort productId { get; } // 0x000000018CD71EC0-0x000000018CD71F64 
+		ushort IHIDControllerExtension.usagePage { get; } // 0x000000018CD71C30-0x000000018CD71CFC 
+		ushort IHIDControllerExtension.usage { get; } // 0x000000018CD71CFC-0x000000018CD71DC8 
 	
 		// Nested types
-		private class XBtNrEbRzbSZpamjVidGdfjRSeJu : IControllerExtensionSource // TypeDefIndex: 53611
+		private class XBtNrEbRzbSZpamjVidGdfjRSeJu : IControllerExtensionSource // TypeDefIndex: 78855
 		{
 			// Fields
 			private eNfvpwLBlcLZrDwMSAAKYmquIOpc BfpiOvUxdZhCNWfSeVTpTeEyaaiP; // 0x10
 	
 			// Properties
-			public eNfvpwLBlcLZrDwMSAAKYmquIOpc XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+			public eNfvpwLBlcLZrDwMSAAKYmquIOpc XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x00000001829260F0-0x0000000182926100 
 	
 			// Constructors
-			public XBtNrEbRzbSZpamjVidGdfjRSeJu(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_0007346a); // 0x00000001853908C0-0x00000001853908D0
+			public XBtNrEbRzbSZpamjVidGdfjRSeJu(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000a9dd1); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		// Constructors
-		internal WindowsGamingInputControllerExtension(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_00073466); // 0x000000018AB7E0C0-0x000000018AB7E138
-		private WindowsGamingInputControllerExtension(WindowsGamingInputControllerExtension param_00073467); // 0x000000018AA6D1B8-0x000000018AA6D1C0
+		internal WindowsGamingInputControllerExtension(eNfvpwLBlcLZrDwMSAAKYmquIOpc param_000a9dcd); // 0x000000018CD71E48-0x000000018CD71EC0
+		private WindowsGamingInputControllerExtension(WindowsGamingInputControllerExtension param_000a9dce); // 0x000000018CC5E9C8-0x000000018CC5E9D0
 	
 		// Methods
-		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018AB7E0B0-0x000000018AB7E0C0
-		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018AB7E040-0x000000018AB7E0B0
-		internal override Rewired.Controller.Extension Clone(); // 0x000000018AB7DE10-0x000000018AB7DE70
+		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018CD71E38-0x000000018CD71E48
+		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018CD71DC8-0x000000018CD71E38
+		internal override Rewired.Controller.Extension Clone(); // 0x000000018CD71B98-0x000000018CD71BF8
 	}
 
 	[Flags]
-	internal enum GamepadButtons : uint // TypeDefIndex: 53618
+	internal enum GamepadButtons : uint // TypeDefIndex: 78862
 	{
 		None = 0,
 		Menu = 1,
@@ -11106,49 +11092,49 @@ namespace Rewired.Platforms.Microsoft.WindowsGamingInput
 namespace Rewired.Platforms.Windows.DirectInput
 {
 	[CustomClassObfuscation(renamePubIntMembers = false, renamePrivateMembers = true)]
-	public sealed class DirectInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 53741
+	public sealed class DirectInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 78985
 	{
 		// Fields
 		private DXEgaekdXNroDGNlvMuTAwFqPKhEb AFwfRVfsGZFjMcRMdwIccXaDUMcGc; // 0x28
 		private bool oMmQYEPtkGHEnpyuIjkfSCSefHbx; // 0x30
 	
 		// Properties
-		public string productName { get; } // 0x000000018ABA4024-0x000000018ABA40EC 
-		public ushort usagePage { get; } // 0x000000018ABA40EC-0x000000018ABA4194 
-		public ushort usage { get; } // 0x000000018ABA4194-0x000000018ABA423C 
-		public ushort productId { get; } // 0x000000018ABA3F70-0x000000018ABA4024 
-		public ushort vendorId { get; } // 0x000000018ABA423C-0x000000018ABA42F0 
-		string IHIDControllerExtension.manufacturer { get; } // 0x000000018ABA3E40-0x000000018ABA3E78 
+		public string productName { get; } // 0x000000018CD9895C-0x000000018CD98A24 
+		public ushort usagePage { get; } // 0x000000018CD98A24-0x000000018CD98ACC 
+		public ushort usage { get; } // 0x000000018CD98ACC-0x000000018CD98B74 
+		public ushort productId { get; } // 0x000000018CD988A8-0x000000018CD9895C 
+		public ushort vendorId { get; } // 0x000000018CD98B74-0x000000018CD98C28 
+		string IHIDControllerExtension.manufacturer { get; } // 0x000000018CD98778-0x000000018CD987B0 
 	
 		// Nested types
-		private class DXEgaekdXNroDGNlvMuTAwFqPKhEb : IControllerExtensionSource // TypeDefIndex: 53740
+		private class DXEgaekdXNroDGNlvMuTAwFqPKhEb : IControllerExtensionSource // TypeDefIndex: 78984
 		{
 			// Fields
 			private asJwVBrSeOWneGuTCmUUKaDTCXQW yvvvkHJqqCsfGZGsAuGggudVLGsk; // 0x10
 			private NinxpESAdWHMScogYtzEcrOKmWSq BfpiOvUxdZhCNWfSeVTpTeEyaaiP; // 0x18
 	
 			// Properties
-			public asJwVBrSeOWneGuTCmUUKaDTCXQW xzpxpHzCMniucFvRNnKzdwDjbwZm { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
-			public NinxpESAdWHMScogYtzEcrOKmWSq XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x000000018385B100-0x000000018385B110 
+			public asJwVBrSeOWneGuTCmUUKaDTCXQW xzpxpHzCMniucFvRNnKzdwDjbwZm { get; } // 0x00000001829260F0-0x0000000182926100 
+			public NinxpESAdWHMScogYtzEcrOKmWSq XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x0000000182234E30-0x0000000182234E40 
 	
 			// Constructors
-			public DXEgaekdXNroDGNlvMuTAwFqPKhEb(asJwVBrSeOWneGuTCmUUKaDTCXQW param_00073853, NinxpESAdWHMScogYtzEcrOKmWSq param_00073854); // 0x00000001832AF420-0x00000001832AF450
+			public DXEgaekdXNroDGNlvMuTAwFqPKhEb(asJwVBrSeOWneGuTCmUUKaDTCXQW param_000aa1ba, NinxpESAdWHMScogYtzEcrOKmWSq param_000aa1bb); // 0x0000000185381AC0-0x0000000185381AF0
 		}
 	
 		// Constructors
-		internal DirectInputControllerExtension(asJwVBrSeOWneGuTCmUUKaDTCXQW param_0007384e, NinxpESAdWHMScogYtzEcrOKmWSq param_0007384f); // 0x000000018ABA3EE8-0x000000018ABA3F70
-		private DirectInputControllerExtension(DirectInputControllerExtension param_00073850); // 0x000000018AA6D1B8-0x000000018AA6D1C0
+		internal DirectInputControllerExtension(asJwVBrSeOWneGuTCmUUKaDTCXQW param_000aa1b5, NinxpESAdWHMScogYtzEcrOKmWSq param_000aa1b6); // 0x000000018CD98820-0x000000018CD988A8
+		private DirectInputControllerExtension(DirectInputControllerExtension param_000aa1b7); // 0x000000018CC5E9C8-0x000000018CC5E9D0
 	
 		// Methods
-		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018AB7E0B0-0x000000018AB7E0C0
-		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018ABA3E78-0x000000018ABA3EE8
-		internal override Rewired.Controller.Extension Clone(); // 0x000000018ABA3DE0-0x000000018ABA3E40
+		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018CD71E38-0x000000018CD71E48
+		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018CD987B0-0x000000018CD98820
+		internal override Rewired.Controller.Extension Clone(); // 0x000000018CD98718-0x000000018CD98778
 	}
 }
 
 namespace Rewired.Platforms.Windows.RawInput
 {
-	internal enum DeviceType // TypeDefIndex: 53701
+	internal enum DeviceType // TypeDefIndex: 78945
 	{
 		Joystick = 0,
 		Gamepad = 1,
@@ -11159,71 +11145,71 @@ namespace Rewired.Platforms.Windows.RawInput
 	}
 
 	[CustomClassObfuscation(renamePubIntMembers = false, renamePrivateMembers = true)]
-	public sealed class RawInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 53717
+	public sealed class RawInputControllerExtension : Rewired.Controller.Extension, IHIDControllerExtension // TypeDefIndex: 78961
 	{
 		// Fields
 		private wCjZrmUUUzubrddAwdvTcgSeNgNM AFwfRVfsGZFjMcRMdwIccXaDUMcGc; // 0x28
 		private bool oMmQYEPtkGHEnpyuIjkfSCSefHbx; // 0x30
 	
 		// Properties
-		public string productName { get; } // 0x000000018AB9CDD8-0x000000018AB9CE90 
-		public string manufacturer { get; } // 0x000000018AB9CC44-0x000000018AB9CD34 
-		public ushort vendorId { get; } // 0x000000018AB9D000-0x000000018AB9D0A4 
-		public ushort productId { get; } // 0x000000018AB9CD34-0x000000018AB9CDD8 
-		public ushort usagePage { get; } // 0x000000018AB9CE90-0x000000018AB9CF48 
-		public ushort usage { get; } // 0x000000018AB9CF48-0x000000018AB9D000 
+		public string productName { get; } // 0x000000018CD91340-0x000000018CD913F8 
+		public string manufacturer { get; } // 0x000000018CD911AC-0x000000018CD9129C 
+		public ushort vendorId { get; } // 0x000000018CD91568-0x000000018CD9160C 
+		public ushort productId { get; } // 0x000000018CD9129C-0x000000018CD91340 
+		public ushort usagePage { get; } // 0x000000018CD913F8-0x000000018CD914B0 
+		public ushort usage { get; } // 0x000000018CD914B0-0x000000018CD91568 
 	
 		// Nested types
-		private class wCjZrmUUUzubrddAwdvTcgSeNgNM : IControllerExtensionSource // TypeDefIndex: 53716
+		private class wCjZrmUUUzubrddAwdvTcgSeNgNM : IControllerExtensionSource // TypeDefIndex: 78960
 		{
 			// Fields
 			private kRbZYuhpKzSxbqUHMGxBcrQvRuQg BfpiOvUxdZhCNWfSeVTpTeEyaaiP; // 0x10
 	
 			// Properties
-			public kRbZYuhpKzSxbqUHMGxBcrQvRuQg XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+			public kRbZYuhpKzSxbqUHMGxBcrQvRuQg XYJbperUKfiSMXQUuxMvCcxQOWRH { get; } // 0x00000001829260F0-0x0000000182926100 
 	
 			// Constructors
-			public wCjZrmUUUzubrddAwdvTcgSeNgNM(kRbZYuhpKzSxbqUHMGxBcrQvRuQg param_000737a1); // 0x00000001853908C0-0x00000001853908D0
+			public wCjZrmUUUzubrddAwdvTcgSeNgNM(kRbZYuhpKzSxbqUHMGxBcrQvRuQg param_000aa108); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		// Constructors
-		internal RawInputControllerExtension(kRbZYuhpKzSxbqUHMGxBcrQvRuQg param_0007379d); // 0x000000018AB9CBCC-0x000000018AB9CC44
-		private RawInputControllerExtension(RawInputControllerExtension param_0007379e); // 0x000000018AA6D1B8-0x000000018AA6D1C0
+		internal RawInputControllerExtension(kRbZYuhpKzSxbqUHMGxBcrQvRuQg param_000aa104); // 0x000000018CD91134-0x000000018CD911AC
+		private RawInputControllerExtension(RawInputControllerExtension param_000aa105); // 0x000000018CC5E9C8-0x000000018CC5E9D0
 	
 		// Methods
-		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018AB7E0B0-0x000000018AB7E0C0
-		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018AB9CB5C-0x000000018AB9CBCC
-		internal override Rewired.Controller.Extension Clone(); // 0x000000018AB9CAFC-0x000000018AB9CB5C
+		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018CD71E38-0x000000018CD71E48
+		internal override void SourceUpdated(IControllerExtensionSource source); // 0x000000018CD910C4-0x000000018CD91134
+		internal override Rewired.Controller.Extension Clone(); // 0x000000018CD91064-0x000000018CD910C4
 	}
 }
 
 namespace Rewired.Platforms.Windows.XInput
 {
 	[CustomClassObfuscation(renamePubIntMembers = false, renamePrivateMembers = true)]
-	public sealed class XInputControllerExtension : Rewired.Controller.Extension // TypeDefIndex: 53694
+	public sealed class XInputControllerExtension : Rewired.Controller.Extension // TypeDefIndex: 78938
 	{
 		// Fields
 		private rvSmxamcvlhwQuczrUXGIxseZMV AFwfRVfsGZFjMcRMdwIccXaDUMcGc; // 0x28
 		private bool oMmQYEPtkGHEnpyuIjkfSCSefHbx; // 0x30
 	
 		// Nested types
-		private class rvSmxamcvlhwQuczrUXGIxseZMV : IControllerExtensionSource // TypeDefIndex: 53693
+		private class rvSmxamcvlhwQuczrUXGIxseZMV : IControllerExtensionSource // TypeDefIndex: 78937
 		{
 			// Fields
 			private rBZGQBZwTiSiuHITZSaJgTFuMivb.glrnucEUzNoToJLBWReJKJsCbnHKA BfpiOvUxdZhCNWfSeVTpTeEyaaiP; // 0x10
 	
 			// Constructors
-			public rvSmxamcvlhwQuczrUXGIxseZMV(rBZGQBZwTiSiuHITZSaJgTFuMivb.glrnucEUzNoToJLBWReJKJsCbnHKA param_000736ed); // 0x00000001853908C0-0x00000001853908D0
+			public rvSmxamcvlhwQuczrUXGIxseZMV(rBZGQBZwTiSiuHITZSaJgTFuMivb.glrnucEUzNoToJLBWReJKJsCbnHKA param_000aa054); // 0x0000000184FD2410-0x0000000184FD2420
 		}
 	
 		// Constructors
-		internal XInputControllerExtension(rBZGQBZwTiSiuHITZSaJgTFuMivb.glrnucEUzNoToJLBWReJKJsCbnHKA param_000736e9); // 0x0000000183A42690-0x0000000183A42700
-		private XInputControllerExtension(XInputControllerExtension param_000736ea); // 0x000000018AA6D1B8-0x000000018AA6D1C0
+		internal XInputControllerExtension(rBZGQBZwTiSiuHITZSaJgTFuMivb.glrnucEUzNoToJLBWReJKJsCbnHKA param_000aa050); // 0x0000000185BB07A0-0x0000000185BB0810
+		private XInputControllerExtension(XInputControllerExtension param_000aa051); // 0x000000018CC5E9C8-0x000000018CC5E9D0
 	
 		// Methods
-		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018AB7E0B0-0x000000018AB7E0C0
-		internal override void SourceUpdated(IControllerExtensionSource source); // 0x0000000184A3D480-0x0000000184A3D500
-		internal override Rewired.Controller.Extension Clone(); // 0x000000018AB9D388-0x000000018AB9D3E8
+		internal override void UpdateData(UpdateLoopType updateLoop); // 0x000000018CD71E38-0x000000018CD71E48
+		internal override void SourceUpdated(IControllerExtensionSource source); // 0x0000000186ED8140-0x0000000186ED81C0
+		internal override Rewired.Controller.Extension Clone(); // 0x000000018CD91914-0x000000018CD91974
 	}
 }
 
@@ -11231,9 +11217,9 @@ namespace Rewired.Utils.Platforms.Windows
 {
 	[Browsable(false)]
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public static class Main // TypeDefIndex: 53747
+	public static class Main // TypeDefIndex: 78991
 	{
 		// Methods
-		public static object GetPlatformInitializer(); // 0x000000018539494C-0x0000000185394954
+		public static object GetPlatformInitializer(); // 0x000000018783D134-0x000000018783D13C
 	}
 }

@@ -9,170 +9,13 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Bindings;
 
-// Image 123: UnityEngine.SharedInternalsModule.dll - Assembly: UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63657-63685
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 123: UnityEngine.SharedInternalsModule.dll - Assembly: UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91103-91131
 
 namespace UnityEngine
 {
 	[AttributeUsage(AttributeTargets.Class, Inherited = false)]
 	[VisibleToOtherModules]
-	internal sealed class AssetFileNameExtensionAttribute : Attribute // TypeDefIndex: 63658
+	internal sealed class AssetFileNameExtensionAttribute : Attribute // TypeDefIndex: 91104
 	{
 		// Fields
 		[CompilerGenerated]
@@ -183,36 +26,36 @@ namespace UnityEngine
 		private readonly IEnumerable<string> _otherExtensions_k__BackingField; // 0x18
 	
 		// Constructors
-		public AssetFileNameExtensionAttribute(string preferredExtension, params string[] otherExtensions); // 0x0000000184D808C0-0x0000000184D80920
+		public AssetFileNameExtensionAttribute(string preferredExtension, params string[] otherExtensions); // 0x0000000187224CA0-0x0000000187224CD0
 	}
 
 	[AttributeUsage(AttributeTargets.Method)]
 	[VisibleToOtherModules]
-	internal class ThreadAndSerializationSafeAttribute : Attribute // TypeDefIndex: 63659
+	internal class ThreadAndSerializationSafeAttribute : Attribute // TypeDefIndex: 91105
 	{
 		// Constructors
-		public ThreadAndSerializationSafeAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public ThreadAndSerializationSafeAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false)]
 	[VisibleToOtherModules]
-	internal class WritableAttribute : Attribute // TypeDefIndex: 63660
+	internal class WritableAttribute : Attribute // TypeDefIndex: 91106
 	{
 		// Constructors
-		public WritableAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public WritableAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Assembly)]
 	[VisibleToOtherModules]
-	internal class UnityEngineModuleAssembly : Attribute // TypeDefIndex: 63661
+	internal class UnityEngineModuleAssembly : Attribute // TypeDefIndex: 91107
 	{
 		// Constructors
-		public UnityEngineModuleAssembly(); // 0x00000001841E1670-0x00000001841E1680
+		public UnityEngineModuleAssembly(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, Inherited = false)]
 	[VisibleToOtherModules]
-	internal sealed class NativeClassAttribute : Attribute // TypeDefIndex: 63662
+	internal sealed class NativeClassAttribute : Attribute // TypeDefIndex: 91108
 	{
 		// Fields
 		[CompilerGenerated]
@@ -223,19 +66,19 @@ namespace UnityEngine
 		private string _Declaration_k__BackingField; // 0x18
 	
 		// Properties
-		private string QualifiedNativeName { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		private string Declaration { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
+		private string QualifiedNativeName { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		private string Declaration { [CompilerGenerated] set; } // 0x0000000187835500-0x0000000187835510
 	
 		// Constructors
-		public NativeClassAttribute(string qualifiedCppName); // 0x0000000184B39BE0-0x0000000184B39C50
-		public NativeClassAttribute(string qualifiedCppName, string declaration); // 0x00000001832AF420-0x00000001832AF450
+		public NativeClassAttribute(string qualifiedCppName); // 0x0000000186FB70C0-0x0000000186FB7130
+		public NativeClassAttribute(string qualifiedCppName, string declaration); // 0x0000000185381AC0-0x0000000185381AF0
 	}
 
 	[VisibleToOtherModules]
-	internal sealed class UnityString // TypeDefIndex: 63663
+	internal sealed class UnityString // TypeDefIndex: 91109
 	{
 		// Methods
-		public static string Format(string fmt, params object[] args); // 0x000000018382F0D0-0x000000018382F150
+		public static string Format(string fmt, params object[] args); // 0x0000000186145F20-0x0000000186145FA0
 	}
 }
 
@@ -243,16 +86,16 @@ namespace UnityEngine.Bindings
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface | AttributeTargets.Delegate, Inherited = false)]
 	[VisibleToOtherModules]
-	internal class VisibleToOtherModulesAttribute : Attribute // TypeDefIndex: 63664
+	internal class VisibleToOtherModulesAttribute : Attribute // TypeDefIndex: 91110
 	{
 		// Constructors
-		public VisibleToOtherModulesAttribute(); // 0x00000001841E1670-0x00000001841E1680
-		public VisibleToOtherModulesAttribute(params string[] modules); // 0x00000001841E1670-0x00000001841E1680
+		public VisibleToOtherModulesAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+		public VisibleToOtherModulesAttribute(params string[] modules); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property)]
 	[VisibleToOtherModules]
-	internal class NativeConditionalAttribute : Attribute // TypeDefIndex: 63665
+	internal class NativeConditionalAttribute : Attribute // TypeDefIndex: 91111
 	{
 		// Fields
 		[CompilerGenerated]
@@ -266,18 +109,18 @@ namespace UnityEngine.Bindings
 		private bool _Enabled_k__BackingField; // 0x20
 	
 		// Properties
-		public string Condition { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		public string StubReturnStatement { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
-		public bool Enabled { [CompilerGenerated] set; } // 0x0000000184D866D0-0x0000000184D866E0
+		public string Condition { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		public string StubReturnStatement { [CompilerGenerated] set; } // 0x0000000187835500-0x0000000187835510
+		public bool Enabled { [CompilerGenerated] set; } // 0x0000000182246E60-0x0000000182246E70
 	
 		// Constructors
-		public NativeConditionalAttribute(string condition); // 0x0000000184D83BC0-0x0000000184D83BE0
-		public NativeConditionalAttribute(string condition, string stubReturnStatement); // 0x000000018B42B3D4-0x000000018B42B404
+		public NativeConditionalAttribute(string condition); // 0x0000000187112AB0-0x0000000187112AD0
+		public NativeConditionalAttribute(string condition, string stubReturnStatement); // 0x000000018D555314-0x000000018D555344
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
 	[VisibleToOtherModules]
-	internal class NativeHeaderAttribute : Attribute // TypeDefIndex: 63666
+	internal class NativeHeaderAttribute : Attribute // TypeDefIndex: 91112
 	{
 		// Fields
 		[CompilerGenerated]
@@ -285,15 +128,15 @@ namespace UnityEngine.Bindings
 		private string _Header_k__BackingField; // 0x10
 	
 		// Properties
-		public string Header { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public string Header { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		public NativeHeaderAttribute(string header); // 0x0000000184535350-0x00000001845353C0
+		public NativeHeaderAttribute(string header); // 0x000000018696AFF0-0x000000018696B060
 	}
 
 	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field)]
 	[VisibleToOtherModules]
-	internal class NativeNameAttribute : Attribute // TypeDefIndex: 63667
+	internal class NativeNameAttribute : Attribute // TypeDefIndex: 91113
 	{
 		// Fields
 		[CompilerGenerated]
@@ -301,15 +144,15 @@ namespace UnityEngine.Bindings
 		private string _Name_k__BackingField; // 0x10
 	
 		// Properties
-		public string Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public string Name { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		public NativeNameAttribute(string name); // 0x000000018B42B564-0x000000018B42B67C
+		public NativeNameAttribute(string name); // 0x00000001869A0580-0x00000001869A05F0
 	}
 
 	[AttributeUsage(AttributeTargets.Method)]
 	[VisibleToOtherModules]
-	internal sealed class NativeWritableSelfAttribute : Attribute // TypeDefIndex: 63668
+	internal sealed class NativeWritableSelfAttribute : Attribute // TypeDefIndex: 91114
 	{
 		// Fields
 		[CompilerGenerated]
@@ -317,15 +160,15 @@ namespace UnityEngine.Bindings
 		private bool _WritableSelf_k__BackingField; // 0x10
 	
 		// Properties
-		public bool WritableSelf { [CompilerGenerated] set; } // 0x0000000184D86130-0x0000000184D86140
+		public bool WritableSelf { [CompilerGenerated] set; } // 0x0000000182A819C0-0x0000000182A819D0
 	
 		// Constructors
-		public NativeWritableSelfAttribute(); // 0x00000001815EFCD0-0x00000001815EFCE0
+		public NativeWritableSelfAttribute(); // 0x00000001829D07F0-0x00000001829D0800
 	}
 
 	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
 	[VisibleToOtherModules]
-	internal class NativeMethodAttribute : Attribute // TypeDefIndex: 63669
+	internal class NativeMethodAttribute : Attribute // TypeDefIndex: 91115
 	{
 		// Fields
 		[CompilerGenerated]
@@ -345,21 +188,21 @@ namespace UnityEngine.Bindings
 		private bool _HasExplicitThis_k__BackingField; // 0x1B
 	
 		// Properties
-		public string Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		public bool IsThreadSafe { [CompilerGenerated] set; } // 0x0000000184D86350-0x0000000184D86360
-		public bool IsFreeFunction { [CompilerGenerated] set; } // 0x0000000184D866C0-0x0000000184D866D0
-		public bool ThrowsException { [CompilerGenerated] set; } // 0x0000000184D866E0-0x0000000184D866F0
-		public bool HasExplicitThis { [CompilerGenerated] set; } // 0x0000000184D89600-0x0000000184D89610
+		public string Name { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		public bool IsThreadSafe { [CompilerGenerated] set; } // 0x000000018225E060-0x000000018225E070
+		public bool IsFreeFunction { [CompilerGenerated] set; } // 0x000000018225E020-0x000000018225E030
+		public bool ThrowsException { [CompilerGenerated] set; } // 0x000000018226EDD0-0x000000018226EDE0
+		public bool HasExplicitThis { [CompilerGenerated] set; } // 0x00000001872364D0-0x00000001872364E0
 	
 		// Constructors
-		public NativeMethodAttribute(); // 0x00000001841E1670-0x00000001841E1680
-		public NativeMethodAttribute(string name); // 0x000000018B42B440-0x000000018B42B53C
-		public NativeMethodAttribute(string name, bool isFreeFunction); // 0x000000018B42B53C-0x000000018B42B564
-		public NativeMethodAttribute(string name, bool isFreeFunction, bool isThreadSafe); // 0x000000018B42B404-0x000000018B42B440
+		public NativeMethodAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+		public NativeMethodAttribute(string name); // 0x0000000185A7F1D0-0x0000000185A7F220
+		public NativeMethodAttribute(string name, bool isFreeFunction); // 0x0000000185A7F1A0-0x0000000185A7F1D0
+		public NativeMethodAttribute(string name, bool isFreeFunction, bool isThreadSafe); // 0x0000000186585640-0x0000000186585680
 	}
 
 	[VisibleToOtherModules]
-	internal enum TargetType // TypeDefIndex: 63670
+	internal enum TargetType // TypeDefIndex: 91116
 	{
 		Function = 0,
 		Field = 1
@@ -367,7 +210,7 @@ namespace UnityEngine.Bindings
 
 	[AttributeUsage(AttributeTargets.Property)]
 	[VisibleToOtherModules]
-	internal class NativePropertyAttribute : NativeMethodAttribute // TypeDefIndex: 63671
+	internal class NativePropertyAttribute : NativeMethodAttribute // TypeDefIndex: 91117
 	{
 		// Fields
 		[CompilerGenerated]
@@ -375,17 +218,17 @@ namespace UnityEngine.Bindings
 		private UnityEngine.Bindings.TargetType _TargetType_k__BackingField; // 0x20
 	
 		// Properties
-		public UnityEngine.Bindings.TargetType TargetType { [CompilerGenerated] set; } // 0x0000000184D86330-0x0000000184D86340
+		public UnityEngine.Bindings.TargetType TargetType { [CompilerGenerated] set; } // 0x0000000186036460-0x0000000186036470
 	
 		// Constructors
-		public NativePropertyAttribute(); // 0x00000001841E1670-0x00000001841E1680
-		public NativePropertyAttribute(string name); // 0x000000018B42B67C-0x000000018B42B684
-		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType); // 0x000000018B42B684-0x000000018B42B6BC
-		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType, bool isThreadSafe); // 0x000000018B42B6BC-0x000000018B42B6F0
+		public NativePropertyAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+		public NativePropertyAttribute(string name); // 0x000000018D555344-0x000000018D55534C
+		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType); // 0x000000018D55534C-0x000000018D555384
+		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType, bool isThreadSafe); // 0x000000018D555384-0x000000018D5553B8
 	}
 
 	[VisibleToOtherModules]
-	internal enum CodegenOptions // TypeDefIndex: 63672
+	internal enum CodegenOptions // TypeDefIndex: 91118
 	{
 		Auto = 0,
 		Custom = 1,
@@ -394,15 +237,15 @@ namespace UnityEngine.Bindings
 
 	[AttributeUsage(AttributeTargets.Class)]
 	[VisibleToOtherModules]
-	internal class NativeAsStructAttribute : Attribute // TypeDefIndex: 63673
+	internal class NativeAsStructAttribute : Attribute // TypeDefIndex: 91119
 	{
 		// Constructors
-		public NativeAsStructAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public NativeAsStructAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum)]
 	[VisibleToOtherModules]
-	internal class NativeTypeAttribute : Attribute // TypeDefIndex: 63674
+	internal class NativeTypeAttribute : Attribute // TypeDefIndex: 91120
 	{
 		// Fields
 		[CompilerGenerated]
@@ -416,20 +259,20 @@ namespace UnityEngine.Bindings
 		private CodegenOptions _CodegenOptions_k__BackingField; // 0x20
 	
 		// Properties
-		public string Header { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		public string IntermediateScriptingStructName { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
-		public CodegenOptions CodegenOptions { [CompilerGenerated] set; } // 0x0000000184D86330-0x0000000184D86340
+		public string Header { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		public string IntermediateScriptingStructName { [CompilerGenerated] set; } // 0x0000000187835500-0x0000000187835510
+		public CodegenOptions CodegenOptions { [CompilerGenerated] set; } // 0x0000000186036460-0x0000000186036470
 	
 		// Constructors
-		public NativeTypeAttribute(); // 0x0000000184D85A70-0x0000000184D85A80
-		public NativeTypeAttribute(CodegenOptions codegenOptions); // 0x0000000184D86330-0x0000000184D86340
-		public NativeTypeAttribute(string header); // 0x0000000184D23B30-0x0000000184D23BA0
-		public NativeTypeAttribute(CodegenOptions codegenOptions, string intermediateStructName); // 0x0000000184D84DF0-0x0000000184D84E00
+		public NativeTypeAttribute(); // 0x00000001872327A0-0x00000001872327B0
+		public NativeTypeAttribute(CodegenOptions codegenOptions); // 0x0000000186036460-0x0000000186036470
+		public NativeTypeAttribute(string header); // 0x0000000187182210-0x0000000187182280
+		public NativeTypeAttribute(CodegenOptions codegenOptions, string intermediateStructName); // 0x0000000187231380-0x0000000187231390
 	}
 
 	[AttributeUsage(AttributeTargets.Parameter)]
 	[VisibleToOtherModules]
-	internal class NotNullAttribute : Attribute // TypeDefIndex: 63675
+	internal class NotNullAttribute : Attribute // TypeDefIndex: 91121
 	{
 		// Fields
 		[CompilerGenerated]
@@ -437,40 +280,40 @@ namespace UnityEngine.Bindings
 		private string _Exception_k__BackingField; // 0x10
 	
 		// Properties
-		public string Exception { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public string Exception { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		public NotNullAttribute(string exception = "ArgumentNullException" /* Metadata: 0x02352A17 */); // 0x00000001853908C0-0x00000001853908D0
+		public NotNullAttribute(string exception = "ArgumentNullException" /* Metadata: 0x0264B39B */); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 
 	[AttributeUsage(AttributeTargets.Parameter)]
 	[VisibleToOtherModules]
-	internal class UnmarshalledAttribute : Attribute // TypeDefIndex: 63676
+	internal class UnmarshalledAttribute : Attribute // TypeDefIndex: 91122
 	{
 		// Constructors
-		public UnmarshalledAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public UnmarshalledAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Method)]
 	[VisibleToOtherModules]
-	internal class FreeFunctionAttribute : NativeMethodAttribute // TypeDefIndex: 63677
+	internal class FreeFunctionAttribute : NativeMethodAttribute // TypeDefIndex: 91123
 	{
 		// Constructors
-		public FreeFunctionAttribute(); // 0x0000000184D8D540-0x0000000184D8D550
-		public FreeFunctionAttribute(string name); // 0x000000018B42B398-0x000000018B42B3B4
-		public FreeFunctionAttribute(string name, bool isThreadSafe); // 0x000000018B42B3B4-0x000000018B42B3D4
+		public FreeFunctionAttribute(); // 0x00000001872411B0-0x00000001872411C0
+		public FreeFunctionAttribute(string name); // 0x0000000185A7F220-0x0000000185A7F240
+		public FreeFunctionAttribute(string name, bool isThreadSafe); // 0x0000000186585620-0x0000000186585640
 	}
 
 	[AttributeUsage(AttributeTargets.Method)]
 	[VisibleToOtherModules]
-	internal class ThreadSafeAttribute : NativeMethodAttribute // TypeDefIndex: 63678
+	internal class ThreadSafeAttribute : NativeMethodAttribute // TypeDefIndex: 91124
 	{
 		// Constructors
-		public ThreadSafeAttribute(); // 0x0000000184D8EB60-0x0000000184D8EB70
+		public ThreadSafeAttribute(); // 0x0000000187233970-0x0000000187233980
 	}
 
 	[VisibleToOtherModules]
-	internal enum StaticAccessorType // TypeDefIndex: 63679
+	internal enum StaticAccessorType // TypeDefIndex: 91125
 	{
 		Dot = 0,
 		Arrow = 1,
@@ -480,7 +323,7 @@ namespace UnityEngine.Bindings
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property)]
 	[VisibleToOtherModules]
-	internal class StaticAccessorAttribute : Attribute // TypeDefIndex: 63680
+	internal class StaticAccessorAttribute : Attribute // TypeDefIndex: 91126
 	{
 		// Fields
 		[CompilerGenerated]
@@ -491,18 +334,18 @@ namespace UnityEngine.Bindings
 		private StaticAccessorType _Type_k__BackingField; // 0x18
 	
 		// Properties
-		public string Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		public StaticAccessorType Type { [CompilerGenerated] set; } // 0x00000001811EF9B0-0x00000001811EF9C0
+		public string Name { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		public StaticAccessorType Type { [CompilerGenerated] set; } // 0x000000018442F470-0x000000018442F480
 	
 		// Constructors
 		[VisibleToOtherModules]
-		internal StaticAccessorAttribute(string name); // 0x00000001853908C0-0x00000001853908D0
-		public StaticAccessorAttribute(string name, StaticAccessorType type); // 0x0000000183B46FF0-0x0000000183B47040
+		internal StaticAccessorAttribute(string name); // 0x0000000184FD2410-0x0000000184FD2420
+		public StaticAccessorAttribute(string name, StaticAccessorType type); // 0x0000000186A7A360-0x0000000186A7A380
 	}
 
 	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
 	[VisibleToOtherModules]
-	internal class NativeThrowsAttribute : Attribute // TypeDefIndex: 63681
+	internal class NativeThrowsAttribute : Attribute // TypeDefIndex: 91127
 	{
 		// Fields
 		[CompilerGenerated]
@@ -510,15 +353,15 @@ namespace UnityEngine.Bindings
 		private bool _ThrowsException_k__BackingField; // 0x10
 	
 		// Properties
-		public bool ThrowsException { [CompilerGenerated] set; } // 0x0000000184D86130-0x0000000184D86140
+		public bool ThrowsException { [CompilerGenerated] set; } // 0x0000000182A819C0-0x0000000182A819D0
 	
 		// Constructors
-		public NativeThrowsAttribute(); // 0x00000001815EFCD0-0x00000001815EFCE0
+		public NativeThrowsAttribute(); // 0x00000001829D07F0-0x00000001829D0800
 	}
 
 	[AttributeUsage(AttributeTargets.Field)]
 	[VisibleToOtherModules]
-	internal class IgnoreAttribute : Attribute // TypeDefIndex: 63682
+	internal class IgnoreAttribute : Attribute // TypeDefIndex: 91128
 	{
 		// Fields
 		[CompilerGenerated]
@@ -526,18 +369,18 @@ namespace UnityEngine.Bindings
 		private bool _DoesNotContributeToSize_k__BackingField; // 0x10
 	
 		// Properties
-		public bool DoesNotContributeToSize { [CompilerGenerated] set; } // 0x0000000184D86130-0x0000000184D86140
+		public bool DoesNotContributeToSize { [CompilerGenerated] set; } // 0x0000000182A819C0-0x0000000182A819D0
 	
 		// Constructors
-		public IgnoreAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public IgnoreAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 
 	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
 	[VisibleToOtherModules]
-	internal class PreventReadOnlyInstanceModificationAttribute : Attribute // TypeDefIndex: 63683
+	internal class PreventReadOnlyInstanceModificationAttribute : Attribute // TypeDefIndex: 91129
 	{
 		// Constructors
-		public PreventReadOnlyInstanceModificationAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public PreventReadOnlyInstanceModificationAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
 	}
 }
 
@@ -545,7 +388,7 @@ namespace UnityEngine.Scripting
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface, Inherited = false)]
 	[VisibleToOtherModules]
-	internal class UsedByNativeCodeAttribute : Attribute // TypeDefIndex: 63684
+	internal class UsedByNativeCodeAttribute : Attribute // TypeDefIndex: 91130
 	{
 		// Fields
 		[CompilerGenerated]
@@ -553,16 +396,16 @@ namespace UnityEngine.Scripting
 		private string _Name_k__BackingField; // 0x10
 	
 		// Properties
-		public string Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public string Name { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
 	
 		// Constructors
-		public UsedByNativeCodeAttribute(); // 0x00000001841E1670-0x00000001841E1680
-		public UsedByNativeCodeAttribute(string name); // 0x00000001853908C0-0x00000001853908D0
+		public UsedByNativeCodeAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+		public UsedByNativeCodeAttribute(string name); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface, Inherited = false)]
 	[VisibleToOtherModules]
-	internal class RequiredByNativeCodeAttribute : Attribute // TypeDefIndex: 63685
+	internal class RequiredByNativeCodeAttribute : Attribute // TypeDefIndex: 91131
 	{
 		// Fields
 		[CompilerGenerated]
@@ -576,12 +419,12 @@ namespace UnityEngine.Scripting
 		private bool _GenerateProxy_k__BackingField; // 0x19
 	
 		// Properties
-		public string Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
-		public bool Optional { [CompilerGenerated] set; } // 0x0000000184D86350-0x0000000184D86360
-		public bool GenerateProxy { [CompilerGenerated] set; } // 0x0000000184D866C0-0x0000000184D866D0
+		public string Name { [CompilerGenerated] set; } // 0x0000000184FD2410-0x0000000184FD2420
+		public bool Optional { [CompilerGenerated] set; } // 0x000000018225E060-0x000000018225E070
+		public bool GenerateProxy { [CompilerGenerated] set; } // 0x000000018225E020-0x000000018225E030
 	
 		// Constructors
-		public RequiredByNativeCodeAttribute(); // 0x00000001841E1670-0x00000001841E1680
-		public RequiredByNativeCodeAttribute(string name); // 0x00000001853908C0-0x00000001853908D0
+		public RequiredByNativeCodeAttribute(); // 0x0000000186805BA0-0x0000000186805BB0
+		public RequiredByNativeCodeAttribute(string name); // 0x0000000184FD2410-0x0000000184FD2420
 	}
 }

@@ -9,171 +9,13 @@ using UnityEngine;
 using UnityEngine.Bindings;
 using UnityEngine.Scripting;
 
-// Image 135: UnityEngine.InputModule.dll - Assembly: UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63809-63815
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InputSystem")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 134: UnityEngine.InputModule.dll - Assembly: UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 91272-91278
 
 namespace UnityEngineInternal.Input
 {
-	internal unsafe delegate void NativeUpdateCallback(NativeInputUpdateType updateType, NativeInputEventBuffer* buffer); // TypeDefIndex: 63810; 0x00000001838E1420-0x00000001838E1430
+	internal unsafe delegate void NativeUpdateCallback(NativeInputUpdateType updateType, NativeInputEventBuffer* buffer); // TypeDefIndex: 91273; 0x00000001859B7730-0x00000001859B7740
 
-	internal enum NativeInputEventType // TypeDefIndex: 63811
+	internal enum NativeInputEventType // TypeDefIndex: 91274
 	{
 		DeviceConfigChanged = 1145259591,
 		Delta = 1145852993,
@@ -182,7 +24,7 @@ namespace UnityEngineInternal.Input
 		Text = 1413830740
 	}
 
-	internal struct NativeInputEventBuffer // TypeDefIndex: 63812
+	internal struct NativeInputEventBuffer // TypeDefIndex: 91275
 	{
 		// Fields
 		public unsafe void* eventBuffer; // 0x00
@@ -191,10 +33,10 @@ namespace UnityEngineInternal.Input
 		public int capacityInBytes; // 0x10
 	}
 
-	internal struct NativeInputEvent // TypeDefIndex: 63813
+	internal struct NativeInputEvent // TypeDefIndex: 91276
 	{
 		// Fields
-		public const int structSize = 20; // Metadata: 0x02353673
+		public const int structSize = 20; // Metadata: 0x0264BFF7
 		public NativeInputEventType type; // 0x00
 		public ushort sizeInBytes; // 0x04
 		public ushort deviceId; // 0x06
@@ -203,7 +45,7 @@ namespace UnityEngineInternal.Input
 	}
 
 	[Flags]
-	internal enum NativeInputUpdateType // TypeDefIndex: 63814
+	internal enum NativeInputUpdateType // TypeDefIndex: 91277
 	{
 		Dynamic = 1,
 		Fixed = 2,
@@ -214,7 +56,7 @@ namespace UnityEngineInternal.Input
 
 	[NativeHeader("Modules/Input/Private/InputModuleBindings.h")]
 	[NativeHeader("Modules/Input/Private/InputInternal.h")]
-	internal class NativeInputSystem // TypeDefIndex: 63815
+	internal class NativeInputSystem // TypeDefIndex: 91278
 	{
 		// Fields
 		public static NativeUpdateCallback onUpdate; // 0x00
@@ -223,31 +65,31 @@ namespace UnityEngineInternal.Input
 		private static Action<int, string> s_OnDeviceDiscoveredCallback; // 0x18
 	
 		// Properties
-		public static Action<int, string> onDeviceDiscovered { get; set; } // 0x000000018B418224-0x000000018B418274 0x0000000183EB39A0-0x0000000183EB3A30
-		internal static bool hasDeviceDiscoveredCallback { set; } // 0x0000000183EB3A40-0x0000000183EB3A80
+		public static Action<int, string> onDeviceDiscovered { get; set; } // 0x000000018D542C8C-0x000000018D542CDC 0x000000018668EB30-0x000000018668EBC0
+		internal static bool hasDeviceDiscoveredCallback { set; } // 0x000000018668EBD0-0x000000018668EC10
 		[NativeProperty(IsThreadSafe = true)]
-		public static double currentTime { get; } // 0x00000001830CFBD0-0x00000001830CFC10 
+		public static double currentTime { get; } // 0x00000001853AE540-0x00000001853AE580 
 		[NativeProperty(IsThreadSafe = true)]
-		public static double currentTimeOffsetToRealtimeSinceStartup { get; } // 0x00000001830CF7B0-0x00000001830CF7F0 
+		public static double currentTimeOffsetToRealtimeSinceStartup { get; } // 0x00000001853AD930-0x00000001853AD970 
 	
 		// Constructors
-		static NativeInputSystem(); // 0x0000000183EB3A30-0x0000000183EB3A40
+		static NativeInputSystem(); // 0x000000018668EBC0-0x000000018668EBD0
 	
 		// Methods
 		[RequiredByNativeCode]
-		internal static void NotifyBeforeUpdate(NativeInputUpdateType updateType); // 0x0000000183DC8450-0x0000000183DC84A0
+		internal static void NotifyBeforeUpdate(NativeInputUpdateType updateType); // 0x00000001860B8830-0x00000001860B8880
 		[RequiredByNativeCode]
-		internal static void NotifyUpdate(NativeInputUpdateType updateType, IntPtr eventBuffer); // 0x00000001830CE8C0-0x00000001830CE920
+		internal static void NotifyUpdate(NativeInputUpdateType updateType, IntPtr eventBuffer); // 0x00000001853AD690-0x00000001853AD6F0
 		[RequiredByNativeCode]
-		internal static void NotifyDeviceDiscovered(int deviceId, string deviceDescriptor); // 0x000000018484DC50-0x000000018484DCD0
+		internal static void NotifyDeviceDiscovered(int deviceId, string deviceDescriptor); // 0x0000000186D09D30-0x0000000186D09DB0
 		[RequiredByNativeCode]
-		internal static void ShouldRunUpdate(NativeInputUpdateType updateType, out bool retval); // 0x0000000183BBC9E0-0x0000000183BBCAB0
+		internal static void ShouldRunUpdate(NativeInputUpdateType updateType, out bool retval); // 0x0000000185E85C20-0x0000000185E85CF0
 		[FreeFunction("AllocateInputDeviceId")]
-		public static int AllocateDeviceId(); // 0x000000018B4181C4-0x000000018B4181F0
+		public static int AllocateDeviceId(); // 0x000000018D542C2C-0x000000018D542C58
 		[NativeMethod(IsThreadSafe = true)]
-		public static void QueueInputEvent(IntPtr inputEvent); // 0x000000018B4181F0-0x000000018B418224
-		public static long IOCTL(int deviceId, int code, IntPtr data, int sizeInBytes); // 0x00000001843207A0-0x0000000184320810
-		public static void SetPollingFrequency(float hertz); // 0x0000000183EB38E0-0x0000000183EB3930
-		public static void Update(NativeInputUpdateType updateType); // 0x0000000184B1ED30-0x0000000184B1ED70
+		public static void QueueInputEvent(IntPtr inputEvent); // 0x000000018D542C58-0x000000018D542C8C
+		public static long IOCTL(int deviceId, int code, IntPtr data, int sizeInBytes); // 0x0000000186608330-0x00000001866083A0
+		public static void SetPollingFrequency(float hertz); // 0x000000018668EAE0-0x000000018668EB30
+		public static void Update(NativeInputUpdateType updateType); // 0x0000000186F90840-0x0000000186F90880
 	}
 }
